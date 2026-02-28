@@ -27,12 +27,25 @@ const PROTOCOL_ALIASES = new Map([
   ['socks5', 'socks'],
 ]);
 
-const AMNEZIA_PRESET = { jc: 4, jmin: 40, jmax: 100, s1: 0, s2: 0, h1: 1, h2: 2, h3: 3, h4: 4 };
-const AMNEZIA_ALL_PROFILES = [
-  'Optimal', 'WeakNet', 'Aggressive', 'Fast', 'Proton', 'BPB', 'HamedP71',
-  'RusMicro', 'RusFlood', 'Stalinium', 'HighEntropy', 'HeavyTraffic',
-  'MetaCubeX', 'Default', 'Gaming'
-];
+const AMNEZIA_DEFAULT_FIELDS = { s1: 0, s2: 0, h1: 1, h2: 2, h3: 3, h4: 4 };
+const AMNEZIA_PROFILE_PRESETS = new Map([
+  ['optimal-balanced-daily-use', { jc: 4, jmin: 64, jmax: 120 }],
+  ['weak-net-low-bandwidth', { jc: 6, jmin: 64, jmax: 80 }],
+  ['aggressive-pattern', { jc: 8, jmin: 64, jmax: 150 }],
+  ['fast-low-handshake-overhead', { jc: 2, jmin: 64, jmax: 70 }],
+  ['proton-minimal-compatibility', { jc: 4, jmin: 40, jmax: 70 }],
+  ['bpb-legacy-balanced', { jc: 5, jmin: 50, jmax: 100 }],
+  ['hamedp71-compatibility', { jc: 4, jmin: 40, jmax: 250 }],
+  ['rus-micro-micro-noise', { jc: 3, jmin: 10, jmax: 30 }],
+  ['rus-flood-heavy-flood', { jc: 10, jmin: 30, jmax: 60 }],
+  ['stalinium-strategy-maximum', { jc: 31, jmin: 20, jmax: 40 }],
+  ['high-entropy-obfuscation', { jc: 33, jmin: 132, jmax: 1200 }],
+  ['heavy-traffic-simulation', { jc: 50, jmin: 5, jmax: 1500 }],
+  ['metacubex-fixed-window', { jc: 5, jmin: 500, jmax: 501 }],
+  ['amnezia-official-default', { jc: 8, jmin: 50, jmax: 1000 }],
+  ['gaming-ultra-low-overhead', { jc: 3, jmin: 64, jmax: 80 }],
+]);
+const AMNEZIA_ALL_PROFILES = [...AMNEZIA_PROFILE_PRESETS.keys()];
 
 function normalizeBase64(v) {
   if (!v) return null;
@@ -250,6 +263,22 @@ function sanitizeName(v) {
   return v.replace(/\.[a-zA-Z0-9]+$/, '').replace(/[^\w@%+.-]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
 }
 
+function normalizeProfileName(value) {
+  return sanitizeName(String(value || '').toLowerCase()).replace(/_+/g, '-');
+}
+
+function getAmneziaPreset(profileName) {
+  const normalized = normalizeProfileName(profileName);
+  const fromMap = AMNEZIA_PROFILE_PRESETS.get(normalized);
+  if (fromMap) return { ...fromMap, ...AMNEZIA_DEFAULT_FIELDS };
+
+  const fallbackKey = [...AMNEZIA_PROFILE_PRESETS.keys()].find((k) =>
+    k.replace(/-/g, '').includes(normalized.replace(/-/g, '')) || normalized.replace(/-/g, '').includes(k.replace(/-/g, ''))
+  );
+  const fallbackPreset = fallbackKey ? AMNEZIA_PROFILE_PRESETS.get(fallbackKey) : null;
+  return { ...(fallbackPreset || { jc: 4, jmin: 40, jmax: 100 }), ...AMNEZIA_DEFAULT_FIELDS };
+}
+
 function deriveName(urls, explicitName) {
   if (explicitName) return sanitizeName(explicitName);
   const metas = urls.map((u) => {
@@ -372,14 +401,20 @@ async function resolveFlagsForServers(servers, geoCache) {
 }
 
 async function withGroupPrefixedNames(proxies, groupId, geoCache) {
-  const prefix = `${groupId}-`;
+  const fixedPrefix = `${groupId}-`;
   const flagsByServer = await resolveFlagsForServers(proxies.map((p) => p.server), geoCache);
 
-  for (const p of proxies) {
+  for (let i = 0; i < proxies.length; i++) {
+    const p = proxies[i];
+    const incrementalPrefix = `${groupId}-${i + 1}-`;
     const sourceName = String(p.name || p.server || p.type || 'proxy').trim();
-    const baseName = sourceName.startsWith(prefix) ? sourceName.slice(prefix.length) : sourceName;
+    const trimmedName = sourceName.startsWith(incrementalPrefix)
+      ? sourceName.slice(incrementalPrefix.length)
+      : sourceName.startsWith(fixedPrefix)
+        ? sourceName.slice(fixedPrefix.length)
+        : sourceName;
     const flag = flagsByServer.get(p.server) || '';
-    p.name = flag ? `${prefix}${flag}-${baseName}` : `${prefix}${baseName}`;
+    p.name = flag ? `${incrementalPrefix}${flag}-${trimmedName}` : `${incrementalPrefix}${trimmedName}`;
   }
   return proxies;
 }
@@ -483,14 +518,15 @@ function applyAmneziaVariants(baseName, proxies, amneziaValue) {
 
   const requested = amneziaValue.toLowerCase() === 'all'
     ? AMNEZIA_ALL_PROFILES
-    : amneziaValue.split('-').map((s) => s.trim()).filter(Boolean);
+    : amneziaValue.split('-').map((s) => normalizeProfileName(s.trim())).filter(Boolean);
 
   if (!requested.length) return [{ fileName: `${baseName}.yaml`, proxies }];
 
   return requested.map((profile) => {
+    const amneziaPreset = getAmneziaPreset(profile);
     const variantProxies = proxies.map((p) => {
       if (p.type !== 'wireguard') return { ...p };
-      return { ...p, 'amnezia-wg-option': AMNEZIA_PRESET };
+      return { ...p, 'amnezia-wg-option': amneziaPreset };
     });
     return { fileName: `${baseName}-amnezia-${sanitizeName(profile)}.yaml`, proxies: variantProxies };
   });
