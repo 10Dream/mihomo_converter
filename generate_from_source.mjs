@@ -401,20 +401,21 @@ async function resolveFlagsForServers(servers, geoCache) {
 }
 
 async function withGroupPrefixedNames(proxies, groupId, geoCache) {
-  const fixedPrefix = `${groupId}-`;
   const flagsByServer = await resolveFlagsForServers(proxies.map((p) => p.server), geoCache);
+  const escapedGroupId = String(groupId).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const oldGroupPrefixRegex = new RegExp(`^${escapedGroupId}-(?:\\d+-)?`);
 
   for (let i = 0; i < proxies.length; i++) {
     const p = proxies[i];
-    const incrementalPrefix = `${groupId}-${i + 1}-`;
     const sourceName = String(p.name || p.server || p.type || 'proxy').trim();
-    const trimmedName = sourceName.startsWith(incrementalPrefix)
-      ? sourceName.slice(incrementalPrefix.length)
-      : sourceName.startsWith(fixedPrefix)
-        ? sourceName.slice(fixedPrefix.length)
-        : sourceName;
+    const withoutGroupPrefix = sourceName.replace(oldGroupPrefixRegex, '');
+    const trimmedName = withoutGroupPrefix
+      .replace(/^\d+\s*[-_]\s*/, '')
+      .replace(/^\d+\s+/, '')
+      .trim();
+    const nameBody = trimmedName || String(p.server || p.type || 'proxy').trim();
     const flag = flagsByServer.get(p.server) || '';
-    p.name = flag ? `${incrementalPrefix}${flag}-${trimmedName}` : `${incrementalPrefix}${trimmedName}`;
+    p.name = flag ? `${i + 1} ${flag} ${nameBody}` : `${i + 1} ${nameBody}`;
   }
   return proxies;
 }
