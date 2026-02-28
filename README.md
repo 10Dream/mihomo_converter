@@ -37,3 +37,5 @@
 - [MrBihal-cheker-Meli-mix.yaml](https://raw.githubusercontent.com/10Dream/mihomo_converter/refs/heads/main/sub/MrBihal-cheker-Meli-mix.yaml)
 - [peweza-PUBLICSUB.yaml](https://raw.githubusercontent.com/10Dream/mihomo_converter/refs/heads/main/sub/peweza-PUBLICSUB.yaml)
 - [frank-vpl-irbox.yaml](https://raw.githubusercontent.com/10Dream/mihomo_converter/refs/heads/main/sub/frank-vpl-irbox.yaml)
+- [10ium-VpnClashFaCollector-speed_passed.yaml](https://raw.githubusercontent.com/10Dream/mihomo_converter/refs/heads/main/sub/10ium-VpnClashFaCollector-speed_passed.yaml)
+- [10ium-VpnClashFaCollector-mixed.yaml](https://raw.githubusercontent.com/10Dream/mihomo_converter/refs/heads/main/sub/10ium-VpnClashFaCollector-mixed.yaml)
