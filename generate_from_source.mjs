@@ -15,7 +15,7 @@ const RAW_BASE_URL = process.env.RAW_BASE_URL || (() => {
 const GEO_FLAG_ENABLED = (process.env.ENABLE_GEO_FLAG ?? '1') !== '0';
 const GEO_FLAG_TIMEOUT_MS = Number(process.env.GEO_FLAG_TIMEOUT_MS || '1200');
 const GEO_FLAG_CONCURRENCY = Number(process.env.GEO_FLAG_CONCURRENCY || '8');
-const GEO_FLAG_RETRY = Number(process.env.GEO_FLAG_RETRY || '0');
+const GEO_FLAG_RETRY = Number(process.env.GEO_FLAG_RETRY || '2');
 const GEO_CACHE_FILE = process.env.GEO_CACHE_FILE || '.cache/geoip-cache.json';
 const GEO_CACHE_TTL_HOURS = Number(process.env.GEO_CACHE_TTL_HOURS || '168');
 const GEO_CACHE_MAX_ITEMS = Number(process.env.GEO_CACHE_MAX_ITEMS || '20000');
