@@ -1,11 +1,24 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { setTimeout as sleep } from 'node:timers/promises';
 
 const SOURCE_FILE = process.env.SOURCE_FILE || 'source';
 const OUTPUT_DIR = process.env.OUTPUT_DIR || 'sub';
 const README_FILE = process.env.README_FILE || 'README.md';
-const RAW_BASE_URL = process.env.RAW_BASE_URL || '';
+const RAW_BASE_URL = process.env.RAW_BASE_URL || (() => {
+  const repo = process.env.GITHUB_REPOSITORY;
+  const refName = process.env.GITHUB_REF_NAME || (process.env.GITHUB_REF || '').replace('refs/heads/', '');
+  if (repo && refName) return `https://raw.githubusercontent.com/${repo}/refs/heads/${refName}`;
+  return '';
+})();
+const GEO_FLAG_ENABLED = (process.env.ENABLE_GEO_FLAG ?? '1') !== '0';
+const GEO_FLAG_TIMEOUT_MS = Number(process.env.GEO_FLAG_TIMEOUT_MS || '1200');
+const GEO_FLAG_CONCURRENCY = Number(process.env.GEO_FLAG_CONCURRENCY || '8');
+const GEO_FLAG_RETRY = Number(process.env.GEO_FLAG_RETRY || '0');
+const GEO_CACHE_FILE = process.env.GEO_CACHE_FILE || '.cache/geoip-cache.json';
+const GEO_CACHE_TTL_HOURS = Number(process.env.GEO_CACHE_TTL_HOURS || '168');
+const GEO_CACHE_MAX_ITEMS = Number(process.env.GEO_CACHE_MAX_ITEMS || '20000');
 
 const PROTOCOL_ALIASES = new Map([
   ['hysteria2', 'hy2'],
@@ -15,6 +28,11 @@ const PROTOCOL_ALIASES = new Map([
 ]);
 
 const AMNEZIA_PRESET = { jc: 4, jmin: 40, jmax: 100, s1: 0, s2: 0, h1: 1, h2: 2, h3: 3, h4: 4 };
+const AMNEZIA_ALL_PROFILES = [
+  'Optimal', 'WeakNet', 'Aggressive', 'Fast', 'Proton', 'BPB', 'HamedP71',
+  'RusMicro', 'RusFlood', 'Stalinium', 'HighEntropy', 'HeavyTraffic',
+  'MetaCubeX', 'Default', 'Gaming'
+];
 
 function normalizeBase64(v) {
   if (!v) return null;
@@ -260,6 +278,112 @@ function deriveName(urls, explicitName) {
   return sanitizeName([first.owner, first.repo, suffix].filter(Boolean).join('-'));
 }
 
+
+function countryCodeToFlag(countryCode) {
+  if (!countryCode || !/^[A-Za-z]{2}$/.test(countryCode)) return '';
+  const code = countryCode.toUpperCase();
+  return String.fromCodePoint(...[...code].map((c) => 127397 + c.charCodeAt(0)));
+}
+
+async function geoLookup(server) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), GEO_FLAG_TIMEOUT_MS);
+  try {
+    const url = `https://ipwho.is/${encodeURIComponent(server)}`;
+    const res = await fetch(url, { signal: controller.signal, headers: { 'User-Agent': 'mihomo-converter-geo/1.0' } });
+    if (!res.ok) return '';
+    const data = await res.json();
+    if (!data || data.success === false) return '';
+    const code = String(data.country_code || '').toUpperCase();
+    return countryCodeToFlag(code);
+  } catch {
+    return '';
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function loadGeoCache() {
+  const now = Date.now();
+  const ttlMs = Math.max(1, GEO_CACHE_TTL_HOURS) * 3600 * 1000;
+  try {
+    const raw = await fs.readFile(GEO_CACHE_FILE, 'utf8');
+    const parsed = JSON.parse(raw);
+    const entries = Array.isArray(parsed.entries) ? parsed.entries : [];
+    const map = new Map();
+    for (const row of entries) {
+      if (!row || typeof row.server !== 'string') continue;
+      const ts = Number(row.ts || 0);
+      if (now - ts > ttlMs) continue;
+      map.set(row.server, { flag: String(row.flag || ''), ts });
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
+}
+
+async function saveGeoCache(cacheMap) {
+  const now = Date.now();
+  const items = [...cacheMap.entries()]
+    .map(([server, value]) => ({ server, flag: String(value.flag || ''), ts: Number(value.ts || now) }))
+    .sort((a, b) => b.ts - a.ts)
+    .slice(0, Math.max(100, GEO_CACHE_MAX_ITEMS));
+
+  const payload = { version: 1, updatedAt: now, entries: items };
+  await fs.mkdir(path.dirname(GEO_CACHE_FILE), { recursive: true });
+  await fs.writeFile(GEO_CACHE_FILE, JSON.stringify(payload), 'utf8');
+}
+
+async function resolveFlagsForServers(servers, geoCache) {
+  const unique = [...new Set(servers.filter(Boolean))];
+  const flags = new Map();
+  if (!GEO_FLAG_ENABLED || unique.length === 0) return flags;
+
+  const pending = [];
+  for (const server of unique) {
+    const cached = geoCache.get(server);
+    if (cached) {
+      flags.set(server, cached.flag || '');
+    } else {
+      pending.push(server);
+    }
+  }
+
+  if (pending.length === 0) return flags;
+
+  let idx = 0;
+  const workers = Array.from({ length: Math.max(1, GEO_FLAG_CONCURRENCY) }, async () => {
+    while (idx < pending.length) {
+      const current = pending[idx++];
+      let flag = '';
+      for (let attempt = 0; attempt <= GEO_FLAG_RETRY; attempt++) {
+        flag = await geoLookup(current);
+        if (flag) break;
+        if (attempt < GEO_FLAG_RETRY) await sleep(150 + Math.floor(Math.random() * 150));
+      }
+      flags.set(current, flag);
+      geoCache.set(current, { flag, ts: Date.now() });
+    }
+  });
+
+  await Promise.all(workers);
+  return flags;
+}
+
+async function withGroupPrefixedNames(proxies, groupId, geoCache) {
+  const prefix = `${groupId}-`;
+  const flagsByServer = await resolveFlagsForServers(proxies.map((p) => p.server), geoCache);
+
+  for (const p of proxies) {
+    const sourceName = String(p.name || p.server || p.type || 'proxy').trim();
+    const baseName = sourceName.startsWith(prefix) ? sourceName.slice(prefix.length) : sourceName;
+    const flag = flagsByServer.get(p.server) || '';
+    p.name = flag ? `${prefix}${flag}-${baseName}` : `${prefix}${baseName}`;
+  }
+  return proxies;
+}
+
 function buildFullConfig(proxies) {
   const proxyBlock = proxies.length
     ? proxies.map((p) => `  - ${JSON.stringify(p)}`).join('\n')
@@ -354,32 +478,20 @@ function applyLimits(allProxies, settings, protocolOrder) {
   return picked.slice(0, totalLimit);
 }
 
-function withNames(proxies) {
-  const counters = new Map();
-  for (const p of proxies) {
-    const t = getDisplayType(p.type);
-    counters.set(t, (counters.get(t) || 0) + 1);
-    p.name = `${t} ${counters.get(t)}`;
-  }
-  return proxies;
-}
-
 function applyAmneziaVariants(baseName, proxies, amneziaValue) {
   if (!amneziaValue) return [{ fileName: `${baseName}.yaml`, proxies }];
-  const wireguards = proxies.filter((p) => p.type === 'wireguard');
-  if (!wireguards.length) return [{ fileName: `${baseName}.yaml`, proxies }];
 
-  const profiles = [...new Set(wireguards.map((p) => p.amneziaProfile || 'default'))];
-  const wanted = amneziaValue.toLowerCase() === 'all'
-    ? profiles
+  const requested = amneziaValue.toLowerCase() === 'all'
+    ? AMNEZIA_ALL_PROFILES
     : amneziaValue.split('-').map((s) => s.trim()).filter(Boolean);
 
-  if (!wanted.length) return [{ fileName: `${baseName}.yaml`, proxies }];
+  if (!requested.length) return [{ fileName: `${baseName}.yaml`, proxies }];
 
-  return wanted.map((profile) => {
-    const variantProxies = proxies
-      .filter((p) => p.type !== 'wireguard' || (p.amneziaProfile || 'default') === profile)
-      .map((p) => (p.type === 'wireguard' ? { ...p, 'amnezia-wg-option': AMNEZIA_PRESET } : { ...p }));
+  return requested.map((profile) => {
+    const variantProxies = proxies.map((p) => {
+      if (p.type !== 'wireguard') return { ...p };
+      return { ...p, 'amnezia-wg-option': AMNEZIA_PRESET };
+    });
     return { fileName: `${baseName}-amnezia-${sanitizeName(profile)}.yaml`, proxies: variantProxies };
   });
 }
@@ -399,6 +511,7 @@ async function main() {
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
   const readmeEntries = [];
+  const geoCache = await loadGeoCache();
 
   for (const group of groups) {
     const uniq = new Map();
@@ -415,8 +528,19 @@ async function main() {
     }
 
     const outputName = deriveName(group.urls, group.settings.name);
-    const limited = withNames(applyLimits([...uniq.values()], group.settings, group.protocolOrder));
+    const limited = await withGroupPrefixedNames(applyLimits([...uniq.values()], group.settings, group.protocolOrder), group.id, geoCache);
     const variants = applyAmneziaVariants(outputName, limited, group.settings.Amnezia);
+
+    const existingFiles = await fs.readdir(OUTPUT_DIR).catch(() => []);
+    const keepFiles = new Set(variants.map((v) => v.fileName));
+    for (const fileName of existingFiles) {
+      if (!fileName.endsWith('.yaml')) continue;
+      if (fileName === `${outputName}.yaml` || fileName.startsWith(`${outputName}-amnezia-`)) {
+        if (!keepFiles.has(fileName)) {
+          await fs.rm(path.join(OUTPUT_DIR, fileName), { force: true });
+        }
+      }
+    }
 
     for (const variant of variants) {
       const filePath = path.join(OUTPUT_DIR, variant.fileName);
@@ -430,6 +554,7 @@ async function main() {
   }
 
   await fs.writeFile(README_FILE, buildReadme(readmeEntries), 'utf8');
+  if (GEO_FLAG_ENABLED) await saveGeoCache(geoCache);
 }
 
 main().catch((e) => {
