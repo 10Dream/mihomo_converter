@@ -401,13 +401,15 @@ async function resolveFlagsForServers(servers, geoCache) {
 }
 
 async function withGroupPrefixedNames(proxies, groupId, geoCache) {
+  const prefix = `${groupId}-`;
   const flagsByServer = await resolveFlagsForServers(proxies.map((p) => p.server), geoCache);
 
   for (let i = 0; i < proxies.length; i++) {
     const p = proxies[i];
     const sourceName = String(p.name || p.server || p.type || 'proxy').trim();
+    const baseName = sourceName.startsWith(prefix) ? sourceName.slice(prefix.length) : sourceName;
     const flag = flagsByServer.get(p.server) || '';
-    p.name = flag ? `${i + 1} ${flag} ${sourceName}` : `${i + 1} ${sourceName}`;
+    p.name = flag ? `${i + 1} ${flag} ${baseName}` : `${i + 1} ${baseName}`;
   }
   return proxies;
 }
