@@ -402,23 +402,16 @@ async function resolveFlagsForServers(servers, geoCache) {
 
 async function withGroupPrefixedNames(proxies, groupId, geoCache) {
   const flagsByServer = await resolveFlagsForServers(proxies.map((p) => p.server), geoCache);
-  const escapedGroupId = String(groupId).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const oldGroupPrefixRegex = new RegExp(`^${escapedGroupId}-(?:\\d+-)?`);
 
   for (let i = 0; i < proxies.length; i++) {
     const p = proxies[i];
     const sourceName = String(p.name || p.server || p.type || 'proxy').trim();
-    const withoutGroupPrefix = sourceName.replace(oldGroupPrefixRegex, '');
-    const trimmedName = withoutGroupPrefix
-      .replace(/^\d+\s*[-_]\s*/, '')
-      .replace(/^\d+\s+/, '')
-      .trim();
-    const nameBody = trimmedName || String(p.server || p.type || 'proxy').trim();
     const flag = flagsByServer.get(p.server) || '';
-    p.name = flag ? `${i + 1} ${flag} ${nameBody}` : `${i + 1} ${nameBody}`;
+    p.name = flag ? `${i + 1} ${flag} ${sourceName}` : `${i + 1} ${sourceName}`;
   }
   return proxies;
 }
+
 
 function buildFullConfig(proxies) {
   const proxyBlock = proxies.length
