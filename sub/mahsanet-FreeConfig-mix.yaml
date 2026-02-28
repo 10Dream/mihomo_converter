@@ -17,7 +17,15 @@ dns:
     - https://1.1.1.1/dns-query
     - https://8.8.8.8/dns-query
 proxies:
-  []
+  - {"name":"vless 1","type":"vless","server":"109.248.170.119","port":13447,"uuid":"b573cefb-7bc7-4a42-b407-b8b534e66773","udp":true,"tls":true,"network":"raw","servername":"yahoo.com"}
+  - {"name":"vless 2","type":"vless","server":"140.238.100.35","port":40721,"uuid":"bf3e8944-8d26-47de-8748-b9aa74cce974","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"vless 3","type":"vless","server":"157.173.127.225","port":443,"uuid":"11beaf11-726d-4c11-8ce9-27308c1c608c","udp":true,"tls":true,"network":"tcp","servername":"analytics.google.com"}
+  - {"name":"trojan 1","type":"trojan","server":"185.18.250.252","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"trojan 2","type":"trojan","server":"chatgpt.com","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"vmess 1","type":"vmess","server":"57.129.28.63","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"vmess 2","type":"vmess","server":"57.129.28.216","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"vmess 3","type":"vmess","server":"57.129.25.22","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"vmess 4","type":"vmess","server":"158.51.121.63","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
   - name: "Proxy"
     type: select
@@ -30,7 +38,15 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - DIRECT
+      - "vless 1"
+      - "vless 2"
+      - "vless 3"
+      - "trojan 1"
+      - "trojan 2"
+      - "vmess 1"
+      - "vmess 2"
+      - "vmess 3"
+      - "vmess 4"
 rules:
   - GEOIP,IR,DIRECT
   - MATCH,Proxy
