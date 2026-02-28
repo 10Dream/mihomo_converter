@@ -1,0 +1,556 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+proxies:
+  - {"name":"1 🇷🇺 VK — #1","type":"vless","server":"212.193.153.187","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"2 🇷🇺 VK — #2","type":"vless","server":"109.120.189.160","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"3 🇷🇺 VK — #3","type":"vless","server":"109.120.189.160","port":443,"uuid":"da2d823f-f4e0-07d0-a4f7-f6e2fbeebe0f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"4 🇷🇺 VK — #4","type":"vless","server":"89.208.228.139","port":52006,"uuid":"416d27c8-f1f6-07d0-978d-31332344c8da","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"5 🇷🇺 VK — #5","type":"vless","server":"89.208.228.139","port":52006,"uuid":"17c4e377-ea15-07d0-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"6 🇷🇺 VK — #6","type":"vless","server":"212.193.153.187","port":443,"uuid":"17c4e377-ea15-07d0-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"7 🇷🇺 VK — #7","type":"vless","server":"37.139.33.223","port":52006,"uuid":"080556c0-0117-07d0-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"8 🇷🇺 VK — #8","type":"vless","server":"37.139.33.223","port":52006,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"9 🇷🇺 VK — #9","type":"vless","server":"212.193.153.187","port":443,"uuid":"01638edd-ddd2-07d0-b437-48761495d07e","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"10 🇷🇺 VK — #10","type":"vless","server":"37.139.33.223","port":52006,"uuid":"416d27c8-f1f6-07d0-978d-31332344c8da","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"11 🇷🇺 VK — #11","type":"vless","server":"37.139.33.223","port":52006,"uuid":"17c4e377-ea15-07d0-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"12 🇷🇺 VK — #12","type":"vless","server":"89.208.228.139","port":52006,"uuid":"a0d3d9d3-d0aa-07d0-b802-da6a5f8d918d","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"13 🇷🇺 VK — #13","type":"vless","server":"37.139.33.223","port":52006,"uuid":"a0d3d9d3-d0aa-07d0-b802-da6a5f8d918d","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"14 🇷🇺 VK — #14","type":"vless","server":"212.193.153.187","port":443,"uuid":"a0d3d9d3-d0aa-07d0-b802-da6a5f8d918d","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"15 🇷🇺 VK — #15","type":"vless","server":"212.193.153.187","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"16 🇷🇺 VK — #16","type":"vless","server":"89.208.228.139","port":52006,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"17 🇷🇺 VK — #17","type":"vless","server":"109.120.189.160","port":443,"uuid":"080556c0-0117-07d0-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"18 🇷🇺 VK — #18","type":"vless","server":"109.120.189.160","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"19 🇷🇺 VK — #19","type":"vless","server":"89.208.228.139","port":52006,"uuid":"080556c0-0117-07d0-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"20 🇷🇺 VK — #20","type":"vless","server":"109.120.189.160","port":443,"uuid":"f27f5ad9-c8e7-07d0-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"21 🇷🇺 VK — #21","type":"vless","server":"212.193.157.118","port":443,"uuid":"01638edd-ddd2-07d0-b437-48761495d07e","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"22 🇷🇺 VK — #22","type":"vless","server":"212.193.157.118","port":443,"uuid":"17c4e377-ea15-07d0-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"23 🇷🇺 VK — #23","type":"vless","server":"212.193.157.118","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"24 🇷🇺 VK — #24","type":"vless","server":"212.193.157.118","port":443,"uuid":"a0d3d9d3-d0aa-07d0-b802-da6a5f8d918d","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"25 🇷🇺 VK — #25","type":"vless","server":"109.120.189.145","port":443,"uuid":"080556c0-0117-07d0-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"26 🇷🇺 VK — #26","type":"vless","server":"109.120.189.145","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"27 🇷🇺 VK — #27","type":"vless","server":"109.120.189.145","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"28 🇷🇺 VK — #28","type":"vless","server":"109.120.189.145","port":443,"uuid":"da2d823f-f4e0-07d0-a4f7-f6e2fbeebe0f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"29 🇷🇺 VK — #29","type":"vless","server":"46.235.186.203","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"30 🇷🇺 VK — #30","type":"vless","server":"46.235.186.203","port":443,"uuid":"01638edd-ddd2-07d0-b437-48761495d07e","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"31 🇷🇺 VK — #31","type":"vless","server":"46.235.186.203","port":443,"uuid":"17c4e377-ea15-07d0-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"32 🇷🇺 VK — #32","type":"vless","server":"46.235.186.203","port":443,"uuid":"a0d3d9d3-d0aa-07d0-b802-da6a5f8d918d","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"33 🇷🇺 VK — #33","type":"vless","server":"5.188.141.18","port":443,"uuid":"080556c0-0117-07d0-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"34 🇷🇺 VK — #34","type":"vless","server":"5.188.141.18","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"35 🇷🇺 VK — #35","type":"vless","server":"5.188.141.18","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"36 🇷🇺 VK — #36","type":"vless","server":"5.188.141.18","port":443,"uuid":"da2d823f-f4e0-07d0-a4f7-f6e2fbeebe0f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"37 🇷🇺 VK — #37","type":"vless","server":"46.235.189.157","port":443,"uuid":"01638edd-ddd2-07d0-b437-48761495d07e","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"38 🇷🇺 VK — #38","type":"vless","server":"46.235.189.157","port":443,"uuid":"17c4e377-ea15-07d0-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"39 🇷🇺 VK — #39","type":"vless","server":"46.235.189.157","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"40 🇷🇺 VK — #40","type":"vless","server":"46.235.189.157","port":443,"uuid":"a0d3d9d3-d0aa-07d0-b802-da6a5f8d918d","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"41 🇷🇺 VK — #41","type":"vless","server":"37.139.34.115","port":443,"uuid":"080556c0-0117-07d0-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"42 🇷🇺 VK — #42","type":"vless","server":"37.139.34.115","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"43 🇷🇺 VK — #43","type":"vless","server":"37.139.34.115","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"44 🇷🇺 VK — #44","type":"vless","server":"37.139.34.115","port":443,"uuid":"da2d823f-f4e0-07d0-a4f7-f6e2fbeebe0f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"45 🇷🇺 VK — #53","type":"vless","server":"5.188.141.67","port":443,"uuid":"080556c0-0117-07d0-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"46 🇷🇺 VK — #55","type":"vless","server":"5.188.141.67","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"47 🇷🇺 VK — #56","type":"vless","server":"5.188.141.67","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"48 🇷🇺 VK — #57","type":"vless","server":"5.188.141.67","port":443,"uuid":"da2d823f-f4e0-07d0-a4f7-f6e2fbeebe0f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"49 🇷🇺 VK — #58","type":"vless","server":"212.193.157.118","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"50 🇷🇺 VK — #63","type":"vless","server":"37.139.34.115","port":443,"uuid":"f27f5ad9-c8e7-07d0-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"51 🇷🇺 VK — #64","type":"vless","server":"5.188.141.18","port":443,"uuid":"f27f5ad9-c8e7-07d0-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"52 🇷🇺 VK — #65","type":"vless","server":"46.235.186.203","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"53 🇷🇺 VK — #66","type":"vless","server":"5.188.141.67","port":443,"uuid":"f27f5ad9-c8e7-07d0-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"54 🇷🇺 VK — #68","type":"vless","server":"46.235.189.157","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
+  - {"name":"55 🇷🇺 VK — #72","type":"vless","server":"109.120.181.41","port":443,"uuid":"ab993989-55ae-4aaf-b750-ddae617ac0ea","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"56 🇷🇺 VK — #75","type":"vless","server":"109.120.189.112","port":51006,"uuid":"5e640447-a590-07d0-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"xhttp","servername":"max.ru"}
+  - {"name":"57 🇷🇺 VK — #76","type":"vless","server":"5.188.141.131","port":52006,"uuid":"5e640447-a590-07d0-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"58 🇷🇺 VK — #77","type":"vless","server":"146.185.242.246","port":51006,"uuid":"5e640447-a590-4d4f-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"59 🇷🇺 VK — #78","type":"vless","server":"5.188.141.12","port":52006,"uuid":"5e640447-a590-07d0-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"60 🇷🇺 VK — #81","type":"vless","server":"37.139.33.125","port":52006,"uuid":"5e640447-a590-07d0-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"61 🇷🇺 VK — #108","type":"vless","server":"109.120.188.156","port":52006,"uuid":"5e640447-a590-07d0-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"62 🇷🇺 VK — #115","type":"vless","server":"89.208.228.167","port":52006,"uuid":"5e640447-a590-07d0-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"63 🇷🇺 VK — #121","type":"vless","server":"109.120.189.142","port":52006,"uuid":"5e640447-a590-07d0-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"64 🇷🇺 Yandex — #122","type":"vless","server":"51.250.74.146","port":443,"uuid":"d7e0cd97-a245-48aa-87b0-8539068e36ba","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"65 🇷🇺 Yandex — #123","type":"vless","server":"84.201.131.144","port":443,"uuid":"d7e0cd97-a245-48aa-87b0-8539068e36ba","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"66 🇷🇺 Yandex — #124","type":"vless","server":"51.250.74.146","port":443,"uuid":"34536d24-0423-441e-956d-3b585e3daeb1","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"67 🇷🇺 Yandex — #125","type":"vless","server":"84.201.131.144","port":443,"uuid":"34536d24-0423-441e-956d-3b585e3daeb1","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"68 🇷🇺 Yandex — #126","type":"vless","server":"51.250.69.188","port":8446,"uuid":"709b1869-7fb5-4a27-90d7-637f71a3b6c3","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"69 🇷🇺 Yandex — #127","type":"vless","server":"51.250.69.188","port":9443,"uuid":"81ed7404-4d2b-4284-8e65-b26361c2d555","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"70 🇷🇺 Yandex — #128","type":"vless","server":"51.250.69.188","port":8443,"uuid":"6fac2461-acc6-466a-8ace-27bdba6632b6","udp":true,"tls":true,"network":"xhttp","servername":"api-maps.yandex.ru"}
+  - {"name":"71 🇷🇺 Yandex — #129","type":"vless","server":"51.250.69.188","port":8443,"uuid":"0d1993b6-796c-4f47-b6fe-6c5d86914cce","udp":true,"tls":true,"network":"xhttp","servername":"api-maps.yandex.ru"}
+  - {"name":"72 🇷🇺 Yandex — #130","type":"vless","server":"51.250.69.188","port":9443,"uuid":"84c685bf-6cfd-49cc-91ad-a947376315ba","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"73 🇷🇺 Yandex — #131","type":"vless","server":"51.250.69.188","port":9443,"uuid":"d2316ae5-5b42-494a-b478-e744a7e69d4c","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"74 🇷🇺 Yandex — #133","type":"vless","server":"51.250.14.48","port":9443,"uuid":"3cff9921-9be2-40fd-8349-73ae7f8bdb3f","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"75 🇷🇺 Yandex — #134","type":"vless","server":"51.250.69.188","port":9443,"uuid":"c2ee378a-ddd6-4af9-8387-2bb18897337a","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"76 🇷🇺 CDNvideo — #143","type":"vless","server":"46.243.233.78","port":8081,"uuid":"f1449968-0329-468b-b56b-1c573ac2a767","udp":true,"tls":true,"network":"tcp","servername":"sun6-21.userapi.com"}
+  - {"name":"77 🇷🇺 Selectel — #144","type":"vless","server":"217.16.27.217","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"ozon.ru"}
+  - {"name":"78 🇷🇺 Selectel — #153","type":"vless","server":"217.16.27.217","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"m.ok.com"}
+  - {"name":"79 🇷🇺 Selectel — #159","type":"vless","server":"178.72.145.19","port":8443,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.com"}
+  - {"name":"80 🇷🇺 Selectel — #160","type":"vless","server":"178.72.145.18","port":8443,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.com"}
+  - {"name":"81 🇷🇺 Selectel — #161","type":"vless","server":"178.72.145.23","port":8443,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.com"}
+  - {"name":"82 🇷🇺 Serv.Host — #162","type":"vless","server":"84.201.132.223","port":443,"uuid":"160d6fae-7449-4c73-8180-04c164ade71f","udp":true,"tls":true,"network":"tcp","servername":"5post-gate.x5.ru"}
+  - {"name":"83 🇷🇺 Serv.Host — #163","type":"vless","server":"64.188.90.93","port":443,"uuid":"68ac194a-0313-41a1-89fb-903a6fa3c795","udp":true,"tls":true,"network":"grpc","servername":"a.primarymaster.online"}
+  - {"name":"84 🇷🇺 UFO Hosting — #166","type":"vless","server":"95.163.208.234","port":8443,"uuid":"621d5f40-707c-40f0-8b5c-253d38e1d0cb","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"85 🇷🇺 UFO Hosting — #168","type":"vless","server":"95.163.208.234","port":8443,"uuid":"ccdf58c8-b9d4-4bc7-a55e-e6965cc71fc7","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"86 🇷🇺 UFO Hosting — #169","type":"vless","server":"95.163.208.234","port":8443,"uuid":"4bc1f812-c4a5-4085-8e86-270061cdc1c8","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"87 🇷🇺 UFO Hosting — #172","type":"vless","server":"95.163.208.234","port":8443,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"88 🇦🇪 United Arab Emirates — #173","type":"vless","server":"144.31.30.86","port":443,"uuid":"12adb397-701e-0004-91f6-e0c766f87fa4","udp":true,"tls":true,"network":"tcp","servername":"nl01r.easyserf.top"}
+  - {"name":"89 🇦🇲 Armenia — #175","type":"vless","server":"212.233.121.49","port":8443,"uuid":"0549890f-e9aa-425f-b8af-f0154490fb84","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"90 🇦🇹 Austria — #176","type":"vless","server":"51.250.3.71","port":445,"uuid":"89c8f8a0-a98c-4091-b91b-f57d228afd29","udp":true,"tls":true,"network":"grpc","servername":"ads.x5.ru"}
+  - {"name":"91 🇩🇪 Germany — #178","type":"vless","server":"95.163.210.173","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"92 🇩🇪 Germany — #179","type":"vless","server":"51.250.83.255","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"93 🇩🇪 Germany — #181","type":"vless","server":"51.250.87.167","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"94 🇩🇪 Germany — #182","type":"vless","server":"95.163.211.13","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"95 🇩🇪 Germany — #183","type":"vless","server":"51.250.4.119","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"96 🇩🇪 Germany — #184","type":"vless","server":"109.120.190.78","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"m.vk.com"}
+  - {"name":"97 🇩🇪 Germany — #186","type":"vless","server":"51.250.95.176","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"98 🇩🇪 Germany — #187","type":"vless","server":"109.120.191.46","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"m.vk.com"}
+  - {"name":"99 🇩🇪 Germany — #212","type":"vless","server":"51.250.65.209","port":443,"uuid":"72adc5b8-146a-4bfe-921b-5c9e1df016e0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"100 🇩🇪 Germany — #213","type":"vless","server":"84.201.128.76","port":443,"uuid":"400c1f85-9d3a-444a-8a50-81b11f3b4c20","udp":true,"tls":true,"network":"tcp","servername":"smartcaptcha.yandexcloud.net"}
+  - {"name":"101 🇩🇪 Germany — #215","type":"vless","server":"178.154.224.33","port":443,"uuid":"400c1f85-9d3a-444a-8a50-81b11f3b4c20","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"102 🇩🇪 Germany — #217","type":"vless","server":"212.233.120.249","port":8443,"uuid":"733b33b0-390b-482e-8ae1-9dd0827b527e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"103 🇩🇪 Germany — #218","type":"vless","server":"212.233.120.249","port":4443,"uuid":"eca8793f-9fc8-4ca1-bcc3-4ca54a5a43d3","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"104 🇩🇪 Germany — #219","type":"vless","server":"95.163.211.13","port":443,"uuid":"eb071647-72a6-46be-8e89-ff3d228d52f6","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"105 🇩🇪 Germany — #220","type":"vless","server":"144.31.17.80","port":30677,"uuid":"b86c0cdc-8a02-4da4-8693-72ba27005587","udp":true,"tls":true,"network":"tcp","servername":"google.com"}
+  - {"name":"106 🇩🇪 Germany — #221","type":"vless","server":"144.31.17.116","port":443,"uuid":"54ef6124-3a61-4a44-9901-78fadc6c59d9","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"107 🇩🇪 Germany — #223","type":"vless","server":"158.160.171.167","port":443,"uuid":"53fa2131-611e-413f-8b1a-3aed45529a52","udp":true,"tls":true,"network":"tcp","servername":"84.img.avito.st"}
+  - {"name":"108 🇩🇪 Germany — #225","type":"vless","server":"89.169.13.12","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"109 🇩🇪 Germany — #226","type":"vless","server":"144.31.234.62","port":443,"uuid":"4bc7d558-1943-44de-bd82-56920bc9383e","udp":true,"tls":true,"network":"tcp","servername":"freede.spectrum.vu"}
+  - {"name":"110 🇩🇪 Germany — #227","type":"vless","server":"89.169.6.114","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"111 🇩🇪 Germany — #228","type":"vless","server":"89.169.55.124","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
+  - {"name":"112 🇩🇪 Germany — #229","type":"vless","server":"51.250.65.209","port":443,"uuid":"eb071647-72a6-46be-8e89-ff3d228d52f6","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"113 🇩🇪 Germany — #237","type":"vless","server":"144.31.234.62","port":444,"uuid":"4bc7d558-1943-44de-bd82-56920bc9383e","udp":true,"tls":true,"network":"grpc","servername":"freede.spectrum.vu"}
+  - {"name":"114 🇩🇪 Germany — #239","type":"vless","server":"64.188.104.168","port":40721,"uuid":"bf3e8944-8d26-47de-8748-b9aa74cce974","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"115 🇩🇪 Germany — #249","type":"vless","server":"51.250.0.147","port":443,"uuid":"eb071647-72a6-46be-8e89-ff3d228d52f6","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"116 🇩🇪 Germany — #250","type":"vless","server":"51.250.95.176","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"117 🇩🇪 Germany — #251","type":"vless","server":"51.250.87.167","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"118 🇩🇪 Germany — #252","type":"vless","server":"51.250.80.61","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"119 🇩🇪 Germany — #254","type":"vless","server":"51.250.65.209","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"120 🇩🇪 Germany — #255","type":"vless","server":"51.250.3.183","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"121 🇩🇪 Germany — #257","type":"vless","server":"51.250.4.119","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"122 🇩🇪 Germany — #262","type":"vless","server":"51.250.68.142","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"123 🇩🇪 Germany — #263","type":"vless","server":"51.250.90.103","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"124 🇩🇪 Germany — #268","type":"vless","server":"51.250.0.147","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"125 🇩🇪 Germany — #269","type":"vless","server":"144.31.63.7","port":443,"uuid":"e7e7c015-7d99-4493-91b2-7941cb702d67","udp":true,"tls":true,"network":"tcp","servername":"deout.funvideorus.net"}
+  - {"name":"126 🇩🇪 Germany — #270","type":"vless","server":"51.250.102.250","port":443,"uuid":"e7e7c015-7d99-4493-91b2-7941cb702d67","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"127 🇩🇪 Germany — #272","type":"vless","server":"178.154.202.149","port":8447,"uuid":"5a151f76-94b9-4905-8bd6-13de1adc00f5","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"128 🇩🇪 Germany — #273","type":"vless","server":"178.154.202.149","port":8447,"uuid":"f7dbee5e-c374-4a1e-9bb9-79b92a22d19f","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"129 🇩🇪 Germany — #274","type":"vless","server":"178.154.202.254","port":8447,"uuid":"5504bcd7-ab4c-4d7d-bda9-374f6f39ee9b","udp":true,"tls":true,"network":"tcp","servername":"www.vk.com"}
+  - {"name":"130 🇩🇪 Germany — #275","type":"vless","server":"51.250.85.206","port":5443,"uuid":"eeeca7c0-edc7-480e-bad3-ae61c739970c","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"131 🇩🇪 Germany — #276","type":"vless","server":"178.154.202.149","port":8447,"uuid":"eeeca7c0-edc7-480e-bad3-ae61c739970c","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"132 🇩🇪 Germany — #277","type":"vless","server":"178.154.202.149","port":8447,"uuid":"ec2088c4-3ed6-428b-a537-80be92144cbe","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"133 🇩🇪 Germany — #290","type":"vless","server":"51.250.83.255","port":443,"uuid":"64aafe63-ef36-4da5-8bf9-838d767bfe74","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"134 🇩🇪 Germany — #300","type":"vless","server":"5.188.141.131","port":443,"uuid":"5e640447-a590-03e8-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"135 🇩🇪 Germany — #301","type":"vless","server":"5.188.141.131","port":443,"uuid":"5e640447-a590-01f4-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"136 🇩🇪 Germany — #302","type":"vless","server":"109.120.189.112","port":51006,"uuid":"5e640447-a590-03e8-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"xhttp","servername":"max.ru"}
+  - {"name":"137 🇩🇪 Germany — #303","type":"vless","server":"51.250.95.176","port":443,"uuid":"b7dd5972-263a-4331-8ee5-c747e773b434","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"138 🇩🇪 Germany — #304","type":"vless","server":"51.250.0.147","port":443,"uuid":"b7dd5972-263a-4331-8ee5-c747e773b434","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"139 🇩🇪 Germany — #306","type":"vless","server":"51.250.90.103","port":443,"uuid":"b7dd5972-263a-4331-8ee5-c747e773b434","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"140 🇩🇪 Germany — #307","type":"vless","server":"51.250.80.61","port":443,"uuid":"b7dd5972-263a-4331-8ee5-c747e773b434","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"141 🇩🇪 Germany — #308","type":"vless","server":"51.250.83.255","port":443,"uuid":"b7dd5972-263a-4331-8ee5-c747e773b434","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"142 🇩🇪 Germany — #309","type":"vless","server":"51.250.68.142","port":443,"uuid":"b7dd5972-263a-4331-8ee5-c747e773b434","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"143 🇩🇪 Germany — #318","type":"vless","server":"51.250.85.206","port":5443,"uuid":"709b1869-7fb5-4a27-90d7-637f71a3b6c3","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"144 🇩🇪 Germany — #319","type":"vless","server":"51.250.85.206","port":5443,"uuid":"6fac2461-acc6-466a-8ace-27bdba6632b6","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"145 🇩🇪 Germany — #321","type":"vless","server":"37.139.33.125","port":443,"uuid":"5e640447-a590-03e8-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"146 🇩🇪 Germany — #322","type":"vless","server":"37.139.33.125","port":443,"uuid":"5e640447-a590-01f4-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"147 🇩🇪 Germany — #323","type":"vless","server":"51.250.85.206","port":5443,"uuid":"0082658f-f9d5-43e2-a1a9-4616664ffa4f","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"148 🇩🇪 Germany — #328","type":"vless","server":"51.250.65.209","port":443,"uuid":"b7dd5972-263a-4331-8ee5-c747e773b434","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"149 🇩🇪 Germany — #332","type":"vless","server":"51.250.22.166","port":443,"uuid":"e7e7c015-7d99-4493-91b2-7941cb702d67","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"150 🇩🇪 Germany — #341","type":"vless","server":"109.120.188.156","port":443,"uuid":"5e640447-a590-01f4-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"151 🇩🇪 Germany — #342","type":"vless","server":"109.120.188.156","port":443,"uuid":"5e640447-a590-03e8-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"152 🇩🇪 Germany — #358","type":"vless","server":"89.208.228.167","port":443,"uuid":"5e640447-a590-01f4-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"153 🇩🇪 Germany — #359","type":"vless","server":"89.208.228.167","port":443,"uuid":"5e640447-a590-03e8-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"154 🇩🇪 Germany — #373","type":"vless","server":"109.120.189.142","port":443,"uuid":"5e640447-a590-01f4-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"155 🇩🇪 Germany — #374","type":"vless","server":"109.120.189.142","port":443,"uuid":"5e640447-a590-03e8-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"156 🇪🇪 Estonia — #381","type":"vless","server":"146.185.242.246","port":52006,"uuid":"5e640447-a590-4d4f-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"157 🇪🇪 Estonia — #382","type":"vless","server":"146.185.242.246","port":51006,"uuid":"5e640447-a590-1770-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"158 🇫🇮 Finland — #385","type":"vless","server":"94.177.13.135","port":442,"uuid":"438aeb08-fafe-5c22-bda7-17baf4f24aaa","udp":true,"tls":true,"network":"tcp","servername":"google.com"}
+  - {"name":"159 🇫🇮 Finland — #386","type":"vless","server":"64.188.73.12","port":443,"uuid":"99bd2791-8e27-435b-a1e2-c9b625101af9","udp":true,"tls":true,"network":"tcp","servername":"www.intel.com"}
+  - {"name":"160 🇫🇮 Finland — #388","type":"vless","server":"51.250.64.246","port":444,"uuid":"89c8f8a0-a98c-4091-b91b-f57d228afd29","udp":true,"tls":true,"network":"grpc","servername":"5post-gate.x5.ru"}
+  - {"name":"161 🇫🇮 Finland — #390","type":"vless","server":"5.188.141.131","port":443,"uuid":"f27f5ad9-c8e7-0bb8-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"162 🇫🇮 Finland — #391","type":"vless","server":"5.188.141.131","port":443,"uuid":"17c4e377-ea15-0bb8-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"163 🇫🇮 Finland — #392","type":"vless","server":"5.188.141.131","port":443,"uuid":"080556c0-0117-0bb8-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"164 🇫🇮 Finland — #394","type":"vless","server":"89.208.228.167","port":443,"uuid":"17c4e377-ea15-0bb8-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"165 🇫🇮 Finland — #395","type":"vless","server":"89.208.228.167","port":443,"uuid":"f27f5ad9-c8e7-0bb8-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"166 🇫🇮 Finland — #396","type":"vless","server":"109.120.188.156","port":443,"uuid":"17c4e377-ea15-0bb8-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"167 🇫🇮 Finland — #397","type":"vless","server":"109.120.188.156","port":443,"uuid":"f27f5ad9-c8e7-0bb8-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"168 🇫🇮 Finland — #398","type":"vless","server":"109.120.189.142","port":443,"uuid":"17c4e377-ea15-0bb8-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"169 🇫🇮 Finland — #399","type":"vless","server":"37.139.33.125","port":443,"uuid":"17c4e377-ea15-0bb8-98b2-3e348c9ff5d9","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"170 🇫🇮 Finland — #400","type":"vless","server":"109.120.189.142","port":443,"uuid":"f27f5ad9-c8e7-0bb8-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"171 🇫🇮 Finland — #401","type":"vless","server":"37.139.33.125","port":443,"uuid":"f27f5ad9-c8e7-0bb8-a43b-4fce5aabe734","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"172 🇫🇮 Finland — #402","type":"vless","server":"109.120.188.156","port":443,"uuid":"080556c0-0117-0bb8-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"173 🇫🇮 Finland — #403","type":"vless","server":"109.120.189.142","port":443,"uuid":"080556c0-0117-0bb8-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"174 🇫🇮 Finland — #407","type":"vless","server":"37.139.33.125","port":443,"uuid":"080556c0-0117-0bb8-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"175 🇫🇮 Finland — #408","type":"vless","server":"89.208.228.167","port":443,"uuid":"416d27c8-f1f6-0bb8-978d-31332344c8da","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"176 🇫🇮 Finland — #415","type":"vless","server":"37.139.33.125","port":443,"uuid":"416d27c8-f1f6-0bb8-978d-31332344c8da","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"177 🇫🇮 Finland — #420","type":"vless","server":"89.208.228.167","port":443,"uuid":"8e0d168b-f984-0bb8-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"178 🇫🇮 Finland — #422","type":"vless","server":"89.208.228.167","port":443,"uuid":"080556c0-0117-0bb8-b1d9-3708fa8ab8c4","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"179 🇫🇮 Finland — #426","type":"vless","server":"109.120.189.112","port":51006,"uuid":"5e640447-a590-0bb8-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"xhttp","servername":"max.ru"}
+  - {"name":"180 🇫🇮 Finland — #427","type":"vless","server":"51.250.3.183","port":443,"uuid":"b7dd5972-263a-4331-8ee5-c747e773b434","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"181 🇫🇮 Finland — #430","type":"vless","server":"51.250.69.188","port":8449,"uuid":"4147a4fa-1c4a-4b5f-80f2-71cc509e4d88","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"182 🇫🇮 Finland — #431","type":"vless","server":"51.250.69.188","port":8449,"uuid":"ba93c94d-ce74-4f89-8ae1-cbaf14df2bf0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"183 🇫🇮 Finland — #437","type":"vless","server":"109.120.188.156","port":443,"uuid":"416d27c8-f1f6-0bb8-978d-31332344c8da","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"184 🇫🇮 Finland — #453","type":"vless","server":"5.188.141.131","port":443,"uuid":"416d27c8-f1f6-0bb8-978d-31332344c8da","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"185 🇫🇮 Finland — #454","type":"vless","server":"5.188.141.131","port":443,"uuid":"8e0d168b-f984-0bb8-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"186 🇫🇮 Finland — #469","type":"vless","server":"95.163.208.45","port":7979,"uuid":"7c8cabab-a79f-4444-8c80-528c755f002f","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"187 🇫🇮 Finland — #471","type":"vless","server":"109.120.189.142","port":443,"uuid":"416d27c8-f1f6-0bb8-978d-31332344c8da","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"188 🇫🇷 France — #473","type":"vless","server":"51.250.43.209","port":8080,"uuid":"621d5f40-707c-40f0-8b5c-253d38e1d0cb","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"189 🇫🇷 France — #477","type":"vless","server":"51.250.43.209","port":8080,"uuid":"ccdf58c8-b9d4-4bc7-a55e-e6965cc71fc7","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"190 🇫🇷 France — #478","type":"vless","server":"51.250.43.209","port":8080,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"191 🇫🇷 France — #480","type":"vless","server":"81.19.137.83","port":20,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"st.ozone.ru"}
+  - {"name":"192 🇫🇷 France — #482","type":"vless","server":"51.250.43.209","port":8080,"uuid":"4bc1f812-c4a5-4085-8e86-270061cdc1c8","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"193 🇫🇷 France — #485","type":"vless","server":"81.19.137.83","port":8443,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"sun6-21.userapi.com"}
+  - {"name":"194 🇱🇻 Latvia — #486","type":"vless","server":"31.170.22.193","port":47997,"uuid":"7177f5c4-f26a-4ab5-820f-62cb6ba649f7","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
+  - {"name":"195 🇱🇻 Latvia — #487","type":"vless","server":"90.156.255.198","port":51114,"uuid":"8b575b35-3c7c-42b0-ac80-2aa6b0d7717c","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"196 🇱🇻 Latvia — #489","type":"vless","server":"31.170.22.193","port":47997,"uuid":"92a44118-95ea-47e3-bca7-95352f484077","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
+  - {"name":"197 🇱🇻 Latvia — #490","type":"vless","server":"31.170.22.193","port":47997,"uuid":"b3172ad4-d309-47b2-9e1a-12fbc16fd963","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
+  - {"name":"198 🇲🇩 Moldova — #491","type":"vless","server":"178.154.202.254","port":7445,"uuid":"91a22bd1-04cf-43c3-8f99-3aaf0356cecc","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"199 🇲🇩 Moldova — #492","type":"vless","server":"51.250.14.48","port":7445,"uuid":"d320d596-cac7-4969-be67-be80b705019c","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"200 🇲🇩 Moldova — #493","type":"vless","server":"178.154.202.254","port":7445,"uuid":"d12c812a-18c9-41c3-afb8-01a391e0eb1b","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"201 🇲🇩 Moldova — #494","type":"vless","server":"51.250.14.48","port":7445,"uuid":"ec2088c4-3ed6-428b-a537-80be92144cbe","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"202 🇲🇩 Moldova — #495","type":"vless","server":"51.250.14.48","port":7445,"uuid":"e4aafe43-a4d3-4696-ad57-5948919d011a","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"203 🇲🇩 Moldova — #496","type":"vless","server":"178.154.202.254","port":7445,"uuid":"4147a4fa-1c4a-4b5f-80f2-71cc509e4d88","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"204 🇲🇩 Moldova — #497","type":"vless","server":"51.250.14.48","port":7445,"uuid":"6cab7c39-d329-4102-a9e3-1735a7c9d46d","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"205 🇲🇩 Moldova — #498","type":"vless","server":"51.250.14.48","port":7445,"uuid":"7954afff-242a-4657-8d20-6a9fcbabb3d6","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"206 🇲🇩 Moldova — #499","type":"vless","server":"178.154.202.254","port":7445,"uuid":"52acd66e-06bd-491b-ad7c-00f8a909b066","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"207 🇲🇩 Moldova — #500","type":"vless","server":"178.154.202.254","port":7445,"uuid":"d320d596-cac7-4969-be67-be80b705019c","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"208 🇲🇩 Moldova — #501","type":"vless","server":"178.154.202.254","port":7445,"uuid":"6cab7c39-d329-4102-a9e3-1735a7c9d46d","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"209 🇲🇩 Moldova — #503","type":"vless","server":"178.154.202.254","port":7445,"uuid":"84c685bf-6cfd-49cc-91ad-a947376315ba","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"210 🇲🇩 Moldova — #505","type":"vless","server":"51.250.14.48","port":8448,"uuid":"67cb4bbd-f4d9-4a58-a409-fdc0154ca3d8","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"211 🇲🇩 Moldova — #506","type":"vless","server":"178.154.202.254","port":7445,"uuid":"81ed7404-4d2b-4284-8e65-b26361c2d555","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"212 🇳🇱 The Netherlands — #507","type":"vless","server":"95.163.210.159","port":8080,"uuid":"621d5f40-707c-40f0-8b5c-253d38e1d0cb","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"213 🇳🇱 The Netherlands — #508","type":"vless","server":"79.137.174.199","port":8443,"uuid":"b9a3bffe-04a3-4ec4-8cc6-4cd2cdc96ec2","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"214 🇳🇱 The Netherlands — #509","type":"vless","server":"87.239.252.186","port":443,"uuid":"a2dd8d94-2513-429c-92b9-6834da570869","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
+  - {"name":"215 🇳🇱 The Netherlands — #510","type":"vless","server":"185.121.232.251","port":8443,"uuid":"db444bee-8212-5ff5-be40-47e1a7509eb8","udp":true,"tls":true,"network":"xhttp","servername":"vk.com"}
+  - {"name":"216 🇳🇱 The Netherlands — #511","type":"vless","server":"109.107.167.184","port":443,"uuid":"db444bee-8212-5ff5-be40-47e1a7509eb8","udp":true,"tls":true,"network":"xhttp","servername":"sun6-21.userapi.com"}
+  - {"name":"217 🇳🇱 The Netherlands — #516","type":"vless","server":"95.163.210.159","port":8080,"uuid":"ccdf58c8-b9d4-4bc7-a55e-e6965cc71fc7","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"218 🇳🇱 The Netherlands — #517","type":"vless","server":"51.250.69.188","port":7443,"uuid":"9bf4cdf8-bd47-4f18-831f-1264fbe16d18","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"219 🇳🇱 The Netherlands — #518","type":"vless","server":"51.250.69.188","port":7443,"uuid":"5a151f76-94b9-4905-8bd6-13de1adc00f5","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"220 🇳🇱 The Netherlands — #519","type":"vless","server":"51.250.69.188","port":7443,"uuid":"709b1869-7fb5-4a27-90d7-637f71a3b6c3","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"221 🇳🇱 The Netherlands — #520","type":"vless","server":"89.169.8.145","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"222 🇳🇱 The Netherlands — #522","type":"vless","server":"95.163.210.159","port":8080,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"223 🇳🇱 The Netherlands — #523","type":"vless","server":"51.250.69.188","port":7443,"uuid":"6cab7c39-d329-4102-a9e3-1735a7c9d46d","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"224 🇳🇱 The Netherlands — #525","type":"vless","server":"109.120.189.112","port":51006,"uuid":"5e640447-a590-1f40-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"xhttp","servername":"max.ru"}
+  - {"name":"225 🇳🇱 The Netherlands — #527","type":"vless","server":"95.163.210.159","port":8080,"uuid":"4bc1f812-c4a5-4085-8e86-270061cdc1c8","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"226 🇳🇱 The Netherlands — #528","type":"vless","server":"94.131.105.12","port":20,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"st.ozone.ru"}
+  - {"name":"227 🇳🇱 The Netherlands — #530","type":"vless","server":"51.250.69.188","port":7443,"uuid":"ba93c94d-ce74-4f89-8ae1-cbaf14df2bf0","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"228 🇳🇱 The Netherlands — #544","type":"vless","server":"51.250.4.154","port":8443,"uuid":"135e0a40-736c-4902-a712-8c66f75923ca","udp":true,"tls":true,"network":"tcp","servername":"www.m.vk.com"}
+  - {"name":"229 🇳🇱 The Netherlands — #545","type":"vless","server":"84.201.161.103","port":4249,"uuid":"135e0a40-736c-4902-a712-8c66f75923ca","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"230 🇵🇱 Poland — #547","type":"vless","server":"178.17.59.73","port":2053,"uuid":"07cd9dbe-21ac-4871-817d-c772687e4b7c","udp":true,"tls":true,"network":"tcp","servername":"www.ibm.com"}
+  - {"name":"231 🇵🇱 Poland — #548","type":"vless","server":"178.154.222.55","port":8443,"uuid":"621d5f40-707c-40f0-8b5c-253d38e1d0cb","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"232 🇵🇱 Poland — #549","type":"vless","server":"178.154.222.55","port":8443,"uuid":"ccdf58c8-b9d4-4bc7-a55e-e6965cc71fc7","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"233 🇵🇱 Poland — #550","type":"vless","server":"178.154.222.55","port":8443,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"234 🇵🇱 Poland — #551","type":"vless","server":"109.120.189.112","port":51006,"uuid":"5e640447-a590-2710-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"xhttp","servername":"max.ru"}
+  - {"name":"235 🇵🇱 Poland — #552","type":"vless","server":"5.188.141.12","port":52006,"uuid":"5e640447-a590-2710-9ec3-cbad6fd85b1e","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"236 🇵🇱 Poland — #553","type":"vless","server":"178.154.222.55","port":8443,"uuid":"4bc1f812-c4a5-4085-8e86-270061cdc1c8","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"237 🇵🇱 Poland — #554","type":"vless","server":"178.17.59.41","port":8080,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"238 🇵🇱 Poland — #556","type":"vless","server":"144.31.1.24","port":8443,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.com"}
+  - {"name":"239 🇵🇱 Poland — #558","type":"vless","server":"144.31.4.213","port":608,"uuid":"647e8609-caf9-490e-9e1c-cbe35c010633","udp":true,"tls":true,"network":"tcp","servername":"pl-10gb-1.atlanta-internet.com"}
+  - {"name":"240 🇸🇪 Sweden — #559","type":"vless","server":"84.201.132.223","port":8443,"uuid":"fff6bf71-be84-40cb-ad6e-33480dc48add","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
+  - {"name":"241 🇸🇪 Sweden — #560","type":"vless","server":"90.156.254.74","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"242 🇸🇪 Sweden — #561","type":"vless","server":"144.31.130.55","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"243 🇸🇪 Sweden — #562","type":"vless","server":"144.31.130.60","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"244 🇸🇪 Sweden — #564","type":"vless","server":"144.31.130.49","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"245 🇸🇪 Sweden — #565","type":"vless","server":"78.40.117.63","port":443,"uuid":"7b9eee6a-13e0-11f1-8992-6dc1f910523f","udp":true,"tls":true,"network":"xhttp","servername":"se1.maxservice.life"}
+  - {"name":"246 🇺🇦 Ukraine — #569","type":"vless","server":"5.180.97.139","port":443,"uuid":"a384c715-aeb5-45e8-859b-f687ca6c083f","udp":true,"tls":true,"network":"tcp","servername":"google.com"}
+  - {"name":"247 🇺🇦 Ukraine — #570","type":"vless","server":"185.147.26.40","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"248 🇺🇦 Ukraine — #571","type":"vless","server":"185.147.26.29","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"249 🇺🇦 Ukraine — #572","type":"vless","server":"185.147.26.26","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"250 🇺🇦 Ukraine — #574","type":"vless","server":"185.147.26.22","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"251 🇺🇦 Ukraine — #575","type":"vless","server":"185.147.26.38","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"252 🇺🇦 Ukraine — #578","type":"vless","server":"185.147.26.14","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"253 🇺🇦 Ukraine — #579","type":"vless","server":"185.147.26.21","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"254 🇺🇦 Ukraine — #580","type":"vless","server":"185.147.26.30","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"255 🇺🇸 United States — #581","type":"vless","server":"144.31.54.35","port":37016,"uuid":"c6be0a05-6105-4c0a-8af5-3e227f10735f","udp":true,"tls":true,"network":"tcp","servername":"www.nvidia.com"}
+  - {"name":"256 🇺🇸 United States — #582","type":"vless","server":"84.201.132.223","port":8843,"uuid":"64ef0934-598c-4847-a612-9a50881d1907","udp":true,"tls":true,"network":"tcp","servername":"5post-gate.x5.ru"}
+  - {"name":"257 🇺🇸 United States — #583","type":"vless","server":"95.163.210.159","port":443,"uuid":"621d5f40-707c-40f0-8b5c-253d38e1d0cb","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"258 🇺🇸 United States — #584","type":"vless","server":"95.163.210.159","port":443,"uuid":"ccdf58c8-b9d4-4bc7-a55e-e6965cc71fc7","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"259 🇺🇸 United States — #585","type":"vless","server":"95.163.210.159","port":443,"uuid":"a001c9c4-ece2-4dc1-9658-cbad90fcd2e0","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"260 🇺🇸 United States — #586","type":"vless","server":"95.163.210.159","port":443,"uuid":"4bc1f812-c4a5-4085-8e86-270061cdc1c8","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"261 🇻🇳 Vietnam — #588","type":"vless","server":"144.31.30.86","port":443,"uuid":"12adb397-701e-0002-91f6-e0c766f87fa4","udp":true,"tls":true,"network":"tcp","servername":"nl01r.easyserf.top"}
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - "Auto"
+      - "DIRECT"
+  - name: "Auto"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "1 🇷🇺 VK — #1"
+      - "2 🇷🇺 VK — #2"
+      - "3 🇷🇺 VK — #3"
+      - "4 🇷🇺 VK — #4"
+      - "5 🇷🇺 VK — #5"
+      - "6 🇷🇺 VK — #6"
+      - "7 🇷🇺 VK — #7"
+      - "8 🇷🇺 VK — #8"
+      - "9 🇷🇺 VK — #9"
+      - "10 🇷🇺 VK — #10"
+      - "11 🇷🇺 VK — #11"
+      - "12 🇷🇺 VK — #12"
+      - "13 🇷🇺 VK — #13"
+      - "14 🇷🇺 VK — #14"
+      - "15 🇷🇺 VK — #15"
+      - "16 🇷🇺 VK — #16"
+      - "17 🇷🇺 VK — #17"
+      - "18 🇷🇺 VK — #18"
+      - "19 🇷🇺 VK — #19"
+      - "20 🇷🇺 VK — #20"
+      - "21 🇷🇺 VK — #21"
+      - "22 🇷🇺 VK — #22"
+      - "23 🇷🇺 VK — #23"
+      - "24 🇷🇺 VK — #24"
+      - "25 🇷🇺 VK — #25"
+      - "26 🇷🇺 VK — #26"
+      - "27 🇷🇺 VK — #27"
+      - "28 🇷🇺 VK — #28"
+      - "29 🇷🇺 VK — #29"
+      - "30 🇷🇺 VK — #30"
+      - "31 🇷🇺 VK — #31"
+      - "32 🇷🇺 VK — #32"
+      - "33 🇷🇺 VK — #33"
+      - "34 🇷🇺 VK — #34"
+      - "35 🇷🇺 VK — #35"
+      - "36 🇷🇺 VK — #36"
+      - "37 🇷🇺 VK — #37"
+      - "38 🇷🇺 VK — #38"
+      - "39 🇷🇺 VK — #39"
+      - "40 🇷🇺 VK — #40"
+      - "41 🇷🇺 VK — #41"
+      - "42 🇷🇺 VK — #42"
+      - "43 🇷🇺 VK — #43"
+      - "44 🇷🇺 VK — #44"
+      - "45 🇷🇺 VK — #53"
+      - "46 🇷🇺 VK — #55"
+      - "47 🇷🇺 VK — #56"
+      - "48 🇷🇺 VK — #57"
+      - "49 🇷🇺 VK — #58"
+      - "50 🇷🇺 VK — #63"
+      - "51 🇷🇺 VK — #64"
+      - "52 🇷🇺 VK — #65"
+      - "53 🇷🇺 VK — #66"
+      - "54 🇷🇺 VK — #68"
+      - "55 🇷🇺 VK — #72"
+      - "56 🇷🇺 VK — #75"
+      - "57 🇷🇺 VK — #76"
+      - "58 🇷🇺 VK — #77"
+      - "59 🇷🇺 VK — #78"
+      - "60 🇷🇺 VK — #81"
+      - "61 🇷🇺 VK — #108"
+      - "62 🇷🇺 VK — #115"
+      - "63 🇷🇺 VK — #121"
+      - "64 🇷🇺 Yandex — #122"
+      - "65 🇷🇺 Yandex — #123"
+      - "66 🇷🇺 Yandex — #124"
+      - "67 🇷🇺 Yandex — #125"
+      - "68 🇷🇺 Yandex — #126"
+      - "69 🇷🇺 Yandex — #127"
+      - "70 🇷🇺 Yandex — #128"
+      - "71 🇷🇺 Yandex — #129"
+      - "72 🇷🇺 Yandex — #130"
+      - "73 🇷🇺 Yandex — #131"
+      - "74 🇷🇺 Yandex — #133"
+      - "75 🇷🇺 Yandex — #134"
+      - "76 🇷🇺 CDNvideo — #143"
+      - "77 🇷🇺 Selectel — #144"
+      - "78 🇷🇺 Selectel — #153"
+      - "79 🇷🇺 Selectel — #159"
+      - "80 🇷🇺 Selectel — #160"
+      - "81 🇷🇺 Selectel — #161"
+      - "82 🇷🇺 Serv.Host — #162"
+      - "83 🇷🇺 Serv.Host — #163"
+      - "84 🇷🇺 UFO Hosting — #166"
+      - "85 🇷🇺 UFO Hosting — #168"
+      - "86 🇷🇺 UFO Hosting — #169"
+      - "87 🇷🇺 UFO Hosting — #172"
+      - "88 🇦🇪 United Arab Emirates — #173"
+      - "89 🇦🇲 Armenia — #175"
+      - "90 🇦🇹 Austria — #176"
+      - "91 🇩🇪 Germany — #178"
+      - "92 🇩🇪 Germany — #179"
+      - "93 🇩🇪 Germany — #181"
+      - "94 🇩🇪 Germany — #182"
+      - "95 🇩🇪 Germany — #183"
+      - "96 🇩🇪 Germany — #184"
+      - "97 🇩🇪 Germany — #186"
+      - "98 🇩🇪 Germany — #187"
+      - "99 🇩🇪 Germany — #212"
+      - "100 🇩🇪 Germany — #213"
+      - "101 🇩🇪 Germany — #215"
+      - "102 🇩🇪 Germany — #217"
+      - "103 🇩🇪 Germany — #218"
+      - "104 🇩🇪 Germany — #219"
+      - "105 🇩🇪 Germany — #220"
+      - "106 🇩🇪 Germany — #221"
+      - "107 🇩🇪 Germany — #223"
+      - "108 🇩🇪 Germany — #225"
+      - "109 🇩🇪 Germany — #226"
+      - "110 🇩🇪 Germany — #227"
+      - "111 🇩🇪 Germany — #228"
+      - "112 🇩🇪 Germany — #229"
+      - "113 🇩🇪 Germany — #237"
+      - "114 🇩🇪 Germany — #239"
+      - "115 🇩🇪 Germany — #249"
+      - "116 🇩🇪 Germany — #250"
+      - "117 🇩🇪 Germany — #251"
+      - "118 🇩🇪 Germany — #252"
+      - "119 🇩🇪 Germany — #254"
+      - "120 🇩🇪 Germany — #255"
+      - "121 🇩🇪 Germany — #257"
+      - "122 🇩🇪 Germany — #262"
+      - "123 🇩🇪 Germany — #263"
+      - "124 🇩🇪 Germany — #268"
+      - "125 🇩🇪 Germany — #269"
+      - "126 🇩🇪 Germany — #270"
+      - "127 🇩🇪 Germany — #272"
+      - "128 🇩🇪 Germany — #273"
+      - "129 🇩🇪 Germany — #274"
+      - "130 🇩🇪 Germany — #275"
+      - "131 🇩🇪 Germany — #276"
+      - "132 🇩🇪 Germany — #277"
+      - "133 🇩🇪 Germany — #290"
+      - "134 🇩🇪 Germany — #300"
+      - "135 🇩🇪 Germany — #301"
+      - "136 🇩🇪 Germany — #302"
+      - "137 🇩🇪 Germany — #303"
+      - "138 🇩🇪 Germany — #304"
+      - "139 🇩🇪 Germany — #306"
+      - "140 🇩🇪 Germany — #307"
+      - "141 🇩🇪 Germany — #308"
+      - "142 🇩🇪 Germany — #309"
+      - "143 🇩🇪 Germany — #318"
+      - "144 🇩🇪 Germany — #319"
+      - "145 🇩🇪 Germany — #321"
+      - "146 🇩🇪 Germany — #322"
+      - "147 🇩🇪 Germany — #323"
+      - "148 🇩🇪 Germany — #328"
+      - "149 🇩🇪 Germany — #332"
+      - "150 🇩🇪 Germany — #341"
+      - "151 🇩🇪 Germany — #342"
+      - "152 🇩🇪 Germany — #358"
+      - "153 🇩🇪 Germany — #359"
+      - "154 🇩🇪 Germany — #373"
+      - "155 🇩🇪 Germany — #374"
+      - "156 🇪🇪 Estonia — #381"
+      - "157 🇪🇪 Estonia — #382"
+      - "158 🇫🇮 Finland — #385"
+      - "159 🇫🇮 Finland — #386"
+      - "160 🇫🇮 Finland — #388"
+      - "161 🇫🇮 Finland — #390"
+      - "162 🇫🇮 Finland — #391"
+      - "163 🇫🇮 Finland — #392"
+      - "164 🇫🇮 Finland — #394"
+      - "165 🇫🇮 Finland — #395"
+      - "166 🇫🇮 Finland — #396"
+      - "167 🇫🇮 Finland — #397"
+      - "168 🇫🇮 Finland — #398"
+      - "169 🇫🇮 Finland — #399"
+      - "170 🇫🇮 Finland — #400"
+      - "171 🇫🇮 Finland — #401"
+      - "172 🇫🇮 Finland — #402"
+      - "173 🇫🇮 Finland — #403"
+      - "174 🇫🇮 Finland — #407"
+      - "175 🇫🇮 Finland — #408"
+      - "176 🇫🇮 Finland — #415"
+      - "177 🇫🇮 Finland — #420"
+      - "178 🇫🇮 Finland — #422"
+      - "179 🇫🇮 Finland — #426"
+      - "180 🇫🇮 Finland — #427"
+      - "181 🇫🇮 Finland — #430"
+      - "182 🇫🇮 Finland — #431"
+      - "183 🇫🇮 Finland — #437"
+      - "184 🇫🇮 Finland — #453"
+      - "185 🇫🇮 Finland — #454"
+      - "186 🇫🇮 Finland — #469"
+      - "187 🇫🇮 Finland — #471"
+      - "188 🇫🇷 France — #473"
+      - "189 🇫🇷 France — #477"
+      - "190 🇫🇷 France — #478"
+      - "191 🇫🇷 France — #480"
+      - "192 🇫🇷 France — #482"
+      - "193 🇫🇷 France — #485"
+      - "194 🇱🇻 Latvia — #486"
+      - "195 🇱🇻 Latvia — #487"
+      - "196 🇱🇻 Latvia — #489"
+      - "197 🇱🇻 Latvia — #490"
+      - "198 🇲🇩 Moldova — #491"
+      - "199 🇲🇩 Moldova — #492"
+      - "200 🇲🇩 Moldova — #493"
+      - "201 🇲🇩 Moldova — #494"
+      - "202 🇲🇩 Moldova — #495"
+      - "203 🇲🇩 Moldova — #496"
+      - "204 🇲🇩 Moldova — #497"
+      - "205 🇲🇩 Moldova — #498"
+      - "206 🇲🇩 Moldova — #499"
+      - "207 🇲🇩 Moldova — #500"
+      - "208 🇲🇩 Moldova — #501"
+      - "209 🇲🇩 Moldova — #503"
+      - "210 🇲🇩 Moldova — #505"
+      - "211 🇲🇩 Moldova — #506"
+      - "212 🇳🇱 The Netherlands — #507"
+      - "213 🇳🇱 The Netherlands — #508"
+      - "214 🇳🇱 The Netherlands — #509"
+      - "215 🇳🇱 The Netherlands — #510"
+      - "216 🇳🇱 The Netherlands — #511"
+      - "217 🇳🇱 The Netherlands — #516"
+      - "218 🇳🇱 The Netherlands — #517"
+      - "219 🇳🇱 The Netherlands — #518"
+      - "220 🇳🇱 The Netherlands — #519"
+      - "221 🇳🇱 The Netherlands — #520"
+      - "222 🇳🇱 The Netherlands — #522"
+      - "223 🇳🇱 The Netherlands — #523"
+      - "224 🇳🇱 The Netherlands — #525"
+      - "225 🇳🇱 The Netherlands — #527"
+      - "226 🇳🇱 The Netherlands — #528"
+      - "227 🇳🇱 The Netherlands — #530"
+      - "228 🇳🇱 The Netherlands — #544"
+      - "229 🇳🇱 The Netherlands — #545"
+      - "230 🇵🇱 Poland — #547"
+      - "231 🇵🇱 Poland — #548"
+      - "232 🇵🇱 Poland — #549"
+      - "233 🇵🇱 Poland — #550"
+      - "234 🇵🇱 Poland — #551"
+      - "235 🇵🇱 Poland — #552"
+      - "236 🇵🇱 Poland — #553"
+      - "237 🇵🇱 Poland — #554"
+      - "238 🇵🇱 Poland — #556"
+      - "239 🇵🇱 Poland — #558"
+      - "240 🇸🇪 Sweden — #559"
+      - "241 🇸🇪 Sweden — #560"
+      - "242 🇸🇪 Sweden — #561"
+      - "243 🇸🇪 Sweden — #562"
+      - "244 🇸🇪 Sweden — #564"
+      - "245 🇸🇪 Sweden — #565"
+      - "246 🇺🇦 Ukraine — #569"
+      - "247 🇺🇦 Ukraine — #570"
+      - "248 🇺🇦 Ukraine — #571"
+      - "249 🇺🇦 Ukraine — #572"
+      - "250 🇺🇦 Ukraine — #574"
+      - "251 🇺🇦 Ukraine — #575"
+      - "252 🇺🇦 Ukraine — #578"
+      - "253 🇺🇦 Ukraine — #579"
+      - "254 🇺🇦 Ukraine — #580"
+      - "255 🇺🇸 United States — #581"
+      - "256 🇺🇸 United States — #582"
+      - "257 🇺🇸 United States — #583"
+      - "258 🇺🇸 United States — #584"
+      - "259 🇺🇸 United States — #585"
+      - "260 🇺🇸 United States — #586"
+      - "261 🇻🇳 Vietnam — #588"
+rules:
+  - GEOIP,IR,DIRECT
+  - MATCH,Proxy

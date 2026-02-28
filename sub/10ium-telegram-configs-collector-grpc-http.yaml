@@ -1,0 +1,350 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+proxies:
+  - {"name":"1 🔄 LATEST-UPDATE 📅 SAT-09-ESFAND-1404 🕑 08:17","type":"vless","server":"127.0.0.1","port":1080,"uuid":"aaccbba-aacb-baac-abdc-aabccacabcbb","udp":true,"tls":true,"network":"tcp"}
+  - {"name":"2 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.50.126:22955","type":"vless","server":"152.53.50.126","port":22955,"uuid":"63f92f3c-447c-4283-80b9-0af8e164cdad","udp":true,"tls":true,"network":"grpc","servername":"one-piece.com"}
+  - {"name":"3 🔒 VL-GRPC-NA 🇨🇾 CY-45.82.251.208:8880","type":"vless","server":"45.82.251.208","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"4 🔒 VL-GRPC-TLS 🇸🇬 SG-195.172.138.71:25055","type":"vless","server":"195.172.138.71","port":25055,"uuid":"75f1b0dd-f6c0-49eb-a421-54cd8b3778ac","udp":true,"tls":true,"network":"grpc","servername":"sgskb.osaip.net"}
+  - {"name":"5 🔒 VL-GRPC-RLT 🇩🇪 DE-2.58.196.10:2083","type":"vless","server":"2.58.196.10","port":2083,"uuid":"a0bf63c8-2f1b-4959-be70-e76e8f065204","udp":true,"tls":true,"network":"grpc","servername":"tgju.org"}
+  - {"name":"6 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.117:2083","type":"vless","server":"151.242.147.117","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"7 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443","type":"vless","server":"91.98.169.122","port":443,"uuid":"6967a7f2-e8a7-497e-f72e-c989e9f896d7","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"8 🔒 VL-GRPC-TLS 🇺🇸 US-66.81.247.155:443","type":"vless","server":"66.81.247.155","port":443,"uuid":"e765eb5b-8442-40e3-9532-857ba5ececa7","udp":true,"tls":true,"network":"grpc","servername":"vbox.ping-box.com"}
+  - {"name":"9 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.72.36:2083","type":"vless","server":"72.56.72.36","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"10 🔒 VL-GRPC-NONE 🇩🇪 DE-157.230.122.216:443","type":"vless","server":"157.230.122.216","port":443,"uuid":"9d0f2788-472a-499e-aa32-f34ede085a41","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"11 🔒 VL-GRPC-TLS 🇺🇸 US-63.141.128.42:2087","type":"vless","server":"63.141.128.42","port":2087,"uuid":"e999db7a-1b17-4da6-bc37-c9fa24af2e93","udp":true,"tls":true,"network":"grpc","servername":"splash.VaRtAlReX.iNfO"}
+  - {"name":"12 🔒 VL-GRPC-RLT 🇷🇺 RU-158.160.136.187:1443","type":"vless","server":"158.160.136.187","port":1443,"uuid":"1c29176e-96f0-461c-a3ea-21e8007c07c8","udp":true,"tls":true,"network":"grpc","servername":"travel.yandex.ru"}
+  - {"name":"13 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.195:8880","type":"vless","server":"45.82.251.195","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"14 🔒 VL-GRPC-RLT 🇸🇬 SG-52.221.230.111:20230","type":"vless","server":"52.221.230.111","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
+  - {"name":"15 🔒 VL-GRPC-RLT 🇳🇱 NL-150.241.94.142:7443","type":"vless","server":"150.241.94.142","port":7443,"uuid":"4bc7d558-1943-44de-bd82-56920bc9383e","udp":true,"tls":true,"network":"grpc","servername":"www.google.com"}
+  - {"name":"16 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.118.16:2083","type":"vless","server":"72.56.118.16","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"17 🔒 VL-GRPC-NONE 🇩🇪 DE-164.92.247.91:443","type":"vless","server":"164.92.247.91","port":443,"uuid":"dc46787e-b1bc-4c58-fb56-aef427d28972","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"18 🔒 VL-GRPC-RLT 🇬🇧 GB-158.220.88.63:443","type":"vless","server":"158.220.88.63","port":443,"uuid":"7c9d302f-1438-4f37-a6e0-0591dc4a4614","udp":true,"tls":true,"network":"grpc","servername":"www.microsoft.com"}
+  - {"name":"19 🔒 VL-GRPC-RLT 🇮🇳 IN-194.61.31.126:443","type":"vless","server":"194.61.31.126","port":443,"uuid":"5f39f871-2fae-446e-99ad-719fa8be687c","udp":true,"tls":true,"network":"grpc","servername":"www.microsoft.com"}
+  - {"name":"20 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.67.193.157:8443","type":"vless","server":"172.67.193.157","port":8443,"uuid":"f075b138-4e46-4022-a625-c5dfe4ddf19c","udp":true,"tls":true,"network":"grpc","servername":"free.smelean.ir"}
+  - {"name":"21 🔒 VL-GRPC-RLT 🇯🇵 JP-13.115.37.2:20230","type":"vless","server":"13.115.37.2","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
+  - {"name":"22 🔒 VL-GRPC-TLS 🇻🇬 VG-203.32.121.53:443","type":"vless","server":"203.32.121.53","port":443,"uuid":"2d4a93d4-28f9-431c-9a43-70874e8544e8","udp":true,"tls":true,"network":"grpc","servername":"jo.servernett.shop"}
+  - {"name":"23 🔒 VL-GRPC-RLT 🇷🇺 RU-178.72.145.19:8443","type":"vless","server":"178.72.145.19","port":8443,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.com"}
+  - {"name":"24 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.67.249.36:443","type":"vless","server":"172.67.249.36","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh30v5.carwashipdir.shop"}
+  - {"name":"25 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.62:4444","type":"vless","server":"151.241.173.62","port":4444,"uuid":"1b0ad61b-1be2-4cda-9979-984a965b0da5","udp":true,"tls":true,"network":"grpc","servername":"github.com"}
+  - {"name":"26 🔒 VL-GRPC-TLS 🇷🇴 RO-45.85.119.44:2053","type":"vless","server":"45.85.119.44","port":2053,"uuid":"28c5e895-0fcb-4c3c-aef0-56463d48b317","udp":true,"tls":true,"network":"grpc","servername":"we.kotala.cloud"}
+  - {"name":"27 🔒 VL-GRPC-RLT 🇩🇪 DE-79.137.202.58:443","type":"vless","server":"79.137.202.58","port":443,"uuid":"e35dd2de-7a4c-4af4-b671-1592e286a040","udp":true,"tls":true,"network":"grpc","servername":"web.max.ru"}
+  - {"name":"28 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.118:2083","type":"vless","server":"151.242.147.118","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"29 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.101:2083","type":"vless","server":"151.242.147.101","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"30 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.61:4444","type":"vless","server":"151.241.173.61","port":4444,"uuid":"1b0ad61b-1be2-4cda-9979-984a965b0da5","udp":true,"tls":true,"network":"grpc","servername":"github.com"}
+  - {"name":"31 🔒 VL-GRPC-RLT 🇳🇱 NL-185.21.9.91:4444","type":"vless","server":"185.21.9.91","port":4444,"uuid":"1b0ad61b-1be2-4cda-9979-984a965b0da5","udp":true,"tls":true,"network":"grpc","servername":"github.com"}
+  - {"name":"32 🔒 VL-GRPC-RLT 🇪🇪 EE-185.223.168.238:8448","type":"vless","server":"185.223.168.238","port":8448,"uuid":"6d490cef-0b49-459d-a72c-0bb0210f3dd0","udp":true,"tls":true,"network":"grpc","servername":"www.dropbox.com"}
+  - {"name":"33 🔒 VL-GRPC-TLS 🇰🇿 KZ-185.176.26.195:443","type":"vless","server":"185.176.26.195","port":443,"uuid":"6b10e086-7d43-46fa-954a-ad303d7cc37f","udp":true,"tls":true,"network":"grpc","servername":"grpc2.sharesite.ir"}
+  - {"name":"34 🔒 VL-GRPC-NONE 🇺🇸 US-40.160.14.104:8880","type":"vless","server":"40.160.14.104","port":8880,"uuid":"6251f84e-9c02-4140-921c-6b47d394fb96","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"35 🔒 VL-GRPC-RLT 🇳🇱 NL-91.201.113.249:4444","type":"vless","server":"91.201.113.249","port":4444,"uuid":"1b0ad61b-1be2-4cda-9979-984a965b0da5","udp":true,"tls":true,"network":"grpc","servername":"github.com"}
+  - {"name":"36 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.19.1.89:8443","type":"vless","server":"104.19.1.89","port":8443,"uuid":"232d915c-f3b6-4c47-be40-96701131106d","udp":true,"tls":true,"network":"grpc","servername":"b5.sodogodping.ir"}
+  - {"name":"37 🔒 VL-GRPC-RLT 🇺🇸 US-44.250.56.198:20230","type":"vless","server":"44.250.56.198","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
+  - {"name":"38 🔒 VL-GRPC-RLT 🇷🇺 RU-193.233.231.221:443","type":"vless","server":"193.233.231.221","port":443,"uuid":"03dd7e7c-8d2a-4cd2-b920-f5ed564fc8c4","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.ru"}
+  - {"name":"39 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.116:8880","type":"vless","server":"45.82.251.116","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"40 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.115:8880","type":"vless","server":"45.82.251.115","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"41 🔒 VL-GRPC-NONE 🇮🇷 IR-185.124.175.217:7730","type":"vless","server":"185.124.175.217","port":7730,"uuid":"f44cc5be-f529-41dc-9931-f595ce9899af","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"42 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443","type":"vless","server":"46.101.251.173","port":443,"uuid":"5b3ff9df-883c-45c9-ad86-ea9c6d473522","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"43 🔒 VL-GRPC-NONE 🇲🇩 MD-185.236.232.117:8880","type":"vless","server":"185.236.232.117","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"44 🔒 VL-GRPC-RLT 🇱🇻 LV-213.21.222.169:8448","type":"vless","server":"213.21.222.169","port":8448,"uuid":"6d490cef-0b49-459d-a72c-0bb0210f3dd0","udp":true,"tls":true,"network":"grpc","servername":"www.dropbox.com"}
+  - {"name":"45 🔒 VL-GRPC-RLT 🇩🇪 DE-143.20.37.17:443","type":"vless","server":"143.20.37.17","port":443,"uuid":"ce247dd9-adb8-465b-8e6a-3f841eccfd70","udp":true,"tls":true,"network":"grpc","servername":"omni.rizing.app"}
+  - {"name":"46 🔒 VL-GRPC-RLT 🇩🇪 DE-164.92.143.135:47542","type":"vless","server":"164.92.143.135","port":47542,"uuid":"02529660-52bf-4896-951a-1857c88d1dba","udp":true,"tls":true,"network":"grpc","servername":"zula.ir"}
+  - {"name":"47 🔒 VL-GRPC-RLT 🇷🇺 RU-51.250.64.246:444","type":"vless","server":"51.250.64.246","port":444,"uuid":"89c8f8a0-a98c-4091-b91b-f57d228afd29","udp":true,"tls":true,"network":"grpc","servername":"5post-gate.x5.ru"}
+  - {"name":"48 🔒 VL-GRPC-TLS 🇺🇸 US-3.143.235.221:32252","type":"vless","server":"3.143.235.221","port":32252,"uuid":"f0a44f8f-c01f-490c-a6eb-29106a2509a4","udp":true,"tls":true,"network":"grpc","servername":"3.143.235.221"}
+  - {"name":"49 🔒 VL-GRPC-RLT 🇩🇪 DE-37.120.175.246:22955","type":"vless","server":"37.120.175.246","port":22955,"uuid":"63f92f3c-447c-4283-80b9-0af8e164cdad","udp":true,"tls":true,"network":"grpc","servername":"one-piece.com"}
+  - {"name":"50 🔒 VL-GRPC-NA 🏴‍☠️ NA-188.114.99.99:2096","type":"vless","server":"188.114.99.99","port":2096,"uuid":"a00e3e46-f0c2-4e54-b747-037d715d32c0","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"51 🔒 VL-GRPC-RLT 🇷🇺 RU-79.174.95.163:2083","type":"vless","server":"79.174.95.163","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"ads.x5.ru"}
+  - {"name":"52 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.99:2083","type":"vless","server":"151.242.147.99","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"53 🔒 VL-GRPC-TLS 🇸🇨 SC-154.219.5.53:443","type":"vless","server":"154.219.5.53","port":443,"uuid":"eae02a50-e329-4647-926e-8439e685f317","udp":true,"tls":true,"network":"grpc","servername":"first.pinocchio1.ir."}
+  - {"name":"54 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.48.237:22955","type":"vless","server":"152.53.48.237","port":22955,"uuid":"63f92f3c-447c-4283-80b9-0af8e164cdad","udp":true,"tls":true,"network":"grpc","servername":"one-piece.com"}
+  - {"name":"55 🔒 VL-GRPC-RLT 🇺🇸 US-44.252.113.45:20230","type":"vless","server":"44.252.113.45","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
+  - {"name":"56 🔒 VL-GRPC-RLT 🇩🇪 DE-162.248.166.78:4444","type":"vless","server":"162.248.166.78","port":4444,"uuid":"1b0ad61b-1be2-4cda-9979-984a965b0da5","udp":true,"tls":true,"network":"grpc","servername":"github.com"}
+  - {"name":"57 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.16.145.254:443","type":"vless","server":"104.16.145.254","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh27v5.hiddendom.shop"}
+  - {"name":"58 🔒 VL-GRPC-TLS 🇸🇬 SG-27.50.48.155:443","type":"vless","server":"27.50.48.155","port":443,"uuid":"ab321a49-bc9c-4bb6-915b-a1fcbc7de49c","udp":true,"tls":true,"network":"grpc","servername":"vbox1.ping-box.com"}
+  - {"name":"59 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.26.7.205:443","type":"vless","server":"104.26.7.205","port":443,"uuid":"071435dc-6ab9-4502-8441-ed4a4b609092","udp":true,"tls":true,"network":"grpc","servername":"n1.n1server.org"}
+  - {"name":"60 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.51.29:22955","type":"vless","server":"152.53.51.29","port":22955,"uuid":"63f92f3c-447c-4283-80b9-0af8e164cdad","udp":true,"tls":true,"network":"grpc","servername":"one-piece.com"}
+  - {"name":"61 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.100:2083","type":"vless","server":"151.242.147.100","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"62 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.49.144:22955","type":"vless","server":"152.53.49.144","port":22955,"uuid":"63f92f3c-447c-4283-80b9-0af8e164cdad","udp":true,"tls":true,"network":"grpc","servername":"one-piece.com"}
+  - {"name":"63 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443","type":"vless","server":"165.232.70.217","port":443,"uuid":"5b3ff9df-883c-45c9-ad86-ea9c6d473522","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"64 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.17:2083","type":"vless","server":"72.56.123.17","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"65 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.35.53:8443","type":"vless","server":"37.139.35.53","port":8443,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"sso.passport.yandex.ru"}
+  - {"name":"66 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.158:2083","type":"vless","server":"72.56.123.158","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"67 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321","type":"vless","server":"192.142.53.38","port":37321,"uuid":"4914cac8-d4f7-4ffe-9c58-1117c9cb1887","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"68 🔒 VL-GRPC-TLS 🇸🇬 SG-152.42.179.234:443","type":"vless","server":"152.42.179.234","port":443,"uuid":"aafc284f-eba4-47f5-a2e3-0f2c68e75108","udp":true,"tls":true,"network":"grpc","servername":"newpath.xyz-my.eu.org"}
+  - {"name":"69 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.66.213.38:443","type":"vless","server":"172.66.213.38","port":443,"uuid":"62927eea-17df-49e6-e32b-a4f4668e44c9","udp":true,"tls":true,"network":"grpc","servername":"irancell.servernett.shop"}
+  - {"name":"70 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.29.234:2083","type":"vless","server":"104.18.29.234","port":2083,"uuid":"e0c50817-86dd-4ee1-bca3-6e296d85dd59","udp":true,"tls":true,"network":"grpc","servername":"blouck-de.gozarcloud.ir"}
+  - {"name":"71 🔒 VL-GRPC-RLT 🇯🇵 JP-13.115.50.143:20230","type":"vless","server":"13.115.50.143","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
+  - {"name":"72 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.48.224:22955","type":"vless","server":"152.53.48.224","port":22955,"uuid":"63f92f3c-447c-4283-80b9-0af8e164cdad","udp":true,"tls":true,"network":"grpc","servername":"one-piece.com"}
+  - {"name":"73 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.204:2083","type":"vless","server":"72.56.123.204","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"74 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.64.155.209:443","type":"vless","server":"172.64.155.209","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh36v3.carwashipdir.shop"}
+  - {"name":"75 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.32.63:7443","type":"vless","server":"37.139.32.63","port":7443,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"5post-gate.x5.ru"}
+  - {"name":"76 🔒 VL-GRPC-NONE 🇩🇪 DE-134.122.73.111:443","type":"vless","server":"134.122.73.111","port":443,"uuid":"59a07e25-2d40-4104-ce4b-b5df6a2170ad","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"77 🔒 VL-GRPC-RLT 🇺🇸 US-194.113.37.75:443","type":"vless","server":"194.113.37.75","port":443,"uuid":"c1969963-71c3-4181-b36c-6ec340153cee","udp":true,"tls":true,"network":"grpc","servername":"thehubdayton.officernd.com"}
+  - {"name":"78 🔒 VL-GRPC-RLT 🇬🇧 GB-79.72.90.132:3366","type":"vless","server":"79.72.90.132","port":3366,"uuid":"98256f2f-1a3e-4db8-ad9b-d553b6894d50","udp":true,"tls":true,"network":"grpc","servername":"addons.mozilla.org"}
+  - {"name":"79 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.97:2083","type":"vless","server":"151.242.147.97","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"80 🔒 VL-GRPC-RLT 🇵🇱 PL-144.31.1.24:8443","type":"vless","server":"144.31.1.24","port":8443,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.com"}
+  - {"name":"81 🔒 VL-GRPC-TLS 🇸🇬 SG-152.42.174.20:443","type":"vless","server":"152.42.174.20","port":443,"uuid":"44e9431f-6566-4ce9-b851-35c25acb7dca","udp":true,"tls":true,"network":"grpc","servername":"aka.ms"}
+  - {"name":"82 🔒 VL-GRPC-NONE 🇩🇪 DE-161.35.30.221:443","type":"vless","server":"161.35.30.221","port":443,"uuid":"5b3ff9df-883c-45c9-ad86-ea9c6d473522","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"83 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.63:4444","type":"vless","server":"151.241.173.63","port":4444,"uuid":"1b0ad61b-1be2-4cda-9979-984a965b0da5","udp":true,"tls":true,"network":"grpc","servername":"github.com"}
+  - {"name":"84 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443","type":"vless","server":"64.226.89.185","port":443,"uuid":"dc46787e-b1bc-4c58-fb56-aef427d28972","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"85 🔒 VL-GRPC-TLS 🇧🇬 BG-95.164.68.37:443","type":"vless","server":"95.164.68.37","port":443,"uuid":"303050c3-cd8a-408b-a438-e6a3cfaa0b48","udp":true,"tls":true,"network":"grpc","servername":"sourceforge.net"}
+  - {"name":"86 🔒 VL-GRPC-RLT 🇳🇱 NL-144.31.234.62:444","type":"vless","server":"144.31.234.62","port":444,"uuid":"4bc7d558-1943-44de-bd82-56920bc9383e","udp":true,"tls":true,"network":"grpc","servername":"freede.spectrum.vu"}
+  - {"name":"87 🔒 VL-GRPC-RLT 🇬🇧 GB-46.250.250.149:443","type":"vless","server":"46.250.250.149","port":443,"uuid":"549da73c-e0c5-4590-a31e-1fc23d222a19","udp":true,"tls":true,"network":"grpc","servername":"www.microsoft.com"}
+  - {"name":"88 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.227:2083","type":"vless","server":"72.56.123.227","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"89 🔒 VL-GRPC-RLT 🇳🇱 NL-51.158.206.93:23576","type":"vless","server":"51.158.206.93","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"grpc","servername":"fuck.rkn"}
+  - {"name":"90 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.104:2083","type":"vless","server":"72.56.123.104","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"91 🔒 VL-GRPC-RLT 🇬🇧 GB-46.250.240.80:443","type":"vless","server":"46.250.240.80","port":443,"uuid":"eb6a085c-437a-4539-bb43-19168d50bb10","udp":true,"tls":true,"network":"grpc","servername":"www.microsoft.com"}
+  - {"name":"92 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.233:8880","type":"vless","server":"45.82.251.233","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"93 🔒 VL-GRPC-RLT 🇷🇺 RU-178.72.145.23:8443","type":"vless","server":"178.72.145.23","port":8443,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.com"}
+  - {"name":"94 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.249:8880","type":"vless","server":"45.82.251.249","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc","servername":"pqh29v4.globalfymain.com"}
+  - {"name":"95 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.35.53:443","type":"vless","server":"37.139.35.53","port":443,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.com"}
+  - {"name":"96 🔒 VL-GRPC-NA 🏴‍☠️ NA-188.114.99.99:2053","type":"vless","server":"188.114.99.99","port":2053,"uuid":"84fc796b-6ac3-4465-98cf-2ae6fd58b4a7","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"97 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.32.47:443","type":"vless","server":"104.18.32.47","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh36v3.carwashipdir.shop"}
+  - {"name":"98 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.94:2083","type":"vless","server":"151.242.147.94","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"99 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.96:2083","type":"vless","server":"151.242.147.96","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"100 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.116:2083","type":"vless","server":"151.242.147.116","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"101 🔒 VL-GRPC-RLT 🇷🇺 RU-51.250.39.136:443","type":"vless","server":"51.250.39.136","port":443,"uuid":"1e26d9dd-0925-44b4-b013-3bd7d23df500","udp":true,"tls":true,"network":"grpc","servername":"event.yandex.ru"}
+  - {"name":"102 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.69.44:2083","type":"vless","server":"104.21.69.44","port":2083,"uuid":"e2e869c8-b576-4a45-a7cd-8dbceddc2e18","udp":true,"tls":true,"network":"grpc","servername":"abcdefghijklmnopqrstuvwxyza.likeboukan1.top"}
+  - {"name":"103 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.28.234:2083","type":"vless","server":"104.18.28.234","port":2083,"uuid":"e0c50817-86dd-4ee1-bca3-6e296d85dd59","udp":true,"tls":true,"network":"grpc","servername":"blouck-nl.gozarcloud.ir"}
+  - {"name":"104 🔒 VL-GRPC-TLS 🇺🇸 US-63.141.128.42:443","type":"vless","server":"63.141.128.42","port":443,"uuid":"071435dc-6ab9-4502-8441-ed4a4b609092","udp":true,"tls":true,"network":"grpc","servername":"n1.n1server.org"}
+  - {"name":"105 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.4.130:443","type":"vless","server":"104.18.4.130","port":443,"uuid":"e765eb5b-8442-40e3-9532-857ba5ececa7","udp":true,"tls":true,"network":"grpc","servername":"vbox.ping-box.com"}
+  - {"name":"106 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.146:2083","type":"vless","server":"72.56.123.146","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"107 🔒 VL-GRPC-RLT 🇷🇺 RU-79.174.95.200:6443","type":"vless","server":"79.174.95.200","port":6443,"uuid":"e2a696d5-ab49-45fd-b3f5-25739985390b","udp":true,"tls":true,"network":"grpc","servername":"api-maps.yandex.ru"}
+  - {"name":"108 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.17.90.246:443","type":"vless","server":"104.17.90.246","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh30v4.hiddendom.shop"}
+  - {"name":"109 🔒 VL-GRPC-RLT 🇯🇵 JP-54.248.36.129:20230","type":"vless","server":"54.248.36.129","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
+  - {"name":"110 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.26.2.186:443","type":"vless","server":"104.26.2.186","port":443,"uuid":"401374e6-df77-41fb-f638-dad8184f175b","udp":true,"tls":true,"network":"grpc","servername":"pqh31v7.hiddendom.shop"}
+  - {"name":"111 🔒 VL-GRPC-RLT 🇸🇬 SG-13.229.242.10:20230","type":"vless","server":"13.229.242.10","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
+  - {"name":"112 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.114:8880","type":"vless","server":"45.82.251.114","port":8880,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":false,"network":"grpc","servername":"pqh25v1.vetdomok.shop"}
+  - {"name":"113 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.86.253:443","type":"vless","server":"104.21.86.253","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh27v1.carwashipdir.shop"}
+  - {"name":"114 🔒 VL-GRPC-RLT 🇷🇺 RU-83.166.255.72:443","type":"vless","server":"83.166.255.72","port":443,"uuid":"03dd7e7c-8d2a-4cd2-b920-f5ed564fc8c4","udp":true,"tls":true,"network":"grpc","servername":"api-maps.yandex.ru"}
+  - {"name":"115 🔒 VL-GRPC-TLS 🇺🇸 US-104.129.167.161:443","type":"vless","server":"104.129.167.161","port":443,"uuid":"401374e6-df77-41fb-f638-dad8184f175b","udp":true,"tls":true,"network":"grpc","servername":"pqh23v4.hiddendom.shop"}
+  - {"name":"116 🔒 VL-GRPC-RLT 🇯🇵 JP-13.230.25.171:20230","type":"vless","server":"13.230.25.171","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
+  - {"name":"117 🔒 VL-GRPC-TLS 🇸🇬 SG-195.172.138.71:25055","type":"vless","server":"195.172.138.71","port":25055,"uuid":"7b9d152b-e88f-4f98-baf5-14450d179ed0","udp":true,"tls":true,"network":"grpc","servername":"sgskb.osaip.net"}
+  - {"name":"118 🔒 VL-GRPC-RLT 🇷🇺 RU-83.147.255.191:448","type":"vless","server":"83.147.255.191","port":448,"uuid":"03dd7e7c-8d2a-4cd2-b920-f5ed564fc8c4","udp":true,"tls":true,"network":"grpc","servername":"eh.vk.ru"}
+  - {"name":"119 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.95:2083","type":"vless","server":"151.242.147.95","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"120 🔒 VL-GRPC-RLT 🇷🇺 RU-45.9.75.37:443","type":"vless","server":"45.9.75.37","port":443,"uuid":"6d490cef-0b49-459d-a72c-0bb0210f3dd0","udp":true,"tls":true,"network":"grpc","servername":"api.vk.me"}
+  - {"name":"121 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443","type":"vless","server":"64.226.107.71","port":443,"uuid":"59a07e25-2d40-4104-ce4b-b5df6a2170ad","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"122 🔒 VL-GRPC-RLT 🇨🇾 CY-45.12.108.245:443","type":"vless","server":"45.12.108.245","port":443,"uuid":"5797a04f-7636-46df-9354-fd74c2264a28","udp":true,"tls":true,"network":"grpc","servername":"5post-gate.x5.ru"}
+  - {"name":"123 🔒 VL-GRPC-RLT 🇨🇭 CH-208.69.78.142:443","type":"vless","server":"208.69.78.142","port":443,"uuid":"7aae7d90-0b37-421e-834a-502ea15f43df","udp":true,"tls":true,"network":"grpc","servername":"www.microsoft.com"}
+  - {"name":"124 🔒 VL-GRPC-RLT 🇩🇪 DE-2.58.196.10:2053","type":"vless","server":"2.58.196.10","port":2053,"uuid":"7e2fbe8c-faee-40fd-8afd-00136e74e5cb","udp":true,"tls":true,"network":"grpc","servername":"tgju.org"}
+  - {"name":"125 🔒 VL-GRPC-RLT 🇷🇺 RU-64.188.90.93:443","type":"vless","server":"64.188.90.93","port":443,"uuid":"68ac194a-0313-41a1-89fb-903a6fa3c795","udp":true,"tls":true,"network":"grpc","servername":"a.primarymaster.online"}
+  - {"name":"126 🔒 VL-GRPC-TLS 🇺🇸 US-172.245.11.73:443","type":"vless","server":"172.245.11.73","port":443,"uuid":"8c6118b9-78a8-3b3b-a49a-6aa9cb5b1d4e","udp":true,"tls":true,"network":"grpc","servername":"u708330u0378s842.ccgfw.top"}
+  - {"name":"127 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443","type":"vless","server":"165.232.113.17","port":443,"uuid":"dc46787e-b1bc-4c58-fb56-aef427d28972","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"128 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.115:2083","type":"vless","server":"151.242.147.115","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"129 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.56:2083","type":"vless","server":"151.242.147.56","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"130 🔒 VL-GRPC-TLS 🇩🇪 DE-23.165.200.85:443","type":"vless","server":"23.165.200.85","port":443,"uuid":"8c6118b9-78a8-3b3b-a49a-6aa9cb5b1d4e","udp":true,"tls":true,"network":"grpc","servername":"u708330u7343s863.ccgfw.top"}
+  - {"name":"131 🔒 VL-GRPC-TLS 🏴‍☠️ NA-188.114.97.3:2083","type":"vless","server":"188.114.97.3","port":2083,"uuid":"56a210bb-8c6b-4148-80bc-2fec5099cb98","udp":true,"tls":true,"network":"grpc","servername":"so.sodogodping.ir"}
+  - {"name":"132 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.98:2083","type":"vless","server":"151.242.147.98","port":2083,"uuid":"c501c66b-c6c2-456b-b604-80393b83d67f","udp":true,"tls":true,"network":"grpc","servername":"apple.com"}
+  - {"name":"133 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"vless","server":"127.0.0.1","port":8080,"uuid":"aaaccbb-baca-baca-bcad-aacbabcbcbca","udp":true,"tls":true,"network":"tcp"}
+  - {"name":"134 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.139.251:443","type":"trojan","server":"172.67.139.251","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"135 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.49.5:443","type":"trojan","server":"104.21.49.5","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"136 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.175.152:443","type":"trojan","server":"172.67.175.152","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"137 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.2.154:443","type":"trojan","server":"104.21.2.154","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"138 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.77.101:443","type":"trojan","server":"104.21.77.101","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"139 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.154.136:443","type":"trojan","server":"172.67.154.136","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"140 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.80.227:443","type":"trojan","server":"104.21.80.227","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"141 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.201.33:443","type":"trojan","server":"172.67.201.33","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"142 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443","type":"trojan","server":"95.179.246.122","port":443,"password":"mainssh-niwrhf87","udp":true,"tls":true}
+  - {"name":"143 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.156.83:443","type":"trojan","server":"172.67.156.83","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"144 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.75.124:443","type":"trojan","server":"104.21.75.124","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"145 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.196.73:443","type":"trojan","server":"172.67.196.73","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"146 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.32.229:443","type":"trojan","server":"104.21.32.229","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"147 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.61.229:443","type":"trojan","server":"104.21.61.229","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"148 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.131.174:443","type":"trojan","server":"172.67.131.174","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"149 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.219.54:443","type":"trojan","server":"172.67.219.54","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"150 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.129.89:443","type":"trojan","server":"172.67.129.89","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"151 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.60.124:443","type":"trojan","server":"104.21.60.124","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"152 🔒 TR-GRPC-NA 🇨🇳 CN-14.215.39.204:11021","type":"trojan","server":"14.215.39.204","port":11021,"password":"254e6e5f-a663-40bc-b48f-5c7458bc3e7f","udp":true,"tls":true}
+  - {"name":"153 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.206.177:443","type":"trojan","server":"172.67.206.177","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"154 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.10.179:443","type":"trojan","server":"104.21.10.179","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"155 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.216.10:443","type":"trojan","server":"172.67.216.10","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"156 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.52.154:443","type":"trojan","server":"104.21.52.154","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+  - {"name":"157 🔒 TR-GRPC-REALITY 🇬🇧 GB-194.150.166.151:52047","type":"trojan","server":"194.150.166.151","port":52047,"password":"zp630tdUuD","udp":true,"tls":true}
+  - {"name":"158 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.38.48:443","type":"trojan","server":"104.21.38.48","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - "Auto"
+      - "DIRECT"
+  - name: "Auto"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "1 🔄 LATEST-UPDATE 📅 SAT-09-ESFAND-1404 🕑 08:17"
+      - "2 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.50.126:22955"
+      - "3 🔒 VL-GRPC-NA 🇨🇾 CY-45.82.251.208:8880"
+      - "4 🔒 VL-GRPC-TLS 🇸🇬 SG-195.172.138.71:25055"
+      - "5 🔒 VL-GRPC-RLT 🇩🇪 DE-2.58.196.10:2083"
+      - "6 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.117:2083"
+      - "7 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
+      - "8 🔒 VL-GRPC-TLS 🇺🇸 US-66.81.247.155:443"
+      - "9 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.72.36:2083"
+      - "10 🔒 VL-GRPC-NONE 🇩🇪 DE-157.230.122.216:443"
+      - "11 🔒 VL-GRPC-TLS 🇺🇸 US-63.141.128.42:2087"
+      - "12 🔒 VL-GRPC-RLT 🇷🇺 RU-158.160.136.187:1443"
+      - "13 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.195:8880"
+      - "14 🔒 VL-GRPC-RLT 🇸🇬 SG-52.221.230.111:20230"
+      - "15 🔒 VL-GRPC-RLT 🇳🇱 NL-150.241.94.142:7443"
+      - "16 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.118.16:2083"
+      - "17 🔒 VL-GRPC-NONE 🇩🇪 DE-164.92.247.91:443"
+      - "18 🔒 VL-GRPC-RLT 🇬🇧 GB-158.220.88.63:443"
+      - "19 🔒 VL-GRPC-RLT 🇮🇳 IN-194.61.31.126:443"
+      - "20 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.67.193.157:8443"
+      - "21 🔒 VL-GRPC-RLT 🇯🇵 JP-13.115.37.2:20230"
+      - "22 🔒 VL-GRPC-TLS 🇻🇬 VG-203.32.121.53:443"
+      - "23 🔒 VL-GRPC-RLT 🇷🇺 RU-178.72.145.19:8443"
+      - "24 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.67.249.36:443"
+      - "25 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.62:4444"
+      - "26 🔒 VL-GRPC-TLS 🇷🇴 RO-45.85.119.44:2053"
+      - "27 🔒 VL-GRPC-RLT 🇩🇪 DE-79.137.202.58:443"
+      - "28 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.118:2083"
+      - "29 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.101:2083"
+      - "30 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.61:4444"
+      - "31 🔒 VL-GRPC-RLT 🇳🇱 NL-185.21.9.91:4444"
+      - "32 🔒 VL-GRPC-RLT 🇪🇪 EE-185.223.168.238:8448"
+      - "33 🔒 VL-GRPC-TLS 🇰🇿 KZ-185.176.26.195:443"
+      - "34 🔒 VL-GRPC-NONE 🇺🇸 US-40.160.14.104:8880"
+      - "35 🔒 VL-GRPC-RLT 🇳🇱 NL-91.201.113.249:4444"
+      - "36 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.19.1.89:8443"
+      - "37 🔒 VL-GRPC-RLT 🇺🇸 US-44.250.56.198:20230"
+      - "38 🔒 VL-GRPC-RLT 🇷🇺 RU-193.233.231.221:443"
+      - "39 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.116:8880"
+      - "40 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.115:8880"
+      - "41 🔒 VL-GRPC-NONE 🇮🇷 IR-185.124.175.217:7730"
+      - "42 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
+      - "43 🔒 VL-GRPC-NONE 🇲🇩 MD-185.236.232.117:8880"
+      - "44 🔒 VL-GRPC-RLT 🇱🇻 LV-213.21.222.169:8448"
+      - "45 🔒 VL-GRPC-RLT 🇩🇪 DE-143.20.37.17:443"
+      - "46 🔒 VL-GRPC-RLT 🇩🇪 DE-164.92.143.135:47542"
+      - "47 🔒 VL-GRPC-RLT 🇷🇺 RU-51.250.64.246:444"
+      - "48 🔒 VL-GRPC-TLS 🇺🇸 US-3.143.235.221:32252"
+      - "49 🔒 VL-GRPC-RLT 🇩🇪 DE-37.120.175.246:22955"
+      - "50 🔒 VL-GRPC-NA 🏴‍☠️ NA-188.114.99.99:2096"
+      - "51 🔒 VL-GRPC-RLT 🇷🇺 RU-79.174.95.163:2083"
+      - "52 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.99:2083"
+      - "53 🔒 VL-GRPC-TLS 🇸🇨 SC-154.219.5.53:443"
+      - "54 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.48.237:22955"
+      - "55 🔒 VL-GRPC-RLT 🇺🇸 US-44.252.113.45:20230"
+      - "56 🔒 VL-GRPC-RLT 🇩🇪 DE-162.248.166.78:4444"
+      - "57 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.16.145.254:443"
+      - "58 🔒 VL-GRPC-TLS 🇸🇬 SG-27.50.48.155:443"
+      - "59 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.26.7.205:443"
+      - "60 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.51.29:22955"
+      - "61 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.100:2083"
+      - "62 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.49.144:22955"
+      - "63 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
+      - "64 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.17:2083"
+      - "65 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.35.53:8443"
+      - "66 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.158:2083"
+      - "67 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+      - "68 🔒 VL-GRPC-TLS 🇸🇬 SG-152.42.179.234:443"
+      - "69 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.66.213.38:443"
+      - "70 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.29.234:2083"
+      - "71 🔒 VL-GRPC-RLT 🇯🇵 JP-13.115.50.143:20230"
+      - "72 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.48.224:22955"
+      - "73 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.204:2083"
+      - "74 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.64.155.209:443"
+      - "75 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.32.63:7443"
+      - "76 🔒 VL-GRPC-NONE 🇩🇪 DE-134.122.73.111:443"
+      - "77 🔒 VL-GRPC-RLT 🇺🇸 US-194.113.37.75:443"
+      - "78 🔒 VL-GRPC-RLT 🇬🇧 GB-79.72.90.132:3366"
+      - "79 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.97:2083"
+      - "80 🔒 VL-GRPC-RLT 🇵🇱 PL-144.31.1.24:8443"
+      - "81 🔒 VL-GRPC-TLS 🇸🇬 SG-152.42.174.20:443"
+      - "82 🔒 VL-GRPC-NONE 🇩🇪 DE-161.35.30.221:443"
+      - "83 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.63:4444"
+      - "84 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
+      - "85 🔒 VL-GRPC-TLS 🇧🇬 BG-95.164.68.37:443"
+      - "86 🔒 VL-GRPC-RLT 🇳🇱 NL-144.31.234.62:444"
+      - "87 🔒 VL-GRPC-RLT 🇬🇧 GB-46.250.250.149:443"
+      - "88 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.227:2083"
+      - "89 🔒 VL-GRPC-RLT 🇳🇱 NL-51.158.206.93:23576"
+      - "90 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.104:2083"
+      - "91 🔒 VL-GRPC-RLT 🇬🇧 GB-46.250.240.80:443"
+      - "92 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.233:8880"
+      - "93 🔒 VL-GRPC-RLT 🇷🇺 RU-178.72.145.23:8443"
+      - "94 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.249:8880"
+      - "95 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.35.53:443"
+      - "96 🔒 VL-GRPC-NA 🏴‍☠️ NA-188.114.99.99:2053"
+      - "97 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.32.47:443"
+      - "98 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.94:2083"
+      - "99 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.96:2083"
+      - "100 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.116:2083"
+      - "101 🔒 VL-GRPC-RLT 🇷🇺 RU-51.250.39.136:443"
+      - "102 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.69.44:2083"
+      - "103 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.28.234:2083"
+      - "104 🔒 VL-GRPC-TLS 🇺🇸 US-63.141.128.42:443"
+      - "105 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.4.130:443"
+      - "106 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.146:2083"
+      - "107 🔒 VL-GRPC-RLT 🇷🇺 RU-79.174.95.200:6443"
+      - "108 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.17.90.246:443"
+      - "109 🔒 VL-GRPC-RLT 🇯🇵 JP-54.248.36.129:20230"
+      - "110 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.26.2.186:443"
+      - "111 🔒 VL-GRPC-RLT 🇸🇬 SG-13.229.242.10:20230"
+      - "112 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.114:8880"
+      - "113 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.86.253:443"
+      - "114 🔒 VL-GRPC-RLT 🇷🇺 RU-83.166.255.72:443"
+      - "115 🔒 VL-GRPC-TLS 🇺🇸 US-104.129.167.161:443"
+      - "116 🔒 VL-GRPC-RLT 🇯🇵 JP-13.230.25.171:20230"
+      - "117 🔒 VL-GRPC-TLS 🇸🇬 SG-195.172.138.71:25055"
+      - "118 🔒 VL-GRPC-RLT 🇷🇺 RU-83.147.255.191:448"
+      - "119 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.95:2083"
+      - "120 🔒 VL-GRPC-RLT 🇷🇺 RU-45.9.75.37:443"
+      - "121 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
+      - "122 🔒 VL-GRPC-RLT 🇨🇾 CY-45.12.108.245:443"
+      - "123 🔒 VL-GRPC-RLT 🇨🇭 CH-208.69.78.142:443"
+      - "124 🔒 VL-GRPC-RLT 🇩🇪 DE-2.58.196.10:2053"
+      - "125 🔒 VL-GRPC-RLT 🇷🇺 RU-64.188.90.93:443"
+      - "126 🔒 VL-GRPC-TLS 🇺🇸 US-172.245.11.73:443"
+      - "127 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
+      - "128 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.115:2083"
+      - "129 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.56:2083"
+      - "130 🔒 VL-GRPC-TLS 🇩🇪 DE-23.165.200.85:443"
+      - "131 🔒 VL-GRPC-TLS 🏴‍☠️ NA-188.114.97.3:2083"
+      - "132 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.98:2083"
+      - "133 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "134 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.139.251:443"
+      - "135 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.49.5:443"
+      - "136 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.175.152:443"
+      - "137 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.2.154:443"
+      - "138 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.77.101:443"
+      - "139 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.154.136:443"
+      - "140 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.80.227:443"
+      - "141 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.201.33:443"
+      - "142 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
+      - "143 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.156.83:443"
+      - "144 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.75.124:443"
+      - "145 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.196.73:443"
+      - "146 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.32.229:443"
+      - "147 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.61.229:443"
+      - "148 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.131.174:443"
+      - "149 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.219.54:443"
+      - "150 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.129.89:443"
+      - "151 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.60.124:443"
+      - "152 🔒 TR-GRPC-NA 🇨🇳 CN-14.215.39.204:11021"
+      - "153 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.206.177:443"
+      - "154 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.10.179:443"
+      - "155 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.216.10:443"
+      - "156 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.52.154:443"
+      - "157 🔒 TR-GRPC-REALITY 🇬🇧 GB-194.150.166.151:52047"
+      - "158 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.38.48:443"
+rules:
+  - GEOIP,IR,DIRECT
+  - MATCH,Proxy
