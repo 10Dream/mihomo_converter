@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🇳🇱 | NL | 623ms | 016-🐭@GheychiAmoozesh","type":"hysteria2","server":"206.71.158.37","port":36600,"password":"Yet-Another-Public-Config-1"}
   - {"name":"2 🇳🇱 | NL | 635ms | 046-🐭@GheychiAmoozesh","type":"hysteria2","server":"206.71.158.37","port":36400,"password":"Yet-Another-Public-Config-1"}
@@ -518,16 +676,17 @@ proxies:
   - {"name":"499 🇵🇱 | PL | 1276ms | @meliproxyy","type":"vless","server":"3.cdnconn.com","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
   - {"name":"500 🇰🇿 | KZ | 1277ms | ***✅***@AR14N24b","type":"vless","server":"91.147.92.76","port":443,"uuid":"1c4aceb6-bff7-4737-8c5d-43afb3dc350b","udp":true,"tls":true,"network":"tcp","servername":"hls-svod.itunes.apple.com"}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🇳🇱 | NL | 623ms | 016-🐭@GheychiAmoozesh"
       - "2 🇳🇱 | NL | 635ms | 046-🐭@GheychiAmoozesh"
@@ -1029,6 +1188,571 @@ proxy-groups:
       - "498 🇵🇱 | PL | 1271ms | @proxy_kafee"
       - "499 🇵🇱 | PL | 1276ms | @meliproxyy"
       - "500 🇰🇿 | KZ | 1277ms | ***✅***@AR14N24b"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🇳🇱 | NL | 623ms | 016-🐭@GheychiAmoozesh"
+      - "2 🇳🇱 | NL | 635ms | 046-🐭@GheychiAmoozesh"
+      - "3 🇳🇱 | NL | 650ms | 035-🐭@GheychiAmoozesh"
+      - "4 🇩🇪 | DE | 672ms |"
+      - "5 🌐 | null | 99999ms | freenet_vt"
+      - "6 🌐 | null | 99999ms |"
+      - "7 🌐 | null | 99999ms | 089-🐭@GheychiAmoozesh"
+      - "8 🌐 | null | 99999ms | 128-🐭@GheychiAmoozesh"
+      - "9 🌐 | null | 99999ms | 🐯5@oneclickvpnkeys"
+      - "10 🌐 | null | 99999ms | 🍪4@oneclickvpnkeys`"
+      - "11 🇺🇸 | US | 117ms | ZHK"
+      - "12 🇺🇸 | US | 130ms | ZHK"
+      - "13 🇺🇸 | US | 135ms | ZHK"
+      - "14 🇺🇸 | US | 143ms | ZHK"
+      - "15 🇺🇸 | US | 171ms | ZHK"
+      - "16 🇺🇸 | US | 178ms | ZHK"
+      - "17 🇺🇸 | US | 49ms | 🐯58@oneclickvpnkeys"
+      - "18 🇺🇸 | US | 49ms | 🐯56@oneclickvpnkeys"
+      - "19 🇺🇸 | US | 52ms | 🍪34@oneclickvpnkeys"
+      - "20 🇺🇸 | US | 83ms | 🐯64@oneclickvpnkeys"
+      - "21 🇺🇸 | US | 86ms |"
+      - "22 🇺🇸 | US | 94ms |"
+      - "23 🇺🇸 | US | 118ms | 🐯66@oneclickvpnkeys"
+      - "24 🇺🇸 | US | 129ms |"
+      - "25 🇺🇸 | US | 134ms | ***✅***@AR14N24b"
+      - "26 🇺🇸 | US | 135ms |"
+      - "27 🇺🇸 | US | 137ms | configraygan_35"
+      - "28 🇺🇸 | US | 138ms | ***✅***@AR14N24b"
+      - "29 🇺🇸 | US | 144ms | 🐯54@oneclickvpnkeys"
+      - "30 🇺🇸 | US | 172ms | ***✅***@AR14N24b"
+      - "31 🇺🇸 | US | 181ms | ***✅***@AR14N24b"
+      - "32 🇺🇸 | US | 192ms | برای اتصال دائمی جوین شو🦋 TelegramID ⌲Express_freevpn 🪩`"
+      - "33 🇨🇦 | CA | 212ms | ***✅***@AR14N24b"
+      - "34 🇺🇸 | US | 214ms |"
+      - "35 🇺🇸 | US | 216ms | ***✅***@AR14N24b"
+      - "36 🇺🇸 | US | 222ms |"
+      - "37 🇨🇦 | CA | 233ms | @meliproxyy"
+      - "38 🇺🇸 | US | 238ms |"
+      - "39 🇨🇦 | CA | 257ms |"
+      - "40 🇨🇦 | CA | 261ms |"
+      - "41 🇺🇸 | US | 262ms |"
+      - "42 🇺🇸 | US | 267ms | ***✅***@AR14N24b"
+      - "43 🇺🇸 | US | 270ms | ***✅***@AR14N24b"
+      - "44 🇺🇸 | US | 274ms |"
+      - "45 🇺🇸 | US | 275ms |"
+      - "46 🇺🇸 | US | 277ms | برای اتصال دائمی جوین شو🦋 TelegramID ⌲Express_freevpn 🪩"
+      - "47 🇺🇸 | US | 280ms | ***✅***@AR14N24b"
+      - "48 🇺🇸 | US | 288ms | ***✅***@AR14N24b"
+      - "49 🇺🇸 | US | 290ms | ¹🪄🚀 Telegram: MerlinVpn 👈"
+      - "50 🇺🇸 | US | 292ms | برای اتصال دائمی جوین شو🦋 TelegramID ⌲Express_freevpn 🪩"
+      - "51 🇨🇦 | CA | 296ms | ***✅***@AR14N24b"
+      - "52 🇺🇸 | US | 302ms | برای اتصال دائمی جوین شو🦋 TelegramID ⌲Express_freevpn 🪩"
+      - "53 🇺🇸 | US | 302ms |"
+      - "54 🇺🇸 | US | 305ms | ***✅***@AR14N24b"
+      - "55 🇺🇸 | US | 309ms | ***✅***@AR14N24b"
+      - "56 🇺🇸 | US | 312ms |"
+      - "57 🇺🇸 | US | 313ms | @meliproxyy"
+      - "58 🇺🇸 | US | 317ms | ARISTA🔥@proxy_kafee"
+      - "59 🇺🇸 | US | 326ms | ***✅***@AR14N24b"
+      - "60 🇺🇸 | US | 335ms | NetAccount"
+      - "61 🇳🇱 | NL | 336ms | ***✅***@AR14N24b"
+      - "62 🇺🇸 | US | 346ms | ***✅***@AR14N24b"
+      - "63 🇺🇸 | US | 353ms | ***✅***@AR14N24b"
+      - "64 🇺🇸 | US | 361ms | برای اتصال دائمی جوین شو🦋 TelegramID ⌲Express_freevpn 🪩"
+      - "65 🇺🇸 | US | 371ms | [15309]+-+Telegram+:+@configraygan"
+      - "66 🇺🇸 | US | 372ms | ***✅***@AR14N24b"
+      - "67 🇺🇸 | US | 372ms |"
+      - "68 🇺🇸 | US | 379ms | [15293]+-+Telegram+:+@configraygan"
+      - "69 🇺🇸 | US | 385ms |"
+      - "70 🇺🇸 | US | 385ms |"
+      - "71 🇺🇸 | US | 394ms | ***✅***@AR14N24b"
+      - "72 🇨🇦 | CA | 397ms | ***✅***@AR14N24b"
+      - "73 🇺🇸 | US | 398ms |"
+      - "74 🇺🇸 | US | 400ms | ***✅***@AR14N24b"
+      - "75 🇺🇸 | US | 401ms |"
+      - "76 🇺🇸 | US | 401ms | ***✅***@AR14N24b"
+      - "77 🇺🇸 | US | 408ms | ***✅***@AR14N24b"
+      - "78 🇺🇸 | US | 409ms |"
+      - "79 🇺🇸 | US | 422ms | ***✅***@AR14N24b"
+      - "80 🇺🇸 | US | 432ms |"
+      - "81 🇺🇸 | US | 433ms |"
+      - "82 🇺🇸 | US | 434ms | ***✅***@AR14N24b"
+      - "83 🇺🇸 | US | 435ms |"
+      - "84 🇺🇸 | US | 436ms | ***✅***@AR14N24b"
+      - "85 🇺🇸 | US | 439ms | ***✅***@AR14N24b"
+      - "86 🇺🇸 | US | 439ms | ***✅***@AR14N24b"
+      - "87 🇯🇵 | JP | 441ms | ***✅***@AR14N24b"
+      - "88 🇫🇮 | FI | 447ms | ***✅***@AR14N24b`"
+      - "89 🇯🇵 | JP | 454ms | ***✅***@AR14N24b"
+      - "90 🇺🇸 | US | 463ms | ***✅***@AR14N24b"
+      - "91 🇫🇮 | FI | 468ms | ***✅***@AR14N24b"
+      - "92 🇸🇪 | SE | 473ms |"
+      - "93 🇳🇱 | NL | 476ms | 🍪35@oneclickvpnkeys"
+      - "94 🇺🇸 | US | 476ms | NetAccount"
+      - "95 🇩🇪 | DE | 477ms | ***✅***@AR14N24b"
+      - "96 🇺🇸 | US | 479ms | ***✅***@AR14N24b"
+      - "97 🇺🇸 | US | 481ms | ***✅***@AR14N24b"
+      - "98 🇺🇸 | US | 482ms |"
+      - "99 🇳🇱 | NL | 488ms |"
+      - "100 🇩🇪 | DE | 492ms |"
+      - "101 🇺🇸 | US | 507ms | ***✅***@AR14N24b"
+      - "102 🇺🇸 | US | 509ms | ***✅***@AR14N24b"
+      - "103 🇺🇸 | US | 511ms | ***✅***@AR14N24b"
+      - "104 🇺🇸 | US | 520ms | ***✅***@AR14N24b"
+      - "105 🇺🇸 | US | 520ms |"
+      - "106 🇺🇸 | US | 524ms | ***✅***@AR14N24b"
+      - "107 🇺🇸 | US | 527ms | ***✅***@AR14N24b"
+      - "108 🇰🇷 | KR | 537ms | 🍪63@oneclickvpnkeys"
+      - "109 🇺🇸 | US | 545ms | ***✅***@AR14N24b"
+      - "110 🇩🇪 | DE | 546ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "111 🇺🇸 | US | 552ms |"
+      - "112 🇺🇸 | US | 555ms | ***✅***@AR14N24b"
+      - "113 🇯🇵 | JP | 555ms | ***✅***@AR14N24b"
+      - "114 🇺🇸 | US | 559ms | ***✅***@AR14N24b"
+      - "115 🇯🇵 | JP | 559ms | ***✅***@AR14N24b"
+      - "116 🇳🇱 | NL | 583ms | @vpnbaz 🎩"
+      - "117 🇰🇷 | KR | 585ms | 🐯103@oneclickvpnkeys"
+      - "118 🇬🇧 | GB | 591ms |"
+      - "119 🇩🇪 | DE | 594ms | 💎+|+@configraygan『🇩🇪¹⁰³』"
+      - "120 🇩🇪 | DE | 596ms | 🐯10@oneclickvpnkeys"
+      - "121 🇬🇧 | GB | 599ms | @proxy_kafee"
+      - "122 🇳🇱 | NL | 600ms |"
+      - "123 🇩🇪 | DE | 602ms | ***✅***@AR14N24b"
+      - "124 🇳🇱 | NL | 607ms | configraygan_47"
+      - "125 🇩🇪 | DE | 612ms | ***✅***@AR14N24b"
+      - "126 🇫🇷 | FR | 612ms | ***✅***@AR14N24b"
+      - "127 🇷🇺 | RU | 617ms | @meliproxyy"
+      - "128 🇩🇪 | DE | 618ms | ⚡️+|+@configraygan『🇩🇪⁴⁰』"
+      - "129 🇳🇱 | NL | 620ms | ***✅***@AR14N24b`"
+      - "130 🇺🇸 | US | 622ms |"
+      - "131 🇬🇧 | GB | 625ms | @meliproxyy`"
+      - "132 🇺🇸 | US | 625ms | برای اتصال دائمی جوین شو🦋 TelegramID ⌲Express_freevpn 🪩"
+      - "133 🇳🇱 | NL | 626ms | 💎+|+@configraygan『🇫🇷⁹⁴』"
+      - "134 🇬🇧 | GB | 626ms | @meliproxyy`"
+      - "135 🇩🇪 | DE | 626ms | ***✅***@AR14N24b"
+      - "136 🇩🇪 | DE | 629ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩`"
+      - "137 🇩🇪 | DE | 630ms | ***✅***@AR14N24b"
+      - "138 🇩🇪 | DE | 630ms | 🥎8@oneclickvpnkeys"
+      - "139 🇩🇪 | DE | 631ms | 🐯4@oneclickvpnkeys"
+      - "140 🇳🇱 | NL | 631ms | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "141 🇫🇮 | FI | 633ms | ***✅***@AR14N24b"
+      - "142 🇩🇪 | DE | 635ms | ARISTA🔥@proxy_kafee"
+      - "143 🇭🇰 | HK | 637ms | 🐯82@oneclickvpnkeys`"
+      - "144 🇳🇱 | NL | 637ms |"
+      - "145 🇩🇪 | DE | 638ms | ***✅***@AR14N24b"
+      - "146 🇺🇸 | US | 639ms |"
+      - "147 🇩🇪 | DE | 641ms |"
+      - "148 🇫🇮 | FI | 643ms |"
+      - "149 🇳🇱 | NL | 645ms | 🍪26@oneclickvpnkeys"
+      - "150 🇩🇪 | DE | 646ms | ***✅***@AR14N24b"
+      - "151 🇺🇸 | US | 647ms |"
+      - "152 🇫🇮 | FI | 650ms | ***✅***@AR14N24b"
+      - "153 🇳🇱 | NL | 651ms | configraygan_20"
+      - "154 🇩🇪 | DE | 652ms | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "155 🇺🇸 | US | 653ms | ***✅***@AR14N24b"
+      - "156 🇳🇱 | NL | 654ms | ***✅***@AR14N24b"
+      - "157 🇷🇺 | RU | 655ms |"
+      - "158 🇫🇮 | FI | 656ms | 🍪38@oneclickvpnkeys"
+      - "159 🇳🇱 | NL | 656ms | ***✅***@AR14N24b"
+      - "160 🇳🇱 | NL | 659ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩"
+      - "161 🇳🇱 | NL | 660ms |"
+      - "162 🇫🇮 | FI | 660ms | @vpnbaz 🧶"
+      - "163 🇳🇱 | NL | 661ms |"
+      - "164 🇳🇱 | NL | 662ms | ***✅***@AR14N24b"
+      - "165 🇰🇷 | KR | 665ms | ***✅***@AR14N24b"
+      - "166 🇸🇪 | SE | 668ms | 🍪36@oneclickvpnkeys"
+      - "167 🇩🇪 | DE | 668ms | ***✅***@AR14N24b"
+      - "168 🇫🇷 | FR | 670ms | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩`"
+      - "169 🇳🇱 | NL | 670ms | ***✅***@AR14N24b"
+      - "170 🇺🇸 | US | 671ms |"
+      - "171 🇺🇸 | US | 672ms |"
+      - "172 🇸🇪 | SE | 673ms | 🍪40@oneclickvpnkeys"
+      - "173 🇩🇪 | DE | 674ms | ***✅***@AR14N24b"
+      - "174 🇳🇱 | NL | 675ms | ***✅***@AR14N24b"
+      - "175 🇳🇱 | NL | 676ms | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "176 🇩🇪 | DE | 679ms | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "177 🇵🇱 | PL | 679ms | 💎+|+@configraygan『🇩🇪⁴³』"
+      - "178 🇸🇬 | SG | 682ms | 🐯77@oneclickvpnkeys"
+      - "179 🇫🇮 | FI | 683ms | 🍪27@oneclickvpnkeys"
+      - "180 🇦🇹 | AT | 683ms | @vpnbaz 🌶️"
+      - "181 🇬🇧 | GB | 684ms | 🍪32@oneclickvpnkeys"
+      - "182 🇬🇧 | GB | 687ms | USA  🇺🇸 @Lrnbymaa"
+      - "183 🇺🇸 | US | 688ms | ***✅***@AR14N24b"
+      - "184 🇫🇷 | FR | 689ms | ***✅***@AR14N24b`"
+      - "185 🇳🇱 | NL | 690ms |"
+      - "186 🇳🇱 | NL | 691ms | ***✅***@AR14N24b"
+      - "187 🇩🇪 | DE | 691ms |"
+      - "188 🇺🇸 | US | 691ms |"
+      - "189 🇵🇱 | PL | 691ms | 🐯13@oneclickvpnkeys"
+      - "190 🇩🇪 | DE | 692ms |"
+      - "191 🇳🇱 | NL | 692ms |"
+      - "192 🇩🇪 | DE | 692ms |"
+      - "193 🇵🇱 | PL | 693ms |"
+      - "194 🇦🇺 | AU | 693ms |"
+      - "195 🇫🇷 | FR | 693ms | 🐯47@oneclickvpnkeys"
+      - "196 🇦🇺 | AU | 697ms | ***✅***@AR14N24b"
+      - "197 🇩🇪 | DE | 697ms |"
+      - "198 🇫🇷 | FR | 700ms | 🍪19@oneclickvpnkeys"
+      - "199 🇳🇱 | NL | 700ms |"
+      - "200 🇵🇱 | PL | 700ms | ***✅***@AR14N24b"
+      - "201 🇵🇱 | PL | 701ms | ***✅***@AR14N24b"
+      - "202 🇰🇷 | KR | 702ms | ***✅***@AR14N24b"
+      - "203 🇵🇱 | PL | 705ms |"
+      - "204 🇵🇱 | PL | 705ms |"
+      - "205 🇩🇪 | DE | 705ms | 🛡 V 121 @Outline_Vpn"
+      - "206 🇳🇱 | NL | 708ms | 🍪20@oneclickvpnkeys`"
+      - "207 🇵🇱 | PL | 710ms | ***✅***@AR14N24b"
+      - "208 🇵🇱 | PL | 711ms | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "209 🇳🇱 | NL | 711ms | ***✅***@AR14N24b"
+      - "210 🇵🇱 | PL | 712ms |"
+      - "211 🇩🇪 | DE | 712ms |"
+      - "212 🇩🇪 | DE | 713ms | ***✅***@AR14N24b"
+      - "213 🇩🇪 | DE | 714ms |"
+      - "214 🇫🇮 | FI | 714ms | ***✅***@AR14N24b"
+      - "215 🇩🇪 | DE | 716ms | ***✅***@AR14N24b"
+      - "216 🇳🇱 | NL | 716ms | ⚡️+|+@configraygan『🇩🇪⁴』"
+      - "217 🇺🇸 | US | 717ms | ***✅***@AR14N24b"
+      - "218 🇩🇪 | DE | 718ms | ***✅***@AR14N24b"
+      - "219 🇵🇱 | PL | 719ms | ***✅***@AR14N24b"
+      - "220 🇺🇸 | US | 721ms | @proxy_kafee"
+      - "221 🇫🇷 | FR | 725ms | ***✅***@AR14N24b"
+      - "222 🇸🇬 | SG | 727ms |"
+      - "223 🇩🇪 | DE | 729ms | 🍪2@oneclickvpnkeys"
+      - "224 🇩🇪 | DE | 731ms | 🍪9@oneclickvpnkeys"
+      - "225 🇩🇪 | DE | 733ms | ***✅***@AR14N24b"
+      - "226 🇩🇪 | DE | 734ms | 🍪31@oneclickvpnkeys"
+      - "227 🇰🇷 | KR | 734ms |"
+      - "228 🇩🇪 | DE | 734ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "229 🇩🇪 | DE | 735ms |"
+      - "230 🇫🇷 | FR | 735ms | @meliproxyy"
+      - "231 🇳🇱 | NL | 735ms | 📊17@oneclickvpnkeys"
+      - "232 🇩🇪 | DE | 740ms | ***✅***@AR14N24b"
+      - "233 🇷🇴 | RO | 741ms |"
+      - "234 🇭🇰 | HK | 744ms | 🐯85@oneclickvpnkeys"
+      - "235 🇨🇿 | CZ | 745ms | ***✅***@AR14N24b"
+      - "236 🇫🇷 | FR | 746ms | 🍪55@oneclickvpnkeys"
+      - "237 🇫🇷 | FR | 746ms |"
+      - "238 🇫🇷 | FR | 747ms | ***✅***@AR14N24b"
+      - "239 🇩🇪 | DE | 748ms | @meliproxyy"
+      - "240 🇸🇬 | SG | 749ms | 🐯72@oneclickvpnkeys"
+      - "241 🇳🇱 | NL | 749ms | ***✅***@AR14N24b`"
+      - "242 🇪🇸 | ES | 752ms | 🍪39@oneclickvpnkeys"
+      - "243 🇳🇱 | NL | 754ms | ***✅***@AR14N24b`"
+      - "244 🇩🇪 | DE | 755ms | 🐯14@oneclickvpnkeys"
+      - "245 🇷🇺 | RU | 759ms | ***✅***@AR14N24b"
+      - "246 🇫🇷 | FR | 760ms | ***✅***@AR14N24b`"
+      - "247 🇩🇰 | DK | 762ms |"
+      - "248 🇷🇺 | RU | 763ms | 🍪56@oneclickvpnkeys"
+      - "249 🇬🇧 | GB | 767ms | @meliproxyy"
+      - "250 🇬🇧 | GB | 767ms |"
+      - "251 🇰🇷 | KR | 767ms |"
+      - "252 🇬🇧 | GB | 768ms |"
+      - "253 🇬🇧 | GB | 770ms | ***✅***@AR14N24b"
+      - "254 🇳🇱 | NL | 775ms | @meliproxyy"
+      - "255 🇬🇧 | GB | 776ms | configraygan_43"
+      - "256 🇳🇱 | NL | 780ms | @meliproxyy"
+      - "257 🇷🇺 | RU | 780ms | ***✅***@AR14N24b"
+      - "258 🇺🇸 | US | 781ms | ***✅***@AR14N24b"
+      - "259 🇷🇺 | RU | 782ms | ***✅***@AR14N24b"
+      - "260 🇬🇧 | GB | 783ms | [14372]+-+Telegram+:+@configraygan"
+      - "261 🇷🇺 | RU | 783ms |"
+      - "262 🇷🇺 | RU | 784ms | ***✅***@AR14N24b"
+      - "263 🇷🇺 | RU | 784ms |"
+      - "264 🇬🇧 | GB | 787ms | ***✅***@AR14N24b"
+      - "265 🇷🇺 | RU | 790ms |"
+      - "266 🇷🇺 | RU | 790ms | ***✅***@AR14N24b"
+      - "267 🇷🇺 | RU | 791ms | ***✅***@AR14N24b"
+      - "268 🇩🇪 | DE | 794ms |"
+      - "269 🇷🇺 | RU | 794ms | ***✅***@AR14N24b"
+      - "270 🇩🇪 | DE | 794ms | ***✅***@AR14N24b"
+      - "271 🇷🇺 | RU | 796ms | ***✅***@AR14N24b"
+      - "272 🇺🇸 | US | 797ms | ***✅***@AR14N24b"
+      - "273 🇷🇺 | RU | 798ms | ***✅***@AR14N24b"
+      - "274 🇷🇺 | RU | 798ms | ***✅***@AR14N24b"
+      - "275 🇷🇺 | RU | 799ms |"
+      - "276 🇷🇺 | RU | 801ms | 🍪53@oneclickvpnkeys"
+      - "277 🇳🇱 | NL | 801ms | ***✅***@AR14N24b"
+      - "278 🇹🇷 | TR | 802ms | 💎+|+@configraygan『🇩🇪¹¹⁸』"
+      - "279 🇷🇺 | RU | 802ms |"
+      - "280 🇷🇺 | RU | 803ms |"
+      - "281 🇷🇺 | RU | 803ms | ***✅***@AR14N24b"
+      - "282 🇷🇺 | RU | 803ms |"
+      - "283 🇧🇷 | BR | 805ms | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "284 🇷🇺 | RU | 805ms | 🍪41@oneclickvpnkeys"
+      - "285 🇩🇪 | DE | 805ms |"
+      - "286 🇷🇺 | RU | 805ms | ***✅***@AR14N24b"
+      - "287 🇷🇺 | RU | 805ms |"
+      - "288 🇷🇺 | RU | 806ms |"
+      - "289 🇷🇺 | RU | 806ms | ***✅***@AR14N24b"
+      - "290 🇷🇺 | RU | 807ms | ***✅***@AR14N24b"
+      - "291 🇩🇪 | DE | 809ms |"
+      - "292 🇬🇧 | GB | 809ms | 🍪44@oneclickvpnkeys`"
+      - "293 🇷🇺 | RU | 810ms |"
+      - "294 🇷🇺 | RU | 811ms | ***✅***@AR14N24b"
+      - "295 🇷🇺 | RU | 812ms | ***✅***@AR14N24b"
+      - "296 🇷🇺 | RU | 812ms | ***✅***@AR14N24b"
+      - "297 🇷🇺 | RU | 813ms |"
+      - "298 🇫🇮 | FI | 813ms | 🍪90@oneclickvpnkeys"
+      - "299 🇩🇪 | DE | 814ms | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩`"
+      - "300 🇷🇺 | RU | 814ms |"
+      - "301 🇷🇺 | RU | 815ms |"
+      - "302 🇫🇷 | FR | 816ms |"
+      - "303 🇩🇪 | DE | 816ms |"
+      - "304 🇷🇺 | RU | 820ms | ***✅***@AR14N24b`"
+      - "305 🇷🇺 | RU | 822ms | ***✅***@AR14N24b"
+      - "306 🇷🇺 | RU | 824ms |"
+      - "307 🇫🇮 | FI | 825ms | ***✅***@AR14N24b"
+      - "308 🇷🇺 | RU | 827ms | ***✅***@AR14N24b"
+      - "309 🇷🇺 | RU | 829ms |"
+      - "310 🇫🇮 | FI | 830ms |"
+      - "311 🇧🇪 | BE | 830ms |"
+      - "312 🇫🇮 | FI | 830ms | ***✅***@AR14N24b"
+      - "313 🇰🇷 | KR | 831ms | ***✅***@AR14N24b"
+      - "314 🇷🇺 | RU | 832ms | ***✅***@AR14N24b"
+      - "315 🇳🇱 | NL | 832ms | ***✅***@AR14N24b"
+      - "316 🇬🇧 | GB | 833ms |"
+      - "317 🇪🇪 | EE | 833ms | [15315]+-+Telegram+:+@configraygan"
+      - "318 🇹🇷 | TR | 834ms | 🐯17@oneclickvpnkeys`"
+      - "319 🇳🇱 | NL | 835ms |"
+      - "320 🇷🇺 | RU | 837ms |"
+      - "321 🇩🇪 | DE | 838ms |"
+      - "322 🇫🇮 | FI | 838ms | 🍪86@oneclickvpnkeys"
+      - "323 🇵🇱 | PL | 839ms | ***✅***@AR14N24b"
+      - "324 🇩🇪 | DE | 840ms | ***✅***@AR14N24b"
+      - "325 🇵🇹 | PT | 841ms | ***✅***@AR14N24b"
+      - "326 🇫🇷 | FR | 842ms | @vpnbaz 🏀"
+      - "327 🇦🇹 | AT | 843ms | ***✅***@AR14N24b"
+      - "328 🇦🇹 | AT | 846ms | 💎+|+@configraygan『🇩🇪¹⁰²』"
+      - "329 🇳🇱 | NL | 848ms | ***✅***@AR14N24b"
+      - "330 🇩🇪 | DE | 848ms | ***✅***@AR14N24b`"
+      - "331 🇫🇮 | FI | 848ms | ***✅***@AR14N24b"
+      - "332 🇫🇮 | FI | 854ms | ***✅***@AR14N24b"
+      - "333 🇷🇺 | RU | 855ms | ***✅***@AR14N24b"
+      - "334 🇺🇸 | US | 856ms | ***✅***@AR14N24b"
+      - "335 🇫🇮 | FI | 856ms | ***✅***@AR14N24b"
+      - "336 🇸🇬 | SG | 859ms | ⚡️+|+@configraygan『🇩🇪¹⁵』"
+      - "337 🇫🇮 | FI | 861ms | ***✅***@AR14N24b"
+      - "338 🇳🇱 | NL | 861ms |"
+      - "339 🇸🇪 | SE | 863ms | 🍪58@oneclickvpnkeys"
+      - "340 🇩🇪 | DE | 863ms | ***✅***@AR14N24b"
+      - "341 🇸🇬 | SG | 867ms |"
+      - "342 🇷🇺 | RU | 867ms | ***✅***@AR14N24b"
+      - "343 🇳🇱 | NL | 869ms |"
+      - "344 🇷🇺 | RU | 871ms | 💎+|+@configraygan『🇷🇺¹¹³』"
+      - "345 🇵🇱 | PL | 872ms |"
+      - "346 🇭🇰 | HK | 876ms |"
+      - "347 🇸🇬 | SG | 877ms | 🐯71@oneclickvpnkeys"
+      - "348 🇫🇮 | FI | 880ms |"
+      - "349 🇩🇪 | DE | 881ms | 🍪33@oneclickvpnkeys"
+      - "350 🇪🇪 | EE | 882ms | ***✅***@AR14N24b"
+      - "351 🇳🇱 | NL | 884ms | ***✅***@AR14N24b"
+      - "352 🇵🇱 | PL | 884ms |"
+      - "353 🇫🇮 | FI | 884ms |"
+      - "354 🇩🇪 | DE | 887ms | ***✅***@AR14N24b"
+      - "355 🇬🇧 | GB | 887ms | ***✅***@AR14N24b"
+      - "356 🇦🇹 | AT | 891ms |"
+      - "357 🇳🇱 | NL | 891ms |"
+      - "358 🇦🇹 | AT | 892ms | 🍪23@oneclickvpnkeys"
+      - "359 🇵🇱 | PL | 895ms | ***✅***@AR14N24b"
+      - "360 🇪🇸 | ES | 895ms | 🍪29@oneclickvpnkeys"
+      - "361 🇩🇪 | DE | 896ms | @meliproxyy"
+      - "362 🇷🇺 | RU | 897ms |"
+      - "363 🇷🇺 | RU | 898ms |"
+      - "364 🇷🇺 | RU | 900ms | ***✅***@AR14N24b"
+      - "365 🇵🇱 | PL | 900ms | ***✅***@AR14N24b"
+      - "366 🇭🇰 | HK | 901ms |"
+      - "367 🇵🇱 | PL | 901ms | ***✅***@AR14N24b"
+      - "368 🇵🇱 | PL | 901ms |"
+      - "369 🇸🇪 | SE | 904ms | ***✅***@AR14N24b"
+      - "370 🇫🇮 | FI | 905ms |"
+      - "371 🇵🇱 | PL | 905ms | ***✅***@AR14N24b"
+      - "372 🇸🇪 | SE | 907ms | @proxy_kafee"
+      - "373 🇭🇰 | HK | 907ms |"
+      - "374 🇵🇱 | PL | 908ms |"
+      - "375 🇫🇮 | FI | 909ms |"
+      - "376 🇵🇱 | PL | 910ms | ***✅***@AR14N24b"
+      - "377 🇫🇮 | FI | 911ms | ***✅***@AR14N24b"
+      - "378 🇸🇪 | SE | 914ms | ***✅***@AR14N24b"
+      - "379 🇪🇪 | EE | 917ms |"
+      - "380 🇫🇮 | FI | 919ms | ***✅***@AR14N24b"
+      - "381 🇫🇮 | FI | 919ms |"
+      - "382 🇩🇪 | DE | 920ms |"
+      - "383 🇫🇮 | FI | 922ms |"
+      - "384 🇵🇱 | PL | 922ms | ***✅***@AR14N24b"
+      - "385 🇵🇱 | PL | 923ms | ***✅***@AR14N24b"
+      - "386 🇷🇺 | RU | 923ms | ***✅***@AR14N24b"
+      - "387 🇵🇱 | PL | 924ms | ***✅***@AR14N24b"
+      - "388 🇩🇪 | DE | 925ms |"
+      - "389 🇩🇪 | DE | 925ms |"
+      - "390 🇵🇱 | PL | 925ms |"
+      - "391 🇩🇪 | DE | 925ms |"
+      - "392 🇩🇪 | DE | 926ms | @vpnbaz 🏳️"
+      - "393 🇩🇪 | DE | 926ms |"
+      - "394 🇩🇪 | DE | 927ms | 🍪12@oneclickvpnkeys"
+      - "395 🇩🇪 | DE | 927ms |"
+      - "396 🇵🇱 | PL | 928ms |"
+      - "397 🇫🇮 | FI | 928ms |"
+      - "398 🇵🇱 | PL | 928ms |"
+      - "399 🇩🇪 | DE | 929ms |"
+      - "400 🇩🇪 | DE | 930ms | @meliproxyy"
+      - "401 🇳🇱 | NL | 931ms | ***✅***@AR14N24b"
+      - "402 🇩🇪 | DE | 932ms | 🛡 V 116 @Outline_Vpn"
+      - "403 🇩🇪 | DE | 932ms | ***✅***@AR14N24b"
+      - "404 🇩🇪 | DE | 933ms |"
+      - "405 🇩🇪 | DE | 933ms | 🐯22@oneclickvpnkeys"
+      - "406 🇩🇪 | DE | 934ms |"
+      - "407 🇵🇱 | PL | 935ms | ***✅***@AR14N24b"
+      - "408 🇫🇮 | FI | 936ms | ***✅***@AR14N24b"
+      - "409 🇩🇪 | DE | 937ms |"
+      - "410 🇮🇳 | IN | 939ms | ***✅***@AR14N24b"
+      - "411 🇳🇱 | NL | 941ms | 🐯40@oneclickvpnkeys"
+      - "412 🇩🇪 | DE | 941ms | 🐯16@oneclickvpnkeys"
+      - "413 🇩🇪 | DE | 942ms |"
+      - "414 🇫🇮 | FI | 942ms | ***✅***@AR14N24b"
+      - "415 🇩🇪 | DE | 943ms |"
+      - "416 🇩🇪 | DE | 944ms |"
+      - "417 🇫🇮 | FI | 945ms |"
+      - "418 🇫🇮 | FI | 946ms | ***✅***@AR14N24b"
+      - "419 🇩🇪 | DE | 946ms | ***✅***@AR14N24b"
+      - "420 🇪🇪 | EE | 949ms |"
+      - "421 🇷🇺 | RU | 950ms |"
+      - "422 🇳🇱 | NL | 952ms | 🥎28@oneclickvpnkeys"
+      - "423 🇩🇪 | DE | 952ms | ***✅***@AR14N24b"
+      - "424 🇳🇱 | NL | 952ms |"
+      - "425 🇪🇪 | EE | 954ms |"
+      - "426 🇫🇷 | FR | 959ms | ***✅***@AR14N24b"
+      - "427 🇮🇱 | IL | 962ms | @meliproxyy"
+      - "428 🇺🇸 | US | 963ms | [14376]+-+Telegram+:+@configraygan"
+      - "429 🇵🇱 | PL | 963ms | ***✅***@AR14N24b"
+      - "430 🇷🇺 | RU | 969ms | 🍪43@oneclickvpnkeys"
+      - "431 🇸🇪 | SE | 973ms | ***✅***@AR14N24b"
+      - "432 🇩🇪 | DE | 974ms |"
+      - "433 🇳🇱 | NL | 974ms | @meliproxyy"
+      - "434 🇷🇺 | RU | 974ms | ***✅***@AR14N24b"
+      - "435 🇷🇺 | RU | 975ms | [15273]+-+Telegram+:+@configraygan"
+      - "436 🇩🇪 | DE | 976ms | ***✅***@AR14N24b"
+      - "437 🇩🇪 | DE | 978ms | برای اتصال دائمی جوین شو🦋 TelegramID ⌲Express_freevpn 🪩"
+      - "438 🇩🇪 | DE | 981ms | ***✅***@AR14N24b"
+      - "439 🇫🇮 | FI | 981ms |"
+      - "440 🇷🇺 | RU | 982ms | ***✅***@AR14N24b"
+      - "441 🇩🇪 | DE | 983ms |"
+      - "442 🇷🇺 | RU | 986ms |"
+      - "443 🇩🇪 | DE | 987ms | ***✅***@AR14N24b`"
+      - "444 🇩🇪 | DE | 988ms | 🥎73@oneclickvpnkeys"
+      - "445 🇷🇺 | RU | 992ms |"
+      - "446 🇩🇪 | DE | 997ms |"
+      - "447 🇩🇪 | DE | 1006ms |"
+      - "448 🇷🇺 | RU | 1013ms |"
+      - "449 🇦🇲 | AM | 1013ms |"
+      - "450 🇫🇮 | FI | 1014ms |"
+      - "451 🇷🇺 | RU | 1014ms |"
+      - "452 🇷🇺 | RU | 1016ms |"
+      - "453 🇷🇺 | RU | 1017ms |"
+      - "454 🇩🇪 | DE | 1026ms | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "455 🇮🇩 | ID | 1028ms | ***✅***@AR14N24b"
+      - "456 🇫🇮 | FI | 1030ms |"
+      - "457 🇹🇷 | TR | 1033ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩"
+      - "458 🇮🇩 | ID | 1033ms |"
+      - "459 🇫🇮 | FI | 1034ms | ***✅***@AR14N24b"
+      - "460 🇭🇺 | HU | 1039ms | 💎+|+@configraygan『🇩🇪⁹⁵』"
+      - "461 🇳🇱 | NL | 1040ms | ***✅***@AR14N24b"
+      - "462 🇩🇪 | DE | 1047ms |"
+      - "463 🇳🇱 | NL | 1049ms |"
+      - "464 🇷🇺 | RU | 1050ms | 🐯20@oneclickvpnkeys"
+      - "465 🇩🇪 | DE | 1050ms | ***✅***@AR14N24b"
+      - "466 🇳🇱 | NL | 1051ms | 🐯45@oneclickvpnkeys"
+      - "467 🇰🇷 | KR | 1057ms | 🐯99@oneclickvpnkeys"
+      - "468 🇰🇿 | KZ | 1059ms | ***✅***@AR14N24b"
+      - "469 🇳🇱 | NL | 1062ms | @meliproxyy"
+      - "470 🇩🇪 | DE | 1064ms |"
+      - "471 🇳🇱 | NL | 1070ms | ***✅***@AR14N24b"
+      - "472 🇩🇪 | DE | 1075ms | ***🐦‍🔥***-@SPEEDS_VPN`"
+      - "473 🇩🇪 | DE | 1083ms | ***✅***@AR14N24b"
+      - "474 🇩🇪 | DE | 1083ms | 🇷🇺freenet_vt"
+      - "475 🇪🇸 | ES | 1090ms | freenet_vt"
+      - "476 🇸🇬 | SG | 1094ms | 🐯83@oneclickvpnkeys"
+      - "477 🇭🇰 | HK | 1099ms | ***✅***@AR14N24b"
+      - "478 🇱🇻 | LV | 1126ms | @meliproxyy"
+      - "479 🇹🇷 | TR | 1127ms |"
+      - "480 🇩🇪 | DE | 1138ms | ***✅***@AR14N24b"
+      - "481 🇫🇮 | FI | 1148ms |"
+      - "482 🇫🇮 | FI | 1149ms |"
+      - "483 🇳🇱 | NL | 1172ms |"
+      - "484 🇷🇺 | RU | 1182ms | ***✅***@AR14N24b"
+      - "485 🇺🇸 | US | 1191ms | ***✅***@AR14N24b"
+      - "486 🇩🇪 | DE | 1194ms | ***✅***@AR14N24b"
+      - "487 🇮🇳 | IN | 1197ms | ***✅***@AR14N24b"
+      - "488 🇩🇪 | DE | 1212ms |"
+      - "489 🇳🇱 | NL | 1213ms |"
+      - "490 🇳🇱 | NL | 1214ms | ***✅***@AR14N24b"
+      - "491 🇳🇱 | NL | 1218ms | ***✅***@AR14N24b"
+      - "492 🇷🇺 | RU | 1227ms |"
+      - "493 🇵🇱 | PL | 1244ms | 🍪49@oneclickvpnkeys"
+      - "494 🇳🇱 | NL | 1245ms | ***✅***@AR14N24b"
+      - "495 🇩🇪 | DE | 1248ms |"
+      - "496 🇫🇷 | FR | 1266ms |"
+      - "497 🇵🇱 | PL | 1266ms | ***✅***@AR14N24b"
+      - "498 🇵🇱 | PL | 1271ms | @proxy_kafee"
+      - "499 🇵🇱 | PL | 1276ms | @meliproxyy"
+      - "500 🇰🇿 | KZ | 1277ms | ***✅***@AR14N24b"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 RELAY🚩 | tn1rr.qzz.io-8443 | 84.82ms","type":"vless","server":"193.53.40.219","port":8443,"uuid":"vaslbemonn","udp":true,"tls":true,"network":"ws","servername":"tn1rr.qzz.io"}
   - {"name":"2 RELAY🚩 | tn1rr.qzz.io-8443 | 15.13ms","type":"vless","server":"176.97.77.225","port":8443,"uuid":"vaslbemonn","udp":true,"tls":true,"network":"ws","servername":"tn1rr.qzz.io"}
@@ -518,16 +676,17 @@ proxies:
   - {"name":"499 REALITY|RU🇷🇺 | 109.120.188.166-443 | 149.85ms","type":"vless","server":"109.120.188.166","port":443,"uuid":"7bc30425-1c2f-4823-b629-90f599a4cbfe","udp":true,"tls":true,"network":"tcp","servername":"ads.x5.ru"}
   - {"name":"500 IR🇮🇷 | tst.acconnect.click-16964 | 289.68ms","type":"vless","server":"tst.acconnect.click","port":16964,"uuid":"7b838410-f1ef-4c4a-9f67-faf5724ae369","udp":true,"tls":false,"network":"tcp"}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 RELAY🚩 | tn1rr.qzz.io-8443 | 84.82ms"
       - "2 RELAY🚩 | tn1rr.qzz.io-8443 | 15.13ms"
@@ -1029,6 +1188,571 @@ proxy-groups:
       - "498 RELAY🚩 | 8j3f7HD37h.PaGES.dEV-2096 | 106.07ms"
       - "499 REALITY|RU🇷🇺 | 109.120.188.166-443 | 149.85ms"
       - "500 IR🇮🇷 | tst.acconnect.click-16964 | 289.68ms"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 RELAY🚩 | tn1rr.qzz.io-8443 | 84.82ms"
+      - "2 RELAY🚩 | tn1rr.qzz.io-8443 | 15.13ms"
+      - "3 RELAY🚩 | tn1rr.qzz.io-443 | 15.08ms"
+      - "4 RELAY🚩 | turvfsogotgbdfkmvgmkleklf.infinitecreativehorizons.com-443 | 250.94ms"
+      - "5 RELAY🚩 | nasnet-571299667.rahavard365.co-2053 | 79.73ms"
+      - "6 REALITY|RU🇷🇺 | 5.129.249.134-443 | 153.49ms"
+      - "7 DE🇩🇪 | jina-135220731-direct.yektanet.co-443 | 220.89ms"
+      - "8 RELAY🚩 | Tp021Y35zT.tRuStFoRtEaM.cOm-443 | 95.73ms"
+      - "9 RELAY🚩 | Tp013HrJ3f.TrUsTfOrTeAm.CoM-443 | 164.73ms"
+      - "10 REALITY|EE🇪🇪 | 91.184.250.227-443 | 127.4ms"
+      - "11 REALITY|LT🇱🇹 | lt-cherry-01.com-8443 | 616.05ms"
+      - "12 RELAY🚩 | dev.nestandneighbours.com-443 | 120.93ms"
+      - "13 RELAY🚩 | dev.twistsparrow.xyz-443 | 105.09ms"
+      - "14 RELAY🚩 | dev.qsaas.dev-443 | 124.27ms"
+      - "15 RELAY🚩 | dev.twistsparrow.xyz-443 | 11.3ms"
+      - "16 RELAY🚩 | dev.twistsparrow.xyz-443 | 13.91ms"
+      - "17 RELAY🚩 | dev.twistsparrow.xyz-443 | 16.84ms"
+      - "18 RELAY🚩 | dev.twistsparrow.xyz-443 | 11.16ms"
+      - "19 RELAY🚩 | dev.nestandneighbours.com-443 | 14.06ms"
+      - "20 RELAY🚩 | dev.twistsparrow.xyz-443 | 14.62ms"
+      - "21 RELAY🚩 | dev.twistsparrow.xyz-443 | 13.84ms"
+      - "22 REALITY|AE🇦🇪 | 91.132.51.160-443 | 279.07ms"
+      - "23 UA🇺🇦 | cl6-ndl.privetnet.ru-7443 | 788.98ms"
+      - "24 REALITY|FI🇫🇮 | 78.153.139.68-8443 | 204.37ms"
+      - "25 US🇺🇸 | rxiptamiz.global.ssl.fastly.net-443 | 45.16ms"
+      - "26 AU🇦🇺 | 170.64.238.91-39218 | 228.35ms"
+      - "27 REALITY|NL🇳🇱 | 206.245.157.142-37050 | 113.98ms"
+      - "28 RELAY🚩 | HovEyda-ARIAMEHR-KinG.PAgEs.Dev-443 | 90.21ms"
+      - "29 RELAY🚩 | bpb-worker-panel-chf.pages.dev-443 | 108.62ms"
+      - "30 ES🇪🇸 | es2.vpnbyvinarsky.ru-443 | 466.26ms"
+      - "31 REALITY|FI🇫🇮 | 65.21.132.249-443 | 142.57ms"
+      - "32 REALITY|CY🇨🇾 | 45.15.128.75-8443 | 123.13ms"
+      - "33 RELAY🚩 | afrcloud22.mmv.kr-443 | 484.22ms"
+      - "34 REALITY|FR🇫🇷 | 109.172.55.157-19547 | 228.92ms"
+      - "35 IR🇮🇷 | 78.110.123.32-2095 | 186.86ms"
+      - "36 RELAY🚩 | ExEMplAry-MILkytsxQiQYso.sPortlaNd.CoMPANy.-2052 | 261.76ms"
+      - "37 DE🇩🇪 | beh1.salonemojallal.ir.-443 | 592.99ms"
+      - "38 REALITY|LV🇱🇻 | 45.43.79.73-443 | 130.03ms"
+      - "39 REALITY|AM🇦🇲 | 77.91.68.70-55983 | 175.26ms"
+      - "40 RELAY🚩 | gaosir.unfeeling.sbs-2096 | 276.5ms"
+      - "41 REALITY|NL🇳🇱 | 37.218.247.35-8443 | 122.28ms"
+      - "42 REALITY|NL🇳🇱 | 91.84.105.61-25998 | 114.83ms"
+      - "43 REALITY|RU🇷🇺 | 89.208.228.167-443 | 150.66ms"
+      - "44 REALITY|RU🇷🇺 | 5.188.141.67-443 | 159.71ms"
+      - "45 REALITY|RU🇷🇺 | 109.120.189.160-443 | 155.36ms"
+      - "46 REALITY|RU🇷🇺 | 81.17.154.106-443 | 146.91ms"
+      - "47 REALITY|RU🇷🇺 | 185.39.206.22-443 | 149.84ms"
+      - "48 REALITY|RU🇷🇺 | 185.241.193.60-443 | 160.27ms"
+      - "49 RELAY🚩 | 639020094881472575.defender-amsjk.info-443 | 400.58ms"
+      - "50 REALITY|NL🇳🇱 | 45.66.163.125-8443 | 112.56ms"
+      - "51 RU🇷🇺 | rus21.unboundworld.org-8443 | 246.38ms"
+      - "52 IR🇮🇷 | anten.ir-2087 | 443.87ms"
+      - "53 REALITY|DE🇩🇪 | germ2.vpnhub.shop-8081 | 446.79ms"
+      - "54 REALITY|TR🇹🇷 | 188.132.183.233-8081 | 155.65ms"
+      - "55 REALITY|TR🇹🇷 | 103.231.75.185-443 | 157.37ms"
+      - "56 REALITY|FI🇫🇮 | 94.177.13.135-442 | 134.37ms"
+      - "57 RELAY🚩 | INDEX.Arcane509.Workers.DEV-2053 | 87.23ms"
+      - "58 RELAY🚩 | EMS.Arc-Time.Workers.DEV-2096 | 79.66ms"
+      - "59 REALITY|DE🇩🇪 | 144.31.63.7-443 | 119.14ms"
+      - "60 RELAY🚩 | p1.thisiswe.uno-2053 | 106.39ms"
+      - "61 RELAY🚩 | kaja.thisiswe.uno-2053 | 140.99ms"
+      - "62 RELAY🚩 | kaja.thisiswe.uno-2053 | 13.99ms"
+      - "63 RELAY🚩 | afrcloud1.c01.kr-443 | 354.13ms"
+      - "64 REALITY|CY🇨🇾 | 45.12.150.145-15470 | 136.93ms"
+      - "65 RELAY🚩 | pages.dev-443 | 46.62ms"
+      - "66 US🇺🇸 | Zmaoz.Faculty.Ucdavis.Edu-443 | 60.62ms"
+      - "67 REALITY|EE🇪🇪 | tbankru.outlinekeys.net-443 | 562.06ms"
+      - "68 REALITY|DE🇩🇪 | de.cdn.stun.su-443 | 261.78ms"
+      - "69 REALITY|AT🇦🇹 | at.jojack.ru-443 | 356.46ms"
+      - "70 REALITY|DE🇩🇪 | 45.145.40.26-443 | 122.05ms"
+      - "71 REALITY|DE🇩🇪 | 193.46.81.73-443 | 121.69ms"
+      - "72 REALITY|DE🇩🇪 | 193.46.81.207-443 | 125.29ms"
+      - "73 REALITY|DE🇩🇪 | 185.254.98.164-443 | 125.26ms"
+      - "74 REALITY|AT🇦🇹 | 152.53.66.46-443 | 130.26ms"
+      - "75 REALITY|AT🇦🇹 | 152.53.46.200-443 | 129.89ms"
+      - "76 REALITY|PL🇵🇱 | 77.83.246.88-443 | 120.84ms"
+      - "77 RELAY🚩 | e4xf3l6qfdu-shhc8axat6695v4t9e6p.pages.dev-443 | 86.84ms"
+      - "78 US🇺🇸 | 147135001195.sec22org.com-443 | 159.72ms"
+      - "79 REALITY|FR🇫🇷 | 3.fr.vles.space-23151 | 1009.02ms"
+      - "80 REALITY|NL🇳🇱 | 188.253.26.39-442 | 110.51ms"
+      - "81 RELAY🚩 | ger2.nilmmd.shop-2087 | 119.88ms"
+      - "82 RELAY🚩 | 4.uploado.ir-443 | 354.88ms"
+      - "83 RELAY🚩 | vbox.ping-box.com-443 | 102.63ms"
+      - "84 RELAY🚩 | vbox.ping-box.com-443 | 74.96ms"
+      - "85 RELAY🚩 | vbox.ping-box.com-443 | 70.17ms"
+      - "86 RELAY🚩 | vbox.ping-box.com-443 | 16.42ms"
+      - "87 RELAY🚩 | rukawa.pages.dev-443 | 80.89ms"
+      - "88 DE🇩🇪 | 91.107.208.24-443 | 124.38ms"
+      - "89 RELAY🚩 | apii.onlineshoppingez.ir-443 | 437.95ms"
+      - "90 RELAY🚩 | ir1.airpanel.top-2053 | 464.19ms"
+      - "91 RELAY🚩 | ir1.airpanel.top-2053 | 16.57ms"
+      - "92 RELAY🚩 | ir1.airpanel.top-2053 | 11.25ms"
+      - "93 RELAY🚩 | ir1.airpanel.top-2053 | 11.43ms"
+      - "94 RELAY🚩 | ir1.airpanel.top-2053 | 16.95ms"
+      - "95 RELAY🚩 | ir1.airpanel.top-2053 | 11.02ms"
+      - "96 RELAY🚩 | ir1.airpanel.top-2053 | 15.94ms"
+      - "97 DE🇩🇪 | de2.weedpanel.site-443 | 170.14ms"
+      - "98 FI🇫🇮 | fi.weedpanel.site-443 | 209.44ms"
+      - "99 RELAY🚩 | jafarservices.jafarghasemiturk.ir-2053 | 365.15ms"
+      - "100 RELAY🚩 | pqh30v5.carwashipdir.shop-443 | 79.68ms"
+      - "101 RELAY🚩 | pqh30v5.carwashipdir.shop-443 | 15.1ms"
+      - "102 RELAY🚩 | pqh30v1.carwashipdir.shop-443 | 65.34ms"
+      - "103 RELAY🚩 | pqh29v7.carwashipdir.shop-443 | 70.56ms"
+      - "104 REALITY|NL🇳🇱 | 45.150.34.87-8443 | 145.95ms"
+      - "105 IR🇮🇷 | 217.60.238.167-8083 | 439.76ms"
+      - "106 REALITY|NL🇳🇱 | 185.21.12.61-8443 | 115.56ms"
+      - "107 REALITY|FI🇫🇮 | 85.192.48.154-23335 | 146.1ms"
+      - "108 REALITY|FI🇫🇮 | 85.192.48.144-23335 | 146.66ms"
+      - "109 REALITY|PL🇵🇱 | 82.22.40.129-23335 | 131.67ms"
+      - "110 REALITY|PL🇵🇱 | 82.22.40.109-23335 | 138.06ms"
+      - "111 REALITY|US🇺🇸 | 7.cdnconn.com-23335 | 145.09ms"
+      - "112 REALITY|ES🇪🇸 | 4.cdnconn.com-23335 | 331.66ms"
+      - "113 REALITY|PL🇵🇱 | 3.cdnconn.com-23335 | 226.38ms"
+      - "114 REALITY|FI🇫🇮 | 2.cdnconn.com-23335 | 176.52ms"
+      - "115 REALITY|ES🇪🇸 | 185.147.26.30-23335 | 151.12ms"
+      - "116 REALITY|ES🇪🇸 | 185.147.26.13-23335 | 151.07ms"
+      - "117 REALITY|RU🇷🇺 | 178.72.145.19-8443 | 142.29ms"
+      - "118 REALITY|SE🇸🇪 | 144.31.130.56-23335 | 135.34ms"
+      - "119 REALITY|SE🇸🇪 | 1.cdnconn.com-23335 | 296.66ms"
+      - "120 REALITY|NL🇳🇱 | 62.106.66.56-443 | 109.23ms"
+      - "121 REALITY|GB🇬🇧 | va28.serverh1ub.ir-8080 | 246.41ms"
+      - "122 REALITY|GB🇬🇧 | va25.serverh1ub.ir-8080 | 555.47ms"
+      - "123 REALITY|DE🇩🇪 | de01.keyinvest.org-443 | 448.8ms"
+      - "124 REALITY|RU🇷🇺 | 79.137.174.170-443 | 155.43ms"
+      - "125 REALITY|DE🇩🇪 | 138.124.186.202-443 | 126.32ms"
+      - "126 RELAY🚩 | ujp1.xn--ghqu5fm27b67w.com-443 | 69.64ms"
+      - "127 REALITY|SA🇸🇦 | 81.208.170.142-1500 | 212.65ms"
+      - "128 RELAY🚩 | pages.dev-443 | 14.45ms"
+      - "129 US🇺🇸 | Zmaoz.Faculty.Ucdavis.Edu-443 | 58.31ms"
+      - "130 REALITY|FR🇫🇷 | 3.fr.vles.space-23151 | 587.13ms"
+      - "131 IR🇮🇷 | nv137.momdping.com-443 | 426.95ms"
+      - "132 REALITY|MD🇲🇩 | 94.232.247.168-41360 | 114.82ms"
+      - "133 REALITY|KR🇰🇷 | kr01-vlr01.tcp-reset-club.net-443 | 510.23ms"
+      - "134 REALITY|FI🇫🇮 | my.kiomars.shop-6665 | 327.1ms"
+      - "135 REALITY|FI🇫🇮 | my.kiomars.shop-6664 | 201.3ms"
+      - "136 IR🇮🇷 | 217.60.238.167-8083 | 326.88ms"
+      - "137 REALITY|RU🇷🇺 | 217.114.15.157-443 | 161.86ms"
+      - "138 RELAY🚩 | DE-23.85858569.XYZ-443 | 128.86ms"
+      - "139 DE🇩🇪 | Tet.mehspeedtest.com-8443 | 386.61ms"
+      - "140 RELAY🚩 | jamal.thisiswe.uno-2083 | 88.51ms"
+      - "141 RELAY🚩 | api5.diiginet.ir-2053 | 434.7ms"
+      - "142 REALITY|US🇺🇸 | 45.136.149.145-443 | 189.77ms"
+      - "143 IR🇮🇷 | 6.3pita.com-443 | 981.19ms"
+      - "144 RELAY🚩 | hotchoclate.graphapp.ir-443 | 361.73ms"
+      - "145 REALITY|NL🇳🇱 | 195.26.224.112-8443 | 109.06ms"
+      - "146 RU🇷🇺 | 94.242.51.174-443 | 140.81ms"
+      - "147 RELAY🚩 | fr1.itscdn.ir-2096 | 452.95ms"
+      - "148 REALITY|RU🇷🇺 | 5.188.141.67-443 | 155.97ms"
+      - "149 REALITY|RU🇷🇺 | 5.188.141.18-443 | 156.85ms"
+      - "150 REALITY|RU🇷🇺 | 37.139.34.115-443 | 156.82ms"
+      - "151 REALITY|RU🇷🇺 | 109.120.189.145-443 | 143.2ms"
+      - "152 PL🇵🇱 | plcdn19.suio.me-443 | 331.85ms"
+      - "153 PL🇵🇱 | plcdn19.suio.me-443 | 200.38ms"
+      - "154 REALITY|US🇺🇸 | 107.174.85.183-11163 | 40.49ms"
+      - "155 RELAY🚩 | mmdv2.pages.dev-443 | 74.99ms"
+      - "156 RELAY🚩 | mmdv2.pages.dev-443 | 15.27ms"
+      - "157 RELAY🚩 | mmdv2.pages.dev-443 | 13.34ms"
+      - "158 RELAY🚩 | mmdv2.pages.dev-443 | 15.1ms"
+      - "159 RELAY🚩 | sourceforge.net-443 | 218.74ms"
+      - "160 RELAY🚩 | afrcloud22.mmv.kr-443 | 14.54ms"
+      - "161 RELAY🚩 | DiprOX.pages.DEV-443 | 72.99ms"
+      - "162 RELAY🚩 | DiprOX.pages.DEV-443 | 15.1ms"
+      - "163 RELAY🚩 | DiprOX.pages.DEV-443 | 13.97ms"
+      - "164 RELAY🚩 | afrcloud22.mmv.kr-443 | 10.43ms"
+      - "165 RELAY🚩 | afrcloud22.mmv.kr-443 | 15.49ms"
+      - "166 RELAY🚩 | 639031180460930556.altima-amsjq.info-443 | 386.93ms"
+      - "167 REALITY|NL🇳🇱 | 213.176.16.74-443 | 119.68ms"
+      - "168 REALITY|ES🇪🇸 | 213.165.65.5-443 | 128.44ms"
+      - "169 RELAY🚩 | pages.dev-443 | 14.88ms"
+      - "170 US🇺🇸 | Zmaoz.Faculty.Ucdavis.Edu-443 | 86.36ms"
+      - "171 SG🇸🇬 | node1.nanonet.host-22539 | 259.36ms"
+      - "172 REALITY|NL🇳🇱 | 94.103.1.230-443 | 114.98ms"
+      - "173 REALITY|DE🇩🇪 | dlc-ger1.persianpinggame.ir-443 | 444.92ms"
+      - "174 US🇺🇸 | live.skornorth.com-443 | 97.65ms"
+      - "175 REALITY|FR🇫🇷 | vb13.homianco.ir-2096 | 333.93ms"
+      - "176 REALITY|GB🇬🇧 | vb05.homianco.ir-2096 | 140.74ms"
+      - "177 REALITY|GB🇬🇧 | vb04.homianco.ir-2096 | 542.88ms"
+      - "178 RELAY🚩 | aza002.vaslbash.site-2095 | 71.74ms"
+      - "179 REALITY|RU🇷🇺 | 84.201.167.196-8443 | 151.69ms"
+      - "180 REALITY|RU🇷🇺 | 176.122.27.49-10443 | 142.67ms"
+      - "181 DE🇩🇪 | verager2.uspn.io-2083 | 344.53ms"
+      - "182 IN🇮🇳 | 198.38.86.30-2083 | 234.87ms"
+      - "183 REALITY|FI🇫🇮 | 144.31.226.10-8443 | 265.78ms"
+      - "184 IR🇮🇷 | film-doon.ir-443 | 685.72ms"
+      - "185 REALITY|IT🇮🇹 | 80.211.133.156-443 | 117.62ms"
+      - "186 RELAY🚩 | fancy-disk-fbb6.tmpesterouglas.workers.dev-443 | 85.37ms"
+      - "187 REALITY|DE🇩🇪 | 91.99.97.155-4450 | 127.86ms"
+      - "188 RELAY🚩 | datisde2.rahagp.ir-2096 | 469.65ms"
+      - "189 GB🇬🇧 | zyro.adslimit.info-2345 | 306.49ms"
+      - "190 GB🇬🇧 | 51.38.64.226-2345 | 112.2ms"
+      - "191 FI🇫🇮 | digikala.sorza.ir-8443 | 547.26ms"
+      - "192 RELAY🚩 | lutranautilus.qzz.io-443 | 3602.67ms"
+      - "193 RELAY🚩 | 1750293123492.china.baidu.bilibili.china.aeko.cn-8080 | 318.49ms"
+      - "194 RELAY🚩 | aryoovpn.commen-esoteric-0q.workers.dev-2095 | 125.52ms"
+      - "195 REALITY|RU🇷🇺 | youtube.happvpn.com-443 | 337.04ms"
+      - "196 REALITY|NL🇳🇱 | nl2.srv.happvpn.com-443 | 278.38ms"
+      - "197 REALITY|LT🇱🇹 | lt.srv.happvpn.com-443 | 274.35ms"
+      - "198 AE🇦🇪 | s1.sohrab172.ir-2089 | 614.58ms"
+      - "199 RELAY🚩 | rahgozar.italiantourism.net.-2087 | 254.91ms"
+      - "200 RELAY🚩 | cf.elipii-bot.shop-443 | 61.27ms"
+      - "201 RU🇷🇺 | crghxqxyoy-518237151-direct.bahame.co-443 | 210.69ms"
+      - "202 RELAY🚩 | ci49kfwjrc-57129121185.hediiigate.com-8880 | 102ms"
+      - "203 RELAY🚩 | zh.hollowspot.ir-8443 | 425.03ms"
+      - "204 US🇺🇸 | sea-daisy.unity4world.ir-8880 | 176.94ms"
+      - "205 REALITY|FI🇫🇮 | my.kiomars.shop-6665 | 201.87ms"
+      - "206 REALITY|FI🇫🇮 | my.kiomars.shop-6664 | 223.21ms"
+      - "207 IR🇮🇷 | 45.84.157.54-5050 | 202.29ms"
+      - "208 IR🇮🇷 | anten.ir-8080 | 233ms"
+      - "209 REALITY|DE🇩🇪 | 143.20.37.17-443 | 121.19ms"
+      - "210 FI🇫🇮 | erfan.mmd8563.ir-8880 | 590.45ms"
+      - "211 REALITY|FR🇫🇷 | 45.13.119.38-443 | 112.48ms"
+      - "212 REALITY|UA🇺🇦 | 130.0.233.100-8443 | 148.69ms"
+      - "213 DE🇩🇪 | taran.mehrsazi.ir-2083 | 704.83ms"
+      - "214 VN🇻🇳 | 103.245.237.124-58202 | 222.4ms"
+      - "215 DE🇩🇪 | deu469.unboundworld.org-8443 | 200.02ms"
+      - "216 REALITY|DE🇩🇪 | deu469.unboundworld.org-443 | 140.75ms"
+      - "217 REALITY|DE🇩🇪 | 62.141.42.201-443 | 112.3ms"
+      - "218 DE🇩🇪 | 37.221.125.227-443 | 116.76ms"
+      - "219 REALITY|LT🇱🇹 | 93.115.25.42-8443 | 131.13ms"
+      - "220 REALITY|US🇺🇸 | 137.184.218.169-36925 | 32.6ms"
+      - "221 DE🇩🇪 | m.darksali.ir-8082 | 1182.84ms"
+      - "222 RELAY🚩 | solitary-voice-62ec.alird7575.workers.dev-2053 | 124.16ms"
+      - "223 IR🇮🇷 | it.jemspeed.top-39296 | 656.36ms"
+      - "224 US🇺🇸 | 62.60.176.237-2052 | 37.14ms"
+      - "225 FI🇫🇮 | digikala.sorza.ir-2053 | 356.86ms"
+      - "226 IR🇮🇷 | ServerDL-FrankM2.NetSnap.ir-2083 | 550.86ms"
+      - "227 IR🇮🇷 | data-frm2.netsnap.ir-2083 | 547.3ms"
+      - "228 RELAY🚩 | hajames.amirconfigpaanelllll.com-2083 | 107.27ms"
+      - "229 REALITY|NL🇳🇱 | 188.212.125.121-443 | 370.57ms"
+      - "230 RELAY🚩 | ir6.hnbyme.online-2053 | 74.9ms"
+      - "231 REALITY|CY🇨🇾 | 45.12.135.99-443 | 147.84ms"
+      - "232 RELAY🚩 | Www.soft98.ir.snap.ir.Www.Abantether.ir.te1450.ir-8880 | 441.11ms"
+      - "233 REALITY|FR🇫🇷 | 7fra.solonettochka.ru-443 | 1106.68ms"
+      - "234 REALITY|LT🇱🇹 | lt.appav.online-2083 | 207.15ms"
+      - "235 REALITY|FI🇫🇮 | fi.appav.online-2083 | 346.32ms"
+      - "236 REALITY|DE🇩🇪 | de.appav.net-2083 | 242.16ms"
+      - "237 REALITY|RU🇷🇺 | 95.163.182.131-443 | 160.51ms"
+      - "238 REALITY|RU🇷🇺 | 5.188.224.167-2083 | 153.64ms"
+      - "239 REALITY|RU🇷🇺 | 5.188.224.135-2083 | 158.22ms"
+      - "240 REALITY|RU🇷🇺 | 37.139.34.199-8443 | 145.18ms"
+      - "241 REALITY|FI🇫🇮 | 144.31.232.229-443 | 121.21ms"
+      - "242 REALITY|FI🇫🇮 | 144.31.232.228-443 | 133.28ms"
+      - "243 REALITY|FI🇫🇮 | 144.31.18.73-443 | 126.13ms"
+      - "244 REALITY|FI🇫🇮 | 144.31.18.73-2083 | 137.36ms"
+      - "245 RELAY🚩 | www.speedtest.net-2095 | 33.02ms"
+      - "246 REALITY|TR🇹🇷 | 103.231.75.185-443 | 154.99ms"
+      - "247 RELAY🚩 | baguette.adaspoloandco.com-443 | 108.61ms"
+      - "248 REALITY|DE🇩🇪 | 157.90.233.71-28223 | 121.92ms"
+      - "249 RELAY🚩 | silen3euxx.sobygod.site-2087 | 79.34ms"
+      - "250 RELAY🚩 | fuchsia.qzz.io-443 | 4542.99ms"
+      - "251 REALITY|NL🇳🇱 | 155.212.37.10-993 | 131.53ms"
+      - "252 REALITY|TR🇹🇷 | 155.212.110.2-993 | 136.42ms"
+      - "253 REALITY|PL🇵🇱 | test-pc.intfreed.ru-443 | 519.59ms"
+      - "254 REALITY|CH🇨🇭 | swiss.intfreed.ru-443 | 631.74ms"
+      - "255 REALITY|DE🇩🇪 | 64.188.104.168-40721 | 112.66ms"
+      - "256 REALITY|GB🇬🇧 | 140.238.100.35-40721 | 101.29ms"
+      - "257 REALITY|US🇺🇸 | 165.154.235.194-30001 | 37.94ms"
+      - "258 REALITY|RU🇷🇺 | ny.us.srv.oplcdn.link-8443 | 582.94ms"
+      - "259 REALITY|KR🇰🇷 | 165.154.230.13-30001 | 154.72ms"
+      - "260 RELAY🚩 | vpn.nnet.online-443 | 63.79ms"
+      - "261 RELAY🚩 | cdn-no.lopzo.ir-443 | 437.61ms"
+      - "262 IR🇮🇷 | 193.151.153.188-9000 | 313.62ms"
+      - "263 IR🇮🇷 | 193.151.151.210-9000 | 334.89ms"
+      - "264 RELAY🚩 | tn1rr.qzz.io-443 | 160.75ms"
+      - "265 REALITY|CY🇨🇾 | 45.12.135.99-443 | 147.84ms"
+      - "266 RELAY🚩 | taDRisOnlIn-taDRisOnlIn-taDRisOnlIn-taDRisOnlInCD1-NeW-eN-2.kiWiJuiCe.IR.-2053 | 430.52ms"
+      - "267 REALITY|HU🇭🇺 | 92.61.70.38-443 | 129.56ms"
+      - "268 US🇺🇸 | speedtest.net-443 | 14.33ms"
+      - "269 REALITY|RU🇷🇺 | 178.130.46.56-8443 | 114.64ms"
+      - "270 DE🇩🇪 | amorix.abresani.com-2087 | 185.74ms"
+      - "271 REALITY|US🇺🇸 | 45.15.125.8-8443 | 106.57ms"
+      - "272 REALITY|AE🇦🇪 | ll0ll.vip-8443 | 178.1ms"
+      - "273 REALITY|RU🇷🇺 | 79.137.174.199-8443 | 155.17ms"
+      - "274 REALITY|RU🇷🇺 | 94.103.89.223-8443 | 150.31ms"
+      - "275 SG🇸🇬 | free-server.techsonic.ggff.net-2096 | 439.19ms"
+      - "276 REALITY|RU🇷🇺 | 84.201.145.148-8443 | 147.89ms"
+      - "277 REALITY|MD🇲🇩 | 185.234.57.216-443 | 170.57ms"
+      - "278 REALITY|FI🇫🇮 | 92.63.224.18-443 | 126.24ms"
+      - "279 RELAY🚩 | afrcloud22.mmv.kr-443 | 693.11ms"
+      - "280 RELAY🚩 | www.speedtest.net-2096 | 26.09ms"
+      - "281 US🇺🇸 | chunantong.cc.cd-9443 | 1116.54ms"
+      - "282 REALITY|US🇺🇸 | 107.174.181.241-8443 | 45.98ms"
+      - "283 REALITY|TR🇹🇷 | 62.133.63.232-8443 | 158.62ms"
+      - "284 REALITY|DE🇩🇪 | 77.239.125.99-443 | 125.43ms"
+      - "285 REALITY|RU🇷🇺 | 212.192.14.250-64527 | 161.06ms"
+      - "286 REALITY|NL🇳🇱 | 91.84.103.69-8443 | 116.89ms"
+      - "287 REALITY|GB🇬🇧 | 195.54.161.169-8443 | 102.12ms"
+      - "288 REALITY|US🇺🇸 | 66.179.82.126-443 | 23.66ms"
+      - "289 RELAY🚩 | bypassfilter.cmyyvat.workers.dev-443 | 96.22ms"
+      - "290 US🇺🇸 | SHARAF.followerarzon1.com-443 | 234.01ms"
+      - "291 RELAY🚩 | nst.maroufgym.ir-443 | 649.81ms"
+      - "292 REALITY|FI🇫🇮 | my.kiomars.shop-6620 | 198.02ms"
+      - "293 RELAY🚩 | rOyAL-DrEAm-1ee7.i-R-tuNL.woRKeRS.DEV-443 | 114.64ms"
+      - "294 FI🇫🇮 | cup.mehrsazi.ir-2053 | 562.58ms"
+      - "295 FI🇫🇮 | cup.mehrsazi.ir-2053 | 366.69ms"
+      - "296 RELAY🚩 | dash.beginnertopro.ir-2053 | 443.05ms"
+      - "297 REALITY|AT🇦🇹 | 38.180.144.156-8443 | 126.01ms"
+      - "298 RELAY🚩 | calm-forest-9bad.mjtbytyty708090.workers.dev-443 | 108.95ms"
+      - "299 REALITY|DE🇩🇪 | 150.241.90.13-443 | 120.89ms"
+      - "300 RELAY🚩 | all-fm2.netsnap.ir.-2087 | 590.28ms"
+      - "301 REALITY|DE🇩🇪 | 81.19.141.190-51529 | 180.38ms"
+      - "302 REALITY|FR🇫🇷 | 57.128.191.90-8443 | 107.23ms"
+      - "303 DE🇩🇪 | 91.107.240.224-443 | 126.28ms"
+      - "304 REALITY|FI🇫🇮 | fi4.srv.cdnopl.link-6443 | 281.76ms"
+      - "305 RELAY🚩 | vbox1.ping-box.com-443 | 200.55ms"
+      - "306 SG🇸🇬 | newpath.xyz-my.eu.org-443 | 501.26ms"
+      - "307 RELAY🚩 | nobitex.sylu.net-8443 | 77.54ms"
+      - "308 RELAY🚩 | nobitex.sylu.net-8443 | 11.06ms"
+      - "309 RELAY🚩 | afrcloud22.mmv.kr-443 | 14.11ms"
+      - "310 RELAY🚩 | afrcloud22.mmv.kr-443 | 14.89ms"
+      - "311 RELAY🚩 | afrcloud22.mmv.kr-443 | 13.83ms"
+      - "312 RELAY🚩 | afrcloud22.mmv.kr-443 | 15.14ms"
+      - "313 RELAY🚩 | afrcloud22.mmv.kr-443 | 14.15ms"
+      - "314 RELAY🚩 | afrcloud22.mmv.kr-443 | 15.29ms"
+      - "315 RELAY🚩 | afrcloud22.mmv.kr-443 | 13.98ms"
+      - "316 RELAY🚩 | afrcloud22.mmv.kr-443 | 14.57ms"
+      - "317 REALITY|RU🇷🇺 | oo4ko.ardor-cloud.ru-446 | 4587.16ms"
+      - "318 REALITY|NL🇳🇱 | neth.ardor-cloud.ru-4443 | 620.63ms"
+      - "319 REALITY|RU🇷🇺 | 79.137.175.44-443 | 203.98ms"
+      - "320 REALITY|KZ🇰🇿 | 185.5.74.245-443 | 204.68ms"
+      - "321 REALITY|AE🇦🇪 | home.gymrent.eu-2030 | 678.55ms"
+      - "322 RELAY🚩 | hotchoclate.graphapp.ir-443 | 10.25ms"
+      - "323 REALITY|US🇺🇸 | 166.88.180.226-443 | 116.43ms"
+      - "324 REALITY|RU🇷🇺 | 212.192.14.223-8443 | 163.23ms"
+      - "325 REALITY|RU🇷🇺 | 109.120.180.30-443 | 179.97ms"
+      - "326 KZ🇰🇿 | kzcdn2.suio.me-443 | 318.52ms"
+      - "327 RELAY🚩 | afrcloud4.c01.kr-443 | 318.42ms"
+      - "328 RELAY🚩 | sourceforge.net-443 | 13.24ms"
+      - "329 RELAY🚩 | afrcloud22.mmv.kr-443 | 14.15ms"
+      - "330 IR🇮🇷 | kingmethode.bIack.ir-443 | 1166.35ms"
+      - "331 REALITY|RU🇷🇺 | 185.221.199.194-443 | 139.87ms"
+      - "332 RELAY🚩 | hotchoclate.graphapp.ir-2086 | 16.63ms"
+      - "333 IR🇮🇷 | varzesh3.com-8080 | 149.39ms"
+      - "334 RELAY🚩 | de.mrtech.com.tr-443 | 221.91ms"
+      - "335 REALITY|TR🇹🇷 | 94.131.123.167-443 | 163.1ms"
+      - "336 RELAY🚩 | teams.live.com.afrcloud1.c01.kr-443 | 324.03ms"
+      - "337 REALITY|TR🇹🇷 | 185.39.204.189-443 | 160.59ms"
+      - "338 REALITY|GB🇬🇧 | 5.180.97.139-443 | 113.61ms"
+      - "339 RELAY🚩 | po-7ll.pages.dev-443 | 79.63ms"
+      - "340 REALITY|RU🇷🇺 | 145.249.109.142-443 | 127.28ms"
+      - "341 RELAY🚩 | bio.mehrsazi.ir-2086 | 435.89ms"
+      - "342 RELAY🚩 | Pishgam.mehrsazi.ir-2082 | 234.27ms"
+      - "343 RELAY🚩 | az.downloadgameiran.ir-2053 | 424.19ms"
+      - "344 RELAY🚩 | bio.mehrsazi.ir-2086 | 14.9ms"
+      - "345 RELAY🚩 | Dash.iranucshop.ir-2082 | 436.65ms"
+      - "346 REALITY|JP🇯🇵 | japan.geodema.network-443 | 473.01ms"
+      - "347 REALITY|RU🇷🇺 | 89.208.228.139-52006 | 158.25ms"
+      - "348 REALITY|FI🇫🇮 | my.kiomars.shop-6664 | 290.01ms"
+      - "349 IR🇮🇷 | 45.84.157.14-9091 | 202.33ms"
+      - "350 REALITY|KZ🇰🇿 | 178.236.16.98-35728 | 203.12ms"
+      - "351 RELAY🚩 | tn1rr.qzz.io-8443 | 16.35ms"
+      - "352 RELAY🚩 | tn1rr.qzz.io-2053 | 10.74ms"
+      - "353 RELAY🚩 | tn1rr.qzz.io-443 | 15.84ms"
+      - "354 RELAY🚩 | tn1rr.qzz.io-443 | 14.92ms"
+      - "355 RELAY🚩 | tn1rr.qzz.io-443 | 13.41ms"
+      - "356 RELAY🚩 | tn1rr.qzz.io-443 | 16.85ms"
+      - "357 RELAY🚩 | tn1rr.qzz.io-443 | 10.99ms"
+      - "358 RELAY🚩 | tn1rr.qzz.io-443 | 14.72ms"
+      - "359 RELAY🚩 | tn1rr.qzz.io-443 | 15.75ms"
+      - "360 RELAY🚩 | tn1rr.qzz.io-8443 | 11.11ms"
+      - "361 RELAY🚩 | tn1rr.qzz.io-443 | 14.49ms"
+      - "362 RELAY🚩 | tn1rr.qzz.io-2053 | 13.62ms"
+      - "363 RELAY🚩 | tn1rr.qzz.io-2053 | 15.04ms"
+      - "364 RELAY🚩 | tn1rr.qzz.io-8443 | 13.84ms"
+      - "365 RELAY🚩 | tn1rr.qzz.io-2053 | 13.82ms"
+      - "366 RELAY🚩 | tn1rr.qzz.io-2053 | 15.66ms"
+      - "367 RELAY🚩 | tn1rr.qzz.io-2096 | 13.55ms"
+      - "368 RELAY🚩 | tn1rr.qzz.io-2096 | 15.29ms"
+      - "369 RELAY🚩 | tn1rr.qzz.io-443 | 15.17ms"
+      - "370 RELAY🚩 | tn1rr.qzz.io-8443 | 15.26ms"
+      - "371 RELAY🚩 | tn1rr.qzz.io-8443 | 15.32ms"
+      - "372 RELAY🚩 | tn1rr.qzz.io-443 | 15.07ms"
+      - "373 RELAY🚩 | tn1rr.qzz.io-2096 | 14.1ms"
+      - "374 RELAY🚩 | tn1rr.qzz.io-443 | 15.01ms"
+      - "375 RELAY🚩 | tn1rr.qzz.io-443 | 13.89ms"
+      - "376 RELAY🚩 | tn1rr.qzz.io-443 | 15.85ms"
+      - "377 RELAY🚩 | tn1rr.qzz.io-443 | 13.82ms"
+      - "378 RELAY🚩 | tn1rr.qzz.io-443 | 15.35ms"
+      - "379 RELAY🚩 | tn1rr.qzz.io-443 | 14.97ms"
+      - "380 RELAY🚩 | tn1rr.qzz.io-443 | 16.01ms"
+      - "381 RELAY🚩 | tn1rr.qzz.io-443 | 15.26ms"
+      - "382 RELAY🚩 | tn1rr.qzz.io-443 | 13.86ms"
+      - "383 RELAY🚩 | tn1rr.qzz.io-8443 | 13.97ms"
+      - "384 RELAY🚩 | tn1rr.qzz.io-443 | 15.65ms"
+      - "385 RELAY🚩 | tn1rr.qzz.io-2053 | 15.22ms"
+      - "386 RELAY🚩 | tn1rr.qzz.io-2053 | 15ms"
+      - "387 RELAY🚩 | tn1rr.qzz.io-2053 | 15.08ms"
+      - "388 RELAY🚩 | tn1rr.qzz.io-8443 | 11.58ms"
+      - "389 RELAY🚩 | tn1rr.qzz.io-2096 | 15.18ms"
+      - "390 RELAY🚩 | tn1rr.qzz.io-2096 | 15.13ms"
+      - "391 RELAY🚩 | tn1rr.qzz.io-2096 | 13.89ms"
+      - "392 RELAY🚩 | tn1rr.qzz.io-2096 | 15.13ms"
+      - "393 REALITY|FI🇫🇮 | 144.31.19.117-443 | 138.89ms"
+      - "394 RELAY🚩 | x1.pishi.lat-2083 | 369.61ms"
+      - "395 RELAY🚩 | deguo1.shuiwudengli.dpdns.org-2096 | 87.93ms"
+      - "396 REALITY|US🇺🇸 | us10.ssr.ee-443 | 170.19ms"
+      - "397 REALITY|US🇺🇸 | us02.ssr.ee-443 | 70.46ms"
+      - "398 REALITY|AE🇦🇪 | db02.ssr.ee-443 | 291.95ms"
+      - "399 REALITY|AE🇦🇪 | db01.ssr.ee-443 | 254.29ms"
+      - "400 REALITY|FI🇫🇮 | fl-2.bot-iphone.ru-8443 | 609.33ms"
+      - "401 REALITY|GB🇬🇧 | vb24.homianco.ir-2096 | 330.05ms"
+      - "402 RELAY🚩 | vpN-2291.PayEEr1385.wORKErs.dev-443 | 128.89ms"
+      - "403 REALITY|US🇺🇸 | 142.111.162.39-443 | 175.46ms"
+      - "404 REALITY|SE🇸🇪 | 62.182.196.132-8443 | 129ms"
+      - "405 REALITY|SE🇸🇪 | 62.182.195.78-8443 | 127.68ms"
+      - "406 REALITY|RU🇷🇺 | 51.250.87.167-443 | 146.3ms"
+      - "407 REALITY|RU🇷🇺 | 51.250.83.255-443 | 151.32ms"
+      - "408 REALITY|RU🇷🇺 | 51.250.65.209-443 | 176.1ms"
+      - "409 REALITY|RU🇷🇺 | 51.250.4.119-443 | 159.5ms"
+      - "410 REALITY|RU🇷🇺 | 5.188.115.178-443 | 147.16ms"
+      - "411 REALITY|RU🇷🇺 | 109.120.191.46-443 | 146.02ms"
+      - "412 RELAY🚩 | 172.65.147.63-3389 | 10.08ms"
+      - "413 RELAY🚩 | backup.f-sub.cfd-8443 | 501.97ms"
+      - "414 PL🇵🇱 | 144.31.5.179-443 | 127.82ms"
+      - "415 RELAY🚩 | uk.dlaparat.ir-443 | 381.35ms"
+      - "416 RELAY🚩 | uk.dlaparat.ir-443 | 13.87ms"
+      - "417 US🇺🇸 | Zmaoz.Faculty.Ucdavis.Edu-443 | 85.73ms"
+      - "418 RELAY🚩 | focalin.adaspolo2.store-443 | 103.3ms"
+      - "419 REALITY|RU🇷🇺 | 193.233.231.221-443 | 134.46ms"
+      - "420 RELAY🚩 | cdn-is.fxcdn.ir-443 | 437.23ms"
+      - "421 REALITY|FI🇫🇮 | 83.147.252.165-443 | 150.72ms"
+      - "422 PL🇵🇱 | plcdn19.suio.me-443 | 350.41ms"
+      - "423 RELAY🚩 | afrcloud22.mmv.kr-443 | 13.8ms"
+      - "424 RELAY🚩 | kkiihh-iran-abc-iran-1993.kinghooman.com-443 | 67.34ms"
+      - "425 RELAY🚩 | kkiihh-iran-abc-iran-1993.kinghooman.com-443 | 14ms"
+      - "426 RELAY🚩 | kkiihh-iran-abc-iran-1993.kinghooman.com-443 | 13.5ms"
+      - "427 REALITY|DE🇩🇪 | 193.23.219.163-443 | 114.11ms"
+      - "428 DE🇩🇪 | 51.75.69.164-2003 | 122.56ms"
+      - "429 RELAY🚩 | afrcloud22.mmv.kr-443 | 15.68ms"
+      - "430 REALITY|GB🇬🇧 | 193.32.176.44-443 | 111.89ms"
+      - "431 REALITY|DE🇩🇪 | 80.253.251.122-13686 | 115.23ms"
+      - "432 REALITY|US🇺🇸 | 38.180.204.189-443 | 14.23ms"
+      - "433 DE🇩🇪 | 3.79.114.176-443 | 122.48ms"
+      - "434 REALITY|RU🇷🇺 | 89.208.228.167-443 | 150.93ms"
+      - "435 REALITY|RU🇷🇺 | 109.120.188.156-443 | 142.1ms"
+      - "436 RU🇷🇺 | lk-cdn.deploy-assure.ru-443 | 618.67ms"
+      - "437 RU🇷🇺 | lk-cdn.deploy-assure.ru-443 | 459.67ms"
+      - "438 REALITY|RU🇷🇺 | 109.120.189.160-443 | 150.39ms"
+      - "439 CY🇨🇾 | yesok42v2.ip4exordir.shop-8880 | 107.31ms"
+      - "440 CY🇨🇾 | yesok42v1.ip4exordir.shop-8880 | 85.9ms"
+      - "441 CY🇨🇾 | pqh29v4.globalfymain.com-8880 | 206.15ms"
+      - "442 CY🇨🇾 | pqh29v3.globalfymain.com-8880 | 148.58ms"
+      - "443 CY🇨🇾 | 45.82.251.249-8880 | 41.62ms"
+      - "444 CY🇨🇾 | 45.82.251.208-8880 | 44.41ms"
+      - "445 CY🇨🇾 | 45.82.251.116-8880 | 45.37ms"
+      - "446 CY🇨🇾 | 45.82.251.115-8880 | 41.91ms"
+      - "447 FI🇫🇮 | fin.moell13.org-443 | 231.41ms"
+      - "448 REALITY|NL🇳🇱 | nl.devfather.org-443 | 199.21ms"
+      - "449 IR🇮🇷 | 85.133.204.179-59036 | 110.44ms"
+      - "450 DE🇩🇪 | harro-luzemz2.sdcards1.ir.-443 | 536.34ms"
+      - "451 REALITY|RU🇷🇺 | 185.130.112.165-8448 | 148.85ms"
+      - "452 REALITY|LV🇱🇻 | 90.156.255.198-51114 | 137.66ms"
+      - "453 REALITY|BR🇧🇷 | br.pineappled.org-443 | 229.02ms"
+      - "454 REALITY|RU🇷🇺 | 37.139.33.125-52006 | 153.92ms"
+      - "455 RU🇷🇺 | lk-cdn.deploy-assure.ru-443 | 763.51ms"
+      - "456 REALITY|RU🇷🇺 | 37.139.33.125-443 | 147.15ms"
+      - "457 REALITY|RU🇷🇺 | 51.250.64.246-444 | 160.6ms"
+      - "458 RELAY🚩 | 936a99B4.Vde5-MlX81LANeo.pAgES.dEv-443 | 104.28ms"
+      - "459 RELAY🚩 | Dw-3R-b4p-Bh3C-2T1-42-v-Nww01-D0n-2k3-pFIw-n1Yw-AFReB-c65.pages.DeV-2053 | 135.06ms"
+      - "460 RELAY🚩 | ppAl03.MiKen-BRIx.wOrkeRS.dev-443 | 57.42ms"
+      - "461 RELAY🚩 | EA6530e9.nXZu-61iuaN-xD.PageS.DEV-443 | 103.68ms"
+      - "462 RELAY🚩 | ppal03.ROyAL-AaSiR.WoRKers.Dev-443 | 77.32ms"
+      - "463 RELAY🚩 | Eb043cc5.MKhAlilI.pagES.Dev-2096 | 65.49ms"
+      - "464 RELAY🚩 | bPB-wORKeR-panEL-8MS.PAGeS.dEv-2053 | 83.48ms"
+      - "465 RELAY🚩 | bBF9c21A.tECHNeTbpb.paGEs.Dev-443 | 125.14ms"
+      - "466 RELAY🚩 | Crt-31-BGp-73c-221-E2-o-ncW02-DIN-293-pKIw-nHYW-AuEB-CUeW.PaGes.DeV-2087 | 82.18ms"
+      - "467 REALITY|AT🇦🇹 | 195.133.88.238-61809 | 118.19ms"
+      - "468 REALITY|FI🇫🇮 | 95.217.240.156-443 | 144.72ms"
+      - "469 REALITY|CH🇨🇭 | ch-gt-01.com-8443 | 979.12ms"
+      - "470 RELAY🚩 | azadnet-dbi.pages.dev-8443 | 83.71ms"
+      - "471 RELAY🚩 | uk-01p.allhubb.info-443 | 95.38ms"
+      - "472 RELAY🚩 | free.aliamini.net-443 | 99.94ms"
+      - "473 RELAY🚩 | 104.18.5.2-2096 | 13.83ms"
+      - "474 FI🇫🇮 | cup.mehrsazi.ir-2053 | 355.48ms"
+      - "475 RELAY🚩 | ios-azadnet.pages.dev-2053 | 80.65ms"
+      - "476 REALITY|RU🇷🇺 | 37.139.32.234-7443 | 156.63ms"
+      - "477 REALITY|SE🇸🇪 | 46.246.97.245-8443 | 131.3ms"
+      - "478 RELAY🚩 | vds.rahedarro.com-2087 | 120.47ms"
+      - "479 RELAY🚩 | pages.dev-443 | 48.18ms"
+      - "480 US🇺🇸 | live.wkrq.com-443 | 101.31ms"
+      - "481 GB🇬🇧 | ic.imsoon.io-2053 | 184.31ms"
+      - "482 SG🇸🇬 | 209.17.118.131-12639 | 245.2ms"
+      - "483 RELAY🚩 | pardazeshvpn-tg20.pages.dev-443 | 113.42ms"
+      - "484 US🇺🇸 | github.com-443 | 31.63ms"
+      - "485 REALITY|DE🇩🇪 | 185.144.70.28-8443 | 121.1ms"
+      - "486 REALITY|RU🇷🇺 | ads.botchillus.ru-4249 | 639.66ms"
+      - "487 REALITY|RU🇷🇺 | 89.208.216.197-443 | 152.24ms"
+      - "488 RELAY🚩 | brand.tickyou.ir-2087 | 242.59ms"
+      - "489 RELAY🚩 | MSdOnoR.pagEs.dEV-443 | 78.76ms"
+      - "490 REALITY|RU🇷🇺 | 185.221.199.194-443 | 139.78ms"
+      - "491 FI🇫🇮 | 65.109.208.248-21235 | 143.63ms"
+      - "492 REALITY|DE🇩🇪 | prime.dissertationhelpspecialist.com-2053 | 188.55ms"
+      - "493 REALITY|GB🇬🇧 | 158.220.88.63-443 | 106.61ms"
+      - "494 DE🇩🇪 | statue.lnmarketplace.net-443 | 304.74ms"
+      - "495 DE🇩🇪 | statue.lnmarketplace.net-443 | 127.69ms"
+      - "496 REALITY|LT🇱🇹 | 93.115.25.177-443 | 136.63ms"
+      - "497 REALITY|CH🇨🇭 | 185.227.149.123-443 | 130.56ms"
+      - "498 RELAY🚩 | 8j3f7HD37h.PaGES.dEV-2096 | 106.07ms"
+      - "499 REALITY|RU🇷🇺 | 109.120.188.166-443 | 149.85ms"
+      - "500 IR🇮🇷 | tst.acconnect.click-16964 | 289.68ms"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

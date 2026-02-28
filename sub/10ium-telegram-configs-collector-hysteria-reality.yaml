@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🔒 HYSTERIA-UDP 🇩🇪 DE-181.214.231.226:36300","type":"hysteria2","server":"181.214.231.226","port":36300,"password":"Yet-Another-Public-Config-1"}
   - {"name":"2 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.37:36400","type":"hysteria2","server":"206.71.158.37","port":36400,"password":"Yet-Another-Public-Config-1"}
@@ -518,16 +676,17 @@ proxies:
   - {"name":"499 🔒 VL-GRPC-RLT 🇨🇭 CH-208.69.78.142:443","type":"vless","server":"208.69.78.142","port":443,"uuid":"7aae7d90-0b37-421e-834a-502ea15f43df","udp":true,"tls":true,"network":"grpc","servername":"www.microsoft.com"}
   - {"name":"500 🔒 VL-TCP-RLT 🇲🇩 MD-94.131.8.19:45448","type":"vless","server":"94.131.8.19","port":45448,"uuid":"96fcf8cc-535d-46c4-b8f9-76058df48e3b","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🔒 HYSTERIA-UDP 🇩🇪 DE-181.214.231.226:36300"
       - "2 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.37:36400"
@@ -1029,6 +1188,571 @@ proxy-groups:
       - "498 🔒 VL-TCP-RLT 🇫🇮 FI-64.188.73.12:443"
       - "499 🔒 VL-GRPC-RLT 🇨🇭 CH-208.69.78.142:443"
       - "500 🔒 VL-TCP-RLT 🇲🇩 MD-94.131.8.19:45448"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🔒 HYSTERIA-UDP 🇩🇪 DE-181.214.231.226:36300"
+      - "2 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.37:36400"
+      - "3 🔒 HYSTERIA-UDP 🇸🇬 SG-185.229.222.134:2055"
+      - "4 🔒 HYSTERIA-UDP 🇺🇸 US-107.174.41.49:2056"
+      - "5 🔒 HYSTERIA-UDP 🇺🇸 US-107.174.181.241:65160"
+      - "6 🔒 HYSTERIA-UDP 🇳🇱 NL-[2a14:3f87:f001:13::a]:35200"
+      - "7 🔒 HYSTERIA-UDP 🇯🇵 JP-43.207.231.50:13778"
+      - "8 🔒 HYSTERIA-UDP 🇿🇦 ZA-192.142.51.52:24591"
+      - "9 🔒 HYSTERIA-UDP 🇺🇸 US-107.167.18.123:1743"
+      - "10 🔒 HYSTERIA-UDP 🇩🇪 DE-38.60.249.108:2056"
+      - "11 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.37:35000"
+      - "12 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.37:36300"
+      - "13 🔒 HYSTERIA-UDP 🇸🇪 SE-70.34.215.221:20335"
+      - "14 🔒 HYSTERIA-UDP 🇩🇪 DE-[2a0f:5707:aaf1:ec18::1]:35200"
+      - "15 🔒 HYSTERIA-UDP 🇭🇰 HK-219.78.151.86:443"
+      - "16 🔒 HYSTERIA-UDP 🇳🇱 NL-[2a14:3f87:f001:13::a]:36300"
+      - "17 🔒 HYSTERIA-UDP 🇺🇸 US-66.245.192.15:443"
+      - "18 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.40:35000"
+      - "19 🔒 HYSTERIA-UDP 🇩🇪 DE-[2a0f:5707:aaf1:ec18::1]:36400"
+      - "20 🔒 HYSTERIA-UDP 🇺🇸 US-208.87.243.187:22222"
+      - "21 🔒 HYSTERIA-UDP 🇺🇸 US-198.23.130.211:25000"
+      - "22 🔒 HYSTERIA-UDP 🇩🇪 DE-181.214.231.226:35200"
+      - "23 🔒 HYSTERIA-UDP 🇳🇱 NL-[2a14:3f87:f001:13::a]:36400"
+      - "24 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.37:35200"
+      - "25 🔒 HYSTERIA-UDP 🇩🇪 DE-181.214.99.162:35000"
+      - "26 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.41:35000"
+      - "27 🔒 HYSTERIA-UDP 🇳🇱 NL-206.71.158.37:36600"
+      - "28 🔒 HYSTERIA-UDP 🇳🇱 NL-185.92.220.240:30205"
+      - "29 🔒 HYSTERIA-UDP 🇩🇪 DE-181.214.231.226:36400"
+      - "30 🔒 HYSTERIA-UDP 🇬🇧 GB-81.168.83.89:2083"
+      - "31 🔒 HYSTERIA-UDP 🇺🇸 US-107.173.127.166:25000"
+      - "32 🔒 HYSTERIA-UDP 🇩🇪 DE-[2a0f:5707:aaf1:ec18::1]:36300"
+      - "33 🔄 LATEST-UPDATE 📅 SAT-09-ESFAND-1404 🕑 08:17"
+      - "34 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "35 🔒 VL-TCP-RLT 🇫🇷 FR-157.173.127.224:443"
+      - "36 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.198:5443"
+      - "37 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.250.228:6620"
+      - "38 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.121:7443"
+      - "39 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.117:2083"
+      - "40 🔒 VL-TCP-RLT 🇹🇭 TH-143.14.107.128:2083"
+      - "41 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.249.66:6665"
+      - "42 🔒 VL-TCP-RLT 🇱🇹 LT-85.206.161.98:8443"
+      - "43 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.6.54:443"
+      - "44 🔒 VL-TCP-RLT 🇸🇪 SE-144.31.130.58:23335"
+      - "45 🔒 VL-TCP-RLT 🇨🇿 CZ-45.151.183.211:2052"
+      - "46 🔒 VL-TCP-RLT 🇩🇪 DE-64.188.104.168:40721"
+      - "47 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.121:443"
+      - "48 🔒 VL-TCP-RLT 🇩🇪 DE-93.94.52.163:443"
+      - "49 🔒 VL-TCP-RLT 🇳🇱 NL-150.241.94.70:443"
+      - "50 🔒 VL-TCP-RLT 🇷🇺 RU-5.182.36.251:16331"
+      - "51 🔒 VL-TCP-RLT 🇺🇸 US-15.204.97.198:23576"
+      - "52 🔒 VL-GRPC-RLT 🇳🇱 NL-150.241.94.142:7443"
+      - "53 🔒 VL-TCP-RLT 🇯🇵 JP-54.238.225.231:50254"
+      - "54 🔒 VL-XHTTP-RLT 🇧🇾 BY-134.17.17.236:8443"
+      - "55 🔒 VL-TCP-RLT 🇳🇱 NL-141.98.4.99:443"
+      - "56 🔒 VL-TCP-RLT 🇷🇺 RU-83.222.10.53:8443"
+      - "57 🔒 VL-TCP-RLT 🇷🇺 RU-37.139.33.125:52006"
+      - "58 🔒 VL-XHTTP-RLT 🇩🇪 DE-89.117.152.121:2053"
+      - "59 🔒 VL-TCP-RLT 🇫🇮 FI-144.31.182.184:2346"
+      - "60 🔒 VL-TCP-RLT 🇫🇷 FR-51.68.220.215:2096"
+      - "61 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.118.16:2083"
+      - "62 🔒 VL-TCP-RLT 🇳🇱 NL-77.239.103.116:2040"
+      - "63 🔒 VL-TCP-RLT 🇺🇸 US-132.226.147.10:443"
+      - "64 🔒 VL-TCP-RLT 🇺🇸 US-143.20.236.51:443"
+      - "65 🔒 VL-TCP-RLT 🇳🇱 NL-89.110.80.96:4443"
+      - "66 🔒 VL-TCP-RLT 🇳🇱 NL-206.223.236.13:8443"
+      - "67 🔒 VL-TCP-RLT 🇩🇪 DE-78.159.122.223:443"
+      - "68 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.243.149:6610"
+      - "69 🔒 VL-TCP-RLT 🇩🇪 DE-92.118.231.99:443"
+      - "70 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.198:7443"
+      - "71 🔒 VL-TCP-RLT 🇩🇪 DE-91.196.34.251:8081"
+      - "72 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.243.149:3030"
+      - "73 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.250.228:6610"
+      - "74 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.249.66:6610"
+      - "75 🔒 VL-TCP-RLT 🇷🇺 RU-45.145.163.115:39771"
+      - "76 🔒 VL-TCP-RLT 🇩🇪 DE-46.225.239.42:2434"
+      - "77 🔒 VL-TCP-RLT 🇳🇱 NL-144.124.245.176:443"
+      - "78 🔒 VL-TCP-RLT 🇫🇷 FR-157.173.127.225:443"
+      - "79 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.62:4444"
+      - "80 🔒 VL-TCP-RLT 🇩🇪 DE-168.119.124.92:433"
+      - "81 🔒 VL-TCP-RLT 🇪🇸 ES-212.227.95.106:443"
+      - "82 🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.2:993"
+      - "83 🔒 VL-TCP-RLT 🇸🇪 SE-144.31.130.59:23335"
+      - "84 🔒 VL-GRPC-RLT 🇩🇪 DE-79.137.202.58:443"
+      - "85 🔒 VL-TCP-RLT 🇷🇺 RU-83.166.234.165:8443"
+      - "86 🔒 VL-TCP-RLT 🇷🇺 RU-79.137.175.44:443"
+      - "87 🔒 VL-TCP-RLT 🇷🇺 RU-155.212.215.3:23335"
+      - "88 🔒 VL-TCP-RLT 🇬🇧 GB-23.81.35.57:443"
+      - "89 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.29:23335"
+      - "90 🔒 VL-TCP-RLT 🇷🇺 RU-178.154.202.254:7445"
+      - "91 🔒 VL-GRPC-RLT 🇳🇱 NL-185.21.9.91:4444"
+      - "92 🔒 VL-TCP-RLT 🇳🇱 NL-51.158.206.29:23576"
+      - "93 🔒 VL-TCP-RLT 🇳🇱 NL-109.234.39.240:8443"
+      - "94 🔒 VL-TCP-RLT 🇩🇪 DE-95.128.157.249:8443"
+      - "95 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.250.228:3030"
+      - "96 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.243.149:6620"
+      - "97 🔒 VL-TCP-RLT 🇺🇸 US-108.165.174.237:2040"
+      - "98 🔒 VL-GRPC-RLT 🇺🇸 US-44.250.56.198:20230"
+      - "99 🔒 VL-TCP-RLT 🇩🇪 DE-178.17.58.10:443"
+      - "100 🔒 VL-XHTTP-RLT 🇸🇪 SE-70.34.201.158:9130"
+      - "101 🔒 VL-XHTTP-RLT 🇩🇪 DE-91.99.126.166:443"
+      - "102 🔒 VL-TCP-RLT 🇨🇾 CY-45.88.182.24:25380"
+      - "103 🔒 VL-TCP-RLT 🇱🇻 LV-188.253.21.106:443"
+      - "104 🔒 VL-TCP-RLT 🇫🇷 FR-135.125.237.242:8080"
+      - "105 🔒 VL-TCP-RLT 🇩🇪 DE-193.46.81.207:443"
+      - "106 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.144.117:6664"
+      - "107 🔒 VL-TCP-RLT 🇸🇮 SI-92.60.78.221:443"
+      - "108 🔒 VL-TCP-RLT 🇷🇺 RU-195.133.50.152:8443"
+      - "109 🔒 VL-XHTTP-RLT 🇷🇺 RU-212.192.14.223:8443"
+      - "110 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.69.188:9443"
+      - "111 🔒 VL-TCP-RLT 🇵🇱 PL-77.83.246.88:443"
+      - "112 🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.241:8443"
+      - "113 🔒 VL-TCP-RLT 🇳🇱 NL-138.124.113.64:8443"
+      - "114 🔒 VL-TCP-RLT 🇩🇪 DE-93.94.51.8:13380"
+      - "115 🔒 VL-TCP-RLT 🇫🇷 FR-57.128.191.90:8443"
+      - "116 🔒 VL-GRPC-RLT 🇷🇺 RU-51.250.64.246:444"
+      - "117 🔒 VL-TCP-RLT 🇲🇩 MD-94.103.2.11:443"
+      - "118 🔒 VL-TCP-RLT 🇷🇺 RU-5.181.171.10:443"
+      - "119 🔒 VL-TCP-RLT 🇸🇪 SE-144.31.130.56:23335"
+      - "120 🔒 VL-TCP-RLT 🇩🇪 DE-57.129.53.181:23576"
+      - "121 🔒 VL-TCP-RLT 🇷🇺 RU-109.120.188.166:443"
+      - "122 🔒 VL-TCP-RLT 🇷🇺 RU-66.90.90.27:443"
+      - "123 🔒 VL-TCP-RLT 🇦🇪 AE-89.35.73.250:443"
+      - "124 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:7443"
+      - "125 🔒 VL-TCP-RLT 🇳🇱 NL-51.158.206.12:23576"
+      - "126 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.22:23335"
+      - "127 🔒 VL-TCP-RLT 🇳🇱 NL-5.253.59.44:8443"
+      - "128 🔒 VL-TCP-RLT 🇺🇸 US-47.251.25.74:443"
+      - "129 🔒 VL-TCP-RLT 🇳🇱 NL-72.56.96.249:443"
+      - "130 🔒 VL-TCP-RLT 🇩🇪 DE-57.129.53.182:23576"
+      - "131 🔒 VL-TCP-RLT 🇷🇺 RU-62.113.117.70:8443"
+      - "132 🔒 VL-TCP-RLT 🇲🇩 MD-176.123.4.70:8443"
+      - "133 🔒 VL-XHTTP-RLT 🇷🇺 RU-95.142.47.40:8443"
+      - "134 🔒 VL-TCP-RLT 🇫🇮 FI-144.31.226.10:8443"
+      - "135 🔒 VL-TCP-RLT 🇺🇸 US-185.116.236.180:443"
+      - "136 🔒 VL-TCP-RLT 🇺🇸 US-159.89.87.21:28190"
+      - "137 🔒 VL-TCP-RLT 🇳🇱 NL-150.241.94.64:443"
+      - "138 🔒 VL-TCP-RLT 🇨🇭 CH-83.228.224.43:2555"
+      - "139 🔒 VL-TCP-RLT 🇳🇱 NL-89.110.108.126:8443"
+      - "140 🔒 VL-TCP-RLT 🇳🇱 NL-138.124.113.39:8443"
+      - "141 🔒 VL-TCP-RLT 🇨🇿 CZ-195.133.93.17:8443"
+      - "142 🔒 VL-TCP-RLT 🇦🇹 AT-38.180.144.156:8443"
+      - "143 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.13:23335"
+      - "144 🔒 VL-TCP-RLT 🇺🇸 US-15.204.97.197:23576"
+      - "145 🔒 VL-TCP-RLT 🇩🇪 DE-95.128.157.251:24129"
+      - "146 🔒 VL-TCP-RLT 🇷🇺 RU-95.163.211.13:443"
+      - "147 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.144.117:6610"
+      - "148 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.196.134:8443"
+      - "149 🔒 VL-TCP-RLT 🇧🇬 BG-146.19.80.234:443"
+      - "150 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.51.29:22955"
+      - "151 🔒 VL-TCP-RLT 🇧🇷 BR-77.111.101.80:443"
+      - "152 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:5443"
+      - "153 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.49.144:22955"
+      - "154 🔒 VL-TCP-RLT 🇬🇧 GB-51.89.165.128:2096"
+      - "155 🔒 VL-TCP-RLT 🇫🇮 FI-93.152.207.225:9443"
+      - "156 🔒 VL-TCP-RLT 🇭🇰 HK-38.22.92.72:34045"
+      - "157 🔒 VL-TCP-RLT 🇩🇪 DE-45.150.174.80:443"
+      - "158 🔒 VL-TCP-RLT 🇩🇪 DE-46.225.76.187:443"
+      - "159 🔒 VL-TCP-RLT 🇫🇷 FR-194.87.217.46:443"
+      - "160 🔒 VL-TCP-RLT 🇱🇺 LU-45.12.144.89:443"
+      - "161 🔒 VL-TCP-RLT 🇳🇱 NL-91.84.105.61:25998"
+      - "162 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.150.45:3030"
+      - "163 🔒 VL-TCP-RLT 🇨🇾 CY-45.15.128.75:8443"
+      - "164 🔒 VL-TCP-RLT 🇷🇺 RU-178.250.243.83:443"
+      - "165 🔒 VL-TCP-RLT 🇩🇪 DE-46.225.235.2:2434"
+      - "166 🔒 VL-TCP-RLT 🇩🇪 DE-92.118.231.187:8443"
+      - "167 🔒 VL-TCP-RLT 🇺🇸 US-165.154.235.194:30001"
+      - "168 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.144.117:6665"
+      - "169 🔒 VL-TCP-RLT 🇫🇷 FR-185.171.202.55:443"
+      - "170 🔒 VL-TCP-RLT 🇲🇩 MD-103.113.70.21:443"
+      - "171 🔒 VL-TCP-RLT 🇷🇺 RU-66.90.90.163:443"
+      - "172 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.252.187:6610"
+      - "173 🔒 VL-TCP-RLT 🇩🇪 DE-185.254.96.142:443"
+      - "174 🔒 VL-TCP-RLT 🇬🇧 GB-51.68.199.145:2096"
+      - "175 🔒 VL-TCP-RLT 🇨🇾 CY-5.180.24.228:443"
+      - "176 🔒 VL-GRPC-RLT 🇵🇱 PL-144.31.1.24:8443"
+      - "177 🔒 VL-TCP-RLT 🇩🇪 DE-185.219.84.246:443"
+      - "178 🔒 VL-TCP-RLT 🇩🇪 DE-159.195.32.141:443"
+      - "179 🔒 VL-TCP-RLT 🇩🇪 DE-5.254.85.151:443"
+      - "180 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.144.117:6620"
+      - "181 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.27:23335"
+      - "182 🔒 VL-TCP-RLT 🇫🇷 FR-88.151.197.220:443"
+      - "183 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.116:7443"
+      - "184 🔒 VL-TCP-RLT 🇩🇪 DE-150.241.90.13:443"
+      - "185 🔒 VL-TCP-RLT 🇹🇼 TW-114.43.20.28:20519"
+      - "186 🔒 VL-TCP-RLT 🇷🇸 RS-38.180.17.232:443"
+      - "187 🔒 VL-TCP-RLT 🇩🇪 DE-93.94.52.211:443"
+      - "188 🔒 VL-TCP-RLT 🇩🇪 DE-57.129.49.1:23576"
+      - "189 🔒 VL-TCP-RLT 🇷🇺 RU-66.90.90.11:443"
+      - "190 🔒 VL-TCP-RLT 🇸🇪 SE-144.31.130.49:23335"
+      - "191 🔒 VL-GRPC-RLT 🇳🇱 NL-144.31.234.62:444"
+      - "192 🔒 VL-TCP-RLT 🇩🇪 DE-57.129.53.180:23576"
+      - "193 🔒 VL-TCP-RLT 🇳🇱 NL-51.158.206.20:23576"
+      - "194 🔒 VL-TCP-RLT 🇳🇱 NL-77.246.109.191:34045"
+      - "195 🔒 VL-TCP-RLT 🇷🇺 RU-89.208.228.139:52006"
+      - "196 🔒 VL-TCP-RLT 🇹🇷 TR-188.132.183.233:8081"
+      - "197 🔒 VL-TCP-RLT 🇷🇺 RU-37.139.33.223:52006"
+      - "198 🔒 VL-TCP-RLT 🇷🇺 RU-84.201.128.76:443"
+      - "199 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.35.53:443"
+      - "200 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.13.85:443"
+      - "201 🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443"
+      - "202 🔒 VL-TCP-RLT 🇳🇱 NL-144.31.224.16:443"
+      - "203 🔒 VL-TCP-RLT 🇩🇪 DE-144.31.139.184:443"
+      - "204 🔒 VL-TCP-RLT 🇬🇧 GB-178.62.23.236:2052"
+      - "205 🔒 VL-TCP-RLT 🇳🇱 NL-150.241.94.65:443"
+      - "206 🔒 VL-TCP-RLT 🇭🇰 HK-95.40.19.170:1314"
+      - "207 🔒 VL-TCP-RLT 🇹🇼 TW-114.43.21.19:20280"
+      - "208 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.148.54:6610"
+      - "209 🔒 VL-TCP-RLT 🇳🇱 NL-92.112.124.125:19074"
+      - "210 🔒 VL-TCP-RLT 🇷🇺 RU-89.169.147.186:443"
+      - "211 🔒 VL-TCP-RLT 🇦🇹 AT-138.124.90.159:8443"
+      - "212 🔒 VL-TCP-RLT 🇺🇸 US-45.15.125.8:8443"
+      - "213 🔒 VL-TCP-RLT 🇫🇮 FI-85.192.48.149:23335"
+      - "214 🔒 VL-TCP-RLT 🇫🇮 FI-85.192.48.151:23335"
+      - "215 🔒 VL-TCP-RLT 🇬🇧 GB-5.180.97.139:443"
+      - "216 🔒 VL-TCP-RLT 🇷🇺 RU-109.120.182.246:3443"
+      - "217 🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443"
+      - "218 🔒 VL-TCP-RLT 🇩🇪 DE-147.45.178.107:443"
+      - "219 🔒 VL-TCP-RLT 🇳🇱 NL-94.228.213.211:443"
+      - "220 🔒 VL-TCP-RLT 🇫🇮 FI-144.31.90.114:443"
+      - "221 🔒 VL-TCP-RLT 🇭🇰 HK-18.167.72.68:443"
+      - "222 🔒 VL-GRPC-RLT 🇷🇺 RU-79.174.95.200:6443"
+      - "223 🔒 VL-TCP-RLT 🇲🇩 MD-94.232.247.168:41360"
+      - "224 🔒 VL-TCP-RLT 🇰🇿 KZ-91.147.92.14:443"
+      - "225 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.28:23335"
+      - "226 🔒 VL-TCP-RLT 🇱🇻 LV-83.222.20.64:17910"
+      - "227 🔒 VL-TCP-RLT 🇷🇺 RU-195.133.50.146:443"
+      - "228 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.252.187:6665"
+      - "229 🔒 VL-TCP-RLT 🇦🇪 AE-91.132.51.160:443"
+      - "230 🔒 VL-TCP-RLT 🇺🇸 US-147.182.212.232:56565"
+      - "231 🔒 VL-TCP-RLT 🇷🇺 RU-85.239.33.76:4354"
+      - "232 🔒 VL-TCP-RLT 🇳🇱 NL-185.138.88.49:443"
+      - "233 🔒 VL-TCP-RLT 🇩🇪 DE-91.98.172.16:8585"
+      - "234 🔒 VL-TCP-RLT 🇹🇼 TW-118.167.7.101:443"
+      - "235 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.14:23335"
+      - "236 🔒 VL-TCP-RLT 🇷🇺 RU-93.183.80.119:8443"
+      - "237 🔒 VL-TCP-RLT 🇩🇪 DE-46.225.74.13:443"
+      - "238 🔒 VL-TCP-RLT 🇯🇵 JP-153.121.44.239:10006"
+      - "239 🔒 VL-TCP-RLT 🇬🇧 GB-57.129.131.26:8080"
+      - "240 🔒 VL-TCP-RLT 🇳🇱 NL-155.212.37.10:993"
+      - "241 🔒 VL-TCP-RLT 🇩🇪 DE-91.196.34.153:8443"
+      - "242 🔒 VL-TCP-RLT 🇳🇱 NL-85.192.26.224:443"
+      - "243 🔒 VL-TCP-RLT 🇫🇮 FI-85.192.37.119:443"
+      - "244 🔒 VL-TCP-RLT 🇳🇱 NL-146.103.104.157:51715"
+      - "245 🔒 VL-GRPC-RLT 🇷🇺 RU-83.147.255.191:448"
+      - "246 🔒 VL-TCP-RLT 🇫🇮 FI-37.27.220.157:443"
+      - "247 🔒 VL-GRPC-RLT 🇷🇺 RU-45.9.75.37:443"
+      - "248 🔒 VL-TCP-RLT 🇵🇱 PL-144.31.4.152:8443"
+      - "249 🔒 VL-TCP-RLT 🇯🇵 JP-176.97.70.244:443"
+      - "250 🔒 VL-XHTTP-RLT 🇫🇮 FI-212.147.239.250:13896"
+      - "251 🔒 VL-GRPC-RLT 🇨🇾 CY-45.12.108.245:443"
+      - "252 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.37:23335"
+      - "253 🔒 VL-TCP-RLT 🇩🇪 DE-178.17.58.17:443"
+      - "254 🔒 VL-TCP-RLT 🇳🇱 NL-212.34.137.193:8443"
+      - "255 🔒 VL-TCP-RLT 🇩🇪 DE-92.118.231.81:443"
+      - "256 🔒 VL-TCP-RLT 🇳🇱 NL-94.228.210.70:443"
+      - "257 🔒 VL-TCP-RLT 🇺🇸 US-15.204.97.214:23576"
+      - "258 🔒 VL-TCP-RLT 🇸🇪 SE-62.182.195.78:8443"
+      - "259 🔒 VL-TCP-RLT 🇩🇪 DE-57.129.43.167:8080"
+      - "260 🔒 VL-TCP-RLT 🇷🇺 RU-80.90.186.91:4443"
+      - "261 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.8.255:443"
+      - "262 🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.99:8443"
+      - "263 🔒 VL-TCP-RLT 🇩🇪 DE-77.239.125.99:443"
+      - "264 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:7443"
+      - "265 🔒 VL-XHTTP-RLT 🇬🇧 GB-194.110.246.184:8443"
+      - "266 🔒 VL-TCP-RLT 🇹🇷 TR-45.12.143.84:8443"
+      - "267 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.115:2083"
+      - "268 🔒 VL-TCP-RLT 🇱🇹 LT-5.199.163.46:8443"
+      - "269 🔒 VL-TCP-RLT 🇳🇱 NL-144.31.54.35:37016"
+      - "270 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.56:2083"
+      - "271 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:443"
+      - "272 🔒 VL-TCP-RLT 🇫🇷 FR-5.42.158.95:443"
+      - "273 🔒 VL-TCP-RLT 🇯🇵 JP-54.238.225.231:24236"
+      - "274 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.40:23335"
+      - "275 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:443"
+      - "276 🔒 VL-TCP-RLT 🇸🇪 SE-193.25.216.196:443"
+      - "277 🔒 VL-TCP-RLT 🇱🇻 LV-94.131.104.178:443"
+      - "278 🔒 VL-TCP-RLT 🇪🇪 EE-185.215.184.44:443"
+      - "279 🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.172:8443"
+      - "280 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.34:23335"
+      - "281 🔒 VL-TCP-RLT 🇺🇸 US-107.174.85.183:11163"
+      - "282 🔒 VL-TCP-RLT 🇷🇺 RU-95.163.210.173:443"
+      - "283 🔒 VL-TCP-RLT 🇯🇵 JP-54.238.225.231:41234"
+      - "284 🔒 VL-TCP-RLT 🇳🇱 NL-51.158.206.86:23576"
+      - "285 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.148.54:3030"
+      - "286 🔒 VL-TCP-RLT 🇳🇱 NL-72.56.65.227:57657"
+      - "287 🔒 VL-XHTTP-RLT 🇳🇱 NL-144.31.237.22:8443"
+      - "288 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.50.126:22955"
+      - "289 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.252.187:6620"
+      - "290 🔒 VL-TCP-RLT 🇺🇸 US-166.1.131.2:443"
+      - "291 🔒 VL-GRPC-RLT 🇩🇪 DE-2.58.196.10:2083"
+      - "292 🔒 VL-TCP-RLT 🇯🇵 JP-176.97.71.101:443"
+      - "293 🔒 VL-TCP-RLT 🇩🇪 DE-178.17.48.57:443"
+      - "294 🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.220:8443"
+      - "295 🔒 VL-TCP-RLT 🇰🇿 KZ-91.147.92.76:443"
+      - "296 🔒 VL-TCP-RLT 🇱🇻 LV-31.170.22.193:47997"
+      - "297 🔒 VL-TCP-RLT 🇳🇱 NL-72.56.123.204:443"
+      - "298 🔒 VL-TCP-RLT 🇹🇷 TR-188.132.183.140:443"
+      - "299 🔒 VL-TCP-RLT 🇩🇪 DE-38.244.215.124:443"
+      - "300 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.72.36:2083"
+      - "301 🔒 VL-TCP-RLT 🇳🇱 NL-62.84.97.57:443"
+      - "302 🔒 VL-GRPC-RLT 🇷🇺 RU-158.160.136.187:1443"
+      - "303 🔒 VL-GRPC-RLT 🇸🇬 SG-52.221.230.111:20230"
+      - "304 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.150.45:6665"
+      - "305 🔒 VL-TCP-RLT 🇦🇪 AE-212.192.2.56:8443"
+      - "306 🔒 VL-TCP-RLT 🇳🇱 NL-72.56.96.33:443"
+      - "307 🔒 VL-TCP-RLT 🇨🇾 CY-45.12.135.99:443"
+      - "308 🔒 VL-TCP-RLT 🇵🇱 PL-144.31.3.30:443"
+      - "309 🔒 VL-TCP-RLT 🇷🇺 RU-178.154.224.33:443"
+      - "310 🔒 VL-GRPC-RLT 🇷🇺 RU-178.72.145.19:8443"
+      - "311 🔒 VL-XHTTP-RLT 🇭🇷 HR-5.181.2.78:8443"
+      - "312 🔒 VL-TCP-RLT 🇩🇪 DE-144.31.197.124:443"
+      - "313 🔒 VL-TCP-RLT 🇳🇱 NL-77.239.103.85:2040"
+      - "314 🔒 VL-TCP-RLT 🇷🇺 RU-66.90.90.19:443"
+      - "315 🔒 VL-TCP-RLT 🇺🇸 US-15.204.97.216:23576"
+      - "316 🔒 VL-TCP-RLT 🇱🇹 LT-185.150.118.94:8443"
+      - "317 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.118:2083"
+      - "318 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.101:2083"
+      - "319 🔒 VL-TCP-RLT 🇷🇺 RU-83.166.232.250:8443"
+      - "320 🔒 VL-XHTTP-RLT 🇳🇱 NL-195.26.224.112:8443"
+      - "321 🔒 VL-TCP-RLT 🇷🇺 RU-178.154.204.211:7445"
+      - "322 🔒 VL-TCP-RLT 🇬🇧 GB-140.238.100.35:40721"
+      - "323 🔒 VL-TCP-RLT 🇫🇷 FR-109.172.55.232:13760"
+      - "324 🔒 VL-GRPC-RLT 🇪🇪 EE-185.223.168.238:8448"
+      - "325 🔒 VL-TCP-RLT 🇺🇸 US-166.88.180.226:443"
+      - "326 🔒 VL-TCP-RLT 🇳🇱 NL-193.33.194.191:8443"
+      - "327 🔒 VL-TCP-RLT 🇺🇸 US-166.1.131.4:993"
+      - "328 🔒 VL-TCP-RLT 🇫🇮 FI-81.19.139.159:9443"
+      - "329 🔒 VL-TCP-RLT 🇩🇪 DE-93.94.51.11:53320"
+      - "330 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.150.45:6610"
+      - "331 🔒 VL-GRPC-RLT 🇳🇱 NL-91.201.113.249:4444"
+      - "332 🔒 VL-TCP-RLT 🇳🇱 NL-45.150.34.87:8443"
+      - "333 🔒 VL-TCP-RLT 🇵🇱 PL-82.22.40.129:23335"
+      - "334 🔒 VL-TCP-RLT 🇩🇪 DE-91.107.233.243:2434"
+      - "335 🔒 VL-TCP-RLT 🇳🇱 NL-51.158.206.103:23576"
+      - "336 🔒 VL-TCP-RLT 🇬🇧 GB-57.129.131.139:443"
+      - "337 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.150.45:6620"
+      - "338 🔒 VL-TCP-RLT 🇦🇪 AE-176.97.78.3:443"
+      - "339 🔒 VL-TCP-RLT 🇭🇰 HK-58.152.58.96:20417"
+      - "340 🔒 VL-TCP-RLT 🇷🇺 RU-188.225.81.19:4443"
+      - "341 🔒 VL-TCP-RLT 🇭🇺 HU-92.61.70.38:443"
+      - "342 🔒 VL-GRPC-RLT 🇩🇪 DE-143.20.37.17:443"
+      - "343 🔒 VL-TCP-RLT 🇷🇺 RU-5.188.141.67:443"
+      - "344 🔒 VL-GRPC-RLT 🇱🇻 LV-213.21.222.169:8448"
+      - "345 🔒 VL-TCP-RLT 🇭🇰 HK-95.40.108.69:1314"
+      - "346 🔒 VL-TCP-RLT 🇳🇱 NL-51.158.206.8:23576"
+      - "347 🔒 VL-TCP-RLT 🇫🇮 FI-193.17.182.125:443"
+      - "348 🔒 VL-TCP-RLT 🇳🇱 NL-89.110.118.203:8443"
+      - "349 🔒 VL-TCP-RLT 🇱🇻 LV-45.43.79.73:443"
+      - "350 🔒 VL-TCP-RLT 🇸🇪 SE-144.31.130.54:23335"
+      - "351 🔒 VL-TCP-RLT 🇷🇺 RU-79.137.175.56:8443"
+      - "352 🔒 VL-TCP-RLT 🇷🇺 RU-5.188.141.131:52006"
+      - "353 🔒 VL-TCP-RLT 🇷🇺 RU-91.219.226.239:443"
+      - "354 🔒 VL-TCP-RLT 🇫🇮 FI-85.192.48.150:23335"
+      - "355 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.35.106:443"
+      - "356 🔒 VL-TCP-RLT 🇱🇻 LV-94.131.104.225:2040"
+      - "357 🔒 VL-TCP-RLT 🇳🇱 NL-91.84.122.19:8443"
+      - "358 🔒 VL-TCP-RLT 🇫🇷 FR-62.133.62.44:443"
+      - "359 🔒 VL-TCP-RLT 🇺🇸 US-137.184.218.169:36925"
+      - "360 🔒 VL-TCP-RLT 🇪🇪 EE-144.31.178.168:443"
+      - "361 🔒 VL-TCP-RLT 🇭🇰 HK-18.162.167.169:1314"
+      - "362 🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.140:8443"
+      - "363 🔒 VL-TCP-RLT 🇹🇼 TW-114.43.20.123:20200"
+      - "364 🔒 VL-TCP-RLT 🇰🇿 KZ-212.111.84.218:443"
+      - "365 🔒 VL-TCP-RLT 🇳🇱 NL-212.118.40.140:443"
+      - "366 🔒 VL-TCP-RLT 🇩🇪 DE-85.9.206.79:443"
+      - "367 🔒 VL-XHTTP-RLT 🇸🇪 SE-79.141.174.148:8443"
+      - "368 🔒 VL-TCP-RLT 🇩🇪 DE-46.224.61.86:4450"
+      - "369 🔒 VL-TCP-RLT 🇺🇸 US-107.174.181.241:8443"
+      - "370 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.154.223:6620"
+      - "371 🔒 VL-GRPC-RLT 🇷🇺 RU-79.174.95.163:2083"
+      - "372 🔒 VL-TCP-RLT 🇳🇱 NL-109.107.166.32:8443"
+      - "373 🔒 VL-TCP-RLT 🇳🇱 NL-72.56.123.17:443"
+      - "374 🔒 VL-TCP-RLT 🇬🇧 GB-213.176.72.60:8443"
+      - "375 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.250.228:6664"
+      - "376 🔒 VL-TCP-RLT 🇷🇺 RU-84.201.164.220:33107"
+      - "377 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.26:23335"
+      - "378 🔒 VL-TCP-RLT 🇫🇷 FR-45.13.119.38:443"
+      - "379 🔒 VL-TCP-RLT 🇯🇵 JP-142.91.106.176:443"
+      - "380 🔒 VL-TCP-RLT 🇬🇧 GB-147.45.179.50:8443"
+      - "381 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.250.228:6665"
+      - "382 🔒 VL-TCP-RLT 🇫🇮 FI-81.19.139.99:9443"
+      - "383 🔒 VL-TCP-RLT 🇦🇹 AT-152.53.66.46:443"
+      - "384 🔒 VL-TCP-RLT 🇺🇸 US-142.248.80.157:443"
+      - "385 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.243.149:6664"
+      - "386 🔒 VL-TCP-RLT 🇷🇺 RU-178.250.246.80:1488"
+      - "387 🔒 VL-TCP-RLT 🇪🇸 ES-185.147.26.33:23335"
+      - "388 🔒 VL-TCP-RLT 🇷🇺 RU-109.120.189.160:443"
+      - "389 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.17:2083"
+      - "390 🔒 VL-TCP-RLT 🇩🇪 DE-46.225.226.24:2434"
+      - "391 🔒 VL-TCP-RLT 🇪🇸 ES-185.236.25.34:443"
+      - "392 🔒 VL-TCP-RLT 🇳🇱 NL-144.31.24.84:443"
+      - "393 🔒 VL-TCP-RLT 🇨🇭 CH-185.227.149.123:443"
+      - "394 🔒 VL-TCP-RLT 🇩🇪 DE-192.76.160.216:2280"
+      - "395 🔒 VL-GRPC-RLT 🇯🇵 JP-13.115.50.143:20230"
+      - "396 🔒 VL-TCP-RLT 🇺🇸 US-166.1.18.82:443"
+      - "397 🔒 VL-TCP-RLT 🇳🇱 NL-72.56.123.146:443"
+      - "398 🔒 VL-TCP-RLT 🇷🇺 RU-158.160.136.187:52006"
+      - "399 🔒 VL-TCP-RLT 🇩🇪 DE-217.154.194.55:443"
+      - "400 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.150.45:6664"
+      - "401 🔒 VL-TCP-RLT 🇧🇬 BG-94.156.154.88:8443"
+      - "402 🔒 VL-TCP-RLT 🇺🇸 US-66.93.9.49:8082"
+      - "403 🔒 VL-TCP-RLT 🇩🇪 DE-207.244.199.34:8443"
+      - "404 🔒 VL-TCP-RLT 🇭🇰 HK-202.85.53.25:13000"
+      - "405 🔒 VL-TCP-RLT 🇷🇺 RU-188.225.10.33:5443"
+      - "406 🔒 VL-TCP-RLT 🇪🇪 EE-144.31.178.196:443"
+      - "407 🔒 VL-TCP-RLT 🇦🇪 AE-89.44.80.79:443"
+      - "408 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.97:2083"
+      - "409 🔒 VL-TCP-RLT 🇰🇷 KR-47.80.11.87:443"
+      - "410 🔒 VL-TCP-RLT 🇸🇪 SE-213.66.183.224:2197"
+      - "411 🔒 VL-XHTTP-RLT 🇫🇮 FI-95.164.55.74:8443"
+      - "412 🔒 VL-TCP-RLT 🇷🇺 RU-185.178.47.245:443"
+      - "413 🔒 VL-TCP-RLT 🇩🇪 DE-57.129.77.72:8080"
+      - "414 🔒 VL-TCP-RLT 🇭🇰 HK-43.199.62.33:1314"
+      - "415 🔒 VL-TCP-RLT 🇲🇩 MD-94.131.101.228:443"
+      - "416 🔒 VL-TCP-RLT 🇷🇺 RU-188.225.25.28:5443"
+      - "417 🔒 VL-TCP-RLT 🇺🇸 US-45.86.74.21:443"
+      - "418 🔒 VL-TCP-RLT 🇷🇺 RU-109.120.189.142:443"
+      - "419 🔒 VL-TCP-RLT 🇸🇪 SE-144.31.130.42:23335"
+      - "420 🔒 VL-TCP-RLT 🇫🇷 FR-51.68.191.174:8080"
+      - "421 🔒 VL-TCP-RLT 🇷🇺 RU-95.163.208.217:443"
+      - "422 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.63:4444"
+      - "423 🔒 VL-TCP-RLT 🇷🇺 RU-109.120.191.46:443"
+      - "424 🔒 VL-TCP-RLT 🇷🇺 RU-185.130.115.55:443"
+      - "425 🔒 VL-TCP-RLT 🇩🇪 DE-46.225.235.205:4450"
+      - "426 🔒 VL-TCP-RLT 🇪🇸 ES-45.159.79.56:443"
+      - "427 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.227:2083"
+      - "428 🔒 VL-TCP-RLT 🇩🇪 DE-138.124.186.52:443"
+      - "429 🔒 VL-TCP-RLT 🇸🇬 SG-178.239.122.108:443"
+      - "430 🔒 VL-TCP-RLT 🇫🇷 FR-51.83.43.151:8080"
+      - "431 🔒 VL-XHTTP-RLT 🇺🇦 UA-130.0.233.100:8443"
+      - "432 🔒 VL-GRPC-RLT 🇬🇧 GB-46.250.240.80:443"
+      - "433 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.104:2083"
+      - "434 🔒 VL-TCP-RLT 🇩🇪 DE-185.254.97.203:443"
+      - "435 🔒 VL-GRPC-RLT 🇷🇺 RU-178.72.145.23:8443"
+      - "436 🔒 VL-TCP-RLT 🇷🇺 RU-79.137.174.170:443"
+      - "437 🔒 VL-TCP-RLT 🇳🇱 NL-178.130.40.15:443"
+      - "438 🔒 VL-TCP-RLT 🇮🇪 IE-45.141.234.196:51472"
+      - "439 🔒 VL-TCP-RLT 🇯🇵 JP-54.238.225.231:6511"
+      - "440 🔒 VL-TCP-RLT 🇫🇷 FR-62.210.91.2:23576"
+      - "441 🔒 VL-TCP-RLT 🇷🇺 RU-66.90.90.179:443"
+      - "442 🔒 VL-TCP-RLT 🇺🇸 US-15.204.97.195:23576"
+      - "443 🔒 VL-TCP-RLT 🇺🇸 US-92.118.112.224:443"
+      - "444 🔒 VL-TCP-RLT 🇫🇷 FR-51.38.32.227:2096"
+      - "445 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.116:443"
+      - "446 🔒 VL-TCP-RLT 🇫🇮 FI-213.176.17.138:9443"
+      - "447 🔒 VL-TCP-RLT 🇱🇻 LV-94.131.104.229:2040"
+      - "448 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.94:2083"
+      - "449 🔒 VL-TCP-RLT 🇩🇪 DE-57.129.43.33:2096"
+      - "450 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.116:2083"
+      - "451 🔒 VL-TCP-RLT 🇩🇪 DE-80.75.212.10:443"
+      - "452 🔒 VL-TCP-RLT 🇳🇱 NL-51.158.206.98:23576"
+      - "453 🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.13:8443"
+      - "454 🔒 VL-TCP-RLT 🇫🇮 FI-85.192.48.154:23335"
+      - "455 🔒 VL-TCP-RLT 🇨🇾 CY-2.56.173.227:8443"
+      - "456 🔒 VL-TCP-RLT 🇫🇮 FI-85.192.48.144:23335"
+      - "457 🔒 VL-TCP-RLT 🇩🇪 DE-45.145.41.35:443"
+      - "458 🔒 VL-TCP-RLT 🇳🇱 NL-51.158.206.97:23576"
+      - "459 🔒 VL-TCP-RLT 🇳🇱 NL-178.173.248.184:443"
+      - "460 🔒 VL-TCP-RLT 🇱🇻 LV-62.60.234.97:8443"
+      - "461 🔒 VL-TCP-RLT 🇳🇱 NL-109.107.175.220:443"
+      - "462 🔒 VL-TCP-RLT 🇺🇸 US-47.253.226.114:443"
+      - "463 🔒 VL-TCP-RLT 🇬🇧 GB-138.124.180.5:4443"
+      - "464 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.154.223:6610"
+      - "465 🔒 VL-TCP-RLT 🇩🇪 DE-178.17.50.66:8443"
+      - "466 🔒 VL-TCP-RLT 🇩🇪 DE-92.118.231.73:443"
+      - "467 🔒 VL-TCP-RLT 🇷🇺 RU-79.137.175.44:8443"
+      - "468 🔒 VL-TCP-RLT 🇨🇭 CH-138.124.66.240:3130"
+      - "469 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.65.209:443"
+      - "470 🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.77:8443"
+      - "471 🔒 VL-TCP-RLT 🇳🇱 NL-89.110.67.176:8443"
+      - "472 🔒 VL-TCP-RLT 🇷🇺 RU-51.250.87.167:443"
+      - "473 🔒 VL-TCP-RLT 🇳🇱 NL-194.246.81.73:8443"
+      - "474 🔒 VL-XHTTP-RLT 🇷🇺 RU-94.103.89.223:8443"
+      - "475 🔒 VL-TCP-RLT 🇳🇱 NL-89.110.82.159:8443"
+      - "476 🔒 VL-TCP-RLT 🇫🇮 FI-144.31.19.117:443"
+      - "477 🔒 VL-TCP-RLT 🇺🇸 US-38.180.204.189:443"
+      - "478 🔒 VL-TCP-RLT 🇦🇹 AT-85.192.42.103:443"
+      - "479 🔒 VL-TCP-RLT 🇵🇱 PL-82.22.40.109:23335"
+      - "480 🔒 VL-TCP-RLT 🇨🇭 CH-208.69.78.171:8443"
+      - "481 🔒 VL-TCP-RLT 🇷🇺 RU-158.160.171.167:443"
+      - "482 🔒 VL-TCP-RLT 🇫🇷 FR-51.38.98.165:8443"
+      - "483 🔒 VL-GRPC-RLT 🇯🇵 JP-13.230.25.171:20230"
+      - "484 🔒 VL-TCP-RLT 🇷🇺 RU-103.88.241.38:8443"
+      - "485 🔒 VL-TCP-RLT 🇷🇺 RU-5.188.115.178:443"
+      - "486 🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.111:8443"
+      - "487 🔒 VL-TCP-RLT 🇪🇸 ES-84.17.62.53:8443"
+      - "488 🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:5443"
+      - "489 🔒 VL-TCP-RLT 🇷🇺 RU-5.188.141.12:52006"
+      - "490 🔒 VL-TCP-RLT 🇳🇱 NL-192.142.0.41:443"
+      - "491 🔒 VL-TCP-RLT 🇩🇪 DE-88.99.191.130:40388"
+      - "492 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.95:2083"
+      - "493 🔒 VL-TCP-RLT 🇩🇪 DE-185.144.70.125:8443"
+      - "494 🔒 VL-TCP-RLT 🇷🇺 RU-37.139.33.125:443"
+      - "495 🔒 VL-TCP-RLT 🇷🇺 RU-37.139.34.115:443"
+      - "496 🔒 VL-TCP-RLT 🇳🇱 NL-72.56.123.104:443"
+      - "497 🔒 VL-TCP-RLT 🇫🇮 FI-46.62.148.54:6665"
+      - "498 🔒 VL-TCP-RLT 🇫🇮 FI-64.188.73.12:443"
+      - "499 🔒 VL-GRPC-RLT 🇨🇭 CH-208.69.78.142:443"
+      - "500 🔒 VL-TCP-RLT 🇲🇩 MD-94.131.8.19:45448"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

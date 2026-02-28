@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🔄 LATEST-UPDATE 📅 SAT-09-ESFAND-1404 🕑 08:17","type":"vless","server":"127.0.0.1","port":1080,"uuid":"aaccbba-aacb-baac-abdc-aabccacabcbb","udp":true,"tls":true,"network":"tcp"}
   - {"name":"2 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.50.126:22955","type":"vless","server":"152.53.50.126","port":22955,"uuid":"63f92f3c-447c-4283-80b9-0af8e164cdad","udp":true,"tls":true,"network":"grpc","servername":"one-piece.com"}
@@ -176,16 +334,17 @@ proxies:
   - {"name":"157 🔒 TR-GRPC-REALITY 🇬🇧 GB-194.150.166.151:52047","type":"trojan","server":"194.150.166.151","port":52047,"password":"zp630tdUuD","udp":true,"tls":true}
   - {"name":"158 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.38.48:443","type":"trojan","server":"104.21.38.48","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🔄 LATEST-UPDATE 📅 SAT-09-ESFAND-1404 🕑 08:17"
       - "2 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.50.126:22955"
@@ -345,6 +504,229 @@ proxy-groups:
       - "156 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.52.154:443"
       - "157 🔒 TR-GRPC-REALITY 🇬🇧 GB-194.150.166.151:52047"
       - "158 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.38.48:443"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🔄 LATEST-UPDATE 📅 SAT-09-ESFAND-1404 🕑 08:17"
+      - "2 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.50.126:22955"
+      - "3 🔒 VL-GRPC-NA 🇨🇾 CY-45.82.251.208:8880"
+      - "4 🔒 VL-GRPC-TLS 🇸🇬 SG-195.172.138.71:25055"
+      - "5 🔒 VL-GRPC-RLT 🇩🇪 DE-2.58.196.10:2083"
+      - "6 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.117:2083"
+      - "7 🔒 VL-GRPC-NONE 🇩🇪 DE-91.98.169.122:443"
+      - "8 🔒 VL-GRPC-TLS 🇺🇸 US-66.81.247.155:443"
+      - "9 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.72.36:2083"
+      - "10 🔒 VL-GRPC-NONE 🇩🇪 DE-157.230.122.216:443"
+      - "11 🔒 VL-GRPC-TLS 🇺🇸 US-63.141.128.42:2087"
+      - "12 🔒 VL-GRPC-RLT 🇷🇺 RU-158.160.136.187:1443"
+      - "13 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.195:8880"
+      - "14 🔒 VL-GRPC-RLT 🇸🇬 SG-52.221.230.111:20230"
+      - "15 🔒 VL-GRPC-RLT 🇳🇱 NL-150.241.94.142:7443"
+      - "16 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.118.16:2083"
+      - "17 🔒 VL-GRPC-NONE 🇩🇪 DE-164.92.247.91:443"
+      - "18 🔒 VL-GRPC-RLT 🇬🇧 GB-158.220.88.63:443"
+      - "19 🔒 VL-GRPC-RLT 🇮🇳 IN-194.61.31.126:443"
+      - "20 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.67.193.157:8443"
+      - "21 🔒 VL-GRPC-RLT 🇯🇵 JP-13.115.37.2:20230"
+      - "22 🔒 VL-GRPC-TLS 🇻🇬 VG-203.32.121.53:443"
+      - "23 🔒 VL-GRPC-RLT 🇷🇺 RU-178.72.145.19:8443"
+      - "24 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.67.249.36:443"
+      - "25 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.62:4444"
+      - "26 🔒 VL-GRPC-TLS 🇷🇴 RO-45.85.119.44:2053"
+      - "27 🔒 VL-GRPC-RLT 🇩🇪 DE-79.137.202.58:443"
+      - "28 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.118:2083"
+      - "29 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.101:2083"
+      - "30 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.61:4444"
+      - "31 🔒 VL-GRPC-RLT 🇳🇱 NL-185.21.9.91:4444"
+      - "32 🔒 VL-GRPC-RLT 🇪🇪 EE-185.223.168.238:8448"
+      - "33 🔒 VL-GRPC-TLS 🇰🇿 KZ-185.176.26.195:443"
+      - "34 🔒 VL-GRPC-NONE 🇺🇸 US-40.160.14.104:8880"
+      - "35 🔒 VL-GRPC-RLT 🇳🇱 NL-91.201.113.249:4444"
+      - "36 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.19.1.89:8443"
+      - "37 🔒 VL-GRPC-RLT 🇺🇸 US-44.250.56.198:20230"
+      - "38 🔒 VL-GRPC-RLT 🇷🇺 RU-193.233.231.221:443"
+      - "39 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.116:8880"
+      - "40 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.115:8880"
+      - "41 🔒 VL-GRPC-NONE 🇮🇷 IR-185.124.175.217:7730"
+      - "42 🔒 VL-GRPC-NONE 🇩🇪 DE-46.101.251.173:443"
+      - "43 🔒 VL-GRPC-NONE 🇲🇩 MD-185.236.232.117:8880"
+      - "44 🔒 VL-GRPC-RLT 🇱🇻 LV-213.21.222.169:8448"
+      - "45 🔒 VL-GRPC-RLT 🇩🇪 DE-143.20.37.17:443"
+      - "46 🔒 VL-GRPC-RLT 🇩🇪 DE-164.92.143.135:47542"
+      - "47 🔒 VL-GRPC-RLT 🇷🇺 RU-51.250.64.246:444"
+      - "48 🔒 VL-GRPC-TLS 🇺🇸 US-3.143.235.221:32252"
+      - "49 🔒 VL-GRPC-RLT 🇩🇪 DE-37.120.175.246:22955"
+      - "50 🔒 VL-GRPC-NA 🏴‍☠️ NA-188.114.99.99:2096"
+      - "51 🔒 VL-GRPC-RLT 🇷🇺 RU-79.174.95.163:2083"
+      - "52 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.99:2083"
+      - "53 🔒 VL-GRPC-TLS 🇸🇨 SC-154.219.5.53:443"
+      - "54 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.48.237:22955"
+      - "55 🔒 VL-GRPC-RLT 🇺🇸 US-44.252.113.45:20230"
+      - "56 🔒 VL-GRPC-RLT 🇩🇪 DE-162.248.166.78:4444"
+      - "57 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.16.145.254:443"
+      - "58 🔒 VL-GRPC-TLS 🇸🇬 SG-27.50.48.155:443"
+      - "59 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.26.7.205:443"
+      - "60 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.51.29:22955"
+      - "61 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.100:2083"
+      - "62 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.49.144:22955"
+      - "63 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.70.217:443"
+      - "64 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.17:2083"
+      - "65 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.35.53:8443"
+      - "66 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.158:2083"
+      - "67 🔒 VL-GRPC-NONE 🇿🇦 ZA-192.142.53.38:37321"
+      - "68 🔒 VL-GRPC-TLS 🇸🇬 SG-152.42.179.234:443"
+      - "69 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.66.213.38:443"
+      - "70 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.29.234:2083"
+      - "71 🔒 VL-GRPC-RLT 🇯🇵 JP-13.115.50.143:20230"
+      - "72 🔒 VL-GRPC-RLT 🇦🇹 AT-152.53.48.224:22955"
+      - "73 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.204:2083"
+      - "74 🔒 VL-GRPC-TLS 🏴‍☠️ NA-172.64.155.209:443"
+      - "75 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.32.63:7443"
+      - "76 🔒 VL-GRPC-NONE 🇩🇪 DE-134.122.73.111:443"
+      - "77 🔒 VL-GRPC-RLT 🇺🇸 US-194.113.37.75:443"
+      - "78 🔒 VL-GRPC-RLT 🇬🇧 GB-79.72.90.132:3366"
+      - "79 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.97:2083"
+      - "80 🔒 VL-GRPC-RLT 🇵🇱 PL-144.31.1.24:8443"
+      - "81 🔒 VL-GRPC-TLS 🇸🇬 SG-152.42.174.20:443"
+      - "82 🔒 VL-GRPC-NONE 🇩🇪 DE-161.35.30.221:443"
+      - "83 🔒 VL-GRPC-RLT 🇩🇪 DE-151.241.173.63:4444"
+      - "84 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.89.185:443"
+      - "85 🔒 VL-GRPC-TLS 🇧🇬 BG-95.164.68.37:443"
+      - "86 🔒 VL-GRPC-RLT 🇳🇱 NL-144.31.234.62:444"
+      - "87 🔒 VL-GRPC-RLT 🇬🇧 GB-46.250.250.149:443"
+      - "88 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.227:2083"
+      - "89 🔒 VL-GRPC-RLT 🇳🇱 NL-51.158.206.93:23576"
+      - "90 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.104:2083"
+      - "91 🔒 VL-GRPC-RLT 🇬🇧 GB-46.250.240.80:443"
+      - "92 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.233:8880"
+      - "93 🔒 VL-GRPC-RLT 🇷🇺 RU-178.72.145.23:8443"
+      - "94 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.249:8880"
+      - "95 🔒 VL-GRPC-RLT 🇷🇺 RU-37.139.35.53:443"
+      - "96 🔒 VL-GRPC-NA 🏴‍☠️ NA-188.114.99.99:2053"
+      - "97 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.32.47:443"
+      - "98 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.94:2083"
+      - "99 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.96:2083"
+      - "100 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.116:2083"
+      - "101 🔒 VL-GRPC-RLT 🇷🇺 RU-51.250.39.136:443"
+      - "102 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.69.44:2083"
+      - "103 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.28.234:2083"
+      - "104 🔒 VL-GRPC-TLS 🇺🇸 US-63.141.128.42:443"
+      - "105 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.18.4.130:443"
+      - "106 🔒 VL-GRPC-RLT 🇳🇱 NL-72.56.123.146:2083"
+      - "107 🔒 VL-GRPC-RLT 🇷🇺 RU-79.174.95.200:6443"
+      - "108 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.17.90.246:443"
+      - "109 🔒 VL-GRPC-RLT 🇯🇵 JP-54.248.36.129:20230"
+      - "110 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.26.2.186:443"
+      - "111 🔒 VL-GRPC-RLT 🇸🇬 SG-13.229.242.10:20230"
+      - "112 🔒 VL-GRPC-NONE 🇨🇾 CY-45.82.251.114:8880"
+      - "113 🔒 VL-GRPC-TLS 🏴‍☠️ NA-104.21.86.253:443"
+      - "114 🔒 VL-GRPC-RLT 🇷🇺 RU-83.166.255.72:443"
+      - "115 🔒 VL-GRPC-TLS 🇺🇸 US-104.129.167.161:443"
+      - "116 🔒 VL-GRPC-RLT 🇯🇵 JP-13.230.25.171:20230"
+      - "117 🔒 VL-GRPC-TLS 🇸🇬 SG-195.172.138.71:25055"
+      - "118 🔒 VL-GRPC-RLT 🇷🇺 RU-83.147.255.191:448"
+      - "119 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.95:2083"
+      - "120 🔒 VL-GRPC-RLT 🇷🇺 RU-45.9.75.37:443"
+      - "121 🔒 VL-GRPC-NONE 🇩🇪 DE-64.226.107.71:443"
+      - "122 🔒 VL-GRPC-RLT 🇨🇾 CY-45.12.108.245:443"
+      - "123 🔒 VL-GRPC-RLT 🇨🇭 CH-208.69.78.142:443"
+      - "124 🔒 VL-GRPC-RLT 🇩🇪 DE-2.58.196.10:2053"
+      - "125 🔒 VL-GRPC-RLT 🇷🇺 RU-64.188.90.93:443"
+      - "126 🔒 VL-GRPC-TLS 🇺🇸 US-172.245.11.73:443"
+      - "127 🔒 VL-GRPC-NONE 🇩🇪 DE-165.232.113.17:443"
+      - "128 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.115:2083"
+      - "129 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.56:2083"
+      - "130 🔒 VL-GRPC-TLS 🇩🇪 DE-23.165.200.85:443"
+      - "131 🔒 VL-GRPC-TLS 🏴‍☠️ NA-188.114.97.3:2083"
+      - "132 🔒 VL-GRPC-RLT 🇩🇪 DE-151.242.147.98:2083"
+      - "133 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "134 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.139.251:443"
+      - "135 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.49.5:443"
+      - "136 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.175.152:443"
+      - "137 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.2.154:443"
+      - "138 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.77.101:443"
+      - "139 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.154.136:443"
+      - "140 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.80.227:443"
+      - "141 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.201.33:443"
+      - "142 🔒 TR-GRPC-TLS 🇩🇪 DE-95.179.246.122:443"
+      - "143 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.156.83:443"
+      - "144 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.75.124:443"
+      - "145 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.196.73:443"
+      - "146 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.32.229:443"
+      - "147 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.61.229:443"
+      - "148 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.131.174:443"
+      - "149 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.219.54:443"
+      - "150 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.129.89:443"
+      - "151 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.60.124:443"
+      - "152 🔒 TR-GRPC-NA 🇨🇳 CN-14.215.39.204:11021"
+      - "153 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.206.177:443"
+      - "154 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.10.179:443"
+      - "155 🔒 TR-GRPC-TLS 🏴‍☠️ NA-172.67.216.10:443"
+      - "156 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.52.154:443"
+      - "157 🔒 TR-GRPC-REALITY 🇬🇧 GB-194.150.166.151:52047"
+      - "158 🔒 TR-GRPC-TLS 🏴‍☠️ NA-104.21.38.48:443"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

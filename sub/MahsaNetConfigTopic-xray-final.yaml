@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 @azadi_config`","type":"hysteria2","server":"206.71.158.37","port":35200,"password":"Yet-Another-Public-Config-1"}
   - {"name":"2 @Filter_breaker","type":"hysteria2","server":"5.175.249.174","port":35000,"password":"b4bd0613-ff7c-4f2f-954d-185915e6ddad"}
@@ -433,16 +591,17 @@ proxies:
   - {"name":"414 @chillguy_vpn","type":"vmess","server":"104.21.69.44","port":8080,"uuid":"nasnet","alterId":0,"cipher":"auto","udp":true}
   - {"name":"415 @chillguy_vpn","type":"vmess","server":"pq-hungary1.09vpn.com","port":80,"uuid":"703f722a-4bdf-4e9d-9afd-a681fdf87c74","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 @azadi_config`"
       - "2 @Filter_breaker"
@@ -859,6 +1018,486 @@ proxy-groups:
       - "413 @chillguy_vpn"
       - "414 @chillguy_vpn"
       - "415 @chillguy_vpn"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 @azadi_config`"
+      - "2 @Filter_breaker"
+      - "3 🌵🌵🌷7"
+      - "4 کانال تلگرام : Free_VPN_CH@"
+      - "5 @vpnbaz 🍇"
+      - "6 @Enzewa_Network👈جوین‌شوپرسرعت‌وصل‌شی"
+      - "7 🇫🇷 WS-Reality 📁 @DeamNet_proxy"
+      - "8 ❣️🖤1"
+      - "9 @irmeliy"
+      - "10 @chillguy_vpn"
+      - "11 🇨🇦 GRPC-TLS 📁 @DeamNet_proxy"
+      - "12 @chillguy_vpn"
+      - "13 🇺🇸 GRPC-None 📁 @FreakConfig"
+      - "14 @chillguy_vpn"
+      - "15 🇨🇦 WS-TLS 📁 @DeamNet_proxy"
+      - "16 🌐 TCP-None 📁 @v2ray_Extractor"
+      - "17 🇩🇪 TCP-Reality 📁 @v2ray_configs_pool"
+      - "18 🌐 WS-TLS 📁 @Free_World2"
+      - "19 🥊 Tel : @ProxyVPN11 ⟵"
+      - "20 @chillguy_vpn"
+      - "21 @filembad"
+      - "22 @chillguy_vpn"
+      - "23 @chillguy_vpn"
+      - "24 @chillguy_vpn"
+      - "25 @chillguy_vpn"
+      - "26 کانال تلگرام : Free_VPN_CH@"
+      - "27 @chillguy_vpn"
+      - "28 🇱🇻 TCP-Reality 📁 @v2nodes```"
+      - "29 @chillguy_vpn"
+      - "30 @chillguy_vpn"
+      - "31 @chillguy_vpn"
+      - "32 @chillguy_vpn"
+      - "33 @chillguy_vpn"
+      - "34 @chillguy_vpn"
+      - "35 Iran"
+      - "36 @chillguy_vpn"
+      - "37 @chillguy_vpn"
+      - "38 @chillguy_vpn"
+      - "39 🇺🇸 GRPC-None | @Express_alaki | src @DeamNet_proxy"
+      - "40 @chillguy_vpn"
+      - "41 @chillguy_vpn"
+      - "42 @chillguy_vpn"
+      - "43 @chillguy_vpn"
+      - "44 @chillguy_vpn"
+      - "45 @ConfigX2ray"
+      - "46 @unvisible_drops•4"
+      - "47 @unvisible_drops•7"
+      - "48 @iranj13⚡`"
+      - "49 @chillguy_vpn"
+      - "50 @filembad"
+      - "51 @filembad"
+      - "52 @chillguy_vpn"
+      - "53 @chillguy_vpn"
+      - "54 @chillguy_vpn"
+      - "55 @chillguy_vpn"
+      - "56 @chillguy_vpn"
+      - "57 @chillguy_vpn"
+      - "58 🌐 WS-TLS | @Express_alaki | src @V2rayBaaz"
+      - "59 @chillguy_vpn"
+      - "60 @chillguy_vpn"
+      - "61 @chillguy_vpn"
+      - "62 @chillguy_vpn"
+      - "63 🌐 WS-TLS | @Express_alaki | src @Trick_mobil"
+      - "64 @chillguy_vpn"
+      - "65 @chillguy_vpn"
+      - "66 @Proxy_sh`"
+      - "67 @chillguy_vpn"
+      - "68 @chillguy_vpn"
+      - "69 @chillguy_vpn"
+      - "70 @v2_mod_shop🚀"
+      - "71 @v2_mod_shop🚀"
+      - "72 @v2_mod_shop🚀"
+      - "73 سرور رایگان متصل بیشتر در چنل🌊 @vmess_ir"
+      - "74 🇰🇿 WS-TLS | @Express_alaki | src @DeamNet_proxy"
+      - "75 @Enzewa_Network👈جوین‌نشی‌قطع‌میشی"
+      - "76 @chillguy_vpn"
+      - "77 @Enzewa_Network👈جوین‌نشی‌قطع‌میشی"
+      - "78 @iProxyChannel 3"
+      - "79 🌐 WS-TLS | @Express_alaki | src @anotherme_night"
+      - "80 🌐 WS-TLS | @Express_alaki | src @meliproxyy"
+      - "81 @chillguy_vpn"
+      - "82 @V2ray_confiig`"
+      - "83 کانال تلگرام : Free_VPN_CH@"
+      - "84 @KIA_NET [TUR]```"
+      - "85 🌐 HTTPUpgrade-TLS | @Express_alaki | src @vpnowl"
+      - "86 🌐 HTTPUpgrade-TLS | @Express_alaki | src @vpnowl"
+      - "87 @irmeliy 🏀"
+      - "88 @chillguy_vpn"
+      - "89 @@irmeliy -🤍 عضو شو از سرورا جا نمونی`"
+      - "90 @chillguy_vpn"
+      - "91 @chillguy_vpn"
+      - "92 @chillguy_vpn"
+      - "93 @chillguy_vpn"
+      - "94 🇫🇷 TCP-Reality | @Express_alaki | src @v2nodes```"
+      - "95 @chillguy_vpn"
+      - "96 @chillguy_vpn"
+      - "97 @V2ray_confiig"
+      - "98 @V2ray_confiig"
+      - "99 @Enzewa_Network👈جوین‌نشی‌قطع‌میشی"
+      - "100 @Enzewa_Network👈جوین‌نشی‌قطع‌میشی"
+      - "101 @v2_mod_shop🚀"
+      - "102 @v2_mod_shop🚀🇳🇱"
+      - "103 @Proxy_sh 3410`"
+      - "104 @v2_mod_shop🚀"
+      - "105 @v2_mod_shop🚀`**"
+      - "106 @chillguy_vpn"
+      - "107 @chillguy_vpn"
+      - "108 @chillguy_vpn"
+      - "109 @chillguy_vpn"
+      - "110 🇩🇪 TCP-Reality | @Express_alaki | src @v2nodes"
+      - "111 @InfoTech_VK"
+      - "112 🌐 TCP-Reality | @Express_alaki | src @Trick_mobil"
+      - "113 🌐 TCP-TLS | @Express_alaki | src @ConfigX2ray"
+      - "114 🌐 TCP-Reality | @Express_alaki | src @ConfigX2ray```"
+      - "115 🔵@chillguy_vpn"
+      - "116 🌐 WS-TLS | @Express_alaki | src @Outline_Vpn"
+      - "117 @chillguy_vpn"
+      - "118 @chillguy_vpn"
+      - "119 @i10VPN 🚀| با ما متصل بمون⚡`"
+      - "120 @Enzewa_Network👈جوین‌شوقطع‌نشی"
+      - "121 🇨🇦 WS-TLS | @Express_alaki | src @DeamNet_proxy"
+      - "122 T.me/i10VPN🌒"
+      - "123 🇩🇪 TCP-TLS | @Express_alaki | src @v2ray_configs_pool"
+      - "124 T.me/i10VPN🌔"
+      - "125 T.me/i10VPN🌓"
+      - "126 @chillguy_vpn"
+      - "127 @chillguy_vpn"
+      - "128 🇫🇮 TCP-Reality | @Express_alaki | src @v2nodes"
+      - "129 🇫🇮 WS-TLS | @Express_alaki | src @v2nodes"
+      - "130 @chillguy_vpn"
+      - "131 @chillguy_vpn"
+      - "132 @chillguy_vpn"
+      - "133 🌐 WS-TLS | @Express_alaki | src @meliproxyy"
+      - "134 @chillguy_vpn"
+      - "135 🇸🇬 | 👉👉 @𝗫𝘃𝗽𝗻𝗽𝗹𝘂𝘀_𝗯𝗼𝘁 👈👈 |📶 𝙸𝚁𝙰𝙽𝙲𝙴𝙻𝙻"
+      - "136 🌐 TCP-Reality | @Express_alaki | src @meliproxyy"
+      - "137 🇸🇬 | 👉👉 @𝗫𝘃𝗽𝗻𝗽𝗹𝘂𝘀_𝗯𝗼𝘁 👈👈 |📶 𝙸𝚁𝙰𝙽𝙲𝙴𝙻𝙻"
+      - "138 ✅| 👉👉 @𝗫𝘃𝗽𝗻𝗽𝗹𝘂𝘀_𝗯𝗼𝘁 👈👈 |📶𝙰𝚂𝙸𝙰𝚃𝙴𝙲𝙷"
+      - "139 ✅| 👉👉 @𝗫𝘃𝗽𝗻𝗽𝗹𝘂𝘀_𝗯𝗼𝘁 👈👈 |📶𝙰𝚂𝙸𝙰𝚃𝙴𝙲𝙷"
+      - "140 @chillguy_vpn"
+      - "141 @chillguy_vpn"
+      - "142 🔆 Tel : @ProxyVPN11 ⟵"
+      - "143 @chillguy_vpn"
+      - "144 🔆 Tel : @ProxyVPN11 ⟵"
+      - "145 🌐 WS-TLS | @Express_alaki | src @ConfigV2rayNG"
+      - "146 @chillguy_vpn"
+      - "147 🇺🇸 WS-None | @Express_alaki | src @ConfigV2rayNG"
+      - "148 @chillguy_vpn"
+      - "149 @chillguy_vpn"
+      - "150 @chillguy_vpn"
+      - "151 @chillguy_vpn"
+      - "152 @chillguy_vpn"
+      - "153 @chillguy_vpn"
+      - "154 @chillguy_vpn"
+      - "155 @chillguy_vpn"
+      - "156 @chillguy_vpn"
+      - "157 🌐 WS-TLS | @Express_alaki | src @Outline_Vpn```"
+      - "158 🇹🇷 WS-TLS | @Express_alaki | src @ConfigV2rayNG"
+      - "159 ____@afexxx_vpn__"
+      - "160 کانال تلگرام : Free_VPN_CH@"
+      - "161 🔵@chillguy_vpn"
+      - "162 @chillguy_vpn"
+      - "163 @chillguy_vpn"
+      - "164 @chillguy_vpn"
+      - "165 @chillguy_vpn"
+      - "166 @chillguy_vpn"
+      - "167 @chillguy_vpn"
+      - "168 @chillguy_vpn"
+      - "169 @chillguy_vpn"
+      - "170 @chillguy_vpn"
+      - "171 @chillguy_vpn"
+      - "172 @chillguy_vpn"
+      - "173 @chillguy_vpn"
+      - "174 @chillguy_vpn"
+      - "175 @chillguy_vpn"
+      - "176 @chillguy_vpn"
+      - "177 @chillguy_vpn"
+      - "178 🇨🇦 WS-TLS | @Express_alaki | src @DeamNet_proxy"
+      - "179 @chillguy_vpn"
+      - "180 🇱🇺[Mav2ray]"
+      - "181 @chillguy_vpn"
+      - "182 🔵@chillguy_vpn"
+      - "183 🇩🇪 TCP-TLS | @Express_alaki | src @BigSmoke_Config"
+      - "184 🌐 TCP-Reality | @Express_alaki | src @anotherme_night"
+      - "185 🌐 GRPC-None | @Express_alaki | src @anotherme_night```"
+      - "186 𓏺 ⚜️𝗝𝗼𝗶𝗻 ➠ @tik7net_vpn   چنل تلگرام [🇹🇷]"
+      - "187 𓏺 ⚜️𝗝𝗼𝗶𝗻 ➠ @tik7net_vpn   چنل تلگرام [🇹🇷]"
+      - "188 𓏺 ⚜️𝗝𝗼𝗶𝗻 ➠ @tik7net_vpn   چنل تلگرام [🇹🇷]"
+      - "189 🌐 WS-TLS | @Express_alaki | src @V2rayng_Fast"
+      - "190 🇪🇪 TCP-Reality | @Express_alaki | src @JKVPN"
+      - "191 🇺🇸 TCP-Reality | @Express_alaki | src @JKVPN"
+      - "192 @chillguy_vpn"
+      - "193 🌐 WS-TLS | @Express_alaki | src @vmesc"
+      - "194 🇹🇷 TCP-Reality | @Express_alaki | src @v2nodes"
+      - "195 @V2ray_confiig`"
+      - "196 @HajmVPN_Config | 🇫🇮`"
+      - "197 🇮🇹 TCP-Reality | @Express_alaki | src @v2nodes"
+      - "198 کانال تلگرام : Free_VPN_CH@"
+      - "199 @chillguy_vpn"
+      - "200 @chillguy_vpn"
+      - "201 🇫🇮 TCP-Reality | @Express_alaki | src @V2rayProxy"
+      - "202 @chillguy_vpn"
+      - "203 @chillguy_vpn"
+      - "204 @chillguy_vpn"
+      - "205 @chillguy_vpn"
+      - "206 @chillguy_vpn"
+      - "207 @chillguy_vpn"
+      - "208 @chillguy_vpn"
+      - "209 @chillguy_vpn"
+      - "210 @chillguy_vpn"
+      - "211 @chillguy_vpn"
+      - "212 کانال تلگرام : Free_VPN_CH@"
+      - "213 @chillguy_vpn"
+      - "214 @chillguy_vpn"
+      - "215 @chillguy_vpn"
+      - "216 @chillguy_vpn"
+      - "217 @chillguy_vpn"
+      - "218 @chillguy_vpn"
+      - "219 @chillguy_vpn"
+      - "220 @chillguy_vpn"
+      - "221 @chillguy_vpn"
+      - "222 @chillguy_vpn"
+      - "223 @chillguy_vpn"
+      - "224 🟢@V2RAYyt⚡`"
+      - "225 @chillguy_vpn"
+      - "226 @chillguy_vpn"
+      - "227 @chillguy_vpn"
+      - "228 🇩🇪𝗚𝗘𝗥𝗠𝗔𝗡𝗬 🚀`"
+      - "229 @V2ray_confiig`"
+      - "230 𝐉𝐨𝐢𝐧➠@𝘁𝗲𝗹𝗲𝗿𝗮𝘆𝘃𝗽𝗻 :کانال تلگرام⚡️"
+      - "231 @V2ray_confiig`"
+      - "232 𝐉𝐨𝐢𝐧➠@𝘁𝗲𝗹𝗲𝗿𝗮𝘆𝘃𝗽𝗻 :کانال تلگرام⚡️"
+      - "233 🇸🇪 TCP-Reality | @Express_alaki | src @v2nodes"
+      - "234 کانال تلگرام : Free_VPN_CH@"
+      - "235 🌐 TCP-Reality | @Express_alaki | src @V2rayng_Fast"
+      - "236 🌐 TCP-Reality | @Express_alaki | src @V2rayng_Fast"
+      - "237 🌐 WS-TLS | @Express_alaki | src @V2rayng_Fast"
+      - "238 CDN-Bullet```"
+      - "239 🌐 WS-None | @Express_alaki | src @FarazV2ray"
+      - "240 ⚡Telegram = @KIA_NET"
+      - "241 ⚡Telegram = @KIA_NET"
+      - "242 🌐 WS-TLS | @Express_alaki | src @ConfigV2rayNG"
+      - "243 @chillguy_vpn"
+      - "244 @chillguy_vpn"
+      - "245 @chillguy_vpn"
+      - "246 @chillguy_vpn"
+      - "247 @chillguy_vpn"
+      - "248 @chillguy_vpn"
+      - "249 @chillguy_vpn"
+      - "250 @chillguy_vpn"
+      - "251 @chillguy_vpn"
+      - "252 @chillguy_vpn"
+      - "253 @chillguy_vpn"
+      - "254 @chillguy_vpn"
+      - "255 🌐 TCP-Reality | @Express_alaki | src @Trick_mobil"
+      - "256 @Proxy_sh🇷🇺10"
+      - "257 @proxy_online_net"
+      - "258 @FZVPN سرورهای بیشتر در"
+      - "259 @V2ray_confiig`"
+      - "260 🐒55@unvisible_drops"
+      - "261 🐒47@unvisible_drops"
+      - "262 🐒52@unvisible_drops"
+      - "263 🌐 WS-TLS | @Express_alaki | src @anotherme_night"
+      - "264 🌐 WS-None | @Express_alaki | src @iP_CF"
+      - "265 🌐 WS-None | @Express_alaki | src @iP_CF"
+      - "266 🔵@chillguy_vpn"
+      - "267 🔵@chillguy_vpn"
+      - "268 🌐 WS-None | @Express_alaki | src @iP_CF```"
+      - "269 🌐 TCP-None | @Express_alaki | src @iP_CF"
+      - "270 @FZVPN قطع شدی بیا اینجا"
+      - "271 🌐 WS-TLS | @Express_alaki | src @Outline_Vpn"
+      - "272 @V2ray_confiig`"
+      - "273 @chillguy_vpn"
+      - "274 @chillguy_vpn"
+      - "275 @chillguy_vpn"
+      - "276 @chillguy_vpn"
+      - "277 🌐 TCP-None | @Express_alaki | src @FarazV2ray"
+      - "278 @irmeliy"
+      - "279 @i10VPN 🚀| با ما متصل بمون⚡"
+      - "280 🇳🇱🔵 (⚡Telegram = @KIA_NET]`"
+      - "281 @Enzewa_Network👈جوین‌شوقطع‌نشی"
+      - "282 🇺🇸 TCP-Reality | @Express_alaki | src @v2nodes"
+      - "283 @Enzewa_Network👈جوین‌شوقطع‌نشی"
+      - "284 @Enzewa_Network👈جوین‌شوقطع‌نشی"
+      - "285 @Enzewa_Network👈جوین‌شوقطع‌نشی"
+      - "286 🇺🇸 TCP-Reality | @Express_alaki | src @v2nodes```"
+      - "287 🇩🇪 ı 𝐕𝐢𝐏 ı ⚡Telegram = @KIA_NET"
+      - "288 🇩🇪 ı 𝐕𝐢𝐏 ı ⚡Telegram = @KIA_NET```"
+      - "289 ⚡⚡7"
+      - "290 🌐 TCP-Reality | @Express_alaki | src @prrofile_purple"
+      - "291 @chillguy_vpn"
+      - "292 @chillguy_vpn"
+      - "293 @chillguy_vpn"
+      - "294 @chillguy_vpn"
+      - "295 @chillguy_vpn"
+      - "296 185.251.81.238"
+      - "297 @V2ray_confiig`"
+      - "298 blac2knet🖤```"
+      - "299 @V2ray_confiig`"
+      - "300 @V2ray_confiig`"
+      - "301 @V2ray_confiig`"
+      - "302 @chillguy_vpn"
+      - "303 @chillguy_vpn"
+      - "304 @chillguy_vpn"
+      - "305 @chillguy_vpn"
+      - "306 @chillguy_vpn"
+      - "307 @chillguy_vpn"
+      - "308 @chillguy_vpn"
+      - "309 🌐 WS-TLS | @Express_alaki | src @v2Line"
+      - "310 @chillguy_vpn"
+      - "311 @FZVPN سرورهای جدید در"
+      - "312 @chillguy_vpn"
+      - "313 🌐 WS-TLS | @Express_alaki | src @anty_filter"
+      - "314 🌐 TCP-Reality | @Express_alaki | src @anty_filter"
+      - "315 🌐 TCP-Reality | @Express_alaki | src @anty_filter"
+      - "316 🌐 TCP-None | @Express_alaki | src @Free_World2"
+      - "317 🌐 TCP-Reality | @Express_alaki | src @vpnsal"
+      - "318 کانال تلگرام : Free_VPN_CH@```"
+      - "319 🌐 TCP-Reality | @Express_alaki | src @V2HUBIR"
+      - "320 🔵@chillguy_vpn"
+      - "321 InfoTech_VK```"
+      - "322 @chillguy_vpn"
+      - "323 ⚜️𝗝𝗼𝗶𝗻 ➠ @tik7net_vpn   چنل تلگرام 🇭🇰 Hong Kong"
+      - "324 @chillguy_vpn"
+      - "325 @chillguy_vpn"
+      - "326 @chillguy_vpn"
+      - "327 @V2ray_confiig`"
+      - "328 🇩🇪 WS-TLS ⚡Telegram = @KIA_NET```"
+      - "329 🆔Telegram : @planB_net"
+      - "330 🆔Telegram : @planB_net"
+      - "331 @filembad"
+      - "332 Iran"
+      - "333 ➤ @netshekan99"
+      - "334 ➤ @netshekan99`"
+      - "335 Channel id: @ShadowProxy66 🇩🇪"
+      - "336 Channel id: @ShadowProxy66 🇳🇱"
+      - "337 🥹🥹7"
+      - "338 @V2ray_confiig`"
+      - "339 VIP 💫@irmeliy"
+      - "340 🇮🇹[openproxylist.com]"
+      - "341 @Filter_breaker"
+      - "342 @Filter_breaker"
+      - "343 @V2ray_confiig`"
+      - "344 @v2_mod_shop🚀🇳🇱"
+      - "345 @v2_mod_shop🚀 🇬🇧"
+      - "346 Spain"
+      - "347 United+Kingdom"
+      - "348 France"
+      - "349 89.223.88.33"
+      - "350 57.129.95.45"
+      - "351 Telegram:  @CroSs_Guildd"
+      - "352 @V2ray_confiig`"
+      - "353 @proxy_online_net"
+      - "354 @irmeliy 🎩"
+      - "355 @v2FreeHub 🇺🇦"
+      - "356 @shadow_vpn🧣"
+      - "357 🇨🇦 WS-TLS 📁 @DeamNet_proxy```"
+      - "358 ♠♦2"
+      - "359 🇨🇦 WS-TLS | @Express_alaki | src @DeamNet_proxy"
+      - "360 🌐 WS-TLS | @Express_alaki | src @flyv2ray"
+      - "361 @unvisible_drops✅️10"
+      - "362 @filembad"
+      - "363 جوین چنل شید قط نشید@shankamil"
+      - "364 @InfoTech_VK"
+      - "365 🇭🇰 WS-TLS | @Express_alaki | src @v2nodes"
+      - "366 🌐 WS-TLS | @Express_alaki | src @v2Line"
+      - "367 🌐 TCP-None | @express_alaki"
+      - "368 @chillguy_vpn"
+      - "369 >>@oneclickvpnkeys::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE::AE"
+      - "370 @chillguy_vpn"
+      - "371 @chillguy_vpn"
+      - "372 @chillguy_vpn"
+      - "373 @chillguy_vpn"
+      - "374 🇺🇸 WS-TLS | @Express_alaki | src @FreakConfig"
+      - "375 شاهنشاه آریامهر رضا شاه دوم هدیه از طرف A"
+      - "376 🌐 TCP-None | @Express_alaki | src @v2ray_Extractor"
+      - "377 United States"
+      - "378 @chillguy_vpn"
+      - "379 @chillguy_vpn"
+      - "380 @chillguy_vpn"
+      - "381 @chillguy_vpn"
+      - "382 @chillguy_vpn"
+      - "383 @chillguy_vpn"
+      - "384 @chillguy_vpn"
+      - "385 🔆 Tel : @ProxyVPN11 ⟵"
+      - "386 🇺🇸 WS-None | @Express_alaki | src @ConfigV2rayNG"
+      - "387 @chillguy_vpn"
+      - "388 @chillguy_vpn"
+      - "389 @chillguy_vpn"
+      - "390 @chillguy_vpn"
+      - "391 @chillguy_vpn"
+      - "392 @chillguy_vpn"
+      - "393 @chillguy_vpn"
+      - "394 @chillguy_vpn"
+      - "395 @i10VPN 🚀| با ما متصل بمون⚡"
+      - "396 @chillguy_vpn"
+      - "397 کانال تلگرام : Free_VPN_CH@"
+      - "398 @chillguy_vpn"
+      - "399 @chillguy_vpn"
+      - "400 @chillguy_vpn"
+      - "401 @chillguy_vpn"
+      - "402 @chillguy_vpn"
+      - "403 @chillguy_vpn"
+      - "404 @chillguy_vpn"
+      - "405 @chillguy_vpn"
+      - "406 @chillguy_vpn"
+      - "407 @chillguy_vpn"
+      - "408 @chillguy_vpn"
+      - "409 @v2_mod_shop🚀 🇨🇦"
+      - "410 @v2_mod_shop🚀 🇨🇦"
+      - "411 @chillguy_vpn"
+      - "412 @chillguy_vpn"
+      - "413 @chillguy_vpn"
+      - "414 @chillguy_vpn"
+      - "415 @chillguy_vpn"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

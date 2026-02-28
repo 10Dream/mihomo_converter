@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 @meliproxyy","type":"hysteria2","server":"181.214.99.162","port":35000,"password":"b4bd0613-ff7c-4f2f-954d-185915e6ddad"}
   - {"name":"2 🔥 Telegram: @wiki_tajrobe","type":"hysteria2","server":"206.71.158.41","port":35000,"password":"b4bd0613-ff7c-4f2f-954d-185915e6ddad"}
@@ -258,16 +416,17 @@ proxies:
   - {"name":"239 ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"y7.dddc.us.ci","port":443,"uuid":"34778794-72e8-4862-b1e7-6e6c3ba894be","alterId":0,"cipher":"auto","udp":true}
   - {"name":"240 @MARAMBASHI 🇧🇷","type":"vmess","server":"57.129.25.22","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 @meliproxyy"
       - "2 🔥 Telegram: @wiki_tajrobe"
@@ -509,6 +668,311 @@ proxy-groups:
       - "238 ⚡️Telegram = @SOSkeyNET"
       - "239 ⚡️Telegram = @SOSkeyNET"
       - "240 @MARAMBASHI 🇧🇷"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 @meliproxyy"
+      - "2 🔥 Telegram: @wiki_tajrobe"
+      - "3 @meliproxyy"
+      - "4 configraygan_20"
+      - "5 configraygan_18"
+      - "6 configraygan_27"
+      - "7 configraygan_40"
+      - "8 configraygan_42"
+      - "9 @meliproxyy"
+      - "10 @MARAMBASHI 🇧🇷"
+      - "11 @meliproxyy"
+      - "12 @MARAMBASHI 🇧🇷"
+      - "13 @meliproxyy"
+      - "14 🔥 Telegram: @wiki_tajrobe"
+      - "15 @meliproxyy"
+      - "16 @meliproxyy"
+      - "17 🇰🇿@meliproxyy"
+      - "18 @meliproxyy"
+      - "19 🔥 Telegram: @wiki_tajrobe"
+      - "20 🔥 Telegram: @wiki_tajrobe"
+      - "21 @meliproxyy"
+      - "22 configraygan_41"
+      - "23 @meliproxyy"
+      - "24 @meliproxyy"
+      - "25 @meliproxyy"
+      - "26 🔥 Telegram: @wiki_tajrobe"
+      - "27 configraygan_36"
+      - "28 🇷🇺 VK — #1"
+      - "29 @MARAMBASHI 🇧🇷"
+      - "30 @meliproxyy"
+      - "31 @meliproxyy"
+      - "32 @meliproxyy"
+      - "33 🇷🇺 VK — #8"
+      - "34 @meliproxyy"
+      - "35 🔥 Telegram: @wiki_tajrobe"
+      - "36 configraygan_6"
+      - "37 configraygan_4"
+      - "38 configraygan_2"
+      - "39 configraygan_3"
+      - "40 configraygan_7"
+      - "41 configraygan_11"
+      - "42 @MARAMBASHI 🇧🇷"
+      - "43 @meliproxyy"
+      - "44 @meliproxyy"
+      - "45 @meliproxyy"
+      - "46 @meliproxyy"
+      - "47 @meliproxyy"
+      - "48 @meliproxyy"
+      - "49 🔥 Telegram: @wiki_tajrobe"
+      - "50 @meliproxyy"
+      - "51 @meliproxyy"
+      - "52 @meliproxyy"
+      - "53 @meliproxyy"
+      - "54 configraygan_34"
+      - "55 configraygan_32"
+      - "56 configraygan_33"
+      - "57 @meliproxyy"
+      - "58 configraygan_28"
+      - "59 configraygan_39"
+      - "60 🔥 Telegram: @wiki_tajrobe"
+      - "61 🇷🇺 VK — #5"
+      - "62 🔥 Telegram: @wiki_tajrobe"
+      - "63 @MARAMBASHI 🇸🇪"
+      - "64 @meliproxyy"
+      - "65 @meliproxyy"
+      - "66 @meliproxyy"
+      - "67 configraygan_29"
+      - "68 @meliproxyy"
+      - "69 @meliproxyy"
+      - "70 @meliproxyy"
+      - "71 @meliproxyy"
+      - "72 @meliproxyy"
+      - "73 @meliproxyy"
+      - "74 @meliproxyy"
+      - "75 @meliproxyy"
+      - "76 @meliproxyy"
+      - "77 @meliproxyy"
+      - "78 @meliproxyy"
+      - "79 @meliproxyy"
+      - "80 @Capoit@Capoit@CapoPingBot"
+      - "81 @meliproxyy"
+      - "82 @meliproxyy"
+      - "83 @meliproxyy"
+      - "84 @meliproxyy"
+      - "85 @meliproxyy"
+      - "86 @meliproxyy"
+      - "87 @meliproxyy"
+      - "88 @MARAMBASHI 🇩🇪"
+      - "89 @MARAMBASHI 🇩🇪"
+      - "90 @meliproxyy"
+      - "91 configraygan_17"
+      - "92 🔥 Telegram: @wiki_tajrobe"
+      - "93 configraygan_60"
+      - "94 configraygan_53"
+      - "95 configraygan_56"
+      - "96 configraygan_58"
+      - "97 configraygan_57"
+      - "98 @Hope_Net-join-us-on-Telegram"
+      - "99 @meliproxyy"
+      - "100 @meliproxyy"
+      - "101 🇷🇺 VK — #3@KIA_NET"
+      - "102 @meliproxyy"
+      - "103 @Hope_Net-join-us-on-Telegram"
+      - "104 🔥 Telegram: @wiki_tajrobe"
+      - "105 configraygan_23"
+      - "106 configraygan_22"
+      - "107 configraygan_31"
+      - "108 @MARAMBASHI 🇧🇷"
+      - "109 @MARAMBASHI 🇧🇷"
+      - "110 @meliproxyy"
+      - "111 🔥 Telegram: @wiki_tajrobe"
+      - "112 configraygan_35"
+      - "113 @meliproxyy"
+      - "114 @meliproxyy"
+      - "115 @meliproxyy"
+      - "116 configraygan_59"
+      - "117 configraygan_24"
+      - "118 @meliproxyy"
+      - "119 @meliproxyy"
+      - "120 configraygan_21"
+      - "121 @MARAMBASHI 🇧🇷"
+      - "122 @meliproxyy"
+      - "123 @meliproxyy"
+      - "124 configraygan_10"
+      - "125 @meliproxyy"
+      - "126 configraygan_37"
+      - "127 @meliproxyy"
+      - "128 @meliproxyy"
+      - "129 @meliproxyy"
+      - "130 @meliproxyy"
+      - "131 🔥 Telegram: @wiki_tajrobe"
+      - "132 @meliproxyy"
+      - "133 @meliproxyy"
+      - "134 @meliproxyy"
+      - "135 @meliproxyy"
+      - "136 @meliproxyy"
+      - "137 @meliproxyy"
+      - "138 configraygan_19"
+      - "139 @meliproxyy"
+      - "140 @meliproxyy"
+      - "141 @meliproxyy"
+      - "142 @meliproxyy"
+      - "143 @meliproxyy"
+      - "144 @meliproxyy"
+      - "145 @meliproxyy"
+      - "146 @meliproxyy"
+      - "147 @meliproxyy"
+      - "148 🇷🇺 VK — #2@KIA_NET"
+      - "149 🔥 Telegram: @wiki_tajrobe"
+      - "150 @MARAMBASHI 🇩🇪"
+      - "151 🔥 Telegram: @wiki_tajrobe"
+      - "152 @meliproxyy"
+      - "153 @MARAMBASHI 🇩🇪"
+      - "154 configraygan_50"
+      - "155 @meliproxyy"
+      - "156 configraygan_45"
+      - "157 ⚡Telegram = @SOSkeyNET"
+      - "158 ⚡Telegram = @SOSkeyNET"
+      - "159 ⚡Telegram = @SOSkeyNET"
+      - "160 ⚡Telegram = @SOSkeyNET"
+      - "161 ⚡Telegram = @SOSkeyNET"
+      - "162 ⚡Telegram = @SOSkeyNET"
+      - "163 @meliproxyy"
+      - "164 ⚡Telegram = @SOSkeyNET"
+      - "165 ⚡Telegram = @SOSkeyNET"
+      - "166 ⚡Telegram = @SOSkeyNET"
+      - "167 ⚡Telegram = @SOSkeyNET"
+      - "168 ⚡Telegram = @SOSkeyNET"
+      - "169 ⚡Telegram = @SOSkeyNET"
+      - "170 ⚡Telegram = @SOSkeyNET"
+      - "171 ⚡Telegram = @SOSkeyNET"
+      - "172 ⚡Telegram = @SOSkeyNET"
+      - "173 ⚡Telegram = @SOSkeyNET"
+      - "174 ⚡Telegram = @SOSkeyNET"
+      - "175 ⚡Telegram = @SOSkeyNET"
+      - "176 ⚡Telegram = @SOSkeyNET"
+      - "177 @meliproxyy"
+      - "178 ⚡Telegram = @SOSkeyNET"
+      - "179 ⚡Telegram = @SOSkeyNET"
+      - "180 @meliproxyy"
+      - "181 @meliproxyy"
+      - "182 @meliproxyy"
+      - "183 ⚡️Telegram = @SOSkeyNET"
+      - "184 ⚡️Telegram = @SOSkeyNET"
+      - "185 ⚡️Telegram = @SOSkeyNET"
+      - "186 ⚡️Telegram = @SOSkeyNET"
+      - "187 ⚡️Telegram = @SOSkeyNET"
+      - "188 ⚡️Telegram = @SOSkeyNET"
+      - "189 ⚡️Telegram = @SOSkeyNET"
+      - "190 ⚡️Telegram = @SOSkeyNET"
+      - "191 ⚡️Telegram = @SOSkeyNET"
+      - "192 ⚡️Telegram = @SOSkeyNET"
+      - "193 ⚡️Telegram = @SOSkeyNET"
+      - "194 ⚡️Telegram = @SOSkeyNET"
+      - "195 ⚡️Telegram = @SOSkeyNET"
+      - "196 ⚡️Telegram = @SOSkeyNET"
+      - "197 ⚡️Telegram = @SOSkeyNET"
+      - "198 ⚡️Telegram = @SOSkeyNET"
+      - "199 ⚡️Telegram = @SOSkeyNET"
+      - "200 ⚡️Telegram = @SOSkeyNET"
+      - "201 ⚡️Telegram = @SOSkeyNET"
+      - "202 ⚡️Telegram = @SOSkeyNET"
+      - "203 ⚡️Telegram = @SOSkeyNET"
+      - "204 ⚡️Telegram = @SOSkeyNET"
+      - "205 ⚡️Telegram = @SOSkeyNET"
+      - "206 ⚡️Telegram = @SOSkeyNET"
+      - "207 ⚡️Telegram = @SOSkeyNET"
+      - "208 ⚡️Telegram = @SOSkeyNET"
+      - "209 ⚡️Telegram = @SOSkeyNET"
+      - "210 ⚡️Telegram = @SOSkeyNET"
+      - "211 ⚡️Telegram = @SOSkeyNET"
+      - "212 ⚡️Telegram = @SOSkeyNET"
+      - "213 ⚡️Telegram = @SOSkeyNET"
+      - "214 ⚡️Telegram = @SOSkeyNET"
+      - "215 ⚡️Telegram = @SOSkeyNET"
+      - "216 ⚡️Telegram = @SOSkeyNET"
+      - "217 ⚡️Telegram = @SOSkeyNET"
+      - "218 ⚡️Telegram = @SOSkeyNET"
+      - "219 ⚡️Telegram = @SOSkeyNET"
+      - "220 ⚡️Telegram = @SOSkeyNET"
+      - "221 ⚡️Telegram = @SOSkeyNET"
+      - "222 ⚡️Telegram = @SOSkeyNET"
+      - "223 ⚡️Telegram = @SOSkeyNET"
+      - "224 ⚡️Telegram = @SOSkeyNET"
+      - "225 ⚡️Telegram = @SOSkeyNET"
+      - "226 ⚡️Telegram = @SOSkeyNET"
+      - "227 ⚡️Telegram = @SOSkeyNET"
+      - "228 ⚡️Telegram = @SOSkeyNET"
+      - "229 ⚡️Telegram = @SOSkeyNET"
+      - "230 ⚡️Telegram = @SOSkeyNET"
+      - "231 ⚡️Telegram = @SOSkeyNET"
+      - "232 ⚡️Telegram = @SOSkeyNET"
+      - "233 ⚡️Telegram = @SOSkeyNET"
+      - "234 ⚡️Telegram = @SOSkeyNET"
+      - "235 ⚡️Telegram = @SOSkeyNET"
+      - "236 ⚡️Telegram = @SOSkeyNET"
+      - "237 ⚡️Telegram = @SOSkeyNET"
+      - "238 ⚡️Telegram = @SOSkeyNET"
+      - "239 ⚡️Telegram = @SOSkeyNET"
+      - "240 @MARAMBASHI 🇧🇷"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

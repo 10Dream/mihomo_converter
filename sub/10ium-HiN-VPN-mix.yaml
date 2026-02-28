@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🆔configfa 🔒 HY2-UDP-N/A ❔ XX down","type":"hysteria2","server":"5.175.249.174","port":35000,"password":"b4bd0613-ff7c-4f2f-954d-185915e6ddad"}
   - {"name":"2 🆔v2ray1_ng 🔒 HY2-UDP-N/A ❔ XX down","type":"hysteria2","server":"150.241.79.106","port":1935,"password":"germany_hysteria2_fastlane_wxue2k6d6:3Vbo9kzJszWmSzGIjnoytB2F98O023VD"}
@@ -464,16 +622,17 @@ proxies:
   - {"name":"445 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 6ms","type":"vmess","server":"104.24.169.183","port":8080,"uuid":"nasnet","alterId":0,"cipher":"auto","udp":true}
   - {"name":"446 🆔vpnserverrr 🔒 VM-WS-TLS ❔ XX 91ms","type":"vmess","server":"57.129.25.22","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🆔configfa 🔒 HY2-UDP-N/A ❔ XX down"
       - "2 🆔v2ray1_ng 🔒 HY2-UDP-N/A ❔ XX down"
@@ -921,6 +1080,517 @@ proxy-groups:
       - "444 🆔ar14n24b 🔓 VM-TCP-N/A ❔ XX down"
       - "445 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 6ms"
       - "446 🆔vpnserverrr 🔒 VM-WS-TLS ❔ XX 91ms"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🆔configfa 🔒 HY2-UDP-N/A ❔ XX down"
+      - "2 🆔v2ray1_ng 🔒 HY2-UDP-N/A ❔ XX down"
+      - "3 🆔v2ray1_ng 🔒 HY2-UDP-N/A ❔ XX down"
+      - "4 🆔v2ray1_ng 🔒 HY2-UDP-N/A ❔ XX down"
+      - "5 ⚠️ FREE TO USE!"
+      - "6 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 6ms"
+      - "7 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 95ms"
+      - "8 🆔soskeynet 🔒 VL-WS-N/A 🇺🇸 US 6ms"
+      - "9 🆔soskeynet 🔒 VL-WS-N/A 🇺🇸 US 6ms"
+      - "10 🆔soskeynet 🔓 VL-TCP-N/A 🇫🇮 FI 122ms"
+      - "11 🆔soskeynet 🔒 VL-TCP- 🇳🇱 NL 90ms"
+      - "12 🆔soskeynet 🔒 VL-GRPC- 🇷🇺 RU 128ms"
+      - "13 🆔soskeynet 🔒 VL-TCP- 🇷🇺 RU 128ms"
+      - "14 🆔soskeynet 🔒 VL-TCP- 🇫🇷 FR down"
+      - "15 🆔soskeynet 🔒 VL-TCP- 🇹🇷 TR down"
+      - "16 🆔soskeynet 🔒 VL-TCP- 🇱🇻 LV 113ms"
+      - "17 🆔soskeynet 🔒 VL-TCP- 🇷🇺 RU 147ms"
+      - "18 🆔soskeynet 🔒 VL-TCP- 🇷🇺 RU 280ms"
+      - "19 🆔soskeynet 🔒 VL-WS-N/A 🇺🇸 US 125ms"
+      - "20 🆔soskeynet 🔓 VL-KCP-N/A 🇩🇪 DE down"
+      - "21 🆔soskeynet 🔓 VL-TCP-N/A 🇩🇪 DE 150ms"
+      - "22 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 109ms"
+      - "23 🆔soskeynet 🔓 VL-TCP-N/A 🇩🇪 DE 115ms"
+      - "24 🆔soskeynet 🔒 VL-TCP- 🇺🇸 US 107ms"
+      - "25 🆔soskeynet 🔒 VL-TCP- 🇫🇮 FI 108ms"
+      - "26 🆔soskeynet 🔒 VL-TCP- 🇪🇸 ES 217ms"
+      - "27 🆔soskeynet 🔒 VL-TCP- 🇩🇪 DE 97ms"
+      - "28 🆔soskeynet 🔒 VL-TCP- 🇰🇷 KR 95ms"
+      - "29 🆔soskeynet 🔒 VL-TCP- 🇸🇪 SE 104ms"
+      - "30 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 40ms"
+      - "31 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 104ms"
+      - "32 🆔soskeynet 🔒 VL-XHTTP-N/A 🇺🇸 US 16ms"
+      - "33 🆔soskeynet 🔒 VL-WS-N/A 🇫🇷 FR 84ms"
+      - "34 🆔soskeynet 🔓 VL-TCP-N/A ❔ XX down"
+      - "35 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 10ms"
+      - "36 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 24ms"
+      - "37 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 69ms"
+      - "38 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 42ms"
+      - "39 🆔soskeynet 🔓 VL-XHTTP-N/A ❔ XX 6ms"
+      - "40 🆔soskeynet 🔓 VL-XHTTP-N/A ❔ XX 6ms"
+      - "41 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 5ms"
+      - "42 🆔soskeynet 🔒 VL-TCP- ❔ XX 124ms"
+      - "43 🆔soskeynet 🔒 VL-TCP-N/A ❔ XX 107ms"
+      - "44 🆔soskeynet 🔒 VL-XHTTP- ❔ XX 90ms"
+      - "45 🆔soskeynet 🔒 VL-TCP- ❔ XX 291ms"
+      - "46 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "47 🆔soskeynet 🔒 VL-TCP- ❔ XX 21ms"
+      - "48 🆔soskeynet 🔒 VL-GRPC-N/A ❔ XX 131ms"
+      - "49 🆔soskeynet 🔒 VL-TCP- ❔ XX 269ms"
+      - "50 🆔soskeynet 🔒 VL-TCP- ❔ XX 90ms"
+      - "51 🆔soskeynet 🔒 VL-TCP- ❔ XX 131ms"
+      - "52 🆔soskeynet 🔒 VL-TCP- ❔ XX 133ms"
+      - "53 🆔soskeynet 🔒 VL-TCP- ❔ XX 130ms"
+      - "54 🆔soskeynet 🔒 VL-TCP- ❔ XX 145ms"
+      - "55 🆔soskeynet 🔒 VL-TCP- ❔ XX 135ms"
+      - "56 🆔soskeynet 🔒 VL-TCP- ❔ XX 133ms"
+      - "57 🆔soskeynet 🔒 VL-TCP- ❔ XX 129ms"
+      - "58 🆔soskeynet 🔒 VL-TCP- ❔ XX 135ms"
+      - "59 🆔soskeynet 🔒 VL-TCP- ❔ XX 134ms"
+      - "60 🆔soskeynet 🔒 VL-TCP- ❔ XX 125ms"
+      - "61 🆔soskeynet 🔒 VL-TCP- ❔ XX 103ms"
+      - "62 🆔soskeynet 🔒 VL-TCP-N/A ❔ XX 141ms"
+      - "63 🆔soskeynet 🔓 VL-XHTTP-N/A ❔ XX 32ms"
+      - "64 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "65 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "66 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "67 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "68 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "69 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "70 🆔soskeynet 🔓 VL--N/A ❔ XX 21ms"
+      - "71 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 16ms"
+      - "72 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 59ms"
+      - "73 🆔soskeynet 🔒 VL-TCP-N/A ❔ XX 24ms"
+      - "74 🆔soskeynet 🔒 VL--N/A ❔ XX 109ms"
+      - "75 🆔soskeynet 🔒 VL-TCP- ❔ XX 103ms"
+      - "76 🆔soskeynet 🔓 VL-TCP-N/A ❔ XX 224ms"
+      - "77 🆔soskeynet 🔒 VL-GRPC- ❔ XX 431ms"
+      - "78 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "79 🆔soskeynet 🔒 VL-WS-N/A ❔ XX down"
+      - "80 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 91ms"
+      - "81 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 90ms"
+      - "82 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 92ms"
+      - "83 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 90ms"
+      - "84 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 91ms"
+      - "85 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 88ms"
+      - "86 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 86ms"
+      - "87 🆔soskeynet 🔒 VL-TCP- ❔ XX 98ms"
+      - "88 🆔soskeynet 🔒 VL-WS-N/A ❔ XX down"
+      - "89 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 87ms"
+      - "90 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 87ms"
+      - "91 🆔soskeynet 🔒 VL-WS-N/A ❔ XX 87ms"
+      - "92 🆔soskeynet 🔒 VL-TCP- ❔ XX 132ms"
+      - "93 🆔soskeynet 🔒 VL-TCP- ❔ XX 133ms"
+      - "94 🆔soskeynet 🔒 VL-TCP- ❔ XX 128ms"
+      - "95 🆔soskeynet 🔒 VL-TCP- ❔ XX 127ms"
+      - "96 🆔soskeynet 🔒 VL-TCP- ❔ XX down"
+      - "97 🆔soskeynet 🔒 VL-TCP- ❔ XX 128ms"
+      - "98 🆔soskeynet 🔒 VL-TCP- ❔ XX 128ms"
+      - "99 🆔soskeynet 🔒 VL-TCP- ❔ XX down"
+      - "100 🆔soskeynet 🔓 VL-TCP-N/A ❔ XX 83ms"
+      - "101 🆔vpn4everyone 🔒 VL-TCP- ❔ XX down"
+      - "102 🆔vpn4everyone 🔒 VL-WS-N/A ❔ XX down"
+      - "103 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "104 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "105 🆔configfa 🔒 VL-TCP-N/A ❔ XX down"
+      - "106 🆔configfa 🔓 VL-XHTTP-N/A ❔ XX 6ms"
+      - "107 🆔configfa 🔓 VL-XHTTP-N/A ❔ XX 6ms"
+      - "108 🆔configfa 🔓 VL-XHTTP-N/A ❔ XX 28ms"
+      - "109 🆔configfa 🔒 VL-WS-N/A ❔ XX 177ms"
+      - "110 🆔configfa 🔓 VL-XHTTP-N/A ❔ XX down"
+      - "111 🆔configfa 🔓 VL-XHTTP-N/A ❔ XX 7ms"
+      - "112 🆔configfa 🔓 VL-TCP-N/A ❔ XX 227ms"
+      - "113 🆔configfa 🔒 VL-WS-N/A ❔ XX 8ms"
+      - "114 🆔configfa 🔓 VL-TCP-N/A ❔ XX down"
+      - "115 🆔configfa 🔓 VL-XHTTP-N/A ❔ XX 6ms"
+      - "116 🆔configfa 🔓 VL-TCP-N/A ❔ XX down"
+      - "117 🆔configfa 🔓 VL-XHTTP-N/A ❔ XX 18ms"
+      - "118 🆔configfa 🔓 VL-TCP-N/A ❔ XX down"
+      - "119 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "120 🆔configfa 🔒 VL-WS-N/A ❔ XX 27ms"
+      - "121 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "122 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "123 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "124 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "125 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "126 🆔configfa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "127 🆔configfa 🔒 VL-TCP-N/A ❔ XX 140ms"
+      - "128 🆔configfa 🔒 VL-WS-N/A ❔ XX 216ms"
+      - "129 🆔configfa 🔒 VL-WS-N/A ❔ XX 68ms"
+      - "130 🆔configfa 🔓 VL-TCP-N/A ❔ XX down"
+      - "131 🆔configfa 🔓 VL-TCP-N/A ❔ XX down"
+      - "132 🆔surfboardv2ray 🔓 VL-TCP-N/A ❔ XX down"
+      - "133 🆔surfboardv2ray 🔓 VL-TCP-N/A ❔ XX 309ms"
+      - "134 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX down"
+      - "135 🆔surfboardv2ray 🔒 VL-TCP- ❔ XX 230ms"
+      - "136 🆔surfboardv2ray 🔓 VL-TCP-N/A ❔ XX 265ms"
+      - "137 🆔surfboardv2ray 🔒 VL-WS-N/A ❔ XX down"
+      - "138 🆔vpnbaz 🔓 VL-TCP-N/A ❔ XX down"
+      - "139 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 44ms"
+      - "140 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 138ms"
+      - "141 🆔vpnbaz 🔒 VL-GRPC- ❔ XX 144ms"
+      - "142 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX down"
+      - "143 🆔vpnbaz 🔒 VL-TCP- ❔ XX 90ms"
+      - "144 🆔vpnbaz 🔒 VL-TCP- ❔ XX down"
+      - "145 🆔vpnbaz 🔓 VL-TCP-N/A ❔ XX down"
+      - "146 🆔vpnbaz 🔓 VL-TCP-N/A ❔ XX down"
+      - "147 🆔vpnbaz 🔒 VL-TCP-N/A ❔ XX 90ms"
+      - "148 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "149 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 7ms"
+      - "150 🆔vpnbaz 🔒 VL-TCP- ❔ XX 127ms"
+      - "151 🆔vpnbaz 🔒 VL-TCP- ❔ XX 113ms"
+      - "152 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "153 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "154 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "155 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "156 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 5ms"
+      - "157 🆔vpnbaz 🔒 VL-TCP- ❔ XX 174ms"
+      - "158 🆔vpnbaz 🔓 VL-TCP-N/A ❔ XX down"
+      - "159 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 425ms"
+      - "160 🆔vpnbaz 🔒 VL-TCP- ❔ XX 117ms"
+      - "161 🆔vpnbaz 🔓 VL-WS-N/A ❔ XX 343ms"
+      - "162 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 15ms"
+      - "163 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "164 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 15ms"
+      - "165 🆔vpnbaz 🔒 VL-TCP- ❔ XX 142ms"
+      - "166 🆔vpnbaz 🔒 VL-TCP- ❔ XX 127ms"
+      - "167 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "168 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 7ms"
+      - "169 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "170 🆔vpnbaz 🔒 VL-TCP- ❔ XX 95ms"
+      - "171 🆔vpnbaz 🔒 VL-TCP- ❔ XX down"
+      - "172 🆔vpnbaz 🔒 VL-WS-N/A ❔ XX 84ms"
+      - "173 🆔vpnbaz 🔒 VL-TCP- ❔ XX 177ms"
+      - "174 🆔vpnbaz 🔒 VL-TCP- ❔ XX 344ms"
+      - "175 🆔vpnbaz 🔒 VL-TCP- ❔ XX 126ms"
+      - "176 🆔vpnbaz 🔒 VL-TCP- ❔ XX down"
+      - "177 🆔capoit 🔓 VL-TCP-N/A ❔ XX down"
+      - "178 🆔capoit 🔓 VL-TCP-N/A ❔ XX down"
+      - "179 🆔begzarvpn 🔓 VL-TCP-N/A ❔ XX down"
+      - "180 🆔fr33c0nfig 🔒 VL-WS-N/A ❔ XX down"
+      - "181 🆔fr33c0nfig 🔓 VL-TCP-N/A ❔ XX down"
+      - "182 🆔fr33c0nfig 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "183 🆔fr33c0nfig 🔓 VL-TCP-N/A ❔ XX down"
+      - "184 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX 221ms"
+      - "185 🆔fr33c0nfig 🔓 VL-WS-N/A ❔ XX 330ms"
+      - "186 🆔fr33c0nfig 🔓 VL-TCP-N/A ❔ XX down"
+      - "187 🆔fr33c0nfig 🔓 VL-TCP-N/A ❔ XX down"
+      - "188 🆔fr33c0nfig 🔓 VL-TCP-N/A ❔ XX 270ms"
+      - "189 🆔fr33c0nfig 🔓 VL-TCP-N/A ❔ XX down"
+      - "190 🆔fr33c0nfig 🔒 VL-WS-N/A ❔ XX 23ms"
+      - "191 🆔fr33c0nfig 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "192 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX 106ms"
+      - "193 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX down"
+      - "194 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX down"
+      - "195 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX down"
+      - "196 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX down"
+      - "197 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX 29ms"
+      - "198 🆔fr33c0nfig 🔒 VL-GRPC-N/A ❔ XX 7ms"
+      - "199 🆔fr33c0nfig 🔒 VL-WS-N/A ❔ XX 16ms"
+      - "200 🆔fr33c0nfig 🔒 VL-WS-N/A ❔ XX 7ms"
+      - "201 🆔fr33c0nfig 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "202 🆔fr33c0nfig 🔒 VL-GRPC- ❔ XX down"
+      - "203 🆔fr33c0nfig 🔓 VL-GRPC-N/A ❔ XX 12ms"
+      - "204 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX down"
+      - "205 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX 81ms"
+      - "206 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX down"
+      - "207 🆔fr33c0nfig 🔒 VL-TCP- ❔ XX down"
+      - "208 🆔fr33c0nfig 🔒 VL-XHTTP- ❔ XX down"
+      - "209 🆔fr33c0nfig 🔓 VL-XHTTP-N/A ❔ XX 103ms"
+      - "210 🆔fr33c0nfig 🔓 VL-WS-N/A ❔ XX down"
+      - "211 🆔lrnbymaa 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "212 🆔lrnbymaa 🔒 VL-TCP- ❔ XX 185ms"
+      - "213 🆔lrnbymaa 🔒 VL-WS-N/A ❔ XX 19ms"
+      - "214 🆔lrnbymaa 🔒 VL-TCP- ❔ XX down"
+      - "215 🆔lrnbymaa 🔓 VL-TCP-N/A 🇩🇪 DE down"
+      - "216 🆔lrnbymaa 🔓 VL-TCP-N/A 🇩🇪 DE down"
+      - "217 🆔lrnbymaa 🔓 VL-TCP-N/A 🇩🇪 DE down"
+      - "218 🆔lrnbymaa 🔓 VL-TCP-N/A 🇩🇪 DE down"
+      - "219 🆔lrnbymaa 🔒 VL-TCP- 🇺🇸 US 38ms"
+      - "220 🆔lrnbymaa 🔓 VL-GRPC-N/A 🇺🇸 US 7ms"
+      - "221 🆔lrnbymaa 🔒 VL-WS-N/A 🇺🇸 US 7ms"
+      - "222 🆔lrnbymaa 🔓 VL-TCP-N/A 🇮🇷 IR 748ms"
+      - "223 🆔lrnbymaa 🔒 VL-WS-N/A 🇺🇸 US 21ms"
+      - "224 🆔lrnbymaa 🔒 VL-WS-N/A 🇺🇸 US 18ms"
+      - "225 🆔lrnbymaa 🔒 VL-WS-N/A 🇺🇸 US 138ms"
+      - "226 🆔lrnbymaa 🔒 VL-XHTTP- 🇩🇪 DE 186ms"
+      - "227 🆔lrnbymaa 🔓 VL-TCP-N/A 🇮🇷 IR 194ms"
+      - "228 🆔lrnbymaa 🔒 VL-TCP- 🇳🇱 NL 115ms"
+      - "229 🆔spotify_porteghali 🔓 VL-TCP-N/A ❔ XX 321ms"
+      - "230 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 7ms"
+      - "231 🆔ar14n24b 🔒 VL-GRPC- ❔ XX 115ms"
+      - "232 🆔ar14n24b 🔒 VL-GRPC- ❔ XX 111ms"
+      - "233 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 7ms"
+      - "234 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 783ms"
+      - "235 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 7ms"
+      - "236 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 34ms"
+      - "237 🆔ar14n24b 🔒 VL-TCP- ❔ XX 121ms"
+      - "238 🆔ar14n24b 🔒 VL-TCP- ❔ XX 270ms"
+      - "239 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "240 🆔ar14n24b 🔒 VL-TCP- ❔ XX 113ms"
+      - "241 🆔ar14n24b 🔒 VL-TCP- ❔ XX down"
+      - "242 🆔ar14n24b 🔒 VL-WS-N/A ❔ XX 90ms"
+      - "243 🆔ar14n24b 🔒 VL-TCP- ❔ XX 88ms"
+      - "244 🆔speeds_vpn1 🔓 VL-TCP-N/A ❔ XX 327ms"
+      - "245 🆔speeds_vpn1 🔓 VL-TCP-N/A ❔ XX 490ms"
+      - "246 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 7ms"
+      - "247 🆔speeds_vpn1 🔓 VL-WS-N/A ❔ XX down"
+      - "248 🆔speeds_vpn1 🔓 VL-TCP-N/A ❔ XX down"
+      - "249 🆔speeds_vpn1 🔓 VL-TCP-N/A ❔ XX 388ms"
+      - "250 🆔speeds_vpn1 🔓 VL-TCP-N/A ❔ XX down"
+      - "251 🆔speeds_vpn1 🔓 VL-TCP-N/A ❔ XX 200ms"
+      - "252 🆔speeds_vpn1 🔓 VL-TCP-N/A ❔ XX down"
+      - "253 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "254 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 88ms"
+      - "255 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 126ms"
+      - "256 🆔speeds_vpn1 🔒 VL-TCP-N/A ❔ XX down"
+      - "257 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 88ms"
+      - "258 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 14ms"
+      - "259 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "260 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 93ms"
+      - "261 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 17ms"
+      - "262 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "263 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "264 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 242ms"
+      - "265 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "266 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 6ms"
+      - "267 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 15ms"
+      - "268 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX down"
+      - "269 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX down"
+      - "270 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 290ms"
+      - "271 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX down"
+      - "272 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 93ms"
+      - "273 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 87ms"
+      - "274 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 93ms"
+      - "275 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX down"
+      - "276 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 92ms"
+      - "277 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 383ms"
+      - "278 🆔speeds_vpn1 🔒 VL-GRPC- ❔ XX down"
+      - "279 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX down"
+      - "280 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 27ms"
+      - "281 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 111ms"
+      - "282 🆔speeds_vpn1 🔒 VL-XHTTP-N/A ❔ XX 98ms"
+      - "283 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 126ms"
+      - "284 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 94ms"
+      - "285 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 103ms"
+      - "286 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 94ms"
+      - "287 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 92ms"
+      - "288 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 93ms"
+      - "289 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 108ms"
+      - "290 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 96ms"
+      - "291 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 153ms"
+      - "292 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 95ms"
+      - "293 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX down"
+      - "294 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX down"
+      - "295 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 90ms"
+      - "296 🆔speeds_vpn1 🔒 VL-TCP- ❔ XX 90ms"
+      - "297 🆔speeds_vpn1 🔒 VL-WS-N/A ❔ XX 88ms"
+      - "298 🆔speeds_vpn1 🔓 VL-TCP-N/A ❔ XX 257ms"
+      - "299 🆔speeds_vpn1 🔓 VL-HTTPUPGRADE-N/A ❔ XX 124ms"
+      - "300 🆔speeds_vpn1 🔓 VL-WS-N/A ❔ XX 6ms"
+      - "301 🆔v2ray1_ng 🔓 VL-TCP-N/A 🇮🇷 IR down"
+      - "302 🆔v2ray1_ng 🔓 VL-TCP-N/A 🇮🇷 IR down"
+      - "303 🆔v2ray1_ng 🔒 VL-WS-N/A 🇺🇸 US 22ms"
+      - "304 🆔v2ray1_ng 🔒 VL-WS-N/A 🇺🇸 US 23ms"
+      - "305 🆔madshopx 🔒 VL-TCP- ❔ XX 264ms"
+      - "306 🆔madshopx 🔒 VL-WS-N/A ❔ XX 215ms"
+      - "307 🆔madshopx 🔓 VL-TCP-N/A ❔ XX down"
+      - "308 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 391ms"
+      - "309 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 866ms"
+      - "310 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 466ms"
+      - "311 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 93ms"
+      - "312 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 121ms"
+      - "313 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 251ms"
+      - "314 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 416ms"
+      - "315 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 254ms"
+      - "316 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 257ms"
+      - "317 🆔vpnserverrr 🔓 VL-TCP-N/A ❔ XX 226ms"
+      - "318 🆔vpnserverrr 🔓 VL-TCP-N/A ❔ XX down"
+      - "319 🆔vpnserverrr 🔓 VL-GRPC-N/A ❔ XX 29ms"
+      - "320 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 93ms"
+      - "321 🆔vpnserverrr 🔓 VL-TCP-N/A ❔ XX 274ms"
+      - "322 🆔vpnserverrr 🔒 VL-TCP- ❔ XX 165ms"
+      - "323 🆔vpnserverrr 🔓 VL-TCP-N/A ❔ XX down"
+      - "324 🆔vpnserverrr 🔓 VL-TCP-N/A ❔ XX down"
+      - "325 🆔vpnserverrr 🔓 VL-TCP-N/A ❔ XX down"
+      - "326 🆔vpnserverrr 🔓 VL-TCP-N/A ❔ XX down"
+      - "327 🆔configx2ray 🔒 VL-TCP- ❔ XX 264ms"
+      - "328 🆔configx2ray 🔒 VL-WS-N/A ❔ XX 23ms"
+      - "329 🆔configx2ray 🔒 VL-WS-N/A ❔ XX 15ms"
+      - "330 🆔configx2ray 🔒 VL-WS-N/A ❔ XX 22ms"
+      - "331 👨🏻‍💻 DEVELOPED-BY @YEBEKHE"
+      - "332 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 93ms"
+      - "333 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 169ms"
+      - "334 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 260ms"
+      - "335 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 262ms"
+      - "336 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 230ms"
+      - "337 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 210ms"
+      - "338 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 211ms"
+      - "339 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 212ms"
+      - "340 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 147ms"
+      - "341 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 147ms"
+      - "342 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 148ms"
+      - "343 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 148ms"
+      - "344 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 129ms"
+      - "345 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX down"
+      - "346 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 187ms"
+      - "347 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 192ms"
+      - "348 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 206ms"
+      - "349 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 235ms"
+      - "350 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 284ms"
+      - "351 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 118ms"
+      - "352 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 91ms"
+      - "353 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 128ms"
+      - "354 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX down"
+      - "355 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX down"
+      - "356 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 96ms"
+      - "357 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 196ms"
+      - "358 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 205ms"
+      - "359 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 204ms"
+      - "360 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 134ms"
+      - "361 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 126ms"
+      - "362 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 100ms"
+      - "363 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 6ms"
+      - "364 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 6ms"
+      - "365 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 6ms"
+      - "366 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 6ms"
+      - "367 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 22ms"
+      - "368 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 7ms"
+      - "369 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 590ms"
+      - "370 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 95ms"
+      - "371 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX down"
+      - "372 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 113ms"
+      - "373 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 150ms"
+      - "374 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX down"
+      - "375 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 91ms"
+      - "376 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 250ms"
+      - "377 🆔soskeynet 🔒 SS-TCP-TLS ❔ XX 327ms"
+      - "378 🆔configfa 🔒 SS-TCP-TLS ❔ XX down"
+      - "379 🆔surfboardv2ray 🔒 SS-TCP-TLS ❔ XX 84ms"
+      - "380 🆔surfboardv2ray 🔒 SS-TCP-TLS ❔ XX 274ms"
+      - "381 🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 86ms"
+      - "382 🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 84ms"
+      - "383 🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 85ms"
+      - "384 🆔vpnbaz 🔒 SS-TCP-TLS ❔ XX 237ms"
+      - "385 🆔fr33c0nfig 🔒 SS-TCP-TLS ❔ XX down"
+      - "386 🆔fr33c0nfig 🔒 SS-TCP-TLS ❔ XX 97ms"
+      - "387 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX 110ms"
+      - "388 🆔ar14n24b 🔒 SS-TCP-TLS ❔ XX down"
+      - "389 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX down"
+      - "390 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX 198ms"
+      - "391 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX down"
+      - "392 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX 101ms"
+      - "393 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX 83ms"
+      - "394 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX 96ms"
+      - "395 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX down"
+      - "396 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX 337ms"
+      - "397 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX 134ms"
+      - "398 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX 91ms"
+      - "399 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX down"
+      - "400 🆔speeds_vpn1 🔒 SS-TCP-TLS ❔ XX down"
+      - "401 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 204ms"
+      - "402 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 175ms"
+      - "403 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 206ms"
+      - "404 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 83ms"
+      - "405 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 129ms"
+      - "406 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 179ms"
+      - "407 🆔vpnserverrr 🔒 SS-TCP-TLS ❔ XX 121ms"
+      - "408 🆔soskeynet 🔒 TR--N/A ❔ XX 84ms"
+      - "409 🆔soskeynet 🔒 TR-TCP-N/A ❔ XX 98ms"
+      - "410 🆔soskeynet 🔒 TR-TCP-N/A ❔ XX 96ms"
+      - "411 🆔soskeynet 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "412 🆔soskeynet 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "413 🆔soskeynet 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "414 🆔soskeynet 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "415 🆔soskeynet 🔒 TR-WS-N/A ❔ XX 31ms"
+      - "416 🆔soskeynet 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "417 🆔surfboardv2ray 🔒 TR-TCP-N/A ❔ XX down"
+      - "418 🆔vpnbaz 🔒 TR-WS-N/A ❔ XX 78ms"
+      - "419 🆔fr33c0nfig 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "420 🆔fr33c0nfig 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "421 🆔fr33c0nfig 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "422 🆔fr33c0nfig 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "423 🆔lrnbymaa 🔒 TR-WS-N/A 🇺🇸 US 7ms"
+      - "424 🆔ar14n24b 🔒 TR-WS-N/A ❔ XX 27ms"
+      - "425 🆔vpnserverrr 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "426 🆔vpnserverrr 🔒 TR-WS-N/A ❔ XX 6ms"
+      - "427 🆔soskeynet 🔓 VM-WS-N/A 🇺🇸 US 60ms"
+      - "428 🆔soskeynet 🔒 VM-WS-TLS 🇭🇰 HK 567ms"
+      - "429 🆔soskeynet 🔒 VM-WS-TLS 🇭🇰 HK 579ms"
+      - "430 🆔soskeynet 🔓 VM-WS-N/A 🇭🇺 HU 192ms"
+      - "431 🆔soskeynet 🔒 VM-WS-TLS 🇺🇸 US 18ms"
+      - "432 🆔soskeynet 🔓 VM-WS-N/A 🇳🇱 NL 87ms"
+      - "433 🆔soskeynet 🔓 VM-WS-N/A 🇺🇸 US 6ms"
+      - "434 🆔soskeynet 🔓 VM-WS-N/A 🇺🇸 US 6ms"
+      - "435 🆔configfa 🔓 VM-WS-TLS ❔ XX 6ms"
+      - "436 🆔fr33c0nfig 🔒 VM-TCP-TLS ❔ XX 368ms"
+      - "437 🆔fr33c0nfig 🔒 VM-TCP- ❔ XX down"
+      - "438 🆔fr33c0nfig 🔓 VM-WS-N/A ❔ XX 109ms"
+      - "439 🆔fr33c0nfig 🔓 VM-WS-N/A ❔ XX 6ms"
+      - "440 🆔fr33c0nfig 🔓 VM-TCP-N/A ❔ XX 6ms"
+      - "441 🆔lrnbymaa 🔓 VM-WS-N/A ❔ XX 15ms"
+      - "442 🆔lrnbymaa 🔓 VM-WS-N/A ❔ XX down"
+      - "443 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 6ms"
+      - "444 🆔ar14n24b 🔓 VM-TCP-N/A ❔ XX down"
+      - "445 🆔ar14n24b 🔓 VM-WS-N/A ❔ XX 6ms"
+      - "446 🆔vpnserverrr 🔒 VM-WS-TLS ❔ XX 91ms"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

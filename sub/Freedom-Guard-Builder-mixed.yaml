@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🌐 Hysteria-TLS | @Express_alaki | src @ConfigX2ray","type":"hysteria2","server":"5.175.249.174","port":35000,"password":"b4bd0613-ff7c-4f2f-954d-185915e6ddad"}
   - {"name":"2 ⚜️𝗝𝗼𝗶𝗻 ➠ @tik7net_vpn   چنل تلگرام 🇭🇰 Hong Kong","type":"vless","server":"95.214.181.51","port":443,"uuid":"213325c6-ef4b-4cdb-850b-24a06f2865c8","udp":true,"tls":true,"network":"tcp","servername":"www.debian.org"}
@@ -103,16 +261,17 @@ proxies:
   - {"name":"84 @chillguy_vpn","type":"vmess","server":"165.140.216.141","port":443,"uuid":"e7d72a8d-26f2-4b54-b366-0c43e0bcba7d","alterId":0,"cipher":"auto","udp":true}
   - {"name":"85 🇺🇸[openproxylist.com] vmess-US","type":"vmess","server":"m07.tk4433.com","port":2053,"uuid":"5e2b3a4d-bd24-4a58-f55d-ed7bdcd421d3","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🌐 Hysteria-TLS | @Express_alaki | src @ConfigX2ray"
       - "2 ⚜️𝗝𝗼𝗶𝗻 ➠ @tik7net_vpn   چنل تلگرام 🇭🇰 Hong Kong"
@@ -199,6 +358,156 @@ proxy-groups:
       - "83 🇪🇪[openproxylist.com] vmess-EE"
       - "84 @chillguy_vpn"
       - "85 🇺🇸[openproxylist.com] vmess-US"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🌐 Hysteria-TLS | @Express_alaki | src @ConfigX2ray"
+      - "2 ⚜️𝗝𝗼𝗶𝗻 ➠ @tik7net_vpn   چنل تلگرام 🇭🇰 Hong Kong"
+      - "3 ✅| 👉👉 @𝗫𝘃𝗽𝗻𝗽𝗹𝘂𝘀_𝗯𝗼𝘁 👈👈 |📶𝙰𝚂𝙸𝙰𝚃𝙴𝙲𝙷"
+      - "4 @chillguy_vpn"
+      - "5 🇮🇹 TCP-Reality | @Express_alaki | src @v2nodes"
+      - "6 @chillguy_vpn"
+      - "7 @Enzewa_Network👈جوین‌شوپرسرعت‌وصل‌شی"
+      - "8 @chillguy_vpn"
+      - "9 @chillguy_vpn"
+      - "10 @chillguy_vpn"
+      - "11 @@irmeliy -🤍 عضو شو از سرورا جا نمونی`"
+      - "12 @chillguy_vpn"
+      - "13 @chillguy_vpn"
+      - "14 🌐 TCP-Reality | @Express_alaki | src @anty_filter"
+      - "15 @Proxy_sh 3410`"
+      - "16 @V2ray_confiig`"
+      - "17 🇸🇪 TCP-Reality | @Express_alaki | src @v2nodes"
+      - "18 @chillguy_vpn"
+      - "19 @chillguy_vpn"
+      - "20 @V2ray_confiig`"
+      - "21 @chillguy_vpn"
+      - "22 @iProxyChannel 3"
+      - "23 𝐉𝐨𝐢𝐧➠@𝘁𝗲𝗹𝗲𝗿𝗮𝘆𝘃𝗽𝗻 :کانال تلگرام⚡️"
+      - "24 🆔Telegram : @planB_net"
+      - "25 @chillguy_vpn"
+      - "26 @chillguy_vpn"
+      - "27 @chillguy_vpn"
+      - "28 🔵@chillguy_vpn"
+      - "29 @FG_Link"
+      - "30 US🇺🇸"
+      - "31 🔵@chillguy_vpn"
+      - "32 کانال تلگرام : Free_VPN_CH@"
+      - "33 @FG_Link"
+      - "34 @chillguy_vpn"
+      - "35 🌐 WS-None | @Express_alaki | src @V2HUBIR```"
+      - "36 @sina_tec"
+      - "37 🌐 TCP-Reality | @Express_alaki | src @V2rayProxy"
+      - "38 @chillguy_vpn"
+      - "39 🇺🇸 GRPC-None | @Express_alaki | src @DeamNet_proxy"
+      - "40 @chillguy_vpn"
+      - "41 @FG_Link"
+      - "42 @FG_Link"
+      - "43 🔵@chillguy_vpn"
+      - "44 @FG_Link"
+      - "45 @FG_Link"
+      - "46 🌐 WS-TLS | @Express_alaki | src @V2rayng_Fast"
+      - "47 کانال تلگرام : Free_VPN_CH@```"
+      - "48 🌐 WS-TLS | @Express_alaki | src @anotherme_night"
+      - "49 @sina_tec <=MTN"
+      - "50 سرور رایگان متصل بیشتر در چنل🌊 @vmess_ir"
+      - "51 @chillguy_vpn"
+      - "52 🔵@chillguy_vpn"
+      - "53 217.144.186.49"
+      - "54 🇫🇷 WS-Reality 📁 @DeamNet_proxy"
+      - "55 For All IR"
+      - "56 @chillguy_vpn"
+      - "57 @chillguy_vpn"
+      - "58 @chillguy_vpn"
+      - "59 @chillguy_vpn"
+      - "60 🌐 WS-TLS | @Express_alaki | src @anotherme_night```"
+      - "61 @chillguy_vpn"
+      - "62 @chillguy_vpn"
+      - "63 🇸🇬 | 👉👉 @𝗫𝘃𝗽𝗻𝗽𝗹𝘂𝘀_𝗯𝗼𝘁 👈👈 |📶 𝙸𝚁𝙰𝙽𝙲𝙴𝙻𝙻"
+      - "64 @chillguy_vpn"
+      - "65 @Enzewa_Network👈جوین‌نشی‌قطع‌میشی"
+      - "66 @chillguy_vpn"
+      - "67 @FG_Link"
+      - "68 VIP 💫@irmeliy"
+      - "69 ➤ @netshekan99`"
+      - "70 🌐 WS-TLS | @Express_alaki | src @v2Line"
+      - "71 🌐 WS-TLS | @Express_alaki | src @DailyV2RY"
+      - "72 @sina_tec <=MTN🤍"
+      - "73 @sina_tec <=ALL NET"
+      - "74 @sina_tec کانفیگ های بیشتر در کانال"
+      - "75 🇺🇸[openproxylist.com] vmess-US"
+      - "76 🌐 TCP-None | @express_alaki"
+      - "77 🇺🇸[openproxylist.com] vmess-US"
+      - "78 @v2_mod_shop🚀 🇨🇦"
+      - "79 @sina_tec <=MTN"
+      - "80 🇺🇸[openproxylist.com] vmess-US"
+      - "81 @sina_tec <=MCI"
+      - "82 🇭🇰[openproxylist.com] vmess-HK"
+      - "83 🇪🇪[openproxylist.com] vmess-EE"
+      - "84 @chillguy_vpn"
+      - "85 🇺🇸[openproxylist.com] vmess-US"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

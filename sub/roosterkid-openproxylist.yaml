@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🇸🇪[openproxylist.com] vless-SE","type":"vless","server":"dd.openaccessnode.com","port":2197,"uuid":"75193bef-8d8f-e823-41e0-2dd083dc1399","udp":true,"tls":true,"network":"tcp","servername":"api.push.apple.com"}
   - {"name":"2 🇷🇺[openproxylist.com] vless-RU","type":"vless","server":"109.120.180.30","port":443,"uuid":"a7b1b295-89c0-4794-bc3b-13af6cf63312","udp":true,"tls":true,"network":"tcp","servername":"sun6-21.userapi.com"}
@@ -137,16 +295,17 @@ proxies:
   - {"name":"118 🇭🇰[openproxylist.com] vmess-HK","type":"vmess","server":"n1761296880.lie5d.cyou","port":443,"uuid":"1effac4a-cdb8-4717-a10c-da97263c802c","alterId":0,"cipher":"auto","udp":true}
   - {"name":"119 🇳🇱[openproxylist.com] vmess-NL","type":"vmess","server":"92.246.87.170","port":18355,"uuid":"caf921c7-ac63-40bc-faa1-cda097fd7e42","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🇸🇪[openproxylist.com] vless-SE"
       - "2 🇷🇺[openproxylist.com] vless-RU"
@@ -267,6 +426,190 @@ proxy-groups:
       - "117 🇭🇰[openproxylist.com] vmess-HK"
       - "118 🇭🇰[openproxylist.com] vmess-HK"
       - "119 🇳🇱[openproxylist.com] vmess-NL"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🇸🇪[openproxylist.com] vless-SE"
+      - "2 🇷🇺[openproxylist.com] vless-RU"
+      - "3 🇳🇱[openproxylist.com] vless-NL"
+      - "4 🇺🇸[openproxylist.com] vless-US"
+      - "5 🇸🇪[openproxylist.com] vless-SE"
+      - "6 🇷🇺[openproxylist.com] vless-RU"
+      - "7 🇫🇮[openproxylist.com] vless-FI"
+      - "8 🇷🇺[openproxylist.com] vless-RU"
+      - "9 🇷🇺[openproxylist.com] vless-RU"
+      - "10 🇫🇮[openproxylist.com] vless-FI"
+      - "11 🇸🇬[openproxylist.com] vless-SG"
+      - "12 🇩🇪[openproxylist.com] vless-DE"
+      - "13 🇳🇱[openproxylist.com] vless-NL"
+      - "14 🇷🇺[openproxylist.com] vless-RU"
+      - "15 🇺🇦[openproxylist.com] vless-UA"
+      - "16 🇫🇮[openproxylist.com] vless-FI"
+      - "17 🇩🇪[openproxylist.com] vless-DE"
+      - "18 🇹🇷[openproxylist.com] vless-TR"
+      - "19 🇫🇮[openproxylist.com] vless-FI"
+      - "20 🇺🇸[openproxylist.com] vless-US"
+      - "21 🇸🇪[openproxylist.com] vless-SE"
+      - "22 🇺🇸[openproxylist.com] vless-US"
+      - "23 🇵🇱[openproxylist.com] vless-PL"
+      - "24 🇺🇸[openproxylist.com] vless-US"
+      - "25 🇨🇦[openproxylist.com] vless-CA"
+      - "26 🇩🇪[openproxylist.com] vless-DE"
+      - "27 🏳[openproxylist.com] vless-"
+      - "28 🇳🇱[openproxylist.com] vless-NL"
+      - "29 🇳🇱[openproxylist.com] vless-NL"
+      - "30 🇩🇪[openproxylist.com] vless-DE"
+      - "31 🇩🇪[openproxylist.com] vless-DE"
+      - "32 🇳🇱[openproxylist.com] vless-NL"
+      - "33 🇯🇵[openproxylist.com] vless-JP"
+      - "34 🇦🇪[openproxylist.com] vless-AE"
+      - "35 🇳🇱[openproxylist.com] vless-NL"
+      - "36 🇰🇿[openproxylist.com] vless-KZ"
+      - "37 🇺🇸[openproxylist.com] vless-US"
+      - "38 🇺🇸[openproxylist.com] vless-US"
+      - "39 🇮🇳[openproxylist.com] vless-IN"
+      - "40 🇬🇧[openproxylist.com] vless-GB"
+      - "41 🇬🇧[openproxylist.com] vless-GB"
+      - "42 🇦🇲[openproxylist.com] vless-AM"
+      - "43 🇺🇸[openproxylist.com] vless-US"
+      - "44 🇷🇺[openproxylist.com] vless-RU"
+      - "45 🇷🇺[openproxylist.com] vless-RU"
+      - "46 🇺🇸[openproxylist.com] vless-US"
+      - "47 🇦🇲[openproxylist.com] vless-AM"
+      - "48 🇳🇱[openproxylist.com] vless-NL"
+      - "49 🇱🇻[openproxylist.com] vless-LV"
+      - "50 🇺🇦[openproxylist.com] vless-UA"
+      - "51 🇫🇮[openproxylist.com] vless-FI"
+      - "52 🇩🇪[openproxylist.com] vless-DE"
+      - "53 🇱🇻[openproxylist.com] vless-LV"
+      - "54 🇱🇻[openproxylist.com] vless-LV"
+      - "55 🇩🇪[openproxylist.com] vless-DE"
+      - "56 🇫🇷[openproxylist.com] vless-FR"
+      - "57 🇩🇪[openproxylist.com] vless-DE"
+      - "58 🇩🇪[openproxylist.com] vless-DE"
+      - "59 🇨🇦[openproxylist.com] vless-CA"
+      - "60 🇭🇰[openproxylist.com] vless-HK"
+      - "61 🇺🇸[openproxylist.com] vless-US"
+      - "62 🇹🇷[openproxylist.com] vless-TR"
+      - "63 🇺🇸[openproxylist.com] vless-US"
+      - "64 🇺🇸[openproxylist.com] vless-US"
+      - "65 🇵🇱[openproxylist.com] vless-PL"
+      - "66 🇺🇸[openproxylist.com] vless-US"
+      - "67 🇺🇸[openproxylist.com] vless-US"
+      - "68 🇩🇪[openproxylist.com] vless-DE"
+      - "69 🇸🇪[openproxylist.com] vless-SE"
+      - "70 🇳🇱[openproxylist.com] vless-NL"
+      - "71 🇹🇷[openproxylist.com] vless-TR"
+      - "72 🇺🇸[openproxylist.com] ss-US"
+      - "73 🇬🇧[openproxylist.com] ss-GB"
+      - "74 🇭🇰[openproxylist.com] ss-HK"
+      - "75 🇬🇧[openproxylist.com] ss-GB"
+      - "76 🇩🇪[openproxylist.com] ss-DE"
+      - "77 🇬🇧[openproxylist.com] ss-GB"
+      - "78 🇧🇬[openproxylist.com] ss-BG"
+      - "79 🇨🇭[openproxylist.com] ss-CH"
+      - "80 🇨🇴[openproxylist.com] ss-CO"
+      - "81 🇺🇸[openproxylist.com] ss-US"
+      - "82 🇳🇱[openproxylist.com] ss-NL"
+      - "83 🇳🇱[openproxylist.com] ss-NL"
+      - "84 🇨🇭[openproxylist.com] ss-CH"
+      - "85 🇩🇪[openproxylist.com] ss-DE"
+      - "86 🇫🇷[openproxylist.com] ss-FR"
+      - "87 🇺🇿[openproxylist.com] ss-UZ"
+      - "88 🇷🇺[openproxylist.com] ss-RU"
+      - "89 🏳[openproxylist.com] ss-"
+      - "90 🇯🇵[openproxylist.com] ss-JP"
+      - "91 🇸🇪[openproxylist.com] ss-SE"
+      - "92 🇺🇸[openproxylist.com] ss-US"
+      - "93 🇸🇪[openproxylist.com] ss-SE"
+      - "94 🇨🇦[openproxylist.com] ss-CA"
+      - "95 🇬🇧[openproxylist.com] ss-GB"
+      - "96 🇫🇷[openproxylist.com] trojan-FR"
+      - "97 🇺🇸[openproxylist.com] trojan-US"
+      - "98 🇩🇪[openproxylist.com] trojan-DE"
+      - "99 🇭🇰[openproxylist.com] trojan-HK"
+      - "100 🇸🇬[openproxylist.com] trojan-SG"
+      - "101 🇺🇸[openproxylist.com] trojan-US"
+      - "102 🇸🇬[openproxylist.com] trojan-SG"
+      - "103 🇬🇧[openproxylist.com] trojan-GB"
+      - "104 🇸🇬[openproxylist.com] trojan-SG"
+      - "105 🇮🇩[openproxylist.com] vmess-ID"
+      - "106 🇩🇪[openproxylist.com] vmess-DE"
+      - "107 🇭🇰[openproxylist.com] vmess-HK"
+      - "108 🇭🇰[openproxylist.com] vmess-HK"
+      - "109 🇭🇰[openproxylist.com] vmess-HK"
+      - "110 🇭🇰[openproxylist.com] vmess-HK"
+      - "111 🇭🇰[openproxylist.com] vmess-HK"
+      - "112 🇭🇰[openproxylist.com] vmess-HK"
+      - "113 🇭🇰[openproxylist.com] vmess-HK"
+      - "114 🇭🇰[openproxylist.com] vmess-HK"
+      - "115 🇭🇰[openproxylist.com] vmess-HK"
+      - "116 🇯🇵[openproxylist.com] vmess-JP"
+      - "117 🇭🇰[openproxylist.com] vmess-HK"
+      - "118 🇭🇰[openproxylist.com] vmess-HK"
+      - "119 🇳🇱[openproxylist.com] vmess-NL"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

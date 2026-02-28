@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🇷🇺 VK — #1","type":"vless","server":"212.193.153.187","port":443,"uuid":"642e5ad8-bd76-07d0-8b5c-b4d0628f07bc","udp":true,"tls":true,"network":"ws","servername":"lk-cdn.deploy-assure.ru"}
   - {"name":"2 🇷🇺 VK — #2","type":"vless","server":"109.120.189.160","port":443,"uuid":"8e0d168b-f984-07d0-865f-88b9a46fb48f","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
@@ -279,16 +437,17 @@ proxies:
   - {"name":"260 🇺🇸 United States — #586","type":"vless","server":"95.163.210.159","port":443,"uuid":"4bc1f812-c4a5-4085-8e86-270061cdc1c8","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
   - {"name":"261 🇻🇳 Vietnam — #588","type":"vless","server":"144.31.30.86","port":443,"uuid":"12adb397-701e-0002-91f6-e0c766f87fa4","udp":true,"tls":true,"network":"tcp","servername":"nl01r.easyserf.top"}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🇷🇺 VK — #1"
       - "2 🇷🇺 VK — #2"
@@ -551,6 +710,332 @@ proxy-groups:
       - "259 🇺🇸 United States — #585"
       - "260 🇺🇸 United States — #586"
       - "261 🇻🇳 Vietnam — #588"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🇷🇺 VK — #1"
+      - "2 🇷🇺 VK — #2"
+      - "3 🇷🇺 VK — #3"
+      - "4 🇷🇺 VK — #4"
+      - "5 🇷🇺 VK — #5"
+      - "6 🇷🇺 VK — #6"
+      - "7 🇷🇺 VK — #7"
+      - "8 🇷🇺 VK — #8"
+      - "9 🇷🇺 VK — #9"
+      - "10 🇷🇺 VK — #10"
+      - "11 🇷🇺 VK — #11"
+      - "12 🇷🇺 VK — #12"
+      - "13 🇷🇺 VK — #13"
+      - "14 🇷🇺 VK — #14"
+      - "15 🇷🇺 VK — #15"
+      - "16 🇷🇺 VK — #16"
+      - "17 🇷🇺 VK — #17"
+      - "18 🇷🇺 VK — #18"
+      - "19 🇷🇺 VK — #19"
+      - "20 🇷🇺 VK — #20"
+      - "21 🇷🇺 VK — #21"
+      - "22 🇷🇺 VK — #22"
+      - "23 🇷🇺 VK — #23"
+      - "24 🇷🇺 VK — #24"
+      - "25 🇷🇺 VK — #25"
+      - "26 🇷🇺 VK — #26"
+      - "27 🇷🇺 VK — #27"
+      - "28 🇷🇺 VK — #28"
+      - "29 🇷🇺 VK — #29"
+      - "30 🇷🇺 VK — #30"
+      - "31 🇷🇺 VK — #31"
+      - "32 🇷🇺 VK — #32"
+      - "33 🇷🇺 VK — #33"
+      - "34 🇷🇺 VK — #34"
+      - "35 🇷🇺 VK — #35"
+      - "36 🇷🇺 VK — #36"
+      - "37 🇷🇺 VK — #37"
+      - "38 🇷🇺 VK — #38"
+      - "39 🇷🇺 VK — #39"
+      - "40 🇷🇺 VK — #40"
+      - "41 🇷🇺 VK — #41"
+      - "42 🇷🇺 VK — #42"
+      - "43 🇷🇺 VK — #43"
+      - "44 🇷🇺 VK — #44"
+      - "45 🇷🇺 VK — #53"
+      - "46 🇷🇺 VK — #55"
+      - "47 🇷🇺 VK — #56"
+      - "48 🇷🇺 VK — #57"
+      - "49 🇷🇺 VK — #58"
+      - "50 🇷🇺 VK — #63"
+      - "51 🇷🇺 VK — #64"
+      - "52 🇷🇺 VK — #65"
+      - "53 🇷🇺 VK — #66"
+      - "54 🇷🇺 VK — #68"
+      - "55 🇷🇺 VK — #72"
+      - "56 🇷🇺 VK — #75"
+      - "57 🇷🇺 VK — #76"
+      - "58 🇷🇺 VK — #77"
+      - "59 🇷🇺 VK — #78"
+      - "60 🇷🇺 VK — #81"
+      - "61 🇷🇺 VK — #108"
+      - "62 🇷🇺 VK — #115"
+      - "63 🇷🇺 VK — #121"
+      - "64 🇷🇺 Yandex — #122"
+      - "65 🇷🇺 Yandex — #123"
+      - "66 🇷🇺 Yandex — #124"
+      - "67 🇷🇺 Yandex — #125"
+      - "68 🇷🇺 Yandex — #126"
+      - "69 🇷🇺 Yandex — #127"
+      - "70 🇷🇺 Yandex — #128"
+      - "71 🇷🇺 Yandex — #129"
+      - "72 🇷🇺 Yandex — #130"
+      - "73 🇷🇺 Yandex — #131"
+      - "74 🇷🇺 Yandex — #133"
+      - "75 🇷🇺 Yandex — #134"
+      - "76 🇷🇺 CDNvideo — #143"
+      - "77 🇷🇺 Selectel — #144"
+      - "78 🇷🇺 Selectel — #153"
+      - "79 🇷🇺 Selectel — #159"
+      - "80 🇷🇺 Selectel — #160"
+      - "81 🇷🇺 Selectel — #161"
+      - "82 🇷🇺 Serv.Host — #162"
+      - "83 🇷🇺 Serv.Host — #163"
+      - "84 🇷🇺 UFO Hosting — #166"
+      - "85 🇷🇺 UFO Hosting — #168"
+      - "86 🇷🇺 UFO Hosting — #169"
+      - "87 🇷🇺 UFO Hosting — #172"
+      - "88 🇦🇪 United Arab Emirates — #173"
+      - "89 🇦🇲 Armenia — #175"
+      - "90 🇦🇹 Austria — #176"
+      - "91 🇩🇪 Germany — #178"
+      - "92 🇩🇪 Germany — #179"
+      - "93 🇩🇪 Germany — #181"
+      - "94 🇩🇪 Germany — #182"
+      - "95 🇩🇪 Germany — #183"
+      - "96 🇩🇪 Germany — #184"
+      - "97 🇩🇪 Germany — #186"
+      - "98 🇩🇪 Germany — #187"
+      - "99 🇩🇪 Germany — #212"
+      - "100 🇩🇪 Germany — #213"
+      - "101 🇩🇪 Germany — #215"
+      - "102 🇩🇪 Germany — #217"
+      - "103 🇩🇪 Germany — #218"
+      - "104 🇩🇪 Germany — #219"
+      - "105 🇩🇪 Germany — #220"
+      - "106 🇩🇪 Germany — #221"
+      - "107 🇩🇪 Germany — #223"
+      - "108 🇩🇪 Germany — #225"
+      - "109 🇩🇪 Germany — #226"
+      - "110 🇩🇪 Germany — #227"
+      - "111 🇩🇪 Germany — #228"
+      - "112 🇩🇪 Germany — #229"
+      - "113 🇩🇪 Germany — #237"
+      - "114 🇩🇪 Germany — #239"
+      - "115 🇩🇪 Germany — #249"
+      - "116 🇩🇪 Germany — #250"
+      - "117 🇩🇪 Germany — #251"
+      - "118 🇩🇪 Germany — #252"
+      - "119 🇩🇪 Germany — #254"
+      - "120 🇩🇪 Germany — #255"
+      - "121 🇩🇪 Germany — #257"
+      - "122 🇩🇪 Germany — #262"
+      - "123 🇩🇪 Germany — #263"
+      - "124 🇩🇪 Germany — #268"
+      - "125 🇩🇪 Germany — #269"
+      - "126 🇩🇪 Germany — #270"
+      - "127 🇩🇪 Germany — #272"
+      - "128 🇩🇪 Germany — #273"
+      - "129 🇩🇪 Germany — #274"
+      - "130 🇩🇪 Germany — #275"
+      - "131 🇩🇪 Germany — #276"
+      - "132 🇩🇪 Germany — #277"
+      - "133 🇩🇪 Germany — #290"
+      - "134 🇩🇪 Germany — #300"
+      - "135 🇩🇪 Germany — #301"
+      - "136 🇩🇪 Germany — #302"
+      - "137 🇩🇪 Germany — #303"
+      - "138 🇩🇪 Germany — #304"
+      - "139 🇩🇪 Germany — #306"
+      - "140 🇩🇪 Germany — #307"
+      - "141 🇩🇪 Germany — #308"
+      - "142 🇩🇪 Germany — #309"
+      - "143 🇩🇪 Germany — #318"
+      - "144 🇩🇪 Germany — #319"
+      - "145 🇩🇪 Germany — #321"
+      - "146 🇩🇪 Germany — #322"
+      - "147 🇩🇪 Germany — #323"
+      - "148 🇩🇪 Germany — #328"
+      - "149 🇩🇪 Germany — #332"
+      - "150 🇩🇪 Germany — #341"
+      - "151 🇩🇪 Germany — #342"
+      - "152 🇩🇪 Germany — #358"
+      - "153 🇩🇪 Germany — #359"
+      - "154 🇩🇪 Germany — #373"
+      - "155 🇩🇪 Germany — #374"
+      - "156 🇪🇪 Estonia — #381"
+      - "157 🇪🇪 Estonia — #382"
+      - "158 🇫🇮 Finland — #385"
+      - "159 🇫🇮 Finland — #386"
+      - "160 🇫🇮 Finland — #388"
+      - "161 🇫🇮 Finland — #390"
+      - "162 🇫🇮 Finland — #391"
+      - "163 🇫🇮 Finland — #392"
+      - "164 🇫🇮 Finland — #394"
+      - "165 🇫🇮 Finland — #395"
+      - "166 🇫🇮 Finland — #396"
+      - "167 🇫🇮 Finland — #397"
+      - "168 🇫🇮 Finland — #398"
+      - "169 🇫🇮 Finland — #399"
+      - "170 🇫🇮 Finland — #400"
+      - "171 🇫🇮 Finland — #401"
+      - "172 🇫🇮 Finland — #402"
+      - "173 🇫🇮 Finland — #403"
+      - "174 🇫🇮 Finland — #407"
+      - "175 🇫🇮 Finland — #408"
+      - "176 🇫🇮 Finland — #415"
+      - "177 🇫🇮 Finland — #420"
+      - "178 🇫🇮 Finland — #422"
+      - "179 🇫🇮 Finland — #426"
+      - "180 🇫🇮 Finland — #427"
+      - "181 🇫🇮 Finland — #430"
+      - "182 🇫🇮 Finland — #431"
+      - "183 🇫🇮 Finland — #437"
+      - "184 🇫🇮 Finland — #453"
+      - "185 🇫🇮 Finland — #454"
+      - "186 🇫🇮 Finland — #469"
+      - "187 🇫🇮 Finland — #471"
+      - "188 🇫🇷 France — #473"
+      - "189 🇫🇷 France — #477"
+      - "190 🇫🇷 France — #478"
+      - "191 🇫🇷 France — #480"
+      - "192 🇫🇷 France — #482"
+      - "193 🇫🇷 France — #485"
+      - "194 🇱🇻 Latvia — #486"
+      - "195 🇱🇻 Latvia — #487"
+      - "196 🇱🇻 Latvia — #489"
+      - "197 🇱🇻 Latvia — #490"
+      - "198 🇲🇩 Moldova — #491"
+      - "199 🇲🇩 Moldova — #492"
+      - "200 🇲🇩 Moldova — #493"
+      - "201 🇲🇩 Moldova — #494"
+      - "202 🇲🇩 Moldova — #495"
+      - "203 🇲🇩 Moldova — #496"
+      - "204 🇲🇩 Moldova — #497"
+      - "205 🇲🇩 Moldova — #498"
+      - "206 🇲🇩 Moldova — #499"
+      - "207 🇲🇩 Moldova — #500"
+      - "208 🇲🇩 Moldova — #501"
+      - "209 🇲🇩 Moldova — #503"
+      - "210 🇲🇩 Moldova — #505"
+      - "211 🇲🇩 Moldova — #506"
+      - "212 🇳🇱 The Netherlands — #507"
+      - "213 🇳🇱 The Netherlands — #508"
+      - "214 🇳🇱 The Netherlands — #509"
+      - "215 🇳🇱 The Netherlands — #510"
+      - "216 🇳🇱 The Netherlands — #511"
+      - "217 🇳🇱 The Netherlands — #516"
+      - "218 🇳🇱 The Netherlands — #517"
+      - "219 🇳🇱 The Netherlands — #518"
+      - "220 🇳🇱 The Netherlands — #519"
+      - "221 🇳🇱 The Netherlands — #520"
+      - "222 🇳🇱 The Netherlands — #522"
+      - "223 🇳🇱 The Netherlands — #523"
+      - "224 🇳🇱 The Netherlands — #525"
+      - "225 🇳🇱 The Netherlands — #527"
+      - "226 🇳🇱 The Netherlands — #528"
+      - "227 🇳🇱 The Netherlands — #530"
+      - "228 🇳🇱 The Netherlands — #544"
+      - "229 🇳🇱 The Netherlands — #545"
+      - "230 🇵🇱 Poland — #547"
+      - "231 🇵🇱 Poland — #548"
+      - "232 🇵🇱 Poland — #549"
+      - "233 🇵🇱 Poland — #550"
+      - "234 🇵🇱 Poland — #551"
+      - "235 🇵🇱 Poland — #552"
+      - "236 🇵🇱 Poland — #553"
+      - "237 🇵🇱 Poland — #554"
+      - "238 🇵🇱 Poland — #556"
+      - "239 🇵🇱 Poland — #558"
+      - "240 🇸🇪 Sweden — #559"
+      - "241 🇸🇪 Sweden — #560"
+      - "242 🇸🇪 Sweden — #561"
+      - "243 🇸🇪 Sweden — #562"
+      - "244 🇸🇪 Sweden — #564"
+      - "245 🇸🇪 Sweden — #565"
+      - "246 🇺🇦 Ukraine — #569"
+      - "247 🇺🇦 Ukraine — #570"
+      - "248 🇺🇦 Ukraine — #571"
+      - "249 🇺🇦 Ukraine — #572"
+      - "250 🇺🇦 Ukraine — #574"
+      - "251 🇺🇦 Ukraine — #575"
+      - "252 🇺🇦 Ukraine — #578"
+      - "253 🇺🇦 Ukraine — #579"
+      - "254 🇺🇦 Ukraine — #580"
+      - "255 🇺🇸 United States — #581"
+      - "256 🇺🇸 United States — #582"
+      - "257 🇺🇸 United States — #583"
+      - "258 🇺🇸 United States — #584"
+      - "259 🇺🇸 United States — #585"
+      - "260 🇺🇸 United States — #586"
+      - "261 🇻🇳 Vietnam — #588"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

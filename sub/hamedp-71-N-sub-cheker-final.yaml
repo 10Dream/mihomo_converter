@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 hamedp71::🇩🇪","type":"vless","server":"192.124.178.227","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
   - {"name":"2 hamedp71::❓","type":"vless","server":"57.129.49.1","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
@@ -146,16 +304,17 @@ proxies:
   - {"name":"127 hamedp71::🇯🇵","type":"vmess","server":"n1753598452.wpg27.xyz","port":443,"uuid":"4f23eb7c-ef2f-43b0-90dd-f2b8a75954a5","alterId":0,"cipher":"auto","udp":true}
   - {"name":"128 hamedp71::🇦🇺","type":"vmess","server":"sy4.620720.xyz","port":443,"uuid":"516d8a7a-3f0b-41d3-bad0-246116381516","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 hamedp71::🇩🇪"
       - "2 hamedp71::❓"
@@ -285,6 +444,199 @@ proxy-groups:
       - "126 hamedp71::🇺🇸"
       - "127 hamedp71::🇯🇵"
       - "128 hamedp71::🇦🇺"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 hamedp71::🇩🇪"
+      - "2 hamedp71::❓"
+      - "3 hamedp71::❓"
+      - "4 hamedp71::🇳🇱"
+      - "5 hamedp71::🇫🇮"
+      - "6 hamedp71::🇩🇪"
+      - "7 hamedp71::🇫🇮"
+      - "8 hamedp71::❓"
+      - "9 hamedp71::❓"
+      - "10 hamedp71::❓"
+      - "11 hamedp71::❓"
+      - "12 hamedp71::❓"
+      - "13 hamedp71::❓"
+      - "14 hamedp71::❓"
+      - "15 hamedp71::❓"
+      - "16 hamedp71::❓"
+      - "17 hamedp71::❓"
+      - "18 hamedp71::❓"
+      - "19 hamedp71::❓"
+      - "20 hamedp71::❓"
+      - "21 hamedp71::❓"
+      - "22 hamedp71::❓"
+      - "23 hamedp71::❓"
+      - "24 hamedp71::❓"
+      - "25 hamedp71::❓"
+      - "26 hamedp71::❓"
+      - "27 hamedp71::❓"
+      - "28 hamedp71::❓"
+      - "29 hamedp71::🇳🇱"
+      - "30 hamedp71::❓"
+      - "31 hamedp71::❓"
+      - "32 hamedp71::❓"
+      - "33 hamedp71::❓"
+      - "34 hamedp71::❓"
+      - "35 hamedp71::🇺🇸"
+      - "36 hamedp71::🇭🇰"
+      - "37 hamedp71::❓"
+      - "38 hamedp71::❓"
+      - "39 hamedp71::❓"
+      - "40 hamedp71::🇺🇸"
+      - "41 hamedp71::🇨🇭"
+      - "42 hamedp71::🇨🇭"
+      - "43 hamedp71::🇺🇸"
+      - "44 hamedp71::❓"
+      - "45 hamedp71::❓"
+      - "46 hamedp71::🇳🇱"
+      - "47 hamedp71::🇬🇷"
+      - "48 hamedp71::🇨🇭"
+      - "49 hamedp71::❓"
+      - "50 hamedp71::❓"
+      - "51 hamedp71::❓"
+      - "52 hamedp71::🇨🇭"
+      - "53 hamedp71::❓"
+      - "54 hamedp71::❓"
+      - "55 hamedp71::❓"
+      - "56 hamedp71::🇺🇸"
+      - "57 hamedp71::🇺🇸"
+      - "58 hamedp71::🇺🇸"
+      - "59 hamedp71::🇺🇸"
+      - "60 hamedp71::❓"
+      - "61 hamedp71::❓"
+      - "62 hamedp71::❓"
+      - "63 hamedp71::❓"
+      - "64 hamedp71::❓"
+      - "65 hamedp71::❓"
+      - "66 hamedp71::❓"
+      - "67 hamedp71::🇩🇪"
+      - "68 hamedp71::🇵🇱"
+      - "69 hamedp71::🇳🇱"
+      - "70 hamedp71::🇳🇱"
+      - "71 hamedp71::🇺🇸"
+      - "72 hamedp71::🇳🇱"
+      - "73 hamedp71::🇳🇱"
+      - "74 hamedp71::❓"
+      - "75 hamedp71::❓"
+      - "76 hamedp71::❓"
+      - "77 hamedp71::🇳🇱"
+      - "78 hamedp71::🇳🇱"
+      - "79 hamedp71::❓"
+      - "80 hamedp71::❓"
+      - "81 hamedp71::❓"
+      - "82 hamedp71::❓"
+      - "83 hamedp71::❓"
+      - "84 hamedp71::❓"
+      - "85 hamedp71::🇲🇽"
+      - "86 hamedp71::❓"
+      - "87 hamedp71::❓"
+      - "88 hamedp71::❓"
+      - "89 hamedp71::❓"
+      - "90 hamedp71::❓"
+      - "91 hamedp71::🇩🇪"
+      - "92 hamedp71::🇳🇱"
+      - "93 hamedp71::❓"
+      - "94 hamedp71::🇳🇱"
+      - "95 hamedp71::🇳🇱"
+      - "96 hamedp71::🇳🇱"
+      - "97 hamedp71::🇳🇱"
+      - "98 hamedp71::🇵🇱"
+      - "99 hamedp71::🇵🇱"
+      - "100 hamedp71::🇳🇱"
+      - "101 hamedp71::🇳🇱"
+      - "102 hamedp71::🇵🇱"
+      - "103 hamedp71::❓"
+      - "104 hamedp71::❓"
+      - "105 hamedp71::🇯🇵"
+      - "106 hamedp71::🇺🇸"
+      - "107 hamedp71::🇭🇰"
+      - "108 hamedp71::🇺🇸"
+      - "109 hamedp71::🇭🇰"
+      - "110 hamedp71::🇭🇰"
+      - "111 hamedp71::🇨🇦"
+      - "112 hamedp71::🇸🇬"
+      - "113 hamedp71::🇺🇸"
+      - "114 hamedp71::🇲🇾"
+      - "115 hamedp71::🇰🇿"
+      - "116 hamedp71::🇰🇿"
+      - "117 hamedp71::🇭🇰"
+      - "118 hamedp71::🇲🇾"
+      - "119 hamedp71::🇭🇰"
+      - "120 hamedp71::🇫🇷"
+      - "121 hamedp71::🇭🇰"
+      - "122 hamedp71::🇵🇭"
+      - "123 hamedp71::❓"
+      - "124 hamedp71::❓"
+      - "125 hamedp71::❓"
+      - "126 hamedp71::🇺🇸"
+      - "127 hamedp71::🇯🇵"
+      - "128 hamedp71::🇦🇺"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 US-ANYTLS-01","type":"anytls","server":"156.229.160.150","port":26100,"password":"808fee56-008a-4780-91ba-40f072f63e49"}
   - {"name":"2 US-ANYTLS-02","type":"anytls","server":"31.22.111.200","port":443,"password":"808fee56-008a-4780-91ba-40f072f63e49"}
@@ -518,16 +676,17 @@ proxies:
   - {"name":"499 香港04|BGP|1X","type":"trojan","server":"e4d7a1c2f3b80976a5e2c1d4b3f0a987.355cd.org","port":23503,"password":"309a74a1-364f-4788-b44f-fb15013f69fb","udp":true,"tls":true}
   - {"name":"500 香港05|lELP|1X","type":"trojan","server":"a99c993c-e6d4-548a-88a0-a4893b3d3d4a.355cd.org","port":23504,"password":"309a74a1-364f-4788-b44f-fb15013f69fb","udp":true,"tls":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 US-ANYTLS-01"
       - "2 US-ANYTLS-02"
@@ -1029,6 +1188,571 @@ proxy-groups:
       - "498 香港03|lELP|1X"
       - "499 香港04|BGP|1X"
       - "500 香港05|lELP|1X"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 US-ANYTLS-01"
+      - "2 US-ANYTLS-02"
+      - "3 US-HY2-01"
+      - "4 🇯🇵日本樱花|高速01"
+      - "5 🇺🇸美国洛杉矶|原生01"
+      - "6 🇺🇸美国洛杉矶|高速01"
+      - "7 🇸🇬新加坡|流媒体01"
+      - "8 🇩🇪德国|流媒体01"
+      - "9 🇻🇳越南|原生01"
+      - "10 🇯🇵日本樱花|高速01"
+      - "11 🇺🇸美国洛杉矶|原生01"
+      - "12 🇺🇸美国洛杉矶|高速01"
+      - "13 🇸🇬新加坡|流媒体01"
+      - "14 🇩🇪德国|流媒体01"
+      - "15 🇻🇳越南|原生01"
+      - "16 剩余流量：0"
+      - "17 新加坡02"
+      - "18 新加坡02aws"
+      - "19 新加坡03aws"
+      - "20 美国01aws"
+      - "21 美国02aws"
+      - "22 美国03aws"
+      - "23 美国04aws"
+      - "24 美国07BGP"
+      - "25 香港01HKT"
+      - "26 香港02HKT"
+      - "27 香港03HKT"
+      - "28 香港04HKT"
+      - "29 香港05HKT"
+      - "30 香港06HKT"
+      - "31 香港07HKT"
+      - "32 香港08HKT"
+      - "33 香港09HKT"
+      - "34 香港10HKT"
+      - "35 香港11HKT"
+      - "36 hy2台湾01"
+      - "37 hy2台湾02"
+      - "38 hy2台湾03"
+      - "39 hy2台湾04"
+      - "40 hy2台湾05"
+      - "41 hy2台湾06"
+      - "42 hy2台湾07"
+      - "43 新加坡05BGP"
+      - "44 新加坡06aws"
+      - "45 新加坡08aws"
+      - "46 新加坡09aws"
+      - "47 新加坡10BPG"
+      - "48 新加坡11BGP"
+      - "49 新加坡12BGP"
+      - "50 新加坡13BGP"
+      - "51 新加坡14aws"
+      - "52 新加坡15aws"
+      - "53 新加坡16aws"
+      - "54 新加坡17aws"
+      - "55 新加坡18aws"
+      - "56 新加坡19aws"
+      - "57 日本01aws"
+      - "58 日本02aws"
+      - "59 日本03aws"
+      - "60 日本06aws"
+      - "61 日本07aws"
+      - "62 日本08aws"
+      - "63 日本09aws"
+      - "64 剩余流量：0"
+      - "65 新加坡02"
+      - "66 新加坡02aws"
+      - "67 新加坡03aws"
+      - "68 美国01aws"
+      - "69 美国02aws"
+      - "70 美国03aws"
+      - "71 美国04aws"
+      - "72 美国07BGP"
+      - "73 香港01HKT"
+      - "74 香港02HKT"
+      - "75 香港03HKT"
+      - "76 香港04HKT"
+      - "77 香港05HKT"
+      - "78 香港06HKT"
+      - "79 香港07HKT"
+      - "80 香港08HKT"
+      - "81 香港09HKT"
+      - "82 香港10HKT"
+      - "83 香港11HKT"
+      - "84 hy2台湾01"
+      - "85 hy2台湾02"
+      - "86 hy2台湾03"
+      - "87 hy2台湾04"
+      - "88 hy2台湾05"
+      - "89 hy2台湾06"
+      - "90 hy2台湾07"
+      - "91 新加坡05BGP"
+      - "92 新加坡06aws"
+      - "93 新加坡08aws"
+      - "94 新加坡09aws"
+      - "95 新加坡10BPG"
+      - "96 新加坡11BGP"
+      - "97 新加坡12BGP"
+      - "98 新加坡13BGP"
+      - "99 新加坡14aws"
+      - "100 新加坡15aws"
+      - "101 新加坡16aws"
+      - "102 新加坡17aws"
+      - "103 新加坡18aws"
+      - "104 新加坡19aws"
+      - "105 日本01aws"
+      - "106 日本02aws"
+      - "107 日本03aws"
+      - "108 日本06aws"
+      - "109 日本07aws"
+      - "110 日本08aws"
+      - "111 日本09aws"
+      - "112 剩余流量：0"
+      - "113 新加坡02|流媒体"
+      - "114 新加坡03|流媒体"
+      - "115 新加坡04|流媒体"
+      - "116 日本01"
+      - "117 日本02"
+      - "118 日本03"
+      - "119 日本04"
+      - "120 美国01"
+      - "121 美国02"
+      - "122 US-VLESS-01"
+      - "123 US-VLESS-02"
+      - "124 US-VLESS-03"
+      - "125 US-VLESS-04"
+      - "126 FR-VLESS-01"
+      - "127 BR-VLESS-01"
+      - "128 IT-VLESS-01"
+      - "129 UK-VLESS-01"
+      - "130 KR-VLESS-01"
+      - "131 JP-VLESS-01"
+      - "132 JP-VLESS-02"
+      - "133 SG-VLESS-01"
+      - "134 SG-VLESS-02"
+      - "135 中文官网：[卷王.cc] 美国 -0x-01"
+      - "136 中文官网：[卷王.cc] 美国 -0x-02"
+      - "137 中文官网：[卷王.cc] 加拿大 -0x-01"
+      - "138 中文官网：[卷王.cc] 海外 -0x-01"
+      - "139 中文官网：[卷王.cc] 海外 -0x-03"
+      - "140 中文官网：[卷王.cc] 德国 -0x-01"
+      - "141 中文官网：[卷王.cc] 新加坡 -0x-01"
+      - "142 中文官网：[卷王.cc] 英国 -0x-02"
+      - "143 中文官网：[卷王.cc] 法国 -0x-01"
+      - "144 中文官网：[卷王.cc] 美国 -0x-03"
+      - "145 中文官网：[卷王.cc] 美国 -0x-11"
+      - "146 中文官网：[卷王.cc] 美国 -0x-15"
+      - "147 中文官网：[卷王.cc] 荷兰 -0x-05"
+      - "148 中文官网：[卷王.cc] 美国 -0x-18"
+      - "149 中文官网：[卷王.cc] 德国 -0x-02"
+      - "150 中文官网：[卷王.cc] 英国 -0x-06"
+      - "151 中文官网：[卷王.cc] 美国 -0x-22"
+      - "152 HK"
+      - "153 US"
+      - "154 HK"
+      - "155 HK"
+      - "156 剩余流量：0"
+      - "157 新加坡02|流媒体"
+      - "158 新加坡03|流媒体"
+      - "159 新加坡04|流媒体"
+      - "160 日本01"
+      - "161 日本02"
+      - "162 日本03"
+      - "163 日本04"
+      - "164 美国01"
+      - "165 美国02"
+      - "166 剩余流量：0"
+      - "167 新加坡02|流媒体"
+      - "168 新加坡03|流媒体"
+      - "169 新加坡04|流媒体"
+      - "170 日本01"
+      - "171 日本02"
+      - "172 日本03"
+      - "173 日本04"
+      - "174 美国01"
+      - "175 美国02"
+      - "176 剩余流量：0"
+      - "177 🇹🇼台湾家宽|高速01"
+      - "178 🇯🇵日本东京|高速01"
+      - "179 🇰🇷韩国家宽|高速01"
+      - "180 🇺🇸美国洛杉矶|原生02"
+      - "181 🇺🇸美国洛杉矶|高速02"
+      - "182 剩余流量：0"
+      - "183 🇹🇼台湾家宽|高速01"
+      - "184 🇯🇵日本东京|高速01"
+      - "185 🇰🇷韩国家宽|高速01"
+      - "186 🇺🇸美国洛杉矶|原生02"
+      - "187 🇺🇸美国洛杉矶|高速02"
+      - "188 剩余流量：1000GB"
+      - "189 剩余流量：0"
+      - "190 新加坡02|流媒体"
+      - "191 新加坡03|流媒体"
+      - "192 新加坡04|流媒体"
+      - "193 日本01"
+      - "194 日本02"
+      - "195 日本03"
+      - "196 日本04"
+      - "197 美国01"
+      - "198 美国02"
+      - "199 剩余流量：0"
+      - "200 新加坡02|流媒体"
+      - "201 新加坡03|流媒体"
+      - "202 新加坡04|流媒体"
+      - "203 日本01"
+      - "204 日本02"
+      - "205 日本03"
+      - "206 日本04"
+      - "207 美国01"
+      - "208 美国02"
+      - "209 vless台湾01"
+      - "210 vless台湾02"
+      - "211 vless台湾01"
+      - "212 vless台湾02"
+      - "213 ❗您已到期或流量用完❗"
+      - "214 香港1"
+      - "215 香港2"
+      - "216 台湾1"
+      - "217 台湾2"
+      - "218 新加坡1"
+      - "219 新加坡2"
+      - "220 日本1"
+      - "221 日本2"
+      - "222 美国1"
+      - "223 美国2"
+      - "224 美国3"
+      - "225 美国4"
+      - "226 韩国1"
+      - "227 韩国2"
+      - "228 英国1"
+      - "229 英国2"
+      - "230 德国1"
+      - "231 德国2"
+      - "232 法国1"
+      - "233 法国2"
+      - "234 去除6条不合适线路"
+      - "235 香港 | 02"
+      - "236 台湾 | 01"
+      - "237 台湾 | 02"
+      - "238 日本 | 01"
+      - "239 日本 | 02"
+      - "240 新加坡 | 01"
+      - "241 新加坡 | 02"
+      - "242 韩国 | 01"
+      - "243 韩国 | 02"
+      - "244 美国 | 01"
+      - "245 美国 | 02"
+      - "246 印度尼西亚 | 01"
+      - "247 土耳其 | 01"
+      - "248 印度 | 01"
+      - "249 英国 | 01"
+      - "250 德国 | 01"
+      - "251 🇭🇰 香港"
+      - "252 %F0%9F%87%B8%F0%9F%87%AC%20%E6%96%B0%E5%8A%A0%E5%9D%A"
+      - "253 🔗 雨燕云.com🔗"
+      - "254 🇭🇰 香港A|深港IEPL"
+      - "255 🇭🇰 香港B|深港IEPL"
+      - "256 🇭🇰 香港C|深港IEPL"
+      - "257 🇭🇰 香港D|深港IEPL"
+      - "258 🇭🇰 香港2|深港IEPL"
+      - "259 🇭🇰 香港3|深港IEPL"
+      - "260 🇭🇰 香港4|深港IEPL"
+      - "261 🇭🇰 香港5|深港IEPL"
+      - "262 🇭🇰 香港6|深港IEPL"
+      - "263 🇸🇬 新加坡1|深港IEPL"
+      - "264 🇸🇬 新加坡2|深港IEPL"
+      - "265 🇸🇬 新加坡3|深港IEPL"
+      - "266 🇸🇬 新加坡4|深港IEPL"
+      - "267 🇸🇬 新加坡5|深港IEPL"
+      - "268 🇸🇬 新加坡6|深港IEPL"
+      - "269 🇯🇵 日本1|深港IEPL"
+      - "270 🇯🇵 日本2|深港IEPL"
+      - "271 🇯🇵 日本3|深港IEPL"
+      - "272 🇯🇵 日本4|深港IEPL"
+      - "273 🇯🇵 日本5|深港IEPL"
+      - "274 🇯🇵 日本6|深港IEPL"
+      - "275 🇯🇵 日本7|深港IEPL"
+      - "276 🇯🇵 日本8|深港IEPL"
+      - "277 🇨🇳 台湾1|深港IEPL"
+      - "278 🇨🇳 台湾2|深港IEPL"
+      - "279 🇨🇳 台湾3|深港IEPL"
+      - "280 🇨🇳 台湾4|深港IEPL"
+      - "281 🇺🇸 美国1|深港IEPL"
+      - "282 🇺🇸 美国2|深港IEPL"
+      - "283 🇺🇸 美国3|深港IEPL"
+      - "284 🇺🇸 美国4|深港IEPL"
+      - "285 🇺🇸 美国5|深港IEPL"
+      - "286 🇺🇸 美国6|深港IEPL"
+      - "287 🇨🇦 加拿大1|深港IEPL"
+      - "288 🇹🇭 泰国|深港IEPL"
+      - "289 🇻🇳 越南|深港IEPL"
+      - "290 🇮🇩 印尼|深港IEPL"
+      - "291 🇲🇾 马来西亚|深港IEPL"
+      - "292 🇵🇭 菲律宾|深港IEPL"
+      - "293 🇰🇷 韩国|华东中转"
+      - "294 🇦🇺 澳大利亚|深港IEPL"
+      - "295 🇬🇧 英国|深港IEPL"
+      - "296 🇩🇪 德国|西南中转"
+      - "297 🇫🇷 法国|西南中转"
+      - "298 🇹🇷 土耳其|西南中转"
+      - "299 🇳🇱 荷兰|深港IEPL"
+      - "300 🇮🇳 印度1|深港IEPL"
+      - "301 🇳🇬 尼日利亚|西南中转"
+      - "302 🇦🇷 阿根廷|深港IEPL"
+      - "303 用户名 llpl"
+      - "304 🇭🇰 HK-04"
+      - "305 🇭🇰 HK-06"
+      - "306 🇭🇰 HK-08"
+      - "307 🇭🇰 HK-11"
+      - "308 🇭🇰 HK-13"
+      - "309 🇭🇰 HK-14"
+      - "310 🇭🇰 HK-15"
+      - "311 🇸🇬 SG-01"
+      - "312 🇸🇬 SG-02"
+      - "313 🇸🇬 SG-03"
+      - "314 🇸🇬 SG-04"
+      - "315 🇸🇬 SG-05"
+      - "316 🇸🇬 SG-06"
+      - "317 🇸🇬 SG-07"
+      - "318 🇸🇬 SG-08"
+      - "319 🇸🇬 SG-09"
+      - "320 🇸🇬 SG-10"
+      - "321 🇸🇬 SG-11"
+      - "322 🇸🇬 SG-12"
+      - "323 🇸🇬 SG-13"
+      - "324 🇸🇬 SG-14"
+      - "325 🇸🇬 SG-16"
+      - "326 🇺🇸 US-01"
+      - "327 🇺🇸 US-02"
+      - "328 🇺🇸 US-03"
+      - "329 🇺🇸 US-04"
+      - "330 🇺🇸 US-05"
+      - "331 🇺🇸 US-07"
+      - "332 🇺🇸 US-09"
+      - "333 🇺🇸 US-10"
+      - "334 🇺🇸 US-11"
+      - "335 🇺🇸 US-12"
+      - "336 🇺🇸 US-13"
+      - "337 🇺🇸 US-14"
+      - "338 🇺🇸 US-15"
+      - "339 🇺🇸 US-16"
+      - "340 🇯🇵 JP-01"
+      - "341 🇯🇵 JP-02"
+      - "342 🇯🇵 JP-03"
+      - "343 🇯🇵 JP-04"
+      - "344 🇯🇵 JP-05"
+      - "345 🇯🇵 JP-06"
+      - "346 🇯🇵 JP-07"
+      - "347 🇯🇵 JP-08"
+      - "348 🇯🇵 JP-09"
+      - "349 🇯🇵 JP-11"
+      - "350 🇯🇵 JP-12"
+      - "351 🇯🇵 JP-13"
+      - "352 🇯🇵 JP-14"
+      - "353 🇯🇵 JP-15"
+      - "354 🇯🇵 JP-16"
+      - "355 🇳🇱 NL-01"
+      - "356 CH-01"
+      - "357 🇷🇺 RU-01"
+      - "358 GR-01"
+      - "359 CO-01"
+      - "360 AR-01"
+      - "361 GT-01"
+      - "362 BO-01"
+      - "363 PE-01"
+      - "364 EC-01"
+      - "365 CR-01"
+      - "366 CL-01"
+      - "367 BR-01"
+      - "368 MA-01"
+      - "369 ZA-01"
+      - "370 NG-01"
+      - "371 AE-01"
+      - "372 IL-01"
+      - "373 🇦🇺 AU-01"
+      - "374 TH-01"
+      - "375 PK-01"
+      - "376 TR-01"
+      - "377 RS-01"
+      - "378 BE-01"
+      - "379 RO-01"
+      - "380 🇩🇰 DK-01"
+      - "381 IT-01"
+      - "382 🇩🇪 DE-01"
+      - "383 FI-01"
+      - "384 🇺🇦 UA-01"
+      - "385 NO-01"
+      - "386 SE-01"
+      - "387 LT-01"
+      - "388 🇨🇳 TW-01"
+      - "389 🇨🇳 TW-02"
+      - "390 🇨🇳 TW-03"
+      - "391 🇨🇳 TW-04"
+      - "392 🇨🇳 TW-05"
+      - "393 🇨🇳 TW-06"
+      - "394 🇨🇳 TW-07"
+      - "395 剩余流量：0"
+      - "396 🇭🇰 HK 中转 02"
+      - "397 🇭🇰 HK 中转 03"
+      - "398 🇭🇰 HK 中转 04"
+      - "399 🇭🇰 HK 中转 05"
+      - "400 🇭🇰 HK 中转 06"
+      - "401 🇭🇰 HK 中转 07 流媒体解锁"
+      - "402 🇭🇰 HK 中转 08 流媒体解锁"
+      - "403 🇨🇳 TW家宽 中转 01"
+      - "404 🇨🇳 TW家宽 中转 02"
+      - "405 🇨🇳 TW家宽 中转 03"
+      - "406 🇨🇳 TW家宽 中转 04"
+      - "407 🇨🇳 TW家宽 中转 05"
+      - "408 🇨🇳 TW家宽 中转 06"
+      - "409 🇯🇵 JP 中转  01"
+      - "410 🇯🇵 JP 中转 02"
+      - "411 🇯🇵 JP 中转 03"
+      - "412 🇯🇵 JP 中转 04"
+      - "413 🇯🇵 JP 中转 05"
+      - "414 🇯🇵 JP 中转 06"
+      - "415 🇸🇬 SG 中转 01"
+      - "416 🇸🇬 SG 中转 02"
+      - "417 🇸🇬 SG 中转 03"
+      - "418 🇸🇬 SG 中转 04"
+      - "419 🇸🇬 SG 中转 05"
+      - "420 🇸🇬 SG 中转 06"
+      - "421 🇺🇸 USA 中转 01"
+      - "422 🇺🇸 USA 中转 02"
+      - "423 🇺🇸 USA 中转 03"
+      - "424 🇺🇸 USA 中转 04"
+      - "425 🇺🇸 USA 中转 05"
+      - "426 🇺🇸 USA 中转 06"
+      - "427 🇦🇺 澳大利亚ss"
+      - "428 🇬🇧 英国ss"
+      - "429 🇨🇦 加拿大ss"
+      - "430 🇫🇷 法国ss"
+      - "431 🇲🇾 马来西亚ss"
+      - "432 🇩🇪 德国ss"
+      - "433 🇧🇷 巴西ss"
+      - "434 🇰🇷 韩国ss"
+      - "435 🇮🇳 印度ss"
+      - "436 🇲🇽 墨西哥ss"
+      - "437 🇱🇺 卢森堡ss"
+      - "438 🇹🇷 土耳其ss"
+      - "439 🇮🇱 以色列ss"
+      - "440 🇹🇭 泰国ss"
+      - "441 🇰🇿 哈萨克斯坦ss"
+      - "442 🇭🇰 HK 中转 02"
+      - "443 🇭🇰 HK 中转 06"
+      - "444 🇸🇬 SG 中转 02"
+      - "445 🇸🇬 SG 中转 04"
+      - "446 🇸🇬 SG 中转 05"
+      - "447 🇺🇸 USA 中转 01"
+      - "448 🇺🇸 USA 中转 02"
+      - "449 🇺🇸 USA 中转 03"
+      - "450 🇺🇸 USA 中转 04"
+      - "451 🇺🇸 USA 中转 05"
+      - "452 🇺🇸 USA 中转 06"
+      - "453 🇦🇺 澳大利亚ss"
+      - "454 🇬🇧 英国ss"
+      - "455 🇨🇦 加拿大ss"
+      - "456 🇫🇷 法国ss"
+      - "457 🇲🇾 马来西亚ss"
+      - "458 🇩🇪 德国ss"
+      - "459 🇧🇷 巴西ss"
+      - "460 🇰🇷 韩国ss"
+      - "461 🇮🇳 印度ss"
+      - "462 🇲🇽 墨西哥ss"
+      - "463 🇱🇺 卢森堡ss"
+      - "464 🇹🇷 土耳其ss"
+      - "465 🇮🇱 以色列ss"
+      - "466 🇹🇭 泰国ss"
+      - "467 🇰🇿 哈萨克斯坦ss"
+      - "468 剩余流量：0"
+      - "469 广移中转-BGP台湾1"
+      - "470 广移中转-BGP 日本1"
+      - "471 广移中转-BGP 新加坡 1"
+      - "472 广移中转-BGP 美国A-1"
+      - "473 广移中转-BGP 美国B-1"
+      - "474 广移中转-BGP 美国C-1"
+      - "475 广移中转-BGP 巴西 1"
+      - "476 广移中转-BGP 以色列1"
+      - "477 广移中转-BGP 墨西哥1"
+      - "478 广移中转-BGP 韩国1"
+      - "479 广移中转-BGP 印度1"
+      - "480 广移中转-BGP 冰岛 1"
+      - "481 广移中转-BGP 马来西亚1"
+      - "482 新加坡05|流媒体"
+      - "483 新加坡06|流媒体"
+      - "484 新加坡07|流媒体"
+      - "485 新加坡08|流媒体"
+      - "486 日本05"
+      - "487 日本06"
+      - "488 日本07"
+      - "489 日本08"
+      - "490 美国03"
+      - "491 美国04"
+      - "492 剩余流量：1000000000 GB"
+      - "493 剩余流量：0"
+      - "494 Q群902173774售后"
+      - "495 续费搜：www.疾风.com"
+      - "496 jf.z525.cn【防屏蔽官网】"
+      - "497 老司机网址：lsj11.top"
+      - "498 香港03|lELP|1X"
+      - "499 香港04|BGP|1X"
+      - "500 香港05|lELP|1X"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

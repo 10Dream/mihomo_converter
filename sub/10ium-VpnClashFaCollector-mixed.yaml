@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 128-🐭@GheychiAmoozesh","type":"hysteria2","server":"206.71.158.37","port":35000,"password":"Yet-Another-Public-Config-1"}
   - {"name":"2 089-🐭@GheychiAmoozesh","type":"hysteria2","server":"206.71.158.37","port":35200,"password":"Yet-Another-Public-Config-1"}
@@ -518,16 +676,17 @@ proxies:
   - {"name":"499 ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"ipbaz.ping-box.com","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
   - {"name":"500 pae.com","type":"vless","server":"pae.com","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sany.august71.workers.dev"}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 128-🐭@GheychiAmoozesh"
       - "2 089-🐭@GheychiAmoozesh"
@@ -1029,6 +1188,571 @@ proxy-groups:
       - "498 @meliproxyy"
       - "499 ***🐦‍🔥***-@SPEEDS_VPN"
       - "500 pae.com"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 128-🐭@GheychiAmoozesh"
+      - "2 089-🐭@GheychiAmoozesh"
+      - "3 035-🐭@GheychiAmoozesh"
+      - "4 046-🐭@GheychiAmoozesh"
+      - "5 016-🐭@GheychiAmoozesh"
+      - "6 🍪11@oneclickvpnkeys"
+      - "7 🐯5@oneclickvpnkeys"
+      - "8 🍪4@oneclickvpnkeys`"
+      - "9 91.132.51.160"
+      - "10 5.175.249.174"
+      - "11 ZHK"
+      - "12 ZHK"
+      - "13 ZHK"
+      - "14 ZHK"
+      - "15 ZHK"
+      - "16 ZHK"
+      - "17 support.cloudflare.com"
+      - "18 🐯94@oneclickvpnkeys"
+      - "19 🐯101@oneclickvpnkeys`"
+      - "20 📊42@oneclickvpnkeys`"
+      - "21 104.17.25.173"
+      - "22 51.250.85.206"
+      - "23 95.163.208.45"
+      - "24 🐯11@oneclickvpnkeys"
+      - "25 ***🐦‍🔥***-@SPEEDS_VPN"
+      - "26 usa130.luckerusa.org"
+      - "27 usa130.luckerusa.org"
+      - "28 usa130.luckerusa.org"
+      - "29 46.235.189.157"
+      - "30 1ssd4r.1xh.ccwu.cc"
+      - "31 bnmjki.1xe.ccwu.cc"
+      - "32 cdfvgbt.457.pp.ua"
+      - "33 nnmjjui.1xb.ccwu.cc"
+      - "34 nnnghby.0og.ccwu.cc"
+      - "35 vffgtyi.445.pp.ua"
+      - "36 vvbgghyu.445.pp.ua"
+      - "37 vvvbghy.1xd.ccwu.cc"
+      - "38 104.16.197.19"
+      - "39 www.speedtest.net"
+      - "40 zzula.ir"
+      - "41 5.188.143.238"
+      - "42 💎+|+@configraygan『🇹🇷¹¹²』"
+      - "43 13.37.204.35"
+      - "44 [14378]+-+Telegram+:+@configraygan"
+      - "45 15.236.70.126"
+      - "46 52.29.103.93"
+      - "47 104.128.134.181"
+      - "48 api-y1.wiki-mobile-one.com"
+      - "49 de-as2.connect-opengate.cv"
+      - "50 lv.connect-opengate.cv"
+      - "51 ru-tw-yt.connect-opengate.cv"
+      - "52 vfbg.0or.ccwu.cc"
+      - "53 💎+|+@configraygan『🇩🇪⁵⁵』"
+      - "54 🐯13@oneclickvpnkeys"
+      - "55 🍪60@oneclickvpnkeys"
+      - "56 🍪41@oneclickvpnkeys"
+      - "57 🍪82@oneclickvpnkeys"
+      - "58 🍪42@oneclickvpnkeys"
+      - "59 5.188.141.67"
+      - "60 109.120.188.156"
+      - "61 🍪86@oneclickvpnkeys"
+      - "62 5.188.141.131"
+      - "63 🍪90@oneclickvpnkeys"
+      - "64 🛡 V 124 @Outline_Vpn`"
+      - "65 93.157.138.138"
+      - "66 3.69.241.153"
+      - "67 sahand.cocomelon.org"
+      - "68 51.250.69.188"
+      - "69 188.114.97.1"
+      - "70 @proxy_kafee"
+      - "71 188.114.96.0"
+      - "72 patch.shirvani24.org"
+      - "73 178.250.243.30"
+      - "74 51.250.25.103"
+      - "75 51.250.25.103"
+      - "76 84.201.167.196"
+      - "77 84.201.167.196"
+      - "78 84.201.167.196"
+      - "79 89.208.196.115"
+      - "80 [14448]+-+Telegram+:+@configraygan"
+      - "81 @meliproxyy"
+      - "82 @MARAMBASHI 🇧🇷"
+      - "83 @MARAMBASHI 🇧🇷"
+      - "84 @MARAMBASHI 🇧🇷"
+      - "85 @MARAMBASHI 🇧🇷`"
+      - "86 goldenserver.play98.ir"
+      - "87 mail.speedmizban.net"
+      - "88 🐯80@oneclickvpnkeys"
+      - "89 188.114.98.0"
+      - "90 144.24.126.26"
+      - "91 103.160.204.191"
+      - "92 51.250.22.148"
+      - "93 80.209.241.221"
+      - "94 🐯32@oneclickvpnkeys"
+      - "95 89.208.221.7"
+      - "96 ent1.easyserf.top"
+      - "97 104.18.13.229"
+      - "98 51.250.74.235"
+      - "99 3er.222569.xyz"
+      - "100 💎+|+@configraygan『🇩🇪⁴²』"
+      - "101 germ-node.genadata.online"
+      - "102 @proxy_kafee"
+      - "103 79.137.174.227"
+      - "104 ARISTA🔥@proxy_kafee"
+      - "105 104.19.34.255"
+      - "106 162.159.153.129"
+      - "107 configraygan_6"
+      - "108 [14445]+-+Telegram+:+@configraygan"
+      - "109 💎+|+@configraygan『🇩🇪⁴⁷』"
+      - "110 172.67.73.14"
+      - "111 🐯34@oneclickvpnkeys"
+      - "112 @vpnbaz 🎲"
+      - "113 [14389]+-+Telegram+:+@configraygan"
+      - "114 188.40.210.8"
+      - "115 @Lrnbymaa اختصاصی`"
+      - "116 ⚡️+|+@configraygan『🇩🇪³』"
+      - "117 sr4.laptopstock7.com"
+      - "118 212.193.153.187"
+      - "119 37.139.33.223"
+      - "120 46.235.186.203"
+      - "121 46.235.189.157"
+      - "122 109.120.189.142"
+      - "123 🍪85@oneclickvpnkeys"
+      - "124 104.16.250.22"
+      - "125 104.18.185.26"
+      - "126 89.167.17.75"
+      - "127 5.198.179.4"
+      - "128 ⚡️+|+@configraygan『🇩🇪⁶』"
+      - "129 81.200.149.211"
+      - "130 91.147.92.76"
+      - "131 🍪17@oneclickvpnkeys"
+      - "132 📊20@oneclickvpnkeys"
+      - "133 🇰🇿@meliproxyy"
+      - "134 🍪7@oneclickvpnkeys"
+      - "135 tr01-vlr01.tcp-reset-club.net"
+      - "136 🐯63@oneclickvpnkeys"
+      - "137 🐯68@oneclickvpnkeys"
+      - "138 💎+|+@configraygan『🇩🇪⁹⁵』"
+      - "139 cptxss723.azangooo.ir"
+      - "140 cptxvonm2.azangooo.ir"
+      - "141 afrcloud22.mmv.kr"
+      - "142 45.86.70.95"
+      - "143 🐯91@oneclickvpnkeys"
+      - "144 104.17.164.123"
+      - "145 🐯42@oneclickvpnkeys`"
+      - "146 gardconfig12.bnam38637.workers.dev"
+      - "147 new-de.vcfco.ir"
+      - "148 new-fr.vcfco.ir"
+      - "149 104.17.147.22"
+      - "150 45.136.126.16"
+      - "151 178.22.31.68"
+      - "152 80.82.67.67"
+      - "153 188.114.96.3"
+      - "154 104.16.121.147"
+      - "155 104.18.12.149"
+      - "156 104.18.32.47"
+      - "157 172.64.152.170"
+      - "158 [14360]+-+Telegram+:+@configraygan"
+      - "159 a.pabloping.cloud"
+      - "160 b.pabloping.cloud"
+      - "161 144.31.90.114"
+      - "162 51.250.41.20"
+      - "163 videoconvertedru.life"
+      - "164 💎+|+@configraygan『🇩🇪²¹』"
+      - "165 185.146.173.58"
+      - "166 partners.dissertationhelpspecialist.com"
+      - "167 3.127.211.43"
+      - "168 ip.shakhle.ir"
+      - "169 @meliproxyy"
+      - "170 188.165.26.178"
+      - "171 211.219.241.28"
+      - "172 213.156.138.192"
+      - "173 38.180.97.202"
+      - "174 43.165.180.71"
+      - "175 45.144.48.42"
+      - "176 ⚡️+|+@configraygan『🇩🇪¹⁵』"
+      - "177 @meliproxyy"
+      - "178 144.217.133.97"
+      - "179 [14384]+-+Telegram+:+@configraygan"
+      - "180 💎+|+@configraygan『🇩🇪⁵²』"
+      - "181 برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "182 81.200.151.112"
+      - "183 🥎8@oneclickvpnkeys"
+      - "184 🐯25@oneclickvpnkeys"
+      - "185 🍪21@oneclickvpnkeys"
+      - "186 🐯69@oneclickvpnkeys"
+      - "187 chatgpt.com"
+      - "188 bbbffvg.0oh.ccwu.cc"
+      - "189 bbbnhju.1xa.ccwu.cc"
+      - "190 bbbnmj.1xa.ccwu.cc"
+      - "191 bnmki.06o.ccwu.cc"
+      - "192 gbnh.890604.dpdns.org"
+      - "193 ggggjki.1xb.ccwu.cc"
+      - "194 ikkmmmh.890603.xyz"
+      - "195 mmki9.05o.ccwu.cc"
+      - "196 vvbbnm.04o.ccwu.cc"
+      - "197 vvvffgty.1xa.ccwu.cc"
+      - "198 vvvbbbnhj.taipei102.indevs.in"
+      - "199 109.120.181.41"
+      - "200 🐯66@oneclickvpnkeys"
+      - "201 fastly2.hamrahflow.ir"
+      - "202 103.169.142.6"
+      - "203 [14391]+-+Telegram+:+@configraygan"
+      - "204 @proxy_kafee"
+      - "205 🍪14@oneclickvpnkeys"
+      - "206 poli.appleseraj.ir"
+      - "207 51.250.14.48"
+      - "208 www.speedtest.net"
+      - "209 109.120.189.137"
+      - "210 146.185.241.87"
+      - "211 178.250.243.100"
+      - "212 178.250.243.221"
+      - "213 212.233.77.68"
+      - "214 37.139.34.237"
+      - "215 5.188.143.115"
+      - "216 5.188.143.115"
+      - "217 85.192.35.17"
+      - "218 87.239.105.7"
+      - "219 87.239.105.7"
+      - "220 89.208.228.250"
+      - "221 89.208.231.44"
+      - "222 146.19.80.222"
+      - "223 🐯14@oneclickvpnkeys"
+      - "224 85.208.108.136"
+      - "225 NetAccount`"
+      - "226 89.35.73.250"
+      - "227 node1.telegavpn.org"
+      - "228 node12.telegavpn.org"
+      - "229 node5.telegavpn.org"
+      - "230 🍪50@oneclickvpnkeys"
+      - "231 172.64.152.23"
+      - "232 188.114.98.0"
+      - "233 configraygan_52"
+      - "234 51.250.90.158"
+      - "235 [14451]+-+Telegram+:+@configraygan"
+      - "236 njk.dddc.de5.net"
+      - "237 rt.dddc.us.ci"
+      - "238 vbbns.1c0.ccwu.cc"
+      - "239 51.250.69.188"
+      - "240 217.16.27.208"
+      - "241 144.31.117.60"
+      - "242 84.201.154.74"
+      - "243 84.201.155.146"
+      - "244 f1.springpaatogh8.store"
+      - "245 51.250.14.48"
+      - "246 🥎73@oneclickvpnkeys"
+      - "247 84.201.179.46"
+      - "248 51.250.14.48"
+      - "249 🐯82@oneclickvpnkeys`"
+      - "250 🐯85@oneclickvpnkeys"
+      - "251 104.17.147.22"
+      - "252 104.17.148.22"
+      - "253 "
+      - "254 🍪12@oneclickvpnkeys"
+      - "255 162.159.135.42"
+      - "256 "
+      - "257 "
+      - "258 "
+      - "259 🍪25@oneclickvpnkeys"
+      - "260 "
+      - "261 "
+      - "262 "
+      - "263 "
+      - "264 norman.ns.cloudflare.com"
+      - "265 "
+      - "266 [14423]+-+Telegram+:+@configraygan"
+      - "267 188.114.98.0"
+      - "268 188.114.98.0"
+      - "269 💎+|+@configraygan『🇩🇪²⁴』"
+      - "270 🐯23@oneclickvpnkeys"
+      - "271 🐯30@oneclickvpnkeys`"
+      - "272 🐯26@oneclickvpnkeys"
+      - "273 🐯36@oneclickvpnkeys"
+      - "274 178.154.204.211"
+      - "275 37.139.33.223"
+      - "276 89.208.228.139"
+      - "277 37.139.33.125"
+      - "278 5.188.141.131"
+      - "279 88.99.121.221"
+      - "280 f1.springpaatogh8.store"
+      - "281 chatgpt.com"
+      - "282 nl02-vlr01.tcp-reset-club.net"
+      - "283 [14422]+-+Telegram+:+@configraygan"
+      - "284 maxa06.gaterserver.ir"
+      - "285 173.245.59.244"
+      - "286 188.114.97.222"
+      - "287 46.243.235.67"
+      - "288 109.120.182.246"
+      - "289 109.120.190.40"
+      - "290 109.120.190.40"
+      - "291 109.120.190.40"
+      - "292 185.241.195.29"
+      - "293 185.86.145.201"
+      - "294 185.86.147.28"
+      - "295 185.86.147.61"
+      - "296 185.86.147.96"
+      - "297 212.233.95.129"
+      - "298 37.139.34.19"
+      - "299 37.139.35.156"
+      - "300 51.250.117.173"
+      - "301 51.250.117.173"
+      - "302 51.250.46.121"
+      - "303 51.250.75.178"
+      - "304 51.250.75.178"
+      - "305 78.159.247.216"
+      - "306 79.174.92.90"
+      - "307 84.201.184.6"
+      - "308 84.201.187.140"
+      - "309 84.201.187.140"
+      - "310 87.239.111.144"
+      - "311 90.156.215.36"
+      - "312 trassed.cloud134.ru"
+      - "313 ***🐦‍🔥***-@SPEEDS_VPN"
+      - "314 NetAccount"
+      - "315 66.81.247.155"
+      - "316 free-us.moscow-neversleep.digital"
+      - "317 bouquetberlin.org"
+      - "318 1.iranazizm.com"
+      - "319 104.17.163.123"
+      - "320 66.81.247.155"
+      - "321 dnss.iraniranshopdashnoard.ir"
+      - "322 dqf21.sdssd1.sadqwdw1.carvan1.mimkiscx.ir"
+      - "323 ip-data.turkserver.ir"
+      - "324 158.160.74.200"
+      - "325 [14436]+-+Telegram+:+@configraygan"
+      - "326 3.67.93.217"
+      - "327 hk.tfree.top"
+      - "328 139.59.3.70"
+      - "329 configraygan_2"
+      - "330 🍪20@oneclickvpnkeys`"
+      - "331 💎+|+@configraygan『🇫🇷⁹⁴』"
+      - "332 [14447]+-+Telegram+:+@configraygan"
+      - "333 @vpnbaz 🎩"
+      - "334 ⚡️+|+@configraygan『🇩🇪²⁷』"
+      - "335 51.158.206.96"
+      - "336 51.158.206.98"
+      - "337 [14416]+-+Telegram+:+@configraygan"
+      - "338 🐯4@oneclickvpnkeys"
+      - "339 برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩"
+      - "340 NetAccount"
+      - "341 NetAccount"
+      - "342 shaparak.ultrrasound.com"
+      - "343 165.140.119.117"
+      - "344 برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "345 207.154.248.31"
+      - "346 🍪45@oneclickvpnkeys"
+      - "347 [14454]+-+Telegram+:+@configraygan"
+      - "348 [14429]+-+Telegram+:+@configraygan"
+      - "349 [14424]+-+Telegram+:+@configraygan"
+      - "350 178.154.222.55"
+      - "351 51.250.43.209"
+      - "352 95.163.210.159"
+      - "353 🐯61@oneclickvpnkeys`"
+      - "354 🐯40@oneclickvpnkeys"
+      - "355 🐯16@oneclickvpnkeys"
+      - "356 free2.spectrum.vu"
+      - "357 🐯52@oneclickvpnkeys`"
+      - "358 [14395]+-+Telegram+:+@configraygan"
+      - "359 @meliproxyy`"
+      - "360 @meliproxyy`"
+      - "361 @meliproxyy`"
+      - "362 💎+|+@configraygan『🇩🇪⁵⁶』"
+      - "363 85.239.33.76"
+      - "364 🐯39@oneclickvpnkeys"
+      - "365 💎+|+@configraygan『🇩🇪²⁷』"
+      - "366 87.107.10.220"
+      - "367 zzula.ir"
+      - "368 🍪95@oneclickvpnkeys"
+      - "369 @meliproxyy"
+      - "370 @vpnbaz 🎲"
+      - "371 server-ru.lentastick-vpn.ru"
+      - "372 104.18.185.26"
+      - "373 104.21.91.230"
+      - "374 bnhhy.1ll.ccwu.cc"
+      - "375 @proxy_kafee"
+      - "376 🍪05@oneclickvpnkeys"
+      - "377 chatgpt.com"
+      - "378 hnm.huangdi2025.dpdns.org"
+      - "379 t.huangdi2025.dpdns.org"
+      - "380 🐯73@oneclickvpnkeys"
+      - "381 💎+|+@configraygan『🇩🇪¹¹⁴』"
+      - "382 ⚡️+|+@configraygan『🇩🇪⁹』"
+      - "383 104.17.147.22"
+      - "384 104.17.148.22"
+      - "385 8.35.211.210"
+      - "386 8.35.211.75"
+      - "387 www.speedtest.net"
+      - "388 🐯83@oneclickvpnkeys"
+      - "389 jeff.ns.cloudflare.com"
+      - "390 104.16.249.46"
+      - "391 🐯22@oneclickvpnkeys"
+      - "392 ⚡️+|+@configraygan『🇩🇪²⁰』"
+      - "393 💎+|+@configraygan『🇩🇪¹¹⁶』"
+      - "394 🐯62@oneclickvpnkeys"
+      - "395 104.17.147.22"
+      - "396 @meliproxyy"
+      - "397 c27.prodnsspeed10.ir"
+      - "398 104.21.33.129"
+      - "399 🐯50@oneclickvpnkeys"
+      - "400 ovhwuxian.pai50288.uk"
+      - "401 🍪51@oneclickvpnkeys"
+      - "402 3.72.52.65"
+      - "403 🍪44@oneclickvpnkeys`"
+      - "404 [14392]+-+Telegram+:+@configraygan"
+      - "405 5.188.143.238"
+      - "406 104.18.4.46"
+      - "407 104.18.5.46"
+      - "408 @meliproxyy"
+      - "409 chatgpt.com"
+      - "410 51.250.17.81"
+      - "411 🍪32@oneclickvpnkeys"
+      - "412 178.250.242.201"
+      - "413 cf.008500.xyz"
+      - "414 chatgpt.com"
+      - "415 62.50.146.224"
+      - "416 💎+|+@configraygan『🇩🇪¹²⁰』"
+      - "417 💎+|+@configraygan『🇩🇪¹²²』"
+      - "418 configraygan_11"
+      - "419 fastly2.hamrahflow.ir"
+      - "420 fastly3.hamrahflow.ir"
+      - "421 🐯29@oneclickvpnkeys"
+      - "422 167.82.101.148"
+      - "423 104.18.38.47"
+      - "424 104.18.42.98"
+      - "425 172.64.144.82"
+      - "426 172.66.44.211"
+      - "427 172.66.47.45"
+      - "428 chatgpt.com"
+      - "429 v3.dabache.top"
+      - "430 5.188.141.131"
+      - "431 37.139.33.125"
+      - "432 109.120.188.156"
+      - "433 37.139.33.125"
+      - "434 5.188.141.131"
+      - "435 146.185.242.246"
+      - "436 37.139.33.125"
+      - "437 146.185.242.246"
+      - "438 146.185.242.246"
+      - "439 chatgpt.com"
+      - "440 bbnhj.taipei101.eu.cc"
+      - "441 bnh.huangshang.eu.cc"
+      - "442 bnhj.003330333.xyz"
+      - "443 gy.003330333.xyz"
+      - "444 hju8.003330333.xyz"
+      - "445 mki.ok1.indevs.in"
+      - "446 tttyu.003330333.xyz"
+      - "447 u89.003330333.xyz"
+      - "448 ujk.003330333.xyz"
+      - "449 yyhjk.003330333.xyz"
+      - "450 🍪06@oneclickvpnkeys"
+      - "451 configraygan_22"
+      - "452 192.227.147.161"
+      - "453 💎+|+@configraygan『🇩🇪⁴¹』"
+      - "454 132.145.127.203"
+      - "455 143.20.213.141"
+      - "456 ***🐦‍🔥***-@SPEEDS_VPN"
+      - "457 154.194.12.238"
+      - "458 154.218.15.238"
+      - "459 💎+|+@configraygan『🇩🇪¹⁰⁹』"
+      - "460 💎+|+@configraygan『🇩🇪⁹⁷』"
+      - "461 💎+|+@configraygan『🇩🇪⁴⁸』"
+      - "462 162.159.153.231"
+      - "463 [14417]+-+Telegram+:+@configraygan"
+      - "464 @vpnbaz 🧸"
+      - "465 168.119.166.165"
+      - "466 178.62.25.163"
+      - "467 185.158.133.138"
+      - "468 NetAccount`"
+      - "469 185.82.126.216"
+      - "470 188.114.98.0"
+      - "471 ***🐦‍🔥***-@SPEEDS_VPN`"
+      - "472 ⚡️+|+@configraygan『🇩🇪⁷』"
+      - "473 @meliproxyy"
+      - "474 192.0.54.238"
+      - "475 💎+|+@configraygan『🇩🇪¹⁰⁸』"
+      - "476 193.168.227.151"
+      - "477 2.59.134.248"
+      - "478 ARISTA🔥@proxy_kafee"
+      - "479 NetAccount`"
+      - "480 45.130.125.138"
+      - "481 45.135.180.157"
+      - "482 [14452]+-+Telegram+:+@configraygan"
+      - "483 45.43.76.184"
+      - "484 45.83.129.17"
+      - "485 45.85.119.138"
+      - "486 @meliproxyy"
+      - "487 5.10.247.238"
+      - "488 51.77.213.238"
+      - "489 💎+|+@configraygan『🇩🇪¹⁰⁵』"
+      - "490 ***🐦‍🔥***-@SPEEDS_VPN"
+      - "491 77.221.140.42"
+      - "492 @proxy_kafee"
+      - "493 89.169.6.114"
+      - "494 [14386]+-+Telegram+:+@configraygan"
+      - "495 💎+|+@configraygan『🇩🇪¹⁰¹』"
+      - "496 94.125.101.235"
+      - "497 chatgpt.com"
+      - "498 @meliproxyy"
+      - "499 ***🐦‍🔥***-@SPEEDS_VPN"
+      - "500 pae.com"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

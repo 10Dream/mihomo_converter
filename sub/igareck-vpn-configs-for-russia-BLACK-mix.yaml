@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"hysteria2","server":"hkbgp.jjxcloud.xyz","port":8443,"password":"cd7e0971-4b98-41fc-9ecb-1267a2b0e4f4"}
   - {"name":"2 🇯🇵 Japan | 🌐 | [IPv4+6] | [BL]","type":"hysteria2","server":"160.16.137.28","port":35789,"password":"4d5018bf-0e8b-4087-8b8a-bfa51ae86f5c"}
@@ -201,16 +359,17 @@ proxies:
   - {"name":"182 🇺🇸 United States, San Jose | [BL]","type":"vmess","server":"209.46.30.199","port":443,"uuid":"f08369d1-5ee7-4b16-d786-30bce12fc33c","alterId":0,"cipher":"auto","udp":true}
   - {"name":"183 🇺🇸 United States, St Louis (Downtown) | [BL]","type":"vmess","server":"chatgpt.com","port":8443,"uuid":"60441548-b68e-43b2-8191-e3b884be4b3c","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🇭🇰 Hong Kong, Hong Kong | [BL]"
       - "2 🇯🇵 Japan | 🌐 | [IPv4+6] | [BL]"
@@ -395,6 +554,254 @@ proxy-groups:
       - "181 🇺🇸 United States, San Jose | [BL]"
       - "182 🇺🇸 United States, San Jose | [BL]"
       - "183 🇺🇸 United States, St Louis (Downtown) | [BL]"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "2 🇯🇵 Japan | 🌐 | [IPv4+6] | [BL]"
+      - "3 🇨🇦 Canada, Montreal (Saint-Laurent) | [BL]"
+      - "4 🇨🇦 Canada, Montreal (Saint-Laurent) | [BL]"
+      - "5 🇨🇦 Canada, Montreal (Ville-Marie) | [IPv6] | [BL]"
+      - "6 🇪🇪 Estonia, Tallinn (Kesklinna linnaosa) | [IPv6] | [BL]"
+      - "7 🇫🇮 Finland, Helsinki | [BL]"
+      - "8 🇫🇮 Finland, Helsinki | [BL]"
+      - "9 🇫🇮 Finland, Helsinki | [BL]"
+      - "10 🇫🇮 Finland, Helsinki | 🌐 | [IPv4+6] | [BL]"
+      - "11 🇫🇷 France, Paris | [IPv6] | [BL]"
+      - "12 🇫🇷 France, Paris | [IPv6] | [BL]"
+      - "13 🇫🇷 France, Paris | 🌐 | [IPv4+6] | [BL]"
+      - "14 🇩🇪 Germany, Berlin | [BL]"
+      - "15 🇩🇪 Germany, Berlin | [BL]"
+      - "16 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "17 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "18 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "19 🇩🇪 Germany, Frankfurt am Main | [IPv6] | [BL]"
+      - "20 🇩🇪 Germany, Frankfurt am Main | [IPv6] | [BL]"
+      - "21 🇩🇪 Germany, Frankfurt am Main | [IPv6] | [BL]"
+      - "22 🇩🇪 Germany, Frankfurt am Main | [IPv6] | [BL]"
+      - "23 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv4+6] | [BL]"
+      - "24 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [IPv6] | [BL]"
+      - "25 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [IPv4+6] | [BL]"
+      - "26 🇩🇪 Germany, Nuremberg | [BL]"
+      - "27 🇯🇵 Japan, Shinagawa (Higashishinagawa) | [BL]"
+      - "28 🇱🇻 Latvia, Riga (Centra rajons) | [BL]"
+      - "29 🇱🇻 Latvia, Riga (Latgales priekšpilsēta) | [BL]"
+      - "30 🇱🇻 Latvia, Riga (Latgales priekšpilsēta) | [BL]"
+      - "31 🇵🇱 Poland, Warsaw | [BL]"
+      - "32 🇸🇬 Singapore, Singapore | [BL]"
+      - "33 🇸🇬 Singapore, Singapore (Loyang) | [BL]"
+      - "34 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "35 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "36 🇳🇱 The Netherlands, Amsterdam | [IPv6] | [BL]"
+      - "37 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv4+6] | [BL]"
+      - "38 🇳🇱 The Netherlands, Meppel | 🌐 | [IPv4+6] | [BL]"
+      - "39 🇹🇷 Turkey, Bahçelievler | [BL]"
+      - "40 🇬🇧 United Kingdom, Manchester | 🌐 | [IPv4+6] | [BL]"
+      - "41 🇺🇸 United States, Phoenix | [BL]"
+      - "42 🇺🇸 United States, San Jose | [BL]"
+      - "43 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "44 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "45 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "46 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "47 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "48 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "49 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "50 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "51 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "52 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "53 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "54 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "55 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "56 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "57 🇷🇺 Russia, Dal'neye Konstantinovo | [IPv6] | [BL]"
+      - "58 🇷🇺 Russia, Moscow | [BL]"
+      - "59 🇷🇺 Russia, Moscow | [BL]"
+      - "60 🇷🇺 Russia, St Petersburg | [BL]"
+      - "61 🌐 Anycast-IP | [BL]"
+      - "62 🌐 Anycast-IP | [BL]"
+      - "63 🌐 Anycast-IP | [BL]"
+      - "64 🌐 Anycast-IP | [BL]"
+      - "65 🌐 Anycast-IP | [BL]"
+      - "66 🌐 Anycast-IP | [BL]"
+      - "67 🌐 Anycast-IP | [BL]"
+      - "68 🌐 Anycast-IP | [BL]"
+      - "69 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "70 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "71 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "72 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "73 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "74 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "75 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "76 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "77 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "78 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "79 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "80 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "81 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "82 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "83 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "84 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "85 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "86 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "87 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "88 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "89 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "90 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "91 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "92 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "93 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "94 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "95 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "96 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "97 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "98 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "99 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "100 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "101 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "102 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "103 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "104 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "105 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "106 🌐 Anycast-IP | [IPv4+6] | [BL]"
+      - "107 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "108 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "109 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "110 🇫🇮 Finland, Helsinki | [BL]"
+      - "111 🇫🇮 Finland, Helsinki | [BL]"
+      - "112 🇫🇮 Finland, Helsinki | [BL]"
+      - "113 🇫🇮 Finland, Helsinki | [BL]"
+      - "114 🇫🇮 Finland, Helsinki | [BL]"
+      - "115 🇫🇮 Finland, Helsinki | [BL]"
+      - "116 🇫🇮 Finland, Helsinki | [BL]"
+      - "117 🇫🇮 Finland, Helsinki | [BL]"
+      - "118 🇫🇮 Finland, Helsinki | [BL]"
+      - "119 🇫🇮 Finland, Helsinki | [BL]"
+      - "120 🇫🇮 Finland, Helsinki | [BL]"
+      - "121 🇫🇮 Finland, Helsinki | [BL]"
+      - "122 🇫🇮 Finland, Helsinki | [BL]"
+      - "123 🇫🇮 Finland, Helsinki | [BL]"
+      - "124 🇫🇮 Finland, Helsinki | [BL]"
+      - "125 🇫🇮 Finland, Helsinki | [BL]"
+      - "126 🇫🇮 Finland, Helsinki | [BL]"
+      - "127 🇫🇮 Finland, Helsinki | [BL]"
+      - "128 🇭🇰 Hong Kong, Tsuen Wan | [BL]"
+      - "129 🇯🇵 Japan, Chiyoda City | [BL]"
+      - "130 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv4+6] | [BL]"
+      - "131 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "132 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "133 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "134 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "135 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "136 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "137 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "138 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "139 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "140 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "141 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "142 🇬🇧 United Kingdom, London | [BL]"
+      - "143 🇬🇧 United Kingdom, London | 🌐 | [BL]"
+      - "144 🇬🇧 United Kingdom, London | 🌐 | [BL]"
+      - "145 🇺🇸 United States, Los Angeles | [BL]"
+      - "146 🇺🇸 United States, Los Angeles | [BL]"
+      - "147 🇺🇸 United States, Seattle | [BL]"
+      - "148 🇺🇸 United States, Seattle | [BL]"
+      - "149 🇨🇦 Canada, Toronto | [BL]"
+      - "150 🇫🇮 Finland, Helsinki | [BL]"
+      - "151 🇫🇷 France, Paris | [BL]"
+      - "152 🇫🇷 France, Paris | [BL]"
+      - "153 🇫🇷 France, Paris | [BL]"
+      - "154 🇭🇰 Hong Kong, Central | [BL]"
+      - "155 🇭🇰 Hong Kong, Tsuen Wan | [BL]"
+      - "156 🇭🇰 Hong Kong, Tsuen Wan | [BL]"
+      - "157 🇰🇿 Kazakhstan, Almaty | [BL]"
+      - "158 🇱🇺 Luxembourg, Bissen | [BL]"
+      - "159 🇳🇴 Norway, Oslo (Alna District) | [BL]"
+      - "160 🇳🇴 Norway, Oslo (Alna District) | [BL]"
+      - "161 🇵🇱 Poland, Warsaw | [BL]"
+      - "162 🇸🇬 Singapore, Singapore | [BL]"
+      - "163 🇸🇬 Singapore, Singapore | [BL]"
+      - "164 🇸🇬 Singapore, Singapore | [BL]"
+      - "165 🇸🇬 Singapore, Singapore | [BL]"
+      - "166 🇸🇬 Singapore, Singapore | [BL]"
+      - "167 🇸🇬 Singapore, Singapore | [BL]"
+      - "168 🇸🇪 Sweden, Stockholm | 🌐 | [IPv4+6] | [BL]"
+      - "169 🇬🇧 United Kingdom, London | [BL]"
+      - "170 🇺🇸 United States, Dallas | [BL]"
+      - "171 🇺🇸 United States, Dallas | [BL]"
+      - "172 🇺🇸 United States, New York | [BL]"
+      - "173 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "174 🇨🇦 Canada, Toronto | [BL]"
+      - "175 🇳🇱 The Netherlands, Eygelshoven | [BL]"
+      - "176 🇹🇷 Turkey | 🌐 | [IPv4+6] | [BL]"
+      - "177 🇹🇷 Turkey, Şişli | [IPv6] | [BL]"
+      - "178 🇺🇸 United States, New York | [BL]"
+      - "179 🇺🇸 United States, San Jose | [BL]"
+      - "180 🇺🇸 United States, San Jose | [BL]"
+      - "181 🇺🇸 United States, San Jose | [BL]"
+      - "182 🇺🇸 United States, San Jose | [BL]"
+      - "183 🇺🇸 United States, St Louis (Downtown) | [BL]"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30

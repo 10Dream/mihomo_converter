@@ -5,17 +5,175 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
-log-level: info
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
 ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ''
+bind-address: '*'
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - '*.ir'
+ 
+  default-nameserver: 
+    - 8.8.8.8 
+    - 8.8.4.4 
+    - 1.0.0.1 
+    - 1.1.1.1 
+    - 9.9.9.9 
+    - 9.9.9.11 
+    - 9.9.9.10 
+    - 94.140.14.15 
+    - 94.140.15.15 
+    - 223.5.5.5 
+    - 77.88.8.8
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 'https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI'
+    - 'tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com'
+  direct-nameserver:
+    - '78.157.42.100'
+    - '78.157.42.101' 
+  proxy-server-nameserver: 
+    - '2606:4700:4700::1111' 
+    - '2606:4700:4700::1001' 
+    - '2001:4860:4860::8888' 
+    - '2001:4860:4860::8844' 
+    - '1.1.1.1' 
+    - '8.8.8.8' 
+    - '8.8.4.4' 
+    - '9.9.9.9' 
+    - '223.5.5.5' 
+    - '77.88.8.8' 
+    - '2400:3200::1' 
+    - '2a02:6b8::feed:0ff' 
+    - '2620:fe::fe' 
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+
+rule-providers:
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml"
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml"
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml"
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml"
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml"
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml"
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml"
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml"
+    path: ./ruleset/parspack.yaml
+    interval: 86400
 proxies:
   - {"name":"1 🇺🇸US-37.19.198.236-0177","type":"ss","server":"37.19.198.236","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
   - {"name":"2 🇨🇦CA-79.127.200.169-0176","type":"ss","server":"79.127.200.169","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
@@ -213,16 +371,17 @@ proxies:
   - {"name":"194 🇲🇾MY-23.27.28.15-0221","type":"vmess","server":"23.27.28.15","port":5735,"uuid":"87c50702-71cf-47ca-aee4-ab304d28839e","alterId":0,"cipher":"auto","udp":true}
   - {"name":"195 🇲🇾MY-23.27.28.15-0224","type":"vmess","server":"23.27.28.15","port":4728,"uuid":"8d2153d1-88f4-48bd-ac63-b65b0ddbd662","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
-  - name: "Proxy"
+  - name: "نوع انتخاب پروکسی 🔀"
+    icon: https://www.svgrepo.com/show/412721/choose.svg
     type: select
     proxies:
-      - "Auto"
-      - "DIRECT"
-  - name: "Auto"
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "بدون فیلترشکن 🛡️"
+      - "قطع اینترنت ⛔"
+  - name: "دستی 🤏🏻"
+    type: select
+    icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🇺🇸US-37.19.198.236-0177"
       - "2 🇨🇦CA-79.127.200.169-0176"
@@ -419,6 +578,266 @@ proxy-groups:
       - "193 🇸🇬SG-103.253.26.134-0164"
       - "194 🇲🇾MY-23.27.28.15-0221"
       - "195 🇲🇾MY-23.27.28.15-0224"
+  - name: "خودکار (بهترین پینگ) 🤖"
+    type: url-test
+    icon: https://www.svgrepo.com/show/7876/speedometer.svg
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 300
+    tolerance: 50
+    lazy: true
+    proxies:
+      - "1 🇺🇸US-37.19.198.236-0177"
+      - "2 🇨🇦CA-79.127.200.169-0176"
+      - "3 🇺🇸US-156.146.38.167-0178"
+      - "4 🇺🇸US-156.146.38.170-0180"
+      - "5 🇺🇸US-156.146.38.169-0179"
+      - "6 🇨🇦CA-137.184.174.93-0181"
+      - "7 🇺🇸US-173.244.56.6-0182"
+      - "8 🇳🇱NL-109.201.152.181-0189"
+      - "9 🇷🇺RU-194.116.173.21-4553"
+      - "10 🇬🇧GB-57.129.140.88-0208"
+      - "11 🇫🇷FR-51.159.106.175-0207"
+      - "12 🇬🇧GB-82.38.31.202-0205"
+      - "13 🇬🇧GB-82.38.31.214-0191"
+      - "14 🇬🇧GB-82.38.31.217-0193"
+      - "15 🇬🇧GB-82.38.31.205-0196"
+      - "16 🇬🇧GB-82.38.31.191-0202"
+      - "17 🇬🇧GB-82.38.31.189-0277"
+      - "18 🇬🇧GB-82.38.31.82-0197"
+      - "19 🇬🇧GB-82.38.31.194-0199"
+      - "20 🇬🇧GB-82.38.31.99-0195"
+      - "21 🇳🇱NL-193.29.139.157-0186"
+      - "22 🇳🇱NL-193.29.139.141-0210"
+      - "23 🇳🇱NL-193.29.139.217-0201"
+      - "24 🇳🇱NL-193.29.139.251-0194"
+      - "25 🇳🇱NL-193.29.139.189-0200"
+      - "26 🇳🇱NL-193.29.139.206-0192"
+      - "27 🇬🇧GB-82.38.31.124-0375"
+      - "28 🇳🇱NL-193.29.139.227-0203"
+      - "29 🇬🇧GB-82.38.31.208-0204"
+      - "30 🇬🇧GB-82.38.31.210-0198"
+      - "31 🇬🇧GB-82.38.31.218-0190"
+      - "32 🇬🇧GB-82.38.31.187-0188"
+      - "33 🇪🇨EC-38.165.231.25-0212"
+      - "34 🇵🇦PA-138.186.142.80-0211"
+      - "35 🇵🇦PA-138.186.142.81-0214"
+      - "36 🇳🇱NL-193.29.139.202-0218"
+      - "37 🇩🇪DE-178.17.61.67-0267"
+      - "38 🇺🇸US-173.234.29.2-0184"
+      - "39 🇯🇵JP-149.22.87.204-0213"
+      - "40 🇬🇧GB-82.38.31.35-0235"
+      - "41 🇱🇻LV-46.183.217.204-0227"
+      - "42 🇯🇵JP-172.105.199.111-0215"
+      - "43 🇰🇿KZ-109.61.39.28-0216"
+      - "44 🇿🇦ZA-156.38.168.58-0217"
+      - "45 🇨🇦CA-23.95.76.59-0225"
+      - "46 🇸🇪SE-46.246.97.140-4629"
+      - "47 🇸🇬SG-68.183.227.4-0243"
+      - "48 🇨🇦CA-45.154.204.7-0234"
+      - "49 🇲🇩MD-176.123.5.253-0222"
+      - "50 🇦🇪AE-147.78.0.182-0223"
+      - "51 🇵🇰PK-156.59.243.6-0219"
+      - "52 🇹🇼TW-185.189.160.105-0239"
+      - "53 🇸🇬SG-38.89.142.56-0275"
+      - "54 🇮🇳IN-82.180.146.173-0257"
+      - "55 🇲🇩MD-176.123.1.175-0248"
+      - "56 🇺🇸US-15.204.247.49-0798"
+      - "57 🇵🇱PL-57.128.214.100-4700"
+      - "58 🇺🇸US-38.135.24.131-0266"
+      - "59 🇰🇷KR-141.164.45.187-0284"
+      - "60 🇪🇸ES-5.188.181.201-4555"
+      - "61 🇳🇱NL-213.109.147.242-0254"
+      - "62 🇭🇰HK-112.213.102.188-4723"
+      - "63 🇵🇷PR-185.47.255.22-0265"
+      - "64 🇲🇹MT-171.22.254.17-0269"
+      - "65 🇵🇱PL-217.30.10.70-4815"
+      - "66 🇵🇱PL-217.30.10.70-4814"
+      - "67 🇷🇺RU-38.60.223.8-0256"
+      - "68 🇭🇰HK-203.23.128.33-0258"
+      - "69 🇬🇧GB-82.38.31.179-0268"
+      - "70 🇬🇧GB-185.5.38.111-4592"
+      - "71 🇮🇳IN-134.209.147.198-0280"
+      - "72 🇬🇧GB-185.5.38.111-4595"
+      - "73 🇬🇧GB-141.98.101.182-0246"
+      - "74 🇲🇽MX-147.78.1.230-0295"
+      - "75 🇵🇪PE-138.186.143.32-0282"
+      - "76 🇲🇽MX-147.78.1.230-0294"
+      - "77 🇵🇪PE-138.186.143.32-0283"
+      - "78 🇲🇦MA-154.70.207.97-0260"
+      - "79 🇰🇷KR-218.237.185.230-4612"
+      - "80 🇳🇱NL-193.29.139.179-0261"
+      - "81 🇪🇬EG-38.54.59.180-0290"
+      - "82 🇭🇰HK-103.149.182.105-4720"
+      - "83 🇰🇷KR-218.237.185.230-0292"
+      - "84 🇬🇧GB-82.38.31.184-0273"
+      - "85 🇰🇷KR-221.139.79.57-0299"
+      - "86 🇬🇧GB-82.38.31.199-4596"
+      - "87 🇨🇴CO-154.223.16.212-4607"
+      - "88 🇩🇪DE-38.60.250.107-0278"
+      - "89 🇬🇧GB-82.38.31.176-0276"
+      - "90 🇫🇮FI-38.244.136.233-4824"
+      - "91 🇧🇬BG-38.60.247.151-0279"
+      - "92 🇪🇸ES-37.143.130.203-0297"
+      - "93 🇯🇵JP-103.106.228.247-0285"
+      - "94 🇧🇷BR-38.54.57.90-0291"
+      - "95 🇬🇧GB-141.98.101.178-0271"
+      - "96 🇵🇹PT-185.231.233.112-4670"
+      - "97 🇬🇧GB-107.181.147.235-4709"
+      - "98 🇳🇱NL-92.112.126.90-0300"
+      - "99 🇺🇸US-154.17.31.189-0298"
+      - "100 🇧🇴BO-185.93.173.60-0305"
+      - "101 🇲🇦MA-188.214.157.58-4616"
+      - "102 🇳🇱NL-172.99.188.71-5298"
+      - "103 🇬🇧GB-51.105.5.48-0185"
+      - "104 🇸🇬SG-217.197.161.138-0161"
+      - "105 🇸🇬SG-217.197.161.136-0160"
+      - "106 🇸🇬SG-81.90.189.18-0159"
+      - "107 🇸🇬SG-81.90.189.18-0158"
+      - "108 🇸🇬SG-81.90.189.152-0157"
+      - "109 🇸🇬SG-217.197.161.164-0156"
+      - "110 🇸🇬SG-81.90.189.152-0155"
+      - "111 🇸🇬SG-81.90.189.18-0154"
+      - "112 🇸🇬SG-217.197.161.136-0153"
+      - "113 🇸🇬SG-217.197.161.164-0152"
+      - "114 🇸🇬SG-217.197.161.164-0151"
+      - "115 🇸🇬SG-217.197.161.136-0150"
+      - "116 🇸🇬SG-217.197.161.166-0149"
+      - "117 🇸🇬SG-217.197.161.136-0148"
+      - "118 🇸🇬SG-217.197.161.166-0147"
+      - "119 🇸🇬SG-217.197.161.166-0146"
+      - "120 🇸🇬SG-217.197.161.138-0145"
+      - "121 🇸🇬SG-217.197.161.166-0144"
+      - "122 🇸🇬SG-81.90.189.18-0143"
+      - "123 🇬🇧GB-51.105.5.48-0206"
+      - "124 🇸🇬SG-217.197.161.166-0142"
+      - "125 🇸🇬SG-81.90.189.18-0141"
+      - "126 🇸🇬SG-217.197.161.166-0140"
+      - "127 🇸🇬SG-217.197.161.164-0139"
+      - "128 🇸🇬SG-217.197.161.166-0138"
+      - "129 🇸🇬SG-217.197.161.138-0137"
+      - "130 🇸🇬SG-81.90.189.18-0136"
+      - "131 🇸🇬SG-217.197.161.166-0135"
+      - "132 🇸🇬SG-81.90.189.18-0134"
+      - "133 🇸🇬SG-81.90.189.18-0133"
+      - "134 🇸🇬SG-217.197.161.138-0132"
+      - "135 🇸🇬SG-217.197.161.136-0131"
+      - "136 🇸🇬SG-217.197.161.136-0130"
+      - "137 🇸🇬SG-217.197.161.166-0129"
+      - "138 🇸🇬SG-217.197.161.136-0128"
+      - "139 🇸🇬SG-217.197.161.138-0127"
+      - "140 🇸🇬SG-81.90.189.152-0126"
+      - "141 🇸🇬SG-217.197.161.136-0125"
+      - "142 🇸🇬SG-217.197.161.138-0124"
+      - "143 🇯🇵JP-160.16.130.21-0230"
+      - "144 🇯🇵JP-160.16.124.17-0231"
+      - "145 🇳🇴NO-80.173.231.254-0262"
+      - "146 🇯🇵JP-160.16.68.250-0253"
+      - "147 🇯🇵JP-160.16.150.76-0229"
+      - "148 🇭🇰HK-154.86.11.145-0820"
+      - "149 🇮🇸IS-37.235.49.209-0238"
+      - "150 🇯🇵JP-153.121.65.107-0244"
+      - "151 🇯🇵JP-153.121.65.107-0250"
+      - "152 🇯🇵JP-153.121.65.107-0251"
+      - "153 🇯🇵JP-160.16.85.33-0237"
+      - "154 🇭🇰HK-154.86.11.145-0274"
+      - "155 🇭🇰HK-154.86.11.145-0272"
+      - "156 🇯🇵JP-153.121.38.213-0226"
+      - "157 🇫🇷FR-57.128.189.240-4570"
+      - "158 🇫🇷FR-91.134.8.101-4587"
+      - "159 🇨🇦CA-23.162.200.227-6979"
+      - "160 🇨🇦CA-134.195.198.147-6954"
+      - "161 🏁RELAY-172.67.215.240-5165"
+      - "162 🇨🇦CA-51.79.102.253-0795"
+      - "163 🇨🇦CA-15.235.41.200-0791"
+      - "164 🏁RELAY-172.67.215.240-4838"
+      - "165 🇺🇸US-209.126.84.189-0807"
+      - "166 🏁RELAY-104.21.37.156-1658"
+      - "167 🏁RELAY-104.26.14.137-0817"
+      - "168 🇩🇪DE-57.129.24.125-6919"
+      - "169 🏁RELAY-104.21.91.128-0562"
+      - "170 🇺🇸US-209.126.84.189-0801"
+      - "171 🏁RELAY-172.67.197.47-0263"
+      - "172 🏁RELAY-172.67.197.47-0286"
+      - "173 🇮🇩ID-103.126.226.194-0566"
+      - "174 🏁RELAY-172.67.197.47-0270"
+      - "175 🇭🇰HK-47.238.82.7-4848"
+      - "176 🇯🇵JP-47.245.42.92-0814"
+      - "177 🇭🇰HK-47.243.135.74-4775"
+      - "178 🇭🇰HK-47.242.31.79-0296"
+      - "179 🇭🇰HK-47.243.63.35-0304"
+      - "180 🇭🇰HK-47.243.87.158-0293"
+      - "181 🇭🇰HK-47.242.138.141-0289"
+      - "182 🇭🇰HK-47.76.254.70-4844"
+      - "183 🇭🇰HK-47.244.120.197-4777"
+      - "184 🇭🇰HK-47.244.120.197-4778"
+      - "185 🇲🇾MY-47.250.45.234-4806"
+      - "186 🇲🇾MY-47.250.45.234-4805"
+      - "187 🇩🇪DE-57.129.28.213-4568"
+      - "188 🇸🇬SG-8.214.33.158-0166"
+      - "189 🇸🇬SG-202.61.141.130-0168"
+      - "190 🇸🇬SG-103.253.26.20-0169"
+      - "191 🇸🇬SG-180.215.130.123-0170"
+      - "192 🇺🇸US-199.34.230.199-0183"
+      - "193 🇸🇬SG-103.253.26.134-0164"
+      - "194 🇲🇾MY-23.27.28.15-0221"
+      - "195 🇲🇾MY-23.27.28.15-0224"
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
+    proxies:
+      - "بدون فیلترشکن 🛡️"
+      - "نوع انتخاب پروکسی 🔀"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: تلگرام 💬
+    type: select
+    icon: https://www.svgrepo.com/show/354443/telegram.svg
+    proxies:
+      - "نوع انتخاب پروکسی 🔀"
+      - "بدون فیلترشکن 🛡️"
+      - "خودکار (بهترین پینگ) 🤖"
+      - "دستی 🤏🏻"
+      - "اجازه ندادن 🚫"
+  - name: "بدون فیلترشکن 🛡️"
+    type: select
+    icon: https://www.svgrepo.com/show/6318/connection.svg
+    proxies:
+      - DIRECT
+    hidden: true
+  - name: "قطع اینترنت ⛔"
+    type: select
+    icon: https://www.svgrepo.com/show/305372/wifi-off.svg
+    proxies:
+      - REJECT
+    hidden: true
+  - name: "اجازه ندادن 🚫"
+    type: select
+    icon: https://www.svgrepo.com/show/444307/gui-ban.svg
+    proxies:
+      - REJECT
+    hidden: true
+
 rules:
-  - GEOIP,IR,DIRECT
-  - MATCH,Proxy
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - MATCH,نوع انتخاب پروکسی 🔀
+
+ntp:
+  enable: true
+  server: "time.apple.com"
+  port: 123
+  interval: 30
