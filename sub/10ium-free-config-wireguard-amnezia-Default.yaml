@@ -1,0 +1,84 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+proxies:
+  - {"name":"4-ZHK 2026-02-18 10:02","type":"wireguard","server":"162.159.192.1","port":2408,"ip":"10.0.0.1","private-key":"WN5pcopGWXOZNDqr3FNVby46bAPpNsSeMicqox3ZuEQ=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-18 18:03","type":"wireguard","server":"162.159.192.2","port":4500,"ip":"10.0.0.1","private-key":"QPDFfFQSi+NwiNEG4D7IsIvbjIf1EwovZawRIw0c9k4=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-18 21:03","type":"wireguard","server":"162.159.192.5","port":500,"ip":"10.0.0.1","private-key":"sJ1lqLNRfFyh771NRuYPpbKH22aC0F5ZPL4+GRXvvEk=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-19 10:03","type":"wireguard","server":"162.159.192.5","port":2408,"ip":"10.0.0.1","private-key":"aICuRAW2FOxKg6HhVWZz1yR0BzzS70dYkrF1CoEUrls=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-19 18:03","type":"wireguard","server":"162.159.192.3","port":4500,"ip":"10.0.0.1","private-key":"+F+iBuTQ7TwzXWb4C04UVLWq46YCNzX7tQaU4q4tN2Q=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-19 21:03","type":"wireguard","server":"162.159.192.3","port":2408,"ip":"10.0.0.1","private-key":"IBHybJEVNPlvWIKIb+jepe0aFisXAleu0LmxGK8F0GM=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-20 10:03","type":"wireguard","server":"162.159.192.5","port":500,"ip":"10.0.0.1","private-key":"SLQM1iGPVovYSVkSPiyHJo7for5BfVoXBdhB+mPFxUE=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-20 18:04","type":"wireguard","server":"162.159.192.2","port":2408,"ip":"10.0.0.1","private-key":"8B3rND/XH2xQMDD05w0bwnw+8tTBCbnnFU9qdhyCHlc=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-20 21:04","type":"wireguard","server":"162.159.192.1","port":500,"ip":"10.0.0.1","private-key":"ePFDoWHC5aVkqV3xq48i1LMO2TVANNouxCKYSs4/aFA=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-21 10:04","type":"wireguard","server":"162.159.192.5","port":2408,"ip":"10.0.0.1","private-key":"MGgFQBIpYFw2VjSd6rzlNi2xSYk95ex8BVjvKbCd/XE=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-21 18:04","type":"wireguard","server":"162.159.192.4","port":2408,"ip":"10.0.0.1","private-key":"AFKcXm/7gW80BcSLo1kgTNQvWHDCd/LXDCwPHjcyx3Q=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-21 21:04","type":"wireguard","server":"162.159.192.3","port":500,"ip":"10.0.0.1","private-key":"yFTBlC5ZSmiecDIwKX7/oJ3TlVz0CENkz1ozsEjxNH8=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-22 10:04","type":"wireguard","server":"162.159.192.6","port":500,"ip":"10.0.0.1","private-key":"mHj04J164X9hgzAVq4BlB0hc/SK3QPbgl7JF+/anXU0=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-22 18:00","type":"wireguard","server":"162.159.192.2","port":500,"ip":"10.0.0.1","private-key":"+AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-22 21:00","type":"wireguard","server":"162.159.192.3","port":500,"ip":"10.0.0.1","private-key":"2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-23 10:00","type":"wireguard","server":"162.159.192.2","port":2408,"ip":"10.0.0.1","private-key":"gM68aiv2OnEWTxLZ+XExrdUusrC/s7lgTGfY/TQFFHs=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-23 18:00","type":"wireguard","server":"162.159.192.1","port":500,"ip":"10.0.0.1","private-key":"eLFofetNzAYidl6EIrU4Gnu9+UvV+UiMNZxGyujYl0Q=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-23 21:00","type":"wireguard","server":"162.159.192.6","port":2408,"ip":"10.0.0.1","private-key":"GGdi0j+S7ypUOCm+Rj/h5R3ifRHRyQHcKkK8rZeE+Ho=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-24 10:00","type":"wireguard","server":"162.159.192.1","port":2408,"ip":"10.0.0.1","private-key":"eERuOncn22jnY3uYp8WLcy0SCuOkEbSDa0j+wAPSEH4=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-24 18:01","type":"wireguard","server":"162.159.192.6","port":4500,"ip":"10.0.0.1","private-key":"cFHtkr9tVshGcYiXSYPeQYdwCKvnpiOTdaaY+SLxO1w=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-24 21:01","type":"wireguard","server":"162.159.192.1","port":4500,"ip":"10.0.0.1","private-key":"SHdD0CrAMZFq+quH3TNM9tFrBjta8puWVLUk4A2u7ns=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-25 10:01","type":"wireguard","server":"162.159.192.2","port":2408,"ip":"10.0.0.1","private-key":"UDgEogAoVdM5ndWJ/Nz/ptNgAc/NNNkkZySFttd5eH8=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-25 18:01","type":"wireguard","server":"162.159.192.1","port":2408,"ip":"10.0.0.1","private-key":"OI9/x0AH+Vi4vHb9QphH904MxlVGVExYrVjT29uf+W8=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-25 21:01","type":"wireguard","server":"162.159.192.3","port":4500,"ip":"10.0.0.1","private-key":"yFKwhZEv85VZdUeWh/z6/qEIrp8JQ30vfZLx78sT404=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+  - {"name":"4-ZHK 2026-02-26 10:01","type":"wireguard","server":"162.159.192.5","port":500,"ip":"10.0.0.1","private-key":"WIZgAKc2phrJtJZxXq32X1OvU38V1OAZ/d9CxmughFM=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true,"amnezia-wg-option":{"jc":4,"jmin":40,"jmax":100,"s1":0,"s2":0,"h1":1,"h2":2,"h3":3,"h4":4}}
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - "Auto"
+      - "DIRECT"
+  - name: "Auto"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "4-ZHK 2026-02-18 10:02"
+      - "4-ZHK 2026-02-18 18:03"
+      - "4-ZHK 2026-02-18 21:03"
+      - "4-ZHK 2026-02-19 10:03"
+      - "4-ZHK 2026-02-19 18:03"
+      - "4-ZHK 2026-02-19 21:03"
+      - "4-ZHK 2026-02-20 10:03"
+      - "4-ZHK 2026-02-20 18:04"
+      - "4-ZHK 2026-02-20 21:04"
+      - "4-ZHK 2026-02-21 10:04"
+      - "4-ZHK 2026-02-21 18:04"
+      - "4-ZHK 2026-02-21 21:04"
+      - "4-ZHK 2026-02-22 10:04"
+      - "4-ZHK 2026-02-22 18:00"
+      - "4-ZHK 2026-02-22 21:00"
+      - "4-ZHK 2026-02-23 10:00"
+      - "4-ZHK 2026-02-23 18:00"
+      - "4-ZHK 2026-02-23 21:00"
+      - "4-ZHK 2026-02-24 10:00"
+      - "4-ZHK 2026-02-24 18:01"
+      - "4-ZHK 2026-02-24 21:01"
+      - "4-ZHK 2026-02-25 10:01"
+      - "4-ZHK 2026-02-25 18:01"
+      - "4-ZHK 2026-02-25 21:01"
+      - "4-ZHK 2026-02-26 10:01"
+rules:
+  - GEOIP,IR,DIRECT
+  - MATCH,Proxy

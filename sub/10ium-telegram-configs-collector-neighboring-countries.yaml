@@ -1,0 +1,416 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+proxies:
+  - {"name":"11-🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.235:443","type":"vless","server":"185.143.233.235","port":443,"uuid":"97dce074-7db1-4d59-99ca-0ef8311e2425","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-45.84.157.14:9091","type":"vless","server":"45.84.157.14","port":9091,"uuid":"a09d2931-c961-4f4e-9288-eab639c5fc03","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-94.184.13.37:8368","type":"vless","server":"94.184.13.37","port":8368,"uuid":"4eb9e9b9-b5cb-4948-9883-2bef6fb87f1d","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.120:443","type":"vless","server":"185.143.233.120","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"seedleech.ir"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-217.60.238.167:8084","type":"vless","server":"217.60.238.167","port":8084,"uuid":"e0ff845c-92d7-4f9b-81f5-53bf9625aac4","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-217.60.238.167:8083","type":"vless","server":"217.60.238.167","port":8083,"uuid":"e0ff845c-92d7-4f9b-81f5-53bf9625aac4","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-78.157.58.204:15212","type":"vless","server":"78.157.58.204","port":15212,"uuid":"968186b8-e898-4abf-9588-edd8dcf6b518","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.113:4001","type":"vless","server":"193.151.155.113","port":4001,"uuid":"81f57d7b-727a-4499-a29c-9229310db7fe","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443","type":"vless","server":"185.143.234.5","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"alef.ir"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-194.56.148.167:1433","type":"vless","server":"194.56.148.167","port":1433,"uuid":"12486672-3116-48b2-8495-2d7223874a7b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-92.114.50.68:8080","type":"vless","server":"92.114.50.68","port":8080,"uuid":"3f5503ad-8823-476a-86dd-6130f9e1d58b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-188.212.97.195:2010","type":"vless","server":"188.212.97.195","port":2010,"uuid":"d5a5511a-29ed-495c-9b7c-152a326c09c5","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.117:4001","type":"vless","server":"193.151.155.117","port":4001,"uuid":"81f57d7b-727a-4499-a29c-9229310db7fe","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-37.32.42.136:2095","type":"vless","server":"37.32.42.136","port":2095,"uuid":"c733fcc3-b41d-4a2d-942d-b6c85c01984e","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.74:4001","type":"vless","server":"193.151.155.74","port":4001,"uuid":"81f57d7b-727a-4499-a29c-9229310db7fe","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-NONE 🇮🇷 IR-109.95.67.161:88","type":"vless","server":"109.95.67.161","port":88,"uuid":"16ca4f6f-b540-691b-579a-ceb710a5eb7d","udp":true,"tls":false,"network":"ws","servername":"1"}
+  - {"name":"11-🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:443","type":"vless","server":"185.143.234.235","port":443,"uuid":"97dce074-7db1-4d59-99ca-0ef8311e2425","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-78.110.123.32:2095","type":"vless","server":"78.110.123.32","port":2095,"uuid":"f8d3b3c4-678d-4a23-a4de-f8613a310a44","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-45.84.157.54:5050","type":"vless","server":"45.84.157.54","port":5050,"uuid":"cfa44910-d8e0-4469-8e0c-88a9f5e96e6b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-85.133.249.38:58128","type":"vless","server":"85.133.249.38","port":58128,"uuid":"a98dfd2a-b021-607c-af2d-362ae38c9478","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-45.84.157.14:9093","type":"vless","server":"45.84.157.14","port":9093,"uuid":"a09d2931-c961-4f4e-9288-eab639c5fc03","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.158.133:9000","type":"vless","server":"193.151.158.133","port":9000,"uuid":"fe08cb95-a7bd-48d3-b3e8-e083ab8cd9bc","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-NONE 🇮🇷 IR-85.133.204.179:59036","type":"vless","server":"85.133.204.179","port":59036,"uuid":"8c26c19d-123d-454d-9529-ff737d0450f6","udp":true,"tls":false,"network":"ws"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-5.160.144.77:443","type":"vless","server":"5.160.144.77","port":443,"uuid":"2b0e561e-d8ab-45f8-becb-09692e2d4bf0","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-185.29.223.39:45635","type":"vless","server":"185.29.223.39","port":45635,"uuid":"0dea4966-6342-47f4-91fd-fac9334708a1","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NA 🇮🇷 IR-194.56.148.167:24171","type":"vless","server":"194.56.148.167","port":24171,"uuid":"09ef4c6e-fcb2-4e51-a5bd-bea6ef4f66aa","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-5.57.33.226:8443","type":"vless","server":"5.57.33.226","port":8443,"uuid":"aec82c9f-161f-44ce-bf83-12d46f969368","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NA 🇮🇷 IR-94.183.154.9:443","type":"vless","server":"94.183.154.9","port":443,"uuid":"959eb33c-43f8-4f45-9de6-3ffd13319a79","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-NONE 🇮🇷 IR-92.242.196.211:4220","type":"vless","server":"92.242.196.211","port":4220,"uuid":"51d7e784-d531-4756-a887-cb60b3069aa3","udp":true,"tls":false,"network":"ws"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.228.168.248:51071","type":"vless","server":"193.228.168.248","port":51071,"uuid":"683a044b-57ad-4eab-a1bc-e6b436a9333b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:443","type":"vless","server":"185.143.233.200","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"mehrnews.com"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-213.176.121.145:11022","type":"vless","server":"213.176.121.145","port":11022,"uuid":"4bfc1e10-822f-47b6-932f-8d5bf3414b8b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-NONE 🇮🇷 IR-217.60.238.173:8443","type":"vless","server":"217.60.238.173","port":8443,"uuid":"f91d249e-90e2-1625-9211-180e4d18f948","udp":true,"tls":false,"network":"ws","servername":"1"}
+  - {"name":"11-🔒 VL-WS-NONE 🇮🇷 IR-85.133.215.195:8008","type":"vless","server":"85.133.215.195","port":8008,"uuid":"66120db8-209e-a826-47c1-df38a3230e47","udp":true,"tls":false,"network":"ws","servername":"1"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.110:4001","type":"vless","server":"193.151.155.110","port":4001,"uuid":"81f57d7b-727a-4499-a29c-9229310db7fe","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-109.122.240.239:8004","type":"vless","server":"109.122.240.239","port":8004,"uuid":"60ff3b31-ecbb-41d6-82b4-e9cec7ec2f7b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-37.202.236.30:16964","type":"vless","server":"37.202.236.30","port":16964,"uuid":"7b838410-f1ef-4c4a-9f67-faf5724ae369","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-45.11.187.25:443","type":"vless","server":"45.11.187.25","port":443,"uuid":"c193944b-50f7-0121-91d0-c25afc78e242","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-213.176.1.45:45471","type":"vless","server":"213.176.1.45","port":45471,"uuid":"068f7784-c1c4-4ef7-b820-40759589c4ac","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.140.161:2053","type":"vless","server":"193.151.140.161","port":2053,"uuid":"b083db1b-5649-4d5a-8e52-4743c5ae0bd5","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NA 🇮🇷 IR-185.27.44.128:4845","type":"vless","server":"185.27.44.128","port":4845,"uuid":"94161499-d94b-4f0d-9cd4-723e5b228cb3","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NA 🇮🇷 IR-194.50.216.61:443","type":"vless","server":"194.50.216.61","port":443,"uuid":"2b5e2b86-55b6-4571-abc1-c1dec8605725","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-85.133.215.233:443","type":"vless","server":"85.133.215.233","port":443,"uuid":"f035f92d-34bc-4c80-a3d3-7a78ca9d044c","udp":true,"tls":false,"network":"tcp","servername":"skyroom.online,gharar.ir,igap.net"}
+  - {"name":"11-🔒 VL-WS-TLS 🇮🇷 IR-195.238.240.67:895","type":"vless","server":"195.238.240.67","port":895,"uuid":"43613c34-ea2c-4a8e-9189-7c84c1668990","udp":true,"tls":true,"network":"ws","servername":"speedtest.net"}
+  - {"name":"11-🔒 VL-WS-NONE 🇮🇷 IR-85.133.161.168:8080","type":"vless","server":"85.133.161.168","port":8080,"uuid":"cf00eb1a-a0b3-4e48-b917-0578f2f9566f","udp":true,"tls":false,"network":"ws"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-94.183.163.215:41128","type":"vless","server":"94.183.163.215","port":41128,"uuid":"4cf2e843-31b1-4ad7-ae33-0d092e12d396","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-31.25.95.238:2087","type":"vless","server":"31.25.95.238","port":2087,"uuid":"74cbe197-2698-4b65-940c-54e3cfdcfa2d","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.158.91:9000","type":"vless","server":"193.151.158.91","port":9000,"uuid":"fe08cb95-a7bd-48d3-b3e8-e083ab8cd9bc","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443","type":"vless","server":"185.143.234.200","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"cafeamiran.com"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-217.60.243.83:18661","type":"vless","server":"217.60.243.83","port":18661,"uuid":"0e56f5d2-f930-4042-a31e-ccf3514d0de8","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.120:2086","type":"vless","server":"185.143.233.120","port":2086,"uuid":"e9e437c2-1ee5-4f0d-ae09-4bfafc835e47","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-NA 🇮🇷 IR-188.136.162.18:5053","type":"vless","server":"188.136.162.18","port":5053,"uuid":"3feabdf2-320f-4692-94d5-5a197b0f1ea6","udp":true,"tls":false,"network":"ws"}
+  - {"name":"11-🔒 VL-GRPC-NONE 🇮🇷 IR-185.124.175.217:7730","type":"vless","server":"185.124.175.217","port":7730,"uuid":"f44cc5be-f529-41dc-9931-f595ce9899af","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-185.226.118.143:43019","type":"vless","server":"185.226.118.143","port":43019,"uuid":"17a6c797-9234-41b4-f2b9-07360cf74793","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.111:4001","type":"vless","server":"193.151.155.111","port":4001,"uuid":"81f57d7b-727a-4499-a29c-9229310db7fe","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.143.138:201","type":"vless","server":"193.151.143.138","port":201,"uuid":"042bcb1f-23dd-4ae9-9dc0-e301f89a5359","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇮🇷 IR-91.206.171.130:1403","type":"vless","server":"91.206.171.130","port":1403,"uuid":"72f1e59b-2fbb-494b-b816-1515de48f433","udp":true,"tls":true,"network":"tcp","servername":"www.tgju.org"}
+  - {"name":"11-🔒 VL-TCP-NA 🇦🇪 AE-94.183.150.57:2323","type":"vless","server":"94.183.150.57","port":2323,"uuid":"e6056cc5-1ec5-4dad-a5c1-ffe4ccde51b8","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087","type":"vless","server":"94.140.0.74","port":2087,"uuid":"213426db-afb7-48d1-ae51-5093317212df","udp":true,"tls":true,"network":"ws","servername":"iopl90nn.bingnet.online"}
+  - {"name":"11-🔒 VL-TCP-NA 🇦🇪 AE-94.140.0.0:8080","type":"vless","server":"94.140.0.0","port":8080,"uuid":"f02a08c2-f157-42c9-bdd6-74f6e2e5e8ef","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.241:8443","type":"vless","server":"212.192.3.241","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-89.35.73.250:443","type":"vless","server":"89.35.73.250","port":443,"uuid":"30dc00c9-16c5-4573-b5b2-532940febfd6","udp":true,"tls":true,"network":"tcp","servername":"www.refersion.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443","type":"vless","server":"193.123.67.98","port":443,"uuid":"9d0a75d2-f747-4afa-b43f-d208af9e8f9a","udp":true,"tls":true,"network":"tcp","servername":"itunes.apple.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443","type":"vless","server":"151.247.197.167","port":8443,"uuid":"123d4832-db2b-4376-be63-f60858cc328e","udp":true,"tls":true,"network":"tcp","servername":"samsung.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-91.132.51.160:443","type":"vless","server":"91.132.51.160","port":443,"uuid":"fed05faf-401f-3412-b658-5c96f3095dd0","udp":true,"tls":true,"network":"tcp","servername":"www.refersion.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.172:8443","type":"vless","server":"212.192.3.172","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.2.56:8443","type":"vless","server":"212.192.2.56","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-176.97.78.3:443","type":"vless","server":"176.97.78.3","port":443,"uuid":"eb071647-72a6-46be-8e89-ff3d228d52f6","udp":true,"tls":true,"network":"tcp","servername":"ae.cdn.stun.su"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-89.44.80.79:443","type":"vless","server":"89.44.80.79","port":443,"uuid":"0a0d8e6f-8747-4ff6-afe0-e70aa97e7de8","udp":true,"tls":true,"network":"tcp","servername":"finance.yahoo.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.13:8443","type":"vless","server":"212.192.3.13","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.194:8443","type":"vless","server":"212.192.3.194","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.105:8443","type":"vless","server":"212.192.3.105","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.157:8443","type":"vless","server":"212.192.3.157","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-38.180.27.102:8443","type":"vless","server":"38.180.27.102","port":8443,"uuid":"1d6705da-0790-49bf-bf47-b166d2e945cf","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443","type":"vless","server":"141.145.156.146","port":443,"uuid":"9d0a75d2-f747-4afa-b43f-d208af9e8f9a","udp":true,"tls":true,"network":"tcp","servername":"itunes.apple.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-38.180.26.28:443","type":"vless","server":"38.180.26.28","port":443,"uuid":"eb071647-72a6-46be-8e89-ff3d228d52f6","udp":true,"tls":true,"network":"tcp","servername":"ae.cdn.stun.su"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-94.183.240.6:2030","type":"vless","server":"94.183.240.6","port":2030,"uuid":"a9a7bebc-1fb6-4a97-81a6-13954e2d9966","udp":true,"tls":true,"network":"tcp","servername":"www.speedtest.net"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.231:8443","type":"vless","server":"212.192.3.231","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.110:8443","type":"vless","server":"212.192.3.110","port":8443,"uuid":"b9dbc1ff-6364-4826-a973-71c0584116c4","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-176.97.78.29:443","type":"vless","server":"176.97.78.29","port":443,"uuid":"eb071647-72a6-46be-8e89-ff3d228d52f6","udp":true,"tls":true,"network":"tcp","servername":"ae.cdn.stun.su"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-217.60.255.203:2020","type":"vless","server":"217.60.255.203","port":2020,"uuid":"7b6f190f-0609-4773-8015-e6927fd1479d","udp":true,"tls":true,"network":"tcp","servername":"eset.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇪 AE-38.180.11.103:443","type":"vless","server":"38.180.11.103","port":443,"uuid":"eb071647-72a6-46be-8e89-ff3d228d52f6","udp":true,"tls":true,"network":"tcp","servername":"ae.cdn.stun.su"}
+  - {"name":"11-🔒 VL-WS-TLS 🇹🇷 TR-91.206.71.198:2053","type":"vless","server":"91.206.71.198","port":2053,"uuid":"330dfa41-1119-49b4-80a4-c2283fcf2158","udp":true,"tls":true,"network":"ws","servername":"de-20101126.plsvi.online"}
+  - {"name":"11-🔒 VL-TCP-NONE 🇹🇷 TR-213.142.149.156:14519","type":"vless","server":"213.142.149.156","port":14519,"uuid":"695df8a2-e948-4906-83ab-18e680ef130b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.2:993","type":"vless","server":"155.212.110.2","port":993,"uuid":"c10999b4-7f93-5a50-3908-1467b1e52ae2","udp":true,"tls":true,"network":"tcp","servername":"speed.cloudflare.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-188.132.183.233:8081","type":"vless","server":"188.132.183.233","port":8081,"uuid":"f1449968-0329-468b-b56b-1c573ac2a767","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-45.12.143.84:8443","type":"vless","server":"45.12.143.84","port":8443,"uuid":"309fa273-6579-4cb2-9143-7cad50401eba","udp":true,"tls":true,"network":"tcp","servername":"www.cloudflare.com"}
+  - {"name":"11-🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.220:8443","type":"vless","server":"83.217.9.220","port":8443,"uuid":"15c75de9a09149d0bf0393d855a98082","udp":true,"tls":true,"network":"xhttp","servername":"transfermarkt.com.tr"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-188.132.183.140:443","type":"vless","server":"188.132.183.140","port":443,"uuid":"213325c6-ef4b-4cdb-850b-24a06f2865c8","udp":true,"tls":true,"network":"tcp","servername":"2gis.kz"}
+  - {"name":"11-🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.140:8443","type":"vless","server":"83.217.9.140","port":8443,"uuid":"e58fab770ea343218b0fe8a84c176c64","udp":true,"tls":true,"network":"xhttp","servername":"apple.com"}
+  - {"name":"11-🔒 VL-XHTTP-RLT 🇹🇷 TR-62.133.63.221:8443","type":"vless","server":"62.133.63.221","port":8443,"uuid":"1965899d6e8d455a833a212f9145555e","udp":true,"tls":true,"network":"xhttp","servername":"apple.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-77.83.245.189:27414","type":"vless","server":"77.83.245.189","port":27414,"uuid":"94712dd9-17d8-4813-a118-cc487fadd137","udp":true,"tls":true,"network":"tcp","servername":"yandex.ru"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-62.60.233.213:443","type":"vless","server":"62.60.233.213","port":443,"uuid":"3d285ec0-cde0-4d81-af2e-5f6b9adc3f35","udp":true,"tls":true,"network":"tcp","servername":"nl.connectv.net"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-103.231.75.185:443","type":"vless","server":"103.231.75.185","port":443,"uuid":"c4e055e5-c9dd-44ae-8daf-2f0f344dcbdb","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.3:993","type":"vless","server":"155.212.110.3","port":993,"uuid":"40730d97-ffa7-1108-2c53-761516eb5fda","udp":true,"tls":true,"network":"tcp","servername":"speed.cloudflare.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇹🇷 TR-77.83.245.3:443","type":"vless","server":"77.83.245.3","port":443,"uuid":"ea9ba1ec-bfe7-407b-bd21-aeebc86da741","udp":true,"tls":true,"network":"tcp","servername":"stackoverflow.com"}
+  - {"name":"11-🔒 VL-XHTTP-RLT 🇹🇷 TR-62.133.63.232:8443","type":"vless","server":"62.133.63.232","port":8443,"uuid":"b439942e1c8949ce924fd0adbbaead2e","udp":true,"tls":true,"network":"xhttp","servername":"apple.com"}
+  - {"name":"11-🔒 VL-XHTTP-RLT 🇹🇷 TR-185.39.204.161:8443","type":"vless","server":"185.39.204.161","port":8443,"uuid":"46cc53925b294a97a0f433a9762138b9","udp":true,"tls":true,"network":"xhttp","servername":"m.vk.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇴🇲 OM-130.94.81.41:8002","type":"vless","server":"130.94.81.41","port":8002,"uuid":"6246ddc5-b1d7-40d4-9f4d-b38ec5a53a90","udp":true,"tls":true,"network":"tcp","servername":"www.yahoo.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.198:5443","type":"vless","server":"217.13.104.198","port":5443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.121:7443","type":"vless","server":"217.13.104.121","port":7443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.121:443","type":"vless","server":"217.13.104.121","port":443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.198:7443","type":"vless","server":"217.13.104.198","port":7443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:7443","type":"vless","server":"217.13.104.188","port":7443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:5443","type":"vless","server":"217.13.111.32","port":5443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.116:7443","type":"vless","server":"217.13.111.116","port":7443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.99:8443","type":"vless","server":"79.127.133.99","port":8443,"uuid":"fcb10c88-c3c3-4981-99c4-0d5d7272a7c1","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:7443","type":"vless","server":"217.13.111.32","port":7443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"sun6-22.userapi.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:443","type":"vless","server":"217.13.111.32","port":443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:443","type":"vless","server":"217.13.104.188","port":443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-92.61.70.38:443","type":"vless","server":"92.61.70.38","port":443,"uuid":"bb0f3b3d-a3d1-429a-9b75-263bd9200b6f","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.116:443","type":"vless","server":"217.13.111.116","port":443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.77:8443","type":"vless","server":"79.127.133.77","port":8443,"uuid":"291a2db3-04b5-4089-af90-adb5d1ce05ff","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.111:8443","type":"vless","server":"79.127.133.111","port":8443,"uuid":"fcb10c88-c3c3-4981-99c4-0d5d7272a7c1","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:5443","type":"vless","server":"217.13.104.188","port":5443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.198:443","type":"vless","server":"217.13.104.198","port":443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-87.229.97.154:443","type":"vless","server":"87.229.97.154","port":443,"uuid":"d65cc14c-f53f-4fe2-b262-97856601319c","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.121:5443","type":"vless","server":"217.13.104.121","port":5443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.116:5443","type":"vless","server":"217.13.111.116","port":5443,"uuid":"05f0c31f-d127-4a4e-a43c-b040ba8e42d0","udp":true,"tls":true,"network":"tcp","servername":"api-maps.yandex.ru"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.106:8443","type":"vless","server":"79.127.133.106","port":8443,"uuid":"fcb10c88-c3c3-4981-99c4-0d5d7272a7c1","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.91:17267","type":"vless","server":"5.182.38.91","port":17267,"uuid":"1c7fcc38-e6be-43c5-875f-b8de2516b9f2","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇬🇷 GR-178.253.43.200:2040","type":"vless","server":"178.253.43.200","port":2040,"uuid":"14818654-7689-453a-9a1f-4c72f89782d5","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"11-🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096","type":"vless","server":"188.164.159.61","port":2096,"uuid":"12345678-1234-1234-1234-123456789123","udp":true,"tls":true,"network":"ws","servername":"vless.hubp.de"}
+  - {"name":"11-🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983","type":"vless","server":"77.91.68.70","port":55983,"uuid":"f667a096-5231-4cfb-8759-92bb32473139","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"11-🔒 SS-TCP-NA 🇮🇷 IR-46.38.143.236:60633","type":"ss","server":"46.38.143.236","port":60633,"cipher":"2022-blake3-chacha20-poly1305","password":"HnzIN1CLGGEh+mD/uzbbvTQc/Alq+hkmrC7Po3D4k4E=7"}
+  - {"name":"11-🔒 SS-TCP-NA 🇦🇪 AE-185.253.116.95:16673","type":"ss","server":"185.253.116.95","port":16673,"cipher":"chacha20-ietf-poly1305","password":"aiXO0FnjYHg6ZKJAPohBVW"}
+  - {"name":"11-🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990","type":"ss","server":"147.78.0.182","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-203.202.232.78:60299","type":"ss","server":"203.202.232.78","port":60299,"cipher":"chacha20-ietf-poly1305","password":"AVLbEUEtBD59FsRqcNyEib"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.21:65262","type":"ss","server":"62.133.63.21","port":65262,"cipher":"chacha20-ietf-poly1305","password":"HIidWwXqB4zYL6RmgKABUH"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.161:33563","type":"ss","server":"185.39.204.161","port":33563,"cipher":"chacha20-ietf-poly1305","password":"3Q7U16yGY0Jx1yGQe9Xtzp"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.220:18685","type":"ss","server":"62.60.233.220","port":18685,"cipher":"chacha20-ietf-poly1305","password":"ixfXBq6dfMQQFiEz6PBcTy"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.189:34085","type":"ss","server":"185.39.204.189","port":34085,"cipher":"chacha20-ietf-poly1305","password":"LFBZQIJCZGOfwhHFlOzK7r"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-31.210.50.196:12422","type":"ss","server":"31.210.50.196","port":12422,"cipher":"chacha20-ietf-poly1305","password":"Oqt9kgyMGBiOAJPG4uZXlv"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.169:37096","type":"ss","server":"62.133.63.169","port":37096,"cipher":"chacha20-ietf-poly1305","password":"Ul0rGyAAed5HRDpvFqr2C0"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.17:25232","type":"ss","server":"83.217.9.17","port":25232,"cipher":"chacha20-ietf-poly1305","password":"YHtXD4pojvormVWRiHgIfv"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.167:61377","type":"ss","server":"62.133.63.167","port":61377,"cipher":"chacha20-ietf-poly1305","password":"E12yZBPC7y8SnmkSYjf0Wl"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.21:1080","type":"ss","server":"62.133.63.21","port":1080,"cipher":"chacha20-ietf-poly1305","password":"MGtDcEYNnUg2WZvqwLTDhA"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.219:55922","type":"ss","server":"62.60.233.219","port":55922,"cipher":"chacha20-ietf-poly1305","password":"B5NTTp0zOY7xFiIVj8ScNh"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.226:62763","type":"ss","server":"62.60.233.226","port":62763,"cipher":"chacha20-ietf-poly1305","password":"yRdxvK32gcKq8xxNguwU99"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.140:1381","type":"ss","server":"83.217.9.140","port":1381,"cipher":"chacha20-ietf-poly1305","password":"JHqptZxDVsnQf0wL2EgNuo"}
+  - {"name":"11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.154:20255","type":"ss","server":"62.133.63.154","port":20255,"cipher":"chacha20-ietf-poly1305","password":"ZFqZH1cIw5jPRChWxlX36F"}
+  - {"name":"11-🔒 SS-TCP-NA 🇯🇴 JO-91.106.109.17:48210","type":"ss","server":"91.106.109.17","port":48210,"cipher":"chacha20-ietf-poly1305","password":"1a17c1f74cdc51d5"}
+  - {"name":"11-🔒 SS-TCP-NA 🇯🇴 JO-91.106.109.17:48213","type":"ss","server":"91.106.109.17","port":48213,"cipher":"chacha20-ietf-poly1305","password":"1a17c1f74cdc51d5"}
+  - {"name":"11-🔒 SS-TCP-NA 🇯🇴 JO-91.106.109.17:41022","type":"ss","server":"91.106.109.17","port":41022,"cipher":"chacha20-ietf-poly1305","password":"0bb447cee7228eb0"}
+  - {"name":"11-🔒 SS-TCP-NA 🇯🇴 JO-91.106.109.17:48212","type":"ss","server":"91.106.109.17","port":48212,"cipher":"chacha20-ietf-poly1305","password":"1a17c1f74cdc51d5"}
+  - {"name":"11-🔒 SS-TCP-NA 🇮🇶 IQ-81.90.29.126:53672","type":"ss","server":"81.90.29.126","port":53672,"cipher":"chacha20-ietf-poly1305","password":"yprgZbB7xDL4PSvE4wJU4m"}
+  - {"name":"11-🔒 SS-TCP-NA 🇮🇶 IQ-81.90.31.219:443","type":"ss","server":"81.90.31.219","port":443,"cipher":"chacha20-ietf-poly1305","password":"JC1BDEXOdYnc77cH0iuQAO"}
+  - {"name":"11-🔒 SS-TCP-NA 🇬🇷 GR-192.71.166.100:989","type":"ss","server":"192.71.166.100","port":989,"cipher":"aes-256-cfb","password":"f8f7aCzcPKbsF8p3"}
+  - {"name":"11-🔒 SS-TCP-NA 🇬🇷 GR-178.253.43.200:2040","type":"ss","server":"178.253.43.200","port":2040,"cipher":"׏5�x�=����_����{�gy","password":""}
+  - {"name":"11-🔒 SS-TCP-NA 🇧🇭 BH-154.205.146.153:990","type":"ss","server":"154.205.146.153","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
+  - {"name":"11-🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990","type":"ss","server":"38.54.2.182","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
+  - {"name":"11-🔄 LATEST-UPDATE 📅 SAT-09-ESFAND-1404 🕑 08:17","type":"trojan","server":"127.0.0.1","port":1080,"password":"aaccbba-aacb-baac-abdc-aabccacabcbb","udp":true,"tls":true}
+  - {"name":"11-👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"trojan","server":"127.0.0.1","port":8080,"password":"aaaccbb-baca-baca-bcad-aacbabcbcbca","udp":true,"tls":true}
+  - {"name":"11-🔒 TR-WS-TLS 🇹🇷 TR-138.124.107.35:443","type":"trojan","server":"138.124.107.35","port":443,"password":"d3a97c92-a3b6-42fa-9f11-102084d654b3","udp":true,"tls":true}
+  - {"name":"11-🔄 LATEST-UPDATE 📅 THU-07-ESFAND-1404 🕑 08:40","type":"trojan","server":"127.0.0.1","port":1080,"password":"baabacc-bcaa-aacb-acdb-acacabbbbacc","udp":true,"tls":true}
+  - {"name":"11-👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"trojan","server":"127.0.0.1","port":8080,"password":"abacbca-acba-aacb-dcab-bcbcaabcabca","udp":true,"tls":true}
+  - {"name":"11-🔒 VM-TCP-TLS 🇮🇷 IR-178.21.161.23:2087","type":"vmess","server":"178.21.161.23","port":2087,"uuid":"43a7c6fd-c52d-4e1a-ba2b-b7a5d393bea0","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074","type":"vmess","server":"94.139.183.66","port":1074,"uuid":"343bfa1a-f8c1-49e1-9bd8-e2f2360f5a7b","alterId":0,"cipher":"aes-128-gcm","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇮🇷 IR-2.144.20.41:8082","type":"vmess","server":"2.144.20.41","port":8082,"uuid":"0334df2a-a21a-4a12-9da0-3179a5c91fbe","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇮🇷 IR-193.151.146.232:17356","type":"vmess","server":"193.151.146.232","port":17356,"uuid":"f95cb5ae-1b06-4a57-aba0-30afe12d23ed","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5426","type":"vmess","server":"31.56.82.12","port":5426,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5413","type":"vmess","server":"31.56.82.12","port":5413,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5412","type":"vmess","server":"151.240.28.76","port":5412,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5418","type":"vmess","server":"31.56.82.12","port":5418,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:50999","type":"vmess","server":"151.240.28.76","port":50999,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5424","type":"vmess","server":"31.56.82.12","port":5424,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5407","type":"vmess","server":"151.240.28.76","port":5407,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5423","type":"vmess","server":"151.240.28.76","port":5423,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5419","type":"vmess","server":"31.56.82.12","port":5419,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5428","type":"vmess","server":"151.240.28.76","port":5428,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5415","type":"vmess","server":"151.240.28.76","port":5415,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5405","type":"vmess","server":"151.240.28.76","port":5405,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5434","type":"vmess","server":"151.240.28.76","port":5434,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5401","type":"vmess","server":"151.240.28.76","port":5401,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5436","type":"vmess","server":"151.240.28.76","port":5436,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5402","type":"vmess","server":"31.56.82.12","port":5402,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:30006","type":"vmess","server":"151.240.28.76","port":30006,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5416","type":"vmess","server":"31.56.82.12","port":5416,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5410","type":"vmess","server":"151.240.28.76","port":5410,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:30004","type":"vmess","server":"151.240.28.76","port":30004,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5421","type":"vmess","server":"31.56.82.12","port":5421,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5427","type":"vmess","server":"31.56.82.12","port":5427,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5408","type":"vmess","server":"151.240.28.76","port":5408,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5435","type":"vmess","server":"151.240.28.76","port":5435,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5429","type":"vmess","server":"151.240.28.76","port":5429,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5417","type":"vmess","server":"31.56.82.12","port":5417,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5430","type":"vmess","server":"151.240.28.76","port":5430,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5411","type":"vmess","server":"151.240.28.76","port":5411,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5403","type":"vmess","server":"31.56.82.12","port":5403,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5409","type":"vmess","server":"151.240.28.76","port":5409,"uuid":"746756fa-40a4-42c7-aef9-e09dcff725fd","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"11-🔒 VM-WS-NA 🇹🇷 TR-45.141.151.236:14466","type":"vmess","server":"45.141.151.236","port":14466,"uuid":"f429d63c-ae81-49a8-ef17-7351dc4abd8b","alterId":0,"cipher":"auto","udp":true}
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - "Auto"
+      - "DIRECT"
+  - name: "Auto"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "11-🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.235:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-45.84.157.14:9091"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-94.184.13.37:8368"
+      - "11-🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.120:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-217.60.238.167:8084"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-217.60.238.167:8083"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-78.157.58.204:15212"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.113:4001"
+      - "11-🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-194.56.148.167:1433"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-92.114.50.68:8080"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-188.212.97.195:2010"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.117:4001"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-37.32.42.136:2095"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.74:4001"
+      - "11-🔒 VL-WS-NONE 🇮🇷 IR-109.95.67.161:88"
+      - "11-🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-78.110.123.32:2095"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-45.84.157.54:5050"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-85.133.249.38:58128"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-45.84.157.14:9093"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.158.133:9000"
+      - "11-🔒 VL-WS-NONE 🇮🇷 IR-85.133.204.179:59036"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-5.160.144.77:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-185.29.223.39:45635"
+      - "11-🔒 VL-TCP-NA 🇮🇷 IR-194.56.148.167:24171"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-5.57.33.226:8443"
+      - "11-🔒 VL-TCP-NA 🇮🇷 IR-94.183.154.9:443"
+      - "11-🔒 VL-WS-NONE 🇮🇷 IR-92.242.196.211:4220"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.228.168.248:51071"
+      - "11-🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-213.176.121.145:11022"
+      - "11-🔒 VL-WS-NONE 🇮🇷 IR-217.60.238.173:8443"
+      - "11-🔒 VL-WS-NONE 🇮🇷 IR-85.133.215.195:8008"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.110:4001"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-109.122.240.239:8004"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-37.202.236.30:16964"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-45.11.187.25:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-213.176.1.45:45471"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.140.161:2053"
+      - "11-🔒 VL-TCP-NA 🇮🇷 IR-185.27.44.128:4845"
+      - "11-🔒 VL-TCP-NA 🇮🇷 IR-194.50.216.61:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-85.133.215.233:443"
+      - "11-🔒 VL-WS-TLS 🇮🇷 IR-195.238.240.67:895"
+      - "11-🔒 VL-WS-NONE 🇮🇷 IR-85.133.161.168:8080"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-94.183.163.215:41128"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-31.25.95.238:2087"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.158.91:9000"
+      - "11-🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-217.60.243.83:18661"
+      - "11-🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.120:2086"
+      - "11-🔒 VL-WS-NA 🇮🇷 IR-188.136.162.18:5053"
+      - "11-🔒 VL-GRPC-NONE 🇮🇷 IR-185.124.175.217:7730"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-185.226.118.143:43019"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.155.111:4001"
+      - "11-🔒 VL-TCP-NONE 🇮🇷 IR-193.151.143.138:201"
+      - "11-🔒 VL-TCP-RLT 🇮🇷 IR-91.206.171.130:1403"
+      - "11-🔒 VL-TCP-NA 🇦🇪 AE-94.183.150.57:2323"
+      - "11-🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
+      - "11-🔒 VL-TCP-NA 🇦🇪 AE-94.140.0.0:8080"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.241:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-89.35.73.250:443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-91.132.51.160:443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.172:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.2.56:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-176.97.78.3:443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-89.44.80.79:443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.13:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.194:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.105:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.157:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-38.180.27.102:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-38.180.26.28:443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-94.183.240.6:2030"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.231:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-212.192.3.110:8443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-176.97.78.29:443"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-217.60.255.203:2020"
+      - "11-🔒 VL-TCP-RLT 🇦🇪 AE-38.180.11.103:443"
+      - "11-🔒 VL-WS-TLS 🇹🇷 TR-91.206.71.198:2053"
+      - "11-🔒 VL-TCP-NONE 🇹🇷 TR-213.142.149.156:14519"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.2:993"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-188.132.183.233:8081"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-45.12.143.84:8443"
+      - "11-🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.220:8443"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-188.132.183.140:443"
+      - "11-🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.140:8443"
+      - "11-🔒 VL-XHTTP-RLT 🇹🇷 TR-62.133.63.221:8443"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-77.83.245.189:27414"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-62.60.233.213:443"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-103.231.75.185:443"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.3:993"
+      - "11-🔒 VL-TCP-RLT 🇹🇷 TR-77.83.245.3:443"
+      - "11-🔒 VL-XHTTP-RLT 🇹🇷 TR-62.133.63.232:8443"
+      - "11-🔒 VL-XHTTP-RLT 🇹🇷 TR-185.39.204.161:8443"
+      - "11-🔒 VL-TCP-RLT 🇴🇲 OM-130.94.81.41:8002"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.198:5443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.121:7443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.121:443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.198:7443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:7443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:5443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.116:7443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.99:8443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:7443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.32:443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-92.61.70.38:443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.116:443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.77:8443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.111:8443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.188:5443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.198:443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-87.229.97.154:443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.104.121:5443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-217.13.111.116:5443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-79.127.133.106:8443"
+      - "11-🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.91:17267"
+      - "11-🔒 VL-TCP-RLT 🇬🇷 GR-178.253.43.200:2040"
+      - "11-🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
+      - "11-🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
+      - "11-🔒 SS-TCP-NA 🇮🇷 IR-46.38.143.236:60633"
+      - "11-🔒 SS-TCP-NA 🇦🇪 AE-185.253.116.95:16673"
+      - "11-🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-203.202.232.78:60299"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.21:65262"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.161:33563"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.220:18685"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.189:34085"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-31.210.50.196:12422"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.169:37096"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.17:25232"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.167:61377"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.21:1080"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.219:55922"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.226:62763"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.140:1381"
+      - "11-🔒 SS-TCP-NA 🇹🇷 TR-62.133.63.154:20255"
+      - "11-🔒 SS-TCP-NA 🇯🇴 JO-91.106.109.17:48210"
+      - "11-🔒 SS-TCP-NA 🇯🇴 JO-91.106.109.17:48213"
+      - "11-🔒 SS-TCP-NA 🇯🇴 JO-91.106.109.17:41022"
+      - "11-🔒 SS-TCP-NA 🇯🇴 JO-91.106.109.17:48212"
+      - "11-🔒 SS-TCP-NA 🇮🇶 IQ-81.90.29.126:53672"
+      - "11-🔒 SS-TCP-NA 🇮🇶 IQ-81.90.31.219:443"
+      - "11-🔒 SS-TCP-NA 🇬🇷 GR-192.71.166.100:989"
+      - "11-🔒 SS-TCP-NA 🇬🇷 GR-178.253.43.200:2040"
+      - "11-🔒 SS-TCP-NA 🇧🇭 BH-154.205.146.153:990"
+      - "11-🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
+      - "11-🔄 LATEST-UPDATE 📅 SAT-09-ESFAND-1404 🕑 08:17"
+      - "11-👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "11-🔒 TR-WS-TLS 🇹🇷 TR-138.124.107.35:443"
+      - "11-🔄 LATEST-UPDATE 📅 THU-07-ESFAND-1404 🕑 08:40"
+      - "11-👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "11-🔒 VM-TCP-TLS 🇮🇷 IR-178.21.161.23:2087"
+      - "11-🔒 VM-TCP-NA 🇮🇷 IR-94.139.183.66:1074"
+      - "11-🔒 VM-TCP-NA 🇮🇷 IR-2.144.20.41:8082"
+      - "11-🔒 VM-TCP-NA 🇮🇷 IR-193.151.146.232:17356"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5426"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5413"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5412"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5418"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:50999"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5424"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5407"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5423"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5419"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5428"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5415"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5405"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5434"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5401"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5436"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5402"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:30006"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5416"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5410"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:30004"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5421"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5427"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5408"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5435"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5429"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5417"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5430"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5411"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-31.56.82.12:5403"
+      - "11-🔒 VM-TCP-NA 🇦🇪 AE-151.240.28.76:5409"
+      - "11-🔒 VM-WS-NA 🇹🇷 TR-45.141.151.236:14466"
+rules:
+  - GEOIP,IR,DIRECT
+  - MATCH,Proxy
