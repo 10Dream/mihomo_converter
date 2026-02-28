@@ -22,6 +22,9 @@ jobs:
           node-version: "22"
 
       - name: Generate files from source
+        env:
+          RAW_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/refs/heads/${{ github.ref_name }}
+          ENABLE_GEO_FLAG: "1"
         run: node generate_from_source.mjs
 
       - name: Commit changes if needed
@@ -34,6 +37,6 @@ jobs:
             exit 0
           fi
 
-          git add README.md sub/*.yaml
+          git add README.md sub/*.yaml .cache/geoip-cache.json
           git commit -m "chore: update generated subscriptions"
           git push
