@@ -175,134 +175,107 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 [130] 🌐 | null | 1327ms | 127KB | @filembad`","type":"hysteria2","server":"107.174.181.241","port":65160,"password":"0b8a288c"}
-  - {"name":"2 [45] 🇺🇸 | US | 271ms | 312KB | ZHK","type":"wireguard","server":"162.159.192.2","port":500,"ip":"10.0.0.1","private-key":"cOarMbVqg0LfYb9fePIuzYOpLI7mpj+CrVIkubQQI30=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"3 [58] 🇺🇸 | US | 311ms | 262KB | ZHK","type":"wireguard","server":"162.159.192.7","port":4500,"ip":"10.0.0.1","private-key":"wLb5JrDDWVfRw7cHR+iI86JO94UjooBbkxZaHQX83UE=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"4 [61] 🇺🇸 | US | 343ms | 243KB | ZHK","type":"wireguard","server":"162.159.192.2","port":4500,"ip":"10.0.0.1","private-key":"aDfVB00bPBh9VzdNXM0QOJFk4HTPB8rEQEpMuuSu7WY=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"5 [1] 🇺🇸 | US | 796ms | 2.3MB |","type":"vless","server":"40.160.14.104","port":8880,"uuid":"6251f84e-9c02-4140-921c-6b47d394fb96","udp":true,"tls":false,"network":"grpc"}
-  - {"name":"6 [13] 🇨🇦 | CA | 509ms | 481KB |","type":"vless","server":"188.114.99.243","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"7 [18] 🇨🇦 | CA | 857ms | 473KB |","type":"vless","server":"199.181.197.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"8 [26] 🇨🇦 | CA | 381ms | 418KB |","type":"vless","server":"103.35.190.104","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"9 [27] 🇨🇦 | CA | 1562ms | 396KB | @filembad`","type":"vless","server":"190.93.245.94","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"10 [31] 🇨🇦 | CA | 413ms | 382KB |","type":"vless","server":"185.162.231.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"11 [35] 🇨🇦 | CA | 430ms | 366KB | ***✅***@AR14N24b","type":"vless","server":"chatgpt.com","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"12 [36] 🇺🇸 | US | 1651ms | 349KB | @IranProxyPlus`","type":"vless","server":"jjjki.dddct.us.ci","port":443,"uuid":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true,"network":"ws","servername":"jjjki.dddct.us.ci"}
-  - {"name":"13 [38] 🇺🇸 | US | 5000ms | 337KB | @filembad`","type":"vless","server":"142.248.80.157","port":443,"uuid":"4aff5de5-83dc-43c9-a33e-10e6fdb90ed2","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
-  - {"name":"14 [40] 🇨🇦 | CA | 677ms | 330KB |","type":"vless","server":"25.26.27.238","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.jpmj.dev"}
-  - {"name":"15 [44] 🇨🇦 | CA | 458ms | 313KB | @filembad","type":"vless","server":"216.205.52.238","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.jpmj.dev"}
-  - {"name":"16 [52] 🇺🇸 | US | 632ms | 294KB | ***✅***@AR14N24b","type":"vless","server":"mki.dddc.ccwu.cc","port":443,"uuid":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true,"network":"ws"}
-  - {"name":"17 [68] 🇳🇱 | NL | 1310ms | 211KB | @filembad`","type":"vless","server":"51.158.206.26","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"18 [69] 🇳🇱 | NL | 1107ms | 206KB | @filembad`","type":"vless","server":"51.158.206.34","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"19 [73] 🇺🇸 | US | 341ms | 192KB | ***✅***@AR14N24b","type":"vless","server":"zxsdr5.988988.shop","port":443,"uuid":"9e308743-bc58-4109-b8a8-c2c686959c65","udp":true,"tls":true,"network":"ws","servername":"zxsdr5.988988.shop"}
-  - {"name":"20 [75] 🇺🇸 | US | 375ms | 189KB | ***✅***@AR14N24b","type":"vless","server":"ddffgg.222560.xyz","port":443,"uuid":"00a9b792-2bb4-437b-9228-565c1c994f1c","udp":true,"tls":true,"network":"ws","servername":"ddffgg.222560.xyz"}
-  - {"name":"21 [76] 🇺🇸 | US | 440ms | 189KB | ***✅***@AR14N24b","type":"vless","server":"ghyu.huangzi.cfd","port":443,"uuid":"00a9b792-2bb4-437b-9228-565c1c994f1c","udp":true,"tls":true,"network":"ws"}
-  - {"name":"22 [80] 🇺🇸 | US | 417ms | 181KB |","type":"vless","server":"104.167.197.59","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
-  - {"name":"23 [84] 🇺🇸 | US | 407ms | 178KB | ***✅***@AR14N24b","type":"vless","server":"aaassd.222560.xyz","port":443,"uuid":"00a9b792-2bb4-437b-9228-565c1c994f1c","udp":true,"tls":true,"network":"ws","servername":"aaassd.222560.xyz"}
-  - {"name":"24 [88] 🇺🇸 | US | 383ms | 176KB | ***✅***@AR14N24b","type":"vless","server":"usa4.vpnjantit.com","port":10004,"uuid":"9288da92-1420-11f1-a5f1-9338084b0015","udp":true,"tls":false,"network":"ws"}
-  - {"name":"25 [111] 🇺🇸 | US | 400ms | 153KB |","type":"vless","server":"5.181.3.228","port":443,"uuid":"f231a6f5-7f43-533d-bfc6-dc27fa3eda8b","udp":true,"tls":true,"network":"tcp","servername":"very-mega-best.top"}
-  - {"name":"26 [170] 🇺🇸 | US | 851ms | 80KB | @filembad`","type":"vless","server":"15.204.97.198","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"27 [171] 🇺🇸 | US | 897ms | 80KB | @filembad`","type":"vless","server":"15.204.97.214","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"28 [172] 🇺🇸 | US | 888ms | 79KB | @filembad`","type":"vless","server":"15.204.97.206","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"29 [173] 🇺🇸 | US | 892ms | 79KB | @filembad`","type":"vless","server":"15.204.97.219","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"30 [176] 🇺🇸 | US | 890ms | 77KB | @filembad`","type":"vless","server":"15.204.97.216","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"31 [195] 🇩🇪 | DE | 1130ms | 65KB | ***✅***@AR14N24b","type":"vless","server":"81.88.25.20","port":59029,"uuid":"c031d6c7-5132-4d81-8efc-3b13a947984e","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"32 [199] 🇺🇸 | US | 720ms | 64KB | 📀43@oneclickvpnkeys","type":"vless","server":"all.tellmethetrue.shop","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh17v6.carwashipdir.shop"}
-  - {"name":"33 [211] 🇩🇪 | DE | 1090ms | 63KB | @filembad`","type":"vless","server":"138.199.150.141","port":44344,"uuid":"a62c4be7-04b0-405c-ae9f-d04f2a43ec13","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"34 [241] 🇸🇪 | SE | 1265ms | 59KB |","type":"vless","server":"dd.openaccessnode.com","port":50,"uuid":"75193bef-8d8f-e823-41e0-2dd083dc1399","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"35 [257] 🇺🇸 | US | 2044ms | 45KB | 🐻71@oneclickvpnkeys","type":"vless","server":"muddy-math-c1fc.tmpnriqueau89.workers.dev","port":443,"uuid":"532a9115-aee7-4d39-9638-1e5146de075b","udp":true,"tls":true,"network":"ws","servername":"muddy-math-c1fc.tmpnriqueau89.workers.dev"}
-  - {"name":"36 [267] 🇺🇸 | US | 1263ms | 33KB | [18085]+-+Telegram+:+@configraygan","type":"vless","server":"45.82.251.208","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
-  - {"name":"37 [268] 🇨🇦 | CA | 1280ms | 33KB |","type":"vless","server":"144.217.133.97","port":30238,"uuid":"27b6068a-e1e6-4675-ab14-87143c690390","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"38 [269] 🇺🇸 | US | 1320ms | 32KB |","type":"vless","server":"45.82.251.115","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
-  - {"name":"39 [282] 🇨🇦 | CA | 471ms | 19KB | ***✅***@AR14N24b","type":"vless","server":"135.84.74.155","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"40 [296] 🌐 | null | 99999ms | ***✅***@AR14N24b","type":"vless","server":"104.26.9.251","port":443,"uuid":"47702dbb-6607-4d76-80e9-cd75327be3e7","udp":true,"tls":true,"network":"ws","servername":"zrf-623.pages.dev"}
-  - {"name":"41 [297] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"104.19.0.82","port":443,"uuid":"47702dbb-6607-4d76-80e9-cd75327be3e7","udp":true,"tls":true,"network":"ws","servername":"zrf-623.pages.dev"}
-  - {"name":"42 [298] 🌐 | null | 99999ms | 🐻82@oneclickvpnkeys","type":"vless","server":"104.26.2.4","port":443,"uuid":"47702dbb-6607-4d76-80e9-cd75327be3e7","udp":true,"tls":true,"network":"ws","servername":"zrf-623.pages.dev"}
-  - {"name":"43 [299] 🌐 | null | 99999ms | 🐻60@oneclickvpnkeys`","type":"vless","server":"104.20.35.202","port":443,"uuid":"f2e7ae64-6d59-4dc7-b722-a91c07c4db6f","udp":true,"tls":true,"network":"ws","servername":"uio-6ne.pages.dev"}
-  - {"name":"44 [3] 🇺🇸 | US | 3206ms | 1.4MB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"38.135.24.131","port":443,"cipher":"chacha20-ietf-poly1305","password":"hbGrpfvNrJsUmKmPbR3iY2"}
-  - {"name":"45 [47] 🇬🇧 | GB | 1028ms | 306KB |","type":"ss","server":"51.143.161.111","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
-  - {"name":"46 [49] 🇬🇧 | GB | 1010ms | 299KB |","type":"ss","server":"51.143.161.111","port":443,"cipher":"chacha20-ietf-poly1305","password":"1kVr0KATIJI7mwOF"}
-  - {"name":"47 [53] 🇬🇧 | GB | 944ms | 293KB | ***✅***@AR14N24b","type":"ss","server":"admin.c1.webramz.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
-  - {"name":"48 [54] 🇬🇧 | GB | 948ms | 289KB | [🇩🇪]@KIA_NET 🚀| با ما متصل بمون⚡","type":"ss","server":"admin.c1.havij.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"1kVr0KATIJI7mwOF"}
-  - {"name":"49 [60] 🇳🇱 | NL | 1163ms | 244KB |","type":"ss","server":"193.29.139.206","port":8080,"cipher":"chacha20-ietf-poly1305","password":"4a2rfixophdjffa8KVA4Aa"}
-  - {"name":"50 [71] 🇨🇦 | CA | 402ms | 193KB |","type":"ss","server":"79.127.200.169","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"51 [94] 🇺🇸 | US | 428ms | 169KB |","type":"ss","server":"156.146.38.167","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
-  - {"name":"52 [137] 🇺🇸 | US | 518ms | 121KB | @proxy_kafee","type":"ss","server":"154.38.176.7","port":80,"cipher":"aes-256-gcm","password":"nKeE2ZFWVaE4DyjR"}
-  - {"name":"53 [138] 🇲🇽 | MX | 655ms | 119KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"89.223.88.33","port":11201,"cipher":"chacha20-ietf-poly1305","password":"7c31a67b41b18c26"}
-  - {"name":"54 [182] 🇫🇷 | FR | 1191ms | 71KB | ***✅***@AR14N24b","type":"ss","server":"45.95.233.133","port":8388,"cipher":"chacha20-ietf-poly1305","password":"KEN_L6msL8rmuSPywR4M0qM_1_txZ8D5"}
-  - {"name":"55 [184] 🇬🇧 | GB | 1044ms | 70KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"57.129.140.88","port":8388,"cipher":"chacha20-ietf-poly1305","password":"k1v5g9FefdoO"}
-  - {"name":"56 [190] 🇺🇸 | US | 922ms | 67KB |","type":"ss","server":"154.53.63.32","port":443,"cipher":"aes-256-gcm","password":"k6ruJuwgAUxIrkHb"}
-  - {"name":"57 [193] 🇫🇷 | FR | 1097ms | 66KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"195.154.202.112","port":18292,"cipher":"aes-128-gcm","password":"Hc2yn6UjVCbaPO33TQ93MUtofOLRHm7A"}
-  - {"name":"58 [196] 🇳🇱 | NL | 1129ms | 65KB | @proxy_kafee","type":"ss","server":"82.38.31.89","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"59 [197] 🇳🇱 | NL | 1131ms | 64KB |","type":"ss","server":"193.29.139.202","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"60 [198] 🇳🇱 | NL | 1170ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"193.29.139.141","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"61 [202] 🇳🇱 | NL | 1144ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"193.29.139.235","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"62 [205] 🇳🇱 | NL | 1152ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"63 [207] 🇳🇱 | NL | 1125ms | 64KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.82","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"64 [209] 🇳🇱 | NL | 1165ms | 63KB |","type":"ss","server":"82.38.31.194","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"65 [212] 🇳🇱 | NL | 1135ms | 63KB | ***✅***@AR14N24b","type":"ss","server":"193.29.139.179","port":8080,"cipher":"chacha20-ietf-poly1305","password":"cvII85TrW6n0OGyfpHVS1u"}
-  - {"name":"66 [214] 🇳🇱 | NL | 1221ms | 63KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"82.38.31.208","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"67 [221] 🇳🇱 | NL | 1146ms | 62KB |","type":"ss","server":"193.29.139.204","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"68 [223] 🇳🇱 | NL | 1209ms | 62KB | @filembad","type":"ss","server":"82.38.31.62","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"69 [224] 🇳🇱 | NL | 1123ms | 62KB |","type":"ss","server":"193.29.139.251","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"70 [226] 🇬🇧 | GB | 1069ms | 62KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"149.102.132.186","port":80,"cipher":"aes-256-gcm","password":"YhzqOeJsfuZ9rkkc"}
-  - {"name":"71 [229] 🇪🇸 | ES | 1243ms | 61KB | ***✅***@AR14N24b","type":"ss","server":"37.143.130.203","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"72 [231] 🇳🇱 | NL | 1208ms | 60KB |","type":"ss","server":"82.38.31.218","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"73 [234] 🇳🇱 | NL | 1136ms | 60KB | NetAccount`","type":"ss","server":"82.38.31.61","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"74 [243] 🇳🇱 | NL | 1129ms | 58KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.202","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"75 [251] 🇲🇽 | MX | 696ms | 54KB |","type":"ss","server":"38.60.224.37","port":11201,"cipher":"chacha20-ietf-poly1305","password":"651df5dc8fd08d0c"}
-  - {"name":"76 [253] 🇵🇹 | PT | 1404ms | 51KB | ***✅***@AR14N24b","type":"ss","server":"185.113.143.186","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"77 [256] 🇬🇧 | GB | 1261ms | 47KB | ***✅***@AR14N24b","type":"ss","server":"149.102.149.207","port":80,"cipher":"aes-256-gcm","password":"umWwoQJEJGf74SLe"}
-  - {"name":"78 [258] 🇺🇸 | US | 3555ms | 44KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"94.72.127.55","port":443,"cipher":"aes-256-gcm","password":"wlJSF0fC8uqB5Gm5"}
-  - {"name":"79 [276] 🇺🇸 | US | 5000ms | 28KB |","type":"ss","server":"94.72.127.58","port":80,"cipher":"aes-256-gcm","password":"jJHq807bQ7TM0yOh"}
-  - {"name":"80 [278] 🇺🇸 | US | 1248ms | 27KB | ***✅***@AR14N24b","type":"ss","server":"94.72.127.58","port":443,"cipher":"aes-256-gcm","password":"jJHq807bQ7TM0yOh"}
-  - {"name":"81 [279] 🇩🇪 | DE | 1981ms | 25KB |","type":"ss","server":"51.89.119.213","port":11201,"cipher":"chacha20-ietf-poly1305","password":"15b0573830081d01"}
-  - {"name":"82 [290] 🇨🇱 | CL | 5000ms | 4KB | ***✅***@AR14N24b","type":"ss","server":"154.205.153.107","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"83 [4] 🇺🇸 | US | 598ms | 629KB | ***✅***@AR14N24b","type":"trojan","server":"hhhhhhhhj.191266.xyz","port":443,"password":"2bfe58f7-da1d-45df-ab43-7c665b20ee29","udp":true,"tls":true}
-  - {"name":"84 [7] 🇺🇸 | US | 507ms | 559KB | ***✅***@AR14N24b","type":"trojan","server":"vvvbnj.taipei102.indevs.in","port":443,"password":"2bfe58f7-da1d-45df-ab43-7c665b20ee29","udp":true,"tls":true}
-  - {"name":"85 [8] 🇺🇸 | US | 333ms | 544KB | ***✅***@AR14N24b","type":"trojan","server":"uuujki.7777112.xyz","port":443,"password":"2bfe58f7-da1d-45df-ab43-7c665b20ee29","udp":true,"tls":true}
-  - {"name":"86 [9] 🇺🇸 | US | 1802ms | 536KB | ***✅***@AR14N24b","type":"trojan","server":"vvvbnhju.932.pp.ua","port":443,"password":"2bfe58f7-da1d-45df-ab43-7c665b20ee29","udp":true,"tls":true}
-  - {"name":"87 [10] 🇺🇸 | US | 556ms | 526KB |","type":"trojan","server":"dddfghyju.taipei102.indevs.in","port":443,"password":"2bfe58f7-da1d-45df-ab43-7c665b20ee29","udp":true,"tls":true}
-  - {"name":"88 [12] 🇺🇸 | US | 343ms | 496KB | ***✅***@AR14N24b","type":"trojan","server":"dcvgt6.0z0.ccwu.cc","port":443,"password":"8ea1b89f-21d5-49b9-9bcd-1ad9ac39b4ba","udp":true,"tls":true}
-  - {"name":"89 [15] 🇺🇸 | US | 610ms | 479KB |","type":"trojan","server":"hhynnmki.www890604.dpdns.org","port":443,"password":"2bfe58f7-da1d-45df-ab43-7c665b20ee29","udp":true,"tls":true}
-  - {"name":"90 [17] 🇺🇸 | US | 363ms | 476KB | ***✅***@AR14N24b","type":"trojan","server":"nnmmkk999.890602.xyz","port":443,"password":"2bfded8d-6a7c-4c18-aaa5-fc65b955d50c","udp":true,"tls":true}
-  - {"name":"91 [29] 🇺🇸 | US | 968ms | 388KB | ***✅***@AR14N24b","type":"trojan","server":"ghj.husngahng.click","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
-  - {"name":"92 [33] 🇺🇸 | US | 606ms | 372KB | ***✅***@AR14N24b","type":"trojan","server":"jmkg.818185.xyz","port":443,"password":"eed4a583-b20e-4787-bbdb-09018156e53f","udp":true,"tls":true}
-  - {"name":"93 [42] 🇺🇸 | US | 541ms | 325KB |","type":"trojan","server":"hjk.freevpn2027.dpdns.org","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
-  - {"name":"94 [74] 🇺🇸 | US | 647ms | 190KB |","type":"trojan","server":"ghj.huangdi2025.dpdns.org","port":443,"password":"4ed4ac41-4b56-42c4-b31c-4d7bc36f74ce","udp":true,"tls":true}
-  - {"name":"95 [79] 🇺🇸 | US | 416ms | 183KB |","type":"trojan","server":"bnhy7.986986.shop","port":443,"password":"4ed4ac41-4b56-42c4-b31c-4d7bc36f74ce","udp":true,"tls":true}
-  - {"name":"96 [104] 🇺🇸 | US | 730ms | 161KB | @IranProxyPlus`","type":"trojan","server":"jko0.dddc.de5.net","port":443,"password":"34778794-72e8-4862-b1e7-6e6c3ba894be","udp":true,"tls":true}
-  - {"name":"97 [107] 🇺🇸 | US | 635ms | 159KB |","type":"trojan","server":"mk.818185.xyz","port":443,"password":"eed4a583-b20e-4787-bbdb-09018156e53f","udp":true,"tls":true}
-  - {"name":"98 [118] 🇺🇸 | US | 804ms | 146KB |","type":"trojan","server":"hhjk.huangzi.cfd","port":443,"password":"721d3fd0-e9f1-40c3-92cd-d4405a4319d6","udp":true,"tls":true}
-  - {"name":"99 [119] 🇺🇸 | US | 410ms | 145KB | ***✅***@AR14N24b","type":"trojan","server":"bmk.988988.shop","port":443,"password":"4ed4ac41-4b56-42c4-b31c-4d7bc36f74ce","udp":true,"tls":true}
-  - {"name":"100 [124] 🇨🇦 | CA | 470ms | 134KB |","type":"trojan","server":"bgty6.852224.xyz","port":443,"password":"c52d2de2-fc6d-490c-8421-132f87615736","udp":true,"tls":true}
-  - {"name":"101 [125] 🇨🇦 | CA | 446ms | 133KB |","type":"trojan","server":"nji9768.006660666.xyz","port":443,"password":"795ef99b-3260-4d18-ac98-5130bba9f168","udp":true,"tls":true}
-  - {"name":"102 [132] 🇺🇸 | US | 575ms | 125KB | ***✅***@AR14N24b","type":"trojan","server":"hnyu.818185.xyz","port":443,"password":"eed4a583-b20e-4787-bbdb-09018156e53f","udp":true,"tls":true}
-  - {"name":"103 [135] 🇺🇸 | US | 844ms | 122KB | ***✅***@AR14N24b","type":"trojan","server":"thj.huangzi.cfd","port":443,"password":"34778794-72e8-4862-b1e7-6e6c3ba894be","udp":true,"tls":true}
-  - {"name":"104 [136] 🇺🇸 | US | 964ms | 121KB | ***✅***@AR14N24b","type":"trojan","server":"njui.9jj.ccwu.cc","port":443,"password":"eed4a583-b20e-4787-bbdb-09018156e53f","udp":true,"tls":true}
-  - {"name":"105 [145] 🇺🇸 | US | 530ms | 111KB | ***✅***@AR14N24b","type":"trojan","server":"bnh.818185.xyz","port":443,"password":"eed4a583-b20e-4787-bbdb-09018156e53f","udp":true,"tls":true}
-  - {"name":"106 [148] 🇺🇸 | US | 481ms | 110KB |","type":"trojan","server":"vbhju.818185.xyz","port":443,"password":"eed4a583-b20e-4787-bbdb-09018156e53f","udp":true,"tls":true}
-  - {"name":"107 [160] 🇺🇸 | US | 380ms | 100KB |","type":"trojan","server":"uu.852224.xyz","port":443,"password":"b020865b-7404-4894-ba65-a7414b10cda3","udp":true,"tls":true}
-  - {"name":"108 [178] 🇺🇸 | US | 761ms | 76KB | ***✅***@AR14N24b","type":"trojan","server":"hnj.818185.xyz","port":443,"password":"eed4a583-b20e-4787-bbdb-09018156e53f","udp":true,"tls":true}
-  - {"name":"109 [6] 🇺🇸 | US | 380ms | 601KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"gbnh.7777112.xyz","port":443,"uuid":"2bfe58f7-da1d-45df-ab43-7c665b20ee29","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"110 [16] 🇺🇸 | US | 980ms | 479KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"fffgnju.1gg.ccwu.cc","port":80,"uuid":"8ea1b89f-21d5-49b9-9bcd-1ad9ac39b4ba","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"111 [25] 🇺🇸 | US | 1554ms | 423KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"172.64.80.1","port":80,"uuid":"1798b14b-aee0-4008-ba9a-2e53877761b4","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"112 [72] 🇺🇸 | US | 1988ms | 193KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"y.taiwan2029.indevs.in","port":443,"uuid":"1798b14b-aee0-4008-ba9a-2e53877761b4","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"113 [92] 🇺🇸 | US | 432ms | 170KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"mmj.007770777.xyz","port":443,"uuid":"00a9b792-2bb4-437b-9228-565c1c994f1c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"114 [97] 🇺🇸 | US | 307ms | 167KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"fbnhu.0wu.ccwu.cc","port":80,"uuid":"8ea1b89f-21d5-49b9-9bcd-1ad9ac39b4ba","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"115 [100] 🇺🇸 | US | 359ms | 165KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"nghnju.2yo.ccwu.cc","port":443,"uuid":"9b354a64-81f6-4a15-a127-337cd17e25ba","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"116 [103] 🇺🇸 | US | 400ms | 161KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"ddffgg.222560.xyz","port":443,"uuid":"00a9b792-2bb4-437b-9228-565c1c994f1c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"117 [105] 🇺🇸 | US | 545ms | 161KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"nmmjuki.0sm.ccwu.cc","port":443,"uuid":"9b354a64-81f6-4a15-a127-337cd17e25ba","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"118 [110] 🇺🇸 | US | 602ms | 155KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"nmjki.2yo.ccwu.cc","port":80,"uuid":"9b354a64-81f6-4a15-a127-337cd17e25ba","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"119 [115] 🇺🇸 | US | 270ms | 149KB | [18014] - Telegram : @configraygan","type":"vmess","server":"104.21.36.13","port":80,"uuid":"b020865b-7404-4894-ba65-a7414b10cda3","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"120 [128] 🇺🇸 | US | 497ms | 128KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"8.6.112.0","port":2083,"uuid":"e6395c20-4571-4b34-d6b1-55a5d36e49ea","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"121 [143] 🇺🇸 | US | 664ms | 113KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"bbnhju.2xw.ccwu.cc","port":443,"uuid":"9b354a64-81f6-4a15-a127-337cd17e25ba","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"122 [174] 🇫🇷 | FR | 936ms | 78KB | 💎@configraygan","type":"vmess","server":"94.232.247.165","port":45653,"uuid":"9e91d19a-c73f-4276-adbc-b337c374259c","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"123 [188] 🇺🇸 | US | 1079ms | 67KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"mmki9.kk1.ccwu.cc","port":443,"uuid":"9d24b07c-71f4-4aa5-95ac-3307c6995619","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"124 [194] 🇺🇸 | US | 692ms | 65KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"dcvgtyu.0ww.ccwu.cc","port":80,"uuid":"8ea1b89f-21d5-49b9-9bcd-1ad9ac39b4ba","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"125 [206] 🇩🇪 | DE | 1058ms | 64KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"46.225.84.134","port":18181,"uuid":"8241789c-dba0-498b-97a0-ef349ba21f8a","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"126 [263] 🇨🇦 | CA | 2731ms | 40KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"51.79.102.253","port":80,"uuid":"58fe1542-5290-40ad-815a-77707a81afe5","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"127 [273] 🇺🇸 | US | 1653ms | 31KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"162.159.152.4","port":443,"uuid":"2c981164-9b93-4bca-94ff-b78d3f8498d7","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"128 [295] 🌐 | null | 99999ms | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"172.64.80.1","port":80,"uuid":"4e45c1b4-9107-45dd-9995-cdf7cbb44d9d","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"1 [2] 🇺🇸 | US | 305ms | 444KB | ZHK","type":"wireguard","server":"162.159.192.1","port":500,"ip":"10.0.0.1","private-key":"YCPlpdCnE6omUF9mbY3FwRfVDoihD86BuZZXLWJ0FU8=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"2 [3] 🇺🇸 | US | 259ms | 434KB | ZHK","type":"wireguard","server":"162.159.192.5","port":4500,"ip":"10.0.0.1","private-key":"ICQI2PSvDBShbjq5jlm+Mj1lnDwPhBCWa70H8UtUH3Y=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"3 [4] 🇺🇸 | US | 296ms | 398KB | ZHK","type":"wireguard","server":"162.159.192.2","port":4500,"ip":"10.0.0.1","private-key":"aDfVB00bPBh9VzdNXM0QOJFk4HTPB8rEQEpMuuSu7WY=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"4 [12] 🌐 | null | 1103ms | 215KB | @configraygan+G4","type":"vless","server":"185.162.231.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"5 [13] 🇨🇦 | CA | 1079ms | 205KB | @IranProxyPlus`","type":"vless","server":"190.93.245.94","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"6 [15] 🇺🇸 | US | 1251ms | 183KB | ***✅***@AR14N24b","type":"vless","server":"t.huangdi2025.dpdns.org","port":443,"uuid":"4ed4ac41-4b56-42c4-b31c-4d7bc36f74ce","udp":true,"tls":true,"network":"ws","servername":"t.huangdi2025.dpdns.org"}
+  - {"name":"7 [18] 🇨🇦 | CA | 1448ms | 176KB |","type":"vless","server":"chatgpt.com","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"8 [26] 🇺🇸 | US | 1008ms | 141KB | 📀43@oneclickvpnkeys","type":"vless","server":"all.tellmethetrue.shop","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh17v6.carwashipdir.shop"}
+  - {"name":"9 [27] 🇺🇸 | US | 822ms | 140KB | 📀100@oneclickvpnkeys","type":"vless","server":"104.18.32.47","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh36v3.carwashipdir.shop"}
+  - {"name":"10 [36] 🇺🇸 | US | 656ms | 119KB |","type":"vless","server":"7.cdnconn.com","port":23335,"uuid":"e384913f-8863-47b4-8858-a84b68abb4a6","udp":true,"tls":true,"network":"tcp","servername":"icloud.com"}
+  - {"name":"11 [37] 🇬🇧 | GB | 1634ms | 115KB | 📀86@oneclickvpnkeys","type":"vless","server":"hwefesw.aloiacs.shop","port":443,"uuid":"337bf72e-bb79-4d5f-be3f-7822eb77100c","udp":true,"tls":true,"network":"grpc","servername":"UtZ3i6X5i6.InDoSoXr.InFo"}
+  - {"name":"12 [38] 🇺🇸 | US | 987ms | 113KB | 📀48@oneclickvpnkeys","type":"vless","server":"172.67.111.41","port":443,"uuid":"69d38faa-21a1-4d18-82cb-796a942c181b","udp":true,"tls":true,"network":"ws","servername":"sfsl.ardomains1.dpdns.org"}
+  - {"name":"13 [39] 🇺🇸 | US | 908ms | 112KB | 📀99@oneclickvpnkeys","type":"vless","server":"104.16.9.20","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"pqh30v5.carwashipdir.shop"}
+  - {"name":"14 [43] 🇬🇧 | GB | 737ms | 104KB | 📀41@oneclickvpnkeys","type":"vless","server":"gyeisv.aloiacs.shop","port":2087,"uuid":"e999db7a-1b17-4da6-bc37-c9fa24af2e93","udp":true,"tls":true,"network":"grpc","servername":"Y6lGfTpXg7.TrAmVoKeLi.InFo"}
+  - {"name":"15 [49] 🇺🇸 | US | 1022ms | 72KB | @filembad`","type":"vless","server":"ip50.ip-135-148-11.us","port":2052,"uuid":"220b8570-a363-4b47-8869-108bdc204d95","udp":true,"tls":false,"network":"ws"}
+  - {"name":"16 [52] 🇺🇸 | US | 1169ms | 70KB | برای اتصال دائمی جوین شو♂️ TelegramID ⌲Express_freevpn 🪩","type":"vless","server":"93.157.138.138","port":8443,"uuid":"088064b7-6c60-47b6-a984-998a80f06845","udp":true,"tls":true,"network":"tcp","servername":"aliusfilms.ru"}
+  - {"name":"17 [53] 🇺🇸 | US | 1039ms | 69KB | 📀59@oneclickvpnkeys","type":"vless","server":"104.21.0.128","port":443,"uuid":"38715482-05f5-4ea0-aebf-60d3b8c71f30","udp":true,"tls":true,"network":"ws","servername":"myserviran.serviran.workers.dev"}
+  - {"name":"18 [54] 🇺🇸 | US | 1193ms | 67KB | ***✅***@AR14N24b","type":"vless","server":"usa122.luckerusa.org","port":444,"uuid":"1bed7f5e-3f85-45f2-a855-3b1fef63635b","udp":true,"tls":true,"network":"xhttp","servername":"usa122.luckerusa.org"}
+  - {"name":"19 [59] 🇺🇸 | US | 475ms | 62KB | 📀70@oneclickvpnkeys","type":"vless","server":"162.159.38.50","port":443,"uuid":"ad3b1a22-3678-43a4-a0c2-ddd5b7da5b5a","udp":true,"tls":true,"network":"ws","servername":"20251127.ldvsmms.dpdns.org"}
+  - {"name":"20 [65] 🇨🇦 | CA | 1149ms | 60KB | @IranProxyPlus`","type":"vless","server":"188.114.99.243","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"21 [76] 🇩🇪 | DE | 1978ms | 45KB |","type":"vless","server":"xhtpipw.gfdv54cvghhgfhgj-njhgj64.info","port":443,"uuid":"221ab711-b458-4044-b9d9-d2f027e5a4e8","udp":true,"tls":true,"network":"xhttp","servername":"Tp099XvO3n.NeWnEwCoMpAnYdOm1.InFo"}
+  - {"name":"22 [84] 🇩🇪 | DE | 1653ms | 42KB | @filembad`","type":"vless","server":"3.70.206.237","port":443,"uuid":"7d69ff0f-75a2-42e9-a868-444b7b73c78c","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"23 [110] 🇩🇪 | DE | 1805ms | 40KB |","type":"vless","server":"138.199.150.141","port":44344,"uuid":"a62c4be7-04b0-405c-ae9f-d04f2a43ec13","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"24 [137] 🇩🇪 | DE | 1892ms | 39KB | 🌱4@oneclickvpnkeys","type":"vless","server":"93.94.51.210","port":443,"uuid":"405ba2d6-7fcb-4cdd-9c77-4ecc616d77c8","udp":true,"tls":true,"network":"tcp","servername":"deu549.worldbypass.org"}
+  - {"name":"25 [153] 🇩🇪 | DE | 1936ms | 39KB | 🌱11@oneclickvpnkeys","type":"vless","server":"178.250.191.11","port":34045,"uuid":"d8dd94fd-540e-461d-b5d4-acebef02c22a","udp":true,"tls":true,"network":"tcp","servername":"visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me"}
+  - {"name":"26 [155] 🇩🇪 | DE | 1936ms | 39KB | 🌱5@oneclickvpnkeys","type":"vless","server":"138.124.186.80","port":443,"uuid":"e346f220-4ca4-4f69-a66b-52e992b3b625","udp":true,"tls":true,"network":"tcp","servername":"www.fh-aachen.de"}
+  - {"name":"27 [156] 🇳🇱 | NL | 1804ms | 38KB | 🛡 V 123 @Outline_Vpn","type":"vless","server":"45.149.115.148","port":443,"uuid":"8b648e4c-ac38-4809-951b-e1c8862b13d1","udp":true,"tls":true,"network":"tcp","servername":"google.com"}
+  - {"name":"28 [179] 🇳🇱 | NL | 1793ms | 38KB | 🐻34@oneclickvpnkeys","type":"vless","server":"51.158.206.93","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"29 [180] 🇳🇱 | NL | 1839ms | 38KB | 🐻20@oneclickvpnkeys","type":"vless","server":"51.158.206.103","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"30 [184] 🇬🇧 | GB | 1808ms | 37KB | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩","type":"vless","server":"ic.imsoon.io","port":45219,"uuid":"45fdb236-47b4-404c-a330-c66270de172e","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"31 [189] 🌐 | null | 1899ms | 37KB | 🇸🇪 TCP-None | @KIA_NET","type":"vless","server":"dd.openaccessnode.com","port":50,"uuid":"75193bef-8d8f-e823-41e0-2dd083dc1399","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"32 [228] 🇲🇩 | MD | 1339ms | 33KB | 📀64@oneclickvpnkeys","type":"vless","server":"mybb.com","port":443,"uuid":"aebe5a70-0ca3-46ce-8208-8b5bab1346ce","udp":true,"tls":true,"network":"ws","servername":"rAyAn-007.nAsTaRaN.DpDnS.OrG"}
+  - {"name":"33 [274] 🇺🇸 | US | 5000ms | 5KB |","type":"vless","server":"45.82.251.115","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"34 [277] 🇺🇸 | US | 5000ms | 5KB |","type":"vless","server":"45.82.251.208","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"35 [282] 🌐 | null | 5001ms | @IranProxyPlus`","type":"vless","server":"216.205.52.238","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.jpmj.dev"}
+  - {"name":"36 [285] 🌐 | null | 99999ms | ***✅***@AR14N24b","type":"vless","server":"104.26.3.125","port":2052,"uuid":"e8d06b09-acd9-448c-9874-3c36151d36ee","udp":true,"tls":false,"network":"ws"}
+  - {"name":"37 [289] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"157.173.127.225","port":443,"uuid":"11beaf11-726d-4c11-8ce9-27308c1c608c","udp":true,"tls":true,"network":"tcp","servername":"analytics.google.com"}
+  - {"name":"38 [300] 🌐 | null | 99999ms | 📀56@oneclickvpnkeys","type":"vless","server":"162.159.153.187","port":8443,"uuid":"2dd47d3e-62aa-479c-a5c2-34b4826f3773","udp":true,"tls":true,"network":"ws","servername":"52yunwang.dpdns.org"}
+  - {"name":"39 [5] 🇺🇸 | US | 831ms | 350KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"38.135.24.131","port":443,"cipher":"chacha20-ietf-poly1305","password":"hbGrpfvNrJsUmKmPbR3iY2"}
+  - {"name":"40 [16] 🇬🇧 | GB | 1597ms | 180KB | @filembad`","type":"ss","server":"admin.c1.havij.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"1kVr0KATIJI7mwOF"}
+  - {"name":"41 [45] 🇲🇽 | MX | 772ms | 97KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"89.223.88.33","port":11201,"cipher":"chacha20-ietf-poly1305","password":"7c31a67b41b18c26"}
+  - {"name":"42 [46] 🇺🇸 | US | 1270ms | 95KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"94.72.127.55","port":443,"cipher":"aes-256-gcm","password":"wlJSF0fC8uqB5Gm5"}
+  - {"name":"43 [63] 🇯🇵 | JP | 1216ms | 61KB |","type":"ss","server":"149.22.87.240","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
+  - {"name":"44 [69] 🇺🇸 | US | 1228ms | 57KB | @proxy_kafee","type":"ss","server":"154.38.176.7","port":80,"cipher":"aes-256-gcm","password":"nKeE2ZFWVaE4DyjR"}
+  - {"name":"45 [79] 🇬🇧 | GB | 1839ms | 43KB | ***✅***@AR14N24b","type":"ss","server":"57.129.140.88","port":8388,"cipher":"chacha20-ietf-poly1305","password":"k1v5g9FefdoO"}
+  - {"name":"46 [85] 🇬🇧 | GB | 1717ms | 42KB | ***✅***@AR14N24b","type":"ss","server":"149.102.132.186","port":80,"cipher":"aes-256-gcm","password":"YhzqOeJsfuZ9rkkc"}
+  - {"name":"47 [86] 🇫🇷 | FR | 1674ms | 42KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn","type":"ss","server":"57.130.28.148","port":11201,"cipher":"chacha20-ietf-poly1305","password":"74918bc801d53a4b"}
+  - {"name":"48 [92] 🇳🇱 | NL | 1814ms | 41KB | ***✅***@AR14N24b","type":"ss","server":"193.29.139.141","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"49 [93] 🇳🇱 | NL | 1759ms | 41KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.148","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"50 [94] 🇳🇱 | NL | 1751ms | 41KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.89","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"51 [98] 🇳🇱 | NL | 1828ms | 41KB | ***✅***@AR14N24b","type":"ss","server":"193.29.139.157","port":8080,"cipher":"chacha20-ietf-poly1305","password":"4a2rfixophdjffa8KVA4Aa"}
+  - {"name":"52 [99] 🇳🇱 | NL | 1876ms | 41KB |","type":"ss","server":"193.29.139.189","port":8080,"cipher":"chacha20-ietf-poly1305","password":"cvII85TrW6n0OGyfpHVS1u"}
+  - {"name":"53 [104] 🇳🇱 | NL | 1807ms | 41KB |","type":"ss","server":"193.29.139.251","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"54 [105] 🇳🇱 | NL | 1745ms | 41KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"55 [106] 🇳🇱 | NL | 1757ms | 41KB | @filembad`","type":"ss","server":"193.29.139.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"cvII85TrW6n0OGyfpHVS1u"}
+  - {"name":"56 [109] 🇳🇱 | NL | 1883ms | 40KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"193.29.139.206","port":8080,"cipher":"chacha20-ietf-poly1305","password":"4a2rfixophdjffa8KVA4Aa"}
+  - {"name":"57 [112] 🇮🇹 | IT | 1874ms | 40KB | @filembad`","type":"ss","server":"57.131.42.19","port":8389,"cipher":"2022-blake3-aes-256-gcm","password":"et1sgh1iQaWzsw201JX2eexN1Ai6QmIGcZIlvlC5L54="}
+  - {"name":"58 [120] 🇳🇱 | NL | 1757ms | 40KB | NetAccount`","type":"ss","server":"82.38.31.61","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"59 [122] 🇳🇱 | NL | 1832ms | 40KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.202","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"60 [130] 🇳🇱 | NL | 1869ms | 40KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn","type":"ss","server":"82.38.31.66","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"61 [133] 🇳🇱 | NL | 1834ms | 39KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.208","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"62 [135] 🇳🇱 | NL | 1793ms | 39KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn","type":"ss","server":"82.38.31.99","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"63 [138] 🇳🇱 | NL | 1808ms | 39KB |","type":"ss","server":"82.38.31.194","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"64 [139] 🇳🇱 | NL | 1881ms | 39KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"193.29.139.179","port":8080,"cipher":"chacha20-ietf-poly1305","password":"cvII85TrW6n0OGyfpHVS1u"}
+  - {"name":"65 [140] 🇳🇱 | NL | 1819ms | 39KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"82.38.31.82","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"66 [145] 🇫🇷 | FR | 1686ms | 39KB |","type":"ss","server":"195.154.202.112","port":18292,"cipher":"aes-128-gcm","password":"Hc2yn6UjVCbaPO33TQ93MUtofOLRHm7A"}
+  - {"name":"67 [151] 🇫🇮 | FI | 1806ms | 39KB |","type":"ss","server":"178.17.61.67","port":5790,"cipher":"chacha20-ietf-poly1305","password":"qS3skwmolrQ70q842irQD0"}
+  - {"name":"68 [154] 🇳🇱 | NL | 1868ms | 39KB |","type":"ss","server":"82.38.31.218","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"69 [159] 🇳🇱 | NL | 1805ms | 38KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"193.29.139.235","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"70 [176] 🇳🇱 | NL | 1894ms | 38KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn","type":"ss","server":"193.29.139.227","port":8080,"cipher":"chacha20-ietf-poly1305","password":"QCXDxuDlTTMD7jtgHUjIoj"}
+  - {"name":"71 [181] 🇭🇷 | HR | 1935ms | 38KB |","type":"ss","server":"5.181.2.76","port":36608,"cipher":"chacha20-ietf-poly1305","password":"JOZ5Mb3nJCmmoKhd8Cc9aC"}
+  - {"name":"72 [188] 🇩🇪 | DE | 1782ms | 37KB |","type":"ss","server":"91.107.144.0","port":1080,"cipher":"chacha20-ietf-poly1305","password":"kDt8cG1TLg4uB0nUMOAu"}
+  - {"name":"73 [210] 🇸🇬 | SG | 1949ms | 34KB |","type":"ss","server":"194.233.94.119","port":443,"cipher":"aes-256-gcm","password":"8t2xeemUtyui4zAv"}
+  - {"name":"74 [213] 🇦🇹 | AT | 2198ms | 34KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"ss","server":"38.180.197.41","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"name":"75 [218] 🇬🇧 | GB | 1721ms | 33KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩`","type":"ss","server":"149.102.149.207","port":80,"cipher":"aes-256-gcm","password":"umWwoQJEJGf74SLe"}
+  - {"name":"76 [220] 🇸🇬 | SG | 2024ms | 33KB |","type":"ss","server":"194.233.94.119","port":80,"cipher":"aes-256-gcm","password":"8t2xeemUtyui4zAv"}
+  - {"name":"77 [221] 🇩🇪 | DE | 2319ms | 33KB |","type":"ss","server":"57.129.95.45","port":11201,"cipher":"chacha20-ietf-poly1305","password":"6675cbf62d6a3a4f"}
+  - {"name":"78 [225] 🇩🇪 | DE | 1937ms | 33KB | برای اتصال دائمی جوین شو🫧 TelegramID ⌲Express_freevpn 🪩`","type":"ss","server":"57.129.35.242","port":11201,"cipher":"chacha20-ietf-poly1305","password":"b2871db02e5f7e2f"}
+  - {"name":"79 [235] 🇩🇪 | DE | 1932ms | 31KB |","type":"ss","server":"57.129.95.38","port":11201,"cipher":"chacha20-ietf-poly1305","password":"f54cdee10f8b25ce"}
+  - {"name":"80 [236] 🇩🇪 | DE | 1991ms | 31KB | ***✅***@AR14N24b","type":"ss","server":"51.89.119.213","port":11201,"cipher":"chacha20-ietf-poly1305","password":"15b0573830081d01"}
+  - {"name":"81 [239] 🇧🇷 | BR | 2259ms | 31KB | ***✅***@AR14N24b","type":"ss","server":"5.188.4.103","port":11205,"cipher":"chacha20-ietf-poly1305","password":"a7c205642b302c20"}
+  - {"name":"82 [250] 🇬🇧 | GB | 2016ms | 26KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn","type":"ss","server":"51.75.168.50","port":13030,"cipher":"chacha20-ietf-poly1305","password":"6c815bb84c781da5"}
+  - {"name":"83 [275] 🇮🇹 | IT | 5000ms | 5KB | @filembad`","type":"ss","server":"176.126.83.158","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
+  - {"name":"84 [281] 🇹🇷 | TR | 5000ms | 4KB | @filembad`","type":"ss","server":"203.202.232.78","port":60299,"cipher":"chacha20-ietf-poly1305","password":"AVLbEUEtBD59FsRqcNyEib"}
+  - {"name":"85 [87] 🇫🇷 | FR | 1971ms | 42KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"trojan","server":"104.18.32.47","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"86 [90] 🇫🇷 | FR | 1800ms | 41KB |","type":"trojan","server":"172.64.152.23","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"87 [161] 🇩🇪 | DE | 1971ms | 38KB | برای اتصال دائمی جوین شو🫧 TelegramID ⌲Express_freevpn 🪩","type":"trojan","server":"52.28.154.195","port":22222,"password":"telegram-id-privatevpns","udp":true,"tls":true}
+  - {"name":"88 [206] 🇫🇷 | FR | 1925ms | 36KB |","type":"trojan","server":"188.114.96.3","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"89 [1] 🇺🇸 | US | 113ms | 462KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn","type":"vmess","server":"165.140.216.141","port":443,"uuid":"e7d72a8d-26f2-4b54-b366-0c43e0bcba7d","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"90 [6] 🇺🇸 | US | 4714ms | 246KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"fbnhu.0wu.ccwu.cc","port":80,"uuid":"8ea1b89f-21d5-49b9-9bcd-1ad9ac39b4ba","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"91 [7] 🇺🇸 | US | 1171ms | 240KB | برای اتصال دائمی جوین شو♂️ TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"hnmk.01o.ccwu.cc","port":80,"uuid":"2bfded8d-6a7c-4c18-aaa5-fc65b955d50c","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"92 [9] 🇺🇸 | US | 1087ms | 235KB | ⚡️Telegram = @configraygan","type":"vmess","server":"bbgfvce.12i.ccwu.cc","port":80,"uuid":"ae72f958-c1f6-4fc2-a310-1f007af3d11f","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"93 [48] 🇺🇸 | US | 1148ms | 75KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"mmki9.kk1.ccwu.cc","port":443,"uuid":"9d24b07c-71f4-4aa5-95ac-3307c6995619","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"94 [55] 🇺🇸 | US | 1317ms | 65KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"8.6.112.0","port":2083,"uuid":"e6395c20-4571-4b34-d6b1-55a5d36e49ea","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"95 [67] 🇺🇸 | US | 5000ms | 60KB | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"bbbbnhhju.0og.ccwu.cc","port":443,"uuid":"2bfded8d-6a7c-4c18-aaa5-fc65b955d50c","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"96 [74] 🇨🇦 | CA | 1318ms | 47KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"51.79.102.253","port":80,"uuid":"58fe1542-5290-40ad-815a-77707a81afe5","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"97 [75] 🇫🇷 | FR | 1598ms | 46KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"94.232.247.165","port":45653,"uuid":"9e91d19a-c73f-4276-adbc-b337c374259c","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"98 [102] 🇩🇪 | DE | 1740ms | 41KB | 🇩🇪[openproxylist.com] vmess-DE","type":"vmess","server":"46.225.84.134","port":18181,"uuid":"8241789c-dba0-498b-97a0-ef349ba21f8a","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"99 [144] 🇫🇷 | FR | 1725ms | 39KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn","type":"vmess","server":"94.232.247.164","port":44030,"uuid":"22c396a3-95da-4be8-beef-834d17d75784","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"100 [229] 🇺🇸 | US | 1356ms | 32KB | ⚡️Telegram = @SOSkeyNET","type":"vmess","server":"hjk.6no.ccwu.cc","port":443,"uuid":"5f6c3f92-7220-4275-b34d-57c04db3f967","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"101 [290] 🌐 | null | 99999ms | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩","type":"vmess","server":"82.198.246.97","port":180,"uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -316,134 +289,107 @@ proxy-groups:
     type: select
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
-      - "1 [130] 🌐 | null | 1327ms | 127KB | @filembad`"
-      - "2 [45] 🇺🇸 | US | 271ms | 312KB | ZHK"
-      - "3 [58] 🇺🇸 | US | 311ms | 262KB | ZHK"
-      - "4 [61] 🇺🇸 | US | 343ms | 243KB | ZHK"
-      - "5 [1] 🇺🇸 | US | 796ms | 2.3MB |"
-      - "6 [13] 🇨🇦 | CA | 509ms | 481KB |"
-      - "7 [18] 🇨🇦 | CA | 857ms | 473KB |"
-      - "8 [26] 🇨🇦 | CA | 381ms | 418KB |"
-      - "9 [27] 🇨🇦 | CA | 1562ms | 396KB | @filembad`"
-      - "10 [31] 🇨🇦 | CA | 413ms | 382KB |"
-      - "11 [35] 🇨🇦 | CA | 430ms | 366KB | ***✅***@AR14N24b"
-      - "12 [36] 🇺🇸 | US | 1651ms | 349KB | @IranProxyPlus`"
-      - "13 [38] 🇺🇸 | US | 5000ms | 337KB | @filembad`"
-      - "14 [40] 🇨🇦 | CA | 677ms | 330KB |"
-      - "15 [44] 🇨🇦 | CA | 458ms | 313KB | @filembad"
-      - "16 [52] 🇺🇸 | US | 632ms | 294KB | ***✅***@AR14N24b"
-      - "17 [68] 🇳🇱 | NL | 1310ms | 211KB | @filembad`"
-      - "18 [69] 🇳🇱 | NL | 1107ms | 206KB | @filembad`"
-      - "19 [73] 🇺🇸 | US | 341ms | 192KB | ***✅***@AR14N24b"
-      - "20 [75] 🇺🇸 | US | 375ms | 189KB | ***✅***@AR14N24b"
-      - "21 [76] 🇺🇸 | US | 440ms | 189KB | ***✅***@AR14N24b"
-      - "22 [80] 🇺🇸 | US | 417ms | 181KB |"
-      - "23 [84] 🇺🇸 | US | 407ms | 178KB | ***✅***@AR14N24b"
-      - "24 [88] 🇺🇸 | US | 383ms | 176KB | ***✅***@AR14N24b"
-      - "25 [111] 🇺🇸 | US | 400ms | 153KB |"
-      - "26 [170] 🇺🇸 | US | 851ms | 80KB | @filembad`"
-      - "27 [171] 🇺🇸 | US | 897ms | 80KB | @filembad`"
-      - "28 [172] 🇺🇸 | US | 888ms | 79KB | @filembad`"
-      - "29 [173] 🇺🇸 | US | 892ms | 79KB | @filembad`"
-      - "30 [176] 🇺🇸 | US | 890ms | 77KB | @filembad`"
-      - "31 [195] 🇩🇪 | DE | 1130ms | 65KB | ***✅***@AR14N24b"
-      - "32 [199] 🇺🇸 | US | 720ms | 64KB | 📀43@oneclickvpnkeys"
-      - "33 [211] 🇩🇪 | DE | 1090ms | 63KB | @filembad`"
-      - "34 [241] 🇸🇪 | SE | 1265ms | 59KB |"
-      - "35 [257] 🇺🇸 | US | 2044ms | 45KB | 🐻71@oneclickvpnkeys"
-      - "36 [267] 🇺🇸 | US | 1263ms | 33KB | [18085]+-+Telegram+:+@configraygan"
-      - "37 [268] 🇨🇦 | CA | 1280ms | 33KB |"
-      - "38 [269] 🇺🇸 | US | 1320ms | 32KB |"
-      - "39 [282] 🇨🇦 | CA | 471ms | 19KB | ***✅***@AR14N24b"
-      - "40 [296] 🌐 | null | 99999ms | ***✅***@AR14N24b"
-      - "41 [297] 🌐 | null | 99999ms | @filembad`"
-      - "42 [298] 🌐 | null | 99999ms | 🐻82@oneclickvpnkeys"
-      - "43 [299] 🌐 | null | 99999ms | 🐻60@oneclickvpnkeys`"
-      - "44 [3] 🇺🇸 | US | 3206ms | 1.4MB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "45 [47] 🇬🇧 | GB | 1028ms | 306KB |"
-      - "46 [49] 🇬🇧 | GB | 1010ms | 299KB |"
-      - "47 [53] 🇬🇧 | GB | 944ms | 293KB | ***✅***@AR14N24b"
-      - "48 [54] 🇬🇧 | GB | 948ms | 289KB | [🇩🇪]@KIA_NET 🚀| با ما متصل بمون⚡"
-      - "49 [60] 🇳🇱 | NL | 1163ms | 244KB |"
-      - "50 [71] 🇨🇦 | CA | 402ms | 193KB |"
-      - "51 [94] 🇺🇸 | US | 428ms | 169KB |"
-      - "52 [137] 🇺🇸 | US | 518ms | 121KB | @proxy_kafee"
-      - "53 [138] 🇲🇽 | MX | 655ms | 119KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "54 [182] 🇫🇷 | FR | 1191ms | 71KB | ***✅***@AR14N24b"
-      - "55 [184] 🇬🇧 | GB | 1044ms | 70KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "56 [190] 🇺🇸 | US | 922ms | 67KB |"
-      - "57 [193] 🇫🇷 | FR | 1097ms | 66KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "58 [196] 🇳🇱 | NL | 1129ms | 65KB | @proxy_kafee"
-      - "59 [197] 🇳🇱 | NL | 1131ms | 64KB |"
-      - "60 [198] 🇳🇱 | NL | 1170ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "61 [202] 🇳🇱 | NL | 1144ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "62 [205] 🇳🇱 | NL | 1152ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "63 [207] 🇳🇱 | NL | 1125ms | 64KB | ***✅***@AR14N24b"
-      - "64 [209] 🇳🇱 | NL | 1165ms | 63KB |"
-      - "65 [212] 🇳🇱 | NL | 1135ms | 63KB | ***✅***@AR14N24b"
-      - "66 [214] 🇳🇱 | NL | 1221ms | 63KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "67 [221] 🇳🇱 | NL | 1146ms | 62KB |"
-      - "68 [223] 🇳🇱 | NL | 1209ms | 62KB | @filembad"
-      - "69 [224] 🇳🇱 | NL | 1123ms | 62KB |"
-      - "70 [226] 🇬🇧 | GB | 1069ms | 62KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "71 [229] 🇪🇸 | ES | 1243ms | 61KB | ***✅***@AR14N24b"
-      - "72 [231] 🇳🇱 | NL | 1208ms | 60KB |"
-      - "73 [234] 🇳🇱 | NL | 1136ms | 60KB | NetAccount`"
-      - "74 [243] 🇳🇱 | NL | 1129ms | 58KB | ***✅***@AR14N24b"
-      - "75 [251] 🇲🇽 | MX | 696ms | 54KB |"
-      - "76 [253] 🇵🇹 | PT | 1404ms | 51KB | ***✅***@AR14N24b"
-      - "77 [256] 🇬🇧 | GB | 1261ms | 47KB | ***✅***@AR14N24b"
-      - "78 [258] 🇺🇸 | US | 3555ms | 44KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "79 [276] 🇺🇸 | US | 5000ms | 28KB |"
-      - "80 [278] 🇺🇸 | US | 1248ms | 27KB | ***✅***@AR14N24b"
-      - "81 [279] 🇩🇪 | DE | 1981ms | 25KB |"
-      - "82 [290] 🇨🇱 | CL | 5000ms | 4KB | ***✅***@AR14N24b"
-      - "83 [4] 🇺🇸 | US | 598ms | 629KB | ***✅***@AR14N24b"
-      - "84 [7] 🇺🇸 | US | 507ms | 559KB | ***✅***@AR14N24b"
-      - "85 [8] 🇺🇸 | US | 333ms | 544KB | ***✅***@AR14N24b"
-      - "86 [9] 🇺🇸 | US | 1802ms | 536KB | ***✅***@AR14N24b"
-      - "87 [10] 🇺🇸 | US | 556ms | 526KB |"
-      - "88 [12] 🇺🇸 | US | 343ms | 496KB | ***✅***@AR14N24b"
-      - "89 [15] 🇺🇸 | US | 610ms | 479KB |"
-      - "90 [17] 🇺🇸 | US | 363ms | 476KB | ***✅***@AR14N24b"
-      - "91 [29] 🇺🇸 | US | 968ms | 388KB | ***✅***@AR14N24b"
-      - "92 [33] 🇺🇸 | US | 606ms | 372KB | ***✅***@AR14N24b"
-      - "93 [42] 🇺🇸 | US | 541ms | 325KB |"
-      - "94 [74] 🇺🇸 | US | 647ms | 190KB |"
-      - "95 [79] 🇺🇸 | US | 416ms | 183KB |"
-      - "96 [104] 🇺🇸 | US | 730ms | 161KB | @IranProxyPlus`"
-      - "97 [107] 🇺🇸 | US | 635ms | 159KB |"
-      - "98 [118] 🇺🇸 | US | 804ms | 146KB |"
-      - "99 [119] 🇺🇸 | US | 410ms | 145KB | ***✅***@AR14N24b"
-      - "100 [124] 🇨🇦 | CA | 470ms | 134KB |"
-      - "101 [125] 🇨🇦 | CA | 446ms | 133KB |"
-      - "102 [132] 🇺🇸 | US | 575ms | 125KB | ***✅***@AR14N24b"
-      - "103 [135] 🇺🇸 | US | 844ms | 122KB | ***✅***@AR14N24b"
-      - "104 [136] 🇺🇸 | US | 964ms | 121KB | ***✅***@AR14N24b"
-      - "105 [145] 🇺🇸 | US | 530ms | 111KB | ***✅***@AR14N24b"
-      - "106 [148] 🇺🇸 | US | 481ms | 110KB |"
-      - "107 [160] 🇺🇸 | US | 380ms | 100KB |"
-      - "108 [178] 🇺🇸 | US | 761ms | 76KB | ***✅***@AR14N24b"
-      - "109 [6] 🇺🇸 | US | 380ms | 601KB | ⚡️Telegram = @SOSkeyNET"
-      - "110 [16] 🇺🇸 | US | 980ms | 479KB | ⚡️Telegram = @SOSkeyNET"
-      - "111 [25] 🇺🇸 | US | 1554ms | 423KB | ⚡️Telegram = @SOSkeyNET"
-      - "112 [72] 🇺🇸 | US | 1988ms | 193KB | ⚡️Telegram = @SOSkeyNET"
-      - "113 [92] 🇺🇸 | US | 432ms | 170KB | ⚡️Telegram = @SOSkeyNET"
-      - "114 [97] 🇺🇸 | US | 307ms | 167KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "115 [100] 🇺🇸 | US | 359ms | 165KB | ⚡️Telegram = @SOSkeyNET"
-      - "116 [103] 🇺🇸 | US | 400ms | 161KB | ⚡️Telegram = @SOSkeyNET"
-      - "117 [105] 🇺🇸 | US | 545ms | 161KB | ⚡️Telegram = @SOSkeyNET"
-      - "118 [110] 🇺🇸 | US | 602ms | 155KB | ⚡️Telegram = @SOSkeyNET"
-      - "119 [115] 🇺🇸 | US | 270ms | 149KB | [18014] - Telegram : @configraygan"
-      - "120 [128] 🇺🇸 | US | 497ms | 128KB | ⚡️Telegram = @SOSkeyNET"
-      - "121 [143] 🇺🇸 | US | 664ms | 113KB | ⚡️Telegram = @SOSkeyNET"
-      - "122 [174] 🇫🇷 | FR | 936ms | 78KB | 💎@configraygan"
-      - "123 [188] 🇺🇸 | US | 1079ms | 67KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "124 [194] 🇺🇸 | US | 692ms | 65KB | ⚡️Telegram = @SOSkeyNET"
-      - "125 [206] 🇩🇪 | DE | 1058ms | 64KB | ⚡️Telegram = @SOSkeyNET"
-      - "126 [263] 🇨🇦 | CA | 2731ms | 40KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "127 [273] 🇺🇸 | US | 1653ms | 31KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "128 [295] 🌐 | null | 99999ms | ⚡️Telegram = @SOSkeyNET"
+      - "1 [2] 🇺🇸 | US | 305ms | 444KB | ZHK"
+      - "2 [3] 🇺🇸 | US | 259ms | 434KB | ZHK"
+      - "3 [4] 🇺🇸 | US | 296ms | 398KB | ZHK"
+      - "4 [12] 🌐 | null | 1103ms | 215KB | @configraygan+G4"
+      - "5 [13] 🇨🇦 | CA | 1079ms | 205KB | @IranProxyPlus`"
+      - "6 [15] 🇺🇸 | US | 1251ms | 183KB | ***✅***@AR14N24b"
+      - "7 [18] 🇨🇦 | CA | 1448ms | 176KB |"
+      - "8 [26] 🇺🇸 | US | 1008ms | 141KB | 📀43@oneclickvpnkeys"
+      - "9 [27] 🇺🇸 | US | 822ms | 140KB | 📀100@oneclickvpnkeys"
+      - "10 [36] 🇺🇸 | US | 656ms | 119KB |"
+      - "11 [37] 🇬🇧 | GB | 1634ms | 115KB | 📀86@oneclickvpnkeys"
+      - "12 [38] 🇺🇸 | US | 987ms | 113KB | 📀48@oneclickvpnkeys"
+      - "13 [39] 🇺🇸 | US | 908ms | 112KB | 📀99@oneclickvpnkeys"
+      - "14 [43] 🇬🇧 | GB | 737ms | 104KB | 📀41@oneclickvpnkeys"
+      - "15 [49] 🇺🇸 | US | 1022ms | 72KB | @filembad`"
+      - "16 [52] 🇺🇸 | US | 1169ms | 70KB | برای اتصال دائمی جوین شو♂️ TelegramID ⌲Express_freevpn 🪩"
+      - "17 [53] 🇺🇸 | US | 1039ms | 69KB | 📀59@oneclickvpnkeys"
+      - "18 [54] 🇺🇸 | US | 1193ms | 67KB | ***✅***@AR14N24b"
+      - "19 [59] 🇺🇸 | US | 475ms | 62KB | 📀70@oneclickvpnkeys"
+      - "20 [65] 🇨🇦 | CA | 1149ms | 60KB | @IranProxyPlus`"
+      - "21 [76] 🇩🇪 | DE | 1978ms | 45KB |"
+      - "22 [84] 🇩🇪 | DE | 1653ms | 42KB | @filembad`"
+      - "23 [110] 🇩🇪 | DE | 1805ms | 40KB |"
+      - "24 [137] 🇩🇪 | DE | 1892ms | 39KB | 🌱4@oneclickvpnkeys"
+      - "25 [153] 🇩🇪 | DE | 1936ms | 39KB | 🌱11@oneclickvpnkeys"
+      - "26 [155] 🇩🇪 | DE | 1936ms | 39KB | 🌱5@oneclickvpnkeys"
+      - "27 [156] 🇳🇱 | NL | 1804ms | 38KB | 🛡 V 123 @Outline_Vpn"
+      - "28 [179] 🇳🇱 | NL | 1793ms | 38KB | 🐻34@oneclickvpnkeys"
+      - "29 [180] 🇳🇱 | NL | 1839ms | 38KB | 🐻20@oneclickvpnkeys"
+      - "30 [184] 🇬🇧 | GB | 1808ms | 37KB | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "31 [189] 🌐 | null | 1899ms | 37KB | 🇸🇪 TCP-None | @KIA_NET"
+      - "32 [228] 🇲🇩 | MD | 1339ms | 33KB | 📀64@oneclickvpnkeys"
+      - "33 [274] 🇺🇸 | US | 5000ms | 5KB |"
+      - "34 [277] 🇺🇸 | US | 5000ms | 5KB |"
+      - "35 [282] 🌐 | null | 5001ms | @IranProxyPlus`"
+      - "36 [285] 🌐 | null | 99999ms | ***✅***@AR14N24b"
+      - "37 [289] 🌐 | null | 99999ms | @filembad`"
+      - "38 [300] 🌐 | null | 99999ms | 📀56@oneclickvpnkeys"
+      - "39 [5] 🇺🇸 | US | 831ms | 350KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "40 [16] 🇬🇧 | GB | 1597ms | 180KB | @filembad`"
+      - "41 [45] 🇲🇽 | MX | 772ms | 97KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "42 [46] 🇺🇸 | US | 1270ms | 95KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "43 [63] 🇯🇵 | JP | 1216ms | 61KB |"
+      - "44 [69] 🇺🇸 | US | 1228ms | 57KB | @proxy_kafee"
+      - "45 [79] 🇬🇧 | GB | 1839ms | 43KB | ***✅***@AR14N24b"
+      - "46 [85] 🇬🇧 | GB | 1717ms | 42KB | ***✅***@AR14N24b"
+      - "47 [86] 🇫🇷 | FR | 1674ms | 42KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "48 [92] 🇳🇱 | NL | 1814ms | 41KB | ***✅***@AR14N24b"
+      - "49 [93] 🇳🇱 | NL | 1759ms | 41KB | ***✅***@AR14N24b"
+      - "50 [94] 🇳🇱 | NL | 1751ms | 41KB | ***✅***@AR14N24b"
+      - "51 [98] 🇳🇱 | NL | 1828ms | 41KB | ***✅***@AR14N24b"
+      - "52 [99] 🇳🇱 | NL | 1876ms | 41KB |"
+      - "53 [104] 🇳🇱 | NL | 1807ms | 41KB |"
+      - "54 [105] 🇳🇱 | NL | 1745ms | 41KB | ***✅***@AR14N24b"
+      - "55 [106] 🇳🇱 | NL | 1757ms | 41KB | @filembad`"
+      - "56 [109] 🇳🇱 | NL | 1883ms | 40KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "57 [112] 🇮🇹 | IT | 1874ms | 40KB | @filembad`"
+      - "58 [120] 🇳🇱 | NL | 1757ms | 40KB | NetAccount`"
+      - "59 [122] 🇳🇱 | NL | 1832ms | 40KB | ***✅***@AR14N24b"
+      - "60 [130] 🇳🇱 | NL | 1869ms | 40KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "61 [133] 🇳🇱 | NL | 1834ms | 39KB | ***✅***@AR14N24b"
+      - "62 [135] 🇳🇱 | NL | 1793ms | 39KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "63 [138] 🇳🇱 | NL | 1808ms | 39KB |"
+      - "64 [139] 🇳🇱 | NL | 1881ms | 39KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "65 [140] 🇳🇱 | NL | 1819ms | 39KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "66 [145] 🇫🇷 | FR | 1686ms | 39KB |"
+      - "67 [151] 🇫🇮 | FI | 1806ms | 39KB |"
+      - "68 [154] 🇳🇱 | NL | 1868ms | 39KB |"
+      - "69 [159] 🇳🇱 | NL | 1805ms | 38KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "70 [176] 🇳🇱 | NL | 1894ms | 38KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "71 [181] 🇭🇷 | HR | 1935ms | 38KB |"
+      - "72 [188] 🇩🇪 | DE | 1782ms | 37KB |"
+      - "73 [210] 🇸🇬 | SG | 1949ms | 34KB |"
+      - "74 [213] 🇦🇹 | AT | 2198ms | 34KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "75 [218] 🇬🇧 | GB | 1721ms | 33KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩`"
+      - "76 [220] 🇸🇬 | SG | 2024ms | 33KB |"
+      - "77 [221] 🇩🇪 | DE | 2319ms | 33KB |"
+      - "78 [225] 🇩🇪 | DE | 1937ms | 33KB | برای اتصال دائمی جوین شو🫧 TelegramID ⌲Express_freevpn 🪩`"
+      - "79 [235] 🇩🇪 | DE | 1932ms | 31KB |"
+      - "80 [236] 🇩🇪 | DE | 1991ms | 31KB | ***✅***@AR14N24b"
+      - "81 [239] 🇧🇷 | BR | 2259ms | 31KB | ***✅***@AR14N24b"
+      - "82 [250] 🇬🇧 | GB | 2016ms | 26KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "83 [275] 🇮🇹 | IT | 5000ms | 5KB | @filembad`"
+      - "84 [281] 🇹🇷 | TR | 5000ms | 4KB | @filembad`"
+      - "85 [87] 🇫🇷 | FR | 1971ms | 42KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "86 [90] 🇫🇷 | FR | 1800ms | 41KB |"
+      - "87 [161] 🇩🇪 | DE | 1971ms | 38KB | برای اتصال دائمی جوین شو🫧 TelegramID ⌲Express_freevpn 🪩"
+      - "88 [206] 🇫🇷 | FR | 1925ms | 36KB |"
+      - "89 [1] 🇺🇸 | US | 113ms | 462KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "90 [6] 🇺🇸 | US | 4714ms | 246KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "91 [7] 🇺🇸 | US | 1171ms | 240KB | برای اتصال دائمی جوین شو♂️ TelegramID ⌲Express_freevpn 🪩"
+      - "92 [9] 🇺🇸 | US | 1087ms | 235KB | ⚡️Telegram = @configraygan"
+      - "93 [48] 🇺🇸 | US | 1148ms | 75KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "94 [55] 🇺🇸 | US | 1317ms | 65KB | ⚡️Telegram = @SOSkeyNET"
+      - "95 [67] 🇺🇸 | US | 5000ms | 60KB | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "96 [74] 🇨🇦 | CA | 1318ms | 47KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "97 [75] 🇫🇷 | FR | 1598ms | 46KB | ⚡️Telegram = @SOSkeyNET"
+      - "98 [102] 🇩🇪 | DE | 1740ms | 41KB | 🇩🇪[openproxylist.com] vmess-DE"
+      - "99 [144] 🇫🇷 | FR | 1725ms | 39KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "100 [229] 🇺🇸 | US | 1356ms | 32KB | ⚡️Telegram = @SOSkeyNET"
+      - "101 [290] 🌐 | null | 99999ms | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -452,134 +398,107 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "1 [130] 🌐 | null | 1327ms | 127KB | @filembad`"
-      - "2 [45] 🇺🇸 | US | 271ms | 312KB | ZHK"
-      - "3 [58] 🇺🇸 | US | 311ms | 262KB | ZHK"
-      - "4 [61] 🇺🇸 | US | 343ms | 243KB | ZHK"
-      - "5 [1] 🇺🇸 | US | 796ms | 2.3MB |"
-      - "6 [13] 🇨🇦 | CA | 509ms | 481KB |"
-      - "7 [18] 🇨🇦 | CA | 857ms | 473KB |"
-      - "8 [26] 🇨🇦 | CA | 381ms | 418KB |"
-      - "9 [27] 🇨🇦 | CA | 1562ms | 396KB | @filembad`"
-      - "10 [31] 🇨🇦 | CA | 413ms | 382KB |"
-      - "11 [35] 🇨🇦 | CA | 430ms | 366KB | ***✅***@AR14N24b"
-      - "12 [36] 🇺🇸 | US | 1651ms | 349KB | @IranProxyPlus`"
-      - "13 [38] 🇺🇸 | US | 5000ms | 337KB | @filembad`"
-      - "14 [40] 🇨🇦 | CA | 677ms | 330KB |"
-      - "15 [44] 🇨🇦 | CA | 458ms | 313KB | @filembad"
-      - "16 [52] 🇺🇸 | US | 632ms | 294KB | ***✅***@AR14N24b"
-      - "17 [68] 🇳🇱 | NL | 1310ms | 211KB | @filembad`"
-      - "18 [69] 🇳🇱 | NL | 1107ms | 206KB | @filembad`"
-      - "19 [73] 🇺🇸 | US | 341ms | 192KB | ***✅***@AR14N24b"
-      - "20 [75] 🇺🇸 | US | 375ms | 189KB | ***✅***@AR14N24b"
-      - "21 [76] 🇺🇸 | US | 440ms | 189KB | ***✅***@AR14N24b"
-      - "22 [80] 🇺🇸 | US | 417ms | 181KB |"
-      - "23 [84] 🇺🇸 | US | 407ms | 178KB | ***✅***@AR14N24b"
-      - "24 [88] 🇺🇸 | US | 383ms | 176KB | ***✅***@AR14N24b"
-      - "25 [111] 🇺🇸 | US | 400ms | 153KB |"
-      - "26 [170] 🇺🇸 | US | 851ms | 80KB | @filembad`"
-      - "27 [171] 🇺🇸 | US | 897ms | 80KB | @filembad`"
-      - "28 [172] 🇺🇸 | US | 888ms | 79KB | @filembad`"
-      - "29 [173] 🇺🇸 | US | 892ms | 79KB | @filembad`"
-      - "30 [176] 🇺🇸 | US | 890ms | 77KB | @filembad`"
-      - "31 [195] 🇩🇪 | DE | 1130ms | 65KB | ***✅***@AR14N24b"
-      - "32 [199] 🇺🇸 | US | 720ms | 64KB | 📀43@oneclickvpnkeys"
-      - "33 [211] 🇩🇪 | DE | 1090ms | 63KB | @filembad`"
-      - "34 [241] 🇸🇪 | SE | 1265ms | 59KB |"
-      - "35 [257] 🇺🇸 | US | 2044ms | 45KB | 🐻71@oneclickvpnkeys"
-      - "36 [267] 🇺🇸 | US | 1263ms | 33KB | [18085]+-+Telegram+:+@configraygan"
-      - "37 [268] 🇨🇦 | CA | 1280ms | 33KB |"
-      - "38 [269] 🇺🇸 | US | 1320ms | 32KB |"
-      - "39 [282] 🇨🇦 | CA | 471ms | 19KB | ***✅***@AR14N24b"
-      - "40 [296] 🌐 | null | 99999ms | ***✅***@AR14N24b"
-      - "41 [297] 🌐 | null | 99999ms | @filembad`"
-      - "42 [298] 🌐 | null | 99999ms | 🐻82@oneclickvpnkeys"
-      - "43 [299] 🌐 | null | 99999ms | 🐻60@oneclickvpnkeys`"
-      - "44 [3] 🇺🇸 | US | 3206ms | 1.4MB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "45 [47] 🇬🇧 | GB | 1028ms | 306KB |"
-      - "46 [49] 🇬🇧 | GB | 1010ms | 299KB |"
-      - "47 [53] 🇬🇧 | GB | 944ms | 293KB | ***✅***@AR14N24b"
-      - "48 [54] 🇬🇧 | GB | 948ms | 289KB | [🇩🇪]@KIA_NET 🚀| با ما متصل بمون⚡"
-      - "49 [60] 🇳🇱 | NL | 1163ms | 244KB |"
-      - "50 [71] 🇨🇦 | CA | 402ms | 193KB |"
-      - "51 [94] 🇺🇸 | US | 428ms | 169KB |"
-      - "52 [137] 🇺🇸 | US | 518ms | 121KB | @proxy_kafee"
-      - "53 [138] 🇲🇽 | MX | 655ms | 119KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "54 [182] 🇫🇷 | FR | 1191ms | 71KB | ***✅***@AR14N24b"
-      - "55 [184] 🇬🇧 | GB | 1044ms | 70KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "56 [190] 🇺🇸 | US | 922ms | 67KB |"
-      - "57 [193] 🇫🇷 | FR | 1097ms | 66KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "58 [196] 🇳🇱 | NL | 1129ms | 65KB | @proxy_kafee"
-      - "59 [197] 🇳🇱 | NL | 1131ms | 64KB |"
-      - "60 [198] 🇳🇱 | NL | 1170ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "61 [202] 🇳🇱 | NL | 1144ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "62 [205] 🇳🇱 | NL | 1152ms | 64KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "63 [207] 🇳🇱 | NL | 1125ms | 64KB | ***✅***@AR14N24b"
-      - "64 [209] 🇳🇱 | NL | 1165ms | 63KB |"
-      - "65 [212] 🇳🇱 | NL | 1135ms | 63KB | ***✅***@AR14N24b"
-      - "66 [214] 🇳🇱 | NL | 1221ms | 63KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "67 [221] 🇳🇱 | NL | 1146ms | 62KB |"
-      - "68 [223] 🇳🇱 | NL | 1209ms | 62KB | @filembad"
-      - "69 [224] 🇳🇱 | NL | 1123ms | 62KB |"
-      - "70 [226] 🇬🇧 | GB | 1069ms | 62KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "71 [229] 🇪🇸 | ES | 1243ms | 61KB | ***✅***@AR14N24b"
-      - "72 [231] 🇳🇱 | NL | 1208ms | 60KB |"
-      - "73 [234] 🇳🇱 | NL | 1136ms | 60KB | NetAccount`"
-      - "74 [243] 🇳🇱 | NL | 1129ms | 58KB | ***✅***@AR14N24b"
-      - "75 [251] 🇲🇽 | MX | 696ms | 54KB |"
-      - "76 [253] 🇵🇹 | PT | 1404ms | 51KB | ***✅***@AR14N24b"
-      - "77 [256] 🇬🇧 | GB | 1261ms | 47KB | ***✅***@AR14N24b"
-      - "78 [258] 🇺🇸 | US | 3555ms | 44KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "79 [276] 🇺🇸 | US | 5000ms | 28KB |"
-      - "80 [278] 🇺🇸 | US | 1248ms | 27KB | ***✅***@AR14N24b"
-      - "81 [279] 🇩🇪 | DE | 1981ms | 25KB |"
-      - "82 [290] 🇨🇱 | CL | 5000ms | 4KB | ***✅***@AR14N24b"
-      - "83 [4] 🇺🇸 | US | 598ms | 629KB | ***✅***@AR14N24b"
-      - "84 [7] 🇺🇸 | US | 507ms | 559KB | ***✅***@AR14N24b"
-      - "85 [8] 🇺🇸 | US | 333ms | 544KB | ***✅***@AR14N24b"
-      - "86 [9] 🇺🇸 | US | 1802ms | 536KB | ***✅***@AR14N24b"
-      - "87 [10] 🇺🇸 | US | 556ms | 526KB |"
-      - "88 [12] 🇺🇸 | US | 343ms | 496KB | ***✅***@AR14N24b"
-      - "89 [15] 🇺🇸 | US | 610ms | 479KB |"
-      - "90 [17] 🇺🇸 | US | 363ms | 476KB | ***✅***@AR14N24b"
-      - "91 [29] 🇺🇸 | US | 968ms | 388KB | ***✅***@AR14N24b"
-      - "92 [33] 🇺🇸 | US | 606ms | 372KB | ***✅***@AR14N24b"
-      - "93 [42] 🇺🇸 | US | 541ms | 325KB |"
-      - "94 [74] 🇺🇸 | US | 647ms | 190KB |"
-      - "95 [79] 🇺🇸 | US | 416ms | 183KB |"
-      - "96 [104] 🇺🇸 | US | 730ms | 161KB | @IranProxyPlus`"
-      - "97 [107] 🇺🇸 | US | 635ms | 159KB |"
-      - "98 [118] 🇺🇸 | US | 804ms | 146KB |"
-      - "99 [119] 🇺🇸 | US | 410ms | 145KB | ***✅***@AR14N24b"
-      - "100 [124] 🇨🇦 | CA | 470ms | 134KB |"
-      - "101 [125] 🇨🇦 | CA | 446ms | 133KB |"
-      - "102 [132] 🇺🇸 | US | 575ms | 125KB | ***✅***@AR14N24b"
-      - "103 [135] 🇺🇸 | US | 844ms | 122KB | ***✅***@AR14N24b"
-      - "104 [136] 🇺🇸 | US | 964ms | 121KB | ***✅***@AR14N24b"
-      - "105 [145] 🇺🇸 | US | 530ms | 111KB | ***✅***@AR14N24b"
-      - "106 [148] 🇺🇸 | US | 481ms | 110KB |"
-      - "107 [160] 🇺🇸 | US | 380ms | 100KB |"
-      - "108 [178] 🇺🇸 | US | 761ms | 76KB | ***✅***@AR14N24b"
-      - "109 [6] 🇺🇸 | US | 380ms | 601KB | ⚡️Telegram = @SOSkeyNET"
-      - "110 [16] 🇺🇸 | US | 980ms | 479KB | ⚡️Telegram = @SOSkeyNET"
-      - "111 [25] 🇺🇸 | US | 1554ms | 423KB | ⚡️Telegram = @SOSkeyNET"
-      - "112 [72] 🇺🇸 | US | 1988ms | 193KB | ⚡️Telegram = @SOSkeyNET"
-      - "113 [92] 🇺🇸 | US | 432ms | 170KB | ⚡️Telegram = @SOSkeyNET"
-      - "114 [97] 🇺🇸 | US | 307ms | 167KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "115 [100] 🇺🇸 | US | 359ms | 165KB | ⚡️Telegram = @SOSkeyNET"
-      - "116 [103] 🇺🇸 | US | 400ms | 161KB | ⚡️Telegram = @SOSkeyNET"
-      - "117 [105] 🇺🇸 | US | 545ms | 161KB | ⚡️Telegram = @SOSkeyNET"
-      - "118 [110] 🇺🇸 | US | 602ms | 155KB | ⚡️Telegram = @SOSkeyNET"
-      - "119 [115] 🇺🇸 | US | 270ms | 149KB | [18014] - Telegram : @configraygan"
-      - "120 [128] 🇺🇸 | US | 497ms | 128KB | ⚡️Telegram = @SOSkeyNET"
-      - "121 [143] 🇺🇸 | US | 664ms | 113KB | ⚡️Telegram = @SOSkeyNET"
-      - "122 [174] 🇫🇷 | FR | 936ms | 78KB | 💎@configraygan"
-      - "123 [188] 🇺🇸 | US | 1079ms | 67KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "124 [194] 🇺🇸 | US | 692ms | 65KB | ⚡️Telegram = @SOSkeyNET"
-      - "125 [206] 🇩🇪 | DE | 1058ms | 64KB | ⚡️Telegram = @SOSkeyNET"
-      - "126 [263] 🇨🇦 | CA | 2731ms | 40KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "127 [273] 🇺🇸 | US | 1653ms | 31KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
-      - "128 [295] 🌐 | null | 99999ms | ⚡️Telegram = @SOSkeyNET"
+      - "1 [2] 🇺🇸 | US | 305ms | 444KB | ZHK"
+      - "2 [3] 🇺🇸 | US | 259ms | 434KB | ZHK"
+      - "3 [4] 🇺🇸 | US | 296ms | 398KB | ZHK"
+      - "4 [12] 🌐 | null | 1103ms | 215KB | @configraygan+G4"
+      - "5 [13] 🇨🇦 | CA | 1079ms | 205KB | @IranProxyPlus`"
+      - "6 [15] 🇺🇸 | US | 1251ms | 183KB | ***✅***@AR14N24b"
+      - "7 [18] 🇨🇦 | CA | 1448ms | 176KB |"
+      - "8 [26] 🇺🇸 | US | 1008ms | 141KB | 📀43@oneclickvpnkeys"
+      - "9 [27] 🇺🇸 | US | 822ms | 140KB | 📀100@oneclickvpnkeys"
+      - "10 [36] 🇺🇸 | US | 656ms | 119KB |"
+      - "11 [37] 🇬🇧 | GB | 1634ms | 115KB | 📀86@oneclickvpnkeys"
+      - "12 [38] 🇺🇸 | US | 987ms | 113KB | 📀48@oneclickvpnkeys"
+      - "13 [39] 🇺🇸 | US | 908ms | 112KB | 📀99@oneclickvpnkeys"
+      - "14 [43] 🇬🇧 | GB | 737ms | 104KB | 📀41@oneclickvpnkeys"
+      - "15 [49] 🇺🇸 | US | 1022ms | 72KB | @filembad`"
+      - "16 [52] 🇺🇸 | US | 1169ms | 70KB | برای اتصال دائمی جوین شو♂️ TelegramID ⌲Express_freevpn 🪩"
+      - "17 [53] 🇺🇸 | US | 1039ms | 69KB | 📀59@oneclickvpnkeys"
+      - "18 [54] 🇺🇸 | US | 1193ms | 67KB | ***✅***@AR14N24b"
+      - "19 [59] 🇺🇸 | US | 475ms | 62KB | 📀70@oneclickvpnkeys"
+      - "20 [65] 🇨🇦 | CA | 1149ms | 60KB | @IranProxyPlus`"
+      - "21 [76] 🇩🇪 | DE | 1978ms | 45KB |"
+      - "22 [84] 🇩🇪 | DE | 1653ms | 42KB | @filembad`"
+      - "23 [110] 🇩🇪 | DE | 1805ms | 40KB |"
+      - "24 [137] 🇩🇪 | DE | 1892ms | 39KB | 🌱4@oneclickvpnkeys"
+      - "25 [153] 🇩🇪 | DE | 1936ms | 39KB | 🌱11@oneclickvpnkeys"
+      - "26 [155] 🇩🇪 | DE | 1936ms | 39KB | 🌱5@oneclickvpnkeys"
+      - "27 [156] 🇳🇱 | NL | 1804ms | 38KB | 🛡 V 123 @Outline_Vpn"
+      - "28 [179] 🇳🇱 | NL | 1793ms | 38KB | 🐻34@oneclickvpnkeys"
+      - "29 [180] 🇳🇱 | NL | 1839ms | 38KB | 🐻20@oneclickvpnkeys"
+      - "30 [184] 🇬🇧 | GB | 1808ms | 37KB | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "31 [189] 🌐 | null | 1899ms | 37KB | 🇸🇪 TCP-None | @KIA_NET"
+      - "32 [228] 🇲🇩 | MD | 1339ms | 33KB | 📀64@oneclickvpnkeys"
+      - "33 [274] 🇺🇸 | US | 5000ms | 5KB |"
+      - "34 [277] 🇺🇸 | US | 5000ms | 5KB |"
+      - "35 [282] 🌐 | null | 5001ms | @IranProxyPlus`"
+      - "36 [285] 🌐 | null | 99999ms | ***✅***@AR14N24b"
+      - "37 [289] 🌐 | null | 99999ms | @filembad`"
+      - "38 [300] 🌐 | null | 99999ms | 📀56@oneclickvpnkeys"
+      - "39 [5] 🇺🇸 | US | 831ms | 350KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "40 [16] 🇬🇧 | GB | 1597ms | 180KB | @filembad`"
+      - "41 [45] 🇲🇽 | MX | 772ms | 97KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "42 [46] 🇺🇸 | US | 1270ms | 95KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "43 [63] 🇯🇵 | JP | 1216ms | 61KB |"
+      - "44 [69] 🇺🇸 | US | 1228ms | 57KB | @proxy_kafee"
+      - "45 [79] 🇬🇧 | GB | 1839ms | 43KB | ***✅***@AR14N24b"
+      - "46 [85] 🇬🇧 | GB | 1717ms | 42KB | ***✅***@AR14N24b"
+      - "47 [86] 🇫🇷 | FR | 1674ms | 42KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "48 [92] 🇳🇱 | NL | 1814ms | 41KB | ***✅***@AR14N24b"
+      - "49 [93] 🇳🇱 | NL | 1759ms | 41KB | ***✅***@AR14N24b"
+      - "50 [94] 🇳🇱 | NL | 1751ms | 41KB | ***✅***@AR14N24b"
+      - "51 [98] 🇳🇱 | NL | 1828ms | 41KB | ***✅***@AR14N24b"
+      - "52 [99] 🇳🇱 | NL | 1876ms | 41KB |"
+      - "53 [104] 🇳🇱 | NL | 1807ms | 41KB |"
+      - "54 [105] 🇳🇱 | NL | 1745ms | 41KB | ***✅***@AR14N24b"
+      - "55 [106] 🇳🇱 | NL | 1757ms | 41KB | @filembad`"
+      - "56 [109] 🇳🇱 | NL | 1883ms | 40KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "57 [112] 🇮🇹 | IT | 1874ms | 40KB | @filembad`"
+      - "58 [120] 🇳🇱 | NL | 1757ms | 40KB | NetAccount`"
+      - "59 [122] 🇳🇱 | NL | 1832ms | 40KB | ***✅***@AR14N24b"
+      - "60 [130] 🇳🇱 | NL | 1869ms | 40KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "61 [133] 🇳🇱 | NL | 1834ms | 39KB | ***✅***@AR14N24b"
+      - "62 [135] 🇳🇱 | NL | 1793ms | 39KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "63 [138] 🇳🇱 | NL | 1808ms | 39KB |"
+      - "64 [139] 🇳🇱 | NL | 1881ms | 39KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "65 [140] 🇳🇱 | NL | 1819ms | 39KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "66 [145] 🇫🇷 | FR | 1686ms | 39KB |"
+      - "67 [151] 🇫🇮 | FI | 1806ms | 39KB |"
+      - "68 [154] 🇳🇱 | NL | 1868ms | 39KB |"
+      - "69 [159] 🇳🇱 | NL | 1805ms | 38KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "70 [176] 🇳🇱 | NL | 1894ms | 38KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "71 [181] 🇭🇷 | HR | 1935ms | 38KB |"
+      - "72 [188] 🇩🇪 | DE | 1782ms | 37KB |"
+      - "73 [210] 🇸🇬 | SG | 1949ms | 34KB |"
+      - "74 [213] 🇦🇹 | AT | 2198ms | 34KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "75 [218] 🇬🇧 | GB | 1721ms | 33KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩`"
+      - "76 [220] 🇸🇬 | SG | 2024ms | 33KB |"
+      - "77 [221] 🇩🇪 | DE | 2319ms | 33KB |"
+      - "78 [225] 🇩🇪 | DE | 1937ms | 33KB | برای اتصال دائمی جوین شو🫧 TelegramID ⌲Express_freevpn 🪩`"
+      - "79 [235] 🇩🇪 | DE | 1932ms | 31KB |"
+      - "80 [236] 🇩🇪 | DE | 1991ms | 31KB | ***✅***@AR14N24b"
+      - "81 [239] 🇧🇷 | BR | 2259ms | 31KB | ***✅***@AR14N24b"
+      - "82 [250] 🇬🇧 | GB | 2016ms | 26KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "83 [275] 🇮🇹 | IT | 5000ms | 5KB | @filembad`"
+      - "84 [281] 🇹🇷 | TR | 5000ms | 4KB | @filembad`"
+      - "85 [87] 🇫🇷 | FR | 1971ms | 42KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "86 [90] 🇫🇷 | FR | 1800ms | 41KB |"
+      - "87 [161] 🇩🇪 | DE | 1971ms | 38KB | برای اتصال دائمی جوین شو🫧 TelegramID ⌲Express_freevpn 🪩"
+      - "88 [206] 🇫🇷 | FR | 1925ms | 36KB |"
+      - "89 [1] 🇺🇸 | US | 113ms | 462KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "90 [6] 🇺🇸 | US | 4714ms | 246KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "91 [7] 🇺🇸 | US | 1171ms | 240KB | برای اتصال دائمی جوین شو♂️ TelegramID ⌲Express_freevpn 🪩"
+      - "92 [9] 🇺🇸 | US | 1087ms | 235KB | ⚡️Telegram = @configraygan"
+      - "93 [48] 🇺🇸 | US | 1148ms | 75KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "94 [55] 🇺🇸 | US | 1317ms | 65KB | ⚡️Telegram = @SOSkeyNET"
+      - "95 [67] 🇺🇸 | US | 5000ms | 60KB | برای اتصال دائمی جوین شو👾 TelegramID ⌲Express_freevpn 🪩"
+      - "96 [74] 🇨🇦 | CA | 1318ms | 47KB | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
+      - "97 [75] 🇫🇷 | FR | 1598ms | 46KB | ⚡️Telegram = @SOSkeyNET"
+      - "98 [102] 🇩🇪 | DE | 1740ms | 41KB | 🇩🇪[openproxylist.com] vmess-DE"
+      - "99 [144] 🇫🇷 | FR | 1725ms | 39KB | برای اتصال دائمی جوین شو🫟 TelegramID ⌲Express_freevpn"
+      - "100 [229] 🇺🇸 | US | 1356ms | 32KB | ⚡️Telegram = @SOSkeyNET"
+      - "101 [290] 🌐 | null | 99999ms | برای اتصال دائمی جوین شو🍘 TelegramID ⌲Express_freevpn 🪩"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
