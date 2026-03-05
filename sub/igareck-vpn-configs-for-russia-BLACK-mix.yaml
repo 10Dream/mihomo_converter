@@ -175,179 +175,98 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 🇭🇰 Hong Kong, Central | [BL]","type":"hysteria2","server":"432f44d7-t55r40-t94bdb-mrtr.hk1.hyhuawei.com","port":443,"password":"28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9"}
-  - {"name":"2 🇭🇰 Hong Kong, Fo Tan | [BL]","type":"hysteria2","server":"4abef786-t6pb40-tcw58g-1p0be.hk2.hyhuawei.com","port":443,"password":"55cce5a4-56b7-11ee-af82-f23c9164ca5d"}
-  - {"name":"3 🇭🇰 Hong Kong, Fo Tan | [BL]","type":"hysteria2","server":"38a8754f-t6pb40-tmynyz-1s3mx.hk2.hyhuawei.com","port":443,"password":"b58095f0-52dc-11ef-bc74-f23c91cfbbc9"}
-  - {"name":"4 🇯🇵 Japan | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"160.16.137.28","port":35789,"password":"4d5018bf-0e8b-4087-8b8a-bfa51ae86f5c"}
-  - {"name":"5 🇯🇵 Japan | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"iij.mggl.wang","port":35789,"password":"79d73809-f5ed-4099-8588-ba77578def1d"}
-  - {"name":"6 🇺🇸 United States, Seattle | [BL]","type":"hysteria2","server":"75.127.13.83","port":47974,"password":"2c833c5d-cbcc-4afb-89ba-d17dc39db6f0"}
-  - {"name":"7 🌐 Anycast-IP | [BL]","type":"hysteria2","server":"4a8146b5-t70f40-tlpfci-1jdha.hk1.hyhuawei.com","port":443,"password":"de629d50-1711-11ed-bd7c-f23c913c8d2b"}
-  - {"name":"8 🇨🇦 Canada, Toronto | [BL]","type":"vless","server":"199.232.131.39","port":443,"uuid":"bf1b45af-c13a-438f-8d32-3b5a31b6735b","udp":true,"tls":true,"network":"ws","servername":"supercell.com"}
-  - {"name":"9 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]","type":"vless","server":"sandstorm.qvzlwk.sbs","port":25567,"uuid":"4eafab5d-d49b-418d-9b14-9095ea286263","udp":true,"tls":true,"network":"tcp","servername":"sandstorm.qvzlwk.sbs"}
-  - {"name":"10 🇫🇷 France, Paris | [BL]","type":"vless","server":"fr.vitalik.space","port":443,"uuid":"2478528e-ecad-4134-a7cc-878f08a76865","udp":true,"tls":true,"network":"tcp","servername":"fr.vitalik.space"}
-  - {"name":"11 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]","type":"vless","server":"fr1.cyphervpn.pro","port":443,"uuid":"5e80ffa4-13fd-11f1-a5fb-0242ac110002","udp":true,"tls":true,"network":"tcp","servername":"fr1.cyphervpn.pro"}
-  - {"name":"12 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]","type":"vless","server":"185.171.202.30","port":33514,"uuid":"Telegram-chanel%20%3D%20%40digi_config","udp":true,"tls":true,"network":"xhttp","servername":"yahoo.com"}
-  - {"name":"13 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]","type":"vless","server":"185.171.202.30","port":33514,"uuid":"Telegram-join%20%3D%20%40digi_config","udp":true,"tls":true,"network":"xhttp","servername":"yahoo.com"}
-  - {"name":"14 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"171.22.31.215","port":443,"uuid":"2b0f0798-1099-4e72-8c69-efe9b8b6a9b8","udp":true,"tls":true,"network":"grpc","servername":"vpn.xorealis.com"}
-  - {"name":"15 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"darkge.rakslinevpn.su","port":443,"uuid":"2baffe9c-099d-481b-8d9c-7eb351c9bf35","udp":true,"tls":true,"network":"tcp","servername":"rawinet.ru"}
-  - {"name":"16 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"c14.play2go.cloud","port":20261,"uuid":"2c9c0043-ab30-409d-9fd2-4df5ce288b3e","udp":true,"tls":true,"network":"tcp","servername":"c14.play2go.cloud"}
-  - {"name":"17 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"de4.cyphervpn.pro","port":443,"uuid":"5e80ffa4-13fd-11f1-a5fb-0242ac110002","udp":true,"tls":true,"network":"xhttp","servername":"de4.cyphervpn.pro"}
-  - {"name":"18 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"gos25.portal-guard.com","port":8443,"uuid":"cc5dc6dd-d47e-4ab8-8ea4-b72dbba951c6","udp":true,"tls":true,"network":"tcp","servername":"gos25.portal-guard.com"}
-  - {"name":"19 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"serendipity.qvzlwk.sbs","port":443,"uuid":"e06b2fc8-131d-4ba1-991d-c126697df43a","udp":true,"tls":true,"network":"tcp","servername":"serendipity.qvzlwk.sbs"}
-  - {"name":"20 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"212.113.99.50","port":8443,"uuid":"21915536-afb5-4a0c-b047-fcf549d3a173","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
-  - {"name":"21 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"meow-frankfurt.nethcloud.top","port":8443,"uuid":"21915536-afb5-4a0c-b047-fcf549d3a173","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
-  - {"name":"22 🇭🇳 Honduras, Comayagüela | 🌐 | [BL]","type":"vless","server":"arvancloud.ir","port":2087,"uuid":"ffecd7fe-a020-4a99-a0d2-766dd341ed42","udp":true,"tls":true,"network":"ws","servername":"arvan.omidrahnama.ir"}
-  - {"name":"23 🇯🇵 Japan, Chiyoda | [BL]","type":"vless","server":"116.80.44.144","port":27724,"uuid":"ebd8539d-e249-4a39-8f90-e8585e8cc35e","udp":true,"tls":true,"network":"raw","servername":"www.yahoo.co.jp"}
-  - {"name":"24 🇰🇿 Kazakhstan, Almaty | [BL]","type":"vless","server":"kz.vitalik.space","port":443,"uuid":"2478528e-ecad-4134-a7cc-878f08a76865","udp":true,"tls":true,"network":"tcp","servername":"kz.vitalik.space"}
-  - {"name":"25 🇰🇿 Kazakhstan, Almaty | [BL]","type":"vless","server":"kz1.cyphervpn.pro","port":443,"uuid":"5e80ffa4-13fd-11f1-a5fb-0242ac110002","udp":true,"tls":true,"network":"xhttp","servername":"kz1.cyphervpn.pro"}
-  - {"name":"26 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"cache2.datapull.cc","port":8443,"uuid":"c015f603-f03d-44e1-b29a-15a8253dec3c","udp":true,"tls":true,"network":"tcp","servername":"www.mozilla.org"}
-  - {"name":"27 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"nl1.vpnjantit.com","port":10004,"uuid":"e38d4168-141f-11f1-aa5e-52ac00d0e60c","udp":true,"tls":false,"network":"ws"}
-  - {"name":"28 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"ams1.maxservice.life","port":443,"uuid":"05ea4868-155c-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"ams1.maxservice.life"}
-  - {"name":"29 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"ams1.maxservice.life","port":443,"uuid":"4854cfd6-1802-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"ams1.maxservice.life"}
-  - {"name":"30 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"ams1.maxservice.life","port":443,"uuid":"648f9756-159d-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"ams1.maxservice.life"}
-  - {"name":"31 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"ams1.maxservice.life","port":443,"uuid":"7b9eee6a-13e0-11f1-8992-6dc1f910523f","udp":true,"tls":true,"network":"xhttp","servername":"ams1.maxservice.life"}
-  - {"name":"32 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"ams1.maxservice.life","port":443,"uuid":"7c2012e4-1555-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"ams1.maxservice.life"}
-  - {"name":"33 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"ams1.maxservice.life","port":443,"uuid":"e5f13a14-16bc-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"ams1.maxservice.life"}
-  - {"name":"34 🇬🇧 United Kingdom, Manchester | [BL]","type":"vless","server":"cdnuser2048mb.wrongguy.ir","port":8443,"uuid":"115e24e4-fc6b-4d89-8f55-05eb00770001","udp":true,"tls":true,"network":"xhttp","servername":"ic.imsoon.io"}
-  - {"name":"35 🇬🇧 United Kingdom, Manchester | 🌐 | [IPv6] | [BL]","type":"vless","server":"103.160.204.191","port":8443,"uuid":"115e24e4-fc6b-4d89-8f55-05eb00770001","udp":true,"tls":true,"network":"xhttp","servername":"ic.imsoon.io"}
-  - {"name":"36 🇬🇧 United Kingdom, Manchester | 🌐 | [IPv6] | [BL]","type":"vless","server":"cdnuser2048mb.wrongguy.ir","port":443,"uuid":"Vip_fragment_v2ray","udp":true,"tls":true,"network":"xhttp","servername":"ic.imsoon.io"}
-  - {"name":"37 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us2.maxservice.life","port":443,"uuid":"02e5b70c-163c-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us2.maxservice.life"}
-  - {"name":"38 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us1.maxservice.life","port":443,"uuid":"05ea4868-155c-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us1.maxservice.life"}
-  - {"name":"39 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us1.maxservice.life","port":443,"uuid":"14095462-1556-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us1.maxservice.life"}
-  - {"name":"40 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us1.maxservice.life","port":443,"uuid":"4854cfd6-1802-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us1.maxservice.life"}
-  - {"name":"41 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us1.maxservice.life","port":443,"uuid":"648f9756-159d-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us1.maxservice.life"}
-  - {"name":"42 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us1.maxservice.life","port":443,"uuid":"7b9eee6a-13e0-11f1-8992-6dc1f910523f","udp":true,"tls":true,"network":"xhttp","servername":"us1.maxservice.life"}
-  - {"name":"43 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us1.maxservice.life","port":443,"uuid":"7c2012e4-1555-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us1.maxservice.life"}
-  - {"name":"44 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us2.maxservice.life","port":443,"uuid":"9a7447f6-156e-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us2.maxservice.life"}
-  - {"name":"45 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us2.maxservice.life","port":443,"uuid":"c99cf4f8-1558-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us2.maxservice.life"}
-  - {"name":"46 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us1.maxservice.life","port":443,"uuid":"e5f13a14-16bc-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us1.maxservice.life"}
-  - {"name":"47 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us2.maxservice.life","port":443,"uuid":"f4061ece-155b-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us2.maxservice.life"}
-  - {"name":"48 🇺🇸 United States, New York | [BL]","type":"vless","server":"us-01.vitalik.space","port":443,"uuid":"2478528e-ecad-4134-a7cc-878f08a76865","udp":true,"tls":true,"network":"tcp","servername":"us-01.vitalik.space"}
-  - {"name":"49 🇺🇸 United States, Santa Clarita (Canyon Country) | 🌐 | [IPv6] | [BL]","type":"vless","server":"142.171.217.19","port":29028,"uuid":"7426d51e-bb52-403d-e3bb-ef823d306766","udp":true,"tls":true,"network":"tcp","servername":"addons.mozilla.org"}
-  - {"name":"50 🇷🇺 Russia, Moscow | 🌐 | [IPv6] | [BL]","type":"vless","server":"meow-msc.nethcloud.top","port":8443,"uuid":"21915536-afb5-4a0c-b047-fcf549d3a173","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
-  - {"name":"51 🇷🇺 Russia, Obruchevo | [BL]","type":"vless","server":"194.55.235.146","port":443,"uuid":"2478528e-ecad-4134-a7cc-878f08a76865","udp":true,"tls":true,"network":"tcp","servername":"ru.vitalik.space"}
-  - {"name":"52 🇷🇺 Russia, Obruchevo | [BL]","type":"vless","server":"ru.vitalik.space","port":443,"uuid":"2478528e-ecad-4134-a7cc-878f08a76865","udp":true,"tls":true,"network":"tcp","servername":"ru.vitalik.space"}
-  - {"name":"53 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"dikage.top","port":443,"uuid":"57aa311c-c21d-40ad-91c3-7a6b7cd36ea2","udp":true,"tls":true,"network":"raw","servername":"dikage.top"}
-  - {"name":"54 🇷🇺 Russia, St Petersburg | 🌐 | [IPv6] | [BL]","type":"vless","server":"82.97.252.60","port":8443,"uuid":"a44e0875-210f-4941-9062-89b6361a14c6","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
-  - {"name":"55 🇷🇺 Russia, Yakutsk | [BL]","type":"vless","server":"92.42.96.217","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"56 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"144.34.163.149","port":58431,"uuid":"055e3bd2-10f8-4d9c-8f7d-70b9f659e476","udp":true,"tls":true,"network":"ws","servername":"c0.ttlive4.dns-dynamic.net"}
-  - {"name":"57 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"45.156.27.41","port":2053,"uuid":"055e3bd2-10f8-4d9c-8f7d-70b9f659e476","udp":true,"tls":true,"network":"ws","servername":"c0.ttlive4.dns-dynamic.net"}
-  - {"name":"58 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"8.39.125.77","port":443,"uuid":"055e3bd2-10f8-4d9c-8f7d-70b9f659e476","udp":true,"tls":true,"network":"ws","servername":"c0.ttlive4.dns-dynamic.net"}
-  - {"name":"59 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"152.53.143.195","port":8443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"lirpeuijr.chinav.indevs.in"}
-  - {"name":"60 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.252.144.185","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"_acme-challenge.443888.xyz"}
-  - {"name":"61 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.252.144.185","port":8443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"_acme-challenge.443888.xyz"}
-  - {"name":"62 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.241.241.20","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"bt5hpm5jf6.chinam.eu.org"}
-  - {"name":"63 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"194.87.97.6","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"_acme-challenge.443888.xyz"}
-  - {"name":"64 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.227.144.37","port":8443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"_acme-challenge.443888.xyz"}
-  - {"name":"65 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"45.153.187.209","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"bt5hpm5jf6.chinam.eu.org"}
-  - {"name":"66 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.21.159.253","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"cyuxj212pnq.chinat.indevs.in"}
-  - {"name":"67 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"67.209.183.236","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"lirpeuijr.chinav.indevs.in"}
-  - {"name":"68 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"91.90.193.159","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"bt5hpm5jf6.chinam.eu.org"}
-  - {"name":"69 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"95.182.96.30","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"_acme-challenge.443888.xyz"}
-  - {"name":"70 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"8.35.211.110","port":443,"uuid":"51a43ab3-62fd-4fc4-8196-9e013929f87f","udp":true,"tls":true,"network":"ws","servername":"edge.121018.de5.net"}
-  - {"name":"71 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"103.219.194.43","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"72 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"138.124.182.56","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"73 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"143.20.213.218","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"74 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"151.242.183.166","port":35549,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"75 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"151.242.183.196","port":35549,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"76 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"151.242.183.217","port":35549,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"77 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"151.242.183.219","port":35549,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"78 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"151.242.183.220","port":35549,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"79 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"175.29.22.77","port":35549,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"80 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"175.29.22.90","port":35549,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"81 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.209.161.104","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"82 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.236.22.207","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"83 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.40","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"84 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.64","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"85 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.27.144","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"86 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"193.124.189.40","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"87 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"193.42.60.235","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"88 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"194.87.62.179","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"89 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"195.133.64.185","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"90 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"217.147.15.141","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"91 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"38.244.204.203","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"92 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.29.237.193","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"93 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.187.3.170","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"94 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.211.103","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"95 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"66.253.7.79","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"96 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.169.10.12","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"97 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"93.183.69.161","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"98 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"94.159.106.193","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"99 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"95.215.8.237","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"100 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"95.215.8.237","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"101 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"125.59.175.7","port":60006,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"102 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"154.208.10.70","port":8443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"103 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"20.255.49.160","port":443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"104 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"202.85.53.160","port":7000,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"105 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"202.85.53.77","port":7000,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"106 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"43.160.244.124","port":443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"107 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"43.160.248.66","port":8443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"108 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"43.161.217.205","port":1443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"109 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"45.121.138.23","port":26688,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"110 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"45.66.130.58","port":51002,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"111 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"47.238.228.196","port":2087,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"112 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"47.251.88.90","port":443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"113 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"47.77.239.158","port":443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"114 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"8.222.185.236","port":443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
-  - {"name":"115 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"195.85.59.69","port":2095,"uuid":"86c50e3a-5b87-49dd-bd20-03c7f2735e40","udp":true,"tls":false,"network":"ws"}
-  - {"name":"116 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"cache-2.datapull.cc","port":443,"uuid":"c015f603-f03d-44e1-b29a-15a8253dec3c","udp":true,"tls":true,"network":"tcp","servername":"www.mozilla.org"}
-  - {"name":"117 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"83.229.122.186","port":443,"uuid":"c6bc2083-9eaa-48e8-92e1-cc114b8393dd","udp":true,"tls":true,"network":"ws","servername":"surge.dpdns.org"}
-  - {"name":"118 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"9nkUgSHn4Rnesx6BPMKZJGcBDa6mXVPJKLa9e48zF8NVC16hXefJSK5VdNH6Qv7US2CgR7YXtUsUVFNj8RvMXBBfH9gVwLnw"}
-  - {"name":"119 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"2BXo2zqYWCHDLhTkQxxFXUpnpFaYiUuNUbBGWQWz4cBa5hGkvLkcdj91tCjBnsDLGdEQDuTcCNVt7MyVyqMvckheuT2Sagio"}
-  - {"name":"120 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"2AKn9A9XbMUbNG9i8xM7Q4EKwwfT5pSopZEQULA2eDrQiz2C5nMQT7f5s3s5TmBxJFYDB6Egp2XchtA5aSWDiS9pASNebMGv"}
-  - {"name":"121 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"2EmWRS1TkS3TkxKApnrihb3aHjDSXRvT1T1K9U2Bruxrnp5A8zmpTxwwTNje6BkVqmn9BgRF6pq8qoRHCfZdcah7BLbjrpT1"}
-  - {"name":"122 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"2M8fNk7mewkYhRFJzEu4osJBXiJcZotQSvaH6cfmxs7bP12QANijEZvKTxRd4Hbae37Xn7xEXfBcxz4tWhmbWQ36REbnZoPQ"}
-  - {"name":"123 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"107.181.147.235","port":40521,"cipher":"chacha20-ietf-poly1305","password":"Z94FoM1xpW3CJzixME8CjJEFBiCFhKSWfLzT6E92Pjh7y73YfNrwPju46Gd4HE85eXSjNiTtiAYc6WTskuhxZZFebd4rcXfp"}
-  - {"name":"124 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"ZEZ2bfFbViC9usN1WB4xqvyzEuUhPA2uuUYZmjKAWTQc3mErhCaVHmZbbWgVG9oi1VHhz12KP2gAWC8LZJ4imWhypAD9PG3u"}
-  - {"name":"125 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"BpFieMT6SobpqRiKFefvYu7eXk99XfCeWfjpntzSh81FfMx9R7rJW6LTmzH78StTEhCd7w32ZMxbGJZS98gpn1ozr9jAbMoa"}
-  - {"name":"126 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"bg9rGNza4dcmnDAXMiBaa4pUf9q8fc2EDePQ96UDfJrmohfvK7L27bLsJW2jikJPw97LYW76ypYK347TtUKZ6ebkw5Zf6C4s"}
-  - {"name":"127 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"107.181.147.235","port":40521,"cipher":"chacha20-ietf-poly1305","password":"LYW2w9fwdrwj2qC9NyTBuBNKQJUvkKnCp9UxVnFW6LqeSpiCcnzV1cMohBUnCCWBkjkp83rV9wWeYQQqUZwMuYu1YyCt17tW"}
-  - {"name":"128 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"iZDJs2CDckHKqJ5W7cpvCq2veqsqWn95iqs6Kr6F3YNnyMsk2uPdRrChQfShvH1v56Br1qWEW44qJna5QcMcZF7RCJmdvwuq"}
-  - {"name":"129 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"k7xW6N5SAVpgeqi1wd7s7yxD7S8PxaehUM5W8apHrQi3pSoDRXScoAPk8SVa4mKbvRjrgENU3dUgzTgp9T3rrXinaDe4CXYk"}
-  - {"name":"130 🇫🇮 Finland, Helsinki | [BL]","type":"ss","server":"185.5.38.111","port":55988,"cipher":"chacha20-ietf-poly1305","password":"UoaSgFv5z3i7XKz6h1KXCSZQmCa463i1smTuZv5tqVnRQvHa3RBFCXuefGzjGCDikoMNz64kELgiC8i7WtXy6t6CNzsd8kLG"}
-  - {"name":"131 🇸🇬 Singapore, Singapore | [BL]","type":"ss","server":"209.74.82.189","port":21520,"cipher":"chacha20-ietf-poly1305","password":"qJmjQFPPn6LbDXwdFLIxWt"}
-  - {"name":"132 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]","type":"ss","server":"45.80.231.75","port":31019,"cipher":"chacha20-ietf-poly1305","password":"XN6Xf0ZqwDeFrt39TQraen"}
-  - {"name":"133 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.184","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"134 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.186","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"135 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.190","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"136 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.199","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"137 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.214","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"138 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"139 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.218","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"140 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.101","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"141 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.103","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"142 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.124","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"143 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.62","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"144 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.69","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"145 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"51.11.138.168","port":443,"cipher":"chacha20-ietf-poly1305","password":"1kVr0KATIJI7mwOF"}
-  - {"name":"146 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"51.11.138.168","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
-  - {"name":"147 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"admin.c1.webramz.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
-  - {"name":"148 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"series-a2.samanehha.co","port":443,"cipher":"chacha20-poly1305","password":"W74XFALLLuw6m5IA"}
-  - {"name":"149 🇬🇧 United Kingdom, London | 🌐 | [BL]","type":"ss","server":"admin.c1.havij.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"1kVr0KATIJI7mwOF"}
-  - {"name":"150 🇬🇧 United Kingdom, London | 🌐 | [BL]","type":"ss","server":"series-a1.samanehha.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
-  - {"name":"151 🇺🇸 United States, Los Angeles | [BL]","type":"ss","server":"108.181.0.177","port":8388,"cipher":"chacha20-ietf-poly1305","password":"G5p6ww4o67HB"}
-  - {"name":"152 🇺🇸 United States, Rock Hill | [BL]","type":"ss","server":"144.217.164.29","port":12000,"cipher":"aes-256-gcm","password":"8JCsPssfgS8tiRwiMlhARg=="}
-  - {"name":"153 🇺🇸 United States, Seattle | [BL]","type":"ss","server":"94.72.127.58","port":443,"cipher":"aes-256-gcm","password":"jJHq807bQ7TM0yOh"}
-  - {"name":"154 🇺🇸 United States, Seattle | [BL]","type":"ss","server":"94.72.127.58","port":80,"cipher":"aes-256-gcm","password":"jJHq807bQ7TM0yOh"}
-  - {"name":"155 🇺🇸 United States, Seattle | [BL]","type":"ss","server":"94.72.127.55","port":443,"cipher":"aes-256-gcm","password":"wlJSF0fC8uqB5Gm5"}
-  - {"name":"156 🇺🇸 United States, Seattle | [BL]","type":"ss","server":"94.72.127.55","port":80,"cipher":"aes-256-gcm","password":"wlJSF0fC8uqB5Gm5"}
-  - {"name":"157 🌐 Anycast-IP | [IPv6] | [BL]","type":"ss","server":"57.131.42.19","port":8389,"cipher":"2022-blake3-aes-256-gcm","password":"et1sgh1iQaWzsw201JX2eexN1Ai6QmIGcZIlvlC5L54="}
-  - {"name":"158 🇫🇮 Finland, Helsinki | [BL]","type":"trojan","server":"212.193.18.144","port":36158,"password":"ZblhWr0mqMakCPg.N","udp":true,"tls":true}
-  - {"name":"159 🇫🇷 France, Paris | [BL]","type":"trojan","server":"185.18.250.245","port":443,"password":"humanity","udp":true,"tls":true}
-  - {"name":"160 🇫🇷 France, Paris | [BL]","type":"trojan","server":"185.18.250.252","port":443,"password":"humanity","udp":true,"tls":true}
-  - {"name":"161 🇭🇰 Hong Kong, Central | [BL]","type":"trojan","server":"58.152.25.208","port":443,"password":"BxceQaOe","udp":true,"tls":true}
-  - {"name":"162 🇭🇰 Hong Kong, Central | [BL]","type":"trojan","server":"58.152.53.45","port":443,"password":"BxceQaOe","udp":true,"tls":true}
-  - {"name":"163 🇯🇵 Japan, Minato | [BL]","type":"trojan","server":"160.16.214.104","port":2001,"password":"f7dbed8b1ca85124e793ba6c0bcfd0db","udp":true,"tls":true}
-  - {"name":"164 🇳🇴 Norway, Oslo (Alna District) | [BL]","type":"trojan","server":"80.173.230.196","port":26279,"password":"a5inYFE=JGV89+hjxIqgDp1tcWBd6","udp":true,"tls":true}
-  - {"name":"165 🇳🇴 Norway, Oslo (Alna District) | [BL]","type":"trojan","server":"80.173.231.254","port":12420,"password":"wp9IsiY82uQhcmgNC1eoBM","udp":true,"tls":true}
-  - {"name":"166 🇵🇱 Poland, Warsaw | [BL]","type":"trojan","server":"www.creationlong.org","port":443,"password":"humanity","udp":true,"tls":true}
-  - {"name":"167 🇸🇬 Singapore, Singapore | [BL]","type":"trojan","server":"153.121.65.107","port":3419,"password":"262f1d150049457ac1d6e66b020fa980","udp":true,"tls":true}
-  - {"name":"168 🇸🇬 Singapore, Singapore | [BL]","type":"trojan","server":"153.121.45.139","port":4674,"password":"f7dbed8b1ca85124e793ba6c0bcfd0db","udp":true,"tls":true}
-  - {"name":"169 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]","type":"trojan","server":"v3.dabache.top","port":8443,"password":"T9BpZIVMNv","udp":true,"tls":true}
-  - {"name":"170 🇬🇧 United Kingdom, London | [BL]","type":"trojan","server":"194.150.166.151","port":52047,"password":"zp630tdUuD","udp":true,"tls":true}
-  - {"name":"171 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"91.108.248.219","port":23058,"password":"2F7Pw5Jfim","udp":true,"tls":true}
-  - {"name":"172 🇨🇦 Canada, Toronto | [BL]","type":"vmess","server":"209.200.246.179","port":443,"uuid":"I_Love_🇵🇸_SSHMax_8ccf9b1","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"173 🇨🇦 Canada, Toronto | [BL]","type":"vmess","server":"ca2.xvmess.site","port":443,"uuid":"I_Love_🇵🇸_SSHMax_8ccf9b1","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"1 🇭🇰 Hong Kong, Central | [BL]","type":"hysteria2","server":"9b13ea8f-t70f40-t7t5pe-1s0a7.hk1.hyhuawei.com","port":443,"password":"1b9c460e-f026-11ef-b737-f23c91cfbbc9"}
+  - {"name":"2 🇭🇰 Hong Kong, Central | [BL]","type":"hysteria2","server":"432f44d7-t55r40-t94bdb-mrtr.hk1.hyhuawei.com","port":443,"password":"28a8a4d0-3e02-11eb-a8bf-f23c91cfbbc9"}
+  - {"name":"3 🇭🇰 Hong Kong, Central | [BL]","type":"hysteria2","server":"hk.chifanbieshuohua.club","port":20193,"password":"f5c670fe-fa78-4e23-87dc-6f624422ab73"}
+  - {"name":"4 🇭🇰 Hong Kong, Fo Tan | [BL]","type":"hysteria2","server":"4abef786-t6pb40-tcw58g-1p0be.hk2.hyhuawei.com","port":443,"password":"55cce5a4-56b7-11ee-af82-f23c9164ca5d"}
+  - {"name":"5 🇭🇰 Hong Kong, Fo Tan | [BL]","type":"hysteria2","server":"38a8754f-t6pb40-tmynyz-1s3mx.hk2.hyhuawei.com","port":443,"password":"b58095f0-52dc-11ef-bc74-f23c91cfbbc9"}
+  - {"name":"6 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"156.246.91.11","port":2000,"password":"be0ff4db-134c-4178-8dac-48ead0c4a432"}
+  - {"name":"7 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"eu.chifanbieshuohua.club","port":12345,"password":"f5c670fe-fa78-4e23-87dc-6f624422ab73"}
+  - {"name":"8 🇺🇸 United States, Seattle | [BL]","type":"hysteria2","server":"75.127.13.83","port":47974,"password":"2c833c5d-cbcc-4afb-89ba-d17dc39db6f0"}
+  - {"name":"9 🇨🇦 Canada, Toronto | 🌐 | [BL]","type":"vless","server":"us.netvora.space","port":443,"uuid":"2baffe9c-099d-481b-8d9c-7eb351c9bf35","udp":true,"tls":true,"network":"tcp","servername":"us.netvora.space"}
+  - {"name":"10 🇪🇪 Estonia, Tallinn | [BL]","type":"vless","server":"eespeed.netvora.space","port":443,"uuid":"2baffe9c-099d-481b-8d9c-7eb351c9bf35","udp":true,"tls":true,"network":"tcp","servername":"eespeed.netvora.space"}
+  - {"name":"11 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"de.netvora.space","port":443,"uuid":"2baffe9c-099d-481b-8d9c-7eb351c9bf35","udp":true,"tls":true,"network":"tcp","servername":"de.netvora.space"}
+  - {"name":"12 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"panel-de1.998521.xyz","port":60260,"uuid":"5eb165ea-afb6-427a-a814-adf14856a169","udp":true,"tls":false,"network":"ws"}
+  - {"name":"13 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"212.113.99.50","port":8443,"uuid":"21915536-afb5-4a0c-b047-fcf549d3a173","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
+  - {"name":"14 🇯🇵 Japan, Chiyoda | [BL]","type":"vless","server":"116.80.44.144","port":27724,"uuid":"ebd8539d-e249-4a39-8f90-e8585e8cc35e","udp":true,"tls":true,"network":"tcp","servername":"www.yahoo.co.jp"}
+  - {"name":"15 🇰🇿 Kazakhstan, Almaty | [BL]","type":"vless","server":"kz1.cyphervpn.pro","port":443,"uuid":"5e80ffa4-13fd-11f1-a5fb-0242ac110002","udp":true,"tls":true,"network":"xhttp","servername":"kz1.cyphervpn.pro"}
+  - {"name":"16 🇵🇱 Poland, Warsaw | [BL]","type":"vless","server":"poland-meow.nethcloud.top","port":8443,"uuid":"21915536-afb5-4a0c-b047-fcf549d3a173","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
+  - {"name":"17 🇪🇸 Spain, Madrid | 🌐 | [IPv6] | [BL]","type":"vless","server":"ip.xqnetwork.ir","port":2086,"uuid":"112a043b-22be-4967-9390-6fc07011e01b","udp":true,"tls":false,"network":"httpupgrade"}
+  - {"name":"18 🇸🇪 Sweden, Stockholm | [BL]","type":"vless","server":"se.netvora.space","port":443,"uuid":"2baffe9c-099d-481b-8d9c-7eb351c9bf35","udp":true,"tls":true,"network":"tcp","servername":"se.netvora.space"}
+  - {"name":"19 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"cache2.datapull.cc","port":8443,"uuid":"c015f603-f03d-44e1-b29a-15a8253dec3c","udp":true,"tls":true,"network":"tcp","servername":"www.mozilla.org"}
+  - {"name":"20 🇳🇱 The Netherlands, Eygelshoven | [BL]","type":"vless","server":"nl.netvora.space","port":443,"uuid":"2baffe9c-099d-481b-8d9c-7eb351c9bf35","udp":true,"tls":true,"network":"tcp","servername":"nl.netvora.space"}
+  - {"name":"21 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us2.maxservice.life","port":443,"uuid":"02e5b70c-163c-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us2.maxservice.life"}
+  - {"name":"22 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us2.maxservice.life","port":443,"uuid":"9a7447f6-156e-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us2.maxservice.life"}
+  - {"name":"23 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us2.maxservice.life","port":443,"uuid":"c99cf4f8-1558-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us2.maxservice.life"}
+  - {"name":"24 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"vless","server":"us2.maxservice.life","port":443,"uuid":"f4061ece-155b-11f1-8cad-c3845d39d2de","udp":true,"tls":true,"network":"xhttp","servername":"us2.maxservice.life"}
+  - {"name":"25 🇺🇸 United States, New York | [BL]","type":"vless","server":"us-01.vitalik.space","port":443,"uuid":"2478528e-ecad-4134-a7cc-878f08a76865","udp":true,"tls":true,"network":"tcp","servername":"us-01.vitalik.space"}
+  - {"name":"26 🇷🇺 Russia, Moscow | [BL]","type":"vless","server":"ru.vitalik.space","port":443,"uuid":"2478528e-ecad-4134-a7cc-878f08a76865","udp":true,"tls":true,"network":"tcp","servername":"ru.vitalik.space"}
+  - {"name":"27 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"ru.netvora.space","port":443,"uuid":"2baffe9c-099d-481b-8d9c-7eb351c9bf35","udp":true,"tls":true,"network":"tcp","servername":"ru.netvora.space"}
+  - {"name":"28 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"dikage.top","port":443,"uuid":"57aa311c-c21d-40ad-91c3-7a6b7cd36ea2","udp":true,"tls":true,"network":"raw","servername":"dikage.top"}
+  - {"name":"29 🌐 Anycast-IP | [BL]","type":"vless","server":"chatgpt.com","port":2052,"uuid":"5e62ddcf-78c9-4b15-803a-436c8c839ddc","udp":true,"tls":false,"network":"ws"}
+  - {"name":"30 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"chatgpt.com","port":8443,"uuid":"15190a50-e317-4acd-8baf-a6c8da1ae2ef","udp":true,"tls":true,"network":"ws","servername":"003.EleCtroCElLco-cf-003.woRKERS.DEv"}
+  - {"name":"31 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"meow-frankfurt.nethcloud.top","port":8443,"uuid":"21915536-afb5-4a0c-b047-fcf549d3a173","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
+  - {"name":"32 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"104.249.40.219","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"k7ryegiaeu.chinam.eu.org"}
+  - {"name":"33 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"152.53.143.195","port":8443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"lirpeuijr.chinav.indevs.in"}
+  - {"name":"34 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"194.87.97.6","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"_acme-challenge.443888.xyz"}
+  - {"name":"35 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.21.159.253","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"cyuxj212pnq.chinat.indevs.in"}
+  - {"name":"36 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"67.209.183.236","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"lirpeuijr.chinav.indevs.in"}
+  - {"name":"37 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"91.90.193.159","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"bt5hpm5jf6.chinam.eu.org"}
+  - {"name":"38 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.27.144","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"39 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"193.124.189.40","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"40 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"217.147.15.141","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"41 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.32.184.137","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"42 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.211.103","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"43 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"66.253.7.79","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"44 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"20.255.49.160","port":443,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
+  - {"name":"45 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"202.85.53.160","port":7000,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
+  - {"name":"46 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"202.85.53.77","port":7000,"uuid":"69a647a9-c60f-1366-ec63-1332eb2d2105","udp":true,"tls":true,"network":"ws","servername":"6f221d78.mfree.ccwu.cc"}
+  - {"name":"47 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"121.152.46.7","port":10243,"uuid":"8ae7cac7-36f7-d208-367d-2322dcb73973","udp":true,"tls":true,"network":"ws","servername":"n518.kqa.eduin.indevs.in"}
+  - {"name":"48 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.171.202.30","port":33514,"uuid":"Telegram-chanel%20%3D%20%40digi_config","udp":true,"tls":true,"network":"xhttp","servername":"yahoo.com"}
+  - {"name":"49 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.171.202.30","port":33514,"uuid":"Telegram-join%20%3D%20%40digi_config","udp":true,"tls":true,"network":"xhttp","servername":"yahoo.com"}
+  - {"name":"50 🇸🇬 Singapore, Singapore | [BL]","type":"ss","server":"209.74.82.189","port":21520,"cipher":"chacha20-ietf-poly1305","password":"qJmjQFPPn6LbDXwdFLIxWt"}
+  - {"name":"51 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.184","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"52 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.186","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"53 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.190","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"54 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.199","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"55 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.214","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"56 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"57 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.218","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"58 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.101","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"59 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.124","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"60 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.62","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"61 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]","type":"ss","server":"82.38.31.69","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"62 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"20.90.185.20","port":443,"cipher":"chacha20-ietf-poly1305","password":"1kVr0KATIJI7mwOF"}
+  - {"name":"63 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"51.11.138.168","port":443,"cipher":"chacha20-ietf-poly1305","password":"1kVr0KATIJI7mwOF"}
+  - {"name":"64 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"admin.c1.havij.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"1kVr0KATIJI7mwOF"}
+  - {"name":"65 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"20.90.185.20","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
+  - {"name":"66 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"51.11.138.168","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
+  - {"name":"67 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"admin.c1.webramz.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
+  - {"name":"68 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"series-a1.samanehha.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
+  - {"name":"69 🇬🇧 United Kingdom, London | [BL]","type":"ss","server":"series-a2.samanehha.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
+  - {"name":"70 🇺🇸 United States, Los Angeles | [BL]","type":"ss","server":"108.181.0.177","port":8388,"cipher":"chacha20-ietf-poly1305","password":"G5p6ww4o67HB"}
+  - {"name":"71 🇺🇸 United States, Seattle | [BL]","type":"ss","server":"94.72.127.58","port":443,"cipher":"aes-256-gcm","password":"jJHq807bQ7TM0yOh"}
+  - {"name":"72 🇺🇸 United States, Seattle | [BL]","type":"ss","server":"94.72.127.55","port":443,"cipher":"aes-256-gcm","password":"wlJSF0fC8uqB5Gm5"}
+  - {"name":"73 🇺🇸 United States, Seattle | [BL]","type":"ss","server":"94.72.127.55","port":80,"cipher":"aes-256-gcm","password":"wlJSF0fC8uqB5Gm5"}
+  - {"name":"74 🌐 Anycast-IP | [IPv6] | [BL]","type":"ss","server":"57.131.42.19","port":8389,"cipher":"2022-blake3-aes-256-gcm","password":"et1sgh1iQaWzsw201JX2eexN1Ai6QmIGcZIlvlC5L54="}
+  - {"name":"75 🇫🇮 Finland, Helsinki | [BL]","type":"trojan","server":"212.193.18.144","port":36158,"password":"ZblhWr0mqMakCPg.N","udp":true,"tls":true}
+  - {"name":"76 🇫🇷 France, Paris | [BL]","type":"trojan","server":"185.18.250.245","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"77 🇫🇷 France, Paris | [BL]","type":"trojan","server":"185.18.250.252","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"78 🇫🇷 France, Paris | [BL]","type":"trojan","server":"v3.dabache.top","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"79 🇫🇷 France, Paris | [BL]","type":"trojan","server":"www.calmlunch.com","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"80 🇭🇰 Hong Kong, Central | [BL]","type":"trojan","server":"58.152.25.208","port":443,"password":"BxceQaOe","udp":true,"tls":true}
+  - {"name":"81 🇭🇰 Hong Kong, Central | [BL]","type":"trojan","server":"58.152.53.45","port":443,"password":"BxceQaOe","udp":true,"tls":true}
+  - {"name":"82 🇱🇺 Luxembourg, Bissen | [BL]","type":"trojan","server":"chatgpt.com","port":443,"password":"Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q","udp":true,"tls":true}
+  - {"name":"83 🇳🇴 Norway, Oslo (Alna District) | [BL]","type":"trojan","server":"80.173.230.196","port":26279,"password":"a5inYFE=JGV89+hjxIqgDp1tcWBd6","udp":true,"tls":true}
+  - {"name":"84 🇳🇴 Norway, Oslo (Alna District) | [BL]","type":"trojan","server":"80.173.231.254","port":12420,"password":"wp9IsiY82uQhcmgNC1eoBM","udp":true,"tls":true}
+  - {"name":"85 🇵🇱 Poland, Warsaw | [BL]","type":"trojan","server":"www.creationlong.org","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"86 🇸🇬 Singapore, Singapore | [BL]","type":"trojan","server":"153.121.65.107","port":3419,"password":"262f1d150049457ac1d6e66b020fa980","udp":true,"tls":true}
+  - {"name":"87 🇸🇬 Singapore, Singapore | [BL]","type":"trojan","server":"153.121.45.139","port":4674,"password":"f7dbed8b1ca85124e793ba6c0bcfd0db","udp":true,"tls":true}
+  - {"name":"88 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]","type":"trojan","server":"chatgpt.com","port":8443,"password":"T9BpZIVMNv","udp":true,"tls":true}
+  - {"name":"89 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]","type":"trojan","server":"v3.dabache.top","port":8443,"password":"T9BpZIVMNv","udp":true,"tls":true}
+  - {"name":"90 🇬🇧 United Kingdom, London | [BL]","type":"trojan","server":"194.150.166.151","port":52047,"password":"zp630tdUuD","udp":true,"tls":true}
+  - {"name":"91 🇨🇦 Canada, Toronto | [BL]","type":"vmess","server":"209.200.246.179","port":443,"uuid":"I_Love_🇵🇸_SSHMax_8ccf9b1","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"92 🇺🇸 United States, St Louis (Downtown) | [BL]","type":"vmess","server":"chatgpt.com","port":8443,"uuid":"60441548-b68e-43b2-8191-e3b884be4b3c","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -362,178 +281,97 @@ proxy-groups:
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
       - "1 🇭🇰 Hong Kong, Central | [BL]"
-      - "2 🇭🇰 Hong Kong, Fo Tan | [BL]"
-      - "3 🇭🇰 Hong Kong, Fo Tan | [BL]"
-      - "4 🇯🇵 Japan | 🌐 | [IPv6] | [BL]"
-      - "5 🇯🇵 Japan | 🌐 | [IPv6] | [BL]"
-      - "6 🇺🇸 United States, Seattle | [BL]"
-      - "7 🌐 Anycast-IP | [BL]"
-      - "8 🇨🇦 Canada, Toronto | [BL]"
-      - "9 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "10 🇫🇷 France, Paris | [BL]"
-      - "11 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
-      - "12 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
-      - "13 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
-      - "14 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "15 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "16 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "17 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "18 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "19 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "20 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "21 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "22 🇭🇳 Honduras, Comayagüela | 🌐 | [BL]"
-      - "23 🇯🇵 Japan, Chiyoda | [BL]"
-      - "24 🇰🇿 Kazakhstan, Almaty | [BL]"
-      - "25 🇰🇿 Kazakhstan, Almaty | [BL]"
-      - "26 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "27 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "28 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "29 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "30 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "31 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "32 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "33 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "34 🇬🇧 United Kingdom, Manchester | [BL]"
-      - "35 🇬🇧 United Kingdom, Manchester | 🌐 | [IPv6] | [BL]"
-      - "36 🇬🇧 United Kingdom, Manchester | 🌐 | [IPv6] | [BL]"
-      - "37 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "38 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "39 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "40 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "41 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "42 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "43 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "44 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "45 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "46 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "47 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "48 🇺🇸 United States, New York | [BL]"
-      - "49 🇺🇸 United States, Santa Clarita (Canyon Country) | 🌐 | [IPv6] | [BL]"
-      - "50 🇷🇺 Russia, Moscow | 🌐 | [IPv6] | [BL]"
-      - "51 🇷🇺 Russia, Obruchevo | [BL]"
-      - "52 🇷🇺 Russia, Obruchevo | [BL]"
-      - "53 🇷🇺 Russia, St Petersburg | [BL]"
-      - "54 🇷🇺 Russia, St Petersburg | 🌐 | [IPv6] | [BL]"
-      - "55 🇷🇺 Russia, Yakutsk | [BL]"
-      - "56 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "57 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "58 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "59 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "60 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "61 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "62 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "63 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "64 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "65 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "66 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "67 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "68 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "69 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "70 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "71 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "72 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "73 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "2 🇭🇰 Hong Kong, Central | [BL]"
+      - "3 🇭🇰 Hong Kong, Central | [BL]"
+      - "4 🇭🇰 Hong Kong, Fo Tan | [BL]"
+      - "5 🇭🇰 Hong Kong, Fo Tan | [BL]"
+      - "6 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]"
+      - "7 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
+      - "8 🇺🇸 United States, Seattle | [BL]"
+      - "9 🇨🇦 Canada, Toronto | 🌐 | [BL]"
+      - "10 🇪🇪 Estonia, Tallinn | [BL]"
+      - "11 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "12 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
+      - "13 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+      - "14 🇯🇵 Japan, Chiyoda | [BL]"
+      - "15 🇰🇿 Kazakhstan, Almaty | [BL]"
+      - "16 🇵🇱 Poland, Warsaw | [BL]"
+      - "17 🇪🇸 Spain, Madrid | 🌐 | [IPv6] | [BL]"
+      - "18 🇸🇪 Sweden, Stockholm | [BL]"
+      - "19 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "20 🇳🇱 The Netherlands, Eygelshoven | [BL]"
+      - "21 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "22 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "23 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "24 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "25 🇺🇸 United States, New York | [BL]"
+      - "26 🇷🇺 Russia, Moscow | [BL]"
+      - "27 🇷🇺 Russia, St Petersburg | [BL]"
+      - "28 🇷🇺 Russia, St Petersburg | [BL]"
+      - "29 🌐 Anycast-IP | [BL]"
+      - "30 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "31 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "32 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "33 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "34 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "35 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "36 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "37 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "38 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "39 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "40 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "41 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "42 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "43 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "44 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "45 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "46 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "47 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "48 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "49 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "50 🇸🇬 Singapore, Singapore | [BL]"
+      - "51 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "52 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "53 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "54 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "55 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "56 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "57 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "58 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "59 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "60 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "61 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "62 🇬🇧 United Kingdom, London | [BL]"
+      - "63 🇬🇧 United Kingdom, London | [BL]"
+      - "64 🇬🇧 United Kingdom, London | [BL]"
+      - "65 🇬🇧 United Kingdom, London | [BL]"
+      - "66 🇬🇧 United Kingdom, London | [BL]"
+      - "67 🇬🇧 United Kingdom, London | [BL]"
+      - "68 🇬🇧 United Kingdom, London | [BL]"
+      - "69 🇬🇧 United Kingdom, London | [BL]"
+      - "70 🇺🇸 United States, Los Angeles | [BL]"
+      - "71 🇺🇸 United States, Seattle | [BL]"
+      - "72 🇺🇸 United States, Seattle | [BL]"
+      - "73 🇺🇸 United States, Seattle | [BL]"
       - "74 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "75 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "76 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "77 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "78 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "79 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "80 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "81 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "82 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "83 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "84 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "85 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "86 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "87 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "88 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "89 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "90 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "91 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "92 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "93 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "94 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "95 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "96 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "97 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "98 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "99 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "100 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "101 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "102 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "103 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "104 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "105 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "106 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "107 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "108 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "109 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "110 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "111 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "112 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "113 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "114 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "115 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "116 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "117 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "118 🇫🇮 Finland, Helsinki | [BL]"
-      - "119 🇫🇮 Finland, Helsinki | [BL]"
-      - "120 🇫🇮 Finland, Helsinki | [BL]"
-      - "121 🇫🇮 Finland, Helsinki | [BL]"
-      - "122 🇫🇮 Finland, Helsinki | [BL]"
-      - "123 🇫🇮 Finland, Helsinki | [BL]"
-      - "124 🇫🇮 Finland, Helsinki | [BL]"
-      - "125 🇫🇮 Finland, Helsinki | [BL]"
-      - "126 🇫🇮 Finland, Helsinki | [BL]"
-      - "127 🇫🇮 Finland, Helsinki | [BL]"
-      - "128 🇫🇮 Finland, Helsinki | [BL]"
-      - "129 🇫🇮 Finland, Helsinki | [BL]"
-      - "130 🇫🇮 Finland, Helsinki | [BL]"
-      - "131 🇸🇬 Singapore, Singapore | [BL]"
-      - "132 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]"
-      - "133 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "134 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "135 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "136 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "137 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "138 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "139 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "140 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "141 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "142 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "143 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "144 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "145 🇬🇧 United Kingdom, London | [BL]"
-      - "146 🇬🇧 United Kingdom, London | [BL]"
-      - "147 🇬🇧 United Kingdom, London | [BL]"
-      - "148 🇬🇧 United Kingdom, London | [BL]"
-      - "149 🇬🇧 United Kingdom, London | 🌐 | [BL]"
-      - "150 🇬🇧 United Kingdom, London | 🌐 | [BL]"
-      - "151 🇺🇸 United States, Los Angeles | [BL]"
-      - "152 🇺🇸 United States, Rock Hill | [BL]"
-      - "153 🇺🇸 United States, Seattle | [BL]"
-      - "154 🇺🇸 United States, Seattle | [BL]"
-      - "155 🇺🇸 United States, Seattle | [BL]"
-      - "156 🇺🇸 United States, Seattle | [BL]"
-      - "157 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "158 🇫🇮 Finland, Helsinki | [BL]"
-      - "159 🇫🇷 France, Paris | [BL]"
-      - "160 🇫🇷 France, Paris | [BL]"
-      - "161 🇭🇰 Hong Kong, Central | [BL]"
-      - "162 🇭🇰 Hong Kong, Central | [BL]"
-      - "163 🇯🇵 Japan, Minato | [BL]"
-      - "164 🇳🇴 Norway, Oslo (Alna District) | [BL]"
-      - "165 🇳🇴 Norway, Oslo (Alna District) | [BL]"
-      - "166 🇵🇱 Poland, Warsaw | [BL]"
-      - "167 🇸🇬 Singapore, Singapore | [BL]"
-      - "168 🇸🇬 Singapore, Singapore | [BL]"
-      - "169 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]"
-      - "170 🇬🇧 United Kingdom, London | [BL]"
-      - "171 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "172 🇨🇦 Canada, Toronto | [BL]"
-      - "173 🇨🇦 Canada, Toronto | [BL]"
+      - "75 🇫🇮 Finland, Helsinki | [BL]"
+      - "76 🇫🇷 France, Paris | [BL]"
+      - "77 🇫🇷 France, Paris | [BL]"
+      - "78 🇫🇷 France, Paris | [BL]"
+      - "79 🇫🇷 France, Paris | [BL]"
+      - "80 🇭🇰 Hong Kong, Central | [BL]"
+      - "81 🇭🇰 Hong Kong, Central | [BL]"
+      - "82 🇱🇺 Luxembourg, Bissen | [BL]"
+      - "83 🇳🇴 Norway, Oslo (Alna District) | [BL]"
+      - "84 🇳🇴 Norway, Oslo (Alna District) | [BL]"
+      - "85 🇵🇱 Poland, Warsaw | [BL]"
+      - "86 🇸🇬 Singapore, Singapore | [BL]"
+      - "87 🇸🇬 Singapore, Singapore | [BL]"
+      - "88 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]"
+      - "89 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]"
+      - "90 🇬🇧 United Kingdom, London | [BL]"
+      - "91 🇨🇦 Canada, Toronto | [BL]"
+      - "92 🇺🇸 United States, St Louis (Downtown) | [BL]"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -543,178 +381,97 @@ proxy-groups:
     lazy: true
     proxies:
       - "1 🇭🇰 Hong Kong, Central | [BL]"
-      - "2 🇭🇰 Hong Kong, Fo Tan | [BL]"
-      - "3 🇭🇰 Hong Kong, Fo Tan | [BL]"
-      - "4 🇯🇵 Japan | 🌐 | [IPv6] | [BL]"
-      - "5 🇯🇵 Japan | 🌐 | [IPv6] | [BL]"
-      - "6 🇺🇸 United States, Seattle | [BL]"
-      - "7 🌐 Anycast-IP | [BL]"
-      - "8 🇨🇦 Canada, Toronto | [BL]"
-      - "9 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "10 🇫🇷 France, Paris | [BL]"
-      - "11 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
-      - "12 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
-      - "13 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
-      - "14 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "15 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "16 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "17 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "18 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "19 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "20 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "21 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "22 🇭🇳 Honduras, Comayagüela | 🌐 | [BL]"
-      - "23 🇯🇵 Japan, Chiyoda | [BL]"
-      - "24 🇰🇿 Kazakhstan, Almaty | [BL]"
-      - "25 🇰🇿 Kazakhstan, Almaty | [BL]"
-      - "26 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "27 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "28 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "29 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "30 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "31 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "32 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "33 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "34 🇬🇧 United Kingdom, Manchester | [BL]"
-      - "35 🇬🇧 United Kingdom, Manchester | 🌐 | [IPv6] | [BL]"
-      - "36 🇬🇧 United Kingdom, Manchester | 🌐 | [IPv6] | [BL]"
-      - "37 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "38 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "39 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "40 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "41 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "42 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "43 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "44 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "45 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "46 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "47 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
-      - "48 🇺🇸 United States, New York | [BL]"
-      - "49 🇺🇸 United States, Santa Clarita (Canyon Country) | 🌐 | [IPv6] | [BL]"
-      - "50 🇷🇺 Russia, Moscow | 🌐 | [IPv6] | [BL]"
-      - "51 🇷🇺 Russia, Obruchevo | [BL]"
-      - "52 🇷🇺 Russia, Obruchevo | [BL]"
-      - "53 🇷🇺 Russia, St Petersburg | [BL]"
-      - "54 🇷🇺 Russia, St Petersburg | 🌐 | [IPv6] | [BL]"
-      - "55 🇷🇺 Russia, Yakutsk | [BL]"
-      - "56 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "57 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "58 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "59 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "60 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "61 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "62 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "63 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "64 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "65 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "66 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "67 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "68 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "69 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "70 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "71 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "72 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "73 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "2 🇭🇰 Hong Kong, Central | [BL]"
+      - "3 🇭🇰 Hong Kong, Central | [BL]"
+      - "4 🇭🇰 Hong Kong, Fo Tan | [BL]"
+      - "5 🇭🇰 Hong Kong, Fo Tan | [BL]"
+      - "6 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]"
+      - "7 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
+      - "8 🇺🇸 United States, Seattle | [BL]"
+      - "9 🇨🇦 Canada, Toronto | 🌐 | [BL]"
+      - "10 🇪🇪 Estonia, Tallinn | [BL]"
+      - "11 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "12 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
+      - "13 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+      - "14 🇯🇵 Japan, Chiyoda | [BL]"
+      - "15 🇰🇿 Kazakhstan, Almaty | [BL]"
+      - "16 🇵🇱 Poland, Warsaw | [BL]"
+      - "17 🇪🇸 Spain, Madrid | 🌐 | [IPv6] | [BL]"
+      - "18 🇸🇪 Sweden, Stockholm | [BL]"
+      - "19 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "20 🇳🇱 The Netherlands, Eygelshoven | [BL]"
+      - "21 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "22 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "23 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "24 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "25 🇺🇸 United States, New York | [BL]"
+      - "26 🇷🇺 Russia, Moscow | [BL]"
+      - "27 🇷🇺 Russia, St Petersburg | [BL]"
+      - "28 🇷🇺 Russia, St Petersburg | [BL]"
+      - "29 🌐 Anycast-IP | [BL]"
+      - "30 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "31 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "32 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "33 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "34 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "35 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "36 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "37 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "38 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "39 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "40 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "41 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "42 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "43 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "44 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "45 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "46 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "47 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "48 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "49 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "50 🇸🇬 Singapore, Singapore | [BL]"
+      - "51 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "52 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "53 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "54 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "55 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "56 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "57 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "58 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "59 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "60 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "61 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
+      - "62 🇬🇧 United Kingdom, London | [BL]"
+      - "63 🇬🇧 United Kingdom, London | [BL]"
+      - "64 🇬🇧 United Kingdom, London | [BL]"
+      - "65 🇬🇧 United Kingdom, London | [BL]"
+      - "66 🇬🇧 United Kingdom, London | [BL]"
+      - "67 🇬🇧 United Kingdom, London | [BL]"
+      - "68 🇬🇧 United Kingdom, London | [BL]"
+      - "69 🇬🇧 United Kingdom, London | [BL]"
+      - "70 🇺🇸 United States, Los Angeles | [BL]"
+      - "71 🇺🇸 United States, Seattle | [BL]"
+      - "72 🇺🇸 United States, Seattle | [BL]"
+      - "73 🇺🇸 United States, Seattle | [BL]"
       - "74 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "75 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "76 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "77 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "78 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "79 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "80 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "81 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "82 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "83 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "84 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "85 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "86 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "87 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "88 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "89 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "90 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "91 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "92 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "93 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "94 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "95 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "96 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "97 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "98 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "99 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "100 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "101 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "102 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "103 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "104 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "105 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "106 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "107 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "108 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "109 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "110 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "111 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "112 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "113 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "114 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "115 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "116 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "117 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "118 🇫🇮 Finland, Helsinki | [BL]"
-      - "119 🇫🇮 Finland, Helsinki | [BL]"
-      - "120 🇫🇮 Finland, Helsinki | [BL]"
-      - "121 🇫🇮 Finland, Helsinki | [BL]"
-      - "122 🇫🇮 Finland, Helsinki | [BL]"
-      - "123 🇫🇮 Finland, Helsinki | [BL]"
-      - "124 🇫🇮 Finland, Helsinki | [BL]"
-      - "125 🇫🇮 Finland, Helsinki | [BL]"
-      - "126 🇫🇮 Finland, Helsinki | [BL]"
-      - "127 🇫🇮 Finland, Helsinki | [BL]"
-      - "128 🇫🇮 Finland, Helsinki | [BL]"
-      - "129 🇫🇮 Finland, Helsinki | [BL]"
-      - "130 🇫🇮 Finland, Helsinki | [BL]"
-      - "131 🇸🇬 Singapore, Singapore | [BL]"
-      - "132 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]"
-      - "133 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "134 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "135 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "136 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "137 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "138 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "139 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "140 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "141 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "142 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "143 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "144 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) | [BL]"
-      - "145 🇬🇧 United Kingdom, London | [BL]"
-      - "146 🇬🇧 United Kingdom, London | [BL]"
-      - "147 🇬🇧 United Kingdom, London | [BL]"
-      - "148 🇬🇧 United Kingdom, London | [BL]"
-      - "149 🇬🇧 United Kingdom, London | 🌐 | [BL]"
-      - "150 🇬🇧 United Kingdom, London | 🌐 | [BL]"
-      - "151 🇺🇸 United States, Los Angeles | [BL]"
-      - "152 🇺🇸 United States, Rock Hill | [BL]"
-      - "153 🇺🇸 United States, Seattle | [BL]"
-      - "154 🇺🇸 United States, Seattle | [BL]"
-      - "155 🇺🇸 United States, Seattle | [BL]"
-      - "156 🇺🇸 United States, Seattle | [BL]"
-      - "157 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "158 🇫🇮 Finland, Helsinki | [BL]"
-      - "159 🇫🇷 France, Paris | [BL]"
-      - "160 🇫🇷 France, Paris | [BL]"
-      - "161 🇭🇰 Hong Kong, Central | [BL]"
-      - "162 🇭🇰 Hong Kong, Central | [BL]"
-      - "163 🇯🇵 Japan, Minato | [BL]"
-      - "164 🇳🇴 Norway, Oslo (Alna District) | [BL]"
-      - "165 🇳🇴 Norway, Oslo (Alna District) | [BL]"
-      - "166 🇵🇱 Poland, Warsaw | [BL]"
-      - "167 🇸🇬 Singapore, Singapore | [BL]"
-      - "168 🇸🇬 Singapore, Singapore | [BL]"
-      - "169 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]"
-      - "170 🇬🇧 United Kingdom, London | [BL]"
-      - "171 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "172 🇨🇦 Canada, Toronto | [BL]"
-      - "173 🇨🇦 Canada, Toronto | [BL]"
+      - "75 🇫🇮 Finland, Helsinki | [BL]"
+      - "76 🇫🇷 France, Paris | [BL]"
+      - "77 🇫🇷 France, Paris | [BL]"
+      - "78 🇫🇷 France, Paris | [BL]"
+      - "79 🇫🇷 France, Paris | [BL]"
+      - "80 🇭🇰 Hong Kong, Central | [BL]"
+      - "81 🇭🇰 Hong Kong, Central | [BL]"
+      - "82 🇱🇺 Luxembourg, Bissen | [BL]"
+      - "83 🇳🇴 Norway, Oslo (Alna District) | [BL]"
+      - "84 🇳🇴 Norway, Oslo (Alna District) | [BL]"
+      - "85 🇵🇱 Poland, Warsaw | [BL]"
+      - "86 🇸🇬 Singapore, Singapore | [BL]"
+      - "87 🇸🇬 Singapore, Singapore | [BL]"
+      - "88 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]"
+      - "89 🇸🇪 Sweden, Stockholm | 🌐 | [IPv6] | [BL]"
+      - "90 🇬🇧 United Kingdom, London | [BL]"
+      - "91 🇨🇦 Canada, Toronto | [BL]"
+      - "92 🇺🇸 United States, St Louis (Downtown) | [BL]"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
