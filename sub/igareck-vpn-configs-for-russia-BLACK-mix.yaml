@@ -175,326 +175,401 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 🇫🇮 Finland, Helsinki | [BL]","type":"hysteria2","server":"212.193.18.60","port":8443,"password":"ea8d14d4-ca12-4cd1-bcad-f0fa72f6eadc"}
-  - {"name":"2 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"195.154.54.131","port":40022,"password":"dongtaiwang.com"}
-  - {"name":"3 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]","type":"vless","server":"fin-q9.duckdns.org","port":443,"uuid":"c8d65a3a-5002-4dff-bfd6-d4b9ef90b9cc","udp":true,"tls":true,"network":"tcp","servername":"fin-q9.duckdns.org"}
-  - {"name":"4 🇫🇷 France, Paris | [BL]","type":"vless","server":"205.237.107.106","port":443,"uuid":"63499873-e7bb-4c2c-a22c-36b462773aa5","udp":true,"tls":true,"network":"tcp","servername":"sub.sbrf-cdn342.ru"}
-  - {"name":"5 🇫🇷 France, Paris | [BL]","type":"vless","server":"82.148.21.39","port":8443,"uuid":"bb5437cd-3a6c-4509-9d91-fbf40d5f36bb","udp":true,"tls":true,"network":"tcp","servername":"video.tilda.cc"}
-  - {"name":"6 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"185.189.58.195","port":38353,"uuid":"97b46d78-c58a-4e09-a4a6-b800f12cb07f","udp":true,"tls":true,"network":"tcp","servername":"185.189.58.195"}
-  - {"name":"7 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"23.137.249.110","port":20365,"uuid":"b8dc6a61-11ce-43a5-909c-45cdbda5084a","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"8 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"23.137.249.110","port":20365,"uuid":"cb627e19-cd7b-4613-a8c9-87722b23ce9a","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"9 🇷🇺 Russia, Moscow | [BL]","type":"vless","server":"ru-sb-01.com","port":8443,"uuid":"1d765bec-c137-4b63-98c1-00237df90f34","udp":true,"tls":true,"network":"tcp","servername":"sni.ru-sb-01.com"}
-  - {"name":"10 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"103.40.119.29","port":39738,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"urfbqo42.danfeng.gv.uy"}
-  - {"name":"11 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"140.235.36.50","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"urfbqo42.danfeng.gv.uy"}
-  - {"name":"12 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"211.245.68.145","port":10088,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.theworkpc.com"}
-  - {"name":"13 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"154.92.9.156","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","udp":true,"tls":true,"network":"ws","servername":"Worker-Dry-Heart-073a.Eqoniqaq.Workers.Dev"}
-  - {"name":"14 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"111.250.218.204","port":50099,"cipher":"chacha20-ietf-poly1305","password":"76fd2910-8f2d-4f0f-883a-8da226f52000"}
-  - {"name":"15 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"1.162.180.189","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
-  - {"name":"16 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"118.167.11.217","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
-  - {"name":"17 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"36.224.128.159","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
-  - {"name":"18 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"n8mrcg005961xa6.cybervena.com","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
-  - {"name":"19 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"111.248.95.213","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
-  - {"name":"20 🇻🇳 Vietnam, Ho Chi Minh City | [BL]","type":"ss","server":"103.151.57.112","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"21 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.11","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"22 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.12","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"23 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.139","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"24 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.13","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"25 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.141","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"26 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.144","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"27 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.145","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"28 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.146","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"29 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.147","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"30 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.148","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"31 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.149","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"32 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.153","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"33 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.155","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"34 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.156","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"35 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.157","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"36 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.159","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"37 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.160","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"38 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.161","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"39 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.163","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"40 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.166","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"41 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.169","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"42 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.16","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"43 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.172","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"44 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.173","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"45 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.175","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"46 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.176","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"47 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.177","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"48 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.178","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"49 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.17","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"50 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.181","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"51 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.182","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"52 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.183","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"53 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.184","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"54 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.185","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"55 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.186","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"56 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.187","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"57 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.188","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"58 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.189","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"59 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.18","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"60 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.190","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"61 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.191","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"62 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.192","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"63 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.194","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"64 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.195","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"65 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.196","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"66 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.197","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"67 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.198","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"68 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.19","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"69 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.200","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"70 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.202","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"71 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.203","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"72 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.204","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"73 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.205","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"74 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.206","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"75 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.207","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"76 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.208","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"77 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.209","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"78 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.20","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"79 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.210","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"80 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.211","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"81 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.212","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"82 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.213","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"83 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.214","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"84 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.216","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"85 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.218","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"86 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.219","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"87 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.21","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"88 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.220","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"89 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.221","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"90 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.222","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"91 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.223","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"92 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.224","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"93 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.226","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"94 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.227","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"95 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.228","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"96 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.229","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"97 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.22","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"98 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.230","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"99 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.231","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"100 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.232","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"101 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.233","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"102 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.235","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"103 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.236","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"104 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.237","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"105 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.238","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"106 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.239","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"107 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.23","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"108 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.240","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"109 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.241","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"110 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.242","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"111 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.243","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"112 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.244","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"113 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.245","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"114 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.246","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"115 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.248","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"116 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.249","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"117 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.24","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"118 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.250","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"119 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.251","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"120 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.252","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"121 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.253","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"122 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.254","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"123 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.25","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"124 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.27","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"125 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.28","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"126 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.29","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"127 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.30","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"128 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.31","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"129 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.32","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"130 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.33","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"131 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.35","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"132 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.36","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"133 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.37","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"134 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.39","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"135 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.41","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"136 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.42","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"137 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.44","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"138 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.45","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"139 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.47","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"140 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.48","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"141 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.49","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"142 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.4","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"143 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.50","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"144 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.52","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"145 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.53","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"146 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.55","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"147 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.56","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"148 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.57","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"149 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.58","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"150 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.59","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"151 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.60","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"152 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.61","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"153 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.62","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"154 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.63","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"155 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.64","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"156 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.65","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"157 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.66","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"158 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.67","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"159 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.68","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"160 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.69","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"161 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.70","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"162 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.71","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"163 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.72","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"164 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.73","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"165 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.74","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"166 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.75","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"167 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.76","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"168 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.77","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"169 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.78","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"170 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.79","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"171 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.80","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"172 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.101","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"173 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.103","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"174 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.104","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"175 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.105","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"176 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.106","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"177 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.107","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"178 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.108","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"179 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.109","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"180 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.10","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"181 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.110","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"182 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.111","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"183 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.112","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"184 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.113","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"185 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.114","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"186 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.115","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"187 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.116","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"188 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.117","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"189 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.118","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"190 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.119","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"191 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.120","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"192 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.121","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"193 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.122","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"194 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.123","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"195 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.124","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"196 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.125","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"197 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.126","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"198 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.127","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"199 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.128","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"200 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.129","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"201 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.130","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"202 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.131","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"203 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.132","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"204 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.133","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"205 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.134","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"206 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.135","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"207 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.136","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"208 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.137","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"209 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.138","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"210 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.139","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"211 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.13","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"212 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.140","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"213 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.141","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"214 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.142","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"215 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.143","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"216 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.144","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"217 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.146","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"218 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.147","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"219 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.148","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"220 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.149","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"221 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.150","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"222 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.153","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"223 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.156","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"224 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.15","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"225 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.16","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"226 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.17","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"227 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.183","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"228 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.18","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"229 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.19","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"230 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.203","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"231 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.204","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"232 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.205","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"233 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.206","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"234 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.207","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"235 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.209","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"236 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.211","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"237 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.214","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"238 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.215","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"239 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.218","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"240 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.221","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"241 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.222","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"242 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.223","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"243 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.224","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"244 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.225","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"245 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.226","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"246 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.227","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"247 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.228","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"248 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.229","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"249 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.230","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"250 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.231","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"251 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.232","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"252 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.233","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"253 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.234","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"254 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.235","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"255 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.236","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"256 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.237","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"257 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.238","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"258 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.23","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"259 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.240","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"260 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.24","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"261 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.25","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"262 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.26","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"263 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.27","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"264 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.28","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"265 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.29","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"266 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.2","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"267 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.30","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"268 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.31","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"269 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.32","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"270 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.33","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"271 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.34","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"272 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.35","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"273 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.36","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"274 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.37","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"275 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.38","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"276 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.39","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"277 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.3","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"278 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.40","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"279 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.41","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"280 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.43","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"281 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.44","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"282 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.45","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"283 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.47","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"284 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.48","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"285 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.49","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"286 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.4","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"287 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.50","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"288 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.51","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"289 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.52","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"290 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.53","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"291 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.55","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"292 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.56","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"293 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.57","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"294 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.58","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"295 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.59","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"296 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.5","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"297 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.60","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"298 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.61","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"299 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.62","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"300 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.63","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"301 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.64","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"302 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.65","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"303 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.66","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"304 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.67","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"305 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.68","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"306 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.69","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"307 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.70","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"308 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.71","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"309 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.75","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"310 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.77","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"311 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.78","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"312 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.79","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"313 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.80","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"314 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.81","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"315 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.82","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"316 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.83","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"317 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.84","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"318 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.8","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
-  - {"name":"319 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"trojan","server":"185.189.58.195","port":23874,"password":"DeEamMV7lAT7PhdLy2xfpyid","udp":true,"tls":true}
-  - {"name":"320 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"trojan","server":"n3.chateditimage.com","port":443,"password":"4123ae62-0999-4984-8ead-091630e594a9","udp":true,"tls":true}
+  - {"name":"1 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"195.154.54.131","port":40022,"password":"dongtaiwang.com"}
+  - {"name":"2 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"hk3.jueduibupao.top","port":44072,"password":"06bb0c42-9c60-4a2a-bc40-3e950d4c458b"}
+  - {"name":"3 🇯🇵 Japan | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"iij.mggl.wang","port":35789,"password":"79d73809-f5ed-4099-8588-ba77578def1d"}
+  - {"name":"4 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"linjp1.jueduibupao.top","port":47722,"password":"06bb0c42-9c60-4a2a-bc40-3e950d4c458b"}
+  - {"name":"5 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"216.236.26.19","port":49930,"password":"bb7d8763-4afa-465f-b066-35786781ced2"}
+  - {"name":"6 🇺🇸 United States, Phoenix | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"ny.jueduibupao.top","port":50001,"password":"06bb0c42-9c60-4a2a-bc40-3e950d4c458b"}
+  - {"name":"7 🇦🇹 Austria, Vienna | 🌐 | [IPv6] | [BL]","type":"vless","server":"at4.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"gmail.com"}
+  - {"name":"8 🇧🇷 Brazil, Mogi das Cruzes | 🌐 | [BL]","type":"vless","server":"sww.stardevs.top","port":443,"uuid":"f00984ef-f57e-41db-9182-b25f7bc3a1e2","udp":true,"tls":true,"network":"tcp","servername":"sww.stardevs.top"}
+  - {"name":"9 🇪🇪 Estonia, Tallinn | 🌐 | [IPv6] | [BL]","type":"vless","server":"ee2.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"ee2.darknet.run"}
+  - {"name":"10 🇫🇮 Finland, Helsinki | [BL]","type":"vless","server":"ficdn6.melodramaonline.net","port":443,"uuid":"d0e1c040-eee0-4225-8027-08b7e77f94f5","udp":true,"tls":true,"network":"tcp","servername":"ficdn6.melodramaonline.net"}
+  - {"name":"11 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]","type":"vless","server":"fin4.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"google.com"}
+  - {"name":"12 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]","type":"vless","server":"gg2.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"gg2.darknet.run"}
+  - {"name":"13 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]","type":"vless","server":"fin-q9.duckdns.org","port":443,"uuid":"c8d65a3a-5002-4dff-bfd6-d4b9ef90b9cc","udp":true,"tls":true,"network":"tcp","servername":"fin-q9.duckdns.org"}
+  - {"name":"14 🇫🇷 France, Paris | [BL]","type":"vless","server":"fr.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"gmail.com"}
+  - {"name":"15 🇫🇷 France, Paris | [BL]","type":"vless","server":"www2.mintydavia.click","port":443,"uuid":"626bf2f0-f199-4945-b7e6-ecc1975230c1","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
+  - {"name":"16 🇫🇷 France, Paris | [BL]","type":"vless","server":"fr.darknet.run","port":443,"uuid":"9ca5f624-da78-46f4-8f36-337e1eed20d3","udp":true,"tls":true,"network":"tcp","servername":"gmail.com"}
+  - {"name":"17 🇩🇪 Germany | 🌐 | [IPv6] | [BL]","type":"vless","server":"buzzserver.online","port":8443,"uuid":"385984fe-bc40-40ba-a340-cf74cdf8d161","udp":true,"tls":true,"network":"tcp","servername":"www.intel.com"}
+  - {"name":"18 🇩🇪 Germany | 🌐 | [IPv6] | [BL]","type":"vless","server":"buzzserver.online","port":443,"uuid":"80a62dd0-ce61-4f4a-91d4-b55528c79074","udp":true,"tls":true,"network":"tcp","servername":"www.icloud.com"}
+  - {"name":"19 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"150.241.124.204","port":773,"uuid":"3bba04b2-98a7-4f03-8599-671cfa97ff49","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
+  - {"name":"20 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"ger.myxavpn.com","port":443,"uuid":"6a09b684-1a73-4d4b-9dd7-7da5caf6cfd2","udp":true,"tls":true,"network":"tcp","servername":"ger.myxavpn.com"}
+  - {"name":"21 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"germany-13.ptu.ink","port":443,"uuid":"903e7951-8033-4213-a73e-85f315f6fc6b","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
+  - {"name":"22 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"decdn2.melodramaonline.net","port":443,"uuid":"d0e1c040-eee0-4225-8027-08b7e77f94f5","udp":true,"tls":true,"network":"tcp","servername":"decdn2.melodramaonline.net"}
+  - {"name":"23 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"buzzserver.online","port":4433,"uuid":"fe36ca0e-7b86-44b6-9a55-1f3237552df1","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"24 🇭🇰 Hong Kong | 🌐 | [BL]","type":"vless","server":"s5.db-link.in","port":17820,"uuid":"75d4d24d-ba8d-3676-a5c6-edd6ea6dbfb6","udp":true,"tls":true,"network":"ws","servername":"48afa0c5c9.shopify.com"}
+  - {"name":"25 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"s5.db-link.in","port":10211,"uuid":"75d4d24d-ba8d-3676-a5c6-edd6ea6dbfb6","udp":true,"tls":true,"network":"ws","servername":"717b8b5a72.shopify.com"}
+  - {"name":"26 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"s5.db-link.in","port":14351,"uuid":"75d4d24d-ba8d-3676-a5c6-edd6ea6dbfb6","udp":true,"tls":true,"network":"ws","servername":"199745db08.shopify.com"}
+  - {"name":"27 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"gn.stardevs.top","port":443,"uuid":"f00984ef-f57e-41db-9182-b25f7bc3a1e2","udp":true,"tls":true,"network":"tcp","servername":"gn.stardevs.top"}
+  - {"name":"28 🇮🇹 Italy, Milan | [BL]","type":"vless","server":"itsea.osaip.net","port":443,"uuid":"adffc9c1-2e0a-4daf-b733-32a19aab06a2","udp":true,"tls":true,"network":"grpc"}
+  - {"name":"29 🇰🇿 Kazakhstan, Pavlodar | [BL]","type":"vless","server":"c3xq5rczf5.rutube.info","port":10212,"uuid":"f1881fb7-3d7c-42d4-ab52-1a9eebf6fb71","udp":true,"tls":true,"network":"tcp","servername":"location.rutube.info"}
+  - {"name":"30 🇱🇻 Latvia, Riga | [BL]","type":"vless","server":"lv.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"gmail.com"}
+  - {"name":"31 🇱🇻 Latvia, Riga | [BL]","type":"vless","server":"lv89.mechvpn.online","port":443,"uuid":"6d916d55-fead-4ff3-a3a9-83e175ea8ad7","udp":true,"tls":true,"network":"tcp"}
+  - {"name":"32 🇱🇻 Latvia, Riga | [BL]","type":"vless","server":"217.60.3.87","port":443,"uuid":"f00984ef-f57e-41db-9182-b25f7bc3a1e2","udp":true,"tls":true,"network":"tcp","servername":"lv.stardevs.top"}
+  - {"name":"33 🇵🇱 Poland, Warsaw | [BL]","type":"vless","server":"pol-x1.plugvpn.ru","port":443,"uuid":"c8d65a3a-5002-4dff-bfd6-d4b9ef90b9cc","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"34 🇵🇱 Poland, Warsaw (Śródmieście) | [BL]","type":"vless","server":"103.68.110.50","port":695,"uuid":"3bba04b2-98a7-4f03-8599-671cfa97ff49","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
+  - {"name":"35 🇰🇷 South Korea, Seoul | 🌐 | [IPv6] | [BL]","type":"vless","server":"kr.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"kr.darknet.run"}
+  - {"name":"36 🇸🇪 Sweden, Stockholm | [BL]","type":"vless","server":"secdn15.melodramaonline.net","port":443,"uuid":"d0e1c040-eee0-4225-8027-08b7e77f94f5","udp":true,"tls":true,"network":"tcp","servername":"secdn15.melodramaonline.net"}
+  - {"name":"37 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"45.86.74.92","port":852,"uuid":"3bba04b2-98a7-4f03-8599-671cfa97ff49","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
+  - {"name":"38 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"85.209.157.52","port":568,"uuid":"3bba04b2-98a7-4f03-8599-671cfa97ff49","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
+  - {"name":"39 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"nl10.404-it.ru","port":443,"uuid":"6d0e9ded-d23d-4ffb-b165-7bc757be84d3","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
+  - {"name":"40 🇳🇱 The Netherlands, Eygelshoven | [BL]","type":"vless","server":"ne03.kubservice.icu","port":443,"uuid":"542e9145-0ba4-4a0a-868a-0adce45a79ce","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"41 🇹🇷 Turkey, Bursa | [BL]","type":"vless","server":"tr3.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"tr3.darknet.run"}
+  - {"name":"42 🇹🇷 Turkey, Istanbul | 🌐 | [IPv6] | [BL]","type":"vless","server":"155.103.71.59","port":443,"uuid":"7fc36538-7263-451e-abd8-0e535c63ce84","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
+  - {"name":"43 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"netherland.nbbvpn.xyz","port":443,"uuid":"048ffa92-7359-4910-beba-2c8f7a0a6d91","udp":true,"tls":true,"network":"grpc","servername":"netherland.nbbvpn.xyz"}
+  - {"name":"44 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"uk3.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"uk3.darknet.run"}
+  - {"name":"45 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"vless","server":"us01.kubservice.icu","port":777,"uuid":"542e9145-0ba4-4a0a-868a-0adce45a79ce","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
+  - {"name":"46 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"vless","server":"216.236.26.19","port":43229,"uuid":"bb7d8763-4afa-465f-b066-35786781ced2","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
+  - {"name":"47 🇺🇸 United States, Atlanta | [BL]","type":"vless","server":"72.56.21.50","port":443,"uuid":"90c9c25c-df6c-4438-83d3-ef97166a9184","udp":true,"tls":true,"network":"tcp","servername":"www.cloudflare.com"}
+  - {"name":"48 🇺🇸 United States, Draper | [BL]","type":"vless","server":"ca.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"ca.darknet.run"}
+  - {"name":"49 🇺🇸 United States, New York | [BL]","type":"vless","server":"usa.darknet.run","port":443,"uuid":"5a981f48-1d24-4b75-8022-756cc3129867","udp":true,"tls":true,"network":"tcp","servername":"usa.darknet.run"}
+  - {"name":"50 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"140.235.36.50","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"urfbqo42.danfeng.gv.uy"}
+  - {"name":"51 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"142.171.168.143","port":30001,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"urfbqo42.danfeng.gv.uy"}
+  - {"name":"52 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"31.57.92.221","port":2053,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"urfbqo42.danfeng.gv.uy"}
+  - {"name":"53 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"45.144.154.195","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"_acme-challenge.443888.xyz"}
+  - {"name":"54 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"8.209.111.225","port":443,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"urfbqo42.danfeng.gv.uy"}
+  - {"name":"55 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.186.245.40","port":81,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
+  - {"name":"56 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"106.246.54.30","port":23791,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.loc.cc"}
+  - {"name":"57 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"112.219.110.147","port":12100,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.theworkpc.com"}
+  - {"name":"58 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"118.40.112.188","port":22222,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.casacam.net"}
+  - {"name":"59 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"173.249.203.187","port":10554,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.theworkpc.com"}
+  - {"name":"60 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.215.31.56","port":443,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.fgfw.de5.net"}
+  - {"name":"61 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"211.245.68.145","port":10088,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.theworkpc.com"}
+  - {"name":"62 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"218.144.192.178","port":10030,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.eu.org"}
+  - {"name":"63 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"221.159.78.220","port":18987,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.gv.uy"}
+  - {"name":"64 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"80.76.33.220","port":8443,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.gv.uy"}
+  - {"name":"65 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"94.156.116.165","port":14407,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.theworkpc.com"}
+  - {"name":"66 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"98.158.29.42","port":443,"uuid":"948fac3c-42bf-41a6-a5f9-704d36ff0d8d","udp":true,"tls":true,"network":"ws","servername":"snippet.danfeng.dedyn.io"}
+  - {"name":"67 🇰🇷 South Korea, Seoul (Namdaemunno 5(o)-ga) | [BL]","type":"ss","server":"218.237.185.230","port":4652,"cipher":"aes-256-cfb","password":"qwerREWQ@@"}
+  - {"name":"68 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"114.45.163.138","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
+  - {"name":"69 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"36.224.128.159","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
+  - {"name":"70 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"ncmrcg000116egb.cybervena.com","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
+  - {"name":"71 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]","type":"ss","server":"r3mrcg001287h3p.cybervena.com","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
+  - {"name":"72 🇹🇼 Taiwan, Taipei | 🌐 | [IPv6] | [BL]","type":"ss","server":"111.248.76.133","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
+  - {"name":"73 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"ss","server":"62.106.66.187","port":5061,"cipher":"chacha20-ietf-poly1305","password":"GX4l3iIUxxe4Bk4K9uyUV7"}
+  - {"name":"74 🇻🇳 Vietnam, Ho Chi Minh City | [BL]","type":"ss","server":"103.151.57.112","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"75 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.11","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"76 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.12","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"77 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.139","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"78 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.13","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"79 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.140","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"80 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.141","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"81 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.143","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"82 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.144","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"83 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.145","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"84 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.146","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"85 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.147","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"86 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.148","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"87 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.149","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"88 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.14","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"89 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.150","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"90 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.152","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"91 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.153","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"92 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.154","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"93 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.155","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"94 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.156","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"95 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.157","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"96 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.158","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"97 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.159","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"98 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.160","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"99 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.161","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"100 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.162","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"101 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.163","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"102 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.164","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"103 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.165","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"104 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.166","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"105 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.167","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"106 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.168","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"107 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.169","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"108 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.170","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"109 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.172","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"110 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.173","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"111 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.175","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"112 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.176","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"113 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.177","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"114 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.178","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"115 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.179","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"116 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.17","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"117 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.181","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"118 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.182","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"119 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.183","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"120 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.184","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"121 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.185","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"122 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.186","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"123 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.187","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"124 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.188","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"125 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.189","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"126 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.18","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"127 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.190","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"128 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.191","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"129 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.192","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"130 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.193","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"131 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.194","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"132 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.195","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"133 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.196","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"134 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.197","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"135 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.198","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"136 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.19","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"137 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.200","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"138 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.202","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"139 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.203","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"140 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.204","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"141 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.205","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"142 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.206","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"143 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.207","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"144 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.208","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"145 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.20","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"146 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.210","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"147 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.211","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"148 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.212","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"149 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.213","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"150 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.214","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"151 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.216","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"152 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.218","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"153 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.219","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"154 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.21","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"155 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.220","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"156 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.221","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"157 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.222","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"158 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.223","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"159 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.224","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"160 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.226","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"161 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.227","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"162 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.228","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"163 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.229","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"164 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.22","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"165 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.230","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"166 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.231","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"167 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.232","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"168 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.233","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"169 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.235","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"170 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.236","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"171 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.237","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"172 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.238","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"173 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.239","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"174 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.23","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"175 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.240","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"176 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.241","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"177 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.242","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"178 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.244","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"179 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.245","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"180 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.246","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"181 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.248","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"182 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.249","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"183 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.24","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"184 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.250","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"185 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.251","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"186 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.252","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"187 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.253","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"188 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.254","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"189 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.25","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"190 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.27","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"191 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.28","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"192 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.29","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"193 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.30","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"194 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.31","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"195 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.32","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"196 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.33","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"197 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.35","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"198 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.36","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"199 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.37","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"200 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.41","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"201 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.42","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"202 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.44","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"203 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.45","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"204 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.47","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"205 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.48","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"206 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.49","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"207 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.4","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"208 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.50","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"209 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.52","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"210 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.53","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"211 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.54","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"212 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.55","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"213 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.56","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"214 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.57","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"215 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.58","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"216 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.59","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"217 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.60","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"218 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.61","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"219 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.62","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"220 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.63","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"221 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.64","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"222 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.65","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"223 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.66","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"224 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.67","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"225 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.68","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"226 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.69","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"227 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.70","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"228 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.71","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"229 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.72","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"230 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.73","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"231 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.74","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"232 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.75","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"233 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.76","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"234 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.78","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"235 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.79","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"236 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.80","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"237 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.154.9","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"238 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.101","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"239 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.102","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"240 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.103","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"241 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.104","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"242 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.105","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"243 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.106","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"244 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.107","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"245 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.108","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"246 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.109","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"247 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.10","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"248 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.110","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"249 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.111","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"250 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.112","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"251 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.113","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"252 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.114","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"253 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.115","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"254 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.116","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"255 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.117","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"256 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.118","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"257 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.119","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"258 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.120","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"259 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.121","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"260 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.123","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"261 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.124","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"262 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.125","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"263 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.126","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"264 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.127","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"265 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.128","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"266 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.129","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"267 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.130","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"268 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.131","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"269 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.132","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"270 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.134","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"271 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.135","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"272 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.136","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"273 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.137","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"274 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.138","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"275 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.139","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"276 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.13","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"277 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.140","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"278 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.141","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"279 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.142","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"280 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.143","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"281 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.144","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"282 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.146","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"283 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.147","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"284 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.148","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"285 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.149","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"286 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.150","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"287 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.153","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"288 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.154","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"289 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.156","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"290 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.15","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"291 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.16","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"292 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.17","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"293 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.183","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"294 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.18","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"295 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.19","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"296 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.202","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"297 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.203","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"298 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.204","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"299 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.205","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"300 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.206","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"301 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.207","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"302 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.209","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"303 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.211","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"304 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.213","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"305 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.214","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"306 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.215","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"307 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.218","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"308 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.21","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"309 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.220","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"310 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.221","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"311 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.222","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"312 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.224","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"313 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.225","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"314 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.226","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"315 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.227","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"316 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.228","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"317 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.229","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"318 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.231","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"319 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.232","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"320 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.233","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"321 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.234","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"322 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.235","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"323 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.236","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"324 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.237","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"325 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.238","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"326 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.23","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"327 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.240","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"328 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.24","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"329 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.25","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"330 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.26","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"331 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.27","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"332 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.28","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"333 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.29","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"334 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.2","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"335 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.31","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"336 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.32","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"337 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.33","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"338 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.34","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"339 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.35","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"340 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.36","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"341 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.37","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"342 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.38","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"343 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.39","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"344 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.3","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"345 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.40","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"346 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.41","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"347 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.43","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"348 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.44","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"349 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.45","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"350 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.46","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"351 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.47","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"352 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.48","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"353 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.49","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"354 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.4","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"355 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.50","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"356 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.51","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"357 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.52","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"358 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.53","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"359 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.55","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"360 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.56","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"361 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.57","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"362 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.58","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"363 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.59","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"364 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.5","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"365 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.60","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"366 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.61","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"367 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.63","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"368 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.64","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"369 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.65","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"370 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.66","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"371 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.67","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"372 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.68","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"373 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.69","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"374 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.70","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"375 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.71","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"376 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.75","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"377 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.76","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"378 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.77","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"379 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.78","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"380 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.79","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"381 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.80","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"382 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.81","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"383 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.82","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"384 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.84","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"385 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.8","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"386 🇻🇳 Vietnam, Hải Dương | [BL]","type":"ss","server":"103.186.155.9","port":38388,"cipher":"aes-256-cfb","password":"Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"}
+  - {"name":"387 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"trojan","server":"82.26.155.20","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
+  - {"name":"388 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"trojan","server":"64.186.255.102","port":443,"password":"4123ae62-0999-4984-8ead-091630e594a9","udp":true,"tls":true}
+  - {"name":"389 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"trojan","server":"n3.chateditimage.com","port":443,"password":"4123ae62-0999-4984-8ead-091630e594a9","udp":true,"tls":true}
+  - {"name":"390 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"trojan","server":"64.186.255.102","port":443,"password":"de7d6444-a7a8-4b3a-bf26-bc6939bb0279","udp":true,"tls":true}
+  - {"name":"391 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"trojan","server":"n3.chateditimage.com","port":443,"password":"de7d6444-a7a8-4b3a-bf26-bc6939bb0279","udp":true,"tls":true}
+  - {"name":"392 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]","type":"trojan","server":"91.149.239.153","port":10413,"password":"CH.bhf8hDm2xBeGwpKkZydLWz86K3OFH8q","udp":true,"tls":true}
+  - {"name":"393 🇺🇸 United States, Seattle | [BL]","type":"trojan","server":"166.88.197.189","port":26650,"password":"UNWA6USASAb6=uAAZeZMFd+2uKB4.d5KOm","udp":true,"tls":true}
+  - {"name":"394 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"152.53.60.198","port":8444,"password":"trojan","udp":true,"tls":true}
+  - {"name":"395 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"59.20.121.139","port":29999,"password":"trojan","udp":true,"tls":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -508,80 +583,80 @@ proxy-groups:
     type: select
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
-      - "1 🇫🇮 Finland, Helsinki | [BL]"
-      - "2 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
-      - "3 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "4 🇫🇷 France, Paris | [BL]"
-      - "5 🇫🇷 France, Paris | [BL]"
-      - "6 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "7 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "8 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "9 🇷🇺 Russia, Moscow | [BL]"
-      - "10 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "11 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "12 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "13 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "14 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "15 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "16 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "17 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "18 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "19 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "20 🇻🇳 Vietnam, Ho Chi Minh City | [BL]"
-      - "21 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "22 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "23 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "24 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "25 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "26 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "27 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "28 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "29 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "30 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "31 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "32 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "33 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "34 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "35 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "36 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "37 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "38 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "39 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "40 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "41 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "42 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "43 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "44 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "45 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "46 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "47 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "48 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "49 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "50 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "51 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "52 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "53 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "54 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "55 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "56 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "57 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "58 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "59 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "60 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "61 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "62 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "63 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "64 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "65 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "66 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "67 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "68 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "69 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "70 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "71 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "72 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "73 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "74 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "1 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
+      - "2 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]"
+      - "3 🇯🇵 Japan | 🌐 | [IPv6] | [BL]"
+      - "4 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]"
+      - "5 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "6 🇺🇸 United States, Phoenix | 🌐 | [IPv6] | [BL]"
+      - "7 🇦🇹 Austria, Vienna | 🌐 | [IPv6] | [BL]"
+      - "8 🇧🇷 Brazil, Mogi das Cruzes | 🌐 | [BL]"
+      - "9 🇪🇪 Estonia, Tallinn | 🌐 | [IPv6] | [BL]"
+      - "10 🇫🇮 Finland, Helsinki | [BL]"
+      - "11 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
+      - "12 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
+      - "13 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
+      - "14 🇫🇷 France, Paris | [BL]"
+      - "15 🇫🇷 France, Paris | [BL]"
+      - "16 🇫🇷 France, Paris | [BL]"
+      - "17 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
+      - "18 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
+      - "19 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "20 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "21 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "22 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "23 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
+      - "24 🇭🇰 Hong Kong | 🌐 | [BL]"
+      - "25 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "26 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "27 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "28 🇮🇹 Italy, Milan | [BL]"
+      - "29 🇰🇿 Kazakhstan, Pavlodar | [BL]"
+      - "30 🇱🇻 Latvia, Riga | [BL]"
+      - "31 🇱🇻 Latvia, Riga | [BL]"
+      - "32 🇱🇻 Latvia, Riga | [BL]"
+      - "33 🇵🇱 Poland, Warsaw | [BL]"
+      - "34 🇵🇱 Poland, Warsaw (Śródmieście) | [BL]"
+      - "35 🇰🇷 South Korea, Seoul | 🌐 | [IPv6] | [BL]"
+      - "36 🇸🇪 Sweden, Stockholm | [BL]"
+      - "37 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "38 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "39 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "40 🇳🇱 The Netherlands, Eygelshoven | [BL]"
+      - "41 🇹🇷 Turkey, Bursa | [BL]"
+      - "42 🇹🇷 Turkey, Istanbul | 🌐 | [IPv6] | [BL]"
+      - "43 🇬🇧 United Kingdom, London | [BL]"
+      - "44 🇬🇧 United Kingdom, London | [BL]"
+      - "45 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "46 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "47 🇺🇸 United States, Atlanta | [BL]"
+      - "48 🇺🇸 United States, Draper | [BL]"
+      - "49 🇺🇸 United States, New York | [BL]"
+      - "50 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "51 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "52 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "53 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "54 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "55 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "56 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "57 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "58 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "59 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "60 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "61 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "62 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "63 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "64 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "65 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "66 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "67 🇰🇷 South Korea, Seoul (Namdaemunno 5(o)-ga) | [BL]"
+      - "68 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
+      - "69 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
+      - "70 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
+      - "71 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
+      - "72 🇹🇼 Taiwan, Taipei | 🌐 | [IPv6] | [BL]"
+      - "73 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "74 🇻🇳 Vietnam, Ho Chi Minh City | [BL]"
       - "75 🇻🇳 Vietnam, Hải Dương | [BL]"
       - "76 🇻🇳 Vietnam, Hải Dương | [BL]"
       - "77 🇻🇳 Vietnam, Hải Dương | [BL]"
@@ -826,8 +901,83 @@ proxy-groups:
       - "316 🇻🇳 Vietnam, Hải Dương | [BL]"
       - "317 🇻🇳 Vietnam, Hải Dương | [BL]"
       - "318 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "319 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "320 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "319 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "320 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "321 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "322 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "323 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "324 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "325 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "326 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "327 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "328 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "329 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "330 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "331 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "332 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "333 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "334 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "335 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "336 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "337 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "338 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "339 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "340 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "341 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "342 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "343 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "344 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "345 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "346 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "347 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "348 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "349 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "350 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "351 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "352 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "353 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "354 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "355 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "356 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "357 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "358 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "359 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "360 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "361 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "362 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "363 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "364 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "365 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "366 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "367 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "368 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "369 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "370 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "371 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "372 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "373 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "374 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "375 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "376 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "377 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "378 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "379 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "380 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "381 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "382 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "383 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "384 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "385 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "386 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "387 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "388 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "389 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "390 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "391 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "392 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "393 🇺🇸 United States, Seattle | [BL]"
+      - "394 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "395 🌐 Anycast-IP | [IPv6] | [BL]"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -836,80 +986,80 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "1 🇫🇮 Finland, Helsinki | [BL]"
-      - "2 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
-      - "3 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "4 🇫🇷 France, Paris | [BL]"
-      - "5 🇫🇷 France, Paris | [BL]"
-      - "6 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "7 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "8 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "9 🇷🇺 Russia, Moscow | [BL]"
-      - "10 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "11 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "12 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "13 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "14 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "15 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "16 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "17 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "18 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "19 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
-      - "20 🇻🇳 Vietnam, Ho Chi Minh City | [BL]"
-      - "21 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "22 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "23 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "24 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "25 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "26 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "27 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "28 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "29 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "30 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "31 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "32 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "33 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "34 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "35 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "36 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "37 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "38 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "39 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "40 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "41 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "42 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "43 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "44 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "45 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "46 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "47 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "48 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "49 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "50 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "51 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "52 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "53 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "54 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "55 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "56 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "57 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "58 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "59 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "60 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "61 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "62 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "63 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "64 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "65 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "66 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "67 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "68 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "69 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "70 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "71 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "72 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "73 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "74 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "1 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
+      - "2 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]"
+      - "3 🇯🇵 Japan | 🌐 | [IPv6] | [BL]"
+      - "4 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]"
+      - "5 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "6 🇺🇸 United States, Phoenix | 🌐 | [IPv6] | [BL]"
+      - "7 🇦🇹 Austria, Vienna | 🌐 | [IPv6] | [BL]"
+      - "8 🇧🇷 Brazil, Mogi das Cruzes | 🌐 | [BL]"
+      - "9 🇪🇪 Estonia, Tallinn | 🌐 | [IPv6] | [BL]"
+      - "10 🇫🇮 Finland, Helsinki | [BL]"
+      - "11 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
+      - "12 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
+      - "13 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
+      - "14 🇫🇷 France, Paris | [BL]"
+      - "15 🇫🇷 France, Paris | [BL]"
+      - "16 🇫🇷 France, Paris | [BL]"
+      - "17 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
+      - "18 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
+      - "19 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "20 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "21 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "22 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "23 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
+      - "24 🇭🇰 Hong Kong | 🌐 | [BL]"
+      - "25 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "26 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "27 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "28 🇮🇹 Italy, Milan | [BL]"
+      - "29 🇰🇿 Kazakhstan, Pavlodar | [BL]"
+      - "30 🇱🇻 Latvia, Riga | [BL]"
+      - "31 🇱🇻 Latvia, Riga | [BL]"
+      - "32 🇱🇻 Latvia, Riga | [BL]"
+      - "33 🇵🇱 Poland, Warsaw | [BL]"
+      - "34 🇵🇱 Poland, Warsaw (Śródmieście) | [BL]"
+      - "35 🇰🇷 South Korea, Seoul | 🌐 | [IPv6] | [BL]"
+      - "36 🇸🇪 Sweden, Stockholm | [BL]"
+      - "37 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "38 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "39 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "40 🇳🇱 The Netherlands, Eygelshoven | [BL]"
+      - "41 🇹🇷 Turkey, Bursa | [BL]"
+      - "42 🇹🇷 Turkey, Istanbul | 🌐 | [IPv6] | [BL]"
+      - "43 🇬🇧 United Kingdom, London | [BL]"
+      - "44 🇬🇧 United Kingdom, London | [BL]"
+      - "45 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "46 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "47 🇺🇸 United States, Atlanta | [BL]"
+      - "48 🇺🇸 United States, Draper | [BL]"
+      - "49 🇺🇸 United States, New York | [BL]"
+      - "50 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "51 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "52 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "53 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "54 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "55 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "56 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "57 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "58 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "59 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "60 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "61 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "62 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "63 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "64 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "65 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "66 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "67 🇰🇷 South Korea, Seoul (Namdaemunno 5(o)-ga) | [BL]"
+      - "68 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
+      - "69 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
+      - "70 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
+      - "71 🇹🇼 Taiwan | 🌐 | [IPv6] | [BL]"
+      - "72 🇹🇼 Taiwan, Taipei | 🌐 | [IPv6] | [BL]"
+      - "73 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "74 🇻🇳 Vietnam, Ho Chi Minh City | [BL]"
       - "75 🇻🇳 Vietnam, Hải Dương | [BL]"
       - "76 🇻🇳 Vietnam, Hải Dương | [BL]"
       - "77 🇻🇳 Vietnam, Hải Dương | [BL]"
@@ -1154,8 +1304,83 @@ proxy-groups:
       - "316 🇻🇳 Vietnam, Hải Dương | [BL]"
       - "317 🇻🇳 Vietnam, Hải Dương | [BL]"
       - "318 🇻🇳 Vietnam, Hải Dương | [BL]"
-      - "319 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "320 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "319 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "320 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "321 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "322 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "323 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "324 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "325 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "326 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "327 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "328 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "329 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "330 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "331 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "332 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "333 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "334 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "335 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "336 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "337 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "338 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "339 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "340 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "341 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "342 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "343 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "344 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "345 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "346 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "347 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "348 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "349 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "350 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "351 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "352 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "353 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "354 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "355 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "356 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "357 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "358 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "359 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "360 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "361 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "362 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "363 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "364 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "365 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "366 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "367 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "368 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "369 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "370 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "371 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "372 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "373 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "374 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "375 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "376 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "377 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "378 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "379 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "380 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "381 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "382 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "383 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "384 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "385 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "386 🇻🇳 Vietnam, Hải Dương | [BL]"
+      - "387 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "388 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "389 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "390 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "391 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "392 🇺🇸 United States, Los Angeles | 🌐 | [IPv6] | [BL]"
+      - "393 🇺🇸 United States, Seattle | [BL]"
+      - "394 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "395 🌐 Anycast-IP | [IPv6] | [BL]"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
