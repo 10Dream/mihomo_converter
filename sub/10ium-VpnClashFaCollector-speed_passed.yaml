@@ -175,203 +175,198 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 [12] 🇺🇸 | US | 1218ms | 250KB | ZHK","type":"wireguard","server":"162.159.192.7","port":4500,"ip":"10.0.0.1","private-key":"wMloX+pSgWW//sWu2KwuqN+j5DcIvczeP6VJdSkkqGk=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"2 [16] 🇺🇸 | US | 388ms | 205KB | ZHK","type":"wireguard","server":"162.159.192.1","port":4500,"ip":"10.0.0.1","private-key":"CAZs4yCgOVelAhVVmqbgoCay3+ZrhVqkNp+tPB5it2g=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"3 [19] 🇺🇸 | US | 548ms | 171KB | ZHK","type":"wireguard","server":"162.159.192.7","port":2408,"ip":"10.0.0.1","private-key":"4PV0tyJhbBmlGr/iL3SicVV4F/Sle7zlbB6NJpmqSmY=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"4 [1] 🇺🇸 | US | 182ms | 421KB | ***✅***@AR14N24b","type":"vless","server":"172.234.130.82","port":10001,"uuid":"53cd8178-2ee6-43d9-a2a7-881f287fd408","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"5 [3] 🇨🇦 | CA | 4069ms | 390KB | @filembad`","type":"vless","server":"155.46.167.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"6 [4] 🇺🇸 | US | 484ms | 380KB | 💎41@oneclickvpnkeys","type":"vless","server":"5.175.141.238","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.jpmj.dev"}
-  - {"name":"7 [5] 🇺🇸 | US | 233ms | 306KB |","type":"vless","server":"137.184.218.169","port":36925,"uuid":"c9fd0fb1-8251-4106-b09a-f4b426736f67","udp":true,"tls":true,"network":"tcp","servername":"www.cloudflare.com"}
-  - {"name":"8 [8] 🇺🇸 | US | 257ms | 289KB |","type":"vless","server":"159.89.87.21","port":28190,"uuid":"14c80e0e-f7ce-4991-94fc-99a1db4a9b1e","udp":true,"tls":true,"network":"tcp","servername":"aws.amazon.com"}
-  - {"name":"9 [14] 🇩🇪 | DE | 1482ms | 215KB | 🧸10@oneclickvpnkeys","type":"vless","server":"84.21.189.25","port":443,"uuid":"6053689d-39d6-4005-b1bd-c0dce854f429","udp":true,"tls":true,"network":"tcp","servername":"de-fast.chunkyvpn.shop"}
-  - {"name":"10 [15] 🇨🇦 | CA | 2715ms | 211KB | 💎26@oneclickvpnkeys","type":"vless","server":"185.158.133.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"11 [20] 🇺🇸 | US | 667ms | 168KB | 💎40@oneclickvpnkeys","type":"vless","server":"188.244.122.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"12 [22] 🇨🇦 | CA | 309ms | 162KB | 💎82@oneclickvpnkeys","type":"vless","server":"bestcf.030101.xyz","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
-  - {"name":"13 [24] 🇱🇹 | LT | 3645ms | 141KB |","type":"vless","server":"194.87.106.31","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"14 [25] 🇨🇦 | CA | 265ms | 132KB | 💎22@oneclickvpnkeys","type":"vless","server":"45.40.144.238","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.jpmj.dev"}
-  - {"name":"15 [27] 🇺🇸 | US | 2585ms | 110KB | @filembad`","type":"vless","server":"172.64.146.198","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"16 [28] 🇬🇧 | GB | 1946ms | 97KB | 💎70@oneclickvpnkeys","type":"vless","server":"57.129.137.87","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"17 [29] 🇨🇦 | CA | 5000ms | 94KB | 💎85@oneclickvpnkeys","type":"vless","server":"57.128.182.234","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"18 [30] 🇨🇦 | CA | 5000ms | 88KB | 💎77@oneclickvpnkeys","type":"vless","server":"54.36.99.75","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"19 [31] 🌐 | null | 1569ms | 87KB | 💎79@oneclickvpnkeys","type":"vless","server":"57.128.178.36","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"20 [32] 🇨🇦 | CA | 2421ms | 87KB | 💎67@oneclickvpnkeys","type":"vless","server":"51.75.23.189","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"21 [33] 🇨🇦 | CA | 5000ms | 86KB |","type":"vless","server":"167.88.160.144","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"22 [34] 🇨🇦 | CA | 1606ms | 83KB | 💎24@oneclickvpnkeys","type":"vless","server":"51.195.119.195","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"23 [35] 🇨🇦 | CA | 5000ms | 83KB | 💎37@oneclickvpnkeys","type":"vless","server":"51.195.37.32","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
-  - {"name":"24 [36] 🇫🇷 | FR | 1859ms | 80KB | 💎53@oneclickvpnkeys","type":"vless","server":"51.178.137.248","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"25 [37] 🇩🇪 | DE | 2170ms | 80KB | 💎49@oneclickvpnkeys","type":"vless","server":"62.84.183.222","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"26 [38] 🇫🇷 | FR | 1633ms | 78KB | 💎90@oneclickvpnkeys`","type":"vless","server":"51.210.151.193","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"27 [39] 🇨🇦 | CA | 2119ms | 78KB | 💎76@oneclickvpnkeys","type":"vless","server":"54.36.98.82","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"28 [40] 🌐 | null | 917ms | 73KB | @filembad`","type":"vless","server":"www.visa.com.sg","port":8880,"uuid":"78c5b6bd-1cb6-463c-bcba-9f17ef70c85b","udp":true,"tls":false,"network":"ws"}
-  - {"name":"29 [41] 🇨🇦 | CA | 1642ms | 72KB | 💎78@oneclickvpnkeys","type":"vless","server":"51.75.19.60","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"30 [42] 🇩🇪 | DE | 2124ms | 69KB | 💎33@oneclickvpnkeys","type":"vless","server":"57.129.63.144","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
-  - {"name":"31 [43] 🇨🇦 | CA | 2259ms | 66KB | 💎59@oneclickvpnkeys","type":"vless","server":"51.91.252.61","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"32 [44] 🇨🇦 | CA | 2019ms | 62KB | 💎72@oneclickvpnkeys","type":"vless","server":"51.75.24.59","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"33 [45] 🇩🇪 | DE | 1773ms | 61KB | 💎62@oneclickvpnkeys","type":"vless","server":"57.129.47.12","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"34 [46] 🇩🇪 | DE | 2653ms | 61KB | @filembad`","type":"vless","server":"109.120.132.6","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"35 [47] 🇩🇪 | DE | 1241ms | 60KB | ***✅***@AR14N24b","type":"vless","server":"188.114.98.0","port":2095,"uuid":"7341d723-7117-458b-9647-c7471a5498f7","udp":true,"tls":false,"network":"httpupgrade"}
-  - {"name":"36 [48] 🌐 | null | 1265ms | 57KB | 💎47@oneclickvpnkeys","type":"vless","server":"172.67.203.94","port":2086,"uuid":"7890ce31-9a25-4fd4-90e7-80e5823ff510","udp":true,"tls":false,"network":"ws"}
-  - {"name":"37 [50] 🇦🇹 | AT | 1446ms | 55KB | @filembad`","type":"vless","server":"172.64.147.137","port":443,"uuid":"fc965ad9-bdd7-4815-ad71-b39ec5972dc1","udp":true,"tls":true,"network":"ws","servername":"octopusss4.com"}
-  - {"name":"38 [51] 🇨🇦 | CA | 1854ms | 52KB | 💎75@oneclickvpnkeys`","type":"vless","server":"57.128.176.37","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"39 [53] 🇳🇱 | NL | 1371ms | 52KB |","type":"vless","server":"51.158.206.87","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"40 [55] 🇬🇧 | GB | 1300ms | 52KB | 💎13@oneclickvpnkeys","type":"vless","server":"213.232.236.163","port":443,"uuid":"197a0c0a-574d-497a-9e44-7bec185f8662","udp":true,"tls":true,"network":"tcp","servername":"uk3.magnetgateway.onnstreaming.ru"}
-  - {"name":"41 [56] 🇫🇷 | FR | 1391ms | 51KB | 💎52@oneclickvpnkeys","type":"vless","server":"51.158.62.94","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.laposte.fr"}
-  - {"name":"42 [57] 🇩🇪 | DE | 1414ms | 51KB | 🚨Multi🚨","type":"vless","server":"188.114.98.0","port":2087,"uuid":"7341d723-7117-458b-9647-c7471a5498f7","udp":true,"tls":true,"network":"ws","servername":"iopl90nn.bingnet.online"}
-  - {"name":"43 [61] 🇩🇪 | DE | 1575ms | 51KB | 💎36@oneclickvpnkeys","type":"vless","server":"162.159.141.147","port":443,"uuid":"d2d0f796-edb0-427a-af32-ae360679f9e7","udp":true,"tls":true,"network":"ws","servername":"rAyAn-007.fOtOn.dPdNs.oRg"}
-  - {"name":"44 [63] 🇩🇪 | DE | 1648ms | 50KB | 💎54@oneclickvpnkeys","type":"vless","server":"cdn.7zz.cn","port":2086,"uuid":"73829173-bb56-442b-a8d4-ec732c020945","udp":true,"tls":false,"network":"httpupgrade"}
-  - {"name":"45 [66] 🇫🇷 | FR | 1433ms | 50KB | 💎61@oneclickvpnkeys","type":"vless","server":"51.210.73.175","port":8443,"uuid":"81afc754-96c8-4cca-8d5e-3fc993b9afb9","udp":true,"tls":true,"network":"tcp","servername":"fr.shadowshroom.ru"}
-  - {"name":"46 [68] 🇩🇪 | DE | 1411ms | 50KB |","type":"vless","server":"57.129.53.181","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"47 [70] 🇩🇪 | DE | 1433ms | 50KB |  `","type":"vless","server":"57.129.53.182","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"48 [71] 🇩🇪 | DE | 1391ms | 50KB | 🧸13@oneclickvpnkeys","type":"vless","server":"57.129.53.180","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"49 [72] 🇳🇱 | NL | 1438ms | 50KB |","type":"vless","server":"212.34.142.191","port":8443,"uuid":"a5e746f7-328f-4b65-a65f-e2e2a4a5b1a9","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"50 [74] 🇳🇱 | NL | 1502ms | 50KB | 💎46@oneclickvpnkeys","type":"vless","server":"fl01.grani.site","port":443,"uuid":"81d82277-c095-4613-ba51-cafd0e413e69","udp":true,"tls":true,"network":"tcp","servername":"spliceflowtech.com"}
-  - {"name":"51 [75] 🇩🇪 | DE | 1412ms | 50KB | ☮️2@oneclickvpnkeys","type":"vless","server":"57.129.49.1","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"52 [77] 🇳🇱 | NL | 1487ms | 50KB | 💎12@oneclickvpnkeys","type":"vless","server":"72.56.75.169","port":8443,"uuid":"1c61a6c0-9bc7-4cb8-9188-6d86d5989388","udp":true,"tls":true,"network":"tcp","servername":"nltw4.lckdwn.ru"}
-  - {"name":"53 [78] 🇳🇱 | NL | 1420ms | 49KB | 💎66@oneclickvpnkeys","type":"vless","server":"fl01.grani.site","port":443,"uuid":"2262d82d-f203-41f4-920d-dacb8370ae73","udp":true,"tls":true,"network":"tcp","servername":"spliceflowtech.com"}
-  - {"name":"54 [82] 🇳🇱 | NL | 1450ms | 48KB | 🧸46@oneclickvpnkeys","type":"vless","server":"45.77.139.2","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.ing.nl"}
-  - {"name":"55 [83] 🇩🇪 | DE | 1497ms | 48KB | 🧸1@oneclickvpnkeys","type":"vless","server":"93.94.51.210","port":443,"uuid":"405ba2d6-7fcb-4cdd-9c77-4ecc616d77c8","udp":true,"tls":true,"network":"tcp","servername":"deu549.worldbypass.org"}
-  - {"name":"56 [85] 🇩🇪 | DE | 1394ms | 48KB | 💎28@oneclickvpnkeys","type":"vless","server":"172.67.216.218","port":443,"uuid":"03896a37-db8f-44ed-8ce1-45a1577f6da6","udp":true,"tls":true,"network":"ws","servername":"stipulations.gelatin.workers.dev"}
-  - {"name":"57 [90] 🇫🇷 | FR | 1755ms | 48KB | 💎74@oneclickvpnkeys","type":"vless","server":"141.94.220.210","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"58 [92] 🇬🇧 | GB | 1343ms | 48KB |","type":"vless","server":"45.43.75.69","port":7443,"uuid":"8f8380ae-9f5d-4cb5-8f5f-0f70fbe054a9","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
-  - {"name":"59 [94] 🇬🇧 | GB | 1464ms | 48KB |","type":"vless","server":"uk3.magnetgateway.onnstreaming.ru","port":443,"uuid":"197a0c0a-574d-497a-9e44-7bec185f8662","udp":true,"tls":true,"network":"tcp","servername":"uk3.magnetgateway.onnstreaming.ru"}
-  - {"name":"60 [100] 🇩🇪 | DE | 1385ms | 47KB | 💎6@oneclickvpnkeys","type":"vless","server":"81.19.141.68","port":8443,"uuid":"4b056394-2f40-11f1-bffe-46c4782ac1a7","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"61 [104] 🇳🇱 | NL | 1622ms | 47KB | ***✅***@AR14N24b","type":"vless","server":"45.136.126.16","port":443,"uuid":"203b0744-f943-4bba-a8d2-cab635467c46","udp":true,"tls":true,"network":"tcp","servername":"google.com"}
-  - {"name":"62 [106] 🇩🇪 | DE | 1509ms | 47KB | ☮️1@oneclickvpnkeys","type":"vless","server":"3.125.212.24","port":4040,"uuid":"b738db04-c73c-4551-b6f2-9041e93914d4","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"63 [108] 🇩🇪 | DE | 1413ms | 47KB |","type":"vless","server":"81.19.141.91","port":8443,"uuid":"f3a1017d-1ebf-11f1-8cae-c3845d39d2de","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"64 [111] 🇩🇪 | DE | 1466ms | 47KB | 🧸3@oneclickvpnkeys","type":"vless","server":"138.124.186.80","port":443,"uuid":"e346f220-4ca4-4f69-a66b-52e992b3b625","udp":true,"tls":true,"network":"tcp","servername":"www.fh-aachen.de"}
-  - {"name":"65 [112] 🇳🇱 | NL | 1594ms | 47KB | 💎50@oneclickvpnkeys","type":"vless","server":"194.124.250.34","port":1443,"uuid":"8e4eb711-d633-4750-99dd-282b792500ca","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"66 [114] 🇩🇪 | DE | 1531ms | 46KB | 🧸12@oneclickvpnkeys","type":"vless","server":"64.188.106.202","port":38765,"uuid":"7a0ae662-eee7-44c0-8998-d575870bd749","udp":true,"tls":true,"network":"tcp","servername":"aws.amazon.com"}
-  - {"name":"67 [118] 🇫🇮 | FI | 1537ms | 46KB | 💎58@oneclickvpnkeys","type":"vless","server":"85.192.49.230","port":443,"uuid":"8de7627c-1995-41f7-93e6-7fd9715514a2","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"68 [119] 🇩🇪 | DE | 1567ms | 46KB | 💎1@oneclickvpnkeys","type":"vless","server":"81.19.141.96","port":8443,"uuid":"ca05976a-2dea-11f1-9ec5-baabcd4be2cd","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"69 [120] 🇳🇱 | NL | 1593ms | 46KB |","type":"vless","server":"est1.trost-shield.ru","port":20229,"uuid":"4f0b281e-8a49-4a2d-9e54-3abe1c9b9d1f","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
-  - {"name":"70 [124] 🇳🇱 | NL | 1539ms | 45KB | @filembad`","type":"vless","server":"104.20.5.134","port":2086,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","udp":true,"tls":false,"network":"ws"}
-  - {"name":"71 [125] 🇩🇪 | DE | 1570ms | 45KB | 💎63@oneclickvpnkeys","type":"vless","server":"144.31.238.232","port":443,"uuid":"a1afced8-420b-430d-b25a-08db1c3332da","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"72 [127] 🌐 | null | 859ms | 45KB | 💎18@oneclickvpnkeys","type":"vless","server":"104.18.4.46","port":8880,"uuid":"623d675e-8748-4881-ac0f-dc1a10b595b1","udp":true,"tls":false,"network":"ws"}
-  - {"name":"73 [131] 🇩🇪 | DE | 1573ms | 45KB | 💎57@oneclickvpnkeys","type":"vless","server":"144.31.94.4","port":42428,"uuid":"27d0c642-693c-4070-83b4-0e9803ba71b3","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
-  - {"name":"74 [134] 🇩🇪 | DE | 1691ms | 45KB | 🧸47@oneclickvpnkeys","type":"vless","server":"51.195.91.135","port":10004,"uuid":"ec76ba12-2e86-11f1-8e37-df39dc6cc8d2","udp":true,"tls":false,"network":"ws"}
-  - {"name":"75 [136] 🇳🇱 | NL | 1544ms | 44KB |","type":"vless","server":"5.180.97.139","port":443,"uuid":"a384c715-aeb5-45e8-859b-f687ca6c083f","udp":true,"tls":true,"network":"tcp","servername":"google.com"}
-  - {"name":"76 [137] 🇳🇱 | NL | 1658ms | 44KB | 💎99@oneclickvpnkeys","type":"vless","server":"nl6.404-it.ru","port":8443,"uuid":"6d0e9ded-d23d-4ffb-b165-7bc757be84d3","udp":true,"tls":true,"network":"tcp","servername":"nl6.404-it.ru"}
-  - {"name":"77 [138] 🇩🇪 | DE | 1517ms | 44KB | 🧸6@oneclickvpnkeys","type":"vless","server":"45.77.66.142","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.zalando.de"}
-  - {"name":"78 [139] 🇳🇱 | NL | 1538ms | 44KB | 🧸15@oneclickvpnkeys","type":"vless","server":"144.31.233.146","port":43361,"uuid":"bf432795-1383-46e5-8823-d638b956cabe","udp":true,"tls":true,"network":"tcp","servername":"www.nvidia.com"}
-  - {"name":"79 [141] 🇨🇦 | CA | 2590ms | 44KB | 💎69@oneclickvpnkeys","type":"vless","server":"54.36.98.158","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"80 [142] 🇳🇱 | NL | 1587ms | 44KB | @filembad`","type":"vless","server":"150.251.145.242","port":8443,"uuid":"4b056394-2f40-11f1-bffe-46c4782ac1a7","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"81 [143] 🇩🇪 | DE | 1591ms | 44KB |","type":"vless","server":"104.194.158.80","port":8443,"uuid":"4b056394-2f40-11f1-bffe-46c4782ac1a7","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"82 [144] 🇳🇱 | NL | 1614ms | 44KB |","type":"vless","server":"45.43.92.216","port":7443,"uuid":"8f8380ae-9f5d-4cb5-8f5f-0f70fbe054a9","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
-  - {"name":"83 [147] 🇩🇪 | DE | 1529ms | 43KB | 🧸4@oneclickvpnkeys","type":"vless","server":"136.244.93.228","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.booking.com"}
-  - {"name":"84 [149] 🇨🇦 | CA | 5000ms | 43KB | 💎56@oneclickvpnkeys","type":"vless","server":"51.75.23.173","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"85 [152] 🇨🇦 | CA | 1622ms | 43KB | 💎80@oneclickvpnkeys","type":"vless","server":"54.36.98.189","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"86 [153] 🇳🇱 | NL | 1226ms | 43KB | 💎38@oneclickvpnkeys","type":"vless","server":"172.64.153.235","port":8443,"uuid":"656bb400-3b7a-47e3-94b0-0362f3865072","udp":true,"tls":true,"network":"ws","servername":"socks5.revil-time3.workers.dev"}
-  - {"name":"87 [156] 🇩🇪 | DE | 1673ms | 42KB | 💎83@oneclickvpnkeys","type":"vless","server":"8tf3qy.by-api-yandex.com","port":10121,"uuid":"d1209ffb-c159-48d5-b40d-542ce11fc768","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
-  - {"name":"88 [157] 🇫🇷 | FR | 1811ms | 42KB | 💎87@oneclickvpnkeys","type":"vless","server":"94.232.247.168","port":41360,"uuid":"e16a35ea-6715-4e75-9845-d20358bd0876","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"89 [158] 🇩🇪 | DE | 5000ms | 42KB | @filembad`","type":"vless","server":"49.13.85.76","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
-  - {"name":"90 [159] 🇳🇱 | NL | 1720ms | 42KB | 💎84@oneclickvpnkeys","type":"vless","server":"45.15.128.75","port":8443,"uuid":"fad2b7e0-d80c-4b7b-a84f-d86e0e49f627","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
-  - {"name":"91 [160] 🇳🇱 | NL | 1567ms | 42KB |","type":"vless","server":"45.143.167.170","port":8443,"uuid":"4b056394-2f40-11f1-bffe-46c4782ac1a7","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"92 [161] 🇳🇱 | NL | 1544ms | 42KB |","type":"vless","server":"150.251.145.244","port":8443,"uuid":"f3a1017d-1ebf-11f1-8cae-c3845d39d2de","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"93 [162] 🇩🇪 | DE | 1581ms | 41KB | 🧸2@oneclickvpnkeys","type":"vless","server":"206.189.249.182","port":19001,"uuid":"12eac926-c4ec-4040-8fb8-f316e9fc0fd6","udp":true,"tls":true,"network":"tcp","servername":"www.speedtest.net"}
-  - {"name":"94 [164] 🇫🇷 | FR | 1697ms | 41KB | 💎43@oneclickvpnkeys","type":"vless","server":"89.208.97.50","port":443,"uuid":"1bc8a2e7-4c5d-4376-a24b-b877997fd997","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"95 [165] 🇨🇦 | CA | 2271ms | 41KB | 💎30@oneclickvpnkeys`","type":"vless","server":"57.129.47.59","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"96 [166] 🇨🇦 | CA | 2824ms | 41KB | @filembad`","type":"vless","server":"176.222.54.157","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"97 [167] 🇵🇱 | PL | 1710ms | 41KB |","type":"vless","server":"144.31.130.239","port":443,"uuid":"ec486464-46c8-4f80-acc1-a3ccdcf01744","udp":true,"tls":true,"network":"tcp","servername":"hls-svod.itunes.apple.com"}
-  - {"name":"98 [168] 🇨🇿 | CZ | 1838ms | 41KB |","type":"vless","server":"87.236.146.32","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.vk.com"}
-  - {"name":"99 [169] 🌐 | null | 2395ms | 40KB | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"88.218.78.167","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"100 [171] 🇭🇷 | HR | 1844ms | 39KB |","type":"vless","server":"45.136.129.109","port":59999,"uuid":"ee6817f6-50fe-4114-b7ff-ce853b144282","udp":true,"tls":true,"network":"tcp","servername":"yastatic.net"}
-  - {"name":"101 [173] 🇵🇱 | PL | 1816ms | 38KB |  `","type":"vless","server":"151.115.96.243","port":7242,"uuid":"859b7d71-a9fc-4234-8e03-42eb876a170a","udp":true,"tls":true,"network":"tcp","servername":"modily.net"}
-  - {"name":"102 [175] 🇱🇹 | LT | 1849ms | 38KB |","type":"vless","server":"46.202.191.75","port":8443,"uuid":"ca05976a-2dea-11f1-9ec5-baabcd4be2cd","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"103 [176] 🇫🇮 | FI | 1786ms | 37KB | @filembad`","type":"vless","server":"45.12.146.179","port":8443,"uuid":"e033ef6e-ab4b-47d4-a523-ff568d2c8dbb","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"104 [178] 🇭🇺 | HU | 1859ms | 36KB |","type":"vless","server":"149.33.3.246","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"105 [181] 🇺🇦 | UA | 2098ms | 36KB |","type":"vless","server":"193.238.152.60","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.github.com"}
-  - {"name":"106 [183] 🇱🇻 | LV | 1948ms | 35KB | 💎89@oneclickvpnkeys","type":"vless","server":"103.231.73.181","port":8443,"uuid":"e033ef6e-ab4b-47d4-a523-ff568d2c8dbb","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"107 [184] 🇭🇺 | HU | 2050ms | 35KB |  `","type":"vless","server":"5.182.38.91","port":17267,"uuid":"1c7fcc38-e6be-43c5-875f-b8de2516b9f2","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"108 [185] 🇫🇮 | FI | 1981ms | 35KB | 💎60@oneclickvpnkeys`","type":"vless","server":"204.168.156.21","port":8443,"uuid":"60e011e1-acec-49f3-bd43-4d30f77ab375","udp":true,"tls":true,"network":"tcp","servername":"www.tesla.com"}
-  - {"name":"109 [188] 🇷🇸 | RS | 2001ms | 34KB | 💎86@oneclickvpnkeys","type":"vless","server":"38.180.101.136","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"110 [190] 🇹🇷 | TR | 1969ms | 34KB |","type":"vless","server":"2.56.127.207","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"store.steampowered.com"}
-  - {"name":"111 [191] 🇺🇸 | US | 1230ms | 34KB |","type":"vless","server":"45.82.251.115","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
-  - {"name":"112 [196] 🇺🇸 | US | 1323ms | 31KB |","type":"vless","server":"45.82.251.116","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
-  - {"name":"113 [203] 🇫🇮 | FI | 1939ms | 27KB |","type":"vless","server":"38.135.53.160","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.vk.com"}
-  - {"name":"114 [205] 🇦🇪 | AE | 5000ms | 24KB | @filembad`","type":"vless","server":"mybb.com","port":443,"uuid":"aebe5a70-0ca3-46ce-8208-8b5bab1346ce","udp":true,"tls":true,"network":"ws","servername":"rAyAn-007.nAsTaRaN.DpDnS.OrG"}
-  - {"name":"115 [206] 🇱🇻 | LV | 1838ms | 23KB | 💎92@oneclickvpnkeys","type":"vless","server":"185.72.86.38","port":59999,"uuid":"a2b431d9-d5d3-41c8-ad5b-8f95aa5a6712","udp":true,"tls":true,"network":"tcp","servername":"yastatic.net"}
-  - {"name":"116 [210] 🇫🇮 | FI | 1932ms | 21KB |","type":"vless","server":"whtk.mooo.com","port":15521,"uuid":"cdcd0159-bb13-4994-bdbb-982d854a72a6","udp":true,"tls":false,"network":"ws"}
-  - {"name":"117 [212] 🇮🇩 | ID | 4060ms | 20KB | 💎73@oneclickvpnkeys","type":"vless","server":"cdn.7zz.cn","port":443,"uuid":"506e4a91-1d05-5683-b84c-2113f673cb19","udp":true,"tls":true,"network":"ws","servername":"vltj.qzz.io"}
-  - {"name":"118 [215] 🇨🇦 | CA | 5000ms | 18KB | 💎71@oneclickvpnkeys","type":"vless","server":"51.210.151.165","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"119 [223] 🇸🇮 | SI | 2376ms | 12KB |","type":"vless","server":"194.58.66.7","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.vk.com"}
-  - {"name":"120 [226] 🇪🇪 | EE | 4772ms | 8KB |","type":"vless","server":"95.85.243.216","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"121 [228] 🇵🇱 | PL | 5000ms | 4KB | 💎95@oneclickvpnkeys","type":"vless","server":"82.26.91.244","port":443,"uuid":"6f99ed2f-9879-40e3-b5b4-5590c60f8e4a","udp":true,"tls":true,"network":"grpc","servername":"vk.ru"}
-  - {"name":"122 [229] 🇷🇺 | RU | 5000ms | 4KB | @filembad`","type":"vless","server":"46.149.71.197","port":2083,"uuid":"40600c8a-730a-411c-b72b-c3bca115dcf7","udp":true,"tls":true,"network":"grpc","servername":"ir.ozone.ru"}
-  - {"name":"123 [230] 🇷🇺 | RU | 5000ms | 4KB | 💎96@oneclickvpnkeys","type":"vless","server":"46.149.68.27","port":2083,"uuid":"e11ca047-3e50-469b-aa1a-beb9be0256b2","udp":true,"tls":true,"network":"grpc","servername":"ir.ozone.ru"}
-  - {"name":"124 [231] 🇮🇸 | IS | 5000ms | 4KB |","type":"vless","server":"45.83.21.39","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.grab.com"}
-  - {"name":"125 [232] 🇱🇻 | LV | 5000ms | 4KB | @filembad`","type":"vless","server":"169.40.2.244","port":443,"uuid":"ec486464-46c8-4f80-acc1-a3ccdcf01744","udp":true,"tls":true,"network":"tcp","servername":"hls-svod.itunes.apple.com"}
-  - {"name":"126 [233] 🇨🇭 | CH | 5000ms | 4KB | 🇨🇭 Switzerland (@v2FreeHub) Vless`","type":"vless","server":"89.125.95.110","port":443,"uuid":"6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb","udp":true,"tls":true,"network":"tcp","servername":"www.yandex.com"}
-  - {"name":"127 [235] 🇷🇴 | RO | 5000ms | 4KB |","type":"vless","server":"77.81.98.70","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.aliexpress.com"}
-  - {"name":"128 [237] 🇮🇹 | IT | 1803ms | 💎81@oneclickvpnkeys","type":"vless","server":"222.167.202.32","port":7443,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws","servername":"2026.hhhhh.eu.org"}
-  - {"name":"129 [238] 🌐 | null | 2059ms | 💎16@oneclickvpnkeys","type":"vless","server":"104.18.3.11","port":2082,"uuid":"cb213db5-803d-49dd-a7e2-46d938af0751","udp":true,"tls":false,"network":"ws"}
-  - {"name":"130 [240] 🌐 | null | 5001ms | @filembad`","type":"vless","server":"176.124.223.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"131 [245] 🌐 | null | 99999ms | Telegram : @lrnbymaa","type":"vless","server":"185.238.140.212","port":443,"uuid":"6fb4c229-6f9a-449a-a533-9f2a8040c71c","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
-  - {"name":"132 [247] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`","type":"vless","server":"ir-www-germani1.khabarkamkwww.fun","port":8081,"uuid":"18164b40-8a2d-46f8-b758-bf6c87cb5e9e","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"133 [248] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`","type":"vless","server":"entekhabat.iran.asiatech.numtwo.iranvatanam.com","port":440,"uuid":"19542a29-e734-41c9-b372-b30286a61048","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"134 [249] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`","type":"vless","server":"www.tomandjery.eu","port":1003,"uuid":"280c9ff0-7efd-449f-818e-fe46b21aeafe","udp":true,"tls":true,"network":"tcp","servername":"play.google.com"}
-  - {"name":"135 [253] 🌐 | null | 99999ms | @filembad","type":"vless","server":"85.133.214.66","port":443,"uuid":"1f39fef1-7887-fe10-78f7-faa773794f24","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"136 [254] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1","type":"vless","server":"s3.tomandjery.eu","port":1004,"uuid":"280c9ff0-7efd-449f-818e-fe46b21aeafe","udp":true,"tls":true,"network":"tcp","servername":"play.google.com"}
-  - {"name":"137 [255] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"a-m.iran-mehrbu.ir","port":2020,"uuid":"240925a4-b26f-4327-ba4e-d9df35e80394","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"138 [257] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"188.121.125.121","port":3000,"uuid":"2082cb64-582f-4938-ac27-c09898e0159a","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"139 [259] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`","type":"vless","server":"link.mizbanertebatfarda.site","port":3010,"uuid":"253817a2-f6ed-4701-919d-89ec5caa8d63","udp":true,"tls":false,"network":"ws","servername":"myket.ir"}
-  - {"name":"140 [261] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`","type":"vless","server":"185.136.135.172","port":41002,"uuid":"22d8e907-a875-43fc-9e3e-903ed801bb34","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"141 [264] 🌐 | null | 99999ms | ***✅***@AR14N24b","type":"vless","server":"final.usdtbama.com","port":8443,"uuid":"66674a64-1a54-43bd-9ebe-4c0db903fcf0","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"142 [265] 🌐 | null | 99999ms |","type":"vless","server":"ww.parspas.ir","port":8880,"uuid":"2a611a99-4c9e-41ca-b99f-276375105be6","udp":true,"tls":false,"network":"ws"}
-  - {"name":"143 [267] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"ursa.linkinfo.cloud","port":8080,"uuid":"28aee297-cb6e-4622-8deb-09e073a9086b","udp":true,"tls":false,"network":"ws"}
-  - {"name":"144 [268] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"185.143.233.233","port":2082,"uuid":"14f350c2-4e4a-416d-a348-4c9de94dc131","udp":true,"tls":false,"network":"ws"}
-  - {"name":"145 [270] 🌐 | null | 99999ms |","type":"vless","server":"ww.gooldiran.ir","port":8880,"uuid":"68e2ac49-7f4b-47be-93bd-86812dd24d51","udp":true,"tls":false,"network":"ws"}
-  - {"name":"146 [271] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"37.152.189.74","port":4431,"uuid":"2ba83a09-d1bc-4bbe-a4e6-d2c720802b9a","udp":true,"tls":false,"network":"ws"}
-  - {"name":"147 [275] 🌐 | null | 99999ms | ***✅***@AR14N24b","type":"vless","server":"ww.boldtest.ir","port":8880,"uuid":"13504d6e-f991-4de8-b5f1-aaf2b4b07a9f","udp":true,"tls":false,"network":"ws"}
-  - {"name":"148 [276] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"snt1.shahramv1.site","port":443,"uuid":"14db8096-7800-4cb8-bb52-1856e3b65785","udp":true,"tls":true,"network":"tcp","servername":"snt1.shahramv1.site"}
-  - {"name":"149 [278] 🌐 | null | 99999ms | 💎42@oneclickvpnkeys","type":"vless","server":"172.66.40.99","port":2083,"uuid":"ce035748-9913-40c9-9fb6-c8389f7cdcf3","udp":true,"tls":true,"network":"ws","servername":"yousef.varzesh.dpdns.org"}
-  - {"name":"150 [282] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"37.152.189.74","port":4431,"uuid":"1ba79f8b-6b64-47d4-baf2-2ac10c9d2e06","udp":true,"tls":false,"network":"ws"}
-  - {"name":"151 [286] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"37.152.189.74","port":4431,"uuid":"1aebd503-9770-4516-bcae-bdf64f4ca146","udp":true,"tls":false,"network":"ws"}
-  - {"name":"152 [287] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"188.241.241.33","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"153 [288] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"172.64.144.133","port":2096,"uuid":"1a25f8ad-cad2-4e93-b5bf-34e42bcac02a","udp":true,"tls":true,"network":"ws","servername":"sni.111000.cc.cd"}
-  - {"name":"154 [294] 🌐 | null | 99999ms | Lrnbymaa`","type":"vless","server":"cosmin.ns.cloudflare.com","port":2096,"uuid":"3f0f36f5-f091-45c5-88c9-4bcc545b922c","udp":true,"tls":true,"network":"ws","servername":"hetz.x-smm.com"}
-  - {"name":"155 [295] 🌐 | null | 99999ms | 💎55@oneclickvpnkeys","type":"vless","server":"104.26.3.125","port":2052,"uuid":"e8d06b09-acd9-448c-9874-3c36151d36ee","udp":true,"tls":false,"network":"ws"}
-  - {"name":"156 [297] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1","type":"vless","server":"nl1.vnet500.xyz","port":26082,"uuid":"62da658c-9641-4615-8180-14db65694cc5","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"157 [299] 🌐 | null | 99999ms | 💎51@oneclickvpnkeys","type":"vless","server":"104.21.59.114","port":8880,"uuid":"636de463-b509-4631-adc6-400b21733278","udp":true,"tls":false,"network":"ws"}
-  - {"name":"158 [6] 🇺🇸 | US | 296ms | 306KB | @filembad`","type":"ss","server":"37.19.198.236","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
-  - {"name":"159 [80] 🇳🇱 | NL | 1537ms | 49KB | ***🐦‍🔥***-@SPEEDS_VPN","type":"ss","server":"82.38.31.62","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"160 [95] 🇩🇪 | DE | 1475ms | 48KB | hamedvpns","type":"ss","server":"135.125.245.131","port":20939,"cipher":"chacha20-ietf-poly1305","password":"85d3d8ccba287d3e"}
-  - {"name":"161 [98] 🇳🇱 | NL | 1499ms | 47KB |  `","type":"ss","server":"82.38.31.61","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"162 [102] 🇳🇱 | NL | 1490ms | 47KB |","type":"ss","server":"82.38.31.89","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"163 [105] 🇳🇱 | NL | 1486ms | 47KB |","type":"ss","server":"82.38.31.101","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"164 [116] 🇳🇱 | NL | 1568ms | 46KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.210","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"165 [123] 🇳🇱 | NL | 1568ms | 45KB |","type":"ss","server":"82.38.31.35","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"166 [129] 🇳🇱 | NL | 1504ms | 45KB | @filembad`","type":"ss","server":"82.38.31.189","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"167 [132] 🇬🇧 | GB | 1350ms | 45KB | @filembad`","type":"ss","server":"141.98.101.182","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
-  - {"name":"168 [140] 🇳🇱 | NL | 1551ms | 44KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.176","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"169 [179] 🇩🇪 | DE | 1585ms | 36KB | ***🌪***-@SPEEDS_VPN1`","type":"ss","server":"141.95.106.127","port":11201,"cipher":"chacha20-ietf-poly1305","password":"94aae0510188e8c5"}
-  - {"name":"170 [182] 🇩🇪 | DE | 1548ms | 36KB | @filembad`","type":"ss","server":"141.95.109.94","port":11201,"cipher":"chacha20-ietf-poly1305","password":"10f90af92b6c1a74"}
-  - {"name":"171 [189] 🇩🇪 | DE | 1719ms | 34KB |","type":"ss","server":"15.204.247.49","port":12000,"cipher":"aes-256-gcm","password":"8JCsPssfgS8tiRwiMlhARg=="}
-  - {"name":"172 [201] 🇨🇭 | CH | 2107ms | 30KB |","type":"ss","server":"38.180.161.123","port":8119,"cipher":"aes-256-gcm","password":"cdBIDV42DCwnfIN"}
-  - {"name":"173 [207] 🇦🇪 | AE | 3117ms | 23KB | @filembad`","type":"ss","server":"147.78.0.182","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"174 [208] 🇳🇴 | NO | 1789ms | 21KB | @v2rayconfigamir 7618`","type":"ss","server":"148.135.195.95","port":8388,"cipher":"chacha20-ietf-poly1305","password":"X6btbRvJCo3uTQ--yaaT8Mvh0CgqhYTL"}
-  - {"name":"175 [209] 🇿🇦 | ZA | 3275ms | 21KB | @filembad`","type":"ss","server":"102.133.165.160","port":16233,"cipher":"chacha20-ietf-poly1305","password":"Xsy8Ox4yOV3xLlpxtjzs3X"}
-  - {"name":"176 [211] 🇿🇦 | ZA | 3268ms | 20KB | ***✅***@AR14N24b","type":"ss","server":"102.37.156.224","port":443,"cipher":"chacha20-ietf-poly1305","password":"aduB9HGxQHjA2SBMRjkHX6"}
-  - {"name":"177 [214] 🇬🇧 | GB | 2029ms | 18KB | @filembad`","type":"ss","server":"149.102.149.207","port":443,"cipher":"aes-256-gcm","password":"umWwoQJEJGf74SLe"}
-  - {"name":"178 [224] 🇲🇽 | MX | 2749ms | 11KB | ***✅***@AR14N24b","type":"ss","server":"147.78.1.230","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"179 [239] 🌐 | null | 5001ms |","type":"ss","server":"38.54.4.87","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"180 [273] 🌐 | null | 99999ms | @filembad`","type":"ss","server":"154.223.16.212","port":989,"cipher":"aes-256-cfb","password":"f8f7aCzcPKbsF8p3"}
-  - {"name":"181 [298] 🌐 | null | 99999ms | @filembad`","type":"ss","server":"141.164.45.187","port":6679,"cipher":"aes-256-gcm","password":"TEzjfAYq2IjtuoS"}
-  - {"name":"182 [300] 🌐 | null | 99999ms |","type":"ss","server":"57.128.214.100","port":12000,"cipher":"aes-256-gcm","password":"8JCsPssfgS8tiRwiMlhARg=="}
-  - {"name":"183 [26] 🇺🇸 | US | 717ms | 122KB | 💎68@oneclickvpnkeys","type":"trojan","server":"bestcf.030101.xyz","port":443,"password":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true}
-  - {"name":"184 [52] 🇳🇱 | NL | 1243ms | 52KB |","type":"trojan","server":"104.18.32.47","port":443,"password":"humanity","udp":true,"tls":true}
-  - {"name":"185 [62] 🇳🇱 | NL | 1695ms | 51KB | @filembad`","type":"trojan","server":"194.124.216.185","port":443,"password":"M08tvzYWtUEJNtbpHp","udp":true,"tls":true}
-  - {"name":"186 [195] 🇭🇺 | HU | 1890ms | 32KB | @filembad`","type":"trojan","server":"149.33.3.246","port":2083,"password":"q2jXRWncMA7pQren_VjQKhSQfoBWK_","udp":true,"tls":true}
-  - {"name":"187 [197] 🇳🇴 | NO | 1894ms | 31KB | @v2rayconfigamir 2837`","type":"trojan","server":"148.135.195.95","port":2083,"password":"q2jXRWncMA7pQren_VjQKhSQfoBWK_","udp":true,"tls":true}
-  - {"name":"188 [199] 🇳🇴 | NO | 1789ms | 31KB | @v2rayconfigamir 2132`","type":"trojan","server":"80.173.231.254","port":12420,"password":"wp9IsiY82uQhcmgNC1eoBM","udp":true,"tls":true}
-  - {"name":"189 [216] 🇮🇳 | IN | 4628ms | 16KB | @filembad`","type":"trojan","server":"86.107.100.13","port":2083,"password":"q2jXRWncMA7pQren_VjQKhSQfoBWK_","udp":true,"tls":true}
-  - {"name":"190 [217] 🇩🇪 | DE | 3634ms | 15KB | 💎8@oneclickvpnkeys","type":"trojan","server":"82.26.155.121","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
-  - {"name":"191 [218] 🇩🇪 | DE | 3663ms | 15KB | 💎5@oneclickvpnkeys","type":"trojan","server":"82.26.155.199","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
-  - {"name":"192 [219] 🇩🇪 | DE | 3670ms | 15KB | 💎9@oneclickvpnkeys","type":"trojan","server":"82.26.155.20","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
-  - {"name":"193 [220] 🇩🇪 | DE | 3621ms | 14KB | 💎3@oneclickvpnkeys","type":"trojan","server":"82.26.155.3","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
-  - {"name":"194 [221] 🇩🇪 | DE | 3654ms | 14KB | 💎10@oneclickvpnkeys","type":"trojan","server":"82.26.155.237","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
-  - {"name":"195 [222] 🇩🇪 | DE | 3708ms | 14KB | 💎7@oneclickvpnkeys","type":"trojan","server":"82.26.155.105","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
-  - {"name":"196 [241] 🌐 | null | 5001ms | @v2rayconfigamir 5836`","type":"trojan","server":"81.29.149.240","port":18390,"password":"hCjWaBe5vTkewfiljOL=9FS9DYg0c09c.t","udp":true,"tls":true}
-  - {"name":"197 [252] 🌐 | null | 99999ms | @filembad`","type":"trojan","server":"hyfuuf6.wsone.icu","port":443,"password":"M7v%w11Se*","udp":true,"tls":true}
+  - {"name":"1 [1] 🇺🇸 | US | 250ms | 365KB | ZHK","type":"wireguard","server":"162.159.192.1","port":4500,"ip":"10.0.0.1","private-key":"CAZs4yCgOVelAhVVmqbgoCay3+ZrhVqkNp+tPB5it2g=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"2 [3] 🇺🇸 | US | 284ms | 360KB | ZHK","type":"wireguard","server":"162.159.192.6","port":2408,"ip":"10.0.0.1","private-key":"cHJ8AFjYYaUMdHPOim/Q7V0znzP0E/K5lmz6xAxyUFs=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"3 [4] 🇺🇸 | US | 341ms | 320KB | ZHK","type":"wireguard","server":"162.159.192.7","port":4500,"ip":"10.0.0.1","private-key":"wMloX+pSgWW//sWu2KwuqN+j5DcIvczeP6VJdSkkqGk=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"4 [2] 🇺🇸 | US | 2855ms | 363KB |","type":"vless","server":"77.110.122.205","port":26946,"uuid":"99f06929-4311-489c-91cc-ef1c582e5dfa","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"5 [6] 🇨🇦 | CA | 1406ms | 211KB | 👽22@oneclickvpnkeys","type":"vless","server":"104.16.250.22","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"6 [7] 🇺🇸 | US | 369ms | 206KB | 👽17@oneclickvpnkeys","type":"vless","server":"104.18.4.46","port":8880,"uuid":"623d675e-8748-4881-ac0f-dc1a10b595b1","udp":true,"tls":false,"network":"ws"}
+  - {"name":"7 [8] 🇨🇦 | CA | 4061ms | 178KB | 💎82@oneclickvpnkeys","type":"vless","server":"bestcf.030101.xyz","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
+  - {"name":"8 [10] 🇩🇪 | DE | 3764ms | 129KB | 🧸47@oneclickvpnkeys","type":"vless","server":"51.195.91.135","port":10004,"uuid":"ec76ba12-2e86-11f1-8e37-df39dc6cc8d2","udp":true,"tls":false,"network":"ws"}
+  - {"name":"9 [12] 🇺🇸 | US | 214ms | 83KB | 💎47@oneclickvpnkeys","type":"vless","server":"172.67.203.94","port":2086,"uuid":"7890ce31-9a25-4fd4-90e7-80e5823ff510","udp":true,"tls":false,"network":"ws"}
+  - {"name":"10 [14] 🇨🇦 | CA | 2742ms | 73KB | @filembad`","type":"vless","server":"176.124.223.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"11 [15] 🇨🇦 | CA | 1045ms | 67KB | 👽25@oneclickvpnkeys","type":"vless","server":"135.84.64.222","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
+  - {"name":"12 [16] 🌐 | null | 3379ms | 66KB | 💎85@oneclickvpnkeys","type":"vless","server":"57.128.182.234","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"13 [17] 🇨🇦 | CA | 3607ms | 63KB | 💎77@oneclickvpnkeys","type":"vless","server":"54.36.99.75","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"14 [18] 🇨🇦 | CA | 4923ms | 62KB | 💎62@oneclickvpnkeys","type":"vless","server":"57.129.47.12","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"15 [20] 🇨🇦 | CA | 2940ms | 61KB | 💎74@oneclickvpnkeys","type":"vless","server":"141.94.220.210","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"16 [22] 🇨🇦 | CA | 5000ms | 58KB | 💎76@oneclickvpnkeys","type":"vless","server":"54.36.98.82","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"17 [23] 🇨🇦 | CA | 3927ms | 56KB |","type":"vless","server":"167.88.160.144","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"18 [24] 🇨🇦 | CA | 5000ms | 55KB | 💎78@oneclickvpnkeys","type":"vless","server":"51.75.19.60","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"19 [25] 🇨🇦 | CA | 3666ms | 55KB | 💎67@oneclickvpnkeys","type":"vless","server":"51.75.23.189","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"20 [26] 🇨🇦 | CA | 3195ms | 47KB | 💎72@oneclickvpnkeys","type":"vless","server":"51.75.24.59","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"21 [29] 🇨🇦 | CA | 3978ms | 46KB | 💎56@oneclickvpnkeys","type":"vless","server":"51.75.23.173","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"22 [30] 🇨🇦 | CA | 5000ms | 43KB | @filembad`","type":"vless","server":"31.128.32.98","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"23 [32] 🇫🇷 | FR | 1962ms | 39KB | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"104.24.39.51","port":443,"uuid":"bf4c614f-c46d-4db9-b031-62f7e4b85c2c","udp":true,"tls":true,"network":"ws","servername":"hex.1tb.workers.dev"}
+  - {"name":"24 [34] 🇳🇱 | NL | 1913ms | 36KB | 👽30@oneclickvpnkeys`","type":"vless","server":"172.64.149.80","port":443,"uuid":"733a9a09-ba93-4e73-b1f3-ae0bcbd88310","udp":true,"tls":true,"network":"ws","servername":"noisy-paper-6b70.grirbp.workers.dev"}
+  - {"name":"25 [35] 🇨🇦 | CA | 3750ms | 35KB | @filembad`","type":"vless","server":"176.222.54.157","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"26 [36] 🇩🇪 | DE | 2195ms | 34KB | 💎54@oneclickvpnkeys","type":"vless","server":"cdn.7zz.cn","port":2086,"uuid":"73829173-bb56-442b-a8d4-ec732c020945","udp":true,"tls":false,"network":"httpupgrade"}
+  - {"name":"27 [38] 🇳🇱 | NL | 2404ms | 32KB | @filembad`","type":"vless","server":"51.158.206.25","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"28 [39] 🇩🇪 | DE | 2020ms | 32KB | @filembad`","type":"vless","server":"www.speedtest.net","port":2096,"uuid":"5238a315-4427-4915-a1de-4978e3029a1c","udp":true,"tls":true,"network":"ws","servername":"loNg-modE-2783.SEpna114.WOrkERs.dEV"}
+  - {"name":"29 [40] 🇫🇮 | FI | 2470ms | 31KB | @filembad`","type":"vless","server":"104.18.3.11","port":2082,"uuid":"cb213db5-803d-49dd-a7e2-46d938af0751","udp":true,"tls":false,"network":"ws"}
+  - {"name":"30 [43] 🇨🇦 | CA | 3633ms | 30KB | 💎70@oneclickvpnkeys","type":"vless","server":"57.129.137.87","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"31 [45] 🇳🇱 | NL | 2386ms | 30KB | @filembad`","type":"vless","server":"51.158.206.87","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"32 [46] 🇩🇪 | DE | 2468ms | 30KB | 👽9@oneclickvpnkeys","type":"vless","server":"57.129.53.181","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"33 [48] 🇳🇱 | NL | 4115ms | 29KB | 💎46@oneclickvpnkeys","type":"vless","server":"fl01.grani.site","port":443,"uuid":"81d82277-c095-4613-ba51-cafd0e413e69","udp":true,"tls":true,"network":"tcp","servername":"spliceflowtech.com"}
+  - {"name":"34 [49] 🇫🇷 | FR | 2112ms | 29KB | 👽18@oneclickvpnkeys","type":"vless","server":"104.18.2.11","port":2082,"uuid":"cb213db5-803d-49dd-a7e2-46d938af0751","udp":true,"tls":false,"network":"ws"}
+  - {"name":"35 [50] 🇫🇷 | FR | 2432ms | 29KB | 💎61@oneclickvpnkeys","type":"vless","server":"51.210.73.175","port":8443,"uuid":"81afc754-96c8-4cca-8d5e-3fc993b9afb9","udp":true,"tls":true,"network":"tcp","servername":"fr.shadowshroom.ru"}
+  - {"name":"36 [51] 🇳🇱 | NL | 2644ms | 29KB |","type":"vless","server":"est1.trost-shield.ru","port":20229,"uuid":"4f0b281e-8a49-4a2d-9e54-3abe1c9b9d1f","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
+  - {"name":"37 [52] 🇳🇱 | NL | 2675ms | 29KB |","type":"vless","server":"fl01.grani.site","port":443,"uuid":"2262d82d-f203-41f4-920d-dacb8370ae73","udp":true,"tls":true,"network":"tcp","servername":"spliceflowtech.com"}
+  - {"name":"38 [53] 🇩🇪 | DE | 2486ms | 29KB | 🧸9@oneclickvpnkeys","type":"vless","server":"57.129.53.182","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"39 [54] 🇫🇮 | FI | 2397ms | 29KB | 💎58@oneclickvpnkeys","type":"vless","server":"85.192.49.230","port":443,"uuid":"8de7627c-1995-41f7-93e6-7fd9715514a2","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
+  - {"name":"40 [55] 🇩🇪 | DE | 2539ms | 29KB | 👽7@oneclickvpnkeys","type":"vless","server":"172.86.94.48","port":8443,"uuid":"ca05976a-2dea-11f1-9ec5-baabcd4be2cd","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"41 [56] 🇫🇷 | FR | 2425ms | 28KB | 💎52@oneclickvpnkeys","type":"vless","server":"51.158.62.94","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.laposte.fr"}
+  - {"name":"42 [57] 🇳🇱 | NL | 2196ms | 28KB | @filembad`","type":"vless","server":"193.233.127.219","port":443,"uuid":"6fd9f786-d974-49d0-b5c4-397678de69a2","udp":true,"tls":true,"network":"tcp","servername":"www.cybo.com"}
+  - {"name":"43 [60] 🇩🇪 | DE | 2526ms | 28KB | 👽3@oneclickvpnkeys","type":"vless","server":"64.188.106.202","port":38765,"uuid":"7a0ae662-eee7-44c0-8998-d575870bd749","udp":true,"tls":true,"network":"tcp","servername":"aws.amazon.com"}
+  - {"name":"44 [61] 🇳🇱 | NL | 2583ms | 28KB | 🧸15@oneclickvpnkeys","type":"vless","server":"144.31.233.146","port":43361,"uuid":"bf432795-1383-46e5-8823-d638b956cabe","udp":true,"tls":true,"network":"tcp","servername":"www.nvidia.com"}
+  - {"name":"45 [63] 🇩🇪 | DE | 2461ms | 28KB |","type":"vless","server":"104.194.158.80","port":8443,"uuid":"4b056394-2f40-11f1-bffe-46c4782ac1a7","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"46 [64] 🇨🇭 | CH | 2580ms | 27KB | 👽26@oneclickvpnkeys","type":"vless","server":"45.141.119.105","port":443,"uuid":"197a0c0a-574d-497a-9e44-7bec185f8662","udp":true,"tls":true,"network":"tcp","servername":"swi-mws.onnstreaming.ru"}
+  - {"name":"47 [65] 🇳🇱 | NL | 2756ms | 27KB | 💎84@oneclickvpnkeys","type":"vless","server":"45.15.128.75","port":8443,"uuid":"fad2b7e0-d80c-4b7b-a84f-d86e0e49f627","udp":true,"tls":true,"network":"tcp","servername":"max.ru"}
+  - {"name":"48 [67] 🇩🇪 | DE | 2492ms | 27KB | 👽14@oneclickvpnkeys","type":"vless","server":"57.129.49.1","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"49 [68] 🇩🇪 | DE | 2710ms | 27KB | 🧸1@oneclickvpnkeys","type":"vless","server":"93.94.51.210","port":443,"uuid":"405ba2d6-7fcb-4cdd-9c77-4ecc616d77c8","udp":true,"tls":true,"network":"tcp","servername":"deu549.worldbypass.org"}
+  - {"name":"50 [69] 🇩🇪 | DE | 2430ms | 27KB | 👽6@oneclickvpnkeys","type":"vless","server":"81.19.141.91","port":8443,"uuid":"f3a1017d-1ebf-11f1-8cae-c3845d39d2de","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"51 [70] 🇩🇪 | DE | 2461ms | 27KB |","type":"vless","server":"81.19.141.96","port":8443,"uuid":"ca05976a-2dea-11f1-9ec5-baabcd4be2cd","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"52 [72] 🇬🇧 | GB | 2559ms | 27KB |","type":"vless","server":"uk3.magnetgateway.onnstreaming.ru","port":443,"uuid":"197a0c0a-574d-497a-9e44-7bec185f8662","udp":true,"tls":true,"network":"tcp","servername":"uk3.magnetgateway.onnstreaming.ru"}
+  - {"name":"53 [75] 🇩🇪 | DE | 2501ms | 27KB | 🧸13@oneclickvpnkeys","type":"vless","server":"57.129.53.180","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"54 [76] 🇩🇪 | DE | 2483ms | 27KB | 👽11@oneclickvpnkeys","type":"vless","server":"84.21.189.25","port":443,"uuid":"6053689d-39d6-4005-b1bd-c0dce854f429","udp":true,"tls":true,"network":"tcp","servername":"de-fast.chunkyvpn.shop"}
+  - {"name":"55 [77] 🇳🇱 | NL | 2880ms | 27KB | 💎99@oneclickvpnkeys","type":"vless","server":"nl6.404-it.ru","port":8443,"uuid":"6d0e9ded-d23d-4ffb-b165-7bc757be84d3","udp":true,"tls":true,"network":"tcp","servername":"nl6.404-it.ru"}
+  - {"name":"56 [78] 🇩🇪 | DE | 3004ms | 26KB |","type":"vless","server":"144.31.94.4","port":42428,"uuid":"27d0c642-693c-4070-83b4-0e9803ba71b3","udp":true,"tls":true,"network":"tcp","servername":"eh.vk.com"}
+  - {"name":"57 [79] 🇩🇪 | DE | 2326ms | 26KB |","type":"vless","server":"81.19.141.68","port":8443,"uuid":"4b056394-2f40-11f1-bffe-46c4782ac1a7","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"58 [80] 🇩🇪 | DE | 2587ms | 26KB | 👽15@oneclickvpnkeys`","type":"vless","server":"54.37.75.187","port":443,"uuid":"a0b067ac-162d-4237-956d-10b8b471d3f5","udp":true,"tls":true,"network":"tcp","servername":"www.speedtest.net"}
+  - {"name":"59 [81] 🇩🇪 | DE | 2641ms | 26KB | 💎63@oneclickvpnkeys","type":"vless","server":"144.31.238.232","port":443,"uuid":"a1afced8-420b-430d-b25a-08db1c3332da","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"60 [83] 🇳🇱 | NL | 2614ms | 26KB | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"150.251.145.242","port":8443,"uuid":"4b056394-2f40-11f1-bffe-46c4782ac1a7","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"61 [85] 🇩🇪 | DE | 2638ms | 25KB | 💎83@oneclickvpnkeys","type":"vless","server":"8tf3qy.by-api-yandex.com","port":10121,"uuid":"d1209ffb-c159-48d5-b40d-542ce11fc768","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
+  - {"name":"62 [86] 🇱🇻 | LV | 3037ms | 25KB | 💎92@oneclickvpnkeys","type":"vless","server":"185.72.86.38","port":59999,"uuid":"a2b431d9-d5d3-41c8-ad5b-8f95aa5a6712","udp":true,"tls":true,"network":"tcp","servername":"yastatic.net"}
+  - {"name":"63 [87] 🇩🇪 | DE | 2480ms | 25KB | 👽13@oneclickvpnkeys","type":"vless","server":"138.124.186.202","port":443,"uuid":"e346f220-4ca4-4f69-a66b-52e992b3b625","udp":true,"tls":true,"network":"tcp","servername":"www.fh-aachen.de"}
+  - {"name":"64 [88] 🇫🇮 | FI | 3136ms | 25KB | @filembad`","type":"vless","server":"45.12.146.179","port":8443,"uuid":"e033ef6e-ab4b-47d4-a523-ff568d2c8dbb","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"65 [89] 🇩🇪 | DE | 2696ms | 25KB | 👽5@oneclickvpnkeys","type":"vless","server":"138.124.186.80","port":443,"uuid":"e346f220-4ca4-4f69-a66b-52e992b3b625","udp":true,"tls":true,"network":"tcp","servername":"www.fh-aachen.de"}
+  - {"name":"66 [92] 🇳🇱 | NL | 2880ms | 24KB | 💎50@oneclickvpnkeys","type":"vless","server":"194.124.250.34","port":1443,"uuid":"8e4eb711-d633-4750-99dd-282b792500ca","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
+  - {"name":"67 [93] 🇷🇸 | RS | 3149ms | 24KB | 💎86@oneclickvpnkeys","type":"vless","server":"38.180.101.136","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
+  - {"name":"68 [94] 🇫🇮 | FI | 3114ms | 24KB | 💎60@oneclickvpnkeys`","type":"vless","server":"204.168.156.21","port":8443,"uuid":"60e011e1-acec-49f3-bd43-4d30f77ab375","udp":true,"tls":true,"network":"tcp","servername":"www.tesla.com"}
+  - {"name":"69 [99] 🇨🇦 | CA | 3413ms | 22KB | 💎90@oneclickvpnkeys`","type":"vless","server":"51.210.151.193","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"70 [100] 🇮🇹 | IT | 3964ms | 22KB | 💎81@oneclickvpnkeys","type":"vless","server":"222.167.202.32","port":7443,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws","servername":"2026.hhhhh.eu.org"}
+  - {"name":"71 [101] 🌐 | null | 5000ms | 21KB | 💎49@oneclickvpnkeys","type":"vless","server":"62.84.183.222","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"72 [103] 🇨🇦 | CA | 1237ms | 21KB | 👽19@oneclickvpnkeys","type":"vless","server":"172.64.155.209","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"73 [104] 🇩🇪 | DE | 1441ms | 21KB | 👽28@oneclickvpnkeys","type":"vless","server":"160.153.0.78","port":443,"uuid":"8c4604ef-749c-4b56-adf1-7da405002a21","udp":true,"tls":true,"network":"ws","servername":"qyi.fqjd663.ggff.net"}
+  - {"name":"74 [107] 🇨🇦 | CA | 5000ms | 17KB | 👽27@oneclickvpnkeys","type":"vless","server":"135.84.74.118","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
+  - {"name":"75 [109] 🌐 | null | 5000ms | 17KB | 💎79@oneclickvpnkeys","type":"vless","server":"57.128.178.36","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"76 [110] 🇨🇦 | CA | 3573ms | 17KB | 💎59@oneclickvpnkeys","type":"vless","server":"51.91.252.61","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"77 [112] 🇻🇳 | VN | 3644ms | 16KB | @v2rayconfigamir 5708`","type":"vless","server":"103.245.237.124","port":58202,"uuid":"cca053d5-7123-4a87-83d6-babe4e9c8115","udp":true,"tls":false,"network":"ws"}
+  - {"name":"78 [115] 🇳🇱 | NL | 3011ms | 13KB | 💎12@oneclickvpnkeys","type":"vless","server":"72.56.75.169","port":8443,"uuid":"1c61a6c0-9bc7-4cb8-9188-6d86d5989388","udp":true,"tls":true,"network":"tcp","servername":"nltw4.lckdwn.ru"}
+  - {"name":"79 [116] 🇱🇹 | LT | 3046ms | 13KB |","type":"vless","server":"194.87.106.31","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
+  - {"name":"80 [125] 🇨🇦 | CA | 3781ms | 10KB | 💎69@oneclickvpnkeys","type":"vless","server":"54.36.98.158","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"81 [127] 🌐 | null | 3155ms | 10KB | 💎71@oneclickvpnkeys","type":"vless","server":"51.210.151.165","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"82 [128] 🇩🇪 | DE | 5000ms | 8KB | ☮️1@oneclickvpnkeys","type":"vless","server":"3.125.212.24","port":4040,"uuid":"b738db04-c73c-4551-b6f2-9041e93914d4","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"83 [131] 🇬🇧 | GB | 4289ms | 7KB |","type":"vless","server":"45.43.75.69","port":7443,"uuid":"8f8380ae-9f5d-4cb5-8f5f-0f70fbe054a9","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
+  - {"name":"84 [133] 🇨🇦 | CA | 5000ms | 4KB | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"88.218.78.167","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"85 [135] 🇨🇦 | CA | 3593ms | 4KB | 💎80@oneclickvpnkeys","type":"vless","server":"54.36.98.189","port":2053,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"86 [136] 🇨🇦 | CA | 5000ms | 4KB | 💎53@oneclickvpnkeys","type":"vless","server":"51.178.137.248","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"87 [137] 🇷🇺 | RU | 5000ms | 4KB | 💎98@oneclickvpnkeys","type":"vless","server":"46.149.71.197","port":2083,"uuid":"40600c8a-730a-411c-b72b-c3bca115dcf7","udp":true,"tls":true,"network":"grpc","servername":"ir.ozone.ru"}
+  - {"name":"88 [138] 🇷🇺 | RU | 5000ms | 4KB | 💎96@oneclickvpnkeys","type":"vless","server":"46.149.68.27","port":2083,"uuid":"e11ca047-3e50-469b-aa1a-beb9be0256b2","udp":true,"tls":true,"network":"grpc","servername":"ir.ozone.ru"}
+  - {"name":"89 [140] 🇮🇸 | IS | 5000ms | 4KB |","type":"vless","server":"45.83.21.39","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.grab.com"}
+  - {"name":"90 [141] 🇫🇷 | FR | 5000ms | 4KB | 💎87@oneclickvpnkeys","type":"vless","server":"94.232.247.168","port":41360,"uuid":"e16a35ea-6715-4e75-9845-d20358bd0876","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"91 [143] 🇵🇱 | PL | 5000ms | 3KB | 💎95@oneclickvpnkeys","type":"vless","server":"82.26.91.244","port":443,"uuid":"6f99ed2f-9879-40e3-b5b4-5590c60f8e4a","udp":true,"tls":true,"network":"grpc","servername":"vk.ru"}
+  - {"name":"92 [145] 🇬🇧 | GB | 1945ms | 👽29@oneclickvpnkeys","type":"vless","server":"172.66.1.143","port":443,"uuid":"d2d0f796-edb0-427a-af32-ae360679f9e7","udp":true,"tls":true,"network":"ws","servername":"rAyAn-007.fOtOn.dPdNs.oRg"}
+  - {"name":"93 [146] 🇨🇦 | CA | 4031ms | 💎75@oneclickvpnkeys`","type":"vless","server":"57.128.176.37","port":8443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"94 [147] 🇳🇱 | NL | 5000ms | 👽16@oneclickvpnkeys","type":"vless","server":"45.15.128.183","port":603,"uuid":"4484eae9-e195-4adf-b2b5-ad0b9132162b","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
+  - {"name":"95 [148] 🌐 | null | 5001ms | 💎89@oneclickvpnkeys","type":"vless","server":"103.231.73.181","port":8443,"uuid":"e033ef6e-ab4b-47d4-a523-ff568d2c8dbb","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"96 [149] 🌐 | null | 5001ms |","type":"vless","server":"77.81.98.70","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.aliexpress.com"}
+  - {"name":"97 [150] 🌐 | null | 99999ms | @filembad","type":"vless","server":"mim.md-teach.com","port":8443,"uuid":"0bf3ab52-e1b1-49e2-bfa5-389d9a251710","udp":true,"tls":true,"network":"ws","servername":"md2.moradi.online"}
+  - {"name":"98 [151] 🌐 | null | 99999ms |","type":"vless","server":"13.38.177.145","port":22224,"uuid":"05519058-d2ac-4f28-9e4a-2b2a1386749e","udp":true,"tls":true,"network":"ws","servername":"trojan.burgerip.co.uk"}
+  - {"name":"99 [155] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"37.152.189.74","port":4431,"uuid":"c0f5e300-5a31-4349-813d-2b106e7d96eb","udp":true,"tls":false,"network":"ws"}
+  - {"name":"100 [157] 🌐 | null | 99999ms | Psiphon - @i10VPN 6`","type":"vless","server":"78.158.166.180","port":2096,"uuid":"e911c552-3a98-41e0-b5fb-0dd3879887b7","udp":true,"tls":true,"network":"ws","servername":"vod.ensf.top"}
+  - {"name":"101 [164] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"94.183.149.201","port":8880,"uuid":"c2950b3c-9d45-441f-a4a8-b6ba9b36a48d","udp":true,"tls":false,"network":"ws"}
+  - {"name":"102 [182] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"v2.royalway.shop","port":2053,"uuid":"c3a8f526-6f41-4884-adb8-f33b4ec30fa6","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"103 [187] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"185.143.233.122","port":443,"uuid":"c3af5997-2b5a-411f-8fee-8c1a7aa879b1","udp":true,"tls":true,"network":"ws","servername":"database-cbv.persianstorebnd.ir"}
+  - {"name":"104 [191] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`","type":"vless","server":"6t8q56c58d.0g97vcf0bhjg6sa4n1xx.realytag.com","port":882,"uuid":"c3f30d4c-2ba7-4cb8-aee1-a1ce9652d5aa","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"105 [193] 🌐 | null | 99999ms |","type":"vless","server":"188.121.106.138","port":10449,"uuid":"c5b1ca44-9e31-4b46-94e8-2c7e8386d98d","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"106 [199] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`","type":"vless","server":"tcp-abr-tr.connect-2.org","port":8081,"uuid":"c5cd439e-c689-47c3-990b-f365514498ec","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"107 [202] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"de22.fastplus7.site","port":2086,"uuid":"0d1c3cee-2952-4a3e-a03e-fbe99d32dc72","udp":true,"tls":false,"network":"ws"}
+  - {"name":"108 [203] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"req.playshoptv.com","port":443,"uuid":"c5fb2dc1-ba27-4331-911e-7dbe26c0c678","udp":true,"tls":true,"network":"tcp","servername":"www.amazon.com"}
+  - {"name":"109 [207] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"vortex.mytopmedia.pro","port":100,"uuid":"c7152b70-fac2-4e46-9df4-16aa921c3cb2","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"110 [208] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"v2ngfast-v2ngfast-v2ngfast-v2ngfast.jovego2551.workers.dev","port":443,"uuid":"2730487f-0ed5-4f04-92d5-f95f9253d4f4","udp":true,"tls":true,"network":"ws","servername":"v2ngfast-v2ngfast-v2ngfast-v2ngfast.jovego2551.workers.dev"}
+  - {"name":"111 [209] 🌐 | null | 99999ms |","type":"vless","server":"ww.parspas.ir","port":8880,"uuid":"0db02e4d-8bc6-40b1-afeb-173a274518a3","udp":true,"tls":false,"network":"ws"}
+  - {"name":"112 [215] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"final.digitalldns.com","port":8443,"uuid":"0316fa1e-9d75-4b58-b838-c633d2fb87c1","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"113 [218] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1","type":"vless","server":"6t8q56c58d.0g97vcf0bhjg6sa4n1xx.realytag.com","port":882,"uuid":"c723ad72-c8b5-4d7b-aea5-2aa7c007fee3","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"114 [219] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1","type":"vless","server":"mh52m5fsx0.ztzs0jb1r6g4z9mn9o2c.realytag.com","port":883,"uuid":"c723ad72-c8b5-4d7b-aea5-2aa7c007fee3","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"115 [223] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"vfbh5h398f.hy7gqx14x0vb75ry2ac1.realytag.com","port":884,"uuid":"c723ad72-c8b5-4d7b-aea5-2aa7c007fee3","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"116 [226] 🌐 | null | 99999ms |","type":"vless","server":"fast.talesh.top","port":1382,"uuid":"0123bfb9-41df-4d43-a292-58f4ab35d43e","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"117 [230] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`","type":"vless","server":"nt5.vhuma.com","port":8443,"uuid":"02d42a09-709b-4acb-ba01-af812727e7d8","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"118 [233] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"37.152.189.74","port":4431,"uuid":"12df672e-f024-4880-b505-ee9e42e1ae94","udp":true,"tls":false,"network":"ws"}
+  - {"name":"119 [234] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"1sofewhite.legendperm.ir","port":1312,"uuid":"c8c598e3-4811-4d63-82e0-f1b2fda2b900","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"120 [236] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"vip.gxnetshop.ir","port":1015,"uuid":"b69eb4db-eb7a-416b-b314-b5173112e543","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"121 [237] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"a.pabloping.cloud","port":2052,"uuid":"2271c50f-ac7a-4d7f-8b04-64085b0daa56","udp":true,"tls":false,"network":"xhttp"}
+  - {"name":"122 [241] 🌐 | null | 99999ms | @SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`","type":"vless","server":"shop.bizinesmezon.xyz","port":31732,"uuid":"0548b0ba-dca2-466a-8bff-faa0b0b90cab","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"123 [242] 🌐 | null | 99999ms |","type":"vless","server":"ww.boldtest.ir","port":8880,"uuid":"13504d6e-f991-4de8-b5f1-aaf2b4b07a9f","udp":true,"tls":false,"network":"ws"}
+  - {"name":"124 [246] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"172.66.44.172","port":2087,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","udp":true,"tls":false,"network":"ws"}
+  - {"name":"125 [247] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"104.20.5.134","port":2086,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","udp":true,"tls":false,"network":"ws"}
+  - {"name":"126 [248] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"8.6.112.0","port":443,"uuid":"d34dac88-5207-49a3-b5dc-1b737e2a7f6f","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"127 [249] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"creativecommons.org","port":2086,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"128 [253] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"217.25.56.173","port":443,"uuid":"0b2fe47a-f51c-4e00-85ba-eeae70addc80","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"129 [256] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"tabrizm138.lll.l0l.lll.workers.dev","port":2086,"uuid":"c6812323-833b-454d-80c0-e1ccc22e9fc5","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"130 [257] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"95.85.239.4","port":443,"uuid":"c8d1c6d3-388f-48fc-a8f0-ed90d955d096","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
+  - {"name":"131 [260] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"109.95.65.242","port":8032,"uuid":"c049b9e1-3b34-4b3c-9e10-4978f11dec75","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"132 [263] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"89.167.17.75","port":443,"uuid":"19773cc6-89a3-47c6-bc10-885460cd2b7b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"133 [265] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"94.183.149.168","port":8880,"uuid":"bf6fe550-023e-4b64-ab85-158d84308111","udp":true,"tls":false,"network":"ws"}
+  - {"name":"134 [266] 🌐 | null | 99999ms | 💎55@oneclickvpnkeys","type":"vless","server":"104.26.3.125","port":2052,"uuid":"e8d06b09-acd9-448c-9874-3c36151d36ee","udp":true,"tls":false,"network":"ws"}
+  - {"name":"135 [268] 🌐 | null | 99999ms | 💎48@oneclickvpnkeys","type":"vless","server":"104.19.173.68","port":443,"uuid":"7e346122-2ee0-406e-b964-a8ee665f1814","udp":true,"tls":true,"network":"ws","servername":"paRMis-1Tk63J.PArMiS.WoRkeRs.DeV"}
+  - {"name":"136 [269] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"104.17.148.22","port":2083,"uuid":"ce035748-9913-40c9-9fb6-c8389f7cdcf3","udp":true,"tls":true,"network":"ws","servername":"yousef.varzesh.dpdns.org"}
+  - {"name":"137 [272] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"54.93.56.163","port":22224,"uuid":"05519058-d2ac-4f28-9e4a-2b2a1386749e","udp":true,"tls":true,"network":"ws","servername":"trojan.burgerip.co.uk"}
+  - {"name":"138 [275] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"de-1-tun-single.starping1.fun","port":8083,"uuid":"062f5134-5ee9-48b8-928f-cfad28401afb","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"139 [277] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`","type":"vless","server":"1kdksjskskwkwodk.lskwposkrjgso.ncniwlqnxbdje.wizardxray.ir","port":700,"uuid":"06792207-b128-447b-b257-a0df0f5c899b","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"140 [278] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"de-1-tun.irantehrankhabar.fun","port":8081,"uuid":"062f5134-5ee9-48b8-928f-cfad28401afb","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"141 [282] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"us-1-tun.khabarkermanshahiran.site","port":8081,"uuid":"062f5134-5ee9-48b8-928f-cfad28401afb","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"142 [283] 🌐 | null | 99999ms | 👽12@oneclickvpnkeys","type":"vless","server":"104.194.158.108","port":8443,"uuid":"f374a660-2dc5-11f1-9ec5-baabcd4be2cd","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"143 [284] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"de-2-tun-single.starping1.fun","port":8083,"uuid":"062f5134-5ee9-48b8-928f-cfad28401afb","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"144 [285] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"mail.pastelluna.ir","port":13,"uuid":"bf5e8fce-29c8-4e21-891f-29200235e71a","udp":true,"tls":true,"network":"xhttp","servername":"aparat.com"}
+  - {"name":"145 [287] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN","type":"vless","server":"tr-1-tun.khabarkermanshahiran.site","port":8081,"uuid":"062f5134-5ee9-48b8-928f-cfad28401afb","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"146 [288] 🌐 | null | 99999ms |","type":"vless","server":"v2.pcjxq.digital","port":17447,"uuid":"b899463b-4d44-4c32-8537-d10aa79169bd","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"147 [289] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"mail.pastelluna.ir","port":13,"uuid":"bf5e8fce-29c8-4e21-891f-29200235e61a","udp":true,"tls":true,"network":"xhttp","servername":"aparat.com"}
+  - {"name":"148 [290] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`","type":"vless","server":"tak9.khabaronlinestar.site","port":8083,"uuid":"062f5134-5ee9-48b8-928f-cfad28401afb","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"149 [294] 🌐 | null | 99999ms | 👽21@oneclickvpnkeys","type":"vless","server":"104.18.13.229","port":8880,"uuid":"78c5b6bd-1cb6-463c-bcba-9f17ef70c85b","udp":true,"tls":false,"network":"ws"}
+  - {"name":"150 [295] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"109.120.132.6","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"151 [296] 🌐 | null | 99999ms |","type":"vless","server":"45.43.92.216","port":7443,"uuid":"8f8380ae-9f5d-4cb5-8f5f-0f70fbe054a9","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
+  - {"name":"152 [298] 🌐 | null | 99999ms |","type":"vless","server":"45.143.167.170","port":8443,"uuid":"4b056394-2f40-11f1-bffe-46c4782ac1a7","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
+  - {"name":"153 [299] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"57.129.137.241","port":443,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.v6.navy"}
+  - {"name":"154 [300] 🌐 | null | 99999ms | @filembad`","type":"vless","server":"snt1.shahramv1.site","port":443,"uuid":"14db8096-7800-4cb8-bb52-1856e3b65785","udp":true,"tls":true,"network":"tcp","servername":"snt1.shahramv1.site"}
+  - {"name":"155 [21] 🇺🇸 | US | 1167ms | 58KB | @filembad`","type":"ss","server":"37.19.198.236","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
+  - {"name":"156 [37] 🇬🇧 | GB | 2246ms | 32KB |","type":"ss","server":"admin.c1.webramz.co","port":443,"cipher":"chacha20-ietf-poly1305","password":"W74XFALLLuw6m5IA"}
+  - {"name":"157 [41] 🇬🇧 | GB | 2286ms | 31KB | @filembad`","type":"ss","server":"141.98.101.178","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
+  - {"name":"158 [42] 🇳🇱 | NL | 2483ms | 30KB | ***🐦‍🔥***-@SPEEDS_VPN","type":"ss","server":"82.38.31.62","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"159 [58] 🇳🇱 | NL | 2324ms | 28KB | @filembad`","type":"ss","server":"185.117.91.27","port":21836,"cipher":"chacha20-ietf-poly1305","password":"PDNcrHbGmb5u76Og8NatjZ"}
+  - {"name":"160 [59] 🇳🇱 | NL | 2403ms | 28KB | @filembad`","type":"ss","server":"82.38.31.82","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"161 [62] 🇳🇱 | NL | 2453ms | 28KB | @filembad`","type":"ss","server":"193.29.139.202","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"162 [66] 🇫🇮 | FI | 2519ms | 27KB | @filembad`","type":"ss","server":"193.47.60.186","port":28687,"cipher":"chacha20-ietf-poly1305","password":"yKVMoB3AwiTEznpnoq2FYR"}
+  - {"name":"163 [82] 🇩🇪 | DE | 2593ms | 26KB | ***🐦‍🔥***-@SPEEDS_VPN","type":"ss","server":"141.95.106.127","port":11201,"cipher":"chacha20-ietf-poly1305","password":"94aae0510188e8c5"}
+  - {"name":"164 [96] 🇦🇷 | AR | 2929ms | 23KB | @filembad`","type":"ss","server":"154.205.154.200","port":11201,"cipher":"chacha20-ietf-poly1305","password":"4f26d8bb593a5fc5"}
+  - {"name":"165 [102] 🇩🇪 | DE | 3319ms | 21KB |","type":"ss","server":"57.128.214.100","port":12000,"cipher":"aes-256-gcm","password":"8JCsPssfgS8tiRwiMlhARg=="}
+  - {"name":"166 [126] 🇲🇽 | MX | 5000ms | 10KB | ***✅***@AR14N24b","type":"ss","server":"147.78.1.230","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
+  - {"name":"167 [129] 🇳🇴 | NO | 2651ms | 8KB | @v2rayconfigamir 7618`","type":"ss","server":"148.135.195.95","port":8388,"cipher":"chacha20-ietf-poly1305","password":"X6btbRvJCo3uTQ--yaaT8Mvh0CgqhYTL"}
+  - {"name":"168 [134] 🇮🇪 | IE | 2973ms | 4KB | @filembad`","type":"ss","server":"38.180.152.210","port":8881,"cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"name":"169 [142] 🇺🇸 | US | 5000ms | 4KB | @filembad`","type":"ss","server":"38.135.24.131","port":443,"cipher":"chacha20-ietf-poly1305","password":"hbGrpfvNrJsUmKmPbR3iY2"}
+  - {"name":"170 [210] 🌐 | null | 99999ms | @filembad`","type":"ss","server":"217.197.161.138","port":803,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"name":"171 [211] 🌐 | null | 99999ms | @filembad`","type":"ss","server":"217.197.161.136","port":812,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"name":"172 [212] 🌐 | null | 99999ms | @filembad`","type":"ss","server":"81.90.189.18","port":811,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
+  - {"name":"173 [214] 🌐 | null | 99999ms | 🇨🇭 Switzerland (@v2FreeHub) SS`","type":"ss","server":"89.125.95.110","port":8388,"cipher":"chacha20-ietf-poly1305","password":"VEFFUGZkNtbTGAGde4vUQjqnGST-bgTP"}
+  - {"name":"174 [250] 🌐 | null | 99999ms | @filembad`","type":"ss","server":"57.129.140.88","port":8388,"cipher":"chacha20-ietf-poly1305","password":"k1v5g9FefdoO"}
+  - {"name":"175 [251] 🌐 | null | 99999ms | @filembad`","type":"ss","server":"144.31.1.106","port":4495,"cipher":"chacha20-ietf-poly1305","password":"2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3"}
+  - {"name":"176 [252] 🌐 | null | 99999ms | @filembad`","type":"ss","server":"45.92.93.108","port":1000,"cipher":"chacha20-ietf-poly1305","password":"8YLG7aioXkH5tYJu9AAYDg"}
+  - {"name":"177 [254] 🌐 | null | 99999ms |","type":"ss","server":"15.204.247.49","port":12000,"cipher":"aes-256-gcm","password":"8JCsPssfgS8tiRwiMlhARg=="}
+  - {"name":"178 [31] 🇳🇱 | NL | 2001ms | 40KB | @filembad`","type":"trojan","server":"172.67.180.92","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"179 [44] 🇳🇱 | NL | 2368ms | 30KB | ***🐦‍🔥***-@SPEEDS_VPN","type":"trojan","server":"194.124.216.185","port":443,"password":"M08tvzYWtUEJNtbpHp","udp":true,"tls":true}
+  - {"name":"180 [91] 🇸🇬 | SG | 2840ms | 24KB | @filembad`","type":"trojan","server":"ubu.okaoclax.me","port":443,"password":"13c169be-8592-4eaa-94cb-69c859e7d987","udp":true,"tls":true}
+  - {"name":"181 [106] 🇳🇴 | NO | 3076ms | 19KB | @v2rayconfigamir 2132`","type":"trojan","server":"80.173.231.254","port":12420,"password":"wp9IsiY82uQhcmgNC1eoBM","udp":true,"tls":true}
+  - {"name":"182 [108] 🇨🇿 | CZ | 3181ms | 17KB | @filembad`","type":"trojan","server":"87.236.146.32","port":2083,"password":"q2jXRWncMA7pQren_VjQKhSQfoBWK_","udp":true,"tls":true}
+  - {"name":"183 [111] 🇳🇴 | NO | 3085ms | 17KB | @v2rayconfigamir 2837`","type":"trojan","server":"148.135.195.95","port":2083,"password":"q2jXRWncMA7pQren_VjQKhSQfoBWK_","udp":true,"tls":true}
+  - {"name":"184 [118] 🇩🇪 | DE | 4247ms | 12KB | 💎7@oneclickvpnkeys","type":"trojan","server":"82.26.155.105","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
+  - {"name":"185 [119] 🇩🇪 | DE | 4545ms | 12KB | 💎9@oneclickvpnkeys","type":"trojan","server":"82.26.155.20","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
+  - {"name":"186 [120] 🇩🇪 | DE | 4649ms | 12KB | 💎10@oneclickvpnkeys","type":"trojan","server":"82.26.155.237","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
+  - {"name":"187 [121] 🇩🇪 | DE | 4356ms | 11KB | 💎8@oneclickvpnkeys","type":"trojan","server":"82.26.155.121","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
+  - {"name":"188 [122] 🇩🇪 | DE | 4640ms | 11KB | 💎5@oneclickvpnkeys","type":"trojan","server":"82.26.155.199","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
+  - {"name":"189 [123] 🇩🇪 | DE | 4642ms | 11KB | 💎3@oneclickvpnkeys","type":"trojan","server":"82.26.155.3","port":10369,"password":"n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj","udp":true,"tls":true}
+  - {"name":"190 [132] 🇨🇦 | CA | 1520ms | 7KB | 💎68@oneclickvpnkeys","type":"trojan","server":"bestcf.030101.xyz","port":443,"password":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true}
+  - {"name":"191 [264] 🌐 | null | 99999ms | @filembad`","type":"trojan","server":"160.16.214.104","port":3419,"password":"86e150eb21c6faee48e81d496d7f61c2","udp":true,"tls":true}
+  - {"name":"192 [286] 🌐 | null | 99999ms |","type":"trojan","server":"16.162.102.101","port":52687,"password":"187dda4498be9ac4f28db939d5940185","udp":true,"tls":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -385,203 +380,198 @@ proxy-groups:
     type: select
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
-      - "1 [12] 🇺🇸 | US | 1218ms | 250KB | ZHK"
-      - "2 [16] 🇺🇸 | US | 388ms | 205KB | ZHK"
-      - "3 [19] 🇺🇸 | US | 548ms | 171KB | ZHK"
-      - "4 [1] 🇺🇸 | US | 182ms | 421KB | ***✅***@AR14N24b"
-      - "5 [3] 🇨🇦 | CA | 4069ms | 390KB | @filembad`"
-      - "6 [4] 🇺🇸 | US | 484ms | 380KB | 💎41@oneclickvpnkeys"
-      - "7 [5] 🇺🇸 | US | 233ms | 306KB |"
-      - "8 [8] 🇺🇸 | US | 257ms | 289KB |"
-      - "9 [14] 🇩🇪 | DE | 1482ms | 215KB | 🧸10@oneclickvpnkeys"
-      - "10 [15] 🇨🇦 | CA | 2715ms | 211KB | 💎26@oneclickvpnkeys"
-      - "11 [20] 🇺🇸 | US | 667ms | 168KB | 💎40@oneclickvpnkeys"
-      - "12 [22] 🇨🇦 | CA | 309ms | 162KB | 💎82@oneclickvpnkeys"
-      - "13 [24] 🇱🇹 | LT | 3645ms | 141KB |"
-      - "14 [25] 🇨🇦 | CA | 265ms | 132KB | 💎22@oneclickvpnkeys"
-      - "15 [27] 🇺🇸 | US | 2585ms | 110KB | @filembad`"
-      - "16 [28] 🇬🇧 | GB | 1946ms | 97KB | 💎70@oneclickvpnkeys"
-      - "17 [29] 🇨🇦 | CA | 5000ms | 94KB | 💎85@oneclickvpnkeys"
-      - "18 [30] 🇨🇦 | CA | 5000ms | 88KB | 💎77@oneclickvpnkeys"
-      - "19 [31] 🌐 | null | 1569ms | 87KB | 💎79@oneclickvpnkeys"
-      - "20 [32] 🇨🇦 | CA | 2421ms | 87KB | 💎67@oneclickvpnkeys"
-      - "21 [33] 🇨🇦 | CA | 5000ms | 86KB |"
-      - "22 [34] 🇨🇦 | CA | 1606ms | 83KB | 💎24@oneclickvpnkeys"
-      - "23 [35] 🇨🇦 | CA | 5000ms | 83KB | 💎37@oneclickvpnkeys"
-      - "24 [36] 🇫🇷 | FR | 1859ms | 80KB | 💎53@oneclickvpnkeys"
-      - "25 [37] 🇩🇪 | DE | 2170ms | 80KB | 💎49@oneclickvpnkeys"
-      - "26 [38] 🇫🇷 | FR | 1633ms | 78KB | 💎90@oneclickvpnkeys`"
-      - "27 [39] 🇨🇦 | CA | 2119ms | 78KB | 💎76@oneclickvpnkeys"
-      - "28 [40] 🌐 | null | 917ms | 73KB | @filembad`"
-      - "29 [41] 🇨🇦 | CA | 1642ms | 72KB | 💎78@oneclickvpnkeys"
-      - "30 [42] 🇩🇪 | DE | 2124ms | 69KB | 💎33@oneclickvpnkeys"
-      - "31 [43] 🇨🇦 | CA | 2259ms | 66KB | 💎59@oneclickvpnkeys"
-      - "32 [44] 🇨🇦 | CA | 2019ms | 62KB | 💎72@oneclickvpnkeys"
-      - "33 [45] 🇩🇪 | DE | 1773ms | 61KB | 💎62@oneclickvpnkeys"
-      - "34 [46] 🇩🇪 | DE | 2653ms | 61KB | @filembad`"
-      - "35 [47] 🇩🇪 | DE | 1241ms | 60KB | ***✅***@AR14N24b"
-      - "36 [48] 🌐 | null | 1265ms | 57KB | 💎47@oneclickvpnkeys"
-      - "37 [50] 🇦🇹 | AT | 1446ms | 55KB | @filembad`"
-      - "38 [51] 🇨🇦 | CA | 1854ms | 52KB | 💎75@oneclickvpnkeys`"
-      - "39 [53] 🇳🇱 | NL | 1371ms | 52KB |"
-      - "40 [55] 🇬🇧 | GB | 1300ms | 52KB | 💎13@oneclickvpnkeys"
-      - "41 [56] 🇫🇷 | FR | 1391ms | 51KB | 💎52@oneclickvpnkeys"
-      - "42 [57] 🇩🇪 | DE | 1414ms | 51KB | 🚨Multi🚨"
-      - "43 [61] 🇩🇪 | DE | 1575ms | 51KB | 💎36@oneclickvpnkeys"
-      - "44 [63] 🇩🇪 | DE | 1648ms | 50KB | 💎54@oneclickvpnkeys"
-      - "45 [66] 🇫🇷 | FR | 1433ms | 50KB | 💎61@oneclickvpnkeys"
-      - "46 [68] 🇩🇪 | DE | 1411ms | 50KB |"
-      - "47 [70] 🇩🇪 | DE | 1433ms | 50KB |  `"
-      - "48 [71] 🇩🇪 | DE | 1391ms | 50KB | 🧸13@oneclickvpnkeys"
-      - "49 [72] 🇳🇱 | NL | 1438ms | 50KB |"
-      - "50 [74] 🇳🇱 | NL | 1502ms | 50KB | 💎46@oneclickvpnkeys"
-      - "51 [75] 🇩🇪 | DE | 1412ms | 50KB | ☮️2@oneclickvpnkeys"
-      - "52 [77] 🇳🇱 | NL | 1487ms | 50KB | 💎12@oneclickvpnkeys"
-      - "53 [78] 🇳🇱 | NL | 1420ms | 49KB | 💎66@oneclickvpnkeys"
-      - "54 [82] 🇳🇱 | NL | 1450ms | 48KB | 🧸46@oneclickvpnkeys"
-      - "55 [83] 🇩🇪 | DE | 1497ms | 48KB | 🧸1@oneclickvpnkeys"
-      - "56 [85] 🇩🇪 | DE | 1394ms | 48KB | 💎28@oneclickvpnkeys"
-      - "57 [90] 🇫🇷 | FR | 1755ms | 48KB | 💎74@oneclickvpnkeys"
-      - "58 [92] 🇬🇧 | GB | 1343ms | 48KB |"
-      - "59 [94] 🇬🇧 | GB | 1464ms | 48KB |"
-      - "60 [100] 🇩🇪 | DE | 1385ms | 47KB | 💎6@oneclickvpnkeys"
-      - "61 [104] 🇳🇱 | NL | 1622ms | 47KB | ***✅***@AR14N24b"
-      - "62 [106] 🇩🇪 | DE | 1509ms | 47KB | ☮️1@oneclickvpnkeys"
-      - "63 [108] 🇩🇪 | DE | 1413ms | 47KB |"
-      - "64 [111] 🇩🇪 | DE | 1466ms | 47KB | 🧸3@oneclickvpnkeys"
-      - "65 [112] 🇳🇱 | NL | 1594ms | 47KB | 💎50@oneclickvpnkeys"
-      - "66 [114] 🇩🇪 | DE | 1531ms | 46KB | 🧸12@oneclickvpnkeys"
-      - "67 [118] 🇫🇮 | FI | 1537ms | 46KB | 💎58@oneclickvpnkeys"
-      - "68 [119] 🇩🇪 | DE | 1567ms | 46KB | 💎1@oneclickvpnkeys"
-      - "69 [120] 🇳🇱 | NL | 1593ms | 46KB |"
-      - "70 [124] 🇳🇱 | NL | 1539ms | 45KB | @filembad`"
-      - "71 [125] 🇩🇪 | DE | 1570ms | 45KB | 💎63@oneclickvpnkeys"
-      - "72 [127] 🌐 | null | 859ms | 45KB | 💎18@oneclickvpnkeys"
-      - "73 [131] 🇩🇪 | DE | 1573ms | 45KB | 💎57@oneclickvpnkeys"
-      - "74 [134] 🇩🇪 | DE | 1691ms | 45KB | 🧸47@oneclickvpnkeys"
-      - "75 [136] 🇳🇱 | NL | 1544ms | 44KB |"
-      - "76 [137] 🇳🇱 | NL | 1658ms | 44KB | 💎99@oneclickvpnkeys"
-      - "77 [138] 🇩🇪 | DE | 1517ms | 44KB | 🧸6@oneclickvpnkeys"
-      - "78 [139] 🇳🇱 | NL | 1538ms | 44KB | 🧸15@oneclickvpnkeys"
-      - "79 [141] 🇨🇦 | CA | 2590ms | 44KB | 💎69@oneclickvpnkeys"
-      - "80 [142] 🇳🇱 | NL | 1587ms | 44KB | @filembad`"
-      - "81 [143] 🇩🇪 | DE | 1591ms | 44KB |"
-      - "82 [144] 🇳🇱 | NL | 1614ms | 44KB |"
-      - "83 [147] 🇩🇪 | DE | 1529ms | 43KB | 🧸4@oneclickvpnkeys"
-      - "84 [149] 🇨🇦 | CA | 5000ms | 43KB | 💎56@oneclickvpnkeys"
-      - "85 [152] 🇨🇦 | CA | 1622ms | 43KB | 💎80@oneclickvpnkeys"
-      - "86 [153] 🇳🇱 | NL | 1226ms | 43KB | 💎38@oneclickvpnkeys"
-      - "87 [156] 🇩🇪 | DE | 1673ms | 42KB | 💎83@oneclickvpnkeys"
-      - "88 [157] 🇫🇷 | FR | 1811ms | 42KB | 💎87@oneclickvpnkeys"
-      - "89 [158] 🇩🇪 | DE | 5000ms | 42KB | @filembad`"
-      - "90 [159] 🇳🇱 | NL | 1720ms | 42KB | 💎84@oneclickvpnkeys"
-      - "91 [160] 🇳🇱 | NL | 1567ms | 42KB |"
-      - "92 [161] 🇳🇱 | NL | 1544ms | 42KB |"
-      - "93 [162] 🇩🇪 | DE | 1581ms | 41KB | 🧸2@oneclickvpnkeys"
-      - "94 [164] 🇫🇷 | FR | 1697ms | 41KB | 💎43@oneclickvpnkeys"
-      - "95 [165] 🇨🇦 | CA | 2271ms | 41KB | 💎30@oneclickvpnkeys`"
-      - "96 [166] 🇨🇦 | CA | 2824ms | 41KB | @filembad`"
-      - "97 [167] 🇵🇱 | PL | 1710ms | 41KB |"
-      - "98 [168] 🇨🇿 | CZ | 1838ms | 41KB |"
-      - "99 [169] 🌐 | null | 2395ms | 40KB | ***🐦‍🔥***-@SPEEDS_VPN"
-      - "100 [171] 🇭🇷 | HR | 1844ms | 39KB |"
-      - "101 [173] 🇵🇱 | PL | 1816ms | 38KB |  `"
-      - "102 [175] 🇱🇹 | LT | 1849ms | 38KB |"
-      - "103 [176] 🇫🇮 | FI | 1786ms | 37KB | @filembad`"
-      - "104 [178] 🇭🇺 | HU | 1859ms | 36KB |"
-      - "105 [181] 🇺🇦 | UA | 2098ms | 36KB |"
-      - "106 [183] 🇱🇻 | LV | 1948ms | 35KB | 💎89@oneclickvpnkeys"
-      - "107 [184] 🇭🇺 | HU | 2050ms | 35KB |  `"
-      - "108 [185] 🇫🇮 | FI | 1981ms | 35KB | 💎60@oneclickvpnkeys`"
-      - "109 [188] 🇷🇸 | RS | 2001ms | 34KB | 💎86@oneclickvpnkeys"
-      - "110 [190] 🇹🇷 | TR | 1969ms | 34KB |"
-      - "111 [191] 🇺🇸 | US | 1230ms | 34KB |"
-      - "112 [196] 🇺🇸 | US | 1323ms | 31KB |"
-      - "113 [203] 🇫🇮 | FI | 1939ms | 27KB |"
-      - "114 [205] 🇦🇪 | AE | 5000ms | 24KB | @filembad`"
-      - "115 [206] 🇱🇻 | LV | 1838ms | 23KB | 💎92@oneclickvpnkeys"
-      - "116 [210] 🇫🇮 | FI | 1932ms | 21KB |"
-      - "117 [212] 🇮🇩 | ID | 4060ms | 20KB | 💎73@oneclickvpnkeys"
-      - "118 [215] 🇨🇦 | CA | 5000ms | 18KB | 💎71@oneclickvpnkeys"
-      - "119 [223] 🇸🇮 | SI | 2376ms | 12KB |"
-      - "120 [226] 🇪🇪 | EE | 4772ms | 8KB |"
-      - "121 [228] 🇵🇱 | PL | 5000ms | 4KB | 💎95@oneclickvpnkeys"
-      - "122 [229] 🇷🇺 | RU | 5000ms | 4KB | @filembad`"
-      - "123 [230] 🇷🇺 | RU | 5000ms | 4KB | 💎96@oneclickvpnkeys"
-      - "124 [231] 🇮🇸 | IS | 5000ms | 4KB |"
-      - "125 [232] 🇱🇻 | LV | 5000ms | 4KB | @filembad`"
-      - "126 [233] 🇨🇭 | CH | 5000ms | 4KB | 🇨🇭 Switzerland (@v2FreeHub) Vless`"
-      - "127 [235] 🇷🇴 | RO | 5000ms | 4KB |"
-      - "128 [237] 🇮🇹 | IT | 1803ms | 💎81@oneclickvpnkeys"
-      - "129 [238] 🌐 | null | 2059ms | 💎16@oneclickvpnkeys"
-      - "130 [240] 🌐 | null | 5001ms | @filembad`"
-      - "131 [245] 🌐 | null | 99999ms | Telegram : @lrnbymaa"
-      - "132 [247] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
-      - "133 [248] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
-      - "134 [249] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
-      - "135 [253] 🌐 | null | 99999ms | @filembad"
-      - "136 [254] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1"
-      - "137 [255] 🌐 | null | 99999ms | @filembad`"
-      - "138 [257] 🌐 | null | 99999ms | @filembad`"
-      - "139 [259] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
-      - "140 [261] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
-      - "141 [264] 🌐 | null | 99999ms | ***✅***@AR14N24b"
-      - "142 [265] 🌐 | null | 99999ms |"
-      - "143 [267] 🌐 | null | 99999ms | @filembad`"
-      - "144 [268] 🌐 | null | 99999ms | @filembad`"
-      - "145 [270] 🌐 | null | 99999ms |"
-      - "146 [271] 🌐 | null | 99999ms | @filembad`"
-      - "147 [275] 🌐 | null | 99999ms | ***✅***@AR14N24b"
-      - "148 [276] 🌐 | null | 99999ms | @filembad`"
-      - "149 [278] 🌐 | null | 99999ms | 💎42@oneclickvpnkeys"
-      - "150 [282] 🌐 | null | 99999ms | @filembad`"
-      - "151 [286] 🌐 | null | 99999ms | @filembad`"
-      - "152 [287] 🌐 | null | 99999ms | @filembad`"
-      - "153 [288] 🌐 | null | 99999ms | @filembad`"
-      - "154 [294] 🌐 | null | 99999ms | Lrnbymaa`"
-      - "155 [295] 🌐 | null | 99999ms | 💎55@oneclickvpnkeys"
-      - "156 [297] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1"
-      - "157 [299] 🌐 | null | 99999ms | 💎51@oneclickvpnkeys"
-      - "158 [6] 🇺🇸 | US | 296ms | 306KB | @filembad`"
-      - "159 [80] 🇳🇱 | NL | 1537ms | 49KB | ***🐦‍🔥***-@SPEEDS_VPN"
-      - "160 [95] 🇩🇪 | DE | 1475ms | 48KB | hamedvpns"
-      - "161 [98] 🇳🇱 | NL | 1499ms | 47KB |  `"
-      - "162 [102] 🇳🇱 | NL | 1490ms | 47KB |"
-      - "163 [105] 🇳🇱 | NL | 1486ms | 47KB |"
-      - "164 [116] 🇳🇱 | NL | 1568ms | 46KB | ***✅***@AR14N24b"
-      - "165 [123] 🇳🇱 | NL | 1568ms | 45KB |"
-      - "166 [129] 🇳🇱 | NL | 1504ms | 45KB | @filembad`"
-      - "167 [132] 🇬🇧 | GB | 1350ms | 45KB | @filembad`"
-      - "168 [140] 🇳🇱 | NL | 1551ms | 44KB | ***✅***@AR14N24b"
-      - "169 [179] 🇩🇪 | DE | 1585ms | 36KB | ***🌪***-@SPEEDS_VPN1`"
-      - "170 [182] 🇩🇪 | DE | 1548ms | 36KB | @filembad`"
-      - "171 [189] 🇩🇪 | DE | 1719ms | 34KB |"
-      - "172 [201] 🇨🇭 | CH | 2107ms | 30KB |"
-      - "173 [207] 🇦🇪 | AE | 3117ms | 23KB | @filembad`"
-      - "174 [208] 🇳🇴 | NO | 1789ms | 21KB | @v2rayconfigamir 7618`"
-      - "175 [209] 🇿🇦 | ZA | 3275ms | 21KB | @filembad`"
-      - "176 [211] 🇿🇦 | ZA | 3268ms | 20KB | ***✅***@AR14N24b"
-      - "177 [214] 🇬🇧 | GB | 2029ms | 18KB | @filembad`"
-      - "178 [224] 🇲🇽 | MX | 2749ms | 11KB | ***✅***@AR14N24b"
-      - "179 [239] 🌐 | null | 5001ms |"
-      - "180 [273] 🌐 | null | 99999ms | @filembad`"
-      - "181 [298] 🌐 | null | 99999ms | @filembad`"
-      - "182 [300] 🌐 | null | 99999ms |"
-      - "183 [26] 🇺🇸 | US | 717ms | 122KB | 💎68@oneclickvpnkeys"
-      - "184 [52] 🇳🇱 | NL | 1243ms | 52KB |"
-      - "185 [62] 🇳🇱 | NL | 1695ms | 51KB | @filembad`"
-      - "186 [195] 🇭🇺 | HU | 1890ms | 32KB | @filembad`"
-      - "187 [197] 🇳🇴 | NO | 1894ms | 31KB | @v2rayconfigamir 2837`"
-      - "188 [199] 🇳🇴 | NO | 1789ms | 31KB | @v2rayconfigamir 2132`"
-      - "189 [216] 🇮🇳 | IN | 4628ms | 16KB | @filembad`"
-      - "190 [217] 🇩🇪 | DE | 3634ms | 15KB | 💎8@oneclickvpnkeys"
-      - "191 [218] 🇩🇪 | DE | 3663ms | 15KB | 💎5@oneclickvpnkeys"
-      - "192 [219] 🇩🇪 | DE | 3670ms | 15KB | 💎9@oneclickvpnkeys"
-      - "193 [220] 🇩🇪 | DE | 3621ms | 14KB | 💎3@oneclickvpnkeys"
-      - "194 [221] 🇩🇪 | DE | 3654ms | 14KB | 💎10@oneclickvpnkeys"
-      - "195 [222] 🇩🇪 | DE | 3708ms | 14KB | 💎7@oneclickvpnkeys"
-      - "196 [241] 🌐 | null | 5001ms | @v2rayconfigamir 5836`"
-      - "197 [252] 🌐 | null | 99999ms | @filembad`"
+      - "1 [1] 🇺🇸 | US | 250ms | 365KB | ZHK"
+      - "2 [3] 🇺🇸 | US | 284ms | 360KB | ZHK"
+      - "3 [4] 🇺🇸 | US | 341ms | 320KB | ZHK"
+      - "4 [2] 🇺🇸 | US | 2855ms | 363KB |"
+      - "5 [6] 🇨🇦 | CA | 1406ms | 211KB | 👽22@oneclickvpnkeys"
+      - "6 [7] 🇺🇸 | US | 369ms | 206KB | 👽17@oneclickvpnkeys"
+      - "7 [8] 🇨🇦 | CA | 4061ms | 178KB | 💎82@oneclickvpnkeys"
+      - "8 [10] 🇩🇪 | DE | 3764ms | 129KB | 🧸47@oneclickvpnkeys"
+      - "9 [12] 🇺🇸 | US | 214ms | 83KB | 💎47@oneclickvpnkeys"
+      - "10 [14] 🇨🇦 | CA | 2742ms | 73KB | @filembad`"
+      - "11 [15] 🇨🇦 | CA | 1045ms | 67KB | 👽25@oneclickvpnkeys"
+      - "12 [16] 🌐 | null | 3379ms | 66KB | 💎85@oneclickvpnkeys"
+      - "13 [17] 🇨🇦 | CA | 3607ms | 63KB | 💎77@oneclickvpnkeys"
+      - "14 [18] 🇨🇦 | CA | 4923ms | 62KB | 💎62@oneclickvpnkeys"
+      - "15 [20] 🇨🇦 | CA | 2940ms | 61KB | 💎74@oneclickvpnkeys"
+      - "16 [22] 🇨🇦 | CA | 5000ms | 58KB | 💎76@oneclickvpnkeys"
+      - "17 [23] 🇨🇦 | CA | 3927ms | 56KB |"
+      - "18 [24] 🇨🇦 | CA | 5000ms | 55KB | 💎78@oneclickvpnkeys"
+      - "19 [25] 🇨🇦 | CA | 3666ms | 55KB | 💎67@oneclickvpnkeys"
+      - "20 [26] 🇨🇦 | CA | 3195ms | 47KB | 💎72@oneclickvpnkeys"
+      - "21 [29] 🇨🇦 | CA | 3978ms | 46KB | 💎56@oneclickvpnkeys"
+      - "22 [30] 🇨🇦 | CA | 5000ms | 43KB | @filembad`"
+      - "23 [32] 🇫🇷 | FR | 1962ms | 39KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "24 [34] 🇳🇱 | NL | 1913ms | 36KB | 👽30@oneclickvpnkeys`"
+      - "25 [35] 🇨🇦 | CA | 3750ms | 35KB | @filembad`"
+      - "26 [36] 🇩🇪 | DE | 2195ms | 34KB | 💎54@oneclickvpnkeys"
+      - "27 [38] 🇳🇱 | NL | 2404ms | 32KB | @filembad`"
+      - "28 [39] 🇩🇪 | DE | 2020ms | 32KB | @filembad`"
+      - "29 [40] 🇫🇮 | FI | 2470ms | 31KB | @filembad`"
+      - "30 [43] 🇨🇦 | CA | 3633ms | 30KB | 💎70@oneclickvpnkeys"
+      - "31 [45] 🇳🇱 | NL | 2386ms | 30KB | @filembad`"
+      - "32 [46] 🇩🇪 | DE | 2468ms | 30KB | 👽9@oneclickvpnkeys"
+      - "33 [48] 🇳🇱 | NL | 4115ms | 29KB | 💎46@oneclickvpnkeys"
+      - "34 [49] 🇫🇷 | FR | 2112ms | 29KB | 👽18@oneclickvpnkeys"
+      - "35 [50] 🇫🇷 | FR | 2432ms | 29KB | 💎61@oneclickvpnkeys"
+      - "36 [51] 🇳🇱 | NL | 2644ms | 29KB |"
+      - "37 [52] 🇳🇱 | NL | 2675ms | 29KB |"
+      - "38 [53] 🇩🇪 | DE | 2486ms | 29KB | 🧸9@oneclickvpnkeys"
+      - "39 [54] 🇫🇮 | FI | 2397ms | 29KB | 💎58@oneclickvpnkeys"
+      - "40 [55] 🇩🇪 | DE | 2539ms | 29KB | 👽7@oneclickvpnkeys"
+      - "41 [56] 🇫🇷 | FR | 2425ms | 28KB | 💎52@oneclickvpnkeys"
+      - "42 [57] 🇳🇱 | NL | 2196ms | 28KB | @filembad`"
+      - "43 [60] 🇩🇪 | DE | 2526ms | 28KB | 👽3@oneclickvpnkeys"
+      - "44 [61] 🇳🇱 | NL | 2583ms | 28KB | 🧸15@oneclickvpnkeys"
+      - "45 [63] 🇩🇪 | DE | 2461ms | 28KB |"
+      - "46 [64] 🇨🇭 | CH | 2580ms | 27KB | 👽26@oneclickvpnkeys"
+      - "47 [65] 🇳🇱 | NL | 2756ms | 27KB | 💎84@oneclickvpnkeys"
+      - "48 [67] 🇩🇪 | DE | 2492ms | 27KB | 👽14@oneclickvpnkeys"
+      - "49 [68] 🇩🇪 | DE | 2710ms | 27KB | 🧸1@oneclickvpnkeys"
+      - "50 [69] 🇩🇪 | DE | 2430ms | 27KB | 👽6@oneclickvpnkeys"
+      - "51 [70] 🇩🇪 | DE | 2461ms | 27KB |"
+      - "52 [72] 🇬🇧 | GB | 2559ms | 27KB |"
+      - "53 [75] 🇩🇪 | DE | 2501ms | 27KB | 🧸13@oneclickvpnkeys"
+      - "54 [76] 🇩🇪 | DE | 2483ms | 27KB | 👽11@oneclickvpnkeys"
+      - "55 [77] 🇳🇱 | NL | 2880ms | 27KB | 💎99@oneclickvpnkeys"
+      - "56 [78] 🇩🇪 | DE | 3004ms | 26KB |"
+      - "57 [79] 🇩🇪 | DE | 2326ms | 26KB |"
+      - "58 [80] 🇩🇪 | DE | 2587ms | 26KB | 👽15@oneclickvpnkeys`"
+      - "59 [81] 🇩🇪 | DE | 2641ms | 26KB | 💎63@oneclickvpnkeys"
+      - "60 [83] 🇳🇱 | NL | 2614ms | 26KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "61 [85] 🇩🇪 | DE | 2638ms | 25KB | 💎83@oneclickvpnkeys"
+      - "62 [86] 🇱🇻 | LV | 3037ms | 25KB | 💎92@oneclickvpnkeys"
+      - "63 [87] 🇩🇪 | DE | 2480ms | 25KB | 👽13@oneclickvpnkeys"
+      - "64 [88] 🇫🇮 | FI | 3136ms | 25KB | @filembad`"
+      - "65 [89] 🇩🇪 | DE | 2696ms | 25KB | 👽5@oneclickvpnkeys"
+      - "66 [92] 🇳🇱 | NL | 2880ms | 24KB | 💎50@oneclickvpnkeys"
+      - "67 [93] 🇷🇸 | RS | 3149ms | 24KB | 💎86@oneclickvpnkeys"
+      - "68 [94] 🇫🇮 | FI | 3114ms | 24KB | 💎60@oneclickvpnkeys`"
+      - "69 [99] 🇨🇦 | CA | 3413ms | 22KB | 💎90@oneclickvpnkeys`"
+      - "70 [100] 🇮🇹 | IT | 3964ms | 22KB | 💎81@oneclickvpnkeys"
+      - "71 [101] 🌐 | null | 5000ms | 21KB | 💎49@oneclickvpnkeys"
+      - "72 [103] 🇨🇦 | CA | 1237ms | 21KB | 👽19@oneclickvpnkeys"
+      - "73 [104] 🇩🇪 | DE | 1441ms | 21KB | 👽28@oneclickvpnkeys"
+      - "74 [107] 🇨🇦 | CA | 5000ms | 17KB | 👽27@oneclickvpnkeys"
+      - "75 [109] 🌐 | null | 5000ms | 17KB | 💎79@oneclickvpnkeys"
+      - "76 [110] 🇨🇦 | CA | 3573ms | 17KB | 💎59@oneclickvpnkeys"
+      - "77 [112] 🇻🇳 | VN | 3644ms | 16KB | @v2rayconfigamir 5708`"
+      - "78 [115] 🇳🇱 | NL | 3011ms | 13KB | 💎12@oneclickvpnkeys"
+      - "79 [116] 🇱🇹 | LT | 3046ms | 13KB |"
+      - "80 [125] 🇨🇦 | CA | 3781ms | 10KB | 💎69@oneclickvpnkeys"
+      - "81 [127] 🌐 | null | 3155ms | 10KB | 💎71@oneclickvpnkeys"
+      - "82 [128] 🇩🇪 | DE | 5000ms | 8KB | ☮️1@oneclickvpnkeys"
+      - "83 [131] 🇬🇧 | GB | 4289ms | 7KB |"
+      - "84 [133] 🇨🇦 | CA | 5000ms | 4KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "85 [135] 🇨🇦 | CA | 3593ms | 4KB | 💎80@oneclickvpnkeys"
+      - "86 [136] 🇨🇦 | CA | 5000ms | 4KB | 💎53@oneclickvpnkeys"
+      - "87 [137] 🇷🇺 | RU | 5000ms | 4KB | 💎98@oneclickvpnkeys"
+      - "88 [138] 🇷🇺 | RU | 5000ms | 4KB | 💎96@oneclickvpnkeys"
+      - "89 [140] 🇮🇸 | IS | 5000ms | 4KB |"
+      - "90 [141] 🇫🇷 | FR | 5000ms | 4KB | 💎87@oneclickvpnkeys"
+      - "91 [143] 🇵🇱 | PL | 5000ms | 3KB | 💎95@oneclickvpnkeys"
+      - "92 [145] 🇬🇧 | GB | 1945ms | 👽29@oneclickvpnkeys"
+      - "93 [146] 🇨🇦 | CA | 4031ms | 💎75@oneclickvpnkeys`"
+      - "94 [147] 🇳🇱 | NL | 5000ms | 👽16@oneclickvpnkeys"
+      - "95 [148] 🌐 | null | 5001ms | 💎89@oneclickvpnkeys"
+      - "96 [149] 🌐 | null | 5001ms |"
+      - "97 [150] 🌐 | null | 99999ms | @filembad"
+      - "98 [151] 🌐 | null | 99999ms |"
+      - "99 [155] 🌐 | null | 99999ms | @filembad`"
+      - "100 [157] 🌐 | null | 99999ms | Psiphon - @i10VPN 6`"
+      - "101 [164] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "102 [182] 🌐 | null | 99999ms | @filembad`"
+      - "103 [187] 🌐 | null | 99999ms | @filembad`"
+      - "104 [191] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
+      - "105 [193] 🌐 | null | 99999ms |"
+      - "106 [199] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
+      - "107 [202] 🌐 | null | 99999ms | @filembad`"
+      - "108 [203] 🌐 | null | 99999ms | @filembad`"
+      - "109 [207] 🌐 | null | 99999ms | @filembad`"
+      - "110 [208] 🌐 | null | 99999ms | @filembad`"
+      - "111 [209] 🌐 | null | 99999ms |"
+      - "112 [215] 🌐 | null | 99999ms | @filembad`"
+      - "113 [218] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1"
+      - "114 [219] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1"
+      - "115 [223] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "116 [226] 🌐 | null | 99999ms |"
+      - "117 [230] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
+      - "118 [233] 🌐 | null | 99999ms | @filembad`"
+      - "119 [234] 🌐 | null | 99999ms | @filembad`"
+      - "120 [236] 🌐 | null | 99999ms | @filembad`"
+      - "121 [237] 🌐 | null | 99999ms | @filembad`"
+      - "122 [241] 🌐 | null | 99999ms | @SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "123 [242] 🌐 | null | 99999ms |"
+      - "124 [246] 🌐 | null | 99999ms | @filembad`"
+      - "125 [247] 🌐 | null | 99999ms | @filembad`"
+      - "126 [248] 🌐 | null | 99999ms | @filembad`"
+      - "127 [249] 🌐 | null | 99999ms | @filembad`"
+      - "128 [253] 🌐 | null | 99999ms | @filembad`"
+      - "129 [256] 🌐 | null | 99999ms | @filembad`"
+      - "130 [257] 🌐 | null | 99999ms | @filembad`"
+      - "131 [260] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "132 [263] 🌐 | null | 99999ms | @filembad`"
+      - "133 [265] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "134 [266] 🌐 | null | 99999ms | 💎55@oneclickvpnkeys"
+      - "135 [268] 🌐 | null | 99999ms | 💎48@oneclickvpnkeys"
+      - "136 [269] 🌐 | null | 99999ms | @filembad`"
+      - "137 [272] 🌐 | null | 99999ms | @filembad`"
+      - "138 [275] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "139 [277] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
+      - "140 [278] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "141 [282] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "142 [283] 🌐 | null | 99999ms | 👽12@oneclickvpnkeys"
+      - "143 [284] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "144 [285] 🌐 | null | 99999ms | @filembad`"
+      - "145 [287] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "146 [288] 🌐 | null | 99999ms |"
+      - "147 [289] 🌐 | null | 99999ms | @filembad`"
+      - "148 [290] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
+      - "149 [294] 🌐 | null | 99999ms | 👽21@oneclickvpnkeys"
+      - "150 [295] 🌐 | null | 99999ms | @filembad`"
+      - "151 [296] 🌐 | null | 99999ms |"
+      - "152 [298] 🌐 | null | 99999ms |"
+      - "153 [299] 🌐 | null | 99999ms | @filembad`"
+      - "154 [300] 🌐 | null | 99999ms | @filembad`"
+      - "155 [21] 🇺🇸 | US | 1167ms | 58KB | @filembad`"
+      - "156 [37] 🇬🇧 | GB | 2246ms | 32KB |"
+      - "157 [41] 🇬🇧 | GB | 2286ms | 31KB | @filembad`"
+      - "158 [42] 🇳🇱 | NL | 2483ms | 30KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "159 [58] 🇳🇱 | NL | 2324ms | 28KB | @filembad`"
+      - "160 [59] 🇳🇱 | NL | 2403ms | 28KB | @filembad`"
+      - "161 [62] 🇳🇱 | NL | 2453ms | 28KB | @filembad`"
+      - "162 [66] 🇫🇮 | FI | 2519ms | 27KB | @filembad`"
+      - "163 [82] 🇩🇪 | DE | 2593ms | 26KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "164 [96] 🇦🇷 | AR | 2929ms | 23KB | @filembad`"
+      - "165 [102] 🇩🇪 | DE | 3319ms | 21KB |"
+      - "166 [126] 🇲🇽 | MX | 5000ms | 10KB | ***✅***@AR14N24b"
+      - "167 [129] 🇳🇴 | NO | 2651ms | 8KB | @v2rayconfigamir 7618`"
+      - "168 [134] 🇮🇪 | IE | 2973ms | 4KB | @filembad`"
+      - "169 [142] 🇺🇸 | US | 5000ms | 4KB | @filembad`"
+      - "170 [210] 🌐 | null | 99999ms | @filembad`"
+      - "171 [211] 🌐 | null | 99999ms | @filembad`"
+      - "172 [212] 🌐 | null | 99999ms | @filembad`"
+      - "173 [214] 🌐 | null | 99999ms | 🇨🇭 Switzerland (@v2FreeHub) SS`"
+      - "174 [250] 🌐 | null | 99999ms | @filembad`"
+      - "175 [251] 🌐 | null | 99999ms | @filembad`"
+      - "176 [252] 🌐 | null | 99999ms | @filembad`"
+      - "177 [254] 🌐 | null | 99999ms |"
+      - "178 [31] 🇳🇱 | NL | 2001ms | 40KB | @filembad`"
+      - "179 [44] 🇳🇱 | NL | 2368ms | 30KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "180 [91] 🇸🇬 | SG | 2840ms | 24KB | @filembad`"
+      - "181 [106] 🇳🇴 | NO | 3076ms | 19KB | @v2rayconfigamir 2132`"
+      - "182 [108] 🇨🇿 | CZ | 3181ms | 17KB | @filembad`"
+      - "183 [111] 🇳🇴 | NO | 3085ms | 17KB | @v2rayconfigamir 2837`"
+      - "184 [118] 🇩🇪 | DE | 4247ms | 12KB | 💎7@oneclickvpnkeys"
+      - "185 [119] 🇩🇪 | DE | 4545ms | 12KB | 💎9@oneclickvpnkeys"
+      - "186 [120] 🇩🇪 | DE | 4649ms | 12KB | 💎10@oneclickvpnkeys"
+      - "187 [121] 🇩🇪 | DE | 4356ms | 11KB | 💎8@oneclickvpnkeys"
+      - "188 [122] 🇩🇪 | DE | 4640ms | 11KB | 💎5@oneclickvpnkeys"
+      - "189 [123] 🇩🇪 | DE | 4642ms | 11KB | 💎3@oneclickvpnkeys"
+      - "190 [132] 🇨🇦 | CA | 1520ms | 7KB | 💎68@oneclickvpnkeys"
+      - "191 [264] 🌐 | null | 99999ms | @filembad`"
+      - "192 [286] 🌐 | null | 99999ms |"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -590,203 +580,198 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "1 [12] 🇺🇸 | US | 1218ms | 250KB | ZHK"
-      - "2 [16] 🇺🇸 | US | 388ms | 205KB | ZHK"
-      - "3 [19] 🇺🇸 | US | 548ms | 171KB | ZHK"
-      - "4 [1] 🇺🇸 | US | 182ms | 421KB | ***✅***@AR14N24b"
-      - "5 [3] 🇨🇦 | CA | 4069ms | 390KB | @filembad`"
-      - "6 [4] 🇺🇸 | US | 484ms | 380KB | 💎41@oneclickvpnkeys"
-      - "7 [5] 🇺🇸 | US | 233ms | 306KB |"
-      - "8 [8] 🇺🇸 | US | 257ms | 289KB |"
-      - "9 [14] 🇩🇪 | DE | 1482ms | 215KB | 🧸10@oneclickvpnkeys"
-      - "10 [15] 🇨🇦 | CA | 2715ms | 211KB | 💎26@oneclickvpnkeys"
-      - "11 [20] 🇺🇸 | US | 667ms | 168KB | 💎40@oneclickvpnkeys"
-      - "12 [22] 🇨🇦 | CA | 309ms | 162KB | 💎82@oneclickvpnkeys"
-      - "13 [24] 🇱🇹 | LT | 3645ms | 141KB |"
-      - "14 [25] 🇨🇦 | CA | 265ms | 132KB | 💎22@oneclickvpnkeys"
-      - "15 [27] 🇺🇸 | US | 2585ms | 110KB | @filembad`"
-      - "16 [28] 🇬🇧 | GB | 1946ms | 97KB | 💎70@oneclickvpnkeys"
-      - "17 [29] 🇨🇦 | CA | 5000ms | 94KB | 💎85@oneclickvpnkeys"
-      - "18 [30] 🇨🇦 | CA | 5000ms | 88KB | 💎77@oneclickvpnkeys"
-      - "19 [31] 🌐 | null | 1569ms | 87KB | 💎79@oneclickvpnkeys"
-      - "20 [32] 🇨🇦 | CA | 2421ms | 87KB | 💎67@oneclickvpnkeys"
-      - "21 [33] 🇨🇦 | CA | 5000ms | 86KB |"
-      - "22 [34] 🇨🇦 | CA | 1606ms | 83KB | 💎24@oneclickvpnkeys"
-      - "23 [35] 🇨🇦 | CA | 5000ms | 83KB | 💎37@oneclickvpnkeys"
-      - "24 [36] 🇫🇷 | FR | 1859ms | 80KB | 💎53@oneclickvpnkeys"
-      - "25 [37] 🇩🇪 | DE | 2170ms | 80KB | 💎49@oneclickvpnkeys"
-      - "26 [38] 🇫🇷 | FR | 1633ms | 78KB | 💎90@oneclickvpnkeys`"
-      - "27 [39] 🇨🇦 | CA | 2119ms | 78KB | 💎76@oneclickvpnkeys"
-      - "28 [40] 🌐 | null | 917ms | 73KB | @filembad`"
-      - "29 [41] 🇨🇦 | CA | 1642ms | 72KB | 💎78@oneclickvpnkeys"
-      - "30 [42] 🇩🇪 | DE | 2124ms | 69KB | 💎33@oneclickvpnkeys"
-      - "31 [43] 🇨🇦 | CA | 2259ms | 66KB | 💎59@oneclickvpnkeys"
-      - "32 [44] 🇨🇦 | CA | 2019ms | 62KB | 💎72@oneclickvpnkeys"
-      - "33 [45] 🇩🇪 | DE | 1773ms | 61KB | 💎62@oneclickvpnkeys"
-      - "34 [46] 🇩🇪 | DE | 2653ms | 61KB | @filembad`"
-      - "35 [47] 🇩🇪 | DE | 1241ms | 60KB | ***✅***@AR14N24b"
-      - "36 [48] 🌐 | null | 1265ms | 57KB | 💎47@oneclickvpnkeys"
-      - "37 [50] 🇦🇹 | AT | 1446ms | 55KB | @filembad`"
-      - "38 [51] 🇨🇦 | CA | 1854ms | 52KB | 💎75@oneclickvpnkeys`"
-      - "39 [53] 🇳🇱 | NL | 1371ms | 52KB |"
-      - "40 [55] 🇬🇧 | GB | 1300ms | 52KB | 💎13@oneclickvpnkeys"
-      - "41 [56] 🇫🇷 | FR | 1391ms | 51KB | 💎52@oneclickvpnkeys"
-      - "42 [57] 🇩🇪 | DE | 1414ms | 51KB | 🚨Multi🚨"
-      - "43 [61] 🇩🇪 | DE | 1575ms | 51KB | 💎36@oneclickvpnkeys"
-      - "44 [63] 🇩🇪 | DE | 1648ms | 50KB | 💎54@oneclickvpnkeys"
-      - "45 [66] 🇫🇷 | FR | 1433ms | 50KB | 💎61@oneclickvpnkeys"
-      - "46 [68] 🇩🇪 | DE | 1411ms | 50KB |"
-      - "47 [70] 🇩🇪 | DE | 1433ms | 50KB |  `"
-      - "48 [71] 🇩🇪 | DE | 1391ms | 50KB | 🧸13@oneclickvpnkeys"
-      - "49 [72] 🇳🇱 | NL | 1438ms | 50KB |"
-      - "50 [74] 🇳🇱 | NL | 1502ms | 50KB | 💎46@oneclickvpnkeys"
-      - "51 [75] 🇩🇪 | DE | 1412ms | 50KB | ☮️2@oneclickvpnkeys"
-      - "52 [77] 🇳🇱 | NL | 1487ms | 50KB | 💎12@oneclickvpnkeys"
-      - "53 [78] 🇳🇱 | NL | 1420ms | 49KB | 💎66@oneclickvpnkeys"
-      - "54 [82] 🇳🇱 | NL | 1450ms | 48KB | 🧸46@oneclickvpnkeys"
-      - "55 [83] 🇩🇪 | DE | 1497ms | 48KB | 🧸1@oneclickvpnkeys"
-      - "56 [85] 🇩🇪 | DE | 1394ms | 48KB | 💎28@oneclickvpnkeys"
-      - "57 [90] 🇫🇷 | FR | 1755ms | 48KB | 💎74@oneclickvpnkeys"
-      - "58 [92] 🇬🇧 | GB | 1343ms | 48KB |"
-      - "59 [94] 🇬🇧 | GB | 1464ms | 48KB |"
-      - "60 [100] 🇩🇪 | DE | 1385ms | 47KB | 💎6@oneclickvpnkeys"
-      - "61 [104] 🇳🇱 | NL | 1622ms | 47KB | ***✅***@AR14N24b"
-      - "62 [106] 🇩🇪 | DE | 1509ms | 47KB | ☮️1@oneclickvpnkeys"
-      - "63 [108] 🇩🇪 | DE | 1413ms | 47KB |"
-      - "64 [111] 🇩🇪 | DE | 1466ms | 47KB | 🧸3@oneclickvpnkeys"
-      - "65 [112] 🇳🇱 | NL | 1594ms | 47KB | 💎50@oneclickvpnkeys"
-      - "66 [114] 🇩🇪 | DE | 1531ms | 46KB | 🧸12@oneclickvpnkeys"
-      - "67 [118] 🇫🇮 | FI | 1537ms | 46KB | 💎58@oneclickvpnkeys"
-      - "68 [119] 🇩🇪 | DE | 1567ms | 46KB | 💎1@oneclickvpnkeys"
-      - "69 [120] 🇳🇱 | NL | 1593ms | 46KB |"
-      - "70 [124] 🇳🇱 | NL | 1539ms | 45KB | @filembad`"
-      - "71 [125] 🇩🇪 | DE | 1570ms | 45KB | 💎63@oneclickvpnkeys"
-      - "72 [127] 🌐 | null | 859ms | 45KB | 💎18@oneclickvpnkeys"
-      - "73 [131] 🇩🇪 | DE | 1573ms | 45KB | 💎57@oneclickvpnkeys"
-      - "74 [134] 🇩🇪 | DE | 1691ms | 45KB | 🧸47@oneclickvpnkeys"
-      - "75 [136] 🇳🇱 | NL | 1544ms | 44KB |"
-      - "76 [137] 🇳🇱 | NL | 1658ms | 44KB | 💎99@oneclickvpnkeys"
-      - "77 [138] 🇩🇪 | DE | 1517ms | 44KB | 🧸6@oneclickvpnkeys"
-      - "78 [139] 🇳🇱 | NL | 1538ms | 44KB | 🧸15@oneclickvpnkeys"
-      - "79 [141] 🇨🇦 | CA | 2590ms | 44KB | 💎69@oneclickvpnkeys"
-      - "80 [142] 🇳🇱 | NL | 1587ms | 44KB | @filembad`"
-      - "81 [143] 🇩🇪 | DE | 1591ms | 44KB |"
-      - "82 [144] 🇳🇱 | NL | 1614ms | 44KB |"
-      - "83 [147] 🇩🇪 | DE | 1529ms | 43KB | 🧸4@oneclickvpnkeys"
-      - "84 [149] 🇨🇦 | CA | 5000ms | 43KB | 💎56@oneclickvpnkeys"
-      - "85 [152] 🇨🇦 | CA | 1622ms | 43KB | 💎80@oneclickvpnkeys"
-      - "86 [153] 🇳🇱 | NL | 1226ms | 43KB | 💎38@oneclickvpnkeys"
-      - "87 [156] 🇩🇪 | DE | 1673ms | 42KB | 💎83@oneclickvpnkeys"
-      - "88 [157] 🇫🇷 | FR | 1811ms | 42KB | 💎87@oneclickvpnkeys"
-      - "89 [158] 🇩🇪 | DE | 5000ms | 42KB | @filembad`"
-      - "90 [159] 🇳🇱 | NL | 1720ms | 42KB | 💎84@oneclickvpnkeys"
-      - "91 [160] 🇳🇱 | NL | 1567ms | 42KB |"
-      - "92 [161] 🇳🇱 | NL | 1544ms | 42KB |"
-      - "93 [162] 🇩🇪 | DE | 1581ms | 41KB | 🧸2@oneclickvpnkeys"
-      - "94 [164] 🇫🇷 | FR | 1697ms | 41KB | 💎43@oneclickvpnkeys"
-      - "95 [165] 🇨🇦 | CA | 2271ms | 41KB | 💎30@oneclickvpnkeys`"
-      - "96 [166] 🇨🇦 | CA | 2824ms | 41KB | @filembad`"
-      - "97 [167] 🇵🇱 | PL | 1710ms | 41KB |"
-      - "98 [168] 🇨🇿 | CZ | 1838ms | 41KB |"
-      - "99 [169] 🌐 | null | 2395ms | 40KB | ***🐦‍🔥***-@SPEEDS_VPN"
-      - "100 [171] 🇭🇷 | HR | 1844ms | 39KB |"
-      - "101 [173] 🇵🇱 | PL | 1816ms | 38KB |  `"
-      - "102 [175] 🇱🇹 | LT | 1849ms | 38KB |"
-      - "103 [176] 🇫🇮 | FI | 1786ms | 37KB | @filembad`"
-      - "104 [178] 🇭🇺 | HU | 1859ms | 36KB |"
-      - "105 [181] 🇺🇦 | UA | 2098ms | 36KB |"
-      - "106 [183] 🇱🇻 | LV | 1948ms | 35KB | 💎89@oneclickvpnkeys"
-      - "107 [184] 🇭🇺 | HU | 2050ms | 35KB |  `"
-      - "108 [185] 🇫🇮 | FI | 1981ms | 35KB | 💎60@oneclickvpnkeys`"
-      - "109 [188] 🇷🇸 | RS | 2001ms | 34KB | 💎86@oneclickvpnkeys"
-      - "110 [190] 🇹🇷 | TR | 1969ms | 34KB |"
-      - "111 [191] 🇺🇸 | US | 1230ms | 34KB |"
-      - "112 [196] 🇺🇸 | US | 1323ms | 31KB |"
-      - "113 [203] 🇫🇮 | FI | 1939ms | 27KB |"
-      - "114 [205] 🇦🇪 | AE | 5000ms | 24KB | @filembad`"
-      - "115 [206] 🇱🇻 | LV | 1838ms | 23KB | 💎92@oneclickvpnkeys"
-      - "116 [210] 🇫🇮 | FI | 1932ms | 21KB |"
-      - "117 [212] 🇮🇩 | ID | 4060ms | 20KB | 💎73@oneclickvpnkeys"
-      - "118 [215] 🇨🇦 | CA | 5000ms | 18KB | 💎71@oneclickvpnkeys"
-      - "119 [223] 🇸🇮 | SI | 2376ms | 12KB |"
-      - "120 [226] 🇪🇪 | EE | 4772ms | 8KB |"
-      - "121 [228] 🇵🇱 | PL | 5000ms | 4KB | 💎95@oneclickvpnkeys"
-      - "122 [229] 🇷🇺 | RU | 5000ms | 4KB | @filembad`"
-      - "123 [230] 🇷🇺 | RU | 5000ms | 4KB | 💎96@oneclickvpnkeys"
-      - "124 [231] 🇮🇸 | IS | 5000ms | 4KB |"
-      - "125 [232] 🇱🇻 | LV | 5000ms | 4KB | @filembad`"
-      - "126 [233] 🇨🇭 | CH | 5000ms | 4KB | 🇨🇭 Switzerland (@v2FreeHub) Vless`"
-      - "127 [235] 🇷🇴 | RO | 5000ms | 4KB |"
-      - "128 [237] 🇮🇹 | IT | 1803ms | 💎81@oneclickvpnkeys"
-      - "129 [238] 🌐 | null | 2059ms | 💎16@oneclickvpnkeys"
-      - "130 [240] 🌐 | null | 5001ms | @filembad`"
-      - "131 [245] 🌐 | null | 99999ms | Telegram : @lrnbymaa"
-      - "132 [247] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
-      - "133 [248] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
-      - "134 [249] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
-      - "135 [253] 🌐 | null | 99999ms | @filembad"
-      - "136 [254] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1"
-      - "137 [255] 🌐 | null | 99999ms | @filembad`"
-      - "138 [257] 🌐 | null | 99999ms | @filembad`"
-      - "139 [259] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
-      - "140 [261] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
-      - "141 [264] 🌐 | null | 99999ms | ***✅***@AR14N24b"
-      - "142 [265] 🌐 | null | 99999ms |"
-      - "143 [267] 🌐 | null | 99999ms | @filembad`"
-      - "144 [268] 🌐 | null | 99999ms | @filembad`"
-      - "145 [270] 🌐 | null | 99999ms |"
-      - "146 [271] 🌐 | null | 99999ms | @filembad`"
-      - "147 [275] 🌐 | null | 99999ms | ***✅***@AR14N24b"
-      - "148 [276] 🌐 | null | 99999ms | @filembad`"
-      - "149 [278] 🌐 | null | 99999ms | 💎42@oneclickvpnkeys"
-      - "150 [282] 🌐 | null | 99999ms | @filembad`"
-      - "151 [286] 🌐 | null | 99999ms | @filembad`"
-      - "152 [287] 🌐 | null | 99999ms | @filembad`"
-      - "153 [288] 🌐 | null | 99999ms | @filembad`"
-      - "154 [294] 🌐 | null | 99999ms | Lrnbymaa`"
-      - "155 [295] 🌐 | null | 99999ms | 💎55@oneclickvpnkeys"
-      - "156 [297] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1"
-      - "157 [299] 🌐 | null | 99999ms | 💎51@oneclickvpnkeys"
-      - "158 [6] 🇺🇸 | US | 296ms | 306KB | @filembad`"
-      - "159 [80] 🇳🇱 | NL | 1537ms | 49KB | ***🐦‍🔥***-@SPEEDS_VPN"
-      - "160 [95] 🇩🇪 | DE | 1475ms | 48KB | hamedvpns"
-      - "161 [98] 🇳🇱 | NL | 1499ms | 47KB |  `"
-      - "162 [102] 🇳🇱 | NL | 1490ms | 47KB |"
-      - "163 [105] 🇳🇱 | NL | 1486ms | 47KB |"
-      - "164 [116] 🇳🇱 | NL | 1568ms | 46KB | ***✅***@AR14N24b"
-      - "165 [123] 🇳🇱 | NL | 1568ms | 45KB |"
-      - "166 [129] 🇳🇱 | NL | 1504ms | 45KB | @filembad`"
-      - "167 [132] 🇬🇧 | GB | 1350ms | 45KB | @filembad`"
-      - "168 [140] 🇳🇱 | NL | 1551ms | 44KB | ***✅***@AR14N24b"
-      - "169 [179] 🇩🇪 | DE | 1585ms | 36KB | ***🌪***-@SPEEDS_VPN1`"
-      - "170 [182] 🇩🇪 | DE | 1548ms | 36KB | @filembad`"
-      - "171 [189] 🇩🇪 | DE | 1719ms | 34KB |"
-      - "172 [201] 🇨🇭 | CH | 2107ms | 30KB |"
-      - "173 [207] 🇦🇪 | AE | 3117ms | 23KB | @filembad`"
-      - "174 [208] 🇳🇴 | NO | 1789ms | 21KB | @v2rayconfigamir 7618`"
-      - "175 [209] 🇿🇦 | ZA | 3275ms | 21KB | @filembad`"
-      - "176 [211] 🇿🇦 | ZA | 3268ms | 20KB | ***✅***@AR14N24b"
-      - "177 [214] 🇬🇧 | GB | 2029ms | 18KB | @filembad`"
-      - "178 [224] 🇲🇽 | MX | 2749ms | 11KB | ***✅***@AR14N24b"
-      - "179 [239] 🌐 | null | 5001ms |"
-      - "180 [273] 🌐 | null | 99999ms | @filembad`"
-      - "181 [298] 🌐 | null | 99999ms | @filembad`"
-      - "182 [300] 🌐 | null | 99999ms |"
-      - "183 [26] 🇺🇸 | US | 717ms | 122KB | 💎68@oneclickvpnkeys"
-      - "184 [52] 🇳🇱 | NL | 1243ms | 52KB |"
-      - "185 [62] 🇳🇱 | NL | 1695ms | 51KB | @filembad`"
-      - "186 [195] 🇭🇺 | HU | 1890ms | 32KB | @filembad`"
-      - "187 [197] 🇳🇴 | NO | 1894ms | 31KB | @v2rayconfigamir 2837`"
-      - "188 [199] 🇳🇴 | NO | 1789ms | 31KB | @v2rayconfigamir 2132`"
-      - "189 [216] 🇮🇳 | IN | 4628ms | 16KB | @filembad`"
-      - "190 [217] 🇩🇪 | DE | 3634ms | 15KB | 💎8@oneclickvpnkeys"
-      - "191 [218] 🇩🇪 | DE | 3663ms | 15KB | 💎5@oneclickvpnkeys"
-      - "192 [219] 🇩🇪 | DE | 3670ms | 15KB | 💎9@oneclickvpnkeys"
-      - "193 [220] 🇩🇪 | DE | 3621ms | 14KB | 💎3@oneclickvpnkeys"
-      - "194 [221] 🇩🇪 | DE | 3654ms | 14KB | 💎10@oneclickvpnkeys"
-      - "195 [222] 🇩🇪 | DE | 3708ms | 14KB | 💎7@oneclickvpnkeys"
-      - "196 [241] 🌐 | null | 5001ms | @v2rayconfigamir 5836`"
-      - "197 [252] 🌐 | null | 99999ms | @filembad`"
+      - "1 [1] 🇺🇸 | US | 250ms | 365KB | ZHK"
+      - "2 [3] 🇺🇸 | US | 284ms | 360KB | ZHK"
+      - "3 [4] 🇺🇸 | US | 341ms | 320KB | ZHK"
+      - "4 [2] 🇺🇸 | US | 2855ms | 363KB |"
+      - "5 [6] 🇨🇦 | CA | 1406ms | 211KB | 👽22@oneclickvpnkeys"
+      - "6 [7] 🇺🇸 | US | 369ms | 206KB | 👽17@oneclickvpnkeys"
+      - "7 [8] 🇨🇦 | CA | 4061ms | 178KB | 💎82@oneclickvpnkeys"
+      - "8 [10] 🇩🇪 | DE | 3764ms | 129KB | 🧸47@oneclickvpnkeys"
+      - "9 [12] 🇺🇸 | US | 214ms | 83KB | 💎47@oneclickvpnkeys"
+      - "10 [14] 🇨🇦 | CA | 2742ms | 73KB | @filembad`"
+      - "11 [15] 🇨🇦 | CA | 1045ms | 67KB | 👽25@oneclickvpnkeys"
+      - "12 [16] 🌐 | null | 3379ms | 66KB | 💎85@oneclickvpnkeys"
+      - "13 [17] 🇨🇦 | CA | 3607ms | 63KB | 💎77@oneclickvpnkeys"
+      - "14 [18] 🇨🇦 | CA | 4923ms | 62KB | 💎62@oneclickvpnkeys"
+      - "15 [20] 🇨🇦 | CA | 2940ms | 61KB | 💎74@oneclickvpnkeys"
+      - "16 [22] 🇨🇦 | CA | 5000ms | 58KB | 💎76@oneclickvpnkeys"
+      - "17 [23] 🇨🇦 | CA | 3927ms | 56KB |"
+      - "18 [24] 🇨🇦 | CA | 5000ms | 55KB | 💎78@oneclickvpnkeys"
+      - "19 [25] 🇨🇦 | CA | 3666ms | 55KB | 💎67@oneclickvpnkeys"
+      - "20 [26] 🇨🇦 | CA | 3195ms | 47KB | 💎72@oneclickvpnkeys"
+      - "21 [29] 🇨🇦 | CA | 3978ms | 46KB | 💎56@oneclickvpnkeys"
+      - "22 [30] 🇨🇦 | CA | 5000ms | 43KB | @filembad`"
+      - "23 [32] 🇫🇷 | FR | 1962ms | 39KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "24 [34] 🇳🇱 | NL | 1913ms | 36KB | 👽30@oneclickvpnkeys`"
+      - "25 [35] 🇨🇦 | CA | 3750ms | 35KB | @filembad`"
+      - "26 [36] 🇩🇪 | DE | 2195ms | 34KB | 💎54@oneclickvpnkeys"
+      - "27 [38] 🇳🇱 | NL | 2404ms | 32KB | @filembad`"
+      - "28 [39] 🇩🇪 | DE | 2020ms | 32KB | @filembad`"
+      - "29 [40] 🇫🇮 | FI | 2470ms | 31KB | @filembad`"
+      - "30 [43] 🇨🇦 | CA | 3633ms | 30KB | 💎70@oneclickvpnkeys"
+      - "31 [45] 🇳🇱 | NL | 2386ms | 30KB | @filembad`"
+      - "32 [46] 🇩🇪 | DE | 2468ms | 30KB | 👽9@oneclickvpnkeys"
+      - "33 [48] 🇳🇱 | NL | 4115ms | 29KB | 💎46@oneclickvpnkeys"
+      - "34 [49] 🇫🇷 | FR | 2112ms | 29KB | 👽18@oneclickvpnkeys"
+      - "35 [50] 🇫🇷 | FR | 2432ms | 29KB | 💎61@oneclickvpnkeys"
+      - "36 [51] 🇳🇱 | NL | 2644ms | 29KB |"
+      - "37 [52] 🇳🇱 | NL | 2675ms | 29KB |"
+      - "38 [53] 🇩🇪 | DE | 2486ms | 29KB | 🧸9@oneclickvpnkeys"
+      - "39 [54] 🇫🇮 | FI | 2397ms | 29KB | 💎58@oneclickvpnkeys"
+      - "40 [55] 🇩🇪 | DE | 2539ms | 29KB | 👽7@oneclickvpnkeys"
+      - "41 [56] 🇫🇷 | FR | 2425ms | 28KB | 💎52@oneclickvpnkeys"
+      - "42 [57] 🇳🇱 | NL | 2196ms | 28KB | @filembad`"
+      - "43 [60] 🇩🇪 | DE | 2526ms | 28KB | 👽3@oneclickvpnkeys"
+      - "44 [61] 🇳🇱 | NL | 2583ms | 28KB | 🧸15@oneclickvpnkeys"
+      - "45 [63] 🇩🇪 | DE | 2461ms | 28KB |"
+      - "46 [64] 🇨🇭 | CH | 2580ms | 27KB | 👽26@oneclickvpnkeys"
+      - "47 [65] 🇳🇱 | NL | 2756ms | 27KB | 💎84@oneclickvpnkeys"
+      - "48 [67] 🇩🇪 | DE | 2492ms | 27KB | 👽14@oneclickvpnkeys"
+      - "49 [68] 🇩🇪 | DE | 2710ms | 27KB | 🧸1@oneclickvpnkeys"
+      - "50 [69] 🇩🇪 | DE | 2430ms | 27KB | 👽6@oneclickvpnkeys"
+      - "51 [70] 🇩🇪 | DE | 2461ms | 27KB |"
+      - "52 [72] 🇬🇧 | GB | 2559ms | 27KB |"
+      - "53 [75] 🇩🇪 | DE | 2501ms | 27KB | 🧸13@oneclickvpnkeys"
+      - "54 [76] 🇩🇪 | DE | 2483ms | 27KB | 👽11@oneclickvpnkeys"
+      - "55 [77] 🇳🇱 | NL | 2880ms | 27KB | 💎99@oneclickvpnkeys"
+      - "56 [78] 🇩🇪 | DE | 3004ms | 26KB |"
+      - "57 [79] 🇩🇪 | DE | 2326ms | 26KB |"
+      - "58 [80] 🇩🇪 | DE | 2587ms | 26KB | 👽15@oneclickvpnkeys`"
+      - "59 [81] 🇩🇪 | DE | 2641ms | 26KB | 💎63@oneclickvpnkeys"
+      - "60 [83] 🇳🇱 | NL | 2614ms | 26KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "61 [85] 🇩🇪 | DE | 2638ms | 25KB | 💎83@oneclickvpnkeys"
+      - "62 [86] 🇱🇻 | LV | 3037ms | 25KB | 💎92@oneclickvpnkeys"
+      - "63 [87] 🇩🇪 | DE | 2480ms | 25KB | 👽13@oneclickvpnkeys"
+      - "64 [88] 🇫🇮 | FI | 3136ms | 25KB | @filembad`"
+      - "65 [89] 🇩🇪 | DE | 2696ms | 25KB | 👽5@oneclickvpnkeys"
+      - "66 [92] 🇳🇱 | NL | 2880ms | 24KB | 💎50@oneclickvpnkeys"
+      - "67 [93] 🇷🇸 | RS | 3149ms | 24KB | 💎86@oneclickvpnkeys"
+      - "68 [94] 🇫🇮 | FI | 3114ms | 24KB | 💎60@oneclickvpnkeys`"
+      - "69 [99] 🇨🇦 | CA | 3413ms | 22KB | 💎90@oneclickvpnkeys`"
+      - "70 [100] 🇮🇹 | IT | 3964ms | 22KB | 💎81@oneclickvpnkeys"
+      - "71 [101] 🌐 | null | 5000ms | 21KB | 💎49@oneclickvpnkeys"
+      - "72 [103] 🇨🇦 | CA | 1237ms | 21KB | 👽19@oneclickvpnkeys"
+      - "73 [104] 🇩🇪 | DE | 1441ms | 21KB | 👽28@oneclickvpnkeys"
+      - "74 [107] 🇨🇦 | CA | 5000ms | 17KB | 👽27@oneclickvpnkeys"
+      - "75 [109] 🌐 | null | 5000ms | 17KB | 💎79@oneclickvpnkeys"
+      - "76 [110] 🇨🇦 | CA | 3573ms | 17KB | 💎59@oneclickvpnkeys"
+      - "77 [112] 🇻🇳 | VN | 3644ms | 16KB | @v2rayconfigamir 5708`"
+      - "78 [115] 🇳🇱 | NL | 3011ms | 13KB | 💎12@oneclickvpnkeys"
+      - "79 [116] 🇱🇹 | LT | 3046ms | 13KB |"
+      - "80 [125] 🇨🇦 | CA | 3781ms | 10KB | 💎69@oneclickvpnkeys"
+      - "81 [127] 🌐 | null | 3155ms | 10KB | 💎71@oneclickvpnkeys"
+      - "82 [128] 🇩🇪 | DE | 5000ms | 8KB | ☮️1@oneclickvpnkeys"
+      - "83 [131] 🇬🇧 | GB | 4289ms | 7KB |"
+      - "84 [133] 🇨🇦 | CA | 5000ms | 4KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "85 [135] 🇨🇦 | CA | 3593ms | 4KB | 💎80@oneclickvpnkeys"
+      - "86 [136] 🇨🇦 | CA | 5000ms | 4KB | 💎53@oneclickvpnkeys"
+      - "87 [137] 🇷🇺 | RU | 5000ms | 4KB | 💎98@oneclickvpnkeys"
+      - "88 [138] 🇷🇺 | RU | 5000ms | 4KB | 💎96@oneclickvpnkeys"
+      - "89 [140] 🇮🇸 | IS | 5000ms | 4KB |"
+      - "90 [141] 🇫🇷 | FR | 5000ms | 4KB | 💎87@oneclickvpnkeys"
+      - "91 [143] 🇵🇱 | PL | 5000ms | 3KB | 💎95@oneclickvpnkeys"
+      - "92 [145] 🇬🇧 | GB | 1945ms | 👽29@oneclickvpnkeys"
+      - "93 [146] 🇨🇦 | CA | 4031ms | 💎75@oneclickvpnkeys`"
+      - "94 [147] 🇳🇱 | NL | 5000ms | 👽16@oneclickvpnkeys"
+      - "95 [148] 🌐 | null | 5001ms | 💎89@oneclickvpnkeys"
+      - "96 [149] 🌐 | null | 5001ms |"
+      - "97 [150] 🌐 | null | 99999ms | @filembad"
+      - "98 [151] 🌐 | null | 99999ms |"
+      - "99 [155] 🌐 | null | 99999ms | @filembad`"
+      - "100 [157] 🌐 | null | 99999ms | Psiphon - @i10VPN 6`"
+      - "101 [164] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "102 [182] 🌐 | null | 99999ms | @filembad`"
+      - "103 [187] 🌐 | null | 99999ms | @filembad`"
+      - "104 [191] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
+      - "105 [193] 🌐 | null | 99999ms |"
+      - "106 [199] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
+      - "107 [202] 🌐 | null | 99999ms | @filembad`"
+      - "108 [203] 🌐 | null | 99999ms | @filembad`"
+      - "109 [207] 🌐 | null | 99999ms | @filembad`"
+      - "110 [208] 🌐 | null | 99999ms | @filembad`"
+      - "111 [209] 🌐 | null | 99999ms |"
+      - "112 [215] 🌐 | null | 99999ms | @filembad`"
+      - "113 [218] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1"
+      - "114 [219] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1"
+      - "115 [223] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "116 [226] 🌐 | null | 99999ms |"
+      - "117 [230] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
+      - "118 [233] 🌐 | null | 99999ms | @filembad`"
+      - "119 [234] 🌐 | null | 99999ms | @filembad`"
+      - "120 [236] 🌐 | null | 99999ms | @filembad`"
+      - "121 [237] 🌐 | null | 99999ms | @filembad`"
+      - "122 [241] 🌐 | null | 99999ms | @SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "123 [242] 🌐 | null | 99999ms |"
+      - "124 [246] 🌐 | null | 99999ms | @filembad`"
+      - "125 [247] 🌐 | null | 99999ms | @filembad`"
+      - "126 [248] 🌐 | null | 99999ms | @filembad`"
+      - "127 [249] 🌐 | null | 99999ms | @filembad`"
+      - "128 [253] 🌐 | null | 99999ms | @filembad`"
+      - "129 [256] 🌐 | null | 99999ms | @filembad`"
+      - "130 [257] 🌐 | null | 99999ms | @filembad`"
+      - "131 [260] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "132 [263] 🌐 | null | 99999ms | @filembad`"
+      - "133 [265] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "134 [266] 🌐 | null | 99999ms | 💎55@oneclickvpnkeys"
+      - "135 [268] 🌐 | null | 99999ms | 💎48@oneclickvpnkeys"
+      - "136 [269] 🌐 | null | 99999ms | @filembad`"
+      - "137 [272] 🌐 | null | 99999ms | @filembad`"
+      - "138 [275] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "139 [277] 🌐 | null | 99999ms | ***🌪***-@SPEEDS_VPN1`"
+      - "140 [278] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "141 [282] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "142 [283] 🌐 | null | 99999ms | 👽12@oneclickvpnkeys"
+      - "143 [284] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "144 [285] 🌐 | null | 99999ms | @filembad`"
+      - "145 [287] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "146 [288] 🌐 | null | 99999ms |"
+      - "147 [289] 🌐 | null | 99999ms | @filembad`"
+      - "148 [290] 🌐 | null | 99999ms | ***🐦‍🔥***-@SPEEDS_VPN`"
+      - "149 [294] 🌐 | null | 99999ms | 👽21@oneclickvpnkeys"
+      - "150 [295] 🌐 | null | 99999ms | @filembad`"
+      - "151 [296] 🌐 | null | 99999ms |"
+      - "152 [298] 🌐 | null | 99999ms |"
+      - "153 [299] 🌐 | null | 99999ms | @filembad`"
+      - "154 [300] 🌐 | null | 99999ms | @filembad`"
+      - "155 [21] 🇺🇸 | US | 1167ms | 58KB | @filembad`"
+      - "156 [37] 🇬🇧 | GB | 2246ms | 32KB |"
+      - "157 [41] 🇬🇧 | GB | 2286ms | 31KB | @filembad`"
+      - "158 [42] 🇳🇱 | NL | 2483ms | 30KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "159 [58] 🇳🇱 | NL | 2324ms | 28KB | @filembad`"
+      - "160 [59] 🇳🇱 | NL | 2403ms | 28KB | @filembad`"
+      - "161 [62] 🇳🇱 | NL | 2453ms | 28KB | @filembad`"
+      - "162 [66] 🇫🇮 | FI | 2519ms | 27KB | @filembad`"
+      - "163 [82] 🇩🇪 | DE | 2593ms | 26KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "164 [96] 🇦🇷 | AR | 2929ms | 23KB | @filembad`"
+      - "165 [102] 🇩🇪 | DE | 3319ms | 21KB |"
+      - "166 [126] 🇲🇽 | MX | 5000ms | 10KB | ***✅***@AR14N24b"
+      - "167 [129] 🇳🇴 | NO | 2651ms | 8KB | @v2rayconfigamir 7618`"
+      - "168 [134] 🇮🇪 | IE | 2973ms | 4KB | @filembad`"
+      - "169 [142] 🇺🇸 | US | 5000ms | 4KB | @filembad`"
+      - "170 [210] 🌐 | null | 99999ms | @filembad`"
+      - "171 [211] 🌐 | null | 99999ms | @filembad`"
+      - "172 [212] 🌐 | null | 99999ms | @filembad`"
+      - "173 [214] 🌐 | null | 99999ms | 🇨🇭 Switzerland (@v2FreeHub) SS`"
+      - "174 [250] 🌐 | null | 99999ms | @filembad`"
+      - "175 [251] 🌐 | null | 99999ms | @filembad`"
+      - "176 [252] 🌐 | null | 99999ms | @filembad`"
+      - "177 [254] 🌐 | null | 99999ms |"
+      - "178 [31] 🇳🇱 | NL | 2001ms | 40KB | @filembad`"
+      - "179 [44] 🇳🇱 | NL | 2368ms | 30KB | ***🐦‍🔥***-@SPEEDS_VPN"
+      - "180 [91] 🇸🇬 | SG | 2840ms | 24KB | @filembad`"
+      - "181 [106] 🇳🇴 | NO | 3076ms | 19KB | @v2rayconfigamir 2132`"
+      - "182 [108] 🇨🇿 | CZ | 3181ms | 17KB | @filembad`"
+      - "183 [111] 🇳🇴 | NO | 3085ms | 17KB | @v2rayconfigamir 2837`"
+      - "184 [118] 🇩🇪 | DE | 4247ms | 12KB | 💎7@oneclickvpnkeys"
+      - "185 [119] 🇩🇪 | DE | 4545ms | 12KB | 💎9@oneclickvpnkeys"
+      - "186 [120] 🇩🇪 | DE | 4649ms | 12KB | 💎10@oneclickvpnkeys"
+      - "187 [121] 🇩🇪 | DE | 4356ms | 11KB | 💎8@oneclickvpnkeys"
+      - "188 [122] 🇩🇪 | DE | 4640ms | 11KB | 💎5@oneclickvpnkeys"
+      - "189 [123] 🇩🇪 | DE | 4642ms | 11KB | 💎3@oneclickvpnkeys"
+      - "190 [132] 🇨🇦 | CA | 1520ms | 7KB | 💎68@oneclickvpnkeys"
+      - "191 [264] 🌐 | null | 99999ms | @filembad`"
+      - "192 [286] 🌐 | null | 99999ms |"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
