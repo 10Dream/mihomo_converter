@@ -175,96 +175,108 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.84:8880","type":"vless","server":"185.143.233.84","port":8880,"uuid":"6a653d30-8828-4cc3-bc21-db63de4f37e3","udp":true,"tls":false,"network":"httpupgrade"}
-  - {"name":"2 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8880","type":"vless","server":"185.143.234.235","port":8880,"uuid":"3826b3d4-5a69-48c1-80ba-9f4f8282bf13","udp":true,"tls":false,"network":"ws"}
-  - {"name":"3 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052","type":"vless","server":"185.143.233.122","port":2052,"uuid":"5fbdff0a-67ab-4277-b421-1eee8058fa75","udp":true,"tls":false,"network":"ws"}
-  - {"name":"4 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:443","type":"vless","server":"185.143.235.201","port":443,"uuid":"c387b0f2-5d9e-4c95-882d-1d5eeb443ce2","udp":true,"tls":true,"network":"ws","servername":"nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir"}
-  - {"name":"5 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8880","type":"vless","server":"185.143.233.235","port":8880,"uuid":"13504d6e-f991-4de8-b5f1-aaf2b4b07a9f","udp":true,"tls":false,"network":"ws"}
-  - {"name":"6 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.120:443","type":"vless","server":"185.143.233.120","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"seedleech.ir"}
-  - {"name":"7 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.120:443","type":"vless","server":"185.143.234.120","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"irancellapp.ir"}
-  - {"name":"8 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:2086","type":"vless","server":"185.143.234.235","port":2086,"uuid":"c34e022f-1322-42d5-b6e7-dd6c362064a7","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"9 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.24.8:443","type":"vless","server":"212.80.24.8","port":443,"uuid":"23d6295f-0337-438f-be52-388bbe321ae4","udp":true,"tls":true,"network":"tcp","servername":"a.samrayan.ir"}
+  - {"name":"1 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:2082","type":"vless","server":"185.143.234.235","port":2082,"uuid":"468aff0b-e717-4201-adbf-8a124b7f3139","udp":true,"tls":false,"network":"ws"}
+  - {"name":"2 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:2082","type":"vless","server":"185.143.233.200","port":2082,"uuid":"24f7eec5-fd6e-43d9-ab7e-0c048f21ddb8","udp":true,"tls":false,"network":"ws"}
+  - {"name":"3 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:8080","type":"vless","server":"185.143.234.122","port":8080,"uuid":"06e27e58-997a-499e-9a19-71d4980aaabf","udp":true,"tls":false,"network":"ws"}
+  - {"name":"4 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080","type":"vless","server":"185.143.234.235","port":8080,"uuid":"f3dc769c-6fca-4103-8d4c-b81692340828","udp":true,"tls":false,"network":"ws"}
+  - {"name":"5 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8880","type":"vless","server":"185.143.233.235","port":8880,"uuid":"4561c5b4-0e58-4b90-96e0-4f7bcea077fe","udp":true,"tls":false,"network":"ws"}
+  - {"name":"6 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443","type":"vless","server":"185.143.233.122","port":443,"uuid":"042d4a80-b210-4825-8933-6636cbac0402","udp":true,"tls":true,"network":"ws","servername":"database-cbv.persianstorebnd.ir"}
+  - {"name":"7 🔒 VL-HTTPUPGRADE-NA 🇮🇷 IR-185.143.234.235:8880","type":"vless","server":"185.143.234.235","port":8880,"uuid":"74c5af8f-1801-42a2-99ae-f3e5b7f3258a","udp":true,"tls":false,"network":"httpupgrade"}
+  - {"name":"8 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:2082","type":"vless","server":"185.143.232.200","port":2082,"uuid":"24f7eec5-fd6e-43d9-ab7e-0c048f21ddb8","udp":true,"tls":false,"network":"ws"}
+  - {"name":"9 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443","type":"vless","server":"185.143.234.5","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"1001co.com"}
   - {"name":"10 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.235:2086","type":"vless","server":"185.143.233.235","port":2086,"uuid":"c34e022f-1322-42d5-b6e7-dd6c362064a7","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"11 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443","type":"vless","server":"185.143.234.122","port":8443,"uuid":"0bf3ab52-e1b1-49e2-bfa5-389d9a251710","udp":true,"tls":true,"network":"ws","servername":"md2.moradi.online"}
-  - {"name":"12 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:443","type":"vless","server":"185.143.234.235","port":443,"uuid":"97dce074-7db1-4d59-99ca-0ef8311e2425","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"13 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443","type":"vless","server":"185.143.232.201","port":443,"uuid":"c387b0f2-5d9e-4c95-882d-1d5eeb443ce2","udp":true,"tls":true,"network":"ws","servername":"nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir"}
-  - {"name":"14 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.235:443","type":"vless","server":"185.143.233.235","port":443,"uuid":"97dce074-7db1-4d59-99ca-0ef8311e2425","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"15 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443","type":"vless","server":"185.143.233.122","port":443,"uuid":"19397a9e-2d5f-4c37-89cc-406b60362459","udp":true,"tls":true,"network":"ws","servername":"database-cbv.persianstorebnd.ir"}
-  - {"name":"16 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080","type":"vless","server":"185.143.234.122","port":8080,"uuid":"06e27e58-997a-499e-9a19-71d4980aaabf","udp":true,"tls":false,"network":"ws"}
-  - {"name":"17 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443","type":"vless","server":"185.143.234.200","port":443,"uuid":"8c53daee-2173-4889-a483-4f698b4b0432","udp":true,"tls":true,"network":"ws","servername":"tangerine-5545db500b-kamdaug.apps.ir-central1.arvancaas.ir"}
-  - {"name":"18 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443","type":"vless","server":"185.143.234.5","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"alef.ir"}
-  - {"name":"19 🔒 VL-TCP-NONE 🇮🇷 IR-85.133.249.43:58387","type":"vless","server":"85.133.249.43","port":58387,"uuid":"c060fdda-385d-aea1-3982-5a6c92876481","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"20 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:8080","type":"vless","server":"185.143.233.235","port":8080,"uuid":"130609ec-73a5-4042-86e8-a5eee3e52a9f","udp":true,"tls":false,"network":"ws"}
-  - {"name":"21 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.111:443","type":"vless","server":"185.143.234.111","port":443,"uuid":"bc4d97ba-d54f-4555-ba71-f7421796d92c","udp":true,"tls":true,"network":"ws","servername":"frontend.parhamm2.ir"}
-  - {"name":"22 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.203:443","type":"vless","server":"194.26.195.203","port":443,"uuid":"51905fd3-29de-4b4e-b351-83542f1d5390","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"23 🔒 VL-TCP-TLS 🇮🇷 IR-45.149.76.75:2083","type":"vless","server":"45.149.76.75","port":2083,"uuid":"a33bf5d1-ca1b-4dff-9620-9c7673bd0342","udp":true,"tls":true,"network":"tcp","servername":"srv2.panahga.ir"}
-  - {"name":"24 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:8080","type":"vless","server":"185.143.234.235","port":8080,"uuid":"e861a577-7562-44e1-99bd-cc52b935a112","udp":true,"tls":false,"network":"ws"}
-  - {"name":"25 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443","type":"vless","server":"185.143.234.122","port":443,"uuid":"19397a9e-2d5f-4c37-89cc-406b60362459","udp":true,"tls":true,"network":"ws","servername":"database-cbv.persianstorebnd.ir"}
-  - {"name":"26 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.68:443","type":"vless","server":"185.143.233.68","port":443,"uuid":"35adf9b2-fa34-4983-a204-09da456448e1","udp":true,"tls":true,"network":"ws","servername":"backend.parhamm2.ir"}
-  - {"name":"27 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080","type":"vless","server":"185.143.233.122","port":8080,"uuid":"6c01d3af-74bd-4a58-b8de-c09c315cf19c","udp":true,"tls":false,"network":"ws"}
-  - {"name":"28 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:443","type":"vless","server":"185.143.235.200","port":443,"uuid":"8c53daee-2173-4889-a483-4f698b4b0432","udp":true,"tls":true,"network":"ws","servername":"tangerine-5545db500b-kamdaug.apps.ir-central1.arvancaas.ir"}
-  - {"name":"29 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.120:2086","type":"vless","server":"185.143.233.120","port":2086,"uuid":"e9e437c2-1ee5-4f0d-ae09-4bfafc835e47","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"30 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2095","type":"vless","server":"185.143.233.122","port":2095,"uuid":"c1a4f546-3612-40e7-b907-a64071485cde","udp":true,"tls":false,"network":"ws"}
-  - {"name":"31 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:443","type":"vless","server":"185.143.233.200","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"mehrnews.com"}
-  - {"name":"32 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443","type":"vless","server":"185.143.233.5","port":443,"uuid":"1051f8ae-ea0d-413c-9cda-df4757e5f5a4","udp":true,"tls":true,"network":"ws","servername":"alef.ir.oadeflantrogm.mapircdn.com"}
-  - {"name":"33 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2082","type":"vless","server":"185.143.234.235","port":2082,"uuid":"dc4ac680-0626-4005-83f5-111ae1a3045d","udp":true,"tls":false,"network":"ws"}
-  - {"name":"34 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052","type":"vless","server":"185.143.234.122","port":2052,"uuid":"5fbdff0a-67ab-4277-b421-1eee8058fa75","udp":true,"tls":false,"network":"ws"}
-  - {"name":"35 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2086","type":"vless","server":"185.143.233.122","port":2086,"uuid":"0d1c3cee-2952-4a3e-a03e-fbe99d32dc72","udp":true,"tls":false,"network":"ws"}
-  - {"name":"36 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:443","type":"vless","server":"185.143.232.200","port":443,"uuid":"8c53daee-2173-4889-a483-4f698b4b0432","udp":true,"tls":true,"network":"ws","servername":"tangerine-5545db500b-kamdaug.apps.ir-central1.arvancaas.ir"}
-  - {"name":"37 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2082","type":"vless","server":"185.143.233.235","port":2082,"uuid":"dc4ac680-0626-4005-83f5-111ae1a3045d","udp":true,"tls":false,"network":"ws"}
-  - {"name":"38 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.206:443","type":"vless","server":"194.26.195.206","port":443,"uuid":"51905fd3-29de-4b4e-b351-83542f1d5390","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"39 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443","type":"vless","server":"185.143.233.122","port":8443,"uuid":"0bf3ab52-e1b1-49e2-bfa5-389d9a251710","udp":true,"tls":true,"network":"ws","servername":"md2.moradi.online"}
-  - {"name":"40 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.212.199:443","type":"vless","server":"62.60.212.199","port":443,"uuid":"870f0165-8308-4e53-b81f-8b54eaf03bd2","udp":true,"tls":true,"network":"tcp","servername":"www.figma.com"}
-  - {"name":"41 🔒 VL-TCP-NA 🇦🇪 AE-94.140.0.0:8080","type":"vless","server":"94.140.0.0","port":8080,"uuid":"f02a08c2-f157-42c9-bdd6-74f6e2e5e8ef","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"42 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087","type":"vless","server":"94.140.0.74","port":2087,"uuid":"213426db-afb7-48d1-ae51-5093317212df","udp":true,"tls":true,"network":"ws","servername":"iopl90nn.bingnet.online"}
-  - {"name":"43 🔒 VL-WS-TLS 🇦🇪 AE-181.214.1.238:2096","type":"vless","server":"181.214.1.238","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.jpmj.dev"}
-  - {"name":"44 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443","type":"vless","server":"141.145.156.146","port":443,"uuid":"9d0a75d2-f747-4afa-b43f-d208af9e8f9a","udp":true,"tls":true,"network":"tcp","servername":"itunes.apple.com"}
-  - {"name":"45 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.95.110:443","type":"vless","server":"89.125.95.110","port":443,"uuid":"6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb","udp":true,"tls":true,"network":"tcp","servername":"www.yandex.com"}
-  - {"name":"46 🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443","type":"vless","server":"193.123.67.98","port":443,"uuid":"9d0a75d2-f747-4afa-b43f-d208af9e8f9a","udp":true,"tls":true,"network":"tcp","servername":"itunes.apple.com"}
-  - {"name":"47 🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443","type":"vless","server":"151.247.197.167","port":8443,"uuid":"123d4832-db2b-4376-be63-f60858cc328e","udp":true,"tls":true,"network":"tcp","servername":"samsung.com"}
-  - {"name":"48 🔒 VL-WS-TLS 🇹🇷 TR-185.39.204.117:10002","type":"vless","server":"185.39.204.117","port":10002,"uuid":"77ea8d6c-1a96-11f1-be1f-1744d2a6f511","udp":true,"tls":true,"network":"ws","servername":"tr2.vpnjantit.com"}
-  - {"name":"49 🔒 VL-WS-NA 🇹🇷 TR-185.39.204.117:10004","type":"vless","server":"185.39.204.117","port":10004,"uuid":"77ea8d6c-1a96-11f1-be1f-1744d2a6f511","udp":true,"tls":false,"network":"ws"}
-  - {"name":"50 🔒 VL-TCP-RLT 🇹🇷 TR-62.60.233.30:443","type":"vless","server":"62.60.233.30","port":443,"uuid":"8377aac9-f3b3-42df-a5ea-9254f37e7b34","udp":true,"tls":true,"network":"tcp","servername":"tr.eu-ffast.com"}
-  - {"name":"51 🔒 VL-TCP-RLT 🇹🇷 TR-94.131.123.167:443","type":"vless","server":"94.131.123.167","port":443,"uuid":"a44e0875-210f-4941-9062-89b6361a14c6","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
-  - {"name":"52 🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.3:993","type":"vless","server":"155.212.110.3","port":993,"uuid":"40730d97-ffa7-1108-2c53-761516eb5fda","udp":true,"tls":true,"network":"tcp","servername":"speed.cloudflare.com"}
-  - {"name":"53 🔒 VL-XHTTP-RLT 🇹🇷 TR-62.133.63.154:8443","type":"vless","server":"62.133.63.154","port":8443,"uuid":"f85e436354ba409d9cce61a0d2185c0f","udp":true,"tls":true,"network":"xhttp","servername":"ya.ru"}
-  - {"name":"54 🔒 VL-TCP-RLT 🇹🇷 TR-185.39.204.189:443","type":"vless","server":"185.39.204.189","port":443,"uuid":"a40b0a127d65404a9e15b31e1c0c352b","udp":true,"tls":true,"network":"tcp","servername":"m.vk.com"}
-  - {"name":"55 🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.140:8443","type":"vless","server":"83.217.9.140","port":8443,"uuid":"e58fab770ea343218b0fe8a84c176c64","udp":true,"tls":true,"network":"xhttp","servername":"apple.com"}
-  - {"name":"56 🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.220:8443","type":"vless","server":"83.217.9.220","port":8443,"uuid":"15c75de9a09149d0bf0393d855a98082","udp":true,"tls":true,"network":"xhttp","servername":"transfermarkt.com.tr"}
-  - {"name":"57 🔒 VL-WS-TLS 🇯🇴 JO-62.72.166.138:2096","type":"vless","server":"62.72.166.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
-  - {"name":"58 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.91:17267","type":"vless","server":"5.182.38.91","port":17267,"uuid":"1c7fcc38-e6be-43c5-875f-b8de2516b9f2","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"59 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.193:443","type":"vless","server":"5.182.38.193","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.mol.hu"}
-  - {"name":"60 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096","type":"vless","server":"188.164.159.61","port":2096,"uuid":"12345678-1234-1234-1234-123456789123","udp":true,"tls":true,"network":"ws","servername":"vless.hubp.de"}
-  - {"name":"61 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983","type":"vless","server":"77.91.68.70","port":55983,"uuid":"f667a096-5231-4cfb-8759-92bb32473139","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"62 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990","type":"ss","server":"147.78.0.182","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"63 🔒 SS-TCP-NA 🇦🇪 AE-3.29.198.112:443","type":"ss","server":"3.29.198.112","port":443,"cipher":"chacha20-ietf-poly1305","password":"u17T3BvpYaaiuW2c"}
-  - {"name":"64 🔒 SS-TCP-NA 🇦🇪 AE-89.125.95.110:8388","type":"ss","server":"89.125.95.110","port":8388,"cipher":"chacha20-ietf-poly1305","password":"VEFFUGZkNtbTGAGde4vUQjqnGST-bgTP"}
-  - {"name":"65 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.161:33563","type":"ss","server":"185.39.204.161","port":33563,"cipher":"chacha20-ietf-poly1305","password":"3Q7U16yGY0Jx1yGQe9Xtzp"}
-  - {"name":"66 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.140:1381","type":"ss","server":"83.217.9.140","port":1381,"cipher":"chacha20-ietf-poly1305","password":"JHqptZxDVsnQf0wL2EgNuo"}
-  - {"name":"67 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.219:55922","type":"ss","server":"62.60.233.219","port":55922,"cipher":"chacha20-ietf-poly1305","password":"B5NTTp0zOY7xFiIVj8ScNh"}
-  - {"name":"68 🔒 SS-TCP-NA 🇹🇷 TR-31.210.50.196:12422","type":"ss","server":"31.210.50.196","port":12422,"cipher":"chacha20-ietf-poly1305","password":"Oqt9kgyMGBiOAJPG4uZXlv"}
-  - {"name":"69 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.17:25232","type":"ss","server":"83.217.9.17","port":25232,"cipher":"chacha20-ietf-poly1305","password":"YHtXD4pojvormVWRiHgIfv"}
-  - {"name":"70 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.189:34085","type":"ss","server":"185.39.204.189","port":34085,"cipher":"chacha20-ietf-poly1305","password":"7IopnX0wzEkrc3ZcVQ978z"}
-  - {"name":"71 🔒 SS-TCP-NA 🇹🇷 TR-203.202.232.78:60299","type":"ss","server":"203.202.232.78","port":60299,"cipher":"chacha20-ietf-poly1305","password":"AVLbEUEtBD59FsRqcNyEib"}
-  - {"name":"72 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.226:62763","type":"ss","server":"62.60.233.226","port":62763,"cipher":"chacha20-ietf-poly1305","password":"yRdxvK32gcKq8xxNguwU99"}
-  - {"name":"73 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.29.126:53672","type":"ss","server":"81.90.29.126","port":53672,"cipher":"chacha20-ietf-poly1305","password":"yprgZbB7xDL4PSvE4wJU4m"}
-  - {"name":"74 🔒 SS-TCP-NA 🇮🇶 IQ-178.17.51.45:8388","type":"ss","server":"178.17.51.45","port":8388,"cipher":"chacha20-ietf-poly1305","password":"X6btbRvJCo3uTQ--yaaT8Mvh0CgqhYTL"}
-  - {"name":"75 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.31.219:443","type":"ss","server":"81.90.31.219","port":443,"cipher":"chacha20-ietf-poly1305","password":"JC1BDEXOdYnc77cH0iuQAO"}
-  - {"name":"76 🔒 SS-TCP-NA 🇬🇷 GR-192.71.166.100:989","type":"ss","server":"192.71.166.100","port":989,"cipher":"aes-256-cfb","password":"f8f7aCzcPKbsF8p3"}
-  - {"name":"77 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990","type":"ss","server":"38.54.2.182","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
-  - {"name":"78 🔄 LATEST-UPDATE 📅 THU-20-FARVARDIN-1405 🕑 09:03","type":"trojan","server":"127.0.0.1","port":1080,"password":"acbabac-baac-baac-cbad-cacabaacbbcb","udp":true,"tls":true}
-  - {"name":"79 🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.110:2087","type":"trojan","server":"185.143.234.110","port":2087,"password":"GdsXparyS16_BEopMz6SAg","udp":true,"tls":true}
-  - {"name":"80 🔒 TR-WS-TLS 🇮🇷 IR-185.143.232.201:443","type":"trojan","server":"185.143.232.201","port":443,"password":"wrIB3zrJu0","udp":true,"tls":true}
-  - {"name":"81 🔒 TR-WS-TLS 🇮🇷 IR-185.143.235.201:443","type":"trojan","server":"185.143.235.201","port":443,"password":"wrIB3zrJu0","udp":true,"tls":true}
-  - {"name":"82 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"trojan","server":"127.0.0.1","port":8080,"password":"baaacbc-cbaa-bcaa-dbca-baccbcacbaab","udp":true,"tls":true}
-  - {"name":"83 🔒 TR-WS-TLS 🇦🇪 AE-94.140.0.1:443","type":"trojan","server":"94.140.0.1","port":443,"password":"bpb-trojan","udp":true,"tls":true}
-  - {"name":"84 🔒 TR-WS-TLS 🇹🇷 TR-138.124.107.35:443","type":"trojan","server":"138.124.107.35","port":443,"password":"d3a97c92-a3b6-42fa-9f11-102084d654b3","udp":true,"tls":true}
-  - {"name":"85 🔄 LATEST-UPDATE 📅 WED-12-FARVARDIN-1405 🕑 09:20","type":"trojan","server":"127.0.0.1","port":1080,"password":"caababc-abca-aabc-cbda-bcbcbbcaaaac","udp":true,"tls":true}
-  - {"name":"86 🔒 TR-TCP-NA 🇴🇲 OM-38.54.116.244:443","type":"trojan","server":"38.54.116.244","port":443,"password":"ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0","udp":true,"tls":true}
-  - {"name":"87 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"trojan","server":"127.0.0.1","port":8080,"password":"cbaabca-caba-baca-acbd-abacbabcbacc","udp":true,"tls":true}
-  - {"name":"88 🔄 LATEST-UPDATE 📅 WED-19-FARVARDIN-1405 🕑 09:09","type":"trojan","server":"127.0.0.1","port":1080,"password":"accaabb-baca-acab-dbac-bbbabcaacacc","udp":true,"tls":true}
-  - {"name":"89 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"trojan","server":"127.0.0.1","port":8080,"password":"acbaabc-acab-acba-bdac-ccbabaacacbb","udp":true,"tls":true}
-  - {"name":"90 🔒 VM-TCP-NA 🇹🇷 TR-5.188.190.252:22324","type":"vmess","server":"5.188.190.252","port":22324,"uuid":"04621bae-ab36-11ec-b909-0242ac120002","alterId":1,"cipher":"auto","udp":true}
+  - {"name":"11 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.120:2086","type":"vless","server":"185.143.233.120","port":2086,"uuid":"e9e437c2-1ee5-4f0d-ae09-4bfafc835e47","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"12 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:2086","type":"vless","server":"185.143.232.200","port":2086,"uuid":"fc57e597-4b0e-4b01-911c-0895d75341d7","udp":true,"tls":false,"network":"ws"}
+  - {"name":"13 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:443","type":"vless","server":"185.143.233.235","port":443,"uuid":"0f92dac7-5b3e-4978-b1fb-adc131ab2d9e","udp":true,"tls":true,"network":"ws","servername":"verso.legion-bot.site"}
+  - {"name":"14 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.120:443","type":"vless","server":"185.143.234.120","port":443,"uuid":"46aea670-5e6c-40af-9b99-95585dd71cc3","udp":true,"tls":true,"network":"ws","servername":"irancellapp.ir"}
+  - {"name":"15 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.129:443","type":"vless","server":"185.143.234.129","port":443,"uuid":"ddacf964-d3f9-4b6b-bd4b-4a614251eac2","udp":true,"tls":true,"network":"ws","servername":"streamapi.parhamm2.ir"}
+  - {"name":"16 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:8080","type":"vless","server":"185.143.233.122","port":8080,"uuid":"06e27e58-997a-499e-9a19-71d4980aaabf","udp":true,"tls":false,"network":"ws"}
+  - {"name":"17 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443","type":"vless","server":"185.143.234.122","port":8443,"uuid":"0bf3ab52-e1b1-49e2-bfa5-389d9a251710","udp":true,"tls":true,"network":"ws","servername":"md2.moradi.online"}
+  - {"name":"18 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2086","type":"vless","server":"185.143.235.200","port":2086,"uuid":"fc57e597-4b0e-4b01-911c-0895d75341d7","udp":true,"tls":false,"network":"ws"}
+  - {"name":"19 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443","type":"vless","server":"185.143.232.201","port":443,"uuid":"c387b0f2-5d9e-4c95-882d-1d5eeb443ce2","udp":true,"tls":true,"network":"ws","servername":"nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir"}
+  - {"name":"20 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2086","type":"vless","server":"185.143.233.122","port":2086,"uuid":"0d1c3cee-2952-4a3e-a03e-fbe99d32dc72","udp":true,"tls":false,"network":"ws"}
+  - {"name":"21 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443","type":"vless","server":"185.143.233.5","port":443,"uuid":"1051f8ae-ea0d-413c-9cda-df4757e5f5a4","udp":true,"tls":true,"network":"ws","servername":"alef.ir.oadeflantrogm.mapircdn.com"}
+  - {"name":"22 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:443","type":"vless","server":"185.143.234.235","port":443,"uuid":"d827c24a-4c56-4e8e-81c1-8eb5258c1a9d","udp":true,"tls":true,"network":"ws","servername":"verso.legion-bot.site"}
+  - {"name":"23 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.203:443","type":"vless","server":"194.26.195.203","port":443,"uuid":"51905fd3-29de-4b4e-b351-83542f1d5390","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"24 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:2082","type":"vless","server":"185.143.234.122","port":2082,"uuid":"629b765a-6878-46e1-a3ba-766e5414b5d2","udp":true,"tls":false,"network":"ws"}
+  - {"name":"25 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.233:2082","type":"vless","server":"185.143.233.233","port":2082,"uuid":"14f350c2-4e4a-416d-a348-4c9de94dc131","udp":true,"tls":false,"network":"ws"}
+  - {"name":"26 🔒 VL-TCP-NONE 🇮🇷 IR-85.133.249.43:58387","type":"vless","server":"85.133.249.43","port":58387,"uuid":"c060fdda-385d-aea1-3982-5a6c92876481","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"27 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.24.8:443","type":"vless","server":"212.80.24.8","port":443,"uuid":"23d6295f-0337-438f-be52-388bbe321ae4","udp":true,"tls":true,"network":"tcp","servername":"a.samrayan.ir"}
+  - {"name":"28 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052","type":"vless","server":"185.143.233.122","port":2052,"uuid":"5fbdff0a-67ab-4277-b421-1eee8058fa75","udp":true,"tls":false,"network":"ws"}
+  - {"name":"29 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052","type":"vless","server":"185.143.234.122","port":2052,"uuid":"5fbdff0a-67ab-4277-b421-1eee8058fa75","udp":true,"tls":false,"network":"ws"}
+  - {"name":"30 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2082","type":"vless","server":"185.143.235.200","port":2082,"uuid":"24f7eec5-fd6e-43d9-ab7e-0c048f21ddb8","udp":true,"tls":false,"network":"ws"}
+  - {"name":"31 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443","type":"vless","server":"185.143.234.122","port":443,"uuid":"e5933eb3-2aa8-4f20-b622-92677bf618f8","udp":true,"tls":true,"network":"ws","servername":"info.siilaam.online"}
+  - {"name":"32 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:443","type":"vless","server":"185.143.232.200","port":443,"uuid":"8c53daee-2173-4889-a483-4f698b4b0432","udp":true,"tls":true,"network":"ws","servername":"tangerine-5545db500b-kamdaug.apps.ir-central1.arvancaas.ir"}
+  - {"name":"33 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:443","type":"vless","server":"185.143.233.200","port":443,"uuid":"8c53daee-2173-4889-a483-4f698b4b0432","udp":true,"tls":true,"network":"ws","servername":"tangerine-5545db500b-kamdaug.apps.ir-central1.arvancaas.ir"}
+  - {"name":"34 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8080","type":"vless","server":"185.143.233.235","port":8080,"uuid":"01522162-e272-45ad-841d-110a23282949","udp":true,"tls":false,"network":"ws"}
+  - {"name":"35 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.120:443","type":"vless","server":"185.143.233.120","port":443,"uuid":"eed5aafe-aa2f-436e-b638-6504b3bda95b","udp":true,"tls":true,"network":"ws","servername":"alef.ir.oadeflantrogm.iranaircdn.com"}
+  - {"name":"36 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.68:443","type":"vless","server":"185.143.233.68","port":443,"uuid":"35adf9b2-fa34-4983-a204-09da456448e1","udp":true,"tls":true,"network":"ws","servername":"backend.parhamm2.ir"}
+  - {"name":"37 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2082","type":"vless","server":"185.143.233.122","port":2082,"uuid":"629b765a-6878-46e1-a3ba-766e5414b5d2","udp":true,"tls":false,"network":"ws"}
+  - {"name":"38 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:2086","type":"vless","server":"185.143.234.235","port":2086,"uuid":"c34e022f-1322-42d5-b6e7-dd6c362064a7","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"39 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.201:2082","type":"vless","server":"185.143.232.201","port":2082,"uuid":"9b7e4c33-fc13-471f-8e79-93fdd67f36ee","udp":true,"tls":false,"network":"ws"}
+  - {"name":"40 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:443","type":"vless","server":"185.143.235.200","port":443,"uuid":"8c53daee-2173-4889-a483-4f698b4b0432","udp":true,"tls":true,"network":"ws","servername":"tangerine-5545db500b-kamdaug.apps.ir-central1.arvancaas.ir"}
+  - {"name":"41 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.111:443","type":"vless","server":"185.143.234.111","port":443,"uuid":"bc4d97ba-d54f-4555-ba71-f7421796d92c","udp":true,"tls":true,"network":"ws","servername":"frontend.parhamm2.ir"}
+  - {"name":"42 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.201:8880","type":"vless","server":"185.143.232.201","port":8880,"uuid":"788df8af-a55b-4eaa-ba48-d61f1d8bac99","udp":true,"tls":false,"network":"ws"}
+  - {"name":"43 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:443","type":"vless","server":"185.143.235.201","port":443,"uuid":"c387b0f2-5d9e-4c95-882d-1d5eeb443ce2","udp":true,"tls":true,"network":"ws","servername":"nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir"}
+  - {"name":"44 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:2082","type":"vless","server":"185.143.234.200","port":2082,"uuid":"24f7eec5-fd6e-43d9-ab7e-0c048f21ddb8","udp":true,"tls":false,"network":"ws"}
+  - {"name":"45 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.201:2082","type":"vless","server":"185.143.235.201","port":2082,"uuid":"9b7e4c33-fc13-471f-8e79-93fdd67f36ee","udp":true,"tls":false,"network":"ws"}
+  - {"name":"46 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8880","type":"vless","server":"185.143.234.122","port":8880,"uuid":"293ee3aa-04f5-45d4-b62c-e7230fc049d4","udp":true,"tls":false,"network":"ws"}
+  - {"name":"47 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8880","type":"vless","server":"185.143.233.122","port":8880,"uuid":"293ee3aa-04f5-45d4-b62c-e7230fc049d4","udp":true,"tls":false,"network":"ws"}
+  - {"name":"48 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:443","type":"vless","server":"185.143.234.134","port":443,"uuid":"ddacf964-d3f9-4b6b-bd4b-4a614251eac2","udp":true,"tls":true,"network":"ws","servername":"endpointapi.parhamm2.ir"}
+  - {"name":"49 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.206:443","type":"vless","server":"194.26.195.206","port":443,"uuid":"51905fd3-29de-4b4e-b351-83542f1d5390","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"50 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443","type":"vless","server":"185.143.233.122","port":8443,"uuid":"0bf3ab52-e1b1-49e2-bfa5-389d9a251710","udp":true,"tls":true,"network":"ws","servername":"md2.moradi.online"}
+  - {"name":"51 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:2082","type":"vless","server":"185.143.233.235","port":2082,"uuid":"468aff0b-e717-4201-adbf-8a124b7f3139","udp":true,"tls":false,"network":"ws"}
+  - {"name":"52 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.201:8880","type":"vless","server":"185.143.235.201","port":8880,"uuid":"788df8af-a55b-4eaa-ba48-d61f1d8bac99","udp":true,"tls":false,"network":"ws"}
+  - {"name":"53 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:2086","type":"vless","server":"185.143.233.200","port":2086,"uuid":"fc57e597-4b0e-4b01-911c-0895d75341d7","udp":true,"tls":false,"network":"ws"}
+  - {"name":"54 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:2086","type":"vless","server":"185.143.234.200","port":2086,"uuid":"fc57e597-4b0e-4b01-911c-0895d75341d7","udp":true,"tls":false,"network":"ws"}
+  - {"name":"55 🔒 VL-HTTPUPGRADE-NA 🇮🇷 IR-185.143.233.250:2095","type":"vless","server":"185.143.233.250","port":2095,"uuid":"c1dbed88-678a-4c92-a117-2bd8aa3e089c","udp":true,"tls":false,"network":"httpupgrade"}
+  - {"name":"56 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443","type":"vless","server":"185.143.234.200","port":443,"uuid":"8c53daee-2173-4889-a483-4f698b4b0432","udp":true,"tls":true,"network":"ws","servername":"tangerine-5545db500b-kamdaug.apps.ir-central1.arvancaas.ir"}
+  - {"name":"57 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.212.199:443","type":"vless","server":"62.60.212.199","port":443,"uuid":"870f0165-8308-4e53-b81f-8b54eaf03bd2","udp":true,"tls":true,"network":"tcp","servername":"www.figma.com"}
+  - {"name":"58 🔒 VL-WS-TLS 🇦🇪 AE-181.214.1.238:2096","type":"vless","server":"181.214.1.238","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.jpmj.dev"}
+  - {"name":"59 🔒 VL-TCP-NA 🇦🇪 AE-94.140.0.0:8080","type":"vless","server":"94.140.0.0","port":8080,"uuid":"f02a08c2-f157-42c9-bdd6-74f6e2e5e8ef","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"60 🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443","type":"vless","server":"193.123.67.98","port":443,"uuid":"9d0a75d2-f747-4afa-b43f-d208af9e8f9a","udp":true,"tls":true,"network":"tcp","servername":"itunes.apple.com"}
+  - {"name":"61 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443","type":"vless","server":"141.145.156.146","port":443,"uuid":"9d0a75d2-f747-4afa-b43f-d208af9e8f9a","udp":true,"tls":true,"network":"tcp","servername":"itunes.apple.com"}
+  - {"name":"62 🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443","type":"vless","server":"151.247.197.167","port":8443,"uuid":"123d4832-db2b-4376-be63-f60858cc328e","udp":true,"tls":true,"network":"tcp","servername":"samsung.com"}
+  - {"name":"63 🔒 VL-TCP-RLT 🇦🇪 AE-78.40.193.94:443","type":"vless","server":"78.40.193.94","port":443,"uuid":"0f771058-7892-4d46-b77e-a69e811b9cbc","udp":true,"tls":true,"network":"tcp","servername":"hls-svod.itunes.apple.com"}
+  - {"name":"64 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.240.101:753","type":"vless","server":"217.60.240.101","port":753,"uuid":"ff6cb8ef-eed6-0032-9331-cd21ec42a05f","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
+  - {"name":"65 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.95.110:443","type":"vless","server":"89.125.95.110","port":443,"uuid":"6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb","udp":true,"tls":true,"network":"tcp","servername":"www.yandex.com"}
+  - {"name":"66 🔒 VL-WS-TLS 🇹🇷 TR-212.87.198.66:443","type":"vless","server":"212.87.198.66","port":443,"uuid":"b2f99930-7d48-4a22-8d67-539c440b6a7a","udp":true,"tls":true,"network":"ws","servername":"8adeefa1-96b4-42d4-b163-1e0bf13bae5d.quadzero.online"}
+  - {"name":"67 🔒 VL-WS-NA 🇹🇷 TR-185.39.204.117:10004","type":"vless","server":"185.39.204.117","port":10004,"uuid":"77ea8d6c-1a96-11f1-be1f-1744d2a6f511","udp":true,"tls":false,"network":"ws"}
+  - {"name":"68 🔒 VL-WS-TLS 🇹🇷 TR-185.39.204.117:10002","type":"vless","server":"185.39.204.117","port":10002,"uuid":"77ea8d6c-1a96-11f1-be1f-1744d2a6f511","udp":true,"tls":true,"network":"ws","servername":"tr2.vpnjantit.com"}
+  - {"name":"69 🔒 VL-TCP-RLT 🇹🇷 TR-62.60.233.30:443","type":"vless","server":"62.60.233.30","port":443,"uuid":"8377aac9-f3b3-42df-a5ea-9254f37e7b34","udp":true,"tls":true,"network":"tcp","servername":"tr.eu-ffast.com"}
+  - {"name":"70 🔒 VL-XHTTP-RLT 🇹🇷 TR-185.39.204.161:8443","type":"vless","server":"185.39.204.161","port":8443,"uuid":"46cc53925b294a97a0f433a9762138b9","udp":true,"tls":true,"network":"xhttp","servername":"m.vk.com"}
+  - {"name":"71 🔒 VL-TCP-RLT 🇹🇷 TR-185.39.204.189:443","type":"vless","server":"185.39.204.189","port":443,"uuid":"a40b0a127d65404a9e15b31e1c0c352b","udp":true,"tls":true,"network":"tcp","servername":"m.vk.com"}
+  - {"name":"72 🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.2:993","type":"vless","server":"155.212.110.2","port":993,"uuid":"c10999b4-7f93-5a50-3908-1467b1e52ae2","udp":true,"tls":true,"network":"tcp","servername":"speed.cloudflare.com"}
+  - {"name":"73 🔒 VL-TCP-RLT 🇹🇷 TR-144.31.130.98:443","type":"vless","server":"144.31.130.98","port":443,"uuid":"bbed94d9-1120-4b54-8a9c-72d81e411fb8","udp":true,"tls":true,"network":"tcp","servername":"google.com"}
+  - {"name":"74 🔒 VL-WS-TLS 🇯🇴 JO-62.72.166.138:2096","type":"vless","server":"62.72.166.138","port":2096,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.indevs.in"}
+  - {"name":"75 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.91:17267","type":"vless","server":"5.182.38.91","port":17267,"uuid":"1c7fcc38-e6be-43c5-875f-b8de2516b9f2","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"76 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.193:443","type":"vless","server":"5.182.38.193","port":443,"uuid":"43488128-319e-f480-64ea-0acdc712e2a8","udp":true,"tls":true,"network":"tcp","servername":"www.mol.hu"}
+  - {"name":"77 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096","type":"vless","server":"188.164.159.61","port":2096,"uuid":"12345678-1234-1234-1234-123456789123","udp":true,"tls":true,"network":"ws","servername":"vless.hubp.de"}
+  - {"name":"78 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983","type":"vless","server":"77.91.68.70","port":55983,"uuid":"f667a096-5231-4cfb-8759-92bb32473139","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"79 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990","type":"ss","server":"147.78.0.182","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
+  - {"name":"80 🔒 SS-TCP-NA 🇦🇪 AE-3.29.198.112:443","type":"ss","server":"3.29.198.112","port":443,"cipher":"chacha20-ietf-poly1305","password":"u17T3BvpYaaiuW2c"}
+  - {"name":"81 🔒 SS-TCP-NA 🇹🇷 TR-203.202.232.78:60299","type":"ss","server":"203.202.232.78","port":60299,"cipher":"chacha20-ietf-poly1305","password":"AVLbEUEtBD59FsRqcNyEib"}
+  - {"name":"82 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.17:25232","type":"ss","server":"83.217.9.17","port":25232,"cipher":"chacha20-ietf-poly1305","password":"YHtXD4pojvormVWRiHgIfv"}
+  - {"name":"83 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.226:62763","type":"ss","server":"62.60.233.226","port":62763,"cipher":"chacha20-ietf-poly1305","password":"yRdxvK32gcKq8xxNguwU99"}
+  - {"name":"84 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.189:34085","type":"ss","server":"185.39.204.189","port":34085,"cipher":"chacha20-ietf-poly1305","password":"7IopnX0wzEkrc3ZcVQ978z"}
+  - {"name":"85 🔒 SS-TCP-NA 🇹🇷 TR-31.210.50.196:12422","type":"ss","server":"31.210.50.196","port":12422,"cipher":"chacha20-ietf-poly1305","password":"Oqt9kgyMGBiOAJPG4uZXlv"}
+  - {"name":"86 🔒 SS-TCP-NA 🇹🇷 TR-185.219.134.55:36221","type":"ss","server":"185.219.134.55","port":36221,"cipher":"chacha20-ietf-poly1305","password":"aed6e687-58a9-4836-ba62-7d8184c94df4"}
+  - {"name":"87 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.140:1381","type":"ss","server":"83.217.9.140","port":1381,"cipher":"chacha20-ietf-poly1305","password":"JHqptZxDVsnQf0wL2EgNuo"}
+  - {"name":"88 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.161:33563","type":"ss","server":"185.39.204.161","port":33563,"cipher":"chacha20-ietf-poly1305","password":"3Q7U16yGY0Jx1yGQe9Xtzp"}
+  - {"name":"89 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.29.126:53672","type":"ss","server":"81.90.29.126","port":53672,"cipher":"chacha20-ietf-poly1305","password":"yprgZbB7xDL4PSvE4wJU4m"}
+  - {"name":"90 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.31.219:443","type":"ss","server":"81.90.31.219","port":443,"cipher":"chacha20-ietf-poly1305","password":"JC1BDEXOdYnc77cH0iuQAO"}
+  - {"name":"91 🔒 SS-TCP-NA 🇬🇷 GR-192.71.166.100:989","type":"ss","server":"192.71.166.100","port":989,"cipher":"aes-256-cfb","password":"f8f7aCzcPKbsF8p3"}
+  - {"name":"92 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990","type":"ss","server":"38.54.2.182","port":990,"cipher":"chacha20-ietf-poly1305","password":"ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="}
+  - {"name":"93 🔄 LATEST-UPDATE 📅 FRI-21-FARVARDIN-1405 🕑 09:20","type":"trojan","server":"127.0.0.1","port":1080,"password":"cabaabc-baac-abac-abdc-bbaccbabcaca","udp":true,"tls":true}
+  - {"name":"94 🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.110:2087","type":"trojan","server":"185.143.234.110","port":2087,"password":"GdsXparyS16_BEopMz6SAg","udp":true,"tls":true}
+  - {"name":"95 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"trojan","server":"127.0.0.1","port":8080,"password":"cbcbaaa-baca-cbaa-acdb-bbcacbbccaaa","udp":true,"tls":true}
+  - {"name":"96 🔒 TR-WS-TLS 🇹🇷 TR-138.124.107.35:443","type":"trojan","server":"138.124.107.35","port":443,"password":"d3a97c92-a3b6-42fa-9f11-102084d654b3","udp":true,"tls":true}
+  - {"name":"97 🔄 LATEST-UPDATE 📅 WED-12-FARVARDIN-1405 🕑 09:20","type":"trojan","server":"127.0.0.1","port":1080,"password":"caababc-abca-aabc-cbda-bcbcbbcaaaac","udp":true,"tls":true}
+  - {"name":"98 🔒 TR-TCP-NA 🇴🇲 OM-38.54.116.244:443","type":"trojan","server":"38.54.116.244","port":443,"password":"ff1dbbc9-ddf2-4d6c-a315-61ecd4223bc0","udp":true,"tls":true}
+  - {"name":"99 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"trojan","server":"127.0.0.1","port":8080,"password":"cbaabca-caba-baca-acbd-abacbabcbacc","udp":true,"tls":true}
+  - {"name":"100 🔄 LATEST-UPDATE 📅 THU-20-FARVARDIN-1405 🕑 09:03","type":"trojan","server":"127.0.0.1","port":1080,"password":"acbabac-baac-baac-cbad-cacabaacbbcb","udp":true,"tls":true}
+  - {"name":"101 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ","type":"trojan","server":"127.0.0.1","port":8080,"password":"baaacbc-cbaa-bcaa-dbca-baccbcacbaab","udp":true,"tls":true}
+  - {"name":"102 🔒 VM-TCP-NA 🇹🇷 TR-5.188.190.252:22324","type":"vmess","server":"5.188.190.252","port":22324,"uuid":"04621bae-ab36-11ec-b909-0242ac120002","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -278,96 +290,108 @@ proxy-groups:
     type: select
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
-      - "1 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.84:8880"
-      - "2 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8880"
-      - "3 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052"
-      - "4 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:443"
+      - "1 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:2082"
+      - "2 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:2082"
+      - "3 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:8080"
+      - "4 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080"
       - "5 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8880"
-      - "6 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.120:443"
-      - "7 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.120:443"
-      - "8 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:2086"
-      - "9 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.24.8:443"
+      - "6 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443"
+      - "7 🔒 VL-HTTPUPGRADE-NA 🇮🇷 IR-185.143.234.235:8880"
+      - "8 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:2082"
+      - "9 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
       - "10 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.235:2086"
-      - "11 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443"
-      - "12 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:443"
-      - "13 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
-      - "14 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.235:443"
-      - "15 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443"
-      - "16 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
-      - "17 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
-      - "18 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
-      - "19 🔒 VL-TCP-NONE 🇮🇷 IR-85.133.249.43:58387"
-      - "20 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:8080"
-      - "21 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.111:443"
-      - "22 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.203:443"
-      - "23 🔒 VL-TCP-TLS 🇮🇷 IR-45.149.76.75:2083"
-      - "24 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:8080"
-      - "25 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443"
-      - "26 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.68:443"
-      - "27 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
-      - "28 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:443"
-      - "29 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.120:2086"
-      - "30 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2095"
-      - "31 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:443"
-      - "32 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
-      - "33 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2082"
-      - "34 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052"
-      - "35 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2086"
-      - "36 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:443"
-      - "37 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2082"
-      - "38 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.206:443"
-      - "39 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443"
-      - "40 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.212.199:443"
-      - "41 🔒 VL-TCP-NA 🇦🇪 AE-94.140.0.0:8080"
-      - "42 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
-      - "43 🔒 VL-WS-TLS 🇦🇪 AE-181.214.1.238:2096"
-      - "44 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
-      - "45 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.95.110:443"
-      - "46 🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443"
-      - "47 🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443"
-      - "48 🔒 VL-WS-TLS 🇹🇷 TR-185.39.204.117:10002"
-      - "49 🔒 VL-WS-NA 🇹🇷 TR-185.39.204.117:10004"
-      - "50 🔒 VL-TCP-RLT 🇹🇷 TR-62.60.233.30:443"
-      - "51 🔒 VL-TCP-RLT 🇹🇷 TR-94.131.123.167:443"
-      - "52 🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.3:993"
-      - "53 🔒 VL-XHTTP-RLT 🇹🇷 TR-62.133.63.154:8443"
-      - "54 🔒 VL-TCP-RLT 🇹🇷 TR-185.39.204.189:443"
-      - "55 🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.140:8443"
-      - "56 🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.220:8443"
-      - "57 🔒 VL-WS-TLS 🇯🇴 JO-62.72.166.138:2096"
-      - "58 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.91:17267"
-      - "59 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.193:443"
-      - "60 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
-      - "61 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
-      - "62 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
-      - "63 🔒 SS-TCP-NA 🇦🇪 AE-3.29.198.112:443"
-      - "64 🔒 SS-TCP-NA 🇦🇪 AE-89.125.95.110:8388"
-      - "65 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.161:33563"
-      - "66 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.140:1381"
-      - "67 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.219:55922"
-      - "68 🔒 SS-TCP-NA 🇹🇷 TR-31.210.50.196:12422"
-      - "69 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.17:25232"
-      - "70 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.189:34085"
-      - "71 🔒 SS-TCP-NA 🇹🇷 TR-203.202.232.78:60299"
-      - "72 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.226:62763"
-      - "73 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.29.126:53672"
-      - "74 🔒 SS-TCP-NA 🇮🇶 IQ-178.17.51.45:8388"
-      - "75 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.31.219:443"
-      - "76 🔒 SS-TCP-NA 🇬🇷 GR-192.71.166.100:989"
-      - "77 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
-      - "78 🔄 LATEST-UPDATE 📅 THU-20-FARVARDIN-1405 🕑 09:03"
-      - "79 🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.110:2087"
-      - "80 🔒 TR-WS-TLS 🇮🇷 IR-185.143.232.201:443"
-      - "81 🔒 TR-WS-TLS 🇮🇷 IR-185.143.235.201:443"
-      - "82 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
-      - "83 🔒 TR-WS-TLS 🇦🇪 AE-94.140.0.1:443"
-      - "84 🔒 TR-WS-TLS 🇹🇷 TR-138.124.107.35:443"
-      - "85 🔄 LATEST-UPDATE 📅 WED-12-FARVARDIN-1405 🕑 09:20"
-      - "86 🔒 TR-TCP-NA 🇴🇲 OM-38.54.116.244:443"
-      - "87 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
-      - "88 🔄 LATEST-UPDATE 📅 WED-19-FARVARDIN-1405 🕑 09:09"
-      - "89 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
-      - "90 🔒 VM-TCP-NA 🇹🇷 TR-5.188.190.252:22324"
+      - "11 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.120:2086"
+      - "12 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:2086"
+      - "13 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:443"
+      - "14 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.120:443"
+      - "15 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.129:443"
+      - "16 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:8080"
+      - "17 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443"
+      - "18 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2086"
+      - "19 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
+      - "20 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2086"
+      - "21 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
+      - "22 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:443"
+      - "23 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.203:443"
+      - "24 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:2082"
+      - "25 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.233:2082"
+      - "26 🔒 VL-TCP-NONE 🇮🇷 IR-85.133.249.43:58387"
+      - "27 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.24.8:443"
+      - "28 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052"
+      - "29 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052"
+      - "30 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2082"
+      - "31 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443"
+      - "32 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:443"
+      - "33 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:443"
+      - "34 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8080"
+      - "35 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.120:443"
+      - "36 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.68:443"
+      - "37 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2082"
+      - "38 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:2086"
+      - "39 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.201:2082"
+      - "40 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:443"
+      - "41 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.111:443"
+      - "42 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.201:8880"
+      - "43 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:443"
+      - "44 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:2082"
+      - "45 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.201:2082"
+      - "46 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8880"
+      - "47 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8880"
+      - "48 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:443"
+      - "49 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.206:443"
+      - "50 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443"
+      - "51 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:2082"
+      - "52 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.201:8880"
+      - "53 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:2086"
+      - "54 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:2086"
+      - "55 🔒 VL-HTTPUPGRADE-NA 🇮🇷 IR-185.143.233.250:2095"
+      - "56 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
+      - "57 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.212.199:443"
+      - "58 🔒 VL-WS-TLS 🇦🇪 AE-181.214.1.238:2096"
+      - "59 🔒 VL-TCP-NA 🇦🇪 AE-94.140.0.0:8080"
+      - "60 🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443"
+      - "61 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
+      - "62 🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443"
+      - "63 🔒 VL-TCP-RLT 🇦🇪 AE-78.40.193.94:443"
+      - "64 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.240.101:753"
+      - "65 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.95.110:443"
+      - "66 🔒 VL-WS-TLS 🇹🇷 TR-212.87.198.66:443"
+      - "67 🔒 VL-WS-NA 🇹🇷 TR-185.39.204.117:10004"
+      - "68 🔒 VL-WS-TLS 🇹🇷 TR-185.39.204.117:10002"
+      - "69 🔒 VL-TCP-RLT 🇹🇷 TR-62.60.233.30:443"
+      - "70 🔒 VL-XHTTP-RLT 🇹🇷 TR-185.39.204.161:8443"
+      - "71 🔒 VL-TCP-RLT 🇹🇷 TR-185.39.204.189:443"
+      - "72 🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.2:993"
+      - "73 🔒 VL-TCP-RLT 🇹🇷 TR-144.31.130.98:443"
+      - "74 🔒 VL-WS-TLS 🇯🇴 JO-62.72.166.138:2096"
+      - "75 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.91:17267"
+      - "76 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.193:443"
+      - "77 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
+      - "78 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
+      - "79 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
+      - "80 🔒 SS-TCP-NA 🇦🇪 AE-3.29.198.112:443"
+      - "81 🔒 SS-TCP-NA 🇹🇷 TR-203.202.232.78:60299"
+      - "82 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.17:25232"
+      - "83 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.226:62763"
+      - "84 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.189:34085"
+      - "85 🔒 SS-TCP-NA 🇹🇷 TR-31.210.50.196:12422"
+      - "86 🔒 SS-TCP-NA 🇹🇷 TR-185.219.134.55:36221"
+      - "87 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.140:1381"
+      - "88 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.161:33563"
+      - "89 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.29.126:53672"
+      - "90 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.31.219:443"
+      - "91 🔒 SS-TCP-NA 🇬🇷 GR-192.71.166.100:989"
+      - "92 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
+      - "93 🔄 LATEST-UPDATE 📅 FRI-21-FARVARDIN-1405 🕑 09:20"
+      - "94 🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.110:2087"
+      - "95 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "96 🔒 TR-WS-TLS 🇹🇷 TR-138.124.107.35:443"
+      - "97 🔄 LATEST-UPDATE 📅 WED-12-FARVARDIN-1405 🕑 09:20"
+      - "98 🔒 TR-TCP-NA 🇴🇲 OM-38.54.116.244:443"
+      - "99 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "100 🔄 LATEST-UPDATE 📅 THU-20-FARVARDIN-1405 🕑 09:03"
+      - "101 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "102 🔒 VM-TCP-NA 🇹🇷 TR-5.188.190.252:22324"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -376,96 +400,108 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "1 🔒 VL-HTTPUPGRADE-NONE 🇮🇷 IR-185.143.233.84:8880"
-      - "2 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8880"
-      - "3 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052"
-      - "4 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:443"
+      - "1 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:2082"
+      - "2 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:2082"
+      - "3 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:8080"
+      - "4 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:8080"
       - "5 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8880"
-      - "6 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.120:443"
-      - "7 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.120:443"
-      - "8 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:2086"
-      - "9 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.24.8:443"
+      - "6 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443"
+      - "7 🔒 VL-HTTPUPGRADE-NA 🇮🇷 IR-185.143.234.235:8880"
+      - "8 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:2082"
+      - "9 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
       - "10 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.235:2086"
-      - "11 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443"
-      - "12 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:443"
-      - "13 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
-      - "14 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.235:443"
-      - "15 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:443"
-      - "16 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8080"
-      - "17 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
-      - "18 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.5:443"
-      - "19 🔒 VL-TCP-NONE 🇮🇷 IR-85.133.249.43:58387"
-      - "20 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:8080"
-      - "21 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.111:443"
-      - "22 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.203:443"
-      - "23 🔒 VL-TCP-TLS 🇮🇷 IR-45.149.76.75:2083"
-      - "24 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.235:8080"
-      - "25 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443"
-      - "26 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.68:443"
-      - "27 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8080"
-      - "28 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:443"
-      - "29 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.120:2086"
-      - "30 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2095"
-      - "31 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:443"
-      - "32 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
-      - "33 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.235:2082"
-      - "34 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052"
-      - "35 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2086"
-      - "36 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:443"
-      - "37 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:2082"
-      - "38 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.206:443"
-      - "39 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443"
-      - "40 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.212.199:443"
-      - "41 🔒 VL-TCP-NA 🇦🇪 AE-94.140.0.0:8080"
-      - "42 🔒 VL-WS-TLS 🇦🇪 AE-94.140.0.74:2087"
-      - "43 🔒 VL-WS-TLS 🇦🇪 AE-181.214.1.238:2096"
-      - "44 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
-      - "45 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.95.110:443"
-      - "46 🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443"
-      - "47 🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443"
-      - "48 🔒 VL-WS-TLS 🇹🇷 TR-185.39.204.117:10002"
-      - "49 🔒 VL-WS-NA 🇹🇷 TR-185.39.204.117:10004"
-      - "50 🔒 VL-TCP-RLT 🇹🇷 TR-62.60.233.30:443"
-      - "51 🔒 VL-TCP-RLT 🇹🇷 TR-94.131.123.167:443"
-      - "52 🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.3:993"
-      - "53 🔒 VL-XHTTP-RLT 🇹🇷 TR-62.133.63.154:8443"
-      - "54 🔒 VL-TCP-RLT 🇹🇷 TR-185.39.204.189:443"
-      - "55 🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.140:8443"
-      - "56 🔒 VL-XHTTP-RLT 🇹🇷 TR-83.217.9.220:8443"
-      - "57 🔒 VL-WS-TLS 🇯🇴 JO-62.72.166.138:2096"
-      - "58 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.91:17267"
-      - "59 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.193:443"
-      - "60 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
-      - "61 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
-      - "62 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
-      - "63 🔒 SS-TCP-NA 🇦🇪 AE-3.29.198.112:443"
-      - "64 🔒 SS-TCP-NA 🇦🇪 AE-89.125.95.110:8388"
-      - "65 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.161:33563"
-      - "66 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.140:1381"
-      - "67 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.219:55922"
-      - "68 🔒 SS-TCP-NA 🇹🇷 TR-31.210.50.196:12422"
-      - "69 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.17:25232"
-      - "70 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.189:34085"
-      - "71 🔒 SS-TCP-NA 🇹🇷 TR-203.202.232.78:60299"
-      - "72 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.226:62763"
-      - "73 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.29.126:53672"
-      - "74 🔒 SS-TCP-NA 🇮🇶 IQ-178.17.51.45:8388"
-      - "75 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.31.219:443"
-      - "76 🔒 SS-TCP-NA 🇬🇷 GR-192.71.166.100:989"
-      - "77 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
-      - "78 🔄 LATEST-UPDATE 📅 THU-20-FARVARDIN-1405 🕑 09:03"
-      - "79 🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.110:2087"
-      - "80 🔒 TR-WS-TLS 🇮🇷 IR-185.143.232.201:443"
-      - "81 🔒 TR-WS-TLS 🇮🇷 IR-185.143.235.201:443"
-      - "82 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
-      - "83 🔒 TR-WS-TLS 🇦🇪 AE-94.140.0.1:443"
-      - "84 🔒 TR-WS-TLS 🇹🇷 TR-138.124.107.35:443"
-      - "85 🔄 LATEST-UPDATE 📅 WED-12-FARVARDIN-1405 🕑 09:20"
-      - "86 🔒 TR-TCP-NA 🇴🇲 OM-38.54.116.244:443"
-      - "87 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
-      - "88 🔄 LATEST-UPDATE 📅 WED-19-FARVARDIN-1405 🕑 09:09"
-      - "89 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
-      - "90 🔒 VM-TCP-NA 🇹🇷 TR-5.188.190.252:22324"
+      - "11 🔒 VL-TCP-NA 🇮🇷 IR-185.143.233.120:2086"
+      - "12 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.200:2086"
+      - "13 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.235:443"
+      - "14 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.120:443"
+      - "15 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.129:443"
+      - "16 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:8080"
+      - "17 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:8443"
+      - "18 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2086"
+      - "19 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.201:443"
+      - "20 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2086"
+      - "21 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.5:443"
+      - "22 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.235:443"
+      - "23 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.203:443"
+      - "24 🔒 VL-WS-NA 🇮🇷 IR-185.143.234.122:2082"
+      - "25 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.233:2082"
+      - "26 🔒 VL-TCP-NONE 🇮🇷 IR-85.133.249.43:58387"
+      - "27 🔒 VL-TCP-TLS 🇮🇷 IR-212.80.24.8:443"
+      - "28 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:2052"
+      - "29 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:2052"
+      - "30 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.200:2082"
+      - "31 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.122:443"
+      - "32 🔒 VL-WS-TLS 🇮🇷 IR-185.143.232.200:443"
+      - "33 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.200:443"
+      - "34 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.235:8080"
+      - "35 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.120:443"
+      - "36 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.68:443"
+      - "37 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.122:2082"
+      - "38 🔒 VL-TCP-NA 🇮🇷 IR-185.143.234.235:2086"
+      - "39 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.201:2082"
+      - "40 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.200:443"
+      - "41 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.111:443"
+      - "42 🔒 VL-WS-NONE 🇮🇷 IR-185.143.232.201:8880"
+      - "43 🔒 VL-WS-TLS 🇮🇷 IR-185.143.235.201:443"
+      - "44 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:2082"
+      - "45 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.201:2082"
+      - "46 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.122:8880"
+      - "47 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.122:8880"
+      - "48 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.134:443"
+      - "49 🔒 VL-TCP-NA 🇮🇷 IR-194.26.195.206:443"
+      - "50 🔒 VL-WS-TLS 🇮🇷 IR-185.143.233.122:8443"
+      - "51 🔒 VL-WS-NA 🇮🇷 IR-185.143.233.235:2082"
+      - "52 🔒 VL-WS-NONE 🇮🇷 IR-185.143.235.201:8880"
+      - "53 🔒 VL-WS-NONE 🇮🇷 IR-185.143.233.200:2086"
+      - "54 🔒 VL-WS-NONE 🇮🇷 IR-185.143.234.200:2086"
+      - "55 🔒 VL-HTTPUPGRADE-NA 🇮🇷 IR-185.143.233.250:2095"
+      - "56 🔒 VL-WS-TLS 🇮🇷 IR-185.143.234.200:443"
+      - "57 🔒 VL-TCP-RLT 🇮🇷 IR-62.60.212.199:443"
+      - "58 🔒 VL-WS-TLS 🇦🇪 AE-181.214.1.238:2096"
+      - "59 🔒 VL-TCP-NA 🇦🇪 AE-94.140.0.0:8080"
+      - "60 🔒 VL-TCP-RLT 🇦🇪 AE-193.123.67.98:443"
+      - "61 🔒 VL-TCP-RLT 🇦🇪 AE-141.145.156.146:443"
+      - "62 🔒 VL-TCP-RLT 🇦🇪 AE-151.247.197.167:8443"
+      - "63 🔒 VL-TCP-RLT 🇦🇪 AE-78.40.193.94:443"
+      - "64 🔒 VL-TCP-RLT 🇦🇪 AE-217.60.240.101:753"
+      - "65 🔒 VL-TCP-RLT 🇦🇪 AE-89.125.95.110:443"
+      - "66 🔒 VL-WS-TLS 🇹🇷 TR-212.87.198.66:443"
+      - "67 🔒 VL-WS-NA 🇹🇷 TR-185.39.204.117:10004"
+      - "68 🔒 VL-WS-TLS 🇹🇷 TR-185.39.204.117:10002"
+      - "69 🔒 VL-TCP-RLT 🇹🇷 TR-62.60.233.30:443"
+      - "70 🔒 VL-XHTTP-RLT 🇹🇷 TR-185.39.204.161:8443"
+      - "71 🔒 VL-TCP-RLT 🇹🇷 TR-185.39.204.189:443"
+      - "72 🔒 VL-TCP-RLT 🇹🇷 TR-155.212.110.2:993"
+      - "73 🔒 VL-TCP-RLT 🇹🇷 TR-144.31.130.98:443"
+      - "74 🔒 VL-WS-TLS 🇯🇴 JO-62.72.166.138:2096"
+      - "75 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.91:17267"
+      - "76 🔒 VL-TCP-RLT 🇭🇺 HU-5.182.38.193:443"
+      - "77 🔒 VL-WS-TLS 🇦🇲 AM-188.164.159.61:2096"
+      - "78 🔒 VL-TCP-RLT 🇦🇲 AM-77.91.68.70:55983"
+      - "79 🔒 SS-TCP-NA 🇦🇪 AE-147.78.0.182:990"
+      - "80 🔒 SS-TCP-NA 🇦🇪 AE-3.29.198.112:443"
+      - "81 🔒 SS-TCP-NA 🇹🇷 TR-203.202.232.78:60299"
+      - "82 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.17:25232"
+      - "83 🔒 SS-TCP-NA 🇹🇷 TR-62.60.233.226:62763"
+      - "84 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.189:34085"
+      - "85 🔒 SS-TCP-NA 🇹🇷 TR-31.210.50.196:12422"
+      - "86 🔒 SS-TCP-NA 🇹🇷 TR-185.219.134.55:36221"
+      - "87 🔒 SS-TCP-NA 🇹🇷 TR-83.217.9.140:1381"
+      - "88 🔒 SS-TCP-NA 🇹🇷 TR-185.39.204.161:33563"
+      - "89 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.29.126:53672"
+      - "90 🔒 SS-TCP-NA 🇮🇶 IQ-81.90.31.219:443"
+      - "91 🔒 SS-TCP-NA 🇬🇷 GR-192.71.166.100:989"
+      - "92 🔒 SS-TCP-NA 🇧🇭 BH-38.54.2.182:990"
+      - "93 🔄 LATEST-UPDATE 📅 FRI-21-FARVARDIN-1405 🕑 09:20"
+      - "94 🔒 TR-WS-TLS 🇮🇷 IR-185.143.234.110:2087"
+      - "95 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "96 🔒 TR-WS-TLS 🇹🇷 TR-138.124.107.35:443"
+      - "97 🔄 LATEST-UPDATE 📅 WED-12-FARVARDIN-1405 🕑 09:20"
+      - "98 🔒 TR-TCP-NA 🇴🇲 OM-38.54.116.244:443"
+      - "99 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "100 🔄 LATEST-UPDATE 📅 THU-20-FARVARDIN-1405 🕑 09:03"
+      - "101 👨🏻‍💻 DEVELOPED-BY SOROUSH-MIRZAEI 📌 FOLLOW-CONTACT SYDSRSMRZ"
+      - "102 🔒 VM-TCP-NA 🇹🇷 TR-5.188.190.252:22324"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
