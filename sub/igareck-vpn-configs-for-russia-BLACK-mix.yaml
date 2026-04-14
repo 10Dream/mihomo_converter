@@ -175,264 +175,73 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 🇧🇷 Brazil, São Paulo | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"brb.nnpy.org","port":11100,"password":"df8d55f9-fb51-442d-902a-bf8160dc051b"}
-  - {"name":"2 🇫🇷 France, Paris | [BL]","type":"hysteria2","server":"163.172.113.118","port":40022,"password":"dongtaiwang.com"}
-  - {"name":"3 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"62.210.124.146","port":22000,"password":"dongtaiwang.com"}
-  - {"name":"4 🇭🇰 Hong Kong, Central | [BL]","type":"hysteria2","server":"hkt.ccwink.cc","port":56309,"password":"9e0f72bb-7ad6-4383-994a-497569a94d74"}
-  - {"name":"5 🇯🇵 Japan, Chiyoda City | [BL]","type":"hysteria2","server":"vpn-jp-016.fastervpn.world","port":443,"password":"qQe1z5kU8kN6SlKnDt9Ru3Qp"}
-  - {"name":"6 🇯🇵 Japan, Shibuya City | [BL]","type":"hysteria2","server":"103.62.49.76","port":35000,"password":"38428a74-c651-47a5-b2c9-4bec5a1809cf"}
-  - {"name":"7 🇯🇵 Japan, Shibuya City | [BL]","type":"hysteria2","server":"vpn-jp-007.fastervpn.world","port":443,"password":"qQe1z5kU8kN6SlKnDt9Ru3Qp"}
-  - {"name":"8 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"dbp.qzz.io","port":8443,"password":"GEbo3x7TXbmNkdmABqS4mZP7Ax5fjFBPbheKauGJJ9Sw"}
-  - {"name":"9 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"hysteria2","server":"144.31.224.14","port":443,"password":"123456789StrongPass"}
-  - {"name":"10 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Centrum) | [BL]","type":"hysteria2","server":"144.31.134.98","port":1935,"password":"hysteria2_fastlane_qszb6rkh0:6Yk5GwoZmszsRaxmLJGqJGo2SIuXeNr5"}
-  - {"name":"11 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Centrum) | [BL]","type":"hysteria2","server":"144.31.134.98","port":1935,"password":"hysteria2_fastlane_qszb6rkh0"}
-  - {"name":"12 🇬🇧 United Kingdom, Coventry | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"91.132.160.243","port":1935,"password":"hysteria2_fastlane_ecivyd6kj:vSeiMjvxbeLFHTlp0J817t9XL6MlzQGt"}
-  - {"name":"13 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"134.195.101.199","port":443,"password":"38428a74-c651-47a5-b2c9-4bec5a1809cf"}
-  - {"name":"14 🇦🇹 Austria, Vienna | [BL]","type":"vless","server":"test.barryvpn.com","port":8443,"uuid":"1f2c75e4-bfaa-48fc-8b2d-c3ce6f549a7d","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"15 🇧🇪 Belgium, Brussels | [BL]","type":"vless","server":"cmm-13.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-0320-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"16 🇧🇷 Brazil, Mogi das Cruzes | 🌐 | [BL]","type":"vless","server":"sww.stardevs.top","port":443,"uuid":"f00984ef-f57e-41db-9182-b25f7bc3a1e2","udp":true,"tls":true,"network":"tcp","servername":"sww.stardevs.top"}
-  - {"name":"17 🇧🇷 Brazil, São Paulo | 🌐 | [IPv6] | [BL]","type":"vless","server":"br.cdn-global.pro","port":3443,"uuid":"2818b4d1-86f2-4cb5-a522-672d1cea7f08","udp":true,"tls":true,"network":"tcp","servername":"sun1-25.userapi.com"}
-  - {"name":"18 🇨🇿 Czechia, Prague | [BL]","type":"vless","server":"cz.extravpn.io","port":8443,"uuid":"1b3bd2c4-1ba7-46ff-8955-f4d2f2060bb4","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"19 🇨🇿 Czechia, Prague | [BL]","type":"vless","server":"cz.extravpn.io","port":8443,"uuid":"f2a5bcb7-1a49-4fe6-8355-5dcd5e236dde","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"20 🇪🇪 Estonia, Jõhvi | 🌐 | [IPv6] | [BL]","type":"vless","server":"s6eba9cb4.fastvps-server.com","port":443,"uuid":"fd2bfdd2-68eb-49b0-98ad-ed82f901edde","udp":true,"tls":true,"network":"tcp","servername":"s6eba9cb4.fastvps-server.com"}
-  - {"name":"21 🇪🇪 Estonia, Tallinn | [BL]","type":"vless","server":"77.239.126.150","port":7443,"uuid":"72eb4de8-5eca-420d-8876-173ef58d82e8","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
-  - {"name":"22 🇪🇪 Estonia, Tallinn | [BL]","type":"vless","server":"138.124.100.2","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"es.milas.click"}
-  - {"name":"23 🇪🇪 Estonia, Tallinn | [BL]","type":"vless","server":"es.milas.click","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"es.milas.click"}
-  - {"name":"24 🇪🇪 Estonia, Tallinn | [BL]","type":"vless","server":"estinode.lumixnet.com","port":443,"uuid":"a534ec08-6c69-4b36-b7e6-7f6651d30265","udp":true,"tls":true,"network":"tcp","servername":"estinode.lumixnet.com"}
-  - {"name":"25 🇪🇪 Estonia, Tallinn | 🌐 | [BL]","type":"vless","server":"ing-13.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-2328-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"26 🇪🇪 Estonia, Tallinn | 🌐 | [BL]","type":"vless","server":"ing-dop.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-2328-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"27 🇪🇪 Estonia, Tallinn | 🌐 | [IPv6] | [BL]","type":"vless","server":"93.123.39.220","port":7443,"uuid":"caa3af29-3b04-4099-9772-c64a1b7cca34","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
-  - {"name":"28 🇫🇮 Finland, Helsinki | [BL]","type":"vless","server":"78.17.12.201","port":443,"uuid":"0f604226-6aed-43be-a3ca-58ea26f7b185","udp":true,"tls":true,"network":"tcp","servername":"www.helsinki.fi"}
-  - {"name":"29 🇫🇮 Finland, Helsinki | [BL]","type":"vless","server":"fl.vpnpplvpn.top","port":443,"uuid":"7f0ab0fb-0011-4c91-bd57-ac5bdf367232","udp":true,"tls":true,"network":"tcp","servername":"vpnforppl.top"}
-  - {"name":"30 🇫🇮 Finland, Helsinki | [BL]","type":"vless","server":"45.12.146.102","port":443,"uuid":"e060f013-53e5-4d88-bf5e-f93baa562ac5","udp":true,"tls":true,"network":"tcp","servername":"fix3.braidpro.online"}
-  - {"name":"31 🇫🇮 Finland, Helsinki | [BL]","type":"vless","server":"fix3.braidpro.online","port":443,"uuid":"e060f013-53e5-4d88-bf5e-f93baa562ac5","udp":true,"tls":true,"network":"tcp","servername":"fix3.braidpro.online"}
-  - {"name":"32 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]","type":"vless","server":"ing-dop.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-0bb8-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"33 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]","type":"vless","server":"94.241.138.98","port":443,"uuid":"d428091c-e6eb-48f9-9a07-b44eb886ac90","udp":true,"tls":true,"network":"tcp","servername":"ru3.csbeta60.com"}
-  - {"name":"34 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]","type":"vless","server":"ru3.csbeta60.com","port":443,"uuid":"d428091c-e6eb-48f9-9a07-b44eb886ac90","udp":true,"tls":true,"network":"tcp","servername":"ru3.csbeta60.com"}
-  - {"name":"35 🇫🇷 France, Aubervilliers | 🌐 | [IPv6] | [BL]","type":"vless","server":"152.89.253.111","port":7443,"uuid":"248d1886-8ae0-4079-a281-4d21bdb74ba4","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
-  - {"name":"36 🇫🇷 France, Paris | [BL]","type":"vless","server":"62.133.62.2","port":443,"uuid":"4b481152-ba7f-4445-8cc0-d33d58546e23","udp":true,"tls":true,"network":"tcp","servername":"fr.de-nfast.com"}
-  - {"name":"37 🇫🇷 France, Paris | [BL]","type":"vless","server":"7qqrbome80g.country-35.de-nfast.com","port":443,"uuid":"4b481152-ba7f-4445-8cc0-d33d58546e23","udp":true,"tls":true,"network":"tcp","servername":"fr.de-nfast.com"}
-  - {"name":"38 🇩🇪 Germany | 🌐 | [IPv6] | [BL]","type":"vless","server":"142.132.146.241","port":443,"uuid":"1c45e98c-8a4a-45e7-acc5-3a3cc962f463","udp":true,"tls":true,"network":"tcp","servername":"hypixel.net"}
-  - {"name":"39 🇩🇪 Germany | 🌐 | [IPv6] | [BL]","type":"vless","server":"159.195.82.187","port":9443,"uuid":"4649d681-7f26-4959-a3f2-02eb8866230f","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"40 🇩🇪 Germany | 🌐 | [IPv6] | [BL]","type":"vless","server":"193.233.88.4","port":10005,"uuid":"ce47a803-dd50-42de-8d73-5950a2c4c55d","udp":true,"tls":true,"network":"tcp","servername":"www.intel.com"}
-  - {"name":"41 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"pl4.gosocial.today","port":443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"xhttp","servername":"pl4.gosocial.today"}
-  - {"name":"42 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"pl4.gosocial.today","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"pl4.gosocial.today"}
-  - {"name":"43 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"de7.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"de7.lazeroe.com"}
-  - {"name":"44 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"de8.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"de8.lazeroe.com"}
-  - {"name":"45 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"fi-u3.vpn-port.com","port":443,"uuid":"5560f584-5101-4098-b8b3-7c9f11899bdf","udp":true,"tls":true,"network":"grpc","servername":"www.yimg.com"}
-  - {"name":"46 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"5.182.207.0","port":443,"uuid":"7abc4045-39aa-44db-bfd2-a57462ccb4a8","udp":true,"tls":true,"network":"tcp","servername":"www.ya.ru"}
-  - {"name":"47 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"de1.samovargate.com","port":443,"uuid":"82b5b465-3307-4a25-acef-abd1649bbedf","udp":true,"tls":true,"network":"tcp","servername":"www.github.com"}
-  - {"name":"48 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"72.56.122.15","port":443,"uuid":"90c9c25c-df6c-4438-83d3-ef97166a9184","udp":true,"tls":true,"network":"tcp","servername":"5post-gate.x5.ru"}
-  - {"name":"49 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"89.19.208.200","port":443,"uuid":"90c9c25c-df6c-4438-83d3-ef97166a9184","udp":true,"tls":true,"network":"tcp","servername":"5post-gate.x5.ru"}
-  - {"name":"50 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]","type":"vless","server":"de.farkil.shop","port":8443,"uuid":"fb796166-54f6-53dc-b2a1-0f0f65ade47d","udp":true,"tls":true,"network":"xhttp","servername":"pay.mironline.ru"}
-  - {"name":"51 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"144.31.220.136","port":25565,"uuid":"1c45e98c-8a4a-45e7-acc5-3a3cc962f463","udp":true,"tls":true,"network":"grpc","servername":"hypixel.net"}
-  - {"name":"52 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"144.31.220.136","port":443,"uuid":"1c45e98c-8a4a-45e7-acc5-3a3cc962f463","udp":true,"tls":true,"network":"tcp","servername":"hypixel.net"}
-  - {"name":"53 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"144.31.220.155","port":45763,"uuid":"1c45e98c-8a4a-45e7-acc5-3a3cc962f463","udp":true,"tls":true,"network":"grpc","servername":"alset.group"}
-  - {"name":"54 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"de41.gosocial.today","port":443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"xhttp","servername":"www.apple.com"}
-  - {"name":"55 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]","type":"vless","server":"de41.gosocial.today","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"www.apple.com"}
-  - {"name":"56 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"de2.gosocial.today","port":443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"xhttp","servername":"de2.gosocial.today"}
-  - {"name":"57 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"de2.gosocial.today","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"de2.gosocial.today"}
-  - {"name":"58 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"gr.milas.click","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"gr.milas.click"}
-  - {"name":"59 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [IPv6] | [BL]","type":"vless","server":"ger-13.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-01f4-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"60 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]","type":"vless","server":"159.195.69.251","port":8443,"uuid":"206d20c7-df0c-4bb7-9218-d636af29877a","udp":true,"tls":true,"network":"tcp","servername":"fastsync.xyz"}
-  - {"name":"61 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]","type":"vless","server":"159.195.69.251","port":8443,"uuid":"460eed65-91ac-401e-a978-ce185ad34122","udp":true,"tls":true,"network":"tcp","servername":"fastsync.xyz"}
-  - {"name":"62 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]","type":"vless","server":"159.195.69.251","port":8443,"uuid":"9a3d5292-23dd-4842-bd09-9e7b5ff084eb","udp":true,"tls":true,"network":"tcp","servername":"fastsync.xyz"}
-  - {"name":"63 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]","type":"vless","server":"159.195.69.251","port":8443,"uuid":"ca4e9219-5f21-497d-bb9d-cd6719b03512","udp":true,"tls":true,"network":"tcp","servername":"fastsync.xyz"}
-  - {"name":"64 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]","type":"vless","server":"159.195.69.251","port":8443,"uuid":"e1e9c412-ee0c-4d37-8b7b-c94452a96624","udp":true,"tls":true,"network":"tcp","servername":"fastsync.xyz"}
-  - {"name":"65 🇩🇪 Germany, Nuremberg | [BL]","type":"vless","server":"18.245.54.3","port":443,"uuid":"97b2cd5b-b98d-494f-8f97-3a06e8c1bbd2","udp":true,"tls":true,"network":"ws","servername":"d2241b25w3zftf.cloudfront.net"}
-  - {"name":"66 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"8.210.117.23","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"wwwimages2.adobe.com"}
-  - {"name":"67 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"8.210.126.83","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"siteintercept.qualtrics.com"}
-  - {"name":"68 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"8.218.214.223","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"www.starwars.com"}
-  - {"name":"69 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"8.217.179.217","port":443,"uuid":"8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19","udp":true,"tls":true,"network":"ws","servername":"speedtest.tinkoff.ru"}
-  - {"name":"70 🇭🇰 Hong Kong, Sha Tin Wai | [BL]","type":"vless","server":"207.174.133.117","port":6235,"uuid":"f6ddddaf-dfd6-4134-9dae-03b93b03d142","udp":true,"tls":true,"network":"ws","servername":"baidu.com"}
-  - {"name":"71 🇮🇳 India, New Delhi | [BL]","type":"vless","server":"ind.milas.click","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"ind.milas.click"}
-  - {"name":"72 🇮🇩 Indonesia | 🌐 | [IPv6] | [BL]","type":"vless","server":"202.10.40.89","port":3443,"uuid":"2818b4d1-86f2-4cb5-a522-672d1cea7f08","udp":true,"tls":true,"network":"tcp","servername":"sun1-25.userapi.com"}
-  - {"name":"73 🇮🇹 Italy, Milan | [BL]","type":"vless","server":"72.56.32.60","port":9879,"uuid":"0599bdbc-b131-42cc-9b5c-03857e111eb9","udp":true,"tls":true,"network":"tcp","servername":"www.id.vk.ru"}
-  - {"name":"74 🇮🇹 Italy, Siziano | [BL]","type":"vless","server":"204.216.216.23","port":1114,"uuid":"6ba2eac6-0ec9-44ca-a42b-a8e23aafb530","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"75 🇯🇲 Jamaica, Kingston | 🌐 | [BL]","type":"vless","server":"franc.stardevs.top","port":443,"uuid":"f00984ef-f57e-41db-9182-b25f7bc3a1e2","udp":true,"tls":true,"network":"tcp","servername":"franc.stardevs.top"}
-  - {"name":"76 🇯🇵 Japan, Shibuya City | [BL]","type":"vless","server":"47.245.3.242","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"wcs.adobe.com"}
-  - {"name":"77 🇯🇵 Japan, Shibuya City | [BL]","type":"vless","server":"47.74.44.99","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"images-na.ssl-images-amazon.com"}
-  - {"name":"78 🇯🇵 Japan, Shibuya City | [BL]","type":"vless","server":"47.91.14.68","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"bh.contextweb.com"}
-  - {"name":"79 🇯🇵 Japan, Shibuya City | [BL]","type":"vless","server":"8.209.212.93","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"images-na.ssl-images-amazon.com"}
-  - {"name":"80 🇯🇵 Japan, Shibuya City | [BL]","type":"vless","server":"8.209.224.201","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"www.autodesk.com"}
-  - {"name":"81 🇯🇵 Japan, Shibuya City | [BL]","type":"vless","server":"8.211.150.180","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"images-na.ssl-images-amazon.com"}
-  - {"name":"82 🇱🇹 Lithuania, Vilnius | 🌐 | [IPv6] | [BL]","type":"vless","server":"lt2.gosocial.today","port":443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"xhttp","servername":"lt2.gosocial.today"}
-  - {"name":"83 🇱🇹 Lithuania, Šiauliai | [BL]","type":"vless","server":"188.214.129.172","port":443,"uuid":"1c45e98c-8a4a-45e7-acc5-3a3cc962f463","udp":true,"tls":true,"network":"tcp","servername":"flowwow.com"}
-  - {"name":"84 🇱🇹 Lithuania, Šiauliai | [BL]","type":"vless","server":"lt1.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"lt1.lazeroe.com"}
-  - {"name":"85 🇱🇹 Lithuania, Šiauliai | [BL]","type":"vless","server":"lt2.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"lt2.lazeroe.com"}
-  - {"name":"86 🇱🇹 Lithuania, Šiauliai | [BL]","type":"vless","server":"46.166.162.105","port":8443,"uuid":"411cfe73-8425-4504-a1bf-a7c04fb09245","udp":true,"tls":true,"network":"xhttp","servername":"deepl.com"}
-  - {"name":"87 🇲🇾 Malaysia, Kuala Lumpur | [BL]","type":"vless","server":"47.250.172.239","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"prod.adobeccstatic.com"}
-  - {"name":"88 🇵🇱 Poland, Gdansk | [BL]","type":"vless","server":"46.253.132.55","port":9892,"uuid":"0599bdbc-b131-42cc-9b5c-03857e111eb9","udp":true,"tls":true,"network":"tcp","servername":"apple.com"}
-  - {"name":"89 🇵🇱 Poland, Gdansk | [BL]","type":"vless","server":"38.180.111.229","port":443,"uuid":"69e05a50-1f52-425e-910a-678667b95c04","udp":true,"tls":true,"network":"tcp","servername":"www.intel.com"}
-  - {"name":"90 🇵🇱 Poland, Warsaw | [BL]","type":"vless","server":"95.85.254.40","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"pl.milas.click"}
-  - {"name":"91 🇵🇱 Poland, Warsaw | [BL]","type":"vless","server":"45.66.162.3","port":443,"uuid":"a2415a12-3f92-4636-9823-9828d3ceb818","udp":true,"tls":true,"network":"xhttp","servername":"www.cloudflare.com"}
-  - {"name":"92 🇵🇱 Poland, Warsaw | [BL]","type":"vless","server":"polands.stardevs.top","port":443,"uuid":"f00984ef-f57e-41db-9182-b25f7bc3a1e2","udp":true,"tls":true,"network":"tcp","servername":"polands.stardevs.top"}
-  - {"name":"93 🇵🇱 Poland, Warsaw | 🌐 | [IPv6] | [BL]","type":"vless","server":"ger-13.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-2710-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"94 🇵🇱 Poland, Warsaw | 🌐 | [IPv6] | [BL]","type":"vless","server":"germ-dop.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-2710-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"95 🇷🇴 Romania, Bucharest | [BL]","type":"vless","server":"cmm-13.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-07d0-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"96 🇸🇬 Singapore, Singapore | [BL]","type":"vless","server":"5.199.164.117","port":443,"uuid":"603e7eca-fe4d-48f8-a4f8-bc832d7d37ce","udp":true,"tls":true,"network":"tcp","servername":"sg.denditop.site"}
-  - {"name":"97 🇸🇬 Singapore, Singapore (Pioneer) | [BL]","type":"vless","server":"ev.zoom.us","port":8443,"uuid":"39eb8c33-ee7f-4980-b3e5-684aaf390f56","udp":true,"tls":true,"network":"ws","servername":"darknet-free.alexid.org"}
-  - {"name":"98 🇸🇬 Singapore, Singapore (Pioneer) | [BL]","type":"vless","server":"74.176.182.60","port":16801,"uuid":"bbd785de-9793-4453-be40-6a3fdc418203","udp":true,"tls":true,"network":"tcp","servername":"www.lamer.com.hk"}
-  - {"name":"99 🇸🇬 Singapore, Singapore (Pioneer) | [BL]","type":"vless","server":"sg1.ktmhy.cc","port":16801,"uuid":"bbd785de-9793-4453-be40-6a3fdc418203","udp":true,"tls":true,"network":"tcp","servername":"www.lamer.com.hk"}
-  - {"name":"100 🇸🇬 Singapore, Singapore (Pioneer) | [BL]","type":"vless","server":"sg2.ktmhy.cc","port":16801,"uuid":"bbd785de-9793-4453-be40-6a3fdc418203","udp":true,"tls":true,"network":"tcp","servername":"www.lamer.com.hk"}
-  - {"name":"101 🇸🇬 Singapore, Singapore (Pioneer) | [BL]","type":"vless","server":"sg3.ktmhy.cc","port":16801,"uuid":"bbd785de-9793-4453-be40-6a3fdc418203","udp":true,"tls":true,"network":"tcp","servername":"www.lamer.com.hk"}
-  - {"name":"102 🇸🇪 Sweden, Stockholm | [BL]","type":"vless","server":"se.stuffcollections.com","port":443,"uuid":"5557ef99-aa86-49e1-8430-aaae12111c28","udp":true,"tls":true,"network":"tcp","servername":"se.stuffcollections.com"}
-  - {"name":"103 🇸🇪 Sweden, Stockholm | [BL]","type":"vless","server":"rusw-3.coinbridge.nl","port":443,"uuid":"a3a90d47-df89-496b-a578-814d8c85d8fc","udp":true,"tls":true,"network":"grpc","servername":"coinbridge.nl"}
-  - {"name":"104 🇨🇭 Switzerland, Zurich | [BL]","type":"vless","server":"89.125.95.110","port":443,"uuid":"6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb","udp":true,"tls":true,"network":"tcp","servername":"www.yandex.com"}
-  - {"name":"105 🇨🇭 Switzerland, Zurich | [BL]","type":"vless","server":"132.243.174.210","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"se.milas.click"}
-  - {"name":"106 🇨🇭 Switzerland, Zurich | [BL]","type":"vless","server":"se.milas.click","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"se.milas.click"}
-  - {"name":"107 🇹🇼 Taiwan, Taipei | [BL]","type":"vless","server":"125.227.219.98","port":6235,"uuid":"f6ddddaf-dfd6-4134-9dae-03b93b03d150","udp":true,"tls":true,"network":"ws","servername":"baidu.com"}
-  - {"name":"108 🇹🇭 Thailand, Bangkok | [BL]","type":"vless","server":"47.81.35.108","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"www.primevideo.com"}
-  - {"name":"109 🇳🇱 The Netherlands, Almere Stad | [BL]","type":"vless","server":"5.252.20.47","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"nl2.gosocial.today"}
-  - {"name":"110 🇳🇱 The Netherlands, Almere Stad | [BL]","type":"vless","server":"nl2.gosocial.today","port":443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"xhttp","servername":"nl2.gosocial.today"}
-  - {"name":"111 🇳🇱 The Netherlands, Almere Stad | [BL]","type":"vless","server":"nl2.gosocial.today","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"nl2.gosocial.today"}
-  - {"name":"112 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"bot2.jetstoreapp.ru","port":8443,"uuid":"148cf088-5fa8-48a2-afbb-7003696c5cc1","udp":true,"tls":true,"network":"tcp","servername":"bot2.jetstoreapp.ru"}
-  - {"name":"113 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"193.178.226.176","port":443,"uuid":"1c45e98c-8a4a-45e7-acc5-3a3cc962f463","udp":true,"tls":true,"network":"tcp","servername":"nl.memeplanet.org"}
-  - {"name":"114 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"216.57.105.74","port":443,"uuid":"73c0a723-c0ab-4ad8-8f25-799b9bd54e36","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"115 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"nl-u10.vpn-port.com","port":443,"uuid":"c7588dfa-65df-4965-87c3-6f838c296610","udp":true,"tls":true,"network":"grpc","servername":"yimg.com"}
-  - {"name":"116 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"193.178.226.193","port":443,"uuid":"d428091c-e6eb-48f9-9a07-b44eb886ac90","udp":true,"tls":true,"network":"tcp","servername":"cdn.stuffcollections.com"}
-  - {"name":"117 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"cdn.stuffcollections.com","port":443,"uuid":"d428091c-e6eb-48f9-9a07-b44eb886ac90","udp":true,"tls":true,"network":"tcp","servername":"cdn.stuffcollections.com"}
-  - {"name":"118 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"nl.cdnjst.org","port":443,"uuid":"d428091c-e6eb-48f9-9a07-b44eb886ac90","udp":true,"tls":true,"network":"grpc","servername":"nl.cdnjst.org"}
-  - {"name":"119 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"195.200.26.144","port":443,"uuid":"e060f013-53e5-4d88-bf5e-f93baa562ac5","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"120 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"nlx2.braidx.tech","port":443,"uuid":"2fdd6b51-4fe2-4e2f-803a-3eb284bf038e","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"121 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"dns-test.kweps.ru","port":443,"uuid":"94018dfe-afb0-4bd3-a704-a84caa0ff316","udp":true,"tls":true,"network":"tcp","servername":"api-seller.ozon.ru"}
-  - {"name":"122 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"meowams.nethcloud.top","port":443,"uuid":"951c7521-7158-4978-b82c-2736d4f21044","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
-  - {"name":"123 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"nd.nitroo-tech.ru","port":23355,"uuid":"e6207eb2-1cc3-45c2-aa16-263d6b32940e","udp":true,"tls":true,"network":"grpc","servername":"www.apple.com"}
-  - {"name":"124 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"dns-test.kweps.ru","port":443,"uuid":"ebc3c559-1d33-49d4-a10b-486ec477e0c8","udp":true,"tls":true,"network":"tcp","servername":"api-seller.ozon.ru"}
-  - {"name":"125 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | [BL]","type":"vless","server":"nl6.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"nl6.lazeroe.com"}
-  - {"name":"126 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | 🌐 | [IPv6] | [BL]","type":"vless","server":"nl5.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"nl5.lazeroe.com"}
-  - {"name":"127 🇳🇱 The Netherlands, Eygelshoven | [BL]","type":"vless","server":"zaeb.beestvpn.ru","port":443,"uuid":"4f51ca84-43ea-4087-b8a2-938e0ccbe27a","udp":true,"tls":true,"network":"tcp","servername":"zaeb.beestvpn.ru"}
-  - {"name":"128 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [IPv6] | [BL]","type":"vless","server":"nl-u48.vpn-port.com","port":443,"uuid":"84c41cca-d1be-40bb-843c-59f9bbf843ee","udp":true,"tls":true,"network":"grpc","servername":"yimg.com"}
-  - {"name":"129 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"109.107.168.20","port":443,"uuid":"4f51ca84-43ea-4087-b8a2-938e0ccbe27a","udp":true,"tls":true,"network":"tcp","servername":"ru12.beestvpn.ru"}
-  - {"name":"130 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"132.243.173.147","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"uk.milas.click"}
-  - {"name":"131 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"171.22.181.107","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"uk.milas.click"}
-  - {"name":"132 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"uk.milas.click","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"uk.milas.click"}
-  - {"name":"133 🇺🇸 United States, Chicago | [BL]","type":"vless","server":"us3.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"us3.lazeroe.com"}
-  - {"name":"134 🇺🇸 United States, Chicago | [BL]","type":"vless","server":"us5.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"us5.lazeroe.com"}
-  - {"name":"135 🇺🇸 United States, Las Vegas (Downtown Las Vegas) | [BL]","type":"vless","server":"148.135.99.152","port":34155,"uuid":"39b4f628-3e78-40c3-ac6b-a25db7fd8884","udp":true,"tls":true,"network":"tcp","servername":"www.nvidia.com"}
-  - {"name":"136 🇺🇸 United States, Los Angeles | [BL]","type":"vless","server":"103.180.20.84","port":6235,"uuid":"f6ddddaf-dfd6-4134-9dae-03b93b03d193","udp":true,"tls":true,"network":"ws","servername":"baidu.com"}
-  - {"name":"137 🇷🇺 Russia | 🌐 | [IPv6] | [BL]","type":"vless","server":"193.233.230.196","port":443,"uuid":"29b93b01-3089-4de5-8fee-7b2be2cc8716","udp":true,"tls":true,"network":"tcp","servername":"telegavpn.com"}
-  - {"name":"138 🇷🇺 Russia, Moscow | [BL]","type":"vless","server":"msk2.gosocial.today","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"msk2.gosocial.today"}
-  - {"name":"139 🇷🇺 Russia, Moscow | [BL]","type":"vless","server":"213.165.54.4","port":443,"uuid":"36f6f998-029e-48e2-ba30-24e2a8159075","udp":true,"tls":true,"network":"tcp","servername":"cdnjs.com"}
-  - {"name":"140 🇷🇺 Russia, Moscow | [BL]","type":"vless","server":"213.165.54.4","port":443,"uuid":"50b672fd-167c-4598-9efa-dd3568316329","udp":true,"tls":true,"network":"raw","servername":"cdnjs.com"}
-  - {"name":"141 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"cluster11.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-07d0-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"142 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"russ-13.anti-vpn.ru","port":52006,"uuid":"75807638-6f19-07d0-ae08-38492ee85c88","udp":true,"tls":true,"network":"tcp"}
-  - {"name":"143 🇷🇺 Russia, St Petersburg | 🌐 | [IPv6] | [BL]","type":"vless","server":"176.53.160.219","port":443,"uuid":"8ae7b082-8ada-4352-a66e-c0ab7e48d3ed","udp":true,"tls":true,"network":"tcp","servername":"bespoked.ru"}
-  - {"name":"144 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"103.244.91.194","port":40400,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws"}
-  - {"name":"145 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"141.98.197.157","port":21169,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws"}
-  - {"name":"146 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"167.253.153.162","port":443,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws","servername":"2026.hhhhh.eu.org"}
-  - {"name":"147 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"172.93.221.34","port":11876,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws","servername":"2026.hhhhh.eu.org"}
-  - {"name":"148 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"8.210.126.84","port":22222,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws"}
-  - {"name":"149 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.213.230.170","port":443,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws"}
-  - {"name":"150 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"154.83.84.230","port":7768,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"gavorbhj.chinam.indevs.in"}
-  - {"name":"151 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"45.192.96.32","port":57759,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"gavorbhj.chinam.indevs.in"}
-  - {"name":"152 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"82.152.91.80","port":22931,"uuid":"26524cce-d514-4014-a426-365fb266a14d","udp":true,"tls":true,"network":"ws","servername":"gavorbhj.chinam.indevs.in"}
-  - {"name":"153 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"72.56.8.156","port":9443,"uuid":"4649d681-7f26-4959-a3f2-02eb8866230f","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
-  - {"name":"154 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"193.233.88.230","port":443,"uuid":"4f51ca84-43ea-4087-b8a2-938e0ccbe27a","udp":true,"tls":true,"network":"tcp","servername":"rus3.beestvpn.ru"}
-  - {"name":"155 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"rus3.beestvpn.ru","port":443,"uuid":"4f51ca84-43ea-4087-b8a2-938e0ccbe27a","udp":true,"tls":true,"network":"tcp","servername":"rus3.beestvpn.ru"}
-  - {"name":"156 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"rus8.beestvpn.ru","port":443,"uuid":"4f51ca84-43ea-4087-b8a2-938e0ccbe27a","udp":true,"tls":true,"network":"tcp","servername":"rus8.beestvpn.ru"}
-  - {"name":"157 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.186.245.40","port":81,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
-  - {"name":"158 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"195.85.59.69","port":2095,"uuid":"86c50e3a-5b87-49dd-bd20-03c7f2735e40","udp":true,"tls":false,"network":"ws"}
-  - {"name":"159 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"104.239.87.213","port":2053,"uuid":"ce069292-c8bf-40dd-a6b1-87818a1e64e9","udp":true,"tls":true,"network":"ws","servername":"1-gjo.pages.dev"}
-  - {"name":"160 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"104.239.87.213","port":8443,"uuid":"ce069292-c8bf-40dd-a6b1-87818a1e64e9","udp":true,"tls":true,"network":"ws","servername":"3-8gy.pages.dev"}
-  - {"name":"161 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"154.92.9.156","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","udp":true,"tls":true,"network":"ws","servername":"Worker-Dry-Heart-073a.Eqoniqaq.Workers.Dev"}
-  - {"name":"162 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"163 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"164 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"165 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"166 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"167 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"168 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"169 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"170 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"171 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.32.184.64","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"172 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"173 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"174 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"175 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"176 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"177 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.32.184.64","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"178 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"179 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"180 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"181 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"182 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"183 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"184 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"185 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"186 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"187 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"188 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.32.184.64","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"189 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"190 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"191 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"192 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"193 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"194 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"195 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"196 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"197 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"198 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.32.184.64","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"199 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"200 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"201 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"202 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"203 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"204 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.32.184.64","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"205 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"206 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"207 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"208 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"209 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"210 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"211 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"212 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"213 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"214 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"215 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"216 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"217 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"218 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"219 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.32.184.64","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"220 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"221 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"222 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"223 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"224 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"225 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"226 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"227 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"228 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"229 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"230 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"231 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"232 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"233 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"234 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"235 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"236 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"237 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"238 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"239 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"240 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"241 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"242 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"212.23.211.83","port":1443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"243 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"244 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.110.112.154","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"245 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.22.173.79","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525252525252525252525252525F0%25252525252525252525252525252525252525252525252525252525252525259F%252525252525252525252525252525252525252525252525252525252525252587%2525252525252525252525252525252525252525252525252525252525252525B3%252525252525252525252525252525252525252525252525252525252525252520%252525252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"246 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"37.233.83.115","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"247 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"213.176.64.23","port":8443,"uuid":"Telegram%25252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525A8%25252525252525252525252525252525252525252525252525F0%252525252525252525252525252525252525252525252525259F%2525252525252525252525252525252525252525252525252587%25252525252525252525252525252525252525252525252525B3%2525252525252525252525252525252525252525252525252520%2525252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"248 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252525252587%252525252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252525252520%25252525252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"249 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.36.143.175","port":443,"uuid":"Telegram%252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252587%252525252525252525252525252525252525252525A8%252525252525252525252525252525252525252525F0%2525252525252525252525252525252525252525259F%25252525252525252525252525252525252525252587%252525252525252525252525252525252525252525B3%25252525252525252525252525252525252525252520%25252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"250 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"188.253.24.71","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525F0%25252525252525252525252525252525252525259F%252525252525252525252525252525252525252587%2525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525F0%25252525252525252525252525252525252525259F%252525252525252525252525252525252525252587%2525252525252525252525252525252525252525B3%252525252525252525252525252525252525252520%252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"251 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"46.32.184.64","port":443,"uuid":"Telegram%2525252525252525252525252525252525252525F0%25252525252525252525252525252525252525259F%252525252525252525252525252525252525252587%2525252525252525252525252525252525252525A8%2525252525252525252525252525252525252525F0%25252525252525252525252525252525252525259F%252525252525252525252525252525252525252587%2525252525252525252525252525252525252525B3%252525252525252525252525252525252525252520%252525252525252525252525252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"252 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"5.34.212.114","port":443,"uuid":"Telegram%252525252525252525F0%2525252525252525259F%25252525252525252587%252525252525252525A8%252525252525252525F0%2525252525252525259F%25252525252525252587%252525252525252525B3%25252525252525252520%25252525252525252540WangCai2","udp":true,"tls":true,"network":"ws","servername":"cf.afrcloudnet1.dpdns.org"}
-  - {"name":"253 🇸🇬 Singapore, Singapore (Pioneer) | [BL]","type":"trojan","server":"happynewyear.sahanwickramasinghevip.shop","port":443,"password":"R8kaB0JYLv","udp":true,"tls":true}
-  - {"name":"254 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"167.68.4.199","port":2053,"password":"Aimer","udp":true,"tls":true}
-  - {"name":"255 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"154.3.37.35","port":41916,"password":"hmR46dYjqH","udp":true,"tls":true}
-  - {"name":"256 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"114.207.99.233","port":11434,"password":"trojan","udp":true,"tls":true}
-  - {"name":"257 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"152.53.200.167","port":8444,"password":"trojan","udp":true,"tls":true}
-  - {"name":"258 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"152.53.60.198","port":8444,"password":"trojan","udp":true,"tls":true}
+  - {"name":"1 🇫🇷 France, Paris | [BL]","type":"hysteria2","server":"163.172.113.118","port":40022,"password":"dongtaiwang.com"}
+  - {"name":"2 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"62.210.124.146","port":22000,"password":"dongtaiwang.com"}
+  - {"name":"3 🇩🇪 Germany, Berlin | [BL]","type":"hysteria2","server":"83.243.86.103","port":12855,"password":"github.com/Alvin9999-newpac/fanqiang"}
+  - {"name":"4 🇭🇰 Hong Kong, Central | [BL]","type":"hysteria2","server":"2185b8c5-t48f40-t6v6ki-1phla.hk1.hyhuawei.com","port":443,"password":"467f2940-77cd-11ee-b5ed-f23c9164ca5d"}
+  - {"name":"5 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"hk1.xiaoliyu.cyou","port":23990,"password":"a4c1b618-024a-42d4-b78a-1c25c337a484"}
+  - {"name":"6 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"fre.guren1.me","port":8443,"password":"b2325ebb-21a3-46db-ae98-44884ef6dc44"}
+  - {"name":"7 🇯🇵 Japan | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"iij.mggl.wang","port":35789,"password":"79d73809-f5ed-4099-8588-ba77578def1d"}
+  - {"name":"8 🇯🇵 Japan, Shibuya City | [BL]","type":"hysteria2","server":"103.62.49.76","port":35000,"password":"38428a74-c651-47a5-b2c9-4bec5a1809cf"}
+  - {"name":"9 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"dbp.qzz.io","port":8443,"password":"GEbo3x7TXbmNkdmABqS4mZP7Ax5fjFBPbheKauGJJ9Sw"}
+  - {"name":"10 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"hysteria2","server":"144.31.224.14","port":443,"password":"123456789StrongPass"}
+  - {"name":"11 🇺🇸 United States | 🌐 | [IPv6] | [BL]","type":"hysteria2","server":"134.195.101.199","port":443,"password":"38428a74-c651-47a5-b2c9-4bec5a1809cf"}
+  - {"name":"12 🌐 Anycast-IP | [IPv6] | [BL]","type":"hysteria2","server":"de1.xiaoliyu.cyou","port":4433,"password":"a4c1b618-024a-42d4-b78a-1c25c337a484"}
+  - {"name":"13 🇧🇬 Bulgaria, Sofia | [BL]","type":"vless","server":"letsgo.nethcloud.top","port":443,"uuid":"951c7521-7158-4978-b82c-2736d4f21044","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
+  - {"name":"14 🇨🇦 Canada, Toronto | 🌐 | [BL]","type":"vless","server":"nnt.stardevs.top","port":443,"uuid":"f00984ef-f57e-41db-9182-b25f7bc3a1e2","udp":true,"tls":true,"network":"tcp","servername":"nnt.stardevs.top"}
+  - {"name":"15 🇪🇪 Estonia, Tallinn | [BL]","type":"vless","server":"estinode.lumixnet.com","port":443,"uuid":"a534ec08-6c69-4b36-b7e6-7f6651d30265","udp":true,"tls":true,"network":"tcp","servername":"estinode.lumixnet.com"}
+  - {"name":"16 🇫🇮 Finland, Helsinki | [BL]","type":"vless","server":"fi.milas.click","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"fi.milas.click"}
+  - {"name":"17 🇫🇷 France, Aubervilliers | 🌐 | [IPv6] | [BL]","type":"vless","server":"152.89.253.111","port":7443,"uuid":"248d1886-8ae0-4079-a281-4d21bdb74ba4","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
+  - {"name":"18 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"pl4.gosocial.today","port":443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"xhttp","servername":"pl4.gosocial.today"}
+  - {"name":"19 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"pl4.gosocial.today","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"pl4.gosocial.today"}
+  - {"name":"20 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"de8.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"de8.lazeroe.com"}
+  - {"name":"21 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"72.56.122.15","port":443,"uuid":"90c9c25c-df6c-4438-83d3-ef97166a9184","udp":true,"tls":true,"network":"tcp","servername":"5post-gate.x5.ru"}
+  - {"name":"22 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"89.19.208.200","port":443,"uuid":"90c9c25c-df6c-4438-83d3-ef97166a9184","udp":true,"tls":true,"network":"tcp","servername":"5post-gate.x5.ru"}
+  - {"name":"23 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [IPv6] | [BL]","type":"vless","server":"92.119.166.90","port":7443,"uuid":"72eb4de8-5eca-420d-8876-173ef58d82e8","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
+  - {"name":"24 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"47.242.215.37","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"www.autodesk.com"}
+  - {"name":"25 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"47.242.64.181","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"cms.suse.net"}
+  - {"name":"26 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"vless","server":"8.218.102.24","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"app.usercentrics.eu"}
+  - {"name":"27 🇰🇿 Kazakhstan, Almaty | 🌐 | [IPv6] | [BL]","type":"vless","server":"7qqrbome80g.country-25.de-nfast.com","port":443,"uuid":"4b481152-ba7f-4445-8cc0-d33d58546e23","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"28 🇱🇹 Lithuania, Šiauliai | [BL]","type":"vless","server":"lt1.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"lt1.lazeroe.com"}
+  - {"name":"29 🇱🇹 Lithuania, Šiauliai | [BL]","type":"vless","server":"lt2.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"lt2.lazeroe.com"}
+  - {"name":"30 🇵🇱 Poland, Warsaw | [BL]","type":"vless","server":"95.85.254.40","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"pl.milas.click"}
+  - {"name":"31 🇵🇱 Poland, Warsaw | [BL]","type":"vless","server":"polands.stardevs.top","port":443,"uuid":"f00984ef-f57e-41db-9182-b25f7bc3a1e2","udp":true,"tls":true,"network":"tcp","servername":"polands.stardevs.top"}
+  - {"name":"32 🇵🇱 Poland, Warsaw (Mokotów) | [BL]","type":"vless","server":"pl.milas.click","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"pl.milas.click"}
+  - {"name":"33 🇵🇱 Poland, Warsaw (Mokotów) | [BL]","type":"vless","server":"77.239.114.30","port":443,"uuid":"d2ed1098-75cd-46e6-b663-f0670fa5de27","udp":true,"tls":true,"network":"xhttp","servername":"sun6-23.userapi.com"}
+  - {"name":"34 🇸🇬 Singapore, Singapore (Pioneer) | [BL]","type":"vless","server":"news.zoom.us","port":8443,"uuid":"39eb8c33-ee7f-4980-b3e5-684aaf390f56","udp":true,"tls":true,"network":"ws","servername":"darknet-free.alexid.org"}
+  - {"name":"35 🇰🇷 South Korea, Seoul | [BL]","type":"vless","server":"47.80.13.96","port":443,"uuid":"3e7f67de-648e-4871-b51a-a225214d41ee","udp":true,"tls":true,"network":"tcp","servername":"api.company-target.com"}
+  - {"name":"36 🇳🇱 The Netherlands, Almere Stad | [BL]","type":"vless","server":"5.252.20.47","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"nl2.gosocial.today"}
+  - {"name":"37 🇳🇱 The Netherlands, Almere Stad | [BL]","type":"vless","server":"nl2.gosocial.today","port":443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"xhttp","servername":"nl2.gosocial.today"}
+  - {"name":"38 🇳🇱 The Netherlands, Almere Stad | [BL]","type":"vless","server":"nl2.gosocial.today","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"nl2.gosocial.today"}
+  - {"name":"39 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"151.101.67.6","port":443,"uuid":"4d66cd9d-a31b-45bf-a4bd-476abb318ced","udp":true,"tls":true,"network":"xhttp","servername":"2a02:26f0:5d00:138f::2a1"}
+  - {"name":"40 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"216.57.105.74","port":443,"uuid":"73c0a723-c0ab-4ad8-8f25-799b9bd54e36","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"41 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]","type":"vless","server":"nd.nitroo-tech.ru","port":23355,"uuid":"e6207eb2-1cc3-45c2-aa16-263d6b32940e","udp":true,"tls":true,"network":"grpc","servername":"www.apple.com"}
+  - {"name":"42 🇳🇱 The Netherlands, Eindhoven | 🌐 | [IPv6] | [BL]","type":"vless","server":"45.43.92.62","port":7443,"uuid":"248d1886-8ae0-4079-a281-4d21bdb74ba4","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
+  - {"name":"43 🇹🇷 Turkey, Istanbul | 🌐 | [IPv6] | [BL]","type":"vless","server":"white2meow.nethcloud.top","port":443,"uuid":"951c7521-7158-4978-b82c-2736d4f21044","udp":true,"tls":true,"network":"tcp","servername":"wikihow.com"}
+  - {"name":"44 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"109.107.168.20","port":443,"uuid":"4f51ca84-43ea-4087-b8a2-938e0ccbe27a","udp":true,"tls":true,"network":"tcp","servername":"ru12.beestvpn.ru"}
+  - {"name":"45 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"132.243.173.147","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"uk.milas.click"}
+  - {"name":"46 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"171.22.181.107","port":443,"uuid":"913c6074-a747-492b-a7e9-5abfcad6369d","udp":true,"tls":true,"network":"tcp","servername":"uk.milas.click"}
+  - {"name":"47 🇺🇸 United States, Chicago | [BL]","type":"vless","server":"us5.lazeroe.com","port":443,"uuid":"3b7e7ab6-feb0-4c12-b575-b5b2b8e7b8e5","udp":true,"tls":true,"network":"xhttp","servername":"us5.lazeroe.com"}
+  - {"name":"48 🇺🇸 United States, Las Vegas (Downtown Las Vegas) | [BL]","type":"vless","server":"dbp.qzz.io","port":34155,"uuid":"39b4f628-3e78-40c3-ac6b-a25db7fd8884","udp":true,"tls":true,"network":"tcp","servername":"www.nvidia.com"}
+  - {"name":"49 🇷🇺 Russia | 🌐 | [IPv6] | [BL]","type":"vless","server":"7qqrbome80g.country-26.de-nfast.com","port":443,"uuid":"4b481152-ba7f-4445-8cc0-d33d58546e23","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"50 🇷🇺 Russia, Moscow | [BL]","type":"vless","server":"msk2.gosocial.today","port":8443,"uuid":"337582a5-3705-11f1-953f-dc08fb041e0d","udp":true,"tls":true,"network":"tcp","servername":"msk2.gosocial.today"}
+  - {"name":"51 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"89.213.230.170","port":443,"uuid":"06ef598c-1555-4887-b3f9-08214a2f6792","udp":true,"tls":true,"network":"ws"}
+  - {"name":"52 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"152.53.148.223","port":7443,"uuid":"248d1886-8ae0-4079-a281-4d21bdb74ba4","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
+  - {"name":"53 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"152.53.60.114","port":7443,"uuid":"248d1886-8ae0-4079-a281-4d21bdb74ba4","udp":true,"tls":true,"network":"tcp","servername":"chat.deepseek.com"}
+  - {"name":"54 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"72.56.8.156","port":9443,"uuid":"4649d681-7f26-4959-a3f2-02eb8866230f","udp":true,"tls":true,"network":"tcp","servername":"yahoo.com"}
+  - {"name":"55 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"193.233.88.230","port":443,"uuid":"4f51ca84-43ea-4087-b8a2-938e0ccbe27a","udp":true,"tls":true,"network":"tcp","servername":"rus3.beestvpn.ru"}
+  - {"name":"56 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"185.186.245.40","port":81,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":true,"network":"ws","servername":"sni.111000.dynv6.net"}
+  - {"name":"57 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"178.18.147.163","port":15530,"uuid":"ac121f97-544b-47b3-bf91-eca9c45db548","udp":true,"tls":true,"network":"xhttp","servername":"www.microsoft.com"}
+  - {"name":"58 🌐 Anycast-IP | [IPv6] | [BL]","type":"vless","server":"154.92.9.156","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","udp":true,"tls":true,"network":"ws","servername":"Worker-Dry-Heart-073a.Eqoniqaq.Workers.Dev"}
+  - {"name":"59 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"154.3.37.35","port":41916,"password":"hmR46dYjqH","udp":true,"tls":true}
+  - {"name":"60 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"114.207.99.233","port":11434,"password":"trojan","udp":true,"tls":true}
+  - {"name":"61 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"152.53.200.167","port":8444,"password":"trojan","udp":true,"tls":true}
+  - {"name":"62 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"152.53.200.98","port":8444,"password":"trojan","udp":true,"tls":true}
+  - {"name":"63 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"152.53.45.251","port":8888,"password":"trojan","udp":true,"tls":true}
+  - {"name":"64 🌐 Anycast-IP | [IPv6] | [BL]","type":"trojan","server":"152.53.60.198","port":8444,"password":"trojan","udp":true,"tls":true}
+  - {"name":"65 🇸🇬 Singapore, Singapore | [BL]","type":"vmess","server":"v12.hdacd.com","port":30812,"uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"66 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vmess","server":"hl112.cowvpn.space","port":11617,"uuid":"0bf1cead-bdd4-4692-b3d4-6866ccb9f37a","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"67 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vmess","server":"v30.hdacd.com","port":30830,"uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -446,264 +255,73 @@ proxy-groups:
     type: select
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
-      - "1 🇧🇷 Brazil, São Paulo | 🌐 | [IPv6] | [BL]"
-      - "2 🇫🇷 France, Paris | [BL]"
-      - "3 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
+      - "1 🇫🇷 France, Paris | [BL]"
+      - "2 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
+      - "3 🇩🇪 Germany, Berlin | [BL]"
       - "4 🇭🇰 Hong Kong, Central | [BL]"
-      - "5 🇯🇵 Japan, Chiyoda City | [BL]"
-      - "6 🇯🇵 Japan, Shibuya City | [BL]"
-      - "7 🇯🇵 Japan, Shibuya City | [BL]"
-      - "8 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]"
-      - "9 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "10 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Centrum) | [BL]"
-      - "11 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Centrum) | [BL]"
-      - "12 🇬🇧 United Kingdom, Coventry | 🌐 | [IPv6] | [BL]"
-      - "13 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
-      - "14 🇦🇹 Austria, Vienna | [BL]"
-      - "15 🇧🇪 Belgium, Brussels | [BL]"
-      - "16 🇧🇷 Brazil, Mogi das Cruzes | 🌐 | [BL]"
-      - "17 🇧🇷 Brazil, São Paulo | 🌐 | [IPv6] | [BL]"
-      - "18 🇨🇿 Czechia, Prague | [BL]"
-      - "19 🇨🇿 Czechia, Prague | [BL]"
-      - "20 🇪🇪 Estonia, Jõhvi | 🌐 | [IPv6] | [BL]"
-      - "21 🇪🇪 Estonia, Tallinn | [BL]"
-      - "22 🇪🇪 Estonia, Tallinn | [BL]"
-      - "23 🇪🇪 Estonia, Tallinn | [BL]"
-      - "24 🇪🇪 Estonia, Tallinn | [BL]"
-      - "25 🇪🇪 Estonia, Tallinn | 🌐 | [BL]"
-      - "26 🇪🇪 Estonia, Tallinn | 🌐 | [BL]"
-      - "27 🇪🇪 Estonia, Tallinn | 🌐 | [IPv6] | [BL]"
-      - "28 🇫🇮 Finland, Helsinki | [BL]"
-      - "29 🇫🇮 Finland, Helsinki | [BL]"
-      - "30 🇫🇮 Finland, Helsinki | [BL]"
-      - "31 🇫🇮 Finland, Helsinki | [BL]"
-      - "32 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "33 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "34 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "35 🇫🇷 France, Aubervilliers | 🌐 | [IPv6] | [BL]"
-      - "36 🇫🇷 France, Paris | [BL]"
-      - "37 🇫🇷 France, Paris | [BL]"
-      - "38 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
-      - "39 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
-      - "40 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
-      - "41 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "42 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "43 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "44 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "45 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "46 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "47 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "48 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "49 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "50 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
-      - "51 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "52 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "53 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "54 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "55 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "56 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "57 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "58 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "59 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [IPv6] | [BL]"
-      - "60 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "61 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "62 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "63 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "64 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "65 🇩🇪 Germany, Nuremberg | [BL]"
-      - "66 🇭🇰 Hong Kong, Hong Kong | [BL]"
-      - "67 🇭🇰 Hong Kong, Hong Kong | [BL]"
-      - "68 🇭🇰 Hong Kong, Hong Kong | [BL]"
-      - "69 🇭🇰 Hong Kong, Hong Kong | [BL]"
-      - "70 🇭🇰 Hong Kong, Sha Tin Wai | [BL]"
-      - "71 🇮🇳 India, New Delhi | [BL]"
-      - "72 🇮🇩 Indonesia | 🌐 | [IPv6] | [BL]"
-      - "73 🇮🇹 Italy, Milan | [BL]"
-      - "74 🇮🇹 Italy, Siziano | [BL]"
-      - "75 🇯🇲 Jamaica, Kingston | 🌐 | [BL]"
-      - "76 🇯🇵 Japan, Shibuya City | [BL]"
-      - "77 🇯🇵 Japan, Shibuya City | [BL]"
-      - "78 🇯🇵 Japan, Shibuya City | [BL]"
-      - "79 🇯🇵 Japan, Shibuya City | [BL]"
-      - "80 🇯🇵 Japan, Shibuya City | [BL]"
-      - "81 🇯🇵 Japan, Shibuya City | [BL]"
-      - "82 🇱🇹 Lithuania, Vilnius | 🌐 | [IPv6] | [BL]"
-      - "83 🇱🇹 Lithuania, Šiauliai | [BL]"
-      - "84 🇱🇹 Lithuania, Šiauliai | [BL]"
-      - "85 🇱🇹 Lithuania, Šiauliai | [BL]"
-      - "86 🇱🇹 Lithuania, Šiauliai | [BL]"
-      - "87 🇲🇾 Malaysia, Kuala Lumpur | [BL]"
-      - "88 🇵🇱 Poland, Gdansk | [BL]"
-      - "89 🇵🇱 Poland, Gdansk | [BL]"
-      - "90 🇵🇱 Poland, Warsaw | [BL]"
-      - "91 🇵🇱 Poland, Warsaw | [BL]"
-      - "92 🇵🇱 Poland, Warsaw | [BL]"
-      - "93 🇵🇱 Poland, Warsaw | 🌐 | [IPv6] | [BL]"
-      - "94 🇵🇱 Poland, Warsaw | 🌐 | [IPv6] | [BL]"
-      - "95 🇷🇴 Romania, Bucharest | [BL]"
-      - "96 🇸🇬 Singapore, Singapore | [BL]"
-      - "97 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "98 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "99 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "100 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "101 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "102 🇸🇪 Sweden, Stockholm | [BL]"
-      - "103 🇸🇪 Sweden, Stockholm | [BL]"
-      - "104 🇨🇭 Switzerland, Zurich | [BL]"
-      - "105 🇨🇭 Switzerland, Zurich | [BL]"
-      - "106 🇨🇭 Switzerland, Zurich | [BL]"
-      - "107 🇹🇼 Taiwan, Taipei | [BL]"
-      - "108 🇹🇭 Thailand, Bangkok | [BL]"
-      - "109 🇳🇱 The Netherlands, Almere Stad | [BL]"
-      - "110 🇳🇱 The Netherlands, Almere Stad | [BL]"
-      - "111 🇳🇱 The Netherlands, Almere Stad | [BL]"
-      - "112 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "113 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "114 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "115 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "116 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "117 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "118 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "119 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "120 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "121 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "122 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "123 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "124 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "125 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | [BL]"
-      - "126 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | 🌐 | [IPv6] | [BL]"
-      - "127 🇳🇱 The Netherlands, Eygelshoven | [BL]"
-      - "128 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [IPv6] | [BL]"
-      - "129 🇬🇧 United Kingdom, London | [BL]"
-      - "130 🇬🇧 United Kingdom, London | [BL]"
-      - "131 🇬🇧 United Kingdom, London | [BL]"
-      - "132 🇬🇧 United Kingdom, London | [BL]"
-      - "133 🇺🇸 United States, Chicago | [BL]"
-      - "134 🇺🇸 United States, Chicago | [BL]"
-      - "135 🇺🇸 United States, Las Vegas (Downtown Las Vegas) | [BL]"
-      - "136 🇺🇸 United States, Los Angeles | [BL]"
-      - "137 🇷🇺 Russia | 🌐 | [IPv6] | [BL]"
-      - "138 🇷🇺 Russia, Moscow | [BL]"
-      - "139 🇷🇺 Russia, Moscow | [BL]"
-      - "140 🇷🇺 Russia, Moscow | [BL]"
-      - "141 🇷🇺 Russia, St Petersburg | [BL]"
-      - "142 🇷🇺 Russia, St Petersburg | [BL]"
-      - "143 🇷🇺 Russia, St Petersburg | 🌐 | [IPv6] | [BL]"
-      - "144 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "145 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "146 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "147 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "148 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "149 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "150 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "151 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "152 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "153 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "154 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "155 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "156 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "157 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "158 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "159 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "160 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "161 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "162 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "163 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "164 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "165 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "166 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "167 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "168 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "169 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "170 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "171 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "172 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "173 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "174 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "175 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "176 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "177 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "178 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "179 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "180 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "181 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "182 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "183 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "184 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "185 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "186 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "187 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "188 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "189 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "190 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "191 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "192 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "193 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "194 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "195 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "196 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "197 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "198 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "199 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "200 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "201 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "202 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "203 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "204 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "205 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "206 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "207 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "208 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "209 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "210 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "211 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "212 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "213 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "214 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "215 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "216 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "217 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "218 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "219 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "220 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "221 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "222 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "223 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "224 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "225 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "226 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "227 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "228 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "229 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "230 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "231 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "232 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "233 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "234 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "235 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "236 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "237 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "238 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "239 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "240 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "241 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "242 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "243 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "244 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "245 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "246 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "247 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "248 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "249 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "250 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "251 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "252 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "253 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "254 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "255 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "256 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "257 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "258 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "5 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]"
+      - "6 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]"
+      - "7 🇯🇵 Japan | 🌐 | [IPv6] | [BL]"
+      - "8 🇯🇵 Japan, Shibuya City | [BL]"
+      - "9 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]"
+      - "10 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "11 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "12 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "13 🇧🇬 Bulgaria, Sofia | [BL]"
+      - "14 🇨🇦 Canada, Toronto | 🌐 | [BL]"
+      - "15 🇪🇪 Estonia, Tallinn | [BL]"
+      - "16 🇫🇮 Finland, Helsinki | [BL]"
+      - "17 🇫🇷 France, Aubervilliers | 🌐 | [IPv6] | [BL]"
+      - "18 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "19 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "20 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "21 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "22 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "23 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [IPv6] | [BL]"
+      - "24 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "25 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "26 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "27 🇰🇿 Kazakhstan, Almaty | 🌐 | [IPv6] | [BL]"
+      - "28 🇱🇹 Lithuania, Šiauliai | [BL]"
+      - "29 🇱🇹 Lithuania, Šiauliai | [BL]"
+      - "30 🇵🇱 Poland, Warsaw | [BL]"
+      - "31 🇵🇱 Poland, Warsaw | [BL]"
+      - "32 🇵🇱 Poland, Warsaw (Mokotów) | [BL]"
+      - "33 🇵🇱 Poland, Warsaw (Mokotów) | [BL]"
+      - "34 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
+      - "35 🇰🇷 South Korea, Seoul | [BL]"
+      - "36 🇳🇱 The Netherlands, Almere Stad | [BL]"
+      - "37 🇳🇱 The Netherlands, Almere Stad | [BL]"
+      - "38 🇳🇱 The Netherlands, Almere Stad | [BL]"
+      - "39 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "40 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "41 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
+      - "42 🇳🇱 The Netherlands, Eindhoven | 🌐 | [IPv6] | [BL]"
+      - "43 🇹🇷 Turkey, Istanbul | 🌐 | [IPv6] | [BL]"
+      - "44 🇬🇧 United Kingdom, London | [BL]"
+      - "45 🇬🇧 United Kingdom, London | [BL]"
+      - "46 🇬🇧 United Kingdom, London | [BL]"
+      - "47 🇺🇸 United States, Chicago | [BL]"
+      - "48 🇺🇸 United States, Las Vegas (Downtown Las Vegas) | [BL]"
+      - "49 🇷🇺 Russia | 🌐 | [IPv6] | [BL]"
+      - "50 🇷🇺 Russia, Moscow | [BL]"
+      - "51 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "52 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "53 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "54 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "55 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "56 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "57 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "58 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "59 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "60 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "61 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "62 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "63 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "64 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "65 🇸🇬 Singapore, Singapore | [BL]"
+      - "66 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "67 🇳🇱 The Netherlands, Amsterdam | [BL]"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -712,264 +330,73 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "1 🇧🇷 Brazil, São Paulo | 🌐 | [IPv6] | [BL]"
-      - "2 🇫🇷 France, Paris | [BL]"
-      - "3 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
+      - "1 🇫🇷 France, Paris | [BL]"
+      - "2 🇫🇷 France, Paris | 🌐 | [IPv6] | [BL]"
+      - "3 🇩🇪 Germany, Berlin | [BL]"
       - "4 🇭🇰 Hong Kong, Central | [BL]"
-      - "5 🇯🇵 Japan, Chiyoda City | [BL]"
-      - "6 🇯🇵 Japan, Shibuya City | [BL]"
-      - "7 🇯🇵 Japan, Shibuya City | [BL]"
-      - "8 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]"
-      - "9 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "10 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Centrum) | [BL]"
-      - "11 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Centrum) | [BL]"
-      - "12 🇬🇧 United Kingdom, Coventry | 🌐 | [IPv6] | [BL]"
-      - "13 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
-      - "14 🇦🇹 Austria, Vienna | [BL]"
-      - "15 🇧🇪 Belgium, Brussels | [BL]"
-      - "16 🇧🇷 Brazil, Mogi das Cruzes | 🌐 | [BL]"
-      - "17 🇧🇷 Brazil, São Paulo | 🌐 | [IPv6] | [BL]"
-      - "18 🇨🇿 Czechia, Prague | [BL]"
-      - "19 🇨🇿 Czechia, Prague | [BL]"
-      - "20 🇪🇪 Estonia, Jõhvi | 🌐 | [IPv6] | [BL]"
-      - "21 🇪🇪 Estonia, Tallinn | [BL]"
-      - "22 🇪🇪 Estonia, Tallinn | [BL]"
-      - "23 🇪🇪 Estonia, Tallinn | [BL]"
-      - "24 🇪🇪 Estonia, Tallinn | [BL]"
-      - "25 🇪🇪 Estonia, Tallinn | 🌐 | [BL]"
-      - "26 🇪🇪 Estonia, Tallinn | 🌐 | [BL]"
-      - "27 🇪🇪 Estonia, Tallinn | 🌐 | [IPv6] | [BL]"
-      - "28 🇫🇮 Finland, Helsinki | [BL]"
-      - "29 🇫🇮 Finland, Helsinki | [BL]"
-      - "30 🇫🇮 Finland, Helsinki | [BL]"
-      - "31 🇫🇮 Finland, Helsinki | [BL]"
-      - "32 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "33 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "34 🇫🇮 Finland, Helsinki | 🌐 | [IPv6] | [BL]"
-      - "35 🇫🇷 France, Aubervilliers | 🌐 | [IPv6] | [BL]"
-      - "36 🇫🇷 France, Paris | [BL]"
-      - "37 🇫🇷 France, Paris | [BL]"
-      - "38 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
-      - "39 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
-      - "40 🇩🇪 Germany | 🌐 | [IPv6] | [BL]"
-      - "41 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "42 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "43 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "44 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "45 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "46 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "47 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "48 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "49 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "50 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
-      - "51 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "52 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "53 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "54 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "55 🇩🇪 Germany, Frankfurt am Main | 🌐 | [IPv6] | [BL]"
-      - "56 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "57 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "58 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "59 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [IPv6] | [BL]"
-      - "60 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "61 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "62 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "63 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "64 🇩🇪 Germany, Karlsruhe (Nordweststadt) | [BL]"
-      - "65 🇩🇪 Germany, Nuremberg | [BL]"
-      - "66 🇭🇰 Hong Kong, Hong Kong | [BL]"
-      - "67 🇭🇰 Hong Kong, Hong Kong | [BL]"
-      - "68 🇭🇰 Hong Kong, Hong Kong | [BL]"
-      - "69 🇭🇰 Hong Kong, Hong Kong | [BL]"
-      - "70 🇭🇰 Hong Kong, Sha Tin Wai | [BL]"
-      - "71 🇮🇳 India, New Delhi | [BL]"
-      - "72 🇮🇩 Indonesia | 🌐 | [IPv6] | [BL]"
-      - "73 🇮🇹 Italy, Milan | [BL]"
-      - "74 🇮🇹 Italy, Siziano | [BL]"
-      - "75 🇯🇲 Jamaica, Kingston | 🌐 | [BL]"
-      - "76 🇯🇵 Japan, Shibuya City | [BL]"
-      - "77 🇯🇵 Japan, Shibuya City | [BL]"
-      - "78 🇯🇵 Japan, Shibuya City | [BL]"
-      - "79 🇯🇵 Japan, Shibuya City | [BL]"
-      - "80 🇯🇵 Japan, Shibuya City | [BL]"
-      - "81 🇯🇵 Japan, Shibuya City | [BL]"
-      - "82 🇱🇹 Lithuania, Vilnius | 🌐 | [IPv6] | [BL]"
-      - "83 🇱🇹 Lithuania, Šiauliai | [BL]"
-      - "84 🇱🇹 Lithuania, Šiauliai | [BL]"
-      - "85 🇱🇹 Lithuania, Šiauliai | [BL]"
-      - "86 🇱🇹 Lithuania, Šiauliai | [BL]"
-      - "87 🇲🇾 Malaysia, Kuala Lumpur | [BL]"
-      - "88 🇵🇱 Poland, Gdansk | [BL]"
-      - "89 🇵🇱 Poland, Gdansk | [BL]"
-      - "90 🇵🇱 Poland, Warsaw | [BL]"
-      - "91 🇵🇱 Poland, Warsaw | [BL]"
-      - "92 🇵🇱 Poland, Warsaw | [BL]"
-      - "93 🇵🇱 Poland, Warsaw | 🌐 | [IPv6] | [BL]"
-      - "94 🇵🇱 Poland, Warsaw | 🌐 | [IPv6] | [BL]"
-      - "95 🇷🇴 Romania, Bucharest | [BL]"
-      - "96 🇸🇬 Singapore, Singapore | [BL]"
-      - "97 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "98 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "99 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "100 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "101 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "102 🇸🇪 Sweden, Stockholm | [BL]"
-      - "103 🇸🇪 Sweden, Stockholm | [BL]"
-      - "104 🇨🇭 Switzerland, Zurich | [BL]"
-      - "105 🇨🇭 Switzerland, Zurich | [BL]"
-      - "106 🇨🇭 Switzerland, Zurich | [BL]"
-      - "107 🇹🇼 Taiwan, Taipei | [BL]"
-      - "108 🇹🇭 Thailand, Bangkok | [BL]"
-      - "109 🇳🇱 The Netherlands, Almere Stad | [BL]"
-      - "110 🇳🇱 The Netherlands, Almere Stad | [BL]"
-      - "111 🇳🇱 The Netherlands, Almere Stad | [BL]"
-      - "112 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "113 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "114 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "115 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "116 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "117 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "118 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "119 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "120 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "121 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "122 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "123 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "124 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
-      - "125 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | [BL]"
-      - "126 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Zuidoost) | 🌐 | [IPv6] | [BL]"
-      - "127 🇳🇱 The Netherlands, Eygelshoven | [BL]"
-      - "128 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [IPv6] | [BL]"
-      - "129 🇬🇧 United Kingdom, London | [BL]"
-      - "130 🇬🇧 United Kingdom, London | [BL]"
-      - "131 🇬🇧 United Kingdom, London | [BL]"
-      - "132 🇬🇧 United Kingdom, London | [BL]"
-      - "133 🇺🇸 United States, Chicago | [BL]"
-      - "134 🇺🇸 United States, Chicago | [BL]"
-      - "135 🇺🇸 United States, Las Vegas (Downtown Las Vegas) | [BL]"
-      - "136 🇺🇸 United States, Los Angeles | [BL]"
-      - "137 🇷🇺 Russia | 🌐 | [IPv6] | [BL]"
-      - "138 🇷🇺 Russia, Moscow | [BL]"
-      - "139 🇷🇺 Russia, Moscow | [BL]"
-      - "140 🇷🇺 Russia, Moscow | [BL]"
-      - "141 🇷🇺 Russia, St Petersburg | [BL]"
-      - "142 🇷🇺 Russia, St Petersburg | [BL]"
-      - "143 🇷🇺 Russia, St Petersburg | 🌐 | [IPv6] | [BL]"
-      - "144 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "145 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "146 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "147 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "148 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "149 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "150 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "151 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "152 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "153 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "154 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "155 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "156 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "157 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "158 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "159 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "160 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "161 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "162 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "163 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "164 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "165 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "166 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "167 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "168 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "169 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "170 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "171 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "172 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "173 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "174 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "175 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "176 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "177 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "178 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "179 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "180 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "181 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "182 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "183 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "184 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "185 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "186 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "187 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "188 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "189 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "190 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "191 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "192 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "193 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "194 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "195 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "196 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "197 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "198 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "199 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "200 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "201 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "202 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "203 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "204 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "205 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "206 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "207 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "208 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "209 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "210 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "211 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "212 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "213 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "214 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "215 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "216 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "217 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "218 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "219 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "220 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "221 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "222 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "223 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "224 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "225 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "226 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "227 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "228 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "229 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "230 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "231 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "232 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "233 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "234 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "235 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "236 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "237 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "238 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "239 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "240 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "241 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "242 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "243 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "244 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "245 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "246 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "247 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "248 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "249 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "250 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "251 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "252 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "253 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
-      - "254 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "255 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "256 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "257 🌐 Anycast-IP | [IPv6] | [BL]"
-      - "258 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "5 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]"
+      - "6 🇭🇰 Hong Kong, Hong Kong | 🌐 | [IPv6] | [BL]"
+      - "7 🇯🇵 Japan | 🌐 | [IPv6] | [BL]"
+      - "8 🇯🇵 Japan, Shibuya City | [BL]"
+      - "9 🇯🇵 Japan, Shibuya City | 🌐 | [IPv6] | [BL]"
+      - "10 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "11 🇺🇸 United States | 🌐 | [IPv6] | [BL]"
+      - "12 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "13 🇧🇬 Bulgaria, Sofia | [BL]"
+      - "14 🇨🇦 Canada, Toronto | 🌐 | [BL]"
+      - "15 🇪🇪 Estonia, Tallinn | [BL]"
+      - "16 🇫🇮 Finland, Helsinki | [BL]"
+      - "17 🇫🇷 France, Aubervilliers | 🌐 | [IPv6] | [BL]"
+      - "18 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "19 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "20 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "21 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "22 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "23 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [IPv6] | [BL]"
+      - "24 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "25 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "26 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "27 🇰🇿 Kazakhstan, Almaty | 🌐 | [IPv6] | [BL]"
+      - "28 🇱🇹 Lithuania, Šiauliai | [BL]"
+      - "29 🇱🇹 Lithuania, Šiauliai | [BL]"
+      - "30 🇵🇱 Poland, Warsaw | [BL]"
+      - "31 🇵🇱 Poland, Warsaw | [BL]"
+      - "32 🇵🇱 Poland, Warsaw (Mokotów) | [BL]"
+      - "33 🇵🇱 Poland, Warsaw (Mokotów) | [BL]"
+      - "34 🇸🇬 Singapore, Singapore (Pioneer) | [BL]"
+      - "35 🇰🇷 South Korea, Seoul | [BL]"
+      - "36 🇳🇱 The Netherlands, Almere Stad | [BL]"
+      - "37 🇳🇱 The Netherlands, Almere Stad | [BL]"
+      - "38 🇳🇱 The Netherlands, Almere Stad | [BL]"
+      - "39 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "40 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "41 🇳🇱 The Netherlands, Amsterdam | 🌐 | [IPv6] | [BL]"
+      - "42 🇳🇱 The Netherlands, Eindhoven | 🌐 | [IPv6] | [BL]"
+      - "43 🇹🇷 Turkey, Istanbul | 🌐 | [IPv6] | [BL]"
+      - "44 🇬🇧 United Kingdom, London | [BL]"
+      - "45 🇬🇧 United Kingdom, London | [BL]"
+      - "46 🇬🇧 United Kingdom, London | [BL]"
+      - "47 🇺🇸 United States, Chicago | [BL]"
+      - "48 🇺🇸 United States, Las Vegas (Downtown Las Vegas) | [BL]"
+      - "49 🇷🇺 Russia | 🌐 | [IPv6] | [BL]"
+      - "50 🇷🇺 Russia, Moscow | [BL]"
+      - "51 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "52 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "53 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "54 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "55 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "56 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "57 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "58 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "59 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "60 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "61 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "62 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "63 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "64 🌐 Anycast-IP | [IPv6] | [BL]"
+      - "65 🇸🇬 Singapore, Singapore | [BL]"
+      - "66 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "67 🇳🇱 The Netherlands, Amsterdam | [BL]"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
