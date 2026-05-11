@@ -175,74 +175,288 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 剩余流量：0","type":"hysteria2","server":"hk-xbsvip.xiaobaivpn.icu","port":8443,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52"}
-  - {"name":"2 HK2-HY2-高速","type":"hysteria2","server":"hk-xbsvip.xiaobaivpn.icu","port":2053,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52"}
-  - {"name":"3 HK3-HY2-高速","type":"hysteria2","server":"hk-xbsvip.xiaobaivpn.icu","port":443,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52"}
-  - {"name":"4 剩余流量：0","type":"vless","server":"sg001.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"5 新加坡02|流媒体","type":"vless","server":"sg002.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"6 新加坡03|流媒体","type":"vless","server":"sg003.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"7 新加坡04|流媒体","type":"vless","server":"sg004.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"8 日本01","type":"vless","server":"jp001.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"9 日本02","type":"vless","server":"jp002.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"10 日本03","type":"vless","server":"jp003.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"11 日本04","type":"vless","server":"jp004.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"12 美国01","type":"vless","server":"us001.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"13 美国02","type":"vless","server":"us002.421421.xyz","port":20230,"uuid":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"14 剩余流量：0","type":"vless","server":"sg001.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"15 新加坡02|流媒体","type":"vless","server":"sg002.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"16 新加坡03|流媒体","type":"vless","server":"sg003.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"17 新加坡04|流媒体","type":"vless","server":"sg004.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"18 日本01","type":"vless","server":"jp001.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"19 日本02","type":"vless","server":"jp002.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"20 日本03","type":"vless","server":"jp003.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"21 日本04","type":"vless","server":"jp004.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"22 美国01","type":"vless","server":"us001.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"23 美国02","type":"vless","server":"us002.421421.xyz","port":20230,"uuid":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true,"network":"grpc","servername":"www.nvidia.com"}
-  - {"name":"24 用户名 llpl","type":"ss","server":"127.0.0.1","port":1080,"cipher":"aes-256-gcm","password":"f30ac87d-febb-4bf7-9cc7-61452a610787"}
-  - {"name":"25 新加坡05|流媒体","type":"trojan","server":"sg005.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"26 新加坡06|流媒体","type":"trojan","server":"sg006.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"27 新加坡07|流媒体","type":"trojan","server":"sg007.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"28 新加坡08|流媒体","type":"trojan","server":"sg008.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"29 日本05","type":"trojan","server":"jp005.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"30 日本06","type":"trojan","server":"jp006.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"31 日本07","type":"trojan","server":"jp007.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"32 日本08","type":"trojan","server":"jp008.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"33 美国03","type":"trojan","server":"us003.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"34 美国04","type":"trojan","server":"us004.421421.xyz","port":20230,"password":"2ba7e4d0-f2f9-456e-a43e-f5a724d7e367","udp":true,"tls":true}
-  - {"name":"35 新加坡05|流媒体","type":"trojan","server":"sg005.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"36 新加坡06|流媒体","type":"trojan","server":"sg006.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"37 新加坡07|流媒体","type":"trojan","server":"sg007.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"38 新加坡08|流媒体","type":"trojan","server":"sg008.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"39 日本05","type":"trojan","server":"jp005.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"40 日本06","type":"trojan","server":"jp006.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"41 日本07","type":"trojan","server":"jp007.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"42 日本08","type":"trojan","server":"jp008.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"43 美国03","type":"trojan","server":"us003.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"44 美国04","type":"trojan","server":"us004.421421.xyz","port":20230,"password":"429ad146-8f43-4dd4-8fb3-cca3f3a30c63","udp":true,"tls":true}
-  - {"name":"45 日本SVIP-1","type":"trojan","server":"svip-jp.xiaobaivpn.icu","port":28801,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"46 日本SVIP-2","type":"trojan","server":"svip-jp.xiaobaivpn.icu","port":28802,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"47 日本SVIP-3","type":"trojan","server":"svip-jp.xiaobaivpn.icu","port":28803,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"48 越南住宅-1","type":"trojan","server":"vn-xbsvip.xiaobaivpn.icu","port":28007,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"49 越南住宅-2","type":"trojan","server":"vn-xbsvip.xiaobaivpn.icu","port":28008,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"50 越南住宅-3","type":"trojan","server":"vn-xbsvip.xiaobaivpn.icu","port":28009,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"51 韩国SVIP-1","type":"trojan","server":"svip-hg.xiaobaivpn.icu","port":28807,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"52 韩国SVIP-2","type":"trojan","server":"svip-hg.xiaobaivpn.icu","port":28808,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"53 韩国SVIP-3","type":"trojan","server":"svip-hg.xiaobaivpn.icu","port":28809,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"54 泰国SVIP-1","type":"trojan","server":"svip-tg.xiaobaivpn.icu","port":28804,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"55 泰国SVIP-2","type":"trojan","server":"svip-tg.xiaobaivpn.icu","port":28805,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"56 泰国SVIP-3","type":"trojan","server":"svip-tg.xiaobaivpn.icu","port":28806,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"57 美国SVIP-1","type":"trojan","server":"svip-us.xiaobaivpn.icu","port":28810,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"58 美国SVIP-2","type":"trojan","server":"svip-us.xiaobaivpn.icu","port":28811,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"59 美国SVIP-3","type":"trojan","server":"svip-us.xiaobaivpn.icu","port":28812,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"60 美国住宅-1","type":"trojan","server":"us-xbvip.xiaobaivpn.icu","port":28819,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"61 美国住宅-2","type":"trojan","server":"us-xbvip.xiaobaivpn.icu","port":28820,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"62 美国住宅-3","type":"trojan","server":"us-xbvip.xiaobaivpn.icu","port":28821,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"63 新加坡SVIP-1","type":"trojan","server":"svip-sg.xiaobaivpn.icu","port":28813,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"64 新加坡SVIP-2","type":"trojan","server":"svip-sg.xiaobaivpn.icu","port":28814,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"65 新加坡SVIP-3","type":"trojan","server":"svip-sg.xiaobaivpn.icu","port":28815,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"66 新加坡住宅-1","type":"trojan","server":"sg-xbsvip.xiaobaivpn.icu","port":28001,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"67 新加坡住宅-2","type":"trojan","server":"sg-xbsvip.xiaobaivpn.icu","port":28002,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
-  - {"name":"68 新加坡住宅-3","type":"trojan","server":"sg-xbsvip.xiaobaivpn.icu","port":28003,"password":"2f4567e2-a2b4-4525-8ae6-ef64b52fca52","udp":true,"tls":true}
+  - {"name":"1 🇭🇰 香港03-HY2  0.8倍率","type":"hysteria2","server":"xsus.xs-us.net","port":29000,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0"}
+  - {"name":"2 🇭🇰 香港03-HY2  0.8倍率","type":"hysteria2","server":"xsus.xs-us.net","port":29000,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd"}
+  - {"name":"3 🇭🇰 香港03-HY2  0.8倍率","type":"hysteria2","server":"xsus.xs-us.net","port":29000,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4"}
+  - {"name":"4 🇭🇰 香港03-HY2  0.8倍率","type":"hysteria2","server":"xsus.xs-us.net","port":29000,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e"}
+  - {"name":"5 [hy2]DK｜荷兰-阿姆斯特丹/1(ipv6)","type":"hysteria2","server":"[2a12:bec4:1821:25::a]","port":28443,"password":"87938527-9e81-48e0-aef8-9a8d923fff42"}
+  - {"name":"6 剩余流量：0","type":"vless","server":"xsus.xs-us.net","port":443,"uuid":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true,"network":"grpc","servername":"sni.eos-suzhou-4.cmecloud.cn"}
+  - {"name":"7 🇭🇰 香港02-VLESS  0.8倍率","type":"vless","server":"xsus.xs-us.net","port":29876,"uuid":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true,"network":"tcp","servername":"sni.eos-suzhou-4.cmecloud.cn"}
+  - {"name":"8 剩余流量：0","type":"vless","server":"xsus.xs-us.net","port":443,"uuid":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true,"network":"grpc","servername":"sni.eos-suzhou-4.cmecloud.cn"}
+  - {"name":"9 🇭🇰 香港02-VLESS  0.8倍率","type":"vless","server":"xsus.xs-us.net","port":29876,"uuid":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true,"network":"tcp","servername":"sni.eos-suzhou-4.cmecloud.cn"}
+  - {"name":"10 剩余流量：0","type":"vless","server":"xsus.xs-us.net","port":443,"uuid":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true,"network":"grpc","servername":"sni.eos-suzhou-4.cmecloud.cn"}
+  - {"name":"11 🇭🇰 香港02-VLESS  0.8倍率","type":"vless","server":"xsus.xs-us.net","port":29876,"uuid":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true,"network":"tcp","servername":"sni.eos-suzhou-4.cmecloud.cn"}
+  - {"name":"12 剩余流量：0","type":"vless","server":"xsus.xs-us.net","port":443,"uuid":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true,"network":"grpc","servername":"sni.eos-suzhou-4.cmecloud.cn"}
+  - {"name":"13 🇭🇰 香港02-VLESS  0.8倍率","type":"vless","server":"xsus.xs-us.net","port":29876,"uuid":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true,"network":"tcp","servername":"sni.eos-suzhou-4.cmecloud.cn"}
+  - {"name":"14 ❗您已到期或流量用完❗","type":"ss","server":"1.1.1.1","port":1080,"cipher":"chacha20-ietf-poly1305","password":"fake_node_password"}
+  - {"name":"15 剩余流量：59.58 GB","type":"ss","server":"127.0.0.1","port":80,"cipher":"aes-128-gcm","password":"87938527-9e81-48e0-aef8-9a8d923fff42"}
+  - {"name":"16 🇺🇸 美国01-TROJAN","type":"trojan","server":"zl.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":40459,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"17 🇭🇰 香港 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10101,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"18 🇭🇰 香港 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10102,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"19 🇭🇰 香港 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10103,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"20 🇭🇰 香港 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10104,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"21 🇭🇰 香港 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10105,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"22 🇭🇰 香港 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10106,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"23 🇭🇰 香港 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10107,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"24 🇭🇰 香港 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10108,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"25 🇭🇰 香港 09 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10110,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"26 🇸🇬 狮城 01 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12011,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"27 🇸🇬 狮城 02 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12012,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"28 🇸🇬 狮城 03 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12013,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"29 🇸🇬 狮城 04 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12014,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"30 🇸🇬 狮城 05 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12015,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"31 🇸🇬 狮城 06 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12016,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"32 🇸🇬 狮城 07 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12017,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"33 🇸🇬 狮城 08 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12018,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"34 🇨🇳 台湾 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12101,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"35 🇨🇳 台湾 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12102,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"36 🇨🇳 台湾 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12103,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"37 🇨🇳 台湾 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12104,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"38 🇨🇳 台湾 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12105,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"39 🇨🇳 台湾 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12106,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"40 🇨🇳 台湾 07 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12107,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"41 🇯🇵 日本 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12201,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"42 🇯🇵 日本 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12202,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"43 🇯🇵 日本 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12203,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"44 🇯🇵 日本 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12204,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"45 🇯🇵 日本 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12205,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"46 🇯🇵 日本 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12206,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"47 🇯🇵 日本 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12207,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"48 🇯🇵 日本 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12208,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"49 🇯🇵 日本 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12209,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"50 🇯🇵 日本 星链家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12210,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"51 🇺🇸 美国 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13201,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"52 🇺🇸 美国 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13202,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"53 🇺🇸 美国 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13203,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"54 🇺🇸 美国 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13204,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"55 🇺🇸 美国 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13205,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"56 🇺🇸 美国 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13206,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"57 🇺🇸 美国 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13207,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"58 🇺🇸 美国 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13208,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"59 🇺🇸 美国 09 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13209,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"60 🇲🇾 马来西亚 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14101,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"61 🇲🇾 马来西亚 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14102,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"62 🇲🇾 马来西亚 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14103,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"63 🇲🇾 马来西亚 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14104,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"64 🇲🇾 马来西亚 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14105,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"65 🇲🇾 马来西亚 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14106,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"66 🇰🇷 韩国 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":21101,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"67 🇹🇭 泰国 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23004,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"68 🇻🇳 越南 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23005,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"69 🇮🇩 印尼","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23000,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"70 🇮🇳 印度","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23006,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"71 🇦🇺 澳大利亚","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23013,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"72 🇩🇪 德国","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23001,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"73 🇮🇹 意大利","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23019,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"74 🇫🇷 法国","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23015,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"75 🇺🇦 乌克兰 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23002,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"76 🇹🇷 土耳其","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23007,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"77 🇬🇧 英国 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23009,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"78 🇬🇧 英国 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":24001,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"79 🇳🇴 挪威","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":24002,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"80 🇲🇽 墨西哥","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23012,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"81 🇳🇬 尼日利亚","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23014,"password":"b6096ffb-656a-4fec-8840-0d032089a3e0","udp":true,"tls":true}
+  - {"name":"82 🇺🇸 美国01-TROJAN","type":"trojan","server":"zl.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":49701,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"83 🇭🇰 香港 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10101,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"84 🇭🇰 香港 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10102,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"85 🇭🇰 香港 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10103,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"86 🇭🇰 香港 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10104,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"87 🇭🇰 香港 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10105,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"88 🇭🇰 香港 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10106,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"89 🇭🇰 香港 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10107,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"90 🇭🇰 香港 08","type":"trojan","server":"f7c5a058-fa4a-4f7c-aed6-203efaf52286.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10108,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"91 🇭🇰 香港 09 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10110,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"92 🇲🇴 澳门 01 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10111,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"93 🇸🇬 狮城 01 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12011,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"94 🇸🇬 狮城 02 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12012,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"95 🇸🇬 狮城 03 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12013,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"96 🇸🇬 狮城 04 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12014,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"97 🇸🇬 狮城 05 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12015,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"98 🇸🇬 狮城 06 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12016,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"99 🇸🇬 狮城 07 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12017,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"100 🇸🇬 狮城 08 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12018,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"101 🇨🇳 台湾 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12101,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"102 🇨🇳 台湾 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12102,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"103 🇨🇳 台湾 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12103,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"104 🇨🇳 台湾 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12104,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"105 🇨🇳 台湾 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12105,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"106 🇨🇳 台湾 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12106,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"107 🇨🇳 台湾 07 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12107,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"108 🇯🇵 日本 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12201,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"109 🇯🇵 日本 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12202,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"110 🇯🇵 日本 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12203,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"111 🇯🇵 日本 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12204,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"112 🇯🇵 日本 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12205,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"113 🇯🇵 日本 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12206,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"114 🇯🇵 日本 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12207,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"115 🇯🇵 日本 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12208,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"116 🇯🇵 日本 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12209,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"117 🇯🇵 日本 星链家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12210,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"118 🇺🇸 美国 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13201,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"119 🇺🇸 美国 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13202,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"120 🇺🇸 美国 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13203,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"121 🇺🇸 美国 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13204,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"122 🇺🇸 美国 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13205,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"123 🇺🇸 美国 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13206,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"124 🇺🇸 美国 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13207,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"125 🇺🇸 美国 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13208,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"126 🇺🇸 美国 09 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13209,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"127 🇲🇾 马来西亚 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14101,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"128 🇲🇾 马来西亚 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14102,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"129 🇲🇾 马来西亚 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14103,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"130 🇲🇾 马来西亚 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14104,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"131 🇲🇾 马来西亚 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14105,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"132 🇲🇾 马来西亚 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14106,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"133 🇰🇷 韩国 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":21101,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"134 🇹🇭 泰国 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23004,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"135 🇻🇳 越南 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23005,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"136 🇮🇩 印尼","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23000,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"137 🇮🇳 印度","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23006,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"138 🇦🇺 澳大利亚","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23013,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"139 🇩🇪 德国","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23001,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"140 🇮🇹 意大利","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23019,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"141 🇫🇷 法国","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23015,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"142 🇺🇦 乌克兰 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23002,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"143 🇹🇷 土耳其","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23007,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"144 🇬🇧 英国 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23009,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"145 🇬🇧 英国 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":24001,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"146 🇳🇴 挪威","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":24002,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"147 🇲🇽 墨西哥","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23012,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"148 🇳🇬 尼日利亚","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23014,"password":"0023c04a-3bfa-4c6e-b2f6-bfe94485dbdd","udp":true,"tls":true}
+  - {"name":"149 🇺🇸 美国01-TROJAN","type":"trojan","server":"zl.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":42844,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"150 🇭🇰 香港 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10101,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"151 🇭🇰 香港 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10102,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"152 🇭🇰 香港 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10103,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"153 🇭🇰 香港 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10104,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"154 🇭🇰 香港 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10105,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"155 🇭🇰 香港 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10106,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"156 🇭🇰 香港 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10107,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"157 🇭🇰 香港 08","type":"trojan","server":"f7c5a058-fa4a-4f7c-aed6-203efaf52286.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10108,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"158 🇭🇰 香港 09 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10110,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"159 🇲🇴 澳门 01 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10111,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"160 🇸🇬 狮城 01 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12011,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"161 🇸🇬 狮城 02 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12012,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"162 🇸🇬 狮城 03 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12013,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"163 🇸🇬 狮城 04 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12014,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"164 🇸🇬 狮城 05 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12015,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"165 🇸🇬 狮城 06 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12016,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"166 🇸🇬 狮城 07 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12017,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"167 🇸🇬 狮城 08 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12018,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"168 🇨🇳 台湾 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12101,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"169 🇨🇳 台湾 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12102,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"170 🇨🇳 台湾 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12103,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"171 🇨🇳 台湾 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12104,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"172 🇨🇳 台湾 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12105,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"173 🇨🇳 台湾 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12106,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"174 🇨🇳 台湾 07 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12107,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"175 🇯🇵 日本 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12201,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"176 🇯🇵 日本 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12202,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"177 🇯🇵 日本 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12203,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"178 🇯🇵 日本 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12204,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"179 🇯🇵 日本 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12205,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"180 🇯🇵 日本 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12206,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"181 🇯🇵 日本 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12207,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"182 🇯🇵 日本 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12208,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"183 🇯🇵 日本 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12209,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"184 🇯🇵 日本 星链家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12210,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"185 🇺🇸 美国 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13201,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"186 🇺🇸 美国 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13202,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"187 🇺🇸 美国 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13203,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"188 🇺🇸 美国 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13204,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"189 🇺🇸 美国 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13205,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"190 🇺🇸 美国 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13206,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"191 🇺🇸 美国 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13207,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"192 🇺🇸 美国 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13208,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"193 🇺🇸 美国 09 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13209,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"194 🇲🇾 马来西亚 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14101,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"195 🇲🇾 马来西亚 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14102,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"196 🇲🇾 马来西亚 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14103,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"197 🇲🇾 马来西亚 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14104,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"198 🇲🇾 马来西亚 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14105,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"199 🇲🇾 马来西亚 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14106,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"200 🇰🇷 韩国 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":21101,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"201 🇹🇭 泰国 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23004,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"202 🇻🇳 越南 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23005,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"203 🇮🇩 印尼","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23000,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"204 🇮🇳 印度","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23006,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"205 🇦🇺 澳大利亚","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23013,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"206 🇩🇪 德国","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23001,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"207 🇮🇹 意大利","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23019,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"208 🇫🇷 法国","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23015,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"209 🇺🇦 乌克兰 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23002,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"210 🇹🇷 土耳其","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23007,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"211 🇬🇧 英国 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23009,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"212 🇬🇧 英国 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":24001,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"213 🇳🇴 挪威","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":24002,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"214 🇲🇽 墨西哥","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23012,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"215 🇳🇬 尼日利亚","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23014,"password":"5711d615-a1c9-4445-a361-b536d0ad19a4","udp":true,"tls":true}
+  - {"name":"216 🇺🇸 美国01-TROJAN","type":"trojan","server":"zl.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":47842,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"217 🇭🇰 香港 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10101,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"218 🇭🇰 香港 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10102,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"219 🇭🇰 香港 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10103,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"220 🇭🇰 香港 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10104,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"221 🇭🇰 香港 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10105,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"222 🇭🇰 香港 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10106,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"223 🇭🇰 香港 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10107,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"224 🇭🇰 香港 08","type":"trojan","server":"f7c5a058-fa4a-4f7c-aed6-203efaf52286.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10108,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"225 🇭🇰 香港 09 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10110,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"226 🇲🇴 澳门 01 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":10111,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"227 🇸🇬 狮城 01 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12011,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"228 🇸🇬 狮城 02 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12012,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"229 🇸🇬 狮城 03 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12013,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"230 🇸🇬 狮城 04 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12014,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"231 🇸🇬 狮城 05 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12015,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"232 🇸🇬 狮城 06 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12016,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"233 🇸🇬 狮城 07 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12017,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"234 🇸🇬 狮城 08 TR","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12018,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"235 🇨🇳 台湾 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12101,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"236 🇨🇳 台湾 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12102,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"237 🇨🇳 台湾 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12103,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"238 🇨🇳 台湾 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12104,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"239 🇨🇳 台湾 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12105,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"240 🇨🇳 台湾 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12106,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"241 🇨🇳 台湾 07 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12107,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"242 🇯🇵 日本 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12201,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"243 🇯🇵 日本 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12202,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"244 🇯🇵 日本 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12203,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"245 🇯🇵 日本 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12204,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"246 🇯🇵 日本 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12205,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"247 🇯🇵 日本 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12206,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"248 🇯🇵 日本 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12207,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"249 🇯🇵 日本 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12208,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"250 🇯🇵 日本 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12209,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"251 🇯🇵 日本 星链家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":12210,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"252 🇺🇸 美国 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13201,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"253 🇺🇸 美国 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13202,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"254 🇺🇸 美国 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13203,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"255 🇺🇸 美国 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13204,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"256 🇺🇸 美国 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13205,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"257 🇺🇸 美国 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13206,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"258 🇺🇸 美国 07","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13207,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"259 🇺🇸 美国 08","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13208,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"260 🇺🇸 美国 09 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":13209,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"261 🇲🇾 马来西亚 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14101,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"262 🇲🇾 马来西亚 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14102,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"263 🇲🇾 马来西亚 03","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14103,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"264 🇲🇾 马来西亚 04","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14104,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"265 🇲🇾 马来西亚 05","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14105,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"266 🇲🇾 马来西亚 06","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":14106,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"267 🇰🇷 韩国 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":21101,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"268 🇹🇭 泰国 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23004,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"269 🇻🇳 越南 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23005,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"270 🇮🇩 印尼","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23000,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"271 🇮🇳 印度","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23006,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"272 🇦🇺 澳大利亚","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23013,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"273 🇩🇪 德国","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23001,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"274 🇮🇹 意大利","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23019,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"275 🇫🇷 法国","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23015,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"276 🇺🇦 乌克兰 家宽","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23002,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"277 🇹🇷 土耳其","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23007,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"278 🇬🇧 英国 01","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23009,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"279 🇬🇧 英国 02","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":24001,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"280 🇳🇴 挪威","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":24002,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"281 🇲🇽 墨西哥","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23012,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
+  - {"name":"282 🇳🇬 尼日利亚","type":"trojan","server":"f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com","port":23014,"password":"fa1464f2-0fec-47c9-97da-d6964de37f0e","udp":true,"tls":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -256,74 +470,288 @@ proxy-groups:
     type: select
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
-      - "1 剩余流量：0"
-      - "2 HK2-HY2-高速"
-      - "3 HK3-HY2-高速"
-      - "4 剩余流量：0"
-      - "5 新加坡02|流媒体"
-      - "6 新加坡03|流媒体"
-      - "7 新加坡04|流媒体"
-      - "8 日本01"
-      - "9 日本02"
-      - "10 日本03"
-      - "11 日本04"
-      - "12 美国01"
-      - "13 美国02"
-      - "14 剩余流量：0"
-      - "15 新加坡02|流媒体"
-      - "16 新加坡03|流媒体"
-      - "17 新加坡04|流媒体"
-      - "18 日本01"
-      - "19 日本02"
-      - "20 日本03"
-      - "21 日本04"
-      - "22 美国01"
-      - "23 美国02"
-      - "24 用户名 llpl"
-      - "25 新加坡05|流媒体"
-      - "26 新加坡06|流媒体"
-      - "27 新加坡07|流媒体"
-      - "28 新加坡08|流媒体"
-      - "29 日本05"
-      - "30 日本06"
-      - "31 日本07"
-      - "32 日本08"
-      - "33 美国03"
-      - "34 美国04"
-      - "35 新加坡05|流媒体"
-      - "36 新加坡06|流媒体"
-      - "37 新加坡07|流媒体"
-      - "38 新加坡08|流媒体"
-      - "39 日本05"
-      - "40 日本06"
-      - "41 日本07"
-      - "42 日本08"
-      - "43 美国03"
-      - "44 美国04"
-      - "45 日本SVIP-1"
-      - "46 日本SVIP-2"
-      - "47 日本SVIP-3"
-      - "48 越南住宅-1"
-      - "49 越南住宅-2"
-      - "50 越南住宅-3"
-      - "51 韩国SVIP-1"
-      - "52 韩国SVIP-2"
-      - "53 韩国SVIP-3"
-      - "54 泰国SVIP-1"
-      - "55 泰国SVIP-2"
-      - "56 泰国SVIP-3"
-      - "57 美国SVIP-1"
-      - "58 美国SVIP-2"
-      - "59 美国SVIP-3"
-      - "60 美国住宅-1"
-      - "61 美国住宅-2"
-      - "62 美国住宅-3"
-      - "63 新加坡SVIP-1"
-      - "64 新加坡SVIP-2"
-      - "65 新加坡SVIP-3"
-      - "66 新加坡住宅-1"
-      - "67 新加坡住宅-2"
-      - "68 新加坡住宅-3"
+      - "1 🇭🇰 香港03-HY2  0.8倍率"
+      - "2 🇭🇰 香港03-HY2  0.8倍率"
+      - "3 🇭🇰 香港03-HY2  0.8倍率"
+      - "4 🇭🇰 香港03-HY2  0.8倍率"
+      - "5 [hy2]DK｜荷兰-阿姆斯特丹/1(ipv6)"
+      - "6 剩余流量：0"
+      - "7 🇭🇰 香港02-VLESS  0.8倍率"
+      - "8 剩余流量：0"
+      - "9 🇭🇰 香港02-VLESS  0.8倍率"
+      - "10 剩余流量：0"
+      - "11 🇭🇰 香港02-VLESS  0.8倍率"
+      - "12 剩余流量：0"
+      - "13 🇭🇰 香港02-VLESS  0.8倍率"
+      - "14 ❗您已到期或流量用完❗"
+      - "15 剩余流量：59.58 GB"
+      - "16 🇺🇸 美国01-TROJAN"
+      - "17 🇭🇰 香港 01"
+      - "18 🇭🇰 香港 02"
+      - "19 🇭🇰 香港 03"
+      - "20 🇭🇰 香港 04"
+      - "21 🇭🇰 香港 05"
+      - "22 🇭🇰 香港 06"
+      - "23 🇭🇰 香港 07"
+      - "24 🇭🇰 香港 08"
+      - "25 🇭🇰 香港 09 家宽"
+      - "26 🇸🇬 狮城 01 TR"
+      - "27 🇸🇬 狮城 02 TR"
+      - "28 🇸🇬 狮城 03 TR"
+      - "29 🇸🇬 狮城 04 TR"
+      - "30 🇸🇬 狮城 05 TR"
+      - "31 🇸🇬 狮城 06 TR"
+      - "32 🇸🇬 狮城 07 TR"
+      - "33 🇸🇬 狮城 08 TR"
+      - "34 🇨🇳 台湾 01"
+      - "35 🇨🇳 台湾 02"
+      - "36 🇨🇳 台湾 03"
+      - "37 🇨🇳 台湾 04"
+      - "38 🇨🇳 台湾 05"
+      - "39 🇨🇳 台湾 06"
+      - "40 🇨🇳 台湾 07 家宽"
+      - "41 🇯🇵 日本 01"
+      - "42 🇯🇵 日本 02"
+      - "43 🇯🇵 日本 03"
+      - "44 🇯🇵 日本 04"
+      - "45 🇯🇵 日本 05"
+      - "46 🇯🇵 日本 06"
+      - "47 🇯🇵 日本 07"
+      - "48 🇯🇵 日本 08"
+      - "49 🇯🇵 日本 家宽"
+      - "50 🇯🇵 日本 星链家宽"
+      - "51 🇺🇸 美国 01"
+      - "52 🇺🇸 美国 02"
+      - "53 🇺🇸 美国 03"
+      - "54 🇺🇸 美国 04"
+      - "55 🇺🇸 美国 05"
+      - "56 🇺🇸 美国 06"
+      - "57 🇺🇸 美国 07"
+      - "58 🇺🇸 美国 08"
+      - "59 🇺🇸 美国 09 家宽"
+      - "60 🇲🇾 马来西亚 01"
+      - "61 🇲🇾 马来西亚 02"
+      - "62 🇲🇾 马来西亚 03"
+      - "63 🇲🇾 马来西亚 04"
+      - "64 🇲🇾 马来西亚 05"
+      - "65 🇲🇾 马来西亚 06"
+      - "66 🇰🇷 韩国 家宽"
+      - "67 🇹🇭 泰国 家宽"
+      - "68 🇻🇳 越南 家宽"
+      - "69 🇮🇩 印尼"
+      - "70 🇮🇳 印度"
+      - "71 🇦🇺 澳大利亚"
+      - "72 🇩🇪 德国"
+      - "73 🇮🇹 意大利"
+      - "74 🇫🇷 法国"
+      - "75 🇺🇦 乌克兰 家宽"
+      - "76 🇹🇷 土耳其"
+      - "77 🇬🇧 英国 01"
+      - "78 🇬🇧 英国 02"
+      - "79 🇳🇴 挪威"
+      - "80 🇲🇽 墨西哥"
+      - "81 🇳🇬 尼日利亚"
+      - "82 🇺🇸 美国01-TROJAN"
+      - "83 🇭🇰 香港 01"
+      - "84 🇭🇰 香港 02"
+      - "85 🇭🇰 香港 03"
+      - "86 🇭🇰 香港 04"
+      - "87 🇭🇰 香港 05"
+      - "88 🇭🇰 香港 06"
+      - "89 🇭🇰 香港 07"
+      - "90 🇭🇰 香港 08"
+      - "91 🇭🇰 香港 09 家宽"
+      - "92 🇲🇴 澳门 01 家宽"
+      - "93 🇸🇬 狮城 01 TR"
+      - "94 🇸🇬 狮城 02 TR"
+      - "95 🇸🇬 狮城 03 TR"
+      - "96 🇸🇬 狮城 04 TR"
+      - "97 🇸🇬 狮城 05 TR"
+      - "98 🇸🇬 狮城 06 TR"
+      - "99 🇸🇬 狮城 07 TR"
+      - "100 🇸🇬 狮城 08 TR"
+      - "101 🇨🇳 台湾 01"
+      - "102 🇨🇳 台湾 02"
+      - "103 🇨🇳 台湾 03"
+      - "104 🇨🇳 台湾 04"
+      - "105 🇨🇳 台湾 05"
+      - "106 🇨🇳 台湾 06"
+      - "107 🇨🇳 台湾 07 家宽"
+      - "108 🇯🇵 日本 01"
+      - "109 🇯🇵 日本 02"
+      - "110 🇯🇵 日本 03"
+      - "111 🇯🇵 日本 04"
+      - "112 🇯🇵 日本 05"
+      - "113 🇯🇵 日本 06"
+      - "114 🇯🇵 日本 07"
+      - "115 🇯🇵 日本 08"
+      - "116 🇯🇵 日本 家宽"
+      - "117 🇯🇵 日本 星链家宽"
+      - "118 🇺🇸 美国 01"
+      - "119 🇺🇸 美国 02"
+      - "120 🇺🇸 美国 03"
+      - "121 🇺🇸 美国 04"
+      - "122 🇺🇸 美国 05"
+      - "123 🇺🇸 美国 06"
+      - "124 🇺🇸 美国 07"
+      - "125 🇺🇸 美国 08"
+      - "126 🇺🇸 美国 09 家宽"
+      - "127 🇲🇾 马来西亚 01"
+      - "128 🇲🇾 马来西亚 02"
+      - "129 🇲🇾 马来西亚 03"
+      - "130 🇲🇾 马来西亚 04"
+      - "131 🇲🇾 马来西亚 05"
+      - "132 🇲🇾 马来西亚 06"
+      - "133 🇰🇷 韩国 家宽"
+      - "134 🇹🇭 泰国 家宽"
+      - "135 🇻🇳 越南 家宽"
+      - "136 🇮🇩 印尼"
+      - "137 🇮🇳 印度"
+      - "138 🇦🇺 澳大利亚"
+      - "139 🇩🇪 德国"
+      - "140 🇮🇹 意大利"
+      - "141 🇫🇷 法国"
+      - "142 🇺🇦 乌克兰 家宽"
+      - "143 🇹🇷 土耳其"
+      - "144 🇬🇧 英国 01"
+      - "145 🇬🇧 英国 02"
+      - "146 🇳🇴 挪威"
+      - "147 🇲🇽 墨西哥"
+      - "148 🇳🇬 尼日利亚"
+      - "149 🇺🇸 美国01-TROJAN"
+      - "150 🇭🇰 香港 01"
+      - "151 🇭🇰 香港 02"
+      - "152 🇭🇰 香港 03"
+      - "153 🇭🇰 香港 04"
+      - "154 🇭🇰 香港 05"
+      - "155 🇭🇰 香港 06"
+      - "156 🇭🇰 香港 07"
+      - "157 🇭🇰 香港 08"
+      - "158 🇭🇰 香港 09 家宽"
+      - "159 🇲🇴 澳门 01 家宽"
+      - "160 🇸🇬 狮城 01 TR"
+      - "161 🇸🇬 狮城 02 TR"
+      - "162 🇸🇬 狮城 03 TR"
+      - "163 🇸🇬 狮城 04 TR"
+      - "164 🇸🇬 狮城 05 TR"
+      - "165 🇸🇬 狮城 06 TR"
+      - "166 🇸🇬 狮城 07 TR"
+      - "167 🇸🇬 狮城 08 TR"
+      - "168 🇨🇳 台湾 01"
+      - "169 🇨🇳 台湾 02"
+      - "170 🇨🇳 台湾 03"
+      - "171 🇨🇳 台湾 04"
+      - "172 🇨🇳 台湾 05"
+      - "173 🇨🇳 台湾 06"
+      - "174 🇨🇳 台湾 07 家宽"
+      - "175 🇯🇵 日本 01"
+      - "176 🇯🇵 日本 02"
+      - "177 🇯🇵 日本 03"
+      - "178 🇯🇵 日本 04"
+      - "179 🇯🇵 日本 05"
+      - "180 🇯🇵 日本 06"
+      - "181 🇯🇵 日本 07"
+      - "182 🇯🇵 日本 08"
+      - "183 🇯🇵 日本 家宽"
+      - "184 🇯🇵 日本 星链家宽"
+      - "185 🇺🇸 美国 01"
+      - "186 🇺🇸 美国 02"
+      - "187 🇺🇸 美国 03"
+      - "188 🇺🇸 美国 04"
+      - "189 🇺🇸 美国 05"
+      - "190 🇺🇸 美国 06"
+      - "191 🇺🇸 美国 07"
+      - "192 🇺🇸 美国 08"
+      - "193 🇺🇸 美国 09 家宽"
+      - "194 🇲🇾 马来西亚 01"
+      - "195 🇲🇾 马来西亚 02"
+      - "196 🇲🇾 马来西亚 03"
+      - "197 🇲🇾 马来西亚 04"
+      - "198 🇲🇾 马来西亚 05"
+      - "199 🇲🇾 马来西亚 06"
+      - "200 🇰🇷 韩国 家宽"
+      - "201 🇹🇭 泰国 家宽"
+      - "202 🇻🇳 越南 家宽"
+      - "203 🇮🇩 印尼"
+      - "204 🇮🇳 印度"
+      - "205 🇦🇺 澳大利亚"
+      - "206 🇩🇪 德国"
+      - "207 🇮🇹 意大利"
+      - "208 🇫🇷 法国"
+      - "209 🇺🇦 乌克兰 家宽"
+      - "210 🇹🇷 土耳其"
+      - "211 🇬🇧 英国 01"
+      - "212 🇬🇧 英国 02"
+      - "213 🇳🇴 挪威"
+      - "214 🇲🇽 墨西哥"
+      - "215 🇳🇬 尼日利亚"
+      - "216 🇺🇸 美国01-TROJAN"
+      - "217 🇭🇰 香港 01"
+      - "218 🇭🇰 香港 02"
+      - "219 🇭🇰 香港 03"
+      - "220 🇭🇰 香港 04"
+      - "221 🇭🇰 香港 05"
+      - "222 🇭🇰 香港 06"
+      - "223 🇭🇰 香港 07"
+      - "224 🇭🇰 香港 08"
+      - "225 🇭🇰 香港 09 家宽"
+      - "226 🇲🇴 澳门 01 家宽"
+      - "227 🇸🇬 狮城 01 TR"
+      - "228 🇸🇬 狮城 02 TR"
+      - "229 🇸🇬 狮城 03 TR"
+      - "230 🇸🇬 狮城 04 TR"
+      - "231 🇸🇬 狮城 05 TR"
+      - "232 🇸🇬 狮城 06 TR"
+      - "233 🇸🇬 狮城 07 TR"
+      - "234 🇸🇬 狮城 08 TR"
+      - "235 🇨🇳 台湾 01"
+      - "236 🇨🇳 台湾 02"
+      - "237 🇨🇳 台湾 03"
+      - "238 🇨🇳 台湾 04"
+      - "239 🇨🇳 台湾 05"
+      - "240 🇨🇳 台湾 06"
+      - "241 🇨🇳 台湾 07 家宽"
+      - "242 🇯🇵 日本 01"
+      - "243 🇯🇵 日本 02"
+      - "244 🇯🇵 日本 03"
+      - "245 🇯🇵 日本 04"
+      - "246 🇯🇵 日本 05"
+      - "247 🇯🇵 日本 06"
+      - "248 🇯🇵 日本 07"
+      - "249 🇯🇵 日本 08"
+      - "250 🇯🇵 日本 家宽"
+      - "251 🇯🇵 日本 星链家宽"
+      - "252 🇺🇸 美国 01"
+      - "253 🇺🇸 美国 02"
+      - "254 🇺🇸 美国 03"
+      - "255 🇺🇸 美国 04"
+      - "256 🇺🇸 美国 05"
+      - "257 🇺🇸 美国 06"
+      - "258 🇺🇸 美国 07"
+      - "259 🇺🇸 美国 08"
+      - "260 🇺🇸 美国 09 家宽"
+      - "261 🇲🇾 马来西亚 01"
+      - "262 🇲🇾 马来西亚 02"
+      - "263 🇲🇾 马来西亚 03"
+      - "264 🇲🇾 马来西亚 04"
+      - "265 🇲🇾 马来西亚 05"
+      - "266 🇲🇾 马来西亚 06"
+      - "267 🇰🇷 韩国 家宽"
+      - "268 🇹🇭 泰国 家宽"
+      - "269 🇻🇳 越南 家宽"
+      - "270 🇮🇩 印尼"
+      - "271 🇮🇳 印度"
+      - "272 🇦🇺 澳大利亚"
+      - "273 🇩🇪 德国"
+      - "274 🇮🇹 意大利"
+      - "275 🇫🇷 法国"
+      - "276 🇺🇦 乌克兰 家宽"
+      - "277 🇹🇷 土耳其"
+      - "278 🇬🇧 英国 01"
+      - "279 🇬🇧 英国 02"
+      - "280 🇳🇴 挪威"
+      - "281 🇲🇽 墨西哥"
+      - "282 🇳🇬 尼日利亚"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -332,74 +760,288 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "1 剩余流量：0"
-      - "2 HK2-HY2-高速"
-      - "3 HK3-HY2-高速"
-      - "4 剩余流量：0"
-      - "5 新加坡02|流媒体"
-      - "6 新加坡03|流媒体"
-      - "7 新加坡04|流媒体"
-      - "8 日本01"
-      - "9 日本02"
-      - "10 日本03"
-      - "11 日本04"
-      - "12 美国01"
-      - "13 美国02"
-      - "14 剩余流量：0"
-      - "15 新加坡02|流媒体"
-      - "16 新加坡03|流媒体"
-      - "17 新加坡04|流媒体"
-      - "18 日本01"
-      - "19 日本02"
-      - "20 日本03"
-      - "21 日本04"
-      - "22 美国01"
-      - "23 美国02"
-      - "24 用户名 llpl"
-      - "25 新加坡05|流媒体"
-      - "26 新加坡06|流媒体"
-      - "27 新加坡07|流媒体"
-      - "28 新加坡08|流媒体"
-      - "29 日本05"
-      - "30 日本06"
-      - "31 日本07"
-      - "32 日本08"
-      - "33 美国03"
-      - "34 美国04"
-      - "35 新加坡05|流媒体"
-      - "36 新加坡06|流媒体"
-      - "37 新加坡07|流媒体"
-      - "38 新加坡08|流媒体"
-      - "39 日本05"
-      - "40 日本06"
-      - "41 日本07"
-      - "42 日本08"
-      - "43 美国03"
-      - "44 美国04"
-      - "45 日本SVIP-1"
-      - "46 日本SVIP-2"
-      - "47 日本SVIP-3"
-      - "48 越南住宅-1"
-      - "49 越南住宅-2"
-      - "50 越南住宅-3"
-      - "51 韩国SVIP-1"
-      - "52 韩国SVIP-2"
-      - "53 韩国SVIP-3"
-      - "54 泰国SVIP-1"
-      - "55 泰国SVIP-2"
-      - "56 泰国SVIP-3"
-      - "57 美国SVIP-1"
-      - "58 美国SVIP-2"
-      - "59 美国SVIP-3"
-      - "60 美国住宅-1"
-      - "61 美国住宅-2"
-      - "62 美国住宅-3"
-      - "63 新加坡SVIP-1"
-      - "64 新加坡SVIP-2"
-      - "65 新加坡SVIP-3"
-      - "66 新加坡住宅-1"
-      - "67 新加坡住宅-2"
-      - "68 新加坡住宅-3"
+      - "1 🇭🇰 香港03-HY2  0.8倍率"
+      - "2 🇭🇰 香港03-HY2  0.8倍率"
+      - "3 🇭🇰 香港03-HY2  0.8倍率"
+      - "4 🇭🇰 香港03-HY2  0.8倍率"
+      - "5 [hy2]DK｜荷兰-阿姆斯特丹/1(ipv6)"
+      - "6 剩余流量：0"
+      - "7 🇭🇰 香港02-VLESS  0.8倍率"
+      - "8 剩余流量：0"
+      - "9 🇭🇰 香港02-VLESS  0.8倍率"
+      - "10 剩余流量：0"
+      - "11 🇭🇰 香港02-VLESS  0.8倍率"
+      - "12 剩余流量：0"
+      - "13 🇭🇰 香港02-VLESS  0.8倍率"
+      - "14 ❗您已到期或流量用完❗"
+      - "15 剩余流量：59.58 GB"
+      - "16 🇺🇸 美国01-TROJAN"
+      - "17 🇭🇰 香港 01"
+      - "18 🇭🇰 香港 02"
+      - "19 🇭🇰 香港 03"
+      - "20 🇭🇰 香港 04"
+      - "21 🇭🇰 香港 05"
+      - "22 🇭🇰 香港 06"
+      - "23 🇭🇰 香港 07"
+      - "24 🇭🇰 香港 08"
+      - "25 🇭🇰 香港 09 家宽"
+      - "26 🇸🇬 狮城 01 TR"
+      - "27 🇸🇬 狮城 02 TR"
+      - "28 🇸🇬 狮城 03 TR"
+      - "29 🇸🇬 狮城 04 TR"
+      - "30 🇸🇬 狮城 05 TR"
+      - "31 🇸🇬 狮城 06 TR"
+      - "32 🇸🇬 狮城 07 TR"
+      - "33 🇸🇬 狮城 08 TR"
+      - "34 🇨🇳 台湾 01"
+      - "35 🇨🇳 台湾 02"
+      - "36 🇨🇳 台湾 03"
+      - "37 🇨🇳 台湾 04"
+      - "38 🇨🇳 台湾 05"
+      - "39 🇨🇳 台湾 06"
+      - "40 🇨🇳 台湾 07 家宽"
+      - "41 🇯🇵 日本 01"
+      - "42 🇯🇵 日本 02"
+      - "43 🇯🇵 日本 03"
+      - "44 🇯🇵 日本 04"
+      - "45 🇯🇵 日本 05"
+      - "46 🇯🇵 日本 06"
+      - "47 🇯🇵 日本 07"
+      - "48 🇯🇵 日本 08"
+      - "49 🇯🇵 日本 家宽"
+      - "50 🇯🇵 日本 星链家宽"
+      - "51 🇺🇸 美国 01"
+      - "52 🇺🇸 美国 02"
+      - "53 🇺🇸 美国 03"
+      - "54 🇺🇸 美国 04"
+      - "55 🇺🇸 美国 05"
+      - "56 🇺🇸 美国 06"
+      - "57 🇺🇸 美国 07"
+      - "58 🇺🇸 美国 08"
+      - "59 🇺🇸 美国 09 家宽"
+      - "60 🇲🇾 马来西亚 01"
+      - "61 🇲🇾 马来西亚 02"
+      - "62 🇲🇾 马来西亚 03"
+      - "63 🇲🇾 马来西亚 04"
+      - "64 🇲🇾 马来西亚 05"
+      - "65 🇲🇾 马来西亚 06"
+      - "66 🇰🇷 韩国 家宽"
+      - "67 🇹🇭 泰国 家宽"
+      - "68 🇻🇳 越南 家宽"
+      - "69 🇮🇩 印尼"
+      - "70 🇮🇳 印度"
+      - "71 🇦🇺 澳大利亚"
+      - "72 🇩🇪 德国"
+      - "73 🇮🇹 意大利"
+      - "74 🇫🇷 法国"
+      - "75 🇺🇦 乌克兰 家宽"
+      - "76 🇹🇷 土耳其"
+      - "77 🇬🇧 英国 01"
+      - "78 🇬🇧 英国 02"
+      - "79 🇳🇴 挪威"
+      - "80 🇲🇽 墨西哥"
+      - "81 🇳🇬 尼日利亚"
+      - "82 🇺🇸 美国01-TROJAN"
+      - "83 🇭🇰 香港 01"
+      - "84 🇭🇰 香港 02"
+      - "85 🇭🇰 香港 03"
+      - "86 🇭🇰 香港 04"
+      - "87 🇭🇰 香港 05"
+      - "88 🇭🇰 香港 06"
+      - "89 🇭🇰 香港 07"
+      - "90 🇭🇰 香港 08"
+      - "91 🇭🇰 香港 09 家宽"
+      - "92 🇲🇴 澳门 01 家宽"
+      - "93 🇸🇬 狮城 01 TR"
+      - "94 🇸🇬 狮城 02 TR"
+      - "95 🇸🇬 狮城 03 TR"
+      - "96 🇸🇬 狮城 04 TR"
+      - "97 🇸🇬 狮城 05 TR"
+      - "98 🇸🇬 狮城 06 TR"
+      - "99 🇸🇬 狮城 07 TR"
+      - "100 🇸🇬 狮城 08 TR"
+      - "101 🇨🇳 台湾 01"
+      - "102 🇨🇳 台湾 02"
+      - "103 🇨🇳 台湾 03"
+      - "104 🇨🇳 台湾 04"
+      - "105 🇨🇳 台湾 05"
+      - "106 🇨🇳 台湾 06"
+      - "107 🇨🇳 台湾 07 家宽"
+      - "108 🇯🇵 日本 01"
+      - "109 🇯🇵 日本 02"
+      - "110 🇯🇵 日本 03"
+      - "111 🇯🇵 日本 04"
+      - "112 🇯🇵 日本 05"
+      - "113 🇯🇵 日本 06"
+      - "114 🇯🇵 日本 07"
+      - "115 🇯🇵 日本 08"
+      - "116 🇯🇵 日本 家宽"
+      - "117 🇯🇵 日本 星链家宽"
+      - "118 🇺🇸 美国 01"
+      - "119 🇺🇸 美国 02"
+      - "120 🇺🇸 美国 03"
+      - "121 🇺🇸 美国 04"
+      - "122 🇺🇸 美国 05"
+      - "123 🇺🇸 美国 06"
+      - "124 🇺🇸 美国 07"
+      - "125 🇺🇸 美国 08"
+      - "126 🇺🇸 美国 09 家宽"
+      - "127 🇲🇾 马来西亚 01"
+      - "128 🇲🇾 马来西亚 02"
+      - "129 🇲🇾 马来西亚 03"
+      - "130 🇲🇾 马来西亚 04"
+      - "131 🇲🇾 马来西亚 05"
+      - "132 🇲🇾 马来西亚 06"
+      - "133 🇰🇷 韩国 家宽"
+      - "134 🇹🇭 泰国 家宽"
+      - "135 🇻🇳 越南 家宽"
+      - "136 🇮🇩 印尼"
+      - "137 🇮🇳 印度"
+      - "138 🇦🇺 澳大利亚"
+      - "139 🇩🇪 德国"
+      - "140 🇮🇹 意大利"
+      - "141 🇫🇷 法国"
+      - "142 🇺🇦 乌克兰 家宽"
+      - "143 🇹🇷 土耳其"
+      - "144 🇬🇧 英国 01"
+      - "145 🇬🇧 英国 02"
+      - "146 🇳🇴 挪威"
+      - "147 🇲🇽 墨西哥"
+      - "148 🇳🇬 尼日利亚"
+      - "149 🇺🇸 美国01-TROJAN"
+      - "150 🇭🇰 香港 01"
+      - "151 🇭🇰 香港 02"
+      - "152 🇭🇰 香港 03"
+      - "153 🇭🇰 香港 04"
+      - "154 🇭🇰 香港 05"
+      - "155 🇭🇰 香港 06"
+      - "156 🇭🇰 香港 07"
+      - "157 🇭🇰 香港 08"
+      - "158 🇭🇰 香港 09 家宽"
+      - "159 🇲🇴 澳门 01 家宽"
+      - "160 🇸🇬 狮城 01 TR"
+      - "161 🇸🇬 狮城 02 TR"
+      - "162 🇸🇬 狮城 03 TR"
+      - "163 🇸🇬 狮城 04 TR"
+      - "164 🇸🇬 狮城 05 TR"
+      - "165 🇸🇬 狮城 06 TR"
+      - "166 🇸🇬 狮城 07 TR"
+      - "167 🇸🇬 狮城 08 TR"
+      - "168 🇨🇳 台湾 01"
+      - "169 🇨🇳 台湾 02"
+      - "170 🇨🇳 台湾 03"
+      - "171 🇨🇳 台湾 04"
+      - "172 🇨🇳 台湾 05"
+      - "173 🇨🇳 台湾 06"
+      - "174 🇨🇳 台湾 07 家宽"
+      - "175 🇯🇵 日本 01"
+      - "176 🇯🇵 日本 02"
+      - "177 🇯🇵 日本 03"
+      - "178 🇯🇵 日本 04"
+      - "179 🇯🇵 日本 05"
+      - "180 🇯🇵 日本 06"
+      - "181 🇯🇵 日本 07"
+      - "182 🇯🇵 日本 08"
+      - "183 🇯🇵 日本 家宽"
+      - "184 🇯🇵 日本 星链家宽"
+      - "185 🇺🇸 美国 01"
+      - "186 🇺🇸 美国 02"
+      - "187 🇺🇸 美国 03"
+      - "188 🇺🇸 美国 04"
+      - "189 🇺🇸 美国 05"
+      - "190 🇺🇸 美国 06"
+      - "191 🇺🇸 美国 07"
+      - "192 🇺🇸 美国 08"
+      - "193 🇺🇸 美国 09 家宽"
+      - "194 🇲🇾 马来西亚 01"
+      - "195 🇲🇾 马来西亚 02"
+      - "196 🇲🇾 马来西亚 03"
+      - "197 🇲🇾 马来西亚 04"
+      - "198 🇲🇾 马来西亚 05"
+      - "199 🇲🇾 马来西亚 06"
+      - "200 🇰🇷 韩国 家宽"
+      - "201 🇹🇭 泰国 家宽"
+      - "202 🇻🇳 越南 家宽"
+      - "203 🇮🇩 印尼"
+      - "204 🇮🇳 印度"
+      - "205 🇦🇺 澳大利亚"
+      - "206 🇩🇪 德国"
+      - "207 🇮🇹 意大利"
+      - "208 🇫🇷 法国"
+      - "209 🇺🇦 乌克兰 家宽"
+      - "210 🇹🇷 土耳其"
+      - "211 🇬🇧 英国 01"
+      - "212 🇬🇧 英国 02"
+      - "213 🇳🇴 挪威"
+      - "214 🇲🇽 墨西哥"
+      - "215 🇳🇬 尼日利亚"
+      - "216 🇺🇸 美国01-TROJAN"
+      - "217 🇭🇰 香港 01"
+      - "218 🇭🇰 香港 02"
+      - "219 🇭🇰 香港 03"
+      - "220 🇭🇰 香港 04"
+      - "221 🇭🇰 香港 05"
+      - "222 🇭🇰 香港 06"
+      - "223 🇭🇰 香港 07"
+      - "224 🇭🇰 香港 08"
+      - "225 🇭🇰 香港 09 家宽"
+      - "226 🇲🇴 澳门 01 家宽"
+      - "227 🇸🇬 狮城 01 TR"
+      - "228 🇸🇬 狮城 02 TR"
+      - "229 🇸🇬 狮城 03 TR"
+      - "230 🇸🇬 狮城 04 TR"
+      - "231 🇸🇬 狮城 05 TR"
+      - "232 🇸🇬 狮城 06 TR"
+      - "233 🇸🇬 狮城 07 TR"
+      - "234 🇸🇬 狮城 08 TR"
+      - "235 🇨🇳 台湾 01"
+      - "236 🇨🇳 台湾 02"
+      - "237 🇨🇳 台湾 03"
+      - "238 🇨🇳 台湾 04"
+      - "239 🇨🇳 台湾 05"
+      - "240 🇨🇳 台湾 06"
+      - "241 🇨🇳 台湾 07 家宽"
+      - "242 🇯🇵 日本 01"
+      - "243 🇯🇵 日本 02"
+      - "244 🇯🇵 日本 03"
+      - "245 🇯🇵 日本 04"
+      - "246 🇯🇵 日本 05"
+      - "247 🇯🇵 日本 06"
+      - "248 🇯🇵 日本 07"
+      - "249 🇯🇵 日本 08"
+      - "250 🇯🇵 日本 家宽"
+      - "251 🇯🇵 日本 星链家宽"
+      - "252 🇺🇸 美国 01"
+      - "253 🇺🇸 美国 02"
+      - "254 🇺🇸 美国 03"
+      - "255 🇺🇸 美国 04"
+      - "256 🇺🇸 美国 05"
+      - "257 🇺🇸 美国 06"
+      - "258 🇺🇸 美国 07"
+      - "259 🇺🇸 美国 08"
+      - "260 🇺🇸 美国 09 家宽"
+      - "261 🇲🇾 马来西亚 01"
+      - "262 🇲🇾 马来西亚 02"
+      - "263 🇲🇾 马来西亚 03"
+      - "264 🇲🇾 马来西亚 04"
+      - "265 🇲🇾 马来西亚 05"
+      - "266 🇲🇾 马来西亚 06"
+      - "267 🇰🇷 韩国 家宽"
+      - "268 🇹🇭 泰国 家宽"
+      - "269 🇻🇳 越南 家宽"
+      - "270 🇮🇩 印尼"
+      - "271 🇮🇳 印度"
+      - "272 🇦🇺 澳大利亚"
+      - "273 🇩🇪 德国"
+      - "274 🇮🇹 意大利"
+      - "275 🇫🇷 法国"
+      - "276 🇺🇦 乌克兰 家宽"
+      - "277 🇹🇷 土耳其"
+      - "278 🇬🇧 英国 01"
+      - "279 🇬🇧 英国 02"
+      - "280 🇳🇴 挪威"
+      - "281 🇲🇽 墨西哥"
+      - "282 🇳🇬 尼日利亚"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
