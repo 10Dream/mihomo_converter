@@ -175,130 +175,99 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 🇩🇪 Germany, Karlsruhe (Nordweststadt) | 🌐 | [BL]","type":"hysteria2","server":"185.228.139.247","port":4433,"password":"18cf8030-1ceb-4b7d-8c0c-c036413c144e"}
-  - {"name":"2 🇺🇸 United States, Seattle | 🌐 | [BL]","type":"hysteria2","server":"us.gotogle.com","port":443,"password":"7ce9a8d0-2cb2-4b8d-8de9-262c1d6597ac"}
-  - {"name":"3 🇷🇺 Russia | 🌐 | [BL]","type":"hysteria2","server":"195.133.53.33","port":443,"password":"10550754-cf62-3d3b-ba6a-50be27a275d7"}
-  - {"name":"4 🌐 Anycast-IP | 🇧🇷 | [BL]","type":"hysteria2","server":"202.61.205.86","port":4433,"password":"18cf8030-1ceb-4b7d-8c0c-c036413c144e"}
-  - {"name":"5 🇦🇲 Armenia, Yerevan | [BL]","type":"vless","server":"am.synatra.net","port":4430,"uuid":"435954ab-38f3-40bf-b303-77e3f6576fa0","udp":true,"tls":true,"network":"tcp","servername":"deepl.com"}
-  - {"name":"6 🇦🇲 Armenia, Yerevan | [BL]","type":"vless","server":"178.160.230.56","port":443,"uuid":"bda6af97-8d40-4ca4-a62d-69c05a844caa","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"7 🇦🇹 Austria, Vienna | 🌐 | [BL]","type":"vless","server":"89.223.125.165","port":443,"uuid":"c4d69096-4026-4da5-9485-20a3da91cb14","udp":true,"tls":true,"network":"tcp","servername":"aut10.tcpnet.fun"}
-  - {"name":"8 🇧🇪 Belgium, Mont-Saint-Guibert | [BL]","type":"vless","server":"109.69.218.169","port":443,"uuid":"bda6af97-8d40-4ca4-a62d-69c05a844caa","udp":true,"tls":true,"network":"tcp","servername":"cdn-s3.opengate.su"}
-  - {"name":"9 🇨🇿 Czechia, Mašťov | [BL]","type":"vless","server":"cz.sywl3.us","port":43871,"uuid":"435954ab-38f3-40bf-b303-77e3f6576fa0","udp":true,"tls":true,"network":"tcp","servername":"cust-mail.gamerhost-server.pro"}
-  - {"name":"10 🇨🇿 Czechia, Veselí nad Lužnicí | [BL]","type":"vless","server":"ftatx5g6dt.cdn.twcstorage.ru","port":443,"uuid":"56470441-5d85-4266-89f3-c2b5b000c522","udp":true,"tls":true,"network":"xhttp","servername":"ftatx5g6dt.cdn.twcstorage.ru"}
-  - {"name":"11 🇫🇮 Finland, Helsinki | 🌐 | [BL]","type":"vless","server":"bc-de-wc.ray-balance.space","port":4443,"uuid":"0eca1f22-e5a1-4888-a0fa-c2345e87cf2f","udp":true,"tls":false,"network":"grpc"}
-  - {"name":"12 🇫🇮 Finland, Helsinki | 🌐 | [BL]","type":"vless","server":"f1.noode.work","port":443,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"bitrix24.matrixcam.ru"}
-  - {"name":"13 🇫🇷 France, Paris | [BL]","type":"vless","server":"37.49.230.106","port":8443,"uuid":"bda6af97-8d40-4ca4-a62d-69c05a844caa","udp":true,"tls":true,"network":"tcp","servername":"hello.opengate.tech"}
+  - {"name":"1 🇧🇬 Bulgaria, Veliko Tarnovo | [BL]","type":"hysteria2","server":"s544.ccgfw.online","port":443,"password":"205d6869-02ca-3b36-b933-be2465250c7e"}
+  - {"name":"2 🇩🇪 Germany, Karlsruhe (Nordweststadt) | 🌐 | [BL]","type":"hysteria2","server":"185.228.139.247","port":4433,"password":"18cf8030-1ceb-4b7d-8c0c-c036413c144e"}
+  - {"name":"3 🇭🇰 Hong Kong, Hong Kong | [BL]","type":"hysteria2","server":"47.76.94.197","port":58771,"password":"IG9Sundefinedvx6RJ"}
+  - {"name":"4 🇺🇸 United States, Arlington Heights | [BL]","type":"hysteria2","server":"s869.okgfwbackxyz.xyz","port":443,"password":"205d6869-02ca-3b36-b933-be2465250c7e"}
+  - {"name":"5 🇺🇸 United States, Seattle | 🌐 | [BL]","type":"hysteria2","server":"us.gotogle.com","port":443,"password":"7ce9a8d0-2cb2-4b8d-8de9-262c1d6597ac"}
+  - {"name":"6 🇦🇲 Armenia, Yerevan | [BL]","type":"vless","server":"am.synatra.net","port":4430,"uuid":"435954ab-38f3-40bf-b303-77e3f6576fa0","udp":true,"tls":true,"network":"tcp","servername":"deepl.com"}
+  - {"name":"7 🇧🇪 Belgium | 🌐 | [BL]","type":"vless","server":"belgium.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"8 🇨🇿 Czechia, Mašťov | [BL]","type":"vless","server":"cz.sywl3.us","port":43871,"uuid":"435954ab-38f3-40bf-b303-77e3f6576fa0","udp":true,"tls":true,"network":"tcp","servername":"cust-mail.gamerhost-server.pro"}
+  - {"name":"9 🇨🇿 Czechia, Prague | 🌐 | [BL]","type":"vless","server":"czech.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"10 🇩🇰 Denmark | 🌐 | [BL]","type":"vless","server":"denmark.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"11 🇫🇮 Finland | 🌐 | [BL]","type":"vless","server":"finland.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"12 🇫🇮 Finland, Helsinki | 🌐 | [BL]","type":"vless","server":"bc-de-wc.ray-balance.space","port":4443,"uuid":"0eca1f22-e5a1-4888-a0fa-c2345e87cf2f","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"13 🇫🇷 France | 🌐 | [BL]","type":"vless","server":"172.65.183.98","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
   - {"name":"14 🇫🇷 France, Paris | [BL]","type":"vless","server":"138.124.70.128","port":443,"uuid":"f4bad870-4b45-4a46-bec6-d05fa31df1cb","udp":true,"tls":true,"network":"xhttp","servername":"m.twitch.tv"}
   - {"name":"15 🇫🇷 France, Paris | [BL]","type":"vless","server":"fr.clgate.network","port":443,"uuid":"f4bad870-4b45-4a46-bec6-d05fa31df1cb","udp":true,"tls":true,"network":"xhttp","servername":"m.twitch.tv"}
-  - {"name":"16 🇫🇷 France, Strasbourg | [BL]","type":"vless","server":"186.246.48.230","port":443,"uuid":"76713d07-5a6b-49c2-abd8-bc450a2fa7fc","udp":true,"tls":true,"network":"grpc","servername":"down.spectrumproxy.shop"}
-  - {"name":"17 🇫🇷 France, Strasbourg | [BL]","type":"vless","server":"down.spectrumproxy.shop","port":443,"uuid":"76713d07-5a6b-49c2-abd8-bc450a2fa7fc","udp":true,"tls":true,"network":"grpc","servername":"down.spectrumproxy.shop"}
+  - {"name":"16 🇫🇷 France, Vélizy-Villacoublay | 🌐 | [BL]","type":"vless","server":"france.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"17 🇫🇷 France, Vélizy-Villacoublay | 🌐 | [BL]","type":"vless","server":"171.22.133.134","port":5432,"uuid":"c4d69096-4026-4da5-9485-20a3da91cb14","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
   - {"name":"18 🇩🇪 Germany, Berlin (Bezirk Tempelhof-Schöneberg) | [BL]","type":"vless","server":"169.40.15.135","port":2053,"uuid":"0dc3fe97-73e3-4cc2-89a7-331e66540365","udp":true,"tls":true,"network":"grpc","servername":"www.apple.com"}
   - {"name":"19 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"185.136.12.9","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"20 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"de.sywl3.us","port":443,"uuid":"435954ab-38f3-40bf-b303-77e3f6576fa0","udp":true,"tls":true,"network":"tcp","servername":"cloudflare.com"}
-  - {"name":"21 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"germany02.anotherboring.top","port":443,"uuid":"8f76336d-e564-41e2-9c09-7a15536f356a","udp":true,"tls":true,"network":"tcp","servername":"germany02.anotherboring.top"}
-  - {"name":"22 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"172.86.67.73","port":443,"uuid":"c55a51d9-48bd-11f1-941f-54db13ea7d40","udp":true,"tls":true,"network":"tcp","servername":"www.akamai.com"}
-  - {"name":"23 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"ger03.port-server.online","port":443,"uuid":"dbfa97b8-f4fb-4687-96dc-a5a2aebfae11","udp":true,"tls":true,"network":"tcp","servername":"ger03.port-server.online"}
-  - {"name":"24 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"de2.clgate.network","port":443,"uuid":"f4bad870-4b45-4a46-bec6-d05fa31df1cb","udp":true,"tls":true,"network":"xhttp","servername":"m.twitch.tv"}
-  - {"name":"25 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]","type":"vless","server":"5.231.118.114","port":8443,"uuid":"6ef2cd26-bd6c-45ee-88b6-ef4240cb012c","udp":true,"tls":true,"network":"tcp","servername":"deepl.com"}
-  - {"name":"26 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]","type":"vless","server":"cdn-de-1.bigbossvpn.online","port":8443,"uuid":"6ef2cd26-bd6c-45ee-88b6-ef4240cb012c","udp":true,"tls":true,"network":"tcp","servername":"deepl.com"}
-  - {"name":"27 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]","type":"vless","server":"188.137.230.245","port":8880,"uuid":"762ca06a-daba-4510-8533-7ba0667fb1f1","udp":true,"tls":false,"network":"ws"}
-  - {"name":"28 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"108.165.174.228","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"29 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"108.165.236.170","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"raw","servername":"tradingview.com"}
-  - {"name":"30 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"108.165.236.173","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"31 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"108.165.33.6","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"32 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"23.26.193.73","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"33 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"23.26.37.19","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"34 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"germ-node.datamove.online","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"35 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"nl-amst1-node.datamove.online","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"36 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]","type":"vless","server":"auto.datamove.online","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"37 🇭🇺 Hungary | 🌐 | [BL]","type":"vless","server":"hu01.bearbeer.digital","port":443,"uuid":"017510da-8b42-49de-8ea9-ab60e3e9072e","udp":true,"tls":true,"network":"tcp","servername":"hu01.bearbeer.digital"}
-  - {"name":"38 🇮🇹 Italy, Arezzo | [BL]","type":"vless","server":"vpn.mbenet.ru","port":5900,"uuid":"3d288ee0-88eb-58de-8270-0dc98a713210","udp":true,"tls":true,"network":"tcp","servername":"www.microsoft.com"}
-  - {"name":"39 🇰🇿 Kazakhstan, Almaty | [BL]","type":"vless","server":"46.247.40.229","port":8443,"uuid":"c5765da4-772f-4ff7-b96c-551ca7185529","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
-  - {"name":"40 🇰🇿 Kazakhstan, Almaty (Almaly Audany) | 🌐 | [BL]","type":"vless","server":"ai.noode.work","port":15505,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"grpc","servername":"git.sly.team"}
-  - {"name":"41 🇳🇴 Norway, Sandefjord | 🌐 | [BL]","type":"vless","server":"no.noode.work","port":443,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"dcs.nwsystem.ru"}
-  - {"name":"42 🇵🇱 Poland, Warsaw | [BL]","type":"vless","server":"pol01.port-server.online","port":443,"uuid":"dbfa97b8-f4fb-4687-96dc-a5a2aebfae11","udp":true,"tls":true,"network":"tcp","servername":"pol01.port-server.online"}
-  - {"name":"43 🇵🇱 Poland, Wrocław (Stare Miasto) | [BL]","type":"vless","server":"pl.sywl3.us","port":443,"uuid":"435954ab-38f3-40bf-b303-77e3f6576fa0","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
-  - {"name":"44 🇸🇬 Singapore, Singapore | [BL]","type":"vless","server":"84.32.22.238","port":443,"uuid":"0ddc1b7c-ce23-4a30-8ede-8a9e19f02fb7","udp":true,"tls":true,"network":"tcp","servername":"vsgch.mostserv.xyz"}
+  - {"name":"20 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"germany02.anotherboring.top","port":443,"uuid":"8f76336d-e564-41e2-9c09-7a15536f356a","udp":true,"tls":true,"network":"tcp","servername":"germany02.anotherboring.top"}
+  - {"name":"21 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"172.86.67.73","port":443,"uuid":"c55a51d9-48bd-11f1-941f-54db13ea7d40","udp":true,"tls":true,"network":"tcp","servername":"www.akamai.com"}
+  - {"name":"22 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"vless","server":"de2.clgate.network","port":443,"uuid":"f4bad870-4b45-4a46-bec6-d05fa31df1cb","udp":true,"tls":true,"network":"xhttp","servername":"m.twitch.tv"}
+  - {"name":"23 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]","type":"vless","server":"188.137.230.245","port":8880,"uuid":"762ca06a-daba-4510-8533-7ba0667fb1f1","udp":true,"tls":false,"network":"ws"}
+  - {"name":"24 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"108.165.174.228","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"25 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"108.165.236.170","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"26 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"108.165.236.173","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"27 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"108.165.33.6","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"28 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"23.26.193.73","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"29 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"23.26.37.19","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"30 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"auto.datamove.online","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"31 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"germ-node.datamove.online","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"32 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]","type":"vless","server":"nl-amst1-node.datamove.online","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"33 🇬🇷 Greece | 🌐 | [BL]","type":"vless","server":"greece.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"34 🇭🇰 Hong Kong | 🌐 | [BL]","type":"vless","server":"s356.ccgfw.online","port":443,"uuid":"205d6869-02ca-3b36-b933-be2465250c7e","udp":true,"tls":true,"network":"tcp","servername":"u716087u09d7s356.ccgfw.online"}
+  - {"name":"35 🇭🇰 Hong Kong | 🌐 | [BL]","type":"vless","server":"s359.ccgfw.online","port":443,"uuid":"205d6869-02ca-3b36-b933-be2465250c7e","udp":true,"tls":true,"network":"tcp","servername":"u716087u4da2s359.ccgfw.online"}
+  - {"name":"36 🇭🇺 Hungary | 🌐 | [BL]","type":"vless","server":"hu01.bearbeer.digital","port":443,"uuid":"017510da-8b42-49de-8ea9-ab60e3e9072e","udp":true,"tls":true,"network":"tcp","servername":"hu01.bearbeer.digital"}
+  - {"name":"37 🇭🇺 Hungary, Budapest | 🌐 | [BL]","type":"vless","server":"hungary.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"38 🇰🇿 Kazakhstan, Almaty | [BL]","type":"vless","server":"46.247.40.229","port":8443,"uuid":"c5765da4-772f-4ff7-b96c-551ca7185529","udp":true,"tls":true,"network":"tcp","servername":"www.google.com"}
+  - {"name":"39 🇱🇮 Liechtenstein, Schaan | 🌐 | [BL]","type":"vless","server":"liechtenstein.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"40 🇱🇹 Lithuania, Vilnius | 🌐 | [BL]","type":"vless","server":"lithuania.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"41 🇳🇴 Norway | 🌐 | [BL]","type":"vless","server":"susp.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"42 🇳🇴 Norway, Stokmarknes | 🌐 | [BL]","type":"vless","server":"172.65.221.74","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"43 🇵🇱 Poland, Wrocław (Stare Miasto) | [BL]","type":"vless","server":"212.127.90.119","port":443,"uuid":"435954ab-38f3-40bf-b303-77e3f6576fa0","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
+  - {"name":"44 🇵🇱 Poland, Wrocław (Stare Miasto) | [BL]","type":"vless","server":"pl.sywl3.us","port":443,"uuid":"435954ab-38f3-40bf-b303-77e3f6576fa0","udp":true,"tls":true,"network":"tcp","servername":"dropbox.com"}
   - {"name":"45 🇸🇬 Singapore, Singapore | [BL]","type":"vless","server":"vsgch.mostserv.xyz","port":443,"uuid":"0ddc1b7c-ce23-4a30-8ede-8a9e19f02fb7","udp":true,"tls":true,"network":"tcp","servername":"vsgch.mostserv.xyz"}
-  - {"name":"46 🇸🇪 Sweden, Eskilstuna | [BL]","type":"vless","server":"185.173.223.154","port":443,"uuid":"bda6af97-8d40-4ca4-a62d-69c05a844caa","udp":true,"tls":true,"network":"tcp","servername":"tehno.store"}
-  - {"name":"47 🇸🇪 Sweden, Stockholm | [BL]","type":"vless","server":"sw.musicperec.ru","port":443,"uuid":"31216f81-3139-0021-bac4-646680314264","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
-  - {"name":"48 🇸🇪 Sweden, Stockholm | [BL]","type":"vless","server":"se.clgate.network","port":443,"uuid":"f4bad870-4b45-4a46-bec6-d05fa31df1cb","udp":true,"tls":true,"network":"xhttp","servername":"m.twitch.tv"}
-  - {"name":"49 🇸🇪 Sweden, Stockholm | 🌐 | [BL]","type":"vless","server":"se.c2horizon.app","port":443,"uuid":"545a440f-daf8-4873-b231-54e384a17a4c","udp":true,"tls":true,"network":"tcp","servername":"se.c2horizon.app"}
-  - {"name":"50 🇸🇪 Sweden, Stockholm | 🌐 | [BL]","type":"vless","server":"31.22.91.203","port":443,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"vega.relead.org"}
-  - {"name":"51 🇸🇪 Sweden, Stockholm | 🌐 | [BL]","type":"vless","server":"31.22.91.203","port":7443,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"vega.relead.org"}
-  - {"name":"52 🇨🇭 Switzerland, Geneva | [BL]","type":"vless","server":"83.228.226.72","port":18921,"uuid":"a1ee1f7f-deb9-48e4-9a97-6f565949817d","udp":true,"tls":true,"network":"tcp","servername":"www.booking.com"}
-  - {"name":"53 🇨🇭 Switzerland, Geneva | [BL]","type":"vless","server":"83.228.226.72","port":34129,"uuid":"a1ee1f7f-deb9-48e4-9a97-6f565949817d","udp":true,"tls":true,"network":"tcp","servername":"www.nvidia.com"}
-  - {"name":"54 🇹🇭 Thailand, Bangkok | [BL]","type":"vless","server":"43.164.0.59","port":666,"uuid":"8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19","udp":true,"tls":true,"network":"ws"}
-  - {"name":"55 🇹🇭 Thailand, Bangkok | [BL]","type":"vless","server":"43.164.1.152","port":666,"uuid":"8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19","udp":true,"tls":true,"network":"ws"}
-  - {"name":"56 🇳🇱 The Netherlands | 🌐 | [BL]","type":"vless","server":"nl2.noode.work","port":10000,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"git.sly.team"}
-  - {"name":"57 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"vnldc.mostserv.xyz","port":443,"uuid":"0ddc1b7c-ce23-4a30-8ede-8a9e19f02fb7","udp":true,"tls":true,"network":"tcp","servername":"vnldc.mostserv.xyz"}
-  - {"name":"58 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"103.160.204.190","port":443,"uuid":"179718c1-27b3-449d-9626-98c2c854d010","udp":true,"tls":true,"network":"ws","servername":"del.ccnnx.ir"}
-  - {"name":"59 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"181.214.1.195","port":443,"uuid":"179718c1-27b3-449d-9626-98c2c854d010","udp":true,"tls":true,"network":"ws","servername":"del.ccnnx.ir"}
-  - {"name":"60 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"89.116.46.42","port":443,"uuid":"179718c1-27b3-449d-9626-98c2c854d010","udp":true,"tls":true,"network":"ws","servername":"del.ccnnx.ir"}
-  - {"name":"61 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"nl.omuvpn.tech","port":18443,"uuid":"6db7ea14-ed33-4591-a9b1-f1e91b1c0ff5","udp":true,"tls":true,"network":"tcp","servername":"www.miro.com"}
-  - {"name":"62 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"es.noode.work","port":443,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"genuwei.ru"}
-  - {"name":"63 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL]","type":"vless","server":"46.19.68.247","port":7443,"uuid":"c4d69096-4026-4da5-9485-20a3da91cb14","udp":true,"tls":true,"network":"grpc","servername":"video.tcpnet.fun"}
-  - {"name":"64 🇳🇱 The Netherlands, Dronten | [BL]","type":"vless","server":"food.artmisserver.site","port":8443,"uuid":"3e809b21-e29b-49ec-a7fb-5301ec7c1cee","udp":true,"tls":false,"network":"ws"}
-  - {"name":"65 🇳🇱 The Netherlands, Dronten | [BL]","type":"vless","server":"nl05.port-server.online","port":443,"uuid":"dbfa97b8-f4fb-4687-96dc-a5a2aebfae11","udp":true,"tls":true,"network":"tcp","servername":"nl05.port-server.online"}
-  - {"name":"66 🇳🇱 The Netherlands, Dronten | [BL]","type":"vless","server":"nl.clgate.network","port":443,"uuid":"f4bad870-4b45-4a46-bec6-d05fa31df1cb","udp":true,"tls":true,"network":"xhttp","servername":"m.twitch.tv"}
-  - {"name":"67 🇳🇱 The Netherlands, Eygelshoven | [BL]","type":"vless","server":"77.239.112.88","port":443,"uuid":"f099abc1-eb01-4171-a94f-566563f6b3b1","udp":true,"tls":true,"network":"tcp","servername":"www.ya.ru"}
-  - {"name":"68 🇳🇱 The Netherlands, Oude Meer | [BL]","type":"vless","server":"80.89.237.87","port":443,"uuid":"Fluffy_VPN-uQuRPvrt","udp":true,"tls":true,"network":"tcp","servername":"very-mega-best.top"}
-  - {"name":"69 🇦🇪 United Arab Emirates, Abu Dhabi | [BL]","type":"vless","server":"u1.noode.work","port":443,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"kanzas.notbrainrot.ru"}
-  - {"name":"70 🇬🇧 United Kingdom, Studley | [BL]","type":"vless","server":"r3.self-cloud.work","port":443,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"useorange.com"}
-  - {"name":"71 🇺🇸 United States | 🌐 | [BL]","type":"vless","server":"23.106.46.230","port":8443,"uuid":"46875150-a6b5-4fe1-a4b5-d5f70e7a52c6","udp":true,"tls":true,"network":"tcp","servername":"www.yahoo.com"}
-  - {"name":"72 🇺🇸 United States | 🌐 | [BL]","type":"vless","server":"45.9.14.250","port":443,"uuid":"c4d69096-4026-4da5-9485-20a3da91cb14","udp":true,"tls":true,"network":"grpc","servername":"tv.apple.com"}
-  - {"name":"73 🇺🇸 United States | 🌐 | [BL]","type":"vless","server":"23.106.46.230","port":2095,"uuid":"e2b5906e-1dcb-4a19-a482-bdb0cc513b43","udp":true,"tls":false,"network":"ws"}
-  - {"name":"74 🇺🇸 United States, Los Angeles | [BL]","type":"vless","server":"us2.c2horizon.app","port":443,"uuid":"545a440f-daf8-4873-b231-54e384a17a4c","udp":true,"tls":true,"network":"tcp","servername":"us2.c2horizon.app"}
-  - {"name":"75 🇺🇸 United States, New York | [BL]","type":"vless","server":"82.29.130.68","port":852,"uuid":"9f854aa6-7882-4da9-84be-90637c1645a1","udp":true,"tls":true,"network":"grpc","servername":"www.amd.com"}
-  - {"name":"76 🇺🇸 United States, New York | [BL]","type":"vless","server":"usa.port-server.online","port":443,"uuid":"dbfa97b8-f4fb-4687-96dc-a5a2aebfae11","udp":true,"tls":true,"network":"tcp","servername":"usa.port-server.online"}
-  - {"name":"77 🇺🇸 United States, Santa Clara | [BL]","type":"vless","server":"43.162.85.247","port":666,"uuid":"8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19","udp":true,"tls":true,"network":"ws"}
-  - {"name":"78 🇺🇸 United States, Springfield | [BL]","type":"vless","server":"ai.noode.work","port":15500,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"grpc","servername":"git.sly.team"}
-  - {"name":"79 🇺🇸 United States, Washington | [BL]","type":"vless","server":"20.103.221.187","port":443,"uuid":"4b616b6f-6f6c-4e65-7773-b8e2c9f3d541","udp":true,"tls":true,"network":"ws","servername":"studious-bassoon-gx45w7rj6j7jfwp4g-443.app.github.dev"}
-  - {"name":"80 🇷🇺 Russia, Moscow | 🌐 | [BL]","type":"vless","server":"176.53.146.164","port":443,"uuid":"783384f7-a34f-4157-8624-7392f8dddfbd","udp":true,"tls":true,"network":"tcp","servername":"docs.otlidea.ru"}
-  - {"name":"81 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"spb-node.datamove.online","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
-  - {"name":"82 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"37.77.106.32","port":13343,"uuid":"228ecfd3-9bf0-42fd-a50e-581f84022513","udp":true,"tls":true,"network":"tcp","servername":"rcsb.org"}
-  - {"name":"83 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"ru.c2horizon.app","port":443,"uuid":"545a440f-daf8-4873-b231-54e384a17a4c","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"84 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"37.77.106.32","port":13343,"uuid":"6db7ea14-ed33-4591-a9b1-f1e91b1c0ff5","udp":true,"tls":true,"network":"tcp","servername":"rcsb.org"}
-  - {"name":"85 🌐 Anycast-IP | 🇦🇷 🇨🇦 🇺🇸 | [BL]","type":"vless","server":"154.26.189.70","port":443,"uuid":"06b65903-406d-4a41-8463-6fd5c0ee7798","udp":true,"tls":true,"network":"ws","servername":"sni.skylee4.cloudns.ch"}
-  - {"name":"86 🌐 Anycast-IP | 🇧🇷 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"89.116.180.40","port":8880,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":false,"network":"ws"}
-  - {"name":"87 🌐 Anycast-IP | 🇨🇦 🇩🇪 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"129.6.29.254","port":443,"uuid":"2088ef0d-4d2c-43b3-874b-b6a03531c81b","udp":true,"tls":true,"network":"ws","servername":"r.mediashoppp.sbs"}
-  - {"name":"88 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"129.6.29.252","port":443,"uuid":"2088ef0d-4d2c-43b3-874b-b6a03531c81b","udp":true,"tls":true,"network":"ws","servername":"r.mediashoppp.sbs"}
-  - {"name":"89 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"154.211.8.84","port":2083,"uuid":"40af9131-d540-448a-bc56-5bba147a1dc3","udp":true,"tls":true,"network":"ws","servername":"proxy-3us.pages.dev"}
-  - {"name":"90 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"103.18.49.100","port":443,"uuid":"5dbfed06-dd62-48c0-8e39-b4835defcdb0","udp":true,"tls":true,"network":"ws","servername":"investors.spotify.com.cyylr.eu.cc"}
-  - {"name":"91 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"45.85.118.50","port":8880,"uuid":"6202b230-417c-4d8e-b624-0f71afa9c75d","udp":true,"tls":false,"network":"ws"}
-  - {"name":"92 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"208.103.161.5","port":443,"uuid":"d042a74a-c305-4eec-a89f-39a348022c92","udp":true,"tls":true,"network":"ws","servername":"dry-butterfly-8eb9.tmpgnacio83.workers.dev"}
-  - {"name":"93 🌐 Anycast-IP | 🇩🇪 🇬🇧 | [BL]","type":"vless","server":"de.corsair-web.space","port":8443,"uuid":"a845ce7c-ea10-47b0-8de4-92810260eeab","udp":true,"tls":true,"network":"tcp","servername":"mozilla.org"}
-  - {"name":"94 🌐 Anycast-IP | 🇫🇷 🇬🇧 | [BL]","type":"vless","server":"franccxc3.twilightparadox.com","port":443,"uuid":"d78c12c4-6927-40b8-8550-ed9be00334da","udp":true,"tls":true,"network":"tcp","servername":"franccxc3.twilightparadox.com"}
-  - {"name":"95 🌐 Anycast-IP | 🇬🇧 🇮🇩 🇷🇺 | [BL]","type":"vless","server":"103.18.49.100","port":443,"uuid":"6e593426-1a8e-4226-984f-0ea174e218c7","udp":true,"tls":true,"network":"ws","servername":"dl.cvs.freefiremobile.com.cyylr.eu.cc"}
-  - {"name":"96 🌐 Anycast-IP | 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"185.18.250.245","port":443,"uuid":"1f937d79-75e1-40e4-b822-79acf5adb70f","udp":true,"tls":true,"network":"ws","servername":"ads.ruangguru.com.cyylr.eu.cc"}
-  - {"name":"97 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 | [BL]","type":"vless","server":"185.18.250.252","port":443,"uuid":"4a706452-1a85-4c5a-910c-ec4f0140e2d2","udp":true,"tls":true,"network":"ws","servername":"investor.fb.com.cyylr.eu.cc"}
-  - {"name":"98 🌐 Anycast-IP | 🇵🇱 🇸🇪 | [BL]","type":"vless","server":"bc-pl-1c.ray-balance.space","port":4443,"uuid":"0eca1f22-e5a1-4888-a0fa-c2345e87cf2f","udp":true,"tls":false,"network":"grpc"}
-  - {"name":"99 🇦🇺 Australia, Huntingwood | [BL]","type":"trojan","server":"103.63.30.230","port":443,"password":"rYuChHcwQZskq9E0zdoR","udp":true,"tls":true}
-  - {"name":"100 🇦🇿 Azerbaijan, Baku | [BL]","type":"trojan","server":"103.177.136.41","port":41943,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
-  - {"name":"101 🇦🇿 Azerbaijan, Baku | [BL]","type":"trojan","server":"155.117.198.87","port":41943,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
-  - {"name":"102 🇨🇱 Chile, Santiago | [BL]","type":"trojan","server":"130.94.104.210","port":443,"password":"lTs6OZOMoqYAkDEbK10t-tE8KMjuREBW3m","udp":true,"tls":true}
-  - {"name":"103 🇨🇳 China, Beijing | [BL]","type":"trojan","server":"130.94.29.102","port":443,"password":"d1UH4TrhvCmjc-s4nmChew1qGqX3MNMqel","udp":true,"tls":true}
-  - {"name":"104 🇨🇳 China, Beijing | [BL]","type":"trojan","server":"130.94.65.52","port":443,"password":"IbezlLAYfrLRwFn9.mHn5FDwk1asLi599U","udp":true,"tls":true}
-  - {"name":"105 🇨🇳 China, Beijing | [BL]","type":"trojan","server":"130.94.92.144","port":443,"password":"oUAfbL8z87q-mhgjZ6g7mWQobf9=b7ut_F","udp":true,"tls":true}
-  - {"name":"106 🇫🇷 France, Paris 09 Opéra | [BL]","type":"trojan","server":"103.177.136.41","port":45619,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
-  - {"name":"107 🇫🇷 France, Paris 09 Opéra | [BL]","type":"trojan","server":"155.117.198.83","port":45619,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
-  - {"name":"108 🇬🇭 Ghana, Accra | [BL]","type":"trojan","server":"103.177.136.41","port":48697,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
-  - {"name":"109 🇬🇭 Ghana, Accra | [BL]","type":"trojan","server":"155.117.198.83","port":48697,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
-  - {"name":"110 🇭🇰 Hong Kong, Central | [BL]","type":"trojan","server":"85.211.198.109","port":52225,"password":"da292191-b895-3264-b41c-200512b8f965","udp":true,"tls":true}
-  - {"name":"111 🇭🇰 Hong Kong, Central | [BL]","type":"trojan","server":"a.twodnwnpoe.xyz","port":52225,"password":"da292191-b895-3264-b41c-200512b8f965","udp":true,"tls":true}
-  - {"name":"112 🇭🇰 Hong Kong, Hong Kong | 🌐 | [BL]","type":"trojan","server":"a.twodnwnpoe.xyz","port":40017,"password":"da292191-b895-3264-b41c-200512b8f965","udp":true,"tls":true}
-  - {"name":"113 🇮🇸 Iceland, Reykjavik | [BL]","type":"trojan","server":"155.117.198.87","port":47909,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
-  - {"name":"114 🇵🇱 Poland, Warsaw | [BL]","type":"trojan","server":"202.37.33.80","port":443,"password":"humanity","udp":true,"tls":true}
-  - {"name":"115 🇸🇬 Singapore, Singapore | 🌐 | [BL]","type":"trojan","server":"211.76.176.99","port":19128,"password":"gcuCpQfaiVeDBdWG","udp":true,"tls":true}
-  - {"name":"116 🇨🇭 Switzerland, Zurich | [BL]","type":"trojan","server":"155.117.198.87","port":45553,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
-  - {"name":"117 🇺🇸 United States, Buffalo | [BL]","type":"trojan","server":"104.143.0.117","port":8443,"password":"433e785b-2077-47f7-a43d-985f63dd18d1","udp":true,"tls":true}
-  - {"name":"118 🇺🇸 United States, Nashville | [BL]","type":"trojan","server":"130.94.107.171","port":443,"password":"s.wRSE4ANZp4=4h.=B_9Qbetw6XUc0V1SV","udp":true,"tls":true}
-  - {"name":"119 🇻🇳 Vietnam, Hanoi | [BL]","type":"trojan","server":"130.94.3.146","port":443,"password":"DX4wKmVl.CNIjwO5CYf7_qg+f1eMN4yt_F","udp":true,"tls":true}
-  - {"name":"120 🌐 Anycast-IP | 🇦🇷 🇬🇧 🇱🇹 🇵🇱 | [BL]","type":"trojan","server":"45.144.48.182","port":8443,"password":"Nova-Proxy","udp":true,"tls":true}
-  - {"name":"121 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]","type":"trojan","server":"208.103.161.170","port":443,"password":"386bd471-4e29-4e79-9a3c-6bc6076ce4b6","udp":true,"tls":true}
-  - {"name":"122 🌐 Anycast-IP | 🇬🇧 🇷🇺 | [BL]","type":"trojan","server":"81.255.155.10","port":443,"password":"#RO2PEf}<w'B","udp":true,"tls":true}
-  - {"name":"123 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇺🇸 | [BL]","type":"trojan","server":"167.68.4.199","port":2053,"password":"Aimer","udp":true,"tls":true}
-  - {"name":"124 🌐 Anycast-IP | 🇵🇱 | [BL]","type":"trojan","server":"81.255.155.10","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"46 🇸🇪 Sweden, Stockholm | [BL]","type":"vless","server":"45.138.102.226","port":443,"uuid":"f4bad870-4b45-4a46-bec6-d05fa31df1cb","udp":true,"tls":true,"network":"xhttp","servername":"m.twitch.tv"}
+  - {"name":"47 🇸🇪 Sweden, Stockholm | [BL]","type":"vless","server":"se.clgate.network","port":443,"uuid":"f4bad870-4b45-4a46-bec6-d05fa31df1cb","udp":true,"tls":true,"network":"xhttp","servername":"m.twitch.tv"}
+  - {"name":"48 🇸🇪 Sweden, Stockholm | 🌐 | [BL]","type":"vless","server":"sweden.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"49 🇨🇭 Switzerland | 🌐 | [BL]","type":"vless","server":"switzerland.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"50 🇨🇭 Switzerland, Geneva | [BL]","type":"vless","server":"45.85.93.51","port":443,"uuid":"301d514e-4aa0-47b0-ba44-a0cb891cd52f","udp":true,"tls":true,"network":"tcp","servername":"www.samsung.com"}
+  - {"name":"51 🇨🇭 Switzerland, Geneva | [BL]","type":"vless","server":"83.228.226.72","port":18921,"uuid":"a1ee1f7f-deb9-48e4-9a97-6f565949817d","udp":true,"tls":true,"network":"tcp","servername":"www.booking.com"}
+  - {"name":"52 🇨🇭 Switzerland, Geneva | [BL]","type":"vless","server":"83.228.226.72","port":34129,"uuid":"a1ee1f7f-deb9-48e4-9a97-6f565949817d","udp":true,"tls":true,"network":"tcp","servername":"www.nvidia.com"}
+  - {"name":"53 🇹🇭 Thailand, Bangkok | [BL]","type":"vless","server":"43.164.1.152","port":666,"uuid":"8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19","udp":true,"tls":true,"network":"ws"}
+  - {"name":"54 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"185.244.49.44","port":42346,"uuid":"6db7ea14-ed33-4591-a9b1-f1e91b1c0ff5","udp":true,"tls":true,"network":"tcp","servername":"www.tradingview.com"}
+  - {"name":"55 🇳🇱 The Netherlands, Amsterdam | [BL]","type":"vless","server":"pl-1.omuvpn.tech","port":42346,"uuid":"6db7ea14-ed33-4591-a9b1-f1e91b1c0ff5","udp":true,"tls":true,"network":"tcp","servername":"www.tradingview.com"}
+  - {"name":"56 🇳🇱 The Netherlands, Dronten | [BL]","type":"vless","server":"91.198.77.242","port":8443,"uuid":"3e809b21-e29b-49ec-a7fb-5301ec7c1cee","udp":true,"tls":false,"network":"ws"}
+  - {"name":"57 🇳🇱 The Netherlands, Dronten | [BL]","type":"vless","server":"food.artmisserver.site","port":8443,"uuid":"3e809b21-e29b-49ec-a7fb-5301ec7c1cee","udp":true,"tls":false,"network":"ws"}
+  - {"name":"58 🇳🇱 The Netherlands, Eygelshoven | [BL]","type":"vless","server":"77.239.112.88","port":443,"uuid":"f099abc1-eb01-4171-a94f-566563f6b3b1","udp":true,"tls":true,"network":"tcp","servername":"www.ya.ru"}
+  - {"name":"59 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"s642.ccgfw.top","port":443,"uuid":"205d6869-02ca-3b36-b933-be2465250c7e","udp":true,"tls":true,"network":"tcp","servername":"u716087u4c78s642.ccgfw.top"}
+  - {"name":"60 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"s643.ccgfw.top","port":443,"uuid":"205d6869-02ca-3b36-b933-be2465250c7e","udp":true,"tls":true,"network":"tcp","servername":"u716087u7190s643.ccgfw.top"}
+  - {"name":"61 🇬🇧 United Kingdom, London | [BL]","type":"vless","server":"s644.ccgfw.top","port":443,"uuid":"205d6869-02ca-3b36-b933-be2465250c7e","udp":true,"tls":true,"network":"tcp","servername":"u716087ud3c8s644.ccgfw.top"}
+  - {"name":"62 🇺🇸 United States | 🌐 | [BL]","type":"vless","server":"45.9.14.250","port":443,"uuid":"c4d69096-4026-4da5-9485-20a3da91cb14","udp":true,"tls":true,"network":"grpc","servername":"tv.apple.com"}
+  - {"name":"63 🇺🇸 United States, Arlington (Crystal Spring Knolls) | [BL]","type":"vless","server":"31.207.5.73","port":443,"uuid":"6d088fbd-528d-4f2a-be26-317dcda3c6ee","udp":true,"tls":true,"network":"tcp","servername":"www.amd.com"}
+  - {"name":"64 🇺🇸 United States, Arlington Heights | [BL]","type":"vless","server":"s77.okgfwbackxyz.xyz","port":443,"uuid":"205d6869-02ca-3b36-b933-be2465250c7e","udp":true,"tls":true,"network":"tcp","servername":"u716087us77.okgfwbackxyz.xyz"}
+  - {"name":"65 🇺🇸 United States, Arlington Heights | [BL]","type":"vless","server":"s860.okgfwbackxyz.xyz","port":443,"uuid":"205d6869-02ca-3b36-b933-be2465250c7e","udp":true,"tls":true,"network":"tcp","servername":"u716087us860.okgfwbackxyz.xyz"}
+  - {"name":"66 🇺🇸 United States, New York | [BL]","type":"vless","server":"82.29.130.68","port":852,"uuid":"9f854aa6-7882-4da9-84be-90637c1645a1","udp":true,"tls":true,"network":"grpc","servername":"www.amd.com"}
+  - {"name":"67 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"spb-node.datamove.online","port":2040,"uuid":"17451fec-af94-4715-8c2f-7f6839130d0a","udp":true,"tls":true,"network":"tcp","servername":"tradingview.com"}
+  - {"name":"68 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"37.77.106.32","port":13343,"uuid":"228ecfd3-9bf0-42fd-a50e-581f84022513","udp":true,"tls":true,"network":"tcp","servername":"rcsb.org"}
+  - {"name":"69 🇷🇺 Russia, St Petersburg | [BL]","type":"vless","server":"37.77.106.32","port":13343,"uuid":"6db7ea14-ed33-4591-a9b1-f1e91b1c0ff5","udp":true,"tls":true,"network":"tcp","servername":"rcsb.org"}
+  - {"name":"70 🌐 Anycast-IP | 🇦🇷 🇨🇦 🇺🇸 | [BL]","type":"vless","server":"154.26.189.70","port":443,"uuid":"06b65903-406d-4a41-8463-6fd5c0ee7798","udp":true,"tls":true,"network":"ws","servername":"sni.skylee4.cloudns.ch"}
+  - {"name":"71 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇮🇩 🇷🇺 | [BL]","type":"vless","server":"103.18.49.100","port":443,"uuid":"1a5b24bc-6180-4fa7-922d-ba7ee8a7a2b7","udp":true,"tls":true,"network":"ws","servername":"support.zoom.us.cyylr.eu.cc"}
+  - {"name":"72 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"185.18.250.245","port":443,"uuid":"1f937d79-75e1-40e4-b822-79acf5adb70f","udp":true,"tls":true,"network":"ws","servername":"ads.ruangguru.com.cyylr.eu.cc"}
+  - {"name":"73 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]","type":"vless","server":"185.18.250.252","port":443,"uuid":"4a706452-1a85-4c5a-910c-ec4f0140e2d2","udp":true,"tls":true,"network":"ws","servername":"investor.fb.com.cyylr.eu.cc"}
+  - {"name":"74 🌐 Anycast-IP | 🇩🇪 | [BL]","type":"vless","server":"germany.cloudpath.live","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"75 🌐 Anycast-IP | 🇩🇪 🇫🇷 | [BL]","type":"vless","server":"172.65.209.214","port":443,"uuid":"a1fbffe9-8e5a-5a0e-9333-045d32eccd59","udp":true,"tls":true,"network":"tcp","servername":"microsoft.com"}
+  - {"name":"76 🌐 Anycast-IP | 🇩🇪 🇬🇧 | [BL]","type":"vless","server":"de.corsair-web.space","port":8443,"uuid":"a845ce7c-ea10-47b0-8de4-92810260eeab","udp":true,"tls":true,"network":"tcp","servername":"mozilla.org"}
+  - {"name":"77 🌐 Anycast-IP | 🇫🇮 🇬🇧 | [BL]","type":"vless","server":"fi.corsair-web.space","port":8443,"uuid":"a845ce7c-ea10-47b0-8de4-92810260eeab","udp":true,"tls":true,"network":"tcp","servername":"mozilla.org"}
+  - {"name":"78 🌐 Anycast-IP | 🇫🇷 🇬🇧 | [BL]","type":"vless","server":"franccxc3.twilightparadox.com","port":443,"uuid":"d78c12c4-6927-40b8-8550-ed9be00334da","udp":true,"tls":true,"network":"tcp","servername":"franccxc3.twilightparadox.com"}
+  - {"name":"79 🌐 Anycast-IP | 🇬🇧 🇮🇩 🇮🇳 🇷🇺 | [BL]","type":"vless","server":"103.18.49.100","port":443,"uuid":"6e593426-1a8e-4226-984f-0ea174e218c7","udp":true,"tls":true,"network":"ws","servername":"dl.cvs.freefiremobile.com.cyylr.eu.cc"}
+  - {"name":"80 🌐 Anycast-IP | 🇵🇱 🇸🇪 | [BL]","type":"vless","server":"bc-pl-1c.ray-balance.space","port":4443,"uuid":"0eca1f22-e5a1-4888-a0fa-c2345e87cf2f","udp":true,"tls":false,"network":"grpc"}
+  - {"name":"81 🇧🇬 Bulgaria, Sofia | [BL]","type":"trojan","server":"130.94.97.11","port":443,"password":"Z3_=ewk_+l1U4OT4usQ5=o2vFfk95yfy1V","udp":true,"tls":true}
+  - {"name":"82 🇨🇱 Chile, Santiago | [BL]","type":"trojan","server":"130.94.104.210","port":443,"password":"lTs6OZOMoqYAkDEbK10t-tE8KMjuREBW3m","udp":true,"tls":true}
+  - {"name":"83 🇨🇳 China, Beijing | [BL]","type":"trojan","server":"130.94.65.52","port":443,"password":"IbezlLAYfrLRwFn9.mHn5FDwk1asLi599U","udp":true,"tls":true}
+  - {"name":"84 🇩🇪 Germany, Frankfurt am Main | [BL]","type":"trojan","server":"dggg.wsone.icu","port":443,"password":"M7v%w11Se*","udp":true,"tls":true}
+  - {"name":"85 🇮🇳 India, Mumbai | [BL]","type":"trojan","server":"amanm.wsone.icu","port":443,"password":"M7v%w11Se*","udp":true,"tls":true}
+  - {"name":"86 🇮🇳 India, New Delhi | [BL]","type":"trojan","server":"hyfuuf6.wsone.icu","port":443,"password":"M7v%w11Se*","udp":true,"tls":true}
+  - {"name":"87 🇮🇳 India, New Delhi | [BL]","type":"trojan","server":"34.131.228.210","port":443,"password":"M7v%w11Se*","udp":true,"tls":true}
+  - {"name":"88 🇵🇱 Poland, Warsaw | [BL]","type":"trojan","server":"202.37.33.80","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"89 🇵🇱 Poland, Warsaw | [BL]","type":"trojan","server":"81.255.155.10","port":443,"password":"humanity","udp":true,"tls":true}
+  - {"name":"90 🇨🇭 Switzerland, Zurich | [BL]","type":"trojan","server":"155.117.198.87","port":45553,"password":"4f4d1167-ef14-4304-9bce-0740472503ef","udp":true,"tls":true}
+  - {"name":"91 🇻🇳 Vietnam, Hanoi | [BL]","type":"trojan","server":"130.94.3.146","port":443,"password":"DX4wKmVl.CNIjwO5CYf7_qg+f1eMN4yt_F","udp":true,"tls":true}
+  - {"name":"92 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 | [BL]","type":"trojan","server":"208.103.161.170","port":443,"password":"386bd471-4e29-4e79-9a3c-6bc6076ce4b6","udp":true,"tls":true}
+  - {"name":"93 🇯🇵 Japan, Osaka | [BL]","type":"vmess","server":"level3.cpluslink.com","port":601,"uuid":"8d1e7fc9-60f9-3e11-ab29-455243c4895d","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -312,130 +281,99 @@ proxy-groups:
     type: select
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
-      - "1 🇩🇪 Germany, Karlsruhe (Nordweststadt) | 🌐 | [BL]"
-      - "2 🇺🇸 United States, Seattle | 🌐 | [BL]"
-      - "3 🇷🇺 Russia | 🌐 | [BL]"
-      - "4 🌐 Anycast-IP | 🇧🇷 | [BL]"
-      - "5 🇦🇲 Armenia, Yerevan | [BL]"
+      - "1 🇧🇬 Bulgaria, Veliko Tarnovo | [BL]"
+      - "2 🇩🇪 Germany, Karlsruhe (Nordweststadt) | 🌐 | [BL]"
+      - "3 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "4 🇺🇸 United States, Arlington Heights | [BL]"
+      - "5 🇺🇸 United States, Seattle | 🌐 | [BL]"
       - "6 🇦🇲 Armenia, Yerevan | [BL]"
-      - "7 🇦🇹 Austria, Vienna | 🌐 | [BL]"
-      - "8 🇧🇪 Belgium, Mont-Saint-Guibert | [BL]"
-      - "9 🇨🇿 Czechia, Mašťov | [BL]"
-      - "10 🇨🇿 Czechia, Veselí nad Lužnicí | [BL]"
-      - "11 🇫🇮 Finland, Helsinki | 🌐 | [BL]"
+      - "7 🇧🇪 Belgium | 🌐 | [BL]"
+      - "8 🇨🇿 Czechia, Mašťov | [BL]"
+      - "9 🇨🇿 Czechia, Prague | 🌐 | [BL]"
+      - "10 🇩🇰 Denmark | 🌐 | [BL]"
+      - "11 🇫🇮 Finland | 🌐 | [BL]"
       - "12 🇫🇮 Finland, Helsinki | 🌐 | [BL]"
-      - "13 🇫🇷 France, Paris | [BL]"
+      - "13 🇫🇷 France | 🌐 | [BL]"
       - "14 🇫🇷 France, Paris | [BL]"
       - "15 🇫🇷 France, Paris | [BL]"
-      - "16 🇫🇷 France, Strasbourg | [BL]"
-      - "17 🇫🇷 France, Strasbourg | [BL]"
+      - "16 🇫🇷 France, Vélizy-Villacoublay | 🌐 | [BL]"
+      - "17 🇫🇷 France, Vélizy-Villacoublay | 🌐 | [BL]"
       - "18 🇩🇪 Germany, Berlin (Bezirk Tempelhof-Schöneberg) | [BL]"
       - "19 🇩🇪 Germany, Frankfurt am Main | [BL]"
       - "20 🇩🇪 Germany, Frankfurt am Main | [BL]"
       - "21 🇩🇪 Germany, Frankfurt am Main | [BL]"
       - "22 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "23 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "24 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "25 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
-      - "26 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
-      - "27 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
+      - "23 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
+      - "24 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+      - "25 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+      - "26 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+      - "27 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "28 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "29 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "30 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "31 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "32 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "33 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "34 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "35 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "36 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]"
-      - "37 🇭🇺 Hungary | 🌐 | [BL]"
-      - "38 🇮🇹 Italy, Arezzo | [BL]"
-      - "39 🇰🇿 Kazakhstan, Almaty | [BL]"
-      - "40 🇰🇿 Kazakhstan, Almaty (Almaly Audany) | 🌐 | [BL]"
-      - "41 🇳🇴 Norway, Sandefjord | 🌐 | [BL]"
-      - "42 🇵🇱 Poland, Warsaw | [BL]"
+      - "33 🇬🇷 Greece | 🌐 | [BL]"
+      - "34 🇭🇰 Hong Kong | 🌐 | [BL]"
+      - "35 🇭🇰 Hong Kong | 🌐 | [BL]"
+      - "36 🇭🇺 Hungary | 🌐 | [BL]"
+      - "37 🇭🇺 Hungary, Budapest | 🌐 | [BL]"
+      - "38 🇰🇿 Kazakhstan, Almaty | [BL]"
+      - "39 🇱🇮 Liechtenstein, Schaan | 🌐 | [BL]"
+      - "40 🇱🇹 Lithuania, Vilnius | 🌐 | [BL]"
+      - "41 🇳🇴 Norway | 🌐 | [BL]"
+      - "42 🇳🇴 Norway, Stokmarknes | 🌐 | [BL]"
       - "43 🇵🇱 Poland, Wrocław (Stare Miasto) | [BL]"
-      - "44 🇸🇬 Singapore, Singapore | [BL]"
+      - "44 🇵🇱 Poland, Wrocław (Stare Miasto) | [BL]"
       - "45 🇸🇬 Singapore, Singapore | [BL]"
-      - "46 🇸🇪 Sweden, Eskilstuna | [BL]"
+      - "46 🇸🇪 Sweden, Stockholm | [BL]"
       - "47 🇸🇪 Sweden, Stockholm | [BL]"
-      - "48 🇸🇪 Sweden, Stockholm | [BL]"
-      - "49 🇸🇪 Sweden, Stockholm | 🌐 | [BL]"
-      - "50 🇸🇪 Sweden, Stockholm | 🌐 | [BL]"
-      - "51 🇸🇪 Sweden, Stockholm | 🌐 | [BL]"
+      - "48 🇸🇪 Sweden, Stockholm | 🌐 | [BL]"
+      - "49 🇨🇭 Switzerland | 🌐 | [BL]"
+      - "50 🇨🇭 Switzerland, Geneva | [BL]"
+      - "51 🇨🇭 Switzerland, Geneva | [BL]"
       - "52 🇨🇭 Switzerland, Geneva | [BL]"
-      - "53 🇨🇭 Switzerland, Geneva | [BL]"
-      - "54 🇹🇭 Thailand, Bangkok | [BL]"
-      - "55 🇹🇭 Thailand, Bangkok | [BL]"
-      - "56 🇳🇱 The Netherlands | 🌐 | [BL]"
-      - "57 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "58 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "59 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "60 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "61 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "62 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "63 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL]"
-      - "64 🇳🇱 The Netherlands, Dronten | [BL]"
-      - "65 🇳🇱 The Netherlands, Dronten | [BL]"
-      - "66 🇳🇱 The Netherlands, Dronten | [BL]"
-      - "67 🇳🇱 The Netherlands, Eygelshoven | [BL]"
-      - "68 🇳🇱 The Netherlands, Oude Meer | [BL]"
-      - "69 🇦🇪 United Arab Emirates, Abu Dhabi | [BL]"
-      - "70 🇬🇧 United Kingdom, Studley | [BL]"
-      - "71 🇺🇸 United States | 🌐 | [BL]"
-      - "72 🇺🇸 United States | 🌐 | [BL]"
-      - "73 🇺🇸 United States | 🌐 | [BL]"
-      - "74 🇺🇸 United States, Los Angeles | [BL]"
-      - "75 🇺🇸 United States, New York | [BL]"
-      - "76 🇺🇸 United States, New York | [BL]"
-      - "77 🇺🇸 United States, Santa Clara | [BL]"
-      - "78 🇺🇸 United States, Springfield | [BL]"
-      - "79 🇺🇸 United States, Washington | [BL]"
-      - "80 🇷🇺 Russia, Moscow | 🌐 | [BL]"
-      - "81 🇷🇺 Russia, St Petersburg | [BL]"
-      - "82 🇷🇺 Russia, St Petersburg | [BL]"
-      - "83 🇷🇺 Russia, St Petersburg | [BL]"
-      - "84 🇷🇺 Russia, St Petersburg | [BL]"
-      - "85 🌐 Anycast-IP | 🇦🇷 🇨🇦 🇺🇸 | [BL]"
-      - "86 🌐 Anycast-IP | 🇧🇷 🇬🇧 🇷🇺 | [BL]"
-      - "87 🌐 Anycast-IP | 🇨🇦 🇩🇪 🇬🇧 🇷🇺 | [BL]"
-      - "88 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "89 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "90 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "91 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "92 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "93 🌐 Anycast-IP | 🇩🇪 🇬🇧 | [BL]"
-      - "94 🌐 Anycast-IP | 🇫🇷 🇬🇧 | [BL]"
-      - "95 🌐 Anycast-IP | 🇬🇧 🇮🇩 🇷🇺 | [BL]"
-      - "96 🌐 Anycast-IP | 🇬🇧 🇷🇺 | [BL]"
-      - "97 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 | [BL]"
-      - "98 🌐 Anycast-IP | 🇵🇱 🇸🇪 | [BL]"
-      - "99 🇦🇺 Australia, Huntingwood | [BL]"
-      - "100 🇦🇿 Azerbaijan, Baku | [BL]"
-      - "101 🇦🇿 Azerbaijan, Baku | [BL]"
-      - "102 🇨🇱 Chile, Santiago | [BL]"
-      - "103 🇨🇳 China, Beijing | [BL]"
-      - "104 🇨🇳 China, Beijing | [BL]"
-      - "105 🇨🇳 China, Beijing | [BL]"
-      - "106 🇫🇷 France, Paris 09 Opéra | [BL]"
-      - "107 🇫🇷 France, Paris 09 Opéra | [BL]"
-      - "108 🇬🇭 Ghana, Accra | [BL]"
-      - "109 🇬🇭 Ghana, Accra | [BL]"
-      - "110 🇭🇰 Hong Kong, Central | [BL]"
-      - "111 🇭🇰 Hong Kong, Central | [BL]"
-      - "112 🇭🇰 Hong Kong, Hong Kong | 🌐 | [BL]"
-      - "113 🇮🇸 Iceland, Reykjavik | [BL]"
-      - "114 🇵🇱 Poland, Warsaw | [BL]"
-      - "115 🇸🇬 Singapore, Singapore | 🌐 | [BL]"
-      - "116 🇨🇭 Switzerland, Zurich | [BL]"
-      - "117 🇺🇸 United States, Buffalo | [BL]"
-      - "118 🇺🇸 United States, Nashville | [BL]"
-      - "119 🇻🇳 Vietnam, Hanoi | [BL]"
-      - "120 🌐 Anycast-IP | 🇦🇷 🇬🇧 🇱🇹 🇵🇱 | [BL]"
-      - "121 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "122 🌐 Anycast-IP | 🇬🇧 🇷🇺 | [BL]"
-      - "123 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇺🇸 | [BL]"
-      - "124 🌐 Anycast-IP | 🇵🇱 | [BL]"
+      - "53 🇹🇭 Thailand, Bangkok | [BL]"
+      - "54 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "55 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "56 🇳🇱 The Netherlands, Dronten | [BL]"
+      - "57 🇳🇱 The Netherlands, Dronten | [BL]"
+      - "58 🇳🇱 The Netherlands, Eygelshoven | [BL]"
+      - "59 🇬🇧 United Kingdom, London | [BL]"
+      - "60 🇬🇧 United Kingdom, London | [BL]"
+      - "61 🇬🇧 United Kingdom, London | [BL]"
+      - "62 🇺🇸 United States | 🌐 | [BL]"
+      - "63 🇺🇸 United States, Arlington (Crystal Spring Knolls) | [BL]"
+      - "64 🇺🇸 United States, Arlington Heights | [BL]"
+      - "65 🇺🇸 United States, Arlington Heights | [BL]"
+      - "66 🇺🇸 United States, New York | [BL]"
+      - "67 🇷🇺 Russia, St Petersburg | [BL]"
+      - "68 🇷🇺 Russia, St Petersburg | [BL]"
+      - "69 🇷🇺 Russia, St Petersburg | [BL]"
+      - "70 🌐 Anycast-IP | 🇦🇷 🇨🇦 🇺🇸 | [BL]"
+      - "71 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇮🇩 🇷🇺 | [BL]"
+      - "72 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "73 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "74 🌐 Anycast-IP | 🇩🇪 | [BL]"
+      - "75 🌐 Anycast-IP | 🇩🇪 🇫🇷 | [BL]"
+      - "76 🌐 Anycast-IP | 🇩🇪 🇬🇧 | [BL]"
+      - "77 🌐 Anycast-IP | 🇫🇮 🇬🇧 | [BL]"
+      - "78 🌐 Anycast-IP | 🇫🇷 🇬🇧 | [BL]"
+      - "79 🌐 Anycast-IP | 🇬🇧 🇮🇩 🇮🇳 🇷🇺 | [BL]"
+      - "80 🌐 Anycast-IP | 🇵🇱 🇸🇪 | [BL]"
+      - "81 🇧🇬 Bulgaria, Sofia | [BL]"
+      - "82 🇨🇱 Chile, Santiago | [BL]"
+      - "83 🇨🇳 China, Beijing | [BL]"
+      - "84 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "85 🇮🇳 India, Mumbai | [BL]"
+      - "86 🇮🇳 India, New Delhi | [BL]"
+      - "87 🇮🇳 India, New Delhi | [BL]"
+      - "88 🇵🇱 Poland, Warsaw | [BL]"
+      - "89 🇵🇱 Poland, Warsaw | [BL]"
+      - "90 🇨🇭 Switzerland, Zurich | [BL]"
+      - "91 🇻🇳 Vietnam, Hanoi | [BL]"
+      - "92 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 | [BL]"
+      - "93 🇯🇵 Japan, Osaka | [BL]"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -444,130 +382,99 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "1 🇩🇪 Germany, Karlsruhe (Nordweststadt) | 🌐 | [BL]"
-      - "2 🇺🇸 United States, Seattle | 🌐 | [BL]"
-      - "3 🇷🇺 Russia | 🌐 | [BL]"
-      - "4 🌐 Anycast-IP | 🇧🇷 | [BL]"
-      - "5 🇦🇲 Armenia, Yerevan | [BL]"
+      - "1 🇧🇬 Bulgaria, Veliko Tarnovo | [BL]"
+      - "2 🇩🇪 Germany, Karlsruhe (Nordweststadt) | 🌐 | [BL]"
+      - "3 🇭🇰 Hong Kong, Hong Kong | [BL]"
+      - "4 🇺🇸 United States, Arlington Heights | [BL]"
+      - "5 🇺🇸 United States, Seattle | 🌐 | [BL]"
       - "6 🇦🇲 Armenia, Yerevan | [BL]"
-      - "7 🇦🇹 Austria, Vienna | 🌐 | [BL]"
-      - "8 🇧🇪 Belgium, Mont-Saint-Guibert | [BL]"
-      - "9 🇨🇿 Czechia, Mašťov | [BL]"
-      - "10 🇨🇿 Czechia, Veselí nad Lužnicí | [BL]"
-      - "11 🇫🇮 Finland, Helsinki | 🌐 | [BL]"
+      - "7 🇧🇪 Belgium | 🌐 | [BL]"
+      - "8 🇨🇿 Czechia, Mašťov | [BL]"
+      - "9 🇨🇿 Czechia, Prague | 🌐 | [BL]"
+      - "10 🇩🇰 Denmark | 🌐 | [BL]"
+      - "11 🇫🇮 Finland | 🌐 | [BL]"
       - "12 🇫🇮 Finland, Helsinki | 🌐 | [BL]"
-      - "13 🇫🇷 France, Paris | [BL]"
+      - "13 🇫🇷 France | 🌐 | [BL]"
       - "14 🇫🇷 France, Paris | [BL]"
       - "15 🇫🇷 France, Paris | [BL]"
-      - "16 🇫🇷 France, Strasbourg | [BL]"
-      - "17 🇫🇷 France, Strasbourg | [BL]"
+      - "16 🇫🇷 France, Vélizy-Villacoublay | 🌐 | [BL]"
+      - "17 🇫🇷 France, Vélizy-Villacoublay | 🌐 | [BL]"
       - "18 🇩🇪 Germany, Berlin (Bezirk Tempelhof-Schöneberg) | [BL]"
       - "19 🇩🇪 Germany, Frankfurt am Main | [BL]"
       - "20 🇩🇪 Germany, Frankfurt am Main | [BL]"
       - "21 🇩🇪 Germany, Frankfurt am Main | [BL]"
       - "22 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "23 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "24 🇩🇪 Germany, Frankfurt am Main | [BL]"
-      - "25 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
-      - "26 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
-      - "27 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
+      - "23 🇩🇪 Germany, Frankfurt am Main | 🌐 | [BL]"
+      - "24 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+      - "25 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+      - "26 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
+      - "27 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "28 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "29 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "30 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "31 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
       - "32 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "33 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "34 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "35 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL]"
-      - "36 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]"
-      - "37 🇭🇺 Hungary | 🌐 | [BL]"
-      - "38 🇮🇹 Italy, Arezzo | [BL]"
-      - "39 🇰🇿 Kazakhstan, Almaty | [BL]"
-      - "40 🇰🇿 Kazakhstan, Almaty (Almaly Audany) | 🌐 | [BL]"
-      - "41 🇳🇴 Norway, Sandefjord | 🌐 | [BL]"
-      - "42 🇵🇱 Poland, Warsaw | [BL]"
+      - "33 🇬🇷 Greece | 🌐 | [BL]"
+      - "34 🇭🇰 Hong Kong | 🌐 | [BL]"
+      - "35 🇭🇰 Hong Kong | 🌐 | [BL]"
+      - "36 🇭🇺 Hungary | 🌐 | [BL]"
+      - "37 🇭🇺 Hungary, Budapest | 🌐 | [BL]"
+      - "38 🇰🇿 Kazakhstan, Almaty | [BL]"
+      - "39 🇱🇮 Liechtenstein, Schaan | 🌐 | [BL]"
+      - "40 🇱🇹 Lithuania, Vilnius | 🌐 | [BL]"
+      - "41 🇳🇴 Norway | 🌐 | [BL]"
+      - "42 🇳🇴 Norway, Stokmarknes | 🌐 | [BL]"
       - "43 🇵🇱 Poland, Wrocław (Stare Miasto) | [BL]"
-      - "44 🇸🇬 Singapore, Singapore | [BL]"
+      - "44 🇵🇱 Poland, Wrocław (Stare Miasto) | [BL]"
       - "45 🇸🇬 Singapore, Singapore | [BL]"
-      - "46 🇸🇪 Sweden, Eskilstuna | [BL]"
+      - "46 🇸🇪 Sweden, Stockholm | [BL]"
       - "47 🇸🇪 Sweden, Stockholm | [BL]"
-      - "48 🇸🇪 Sweden, Stockholm | [BL]"
-      - "49 🇸🇪 Sweden, Stockholm | 🌐 | [BL]"
-      - "50 🇸🇪 Sweden, Stockholm | 🌐 | [BL]"
-      - "51 🇸🇪 Sweden, Stockholm | 🌐 | [BL]"
+      - "48 🇸🇪 Sweden, Stockholm | 🌐 | [BL]"
+      - "49 🇨🇭 Switzerland | 🌐 | [BL]"
+      - "50 🇨🇭 Switzerland, Geneva | [BL]"
+      - "51 🇨🇭 Switzerland, Geneva | [BL]"
       - "52 🇨🇭 Switzerland, Geneva | [BL]"
-      - "53 🇨🇭 Switzerland, Geneva | [BL]"
-      - "54 🇹🇭 Thailand, Bangkok | [BL]"
-      - "55 🇹🇭 Thailand, Bangkok | [BL]"
-      - "56 🇳🇱 The Netherlands | 🌐 | [BL]"
-      - "57 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "58 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "59 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "60 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "61 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "62 🇳🇱 The Netherlands, Amsterdam | [BL]"
-      - "63 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL]"
-      - "64 🇳🇱 The Netherlands, Dronten | [BL]"
-      - "65 🇳🇱 The Netherlands, Dronten | [BL]"
-      - "66 🇳🇱 The Netherlands, Dronten | [BL]"
-      - "67 🇳🇱 The Netherlands, Eygelshoven | [BL]"
-      - "68 🇳🇱 The Netherlands, Oude Meer | [BL]"
-      - "69 🇦🇪 United Arab Emirates, Abu Dhabi | [BL]"
-      - "70 🇬🇧 United Kingdom, Studley | [BL]"
-      - "71 🇺🇸 United States | 🌐 | [BL]"
-      - "72 🇺🇸 United States | 🌐 | [BL]"
-      - "73 🇺🇸 United States | 🌐 | [BL]"
-      - "74 🇺🇸 United States, Los Angeles | [BL]"
-      - "75 🇺🇸 United States, New York | [BL]"
-      - "76 🇺🇸 United States, New York | [BL]"
-      - "77 🇺🇸 United States, Santa Clara | [BL]"
-      - "78 🇺🇸 United States, Springfield | [BL]"
-      - "79 🇺🇸 United States, Washington | [BL]"
-      - "80 🇷🇺 Russia, Moscow | 🌐 | [BL]"
-      - "81 🇷🇺 Russia, St Petersburg | [BL]"
-      - "82 🇷🇺 Russia, St Petersburg | [BL]"
-      - "83 🇷🇺 Russia, St Petersburg | [BL]"
-      - "84 🇷🇺 Russia, St Petersburg | [BL]"
-      - "85 🌐 Anycast-IP | 🇦🇷 🇨🇦 🇺🇸 | [BL]"
-      - "86 🌐 Anycast-IP | 🇧🇷 🇬🇧 🇷🇺 | [BL]"
-      - "87 🌐 Anycast-IP | 🇨🇦 🇩🇪 🇬🇧 🇷🇺 | [BL]"
-      - "88 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "89 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "90 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "91 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "92 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "93 🌐 Anycast-IP | 🇩🇪 🇬🇧 | [BL]"
-      - "94 🌐 Anycast-IP | 🇫🇷 🇬🇧 | [BL]"
-      - "95 🌐 Anycast-IP | 🇬🇧 🇮🇩 🇷🇺 | [BL]"
-      - "96 🌐 Anycast-IP | 🇬🇧 🇷🇺 | [BL]"
-      - "97 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 | [BL]"
-      - "98 🌐 Anycast-IP | 🇵🇱 🇸🇪 | [BL]"
-      - "99 🇦🇺 Australia, Huntingwood | [BL]"
-      - "100 🇦🇿 Azerbaijan, Baku | [BL]"
-      - "101 🇦🇿 Azerbaijan, Baku | [BL]"
-      - "102 🇨🇱 Chile, Santiago | [BL]"
-      - "103 🇨🇳 China, Beijing | [BL]"
-      - "104 🇨🇳 China, Beijing | [BL]"
-      - "105 🇨🇳 China, Beijing | [BL]"
-      - "106 🇫🇷 France, Paris 09 Opéra | [BL]"
-      - "107 🇫🇷 France, Paris 09 Opéra | [BL]"
-      - "108 🇬🇭 Ghana, Accra | [BL]"
-      - "109 🇬🇭 Ghana, Accra | [BL]"
-      - "110 🇭🇰 Hong Kong, Central | [BL]"
-      - "111 🇭🇰 Hong Kong, Central | [BL]"
-      - "112 🇭🇰 Hong Kong, Hong Kong | 🌐 | [BL]"
-      - "113 🇮🇸 Iceland, Reykjavik | [BL]"
-      - "114 🇵🇱 Poland, Warsaw | [BL]"
-      - "115 🇸🇬 Singapore, Singapore | 🌐 | [BL]"
-      - "116 🇨🇭 Switzerland, Zurich | [BL]"
-      - "117 🇺🇸 United States, Buffalo | [BL]"
-      - "118 🇺🇸 United States, Nashville | [BL]"
-      - "119 🇻🇳 Vietnam, Hanoi | [BL]"
-      - "120 🌐 Anycast-IP | 🇦🇷 🇬🇧 🇱🇹 🇵🇱 | [BL]"
-      - "121 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
-      - "122 🌐 Anycast-IP | 🇬🇧 🇷🇺 | [BL]"
-      - "123 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇺🇸 | [BL]"
-      - "124 🌐 Anycast-IP | 🇵🇱 | [BL]"
+      - "53 🇹🇭 Thailand, Bangkok | [BL]"
+      - "54 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "55 🇳🇱 The Netherlands, Amsterdam | [BL]"
+      - "56 🇳🇱 The Netherlands, Dronten | [BL]"
+      - "57 🇳🇱 The Netherlands, Dronten | [BL]"
+      - "58 🇳🇱 The Netherlands, Eygelshoven | [BL]"
+      - "59 🇬🇧 United Kingdom, London | [BL]"
+      - "60 🇬🇧 United Kingdom, London | [BL]"
+      - "61 🇬🇧 United Kingdom, London | [BL]"
+      - "62 🇺🇸 United States | 🌐 | [BL]"
+      - "63 🇺🇸 United States, Arlington (Crystal Spring Knolls) | [BL]"
+      - "64 🇺🇸 United States, Arlington Heights | [BL]"
+      - "65 🇺🇸 United States, Arlington Heights | [BL]"
+      - "66 🇺🇸 United States, New York | [BL]"
+      - "67 🇷🇺 Russia, St Petersburg | [BL]"
+      - "68 🇷🇺 Russia, St Petersburg | [BL]"
+      - "69 🇷🇺 Russia, St Petersburg | [BL]"
+      - "70 🌐 Anycast-IP | 🇦🇷 🇨🇦 🇺🇸 | [BL]"
+      - "71 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇮🇩 🇷🇺 | [BL]"
+      - "72 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "73 🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 | [BL]"
+      - "74 🌐 Anycast-IP | 🇩🇪 | [BL]"
+      - "75 🌐 Anycast-IP | 🇩🇪 🇫🇷 | [BL]"
+      - "76 🌐 Anycast-IP | 🇩🇪 🇬🇧 | [BL]"
+      - "77 🌐 Anycast-IP | 🇫🇮 🇬🇧 | [BL]"
+      - "78 🌐 Anycast-IP | 🇫🇷 🇬🇧 | [BL]"
+      - "79 🌐 Anycast-IP | 🇬🇧 🇮🇩 🇮🇳 🇷🇺 | [BL]"
+      - "80 🌐 Anycast-IP | 🇵🇱 🇸🇪 | [BL]"
+      - "81 🇧🇬 Bulgaria, Sofia | [BL]"
+      - "82 🇨🇱 Chile, Santiago | [BL]"
+      - "83 🇨🇳 China, Beijing | [BL]"
+      - "84 🇩🇪 Germany, Frankfurt am Main | [BL]"
+      - "85 🇮🇳 India, Mumbai | [BL]"
+      - "86 🇮🇳 India, New Delhi | [BL]"
+      - "87 🇮🇳 India, New Delhi | [BL]"
+      - "88 🇵🇱 Poland, Warsaw | [BL]"
+      - "89 🇵🇱 Poland, Warsaw | [BL]"
+      - "90 🇨🇭 Switzerland, Zurich | [BL]"
+      - "91 🇻🇳 Vietnam, Hanoi | [BL]"
+      - "92 🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 | [BL]"
+      - "93 🇯🇵 Japan, Osaka | [BL]"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
