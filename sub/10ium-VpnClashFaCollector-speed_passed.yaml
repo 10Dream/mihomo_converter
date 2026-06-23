@@ -175,106 +175,98 @@ rule-providers:
     path: ./ruleset/parspack.yaml
     interval: 86400
 proxies:
-  - {"name":"1 [2] 🇺🇸 | US | 68ms | 277KB | ZHK","type":"wireguard","server":"162.159.192.5","port":500,"ip":"10.0.0.1","private-key":"IJ/r8qIwvFPrzEQ4hRmFdUaGLbL0ZFZYwk6oh0UwJEw=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"2 [4] 🇺🇸 | US | 1033ms | 264KB | ZHK","type":"wireguard","server":"162.159.192.4","port":4500,"ip":"10.0.0.1","private-key":"YHQ/BaEFgyFhPg5CZCspkr887d0gA2lanmvbfjuaz1Q=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"3 [7] 🇺🇸 | US | 139ms | 236KB | 🇨🇦81740 | ⚡️Telegram = t.me/SOSkeyNET","type":"wireguard","server":"162.159.192.7","port":4500,"ip":"10.0.0.1","private-key":"gI7RmkkEZ8qPEdX5c2de3hSCG6wIbRxU5iNtWvb1CEU=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
-  - {"name":"4 [5] 🇺🇸 | US | 48ms | 246KB | Ettehadvpn | 34","type":"vless","server":"137.184.218.169","port":36925,"uuid":"c9fd0fb1-8251-4106-b09a-f4b426736f67","udp":true,"tls":true,"network":"tcp","servername":"www.cloudflare.com"}
-  - {"name":"5 [9] 🇺🇸 | US | 54ms | 229KB | @IranProxyPlus`","type":"vless","server":"159.89.87.21","port":28190,"uuid":"14c80e0e-f7ce-4991-94fc-99a1db4a9b1e","udp":true,"tls":true,"network":"tcp","servername":"aws.amazon.com"}
-  - {"name":"6 [20] 🇨🇦 | CA | 265ms | 88KB | ***✅***@AR14N24b","type":"vless","server":"91.193.58.77","port":443,"uuid":"0ac0a6f0-d3f0-47f1-8de4-ce785e515a5c","udp":true,"tls":true,"network":"ws","servername":"unnes.ac.id.yxls.eu.cc"}
-  - {"name":"7 [23] 🇨🇦 | CA | 529ms | 64KB | @filembad`","type":"vless","server":"suolar.yellowsky.ir","port":2052,"uuid":"a4548d7f-8e0f-4780-9f5a-30cbd2754550","udp":true,"tls":false,"network":"httpupgrade"}
-  - {"name":"8 [27] 🇺🇸 | US | 328ms | 41KB | 🇨🇦81359 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"www.speedtest.net","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"9 [28] 🇺🇸 | US | 369ms | 40KB | 🇨🇿81361 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"14.102.228.201","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"10 [30] 🇫🇷 | FR | 401ms | 38KB | @filembad`","type":"vless","server":"betty.ns.cloudflare.com","port":443,"uuid":"72d1797c-cef8-410a-b8fd-db9104dc3cb0","udp":true,"tls":true,"network":"ws","servername":"amooaliii.net"}
-  - {"name":"11 [34] 🇫🇷 | FR | 406ms | 37KB | @filembad`","type":"vless","server":"172.64.32.75","port":443,"uuid":"72d1797c-cef8-410a-b8fd-db9104dc3cb0","udp":true,"tls":true,"network":"ws","servername":"amooaliii.net"}
-  - {"name":"12 [37] 🇫🇷 | FR | 392ms | 36KB | ***✅***@AR14N24b","type":"vless","server":"173.245.58.75","port":443,"uuid":"073d1d50-8478-47bf-a828-7a1b381931d5","udp":true,"tls":true,"network":"ws","servername":"octopusss.net"}
-  - {"name":"13 [48] 🇫🇷 | FR | 423ms | 35KB | @filembad`","type":"vless","server":"188.114.97.6","port":443,"uuid":"b2f6aa3a-2550-4a1c-b2c0-1c94b1207217","udp":true,"tls":true,"network":"ws","servername":"terazhediii.info"}
-  - {"name":"14 [73] 🇬🇧 | GB | 533ms | 33KB | @filembad`","type":"vless","server":"45.206.0.49","port":8443,"uuid":"52faee73-e0fe-4661-992d-67259257170f","udp":true,"tls":true,"network":"tcp","servername":"storage.yandex.net"}
-  - {"name":"15 [75] 🇬🇧 | GB | 431ms | 33KB | 🇬🇧81027 | ⚡️Telegram = t.me/config","type":"vless","server":"45.206.0.44","port":8443,"uuid":"52faee73-e0fe-4661-992d-67259257170f","udp":true,"tls":true,"network":"tcp","servername":"storage.yandex.net"}
-  - {"name":"16 [79] 🇬🇧 | GB | 348ms | 32KB |","type":"vless","server":"45.206.0.41","port":8443,"uuid":"52faee73-e0fe-4661-992d-67259257170f","udp":true,"tls":true,"network":"tcp","servername":"storage.yandex.net"}
-  - {"name":"17 [81] 🇺🇸 | US | 522ms | 32KB | @filembad`","type":"vless","server":"ez-5bde8e.ezaccess1a1d7a3.workers.dev","port":2087,"uuid":"35aead44-22e1-d2ef-01a8-ab8c508222ec","udp":true,"tls":true,"network":"ws","servername":"ez-5bde8e.ezaccess1a1d7a3.workers.dev"}
-  - {"name":"18 [82] 🇬🇧 | GB | 670ms | 32KB | 🇬🇧 Ettehadvpn | 31","type":"vless","server":"45.206.0.46","port":8443,"uuid":"52faee73-e0fe-4661-992d-67259257170f","udp":true,"tls":true,"network":"tcp","servername":"storage.yandex.net"}
-  - {"name":"19 [85] 🇩🇪 | DE | 312ms | 32KB | ***✅***@AR14N24b","type":"vless","server":"45.130.125.20","port":2083,"uuid":"ba532611-1b47-4998-8902-f13f14fe0c7c","udp":true,"tls":true,"network":"xhttp","servername":"cf.mmad.kdns.fr"}
-  - {"name":"20 [94] 🇳🇱 | NL | 504ms | 31KB | @filembad`","type":"vless","server":"railway-production-b185.up.railway.app","port":443,"uuid":"90cd4a77-141a-43c9-991b-08263cfe9c10","udp":true,"tls":true,"network":"ws","servername":"railway-production-b185.up.railway.app"}
-  - {"name":"21 [109] 🇫🇷 | FR | 341ms | 29KB | @IranProxyPlus`","type":"vless","server":"79.127.196.11","port":8443,"uuid":"55f7d143-a594-4a91-b030-f227039f85ef","udp":true,"tls":true,"network":"tcp","servername":"cdg-1.fromblancwithlove.com"}
-  - {"name":"22 [110] 🇳🇱 | NL | 361ms | 29KB |  `","type":"vless","server":"51.158.206.87","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
-  - {"name":"23 [112] 🇫🇮 | FI | 327ms | 29KB | ***✅***@AR14N24b","type":"vless","server":"159.112.235.52","port":443,"uuid":"1c3927cb-6141-4473-a17d-4b290f7c6980","udp":true,"tls":true,"network":"xhttp","servername":"ProxyVPN11.dns.xn--q9jyb4c"}
-  - {"name":"24 [113] 🇫🇷 | FR | 368ms | 29KB | Ettehadvpn | 31","type":"vless","server":"45.90.97.132","port":443,"uuid":"52b71b75-4b77-4cec-990b-046ec1938e1f","udp":true,"tls":true,"network":"tcp","servername":"fr.bvps.cloud"}
-  - {"name":"25 [116] 🇬🇧 | GB | 353ms | 29KB | [80893] - Telegram : @configraygan","type":"vless","server":"152.233.28.198","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"uk1.fromblancwithlove.com"}
-  - {"name":"26 [118] 🇳🇱 | NL | 368ms | 29KB | Ettehadvpn | 39","type":"vless","server":"195.181.173.194","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"27 [124] 🇳🇱 | NL | 360ms | 28KB | @filembad`","type":"vless","server":"103.112.71.228","port":443,"uuid":"665c11ef-4723-4396-a8a1-45d013e68e6b","udp":true,"tls":true,"network":"tcp","servername":"bootnl1.strangerwhale.fun"}
-  - {"name":"28 [126] 🇫🇮 | FI | 295ms | 28KB | 🇨🇦81263 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"188.114.97.6","port":443,"uuid":"1c3927cb-6141-4473-a17d-4b290f7c6980","udp":true,"tls":true,"network":"xhttp","servername":"fi.dns.xn--q9jyb4c"}
-  - {"name":"29 [127] 🇩🇪 | DE | 283ms | 28KB | 🇩🇪81285 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"18.153.81.34","port":443,"uuid":"ad73ff14-a0e3-46d1-adc0-02ca29a32485","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"30 [129] 🇫🇷 | FR | 365ms | 28KB | [80821] - Telegram : @configraygan","type":"vless","server":"82.22.2.187","port":443,"uuid":"f00297b0-a501-4982-9a8e-2cf2df5b4f84","udp":true,"tls":true,"network":"tcp","servername":"fr-01.slnode.cc"}
-  - {"name":"31 [132] 🇳🇱 | NL | 372ms | 28KB | اگه میخوای قطع نشی جوین شو : @farsiproxy","type":"vless","server":"78.40.193.172","port":443,"uuid":"a5ea9247-79f3-4655-aece-3fb51e1e669e","udp":true,"tls":true,"network":"tcp","servername":"rezerv3.yunus.guru"}
-  - {"name":"32 [136] 🇬🇧 | GB | 347ms | 28KB | 🦀98@oneclickvpnkeys","type":"vless","server":"152.233.28.201","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"33 [137] 🇬🇧 | GB | 396ms | 28KB | Ettehadvpn | 6","type":"vless","server":"152.233.28.199","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"34 [138] 🇬🇧 | GB | 351ms | 28KB | اگه میخوای قطع نشی جوین شو : @farsiproxy","type":"vless","server":"152.233.28.200","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"35 [147] 🇳🇱 | NL | 381ms | 27KB | $Free 190 @Outline_Vpn","type":"vless","server":"185.229.191.130","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"36 [149] 🇳🇱 | NL | 387ms | 27KB | ☑➜چنلمون: Express_freevpn@","type":"vless","server":"185.229.190.245","port":8443,"uuid":"931729a8-3c20-4841-89a1-f18dc9ce0a6f","udp":true,"tls":true,"network":"tcp","servername":"cdn3-87.vk-cdnvideo.com"}
-  - {"name":"37 [152] 🇳🇱 | NL | 384ms | 27KB | 2","type":"vless","server":"185.229.191.53","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"38 [154] 🇺🇸 | US | 388ms | 27KB | @IranProxyPlus`","type":"vless","server":"34.213.172.16","port":22189,"uuid":"4889ee33-74e5-4819-86d8-b2a1a5bc8f46","udp":true,"tls":true,"network":"tcp","servername":"www.tesla.com"}
-  - {"name":"39 [157] 🇳🇱 | NL | 359ms | 27KB |  `","type":"vless","server":"85.234.114.53","port":443,"uuid":"afcac633-0e1a-46c3-bef2-cc01cc0097c8","udp":true,"tls":true,"network":"tcp","servername":"r1.mizulina.top"}
-  - {"name":"40 [159] 🇳🇱 | NL | 388ms | 27KB | [80883] - Telegram : @configraygan","type":"vless","server":"195.181.173.199","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"41 [169] 🇳🇱 | NL | 380ms | 26KB |  `","type":"vless","server":"85.234.114.53","port":22231,"uuid":"afcac633-0e1a-46c3-bef2-cc01cc0097c8","udp":true,"tls":true,"network":"tcp","servername":"r1.mizulina.top"}
-  - {"name":"42 [175] 🇩🇪 | DE | 420ms | 26KB | Ettehadvpn | 5","type":"vless","server":"79.127.240.44","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"de1.fromblancwithlove.com"}
-  - {"name":"43 [178] 🇩🇪 | DE | 320ms | 26KB | 🇩🇪81520 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"138.201.173.163","port":59874,"uuid":"5a7243e3-bbaa-49ff-be1a-fd63a7e1fa35","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"44 [182] 🇳🇱 | NL | 3915ms | 26KB | 🇳🇱80874 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"185.229.191.69","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"45 [188] 🇳🇱 | NL | 372ms | 26KB | @meliproxyy","type":"vless","server":"46.229.243.73","port":8443,"uuid":"931729a8-3c20-4841-89a1-f18dc9ce0a6f","udp":true,"tls":true,"network":"tcp","servername":"cdn3-87.vk-cdnvideo.com"}
-  - {"name":"46 [192] 🇩🇪 | DE | 335ms | 26KB | @filembad`","type":"vless","server":"91.107.252.109","port":8080,"uuid":"fb37aadd-b957-4462-8738-80c55d77a52d","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"47 [193] 🇳🇱 | NL | 375ms | 26KB | [80836] - Telegram : @configraygan","type":"vless","server":"77.74.123.181","port":8443,"uuid":"931729a8-3c20-4841-89a1-f18dc9ce0a6f","udp":true,"tls":true,"network":"tcp","servername":"cdn3-87.vk-cdnvideo.com"}
-  - {"name":"48 [194] 🇳🇱 | NL | 408ms | 26KB | @filembad`","type":"vless","server":"77.74.123.176","port":8443,"uuid":"931729a8-3c20-4841-89a1-f18dc9ce0a6f","udp":true,"tls":true,"network":"tcp","servername":"cdn3-87.vk-cdnvideo.com"}
-  - {"name":"49 [196] 🇳🇱 | NL | 373ms | 26KB | configraygan_irancell_11","type":"vless","server":"185.229.191.66","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"50 [199] 🇩🇪 | DE | 389ms | 25KB | 🦀76@oneclickvpnkeys","type":"vless","server":"144.31.241.7","port":8443,"uuid":"cf038a28-8f85-41fc-9e86-ba99a3fdd0d9","udp":true,"tls":true,"network":"tcp","servername":"yourcloud.ldtp.com"}
-  - {"name":"51 [200] 🇳🇱 | NL | 372ms | 25KB | ⛵28@oneclickvpnkeys","type":"vless","server":"72.56.59.254","port":22231,"uuid":"afcac633-0e1a-46c3-bef2-cc01cc0097c8","udp":true,"tls":true,"network":"tcp","servername":"r1.mizulina.top"}
-  - {"name":"52 [216] 🇺🇸 | US | 381ms | 24KB | 🇺🇸80943 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"103.133.1.21","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"53 [230] 🇩🇪 | DE | 559ms | 21KB |","type":"vless","server":"v3.capigodserv.ir","port":42542,"uuid":"6bb0a8ec-ec08-4358-b53d-7e6193069119","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"54 [232] 🇫🇷 | FR | 365ms | 17KB | @W570W","type":"vless","server":"45.13.119.219","port":8888,"uuid":"eb77be10-9d9e-527b-a78d-8caaf58992d6","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"55 [233] 🇺🇸 | US | 275ms | 16KB | ***✅***@AR14N24b","type":"vless","server":"141.193.154.182","port":10000,"uuid":"d26598cf-2cdf-4219-80d0-94646dff160d","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"56 [236] 🇺🇸 | US | 639ms | 14KB | 🇺🇸80904 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"198.71.233.21","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"57 [240] 🇺🇸 | US | 339ms | 12KB | 🇳🇱80947 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"185.176.24.21","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"58 [246] 🇬🇧 | GB | 414ms | 6KB | 🇬🇧80844 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"45.206.0.68","port":8443,"uuid":"52faee73-e0fe-4661-992d-67259257170f","udp":true,"tls":true,"network":"tcp","servername":"storage.yandex.net"}
-  - {"name":"59 [248] 🇳🇱 | NL | 486ms | 5KB | اگه میخوای قطع نشی جوین شو : @farsiproxy","type":"vless","server":"185.229.191.22","port":8443,"uuid":"394f6981-a782-4779-9a85-e6cf22935d93","udp":true,"tls":true,"network":"tcp","servername":"ams1.fromblancwithlove.com"}
-  - {"name":"60 [250] 🇫🇮 | FI | 336ms | 5KB | 🇫🇮81469 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"5.183.253.171","port":9999,"uuid":"f83d8e60-f039-45c8-95d2-2a44c59025f6","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"61 [254] 🇮🇹 | IT | 395ms | 4KB | اگه میخوای قطع نشی جوین شو : @farsiproxy","type":"vless","server":"151.115.164.167","port":8880,"uuid":"8dc7722c-2767-4eea-a28b-2f8daacc07e3","udp":true,"tls":false,"network":"grpc"}
-  - {"name":"62 [256] 🇺🇸 | US | 458ms | 3KB | 🇨🇳80944 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"176.124.223.21","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"63 [257] 🇺🇸 | US | 368ms | 3KB | 🇧🇷81041 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"185.133.35.21","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"64 [258] 🇺🇸 | US | 413ms | 2KB | 🇨🇼81240 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"92.60.74.227","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"65 [259] 🇳🇱 | NL | 382ms | 2KB | configraygan_7","type":"vless","server":"199.232.130.246","port":443,"uuid":"XpnTeam-6","udp":true,"tls":true,"network":"ws","servername":"default.ssl.fastly.net"}
-  - {"name":"66 [260] 🇺🇸 | US | 686ms | 2KB | 🇬🇧80919 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"194.36.55.21","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"67 [263] 🇺🇸 | US | 493ms | 2KB | 🇺🇸80911 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"198.71.232.21","port":2052,"uuid":"42e0d02c-b75c-4b9d-bc15-773aa3cbe6bd","udp":true,"tls":false,"network":"xhttp"}
-  - {"name":"68 [265] 🇺🇸 | US | 242ms | 1KB | @filembad`","type":"vless","server":"5.78.62.9","port":52011,"uuid":"be36abcb-7ddc-4e1a-9777-db3a7fc8790a","udp":true,"tls":false,"network":"tcp"}
-  - {"name":"69 [1] 🇺🇸 | US | 32ms | 279KB |  `","type":"ss","server":"37.19.198.236","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
-  - {"name":"70 [15] 🇮🇪 | IE | 219ms | 161KB | ***✅***@AR14N24b","type":"ss","server":"20.166.91.10","port":443,"cipher":"chacha20-ietf-poly1305","password":"uJFknobQotFFYaFW"}
-  - {"name":"71 [18] 🇮🇪 | IE | 224ms | 152KB | @filembad`","type":"ss","server":"20.166.91.10","port":443,"cipher":"chacha20-ietf-poly1305","password":"dGhpdtVDwyCNsA4g"}
-  - {"name":"72 [32] 🇮🇪 | IE | 213ms | 37KB | [80855] - Telegram : @configraygan","type":"ss","server":"146.70.90.196","port":17454,"cipher":"aes-128-gcm","password":"u8gp148iz90ddoo6ms37"}
-  - {"name":"73 [74] 🇬🇧 | GB | 263ms | 33KB | 🇬🇧81006 | ⚡️Telegram = t.me/configraygan","type":"ss","server":"78.129.155.63","port":3030,"cipher":"aes-256-gcm","password":"kSLjbrBc84"}
-  - {"name":"74 [92] 🇬🇧 | GB | 283ms | 31KB | 🇬🇧81443 | ⚡️Telegram = t.me/configraygan","type":"ss","server":"141.98.101.182","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
-  - {"name":"75 [96] 🇬🇧 | GB | 287ms | 30KB | 🇬🇧81447 | ⚡️Telegram = t.me/configraygan","type":"ss","server":"141.98.101.178","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
-  - {"name":"76 [99] 🇺🇸 | US | 39ms | 30KB | ***✅***@AR14N24b","type":"ss","server":"147.90.234.133","port":443,"cipher":"chacha20-ietf-poly1305","password":"hbGrpfvNrJsUmKmPbR3iY2"}
-  - {"name":"77 [111] 🇳🇱 | NL | 278ms | 29KB | 🇳🇱81022 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"141.227.152.129","port":8388,"cipher":"chacha20-ietf-poly1305","password":"VJeAjiJ40F2Il17Elv285W"}
-  - {"name":"78 [115] 🇫🇷 | FR | 292ms | 29KB | 🦀16@oneclickvpnkeys","type":"ss","server":"51.254.128.106","port":2083,"cipher":"aes-256-gcm","password":"FjG3IPbny+0ZYU4/p1vULP84GcKpGoZpWKAay16VhIw="}
-  - {"name":"79 [130] 🇳🇱 | NL | 312ms | 28KB | 🇳🇱81250 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"82.38.31.218","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"80 [145] 🇳🇱 | NL | 360ms | 27KB | @SylphNet | 2026-06-21 22:21","type":"ss","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"81 [146] 🇳🇱 | NL | 316ms | 27KB | 🇳🇱81251 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"193.29.139.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"1RWwXhwfAB5gAEozU4G2Pg"}
-  - {"name":"82 [150] 🇳🇱 | NL | 316ms | 27KB | 🇳🇱81450 | ⚡️Telegram = t.me/configraygan","type":"ss","server":"193.29.139.227","port":8080,"cipher":"chacha20-ietf-poly1305","password":"QCXDxuDlTTMD7jtgHUjIoj"}
-  - {"name":"83 [155] 🇩🇪 | DE | 436ms | 27KB |  `","type":"ss","server":"8.209.74.72","port":20001,"cipher":"chacha20-ietf-poly1305","password":"PWpjPo3tqhPN4yRZ"}
-  - {"name":"84 [158] 🇳🇱 | NL | 287ms | 27KB | 🇳🇱81246 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"195.93.253.240","port":14130,"cipher":"chacha20-ietf-poly1305","password":"zfRwdreLaBOGwUzCaWmvIN"}
-  - {"name":"85 [160] 🇳🇱 | NL | 329ms | 27KB |  `","type":"ss","server":"193.29.139.151","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"86 [165] 🇳🇱 | NL | 302ms | 26KB |  `","type":"ss","server":"82.38.31.149","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"87 [170] 🇳🇱 | NL | 1367ms | 26KB | @meliproxyy","type":"ss","server":"82.38.31.11","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"88 [210] 🇫🇮 | FI | 373ms | 24KB |  `","type":"ss","server":"193.47.60.186","port":28687,"cipher":"chacha20-ietf-poly1305","password":"yKVMoB3AwiTEznpnoq2FYR"}
-  - {"name":"89 [215] 🇳🇱 | NL | 304ms | 24KB |  `","type":"ss","server":"193.29.139.235","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
-  - {"name":"90 [221] 🇫🇮 | FI | 356ms | 23KB | 🇫🇮81477 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"185.103.110.68","port":18283,"cipher":"aes-128-gcm","password":"y3o3ra6edy5nfc6hyb2n"}
-  - {"name":"91 [235] 🇳🇱 | NL | 311ms | 15KB | @filembad`","type":"ss","server":"82.38.31.191","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
-  - {"name":"92 [253] 🇹🇷 | TR | 395ms | 4KB | @filembad`","type":"ss","server":"62.133.63.169","port":37096,"cipher":"chacha20-ietf-poly1305","password":"Y5EJZojVMENvkDVFYliEqE"}
-  - {"name":"93 [31] 🇺🇸 | US | 266ms | 38KB | 🇺🇸81685 | ⚡️Telegram = t.me/SOSkeyNET","type":"trojan","server":"45.61.52.243","port":443,"password":"O4O8.Ew+ujFX6GJBQ=xQr.heGwux0GYHqk","udp":true,"tls":true}
-  - {"name":"94 [177] 🇩🇪 | DE | 321ms | 26KB | @filembad`","type":"trojan","server":"91.107.165.205","port":26,"password":"e5x54cmra4o1qn25","udp":true,"tls":true}
-  - {"name":"95 [222] 🇺🇸 | US | 411ms | 23KB | Ettehadvpn | 32","type":"trojan","server":"207.126.167.162","port":443,"password":"GTCCjtvCtuy03-aV1mwF0OkG2q6yL+Fc5K","udp":true,"tls":true}
-  - {"name":"96 [14] 🇺🇸 | US | 19ms | 163KB | 🇺🇸81437 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"67.220.95.3","port":18000,"uuid":"f8c8dc3d-0d37-46b0-8b34-a7232882fcfe","alterId":0,"cipher":"aes-128-gcm","udp":true}
-  - {"name":"97 [26] 🇺🇸 | US | 240ms | 42KB | 🇺🇸81439 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"82.198.246.9","port":180,"uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"98 [29] 🇺🇸 | US | 209ms | 39KB | 🇺🇸81440 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"82.198.246.37","port":180,"uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"99 [49] 🇺🇸 | US | 286ms | 34KB | 🇺🇸81430 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"169.197.142.22","port":18000,"uuid":"f8c8dc3d-0d37-46b0-8b34-a7232882fcfe","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"100 [53] 🇺🇸 | US | 117ms | 34KB | 🇺🇸81433 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"38.91.107.49","port":18000,"uuid":"f8c8dc3d-0d37-46b0-8b34-a7232882fcfe","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"1 [38] 🇺🇸 | US | 189ms | 89KB | 🇺🇸81958 | ⚡️Telegram = t.me/SOSkeyNET","type":"hysteria2","server":"38.107.232.146","port":54040,"password":"jkcnkc84dvggvi2n"}
+  - {"name":"2 [1] 🇺🇸 | US | 144ms | 363KB | ZHK","type":"wireguard","server":"162.159.192.5","port":500,"ip":"10.0.0.1","private-key":"IJ/r8qIwvFPrzEQ4hRmFdUaGLbL0ZFZYwk6oh0UwJEw=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"3 [2] 🇺🇸 | US | 153ms | 347KB | 🇨🇦81740 | ⚡️Telegram = t.me/SOSkeyNET","type":"wireguard","server":"162.159.192.7","port":4500,"ip":"10.0.0.1","private-key":"gI7RmkkEZ8qPEdX5c2de3hSCG6wIbRxU5iNtWvb1CEU=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"4 [3] 🇺🇸 | US | 164ms | 347KB | ZHK","type":"wireguard","server":"162.159.192.7","port":2408,"ip":"10.0.0.1","private-key":"KPqizvTAkDunFcG0CutIf+Sn768nRQ3Ty8D6APpg4FA=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","allowed-ips":["0.0.0.0/0"],"udp":true}
+  - {"name":"5 [7] 🇺🇸 | US | 139ms | 202KB | ***✅***@AR14N24b`","type":"vless","server":"104.16.72.11","port":8443,"uuid":"cc0bd047-c1dc-47be-8eb9-19d50b446ef8","udp":true,"tls":true,"network":"xhttp","servername":"server.cppuser.ir"}
+  - {"name":"6 [15] 🇺🇸 | US | 76ms | 148KB | ***✅***@AR14N24b","type":"vless","server":"15.204.97.214","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"7 [16] 🇺🇸 | US | 73ms | 147KB | 🇺🇸82640 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"15.204.97.216","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"8 [17] 🇺🇸 | US | 72ms | 146KB | 🇺🇸82641 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"15.204.97.219","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"9 [18] 🇺🇸 | US | 72ms | 143KB | @filembad`","type":"vless","server":"15.204.97.198","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"10 [21] 🇺🇸 | US | 71ms | 141KB | 🇺🇸82638 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"15.204.97.195","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"11 [27] 🇺🇸 | US | 71ms | 114KB | ***✅***@AR14N24b","type":"vless","server":"15.204.97.206","port":23576,"uuid":"48ff2b70-e180-582f-8866-d9a2edeed5f5","udp":true,"tls":true,"network":"tcp","servername":"fuck.rkn"}
+  - {"name":"12 [30] 🇺🇸 | US | 122ms | 104KB | @IranProxyPlus`","type":"vless","server":"34.213.172.16","port":22189,"uuid":"4889ee33-74e5-4819-86d8-b2a1a5bc8f46","udp":true,"tls":true,"network":"tcp","servername":"www.tesla.com"}
+  - {"name":"13 [45] 🇨🇦 | CA | 238ms | 68KB | @filembad`","type":"vless","server":"45.130.125.239","port":443,"uuid":"bbab81f3-87a0-4e63-8b3b-010c645d8da7","udp":true,"tls":true,"network":"xhttp","servername":"mAJiD-SmArT.NEwAPpdOMiNFaStLOGiN4.cOM"}
+  - {"name":"14 [46] 🇫🇮 | FI | 400ms | 64KB | ***✅***@AR14N24b","type":"vless","server":"159.112.235.52","port":443,"uuid":"1c3927cb-6141-4473-a17d-4b290f7c6980","udp":true,"tls":true,"network":"xhttp","servername":"ProxyVPN11.dns.xn--q9jyb4c"}
+  - {"name":"15 [47] 🇩🇪 | DE | 397ms | 60KB | 🇺🇸81971 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"itsshadyvpn-production.up.railway.app","port":443,"uuid":"e692da68-3bb0-4716-909a-9918acfcef42","udp":true,"tls":true,"network":"xhttp","servername":"itsshadyvpn-production.up.railway.app"}
+  - {"name":"16 [53] 🇫🇮 | FI | 440ms | 46KB | ***✅***@AR14N24b`","type":"vless","server":"188.114.97.6","port":443,"uuid":"1c3927cb-6141-4473-a17d-4b290f7c6980","udp":true,"tls":true,"network":"xhttp","servername":"fi.dns.xn--q9jyb4c"}
+  - {"name":"17 [54] 🇺🇸 | US | 56ms | 44KB | 🇺🇸81600 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"141.193.154.182","port":10000,"uuid":"d26598cf-2cdf-4219-80d0-94646dff160d","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"18 [55] 🇺🇸 | US | 388ms | 44KB | ***✅***@AR14N24b","type":"vless","server":"all.tellmethetrue.shop","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"dat1.afterdomain.shop"}
+  - {"name":"19 [58] 🇺🇸 | US | 235ms | 42KB | 🇨🇦82290 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"104.17.239.248","port":443,"uuid":"e4824193-4f54-453b-d037-88368e85ef0e","udp":true,"tls":true,"network":"grpc","servername":"dat1.afterdomain.shop"}
+  - {"name":"20 [61] 🇳🇱 | NL | 1025ms | 41KB | 🇨🇦82024 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"104.16.72.70","port":8443,"uuid":"db978b3a-e06e-4a73-831b-497fa7839b60","udp":true,"tls":true,"network":"xhttp","servername":"sa.sorixset.ir"}
+  - {"name":"21 [63] 🇨🇦 | CA | 397ms | 39KB | 🇨🇦82200 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"104.17.121.98","port":443,"uuid":"0ac0a6f0-d3f0-47f1-8de4-ce785e515a5c","udp":true,"tls":true,"network":"ws","servername":"unnes.ac.id.yxls.eu.cc"}
+  - {"name":"22 [64] 🇨🇦 | CA | 381ms | 38KB | 🇬🇧81601 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"91.193.58.77","port":443,"uuid":"0ac0a6f0-d3f0-47f1-8de4-ce785e515a5c","udp":true,"tls":true,"network":"ws","servername":"unnes.ac.id.yxls.eu.cc"}
+  - {"name":"23 [66] 🇺🇸 | US | 259ms | 37KB | 🇺🇸82743 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"77.110.127.191","port":9443,"uuid":"e0de62c9-f317-4275-b7e5-8da7b7fa9bc6","udp":true,"tls":false,"network":"ws"}
+  - {"name":"24 [69] 🇨🇭 | CH | 477ms | 36KB | 🇨🇦82150 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"172.65.111.43","port":22,"uuid":"8a38623a-3e7f-5598-bdc9-894cbad4c5b6","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"25 [73] 🇺🇸 | US | 307ms | 34KB | ***✅***@AR14N24b","type":"vless","server":"159.89.87.21","port":28190,"uuid":"14c80e0e-f7ce-4991-94fc-99a1db4a9b1e","udp":true,"tls":true,"network":"tcp","servername":"aws.amazon.com"}
+  - {"name":"26 [76] 🇺🇸 | US | 311ms | 33KB | ***✅***@AR14N24b","type":"vless","server":"137.184.218.169","port":36925,"uuid":"c9fd0fb1-8251-4106-b09a-f4b426736f67","udp":true,"tls":true,"network":"tcp","servername":"www.cloudflare.com"}
+  - {"name":"27 [82] 🇺🇸 | US | 457ms | 31KB | 🇺🇸81548 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"ashburn.yellowsky.ir","port":8080,"uuid":"a4548d7f-8e0f-4780-9f5a-30cbd2754550","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"28 [84] 🇨🇦 | CA | 1753ms | 30KB | ***✅***@AR14N24b","type":"vless","server":"ov-canada1.09vpn.com","port":8443,"uuid":"08f96221-9b7b-4e6f-8ffe-aee8b9c9b504","udp":true,"tls":true,"network":"ws"}
+  - {"name":"29 [89] 🇯🇵 | JP | 439ms | 24KB | @filembad`","type":"vless","server":"31.76.91.33","port":443,"uuid":"dfc0cb9d-f005-41b0-848c-7703bd39d0de","udp":true,"tls":true,"network":"tcp","servername":"jp.s3-cloud.org"}
+  - {"name":"30 [94] 🇯🇵 | JP | 451ms | 22KB | @filembad`","type":"vless","server":"142.91.108.139","port":443,"uuid":"7e6d3393-bb84-45c7-9eef-35de95805b7e","udp":true,"tls":true,"network":"tcp","servername":"jp.api-yandex.net"}
+  - {"name":"31 [108] 🇬🇧 | GB | 454ms | 18KB | 🇬🇧81546 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"englanf.yellowsky.ir","port":8080,"uuid":"a4548d7f-8e0f-4780-9f5a-30cbd2754550","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"32 [113] 🇫🇷 | FR | 477ms | 17KB | ***✅***@AR14N24b","type":"vless","server":"45.13.119.219","port":8888,"uuid":"eb77be10-9d9e-527b-a78d-8caaf58992d6","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"33 [118] 🇩🇪 | DE | 460ms | 17KB | @filembad`","type":"vless","server":"18.153.81.34","port":443,"uuid":"ad73ff14-a0e3-46d1-adc0-02ca29a32485","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"34 [145] 🇩🇪 | DE | 480ms | 16KB | @meliproxyy","type":"vless","server":"145.239.137.250","port":58748,"uuid":"21e22226-0b96-4b4e-9a91-5c7f9e3f1760","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"35 [147] 🇩🇪 | DE | 504ms | 16KB | $Free 202 @Outline_Vpn","type":"vless","server":"138.201.173.163","port":59874,"uuid":"5a7243e3-bbaa-49ff-be1a-fd63a7e1fa35","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"36 [180] 🇩🇪 | DE | 490ms | 15KB | ***✅***@AR14N24b","type":"vless","server":"46.4.162.63","port":443,"uuid":"5411a912-b601-4047-b59c-c370597bbc12","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"37 [184] 🇺🇸 | US | 1435ms | 12KB | ***✅***@AR14N24b","type":"vless","server":"digitalocean.com","port":2053,"uuid":"06081ec9-2f11-4839-bb5b-04764ea922e7","udp":true,"tls":true,"network":"xhttp","servername":"us.zarzirzor.ir"}
+  - {"name":"38 [186] 🇵🇱 | PL | 1083ms | 11KB | 🇨🇦81543 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"suolar.yellowsky.ir","port":2053,"uuid":"a4548d7f-8e0f-4780-9f5a-30cbd2754550","udp":true,"tls":true,"network":"xhttp","servername":"polobash.appleseraj.ir"}
+  - {"name":"39 [187] 🇫🇷 | FR | 549ms | 10KB | @filembad`","type":"vless","server":"162.19.0.122","port":26181,"uuid":"afc442ef-98da-47db-a0ed-a2152545cbb3","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"40 [189] 🇩🇪 | DE | 698ms | 7KB | 🇺🇸81592 | ⚡️Telegram = t.me/SOSkeyNET","type":"vless","server":"fsxhh.fastshop1.com","port":443,"uuid":"4c9b304f-ec00-41af-be5b-aa3f22ed430e","udp":true,"tls":true,"network":"xhttp","servername":"ssl.fastly.com"}
+  - {"name":"41 [199] 🇳🇱 | NL | 477ms | 2KB | @filembad`","type":"vless","server":"95.179.142.241","port":8088,"uuid":"79866643-2b00-401c-9424-1bff8ce9925a","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"42 [204] 🇳🇱 | NL | 459ms | 2KB | @filembad`","type":"vless","server":"95.179.142.241","port":2080,"uuid":"79866643-2b00-401c-9424-1bff8ce9925a","udp":true,"tls":false,"network":"tcp"}
+  - {"name":"43 [34] 🇮🇪 | IE | 415ms | 90KB | ***✅***@AR14N24b","type":"ss","server":"20.166.91.10","port":443,"cipher":"chacha20-ietf-poly1305","password":"uJFknobQotFFYaFW"}
+  - {"name":"44 [35] 🇮🇪 | IE | 416ms | 89KB | @mehrosaboran","type":"ss","server":"20.166.91.10","port":443,"cipher":"chacha20-ietf-poly1305","password":"1hVGiu6pyngcQQdU"}
+  - {"name":"45 [67] 🇺🇸 | US | 233ms | 37KB | @filembad`","type":"ss","server":"198.98.53.130","port":443,"cipher":"chacha20-ietf-poly1305","password":"eDfN7SODQceIOmIAbtJJtK"}
+  - {"name":"46 [70] 🇺🇸 | US | 227ms | 35KB | ***✅***@AR14N24b","type":"ss","server":"142.93.183.235","port":20683,"cipher":"chacha20-ietf-poly1305","password":"5vldsNMbQ8B4cKDK0sROwj"}
+  - {"name":"47 [78] 🇺🇸 | US | 236ms | 33KB | ***✅***@AR14N24b`","type":"ss","server":"37.19.198.236","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
+  - {"name":"48 [100] 🇮🇪 | IE | 422ms | 19KB | 🇮🇪81269 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"146.70.90.196","port":17454,"cipher":"aes-128-gcm","password":"u8gp148iz90ddoo6ms37"}
+  - {"name":"49 [105] 🇹🇼 | TW | 425ms | 19KB | ***✅***@AR14N24b","type":"ss","server":"36.230.16.90","port":50099,"cipher":"chacha20-ietf-poly1305","password":"7e731ec3-f8e1-43f6-92cf-3978d14705c4"}
+  - {"name":"50 [109] 🇳🇱 | NL | 459ms | 17KB | ***✅***@AR14N24b","type":"ss","server":"195.93.253.240","port":14130,"cipher":"chacha20-ietf-poly1305","password":"zfRwdreLaBOGwUzCaWmvIN"}
+  - {"name":"51 [110] 🇳🇱 | NL | 448ms | 17KB | 🇳🇱82502 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"195.93.253.240","port":14130,"cipher":"chacha20-ietf-poly1305","password":"bvGa054MauyCOmaeYtWuOJ"}
+  - {"name":"52 [112] 🇬🇧 | GB | 496ms | 17KB | 🇬🇧81447 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"141.98.101.178","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
+  - {"name":"53 [116] 🇩🇪 | DE | 472ms | 17KB | ***✅***@AR14N24b","type":"ss","server":"57.129.121.230","port":10443,"cipher":"chacha20-ietf-poly1305","password":"uROuEqsL8IUMMVb4wDwnGU"}
+  - {"name":"54 [120] 🇩🇪 | DE | 501ms | 17KB | ***✅***@AR14N24b","type":"ss","server":"8.209.74.72","port":20001,"cipher":"chacha20-ietf-poly1305","password":"PWpjPo3tqhPN4yRZ"}
+  - {"name":"55 [122] 🇬🇧 | GB | 486ms | 17KB | 🇬🇧81443 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"141.98.101.182","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
+  - {"name":"56 [123] 🇳🇱 | NL | 501ms | 17KB | @filembad`","type":"ss","server":"108.181.58.239","port":8388,"cipher":"chacha20-ietf-poly1305","password":"CJmTCCx7Ltud"}
+  - {"name":"57 [135] 🇩🇪 | DE | 502ms | 16KB | 🇩🇪82765 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"159.69.21.145","port":1080,"cipher":"chacha20-ietf-poly1305","password":"8baa4ead22db1d7e8fea063b6aefcc73"}
+  - {"name":"58 [138] 🇳🇱 | NL | 507ms | 16KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.218","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"59 [139] 🇳🇱 | NL | 510ms | 16KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.214","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"60 [141] 🇳🇱 | NL | 510ms | 16KB |  `","type":"ss","server":"193.29.139.151","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"61 [142] 🇳🇱 | NL | 515ms | 16KB | 🇳🇱81446 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"193.29.139.227","port":8080,"cipher":"chacha20-ietf-poly1305","password":"QCXDxuDlTTMD7jtgHUjIoj"}
+  - {"name":"62 [146] 🇳🇱 | NL | 502ms | 16KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.16","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"63 [149] 🇳🇱 | NL | 521ms | 16KB | 🇳🇱82499 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"193.29.139.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"4a2rfixophdjffa8KVA4Aa"}
+  - {"name":"64 [153] 🇳🇱 | NL | 514ms | 16KB | 🇳🇱82497 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"193.29.139.157","port":443,"cipher":"chacha20-ietf-poly1305","password":"4a2rfixophdjffa8KVA4Aa"}
+  - {"name":"65 [154] 🇳🇱 | NL | 521ms | 16KB | ***✅***@AR14N24b","type":"ss","server":"193.29.139.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"QCXDxuDlTTMD7jtgHUjIoj"}
+  - {"name":"66 [155] 🇳🇱 | NL | 517ms | 15KB |  `","type":"ss","server":"193.29.139.235","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"67 [158] 🇳🇱 | NL | 514ms | 15KB | @filembad`","type":"ss","server":"82.38.31.17","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"68 [159] 🇳🇱 | NL | 510ms | 15KB | 🇳🇱 Ettehadvpn | 19","type":"ss","server":"82.38.31.35","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"69 [160] 🇳🇱 | NL | 517ms | 15KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.217","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"70 [161] 🇳🇱 | NL | 510ms | 15KB |","type":"ss","server":"82.38.31.149","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"71 [162] 🇳🇱 | NL | 513ms | 15KB | @filembad`","type":"ss","server":"82.38.31.11","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"72 [163] 🇳🇱 | NL | 509ms | 15KB | @filembad`","type":"ss","server":"82.38.31.155","port":8080,"cipher":"chacha20-ietf-poly1305","password":"oZIoA69Q8yhcQV8ka3Pa3A"}
+  - {"name":"73 [167] 🇳🇱 | NL | 763ms | 15KB | @meliproxyy","type":"ss","server":"82.38.31.176","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"74 [176] 🇸🇬 | SG | 518ms | 15KB | 🇸🇬82316 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"167.150.100.115","port":27755,"cipher":"2022-blake3-aes-256-gcm","password":"fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0="}
+  - {"name":"75 [181] 🇸🇬 | SG | 518ms | 15KB | ***✅***@AR14N24b","type":"ss","server":"96.9.211.183","port":8881,"cipher":"aes-128-gcm","password":"2bc77a3a-1a6a-49bd-987f-5368cca0f930"}
+  - {"name":"76 [193] 🇳🇱 | NL | 525ms | 5KB | 🇳🇱81252 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"82.38.31.181","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"77 [197] 🇳🇱 | NL | 508ms | 3KB | ⛵88@oneclickvpnkeys","type":"ss","server":"82.38.31.186","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"78 [200] 🇳🇱 | NL | 531ms | 2KB | [80839] - Telegram : @configraygan","type":"ss","server":"82.38.31.183","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"79 [201] 🇺🇸 | US | 233ms | 2KB | 🇺🇸81261 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"147.90.234.133","port":443,"cipher":"chacha20-ietf-poly1305","password":"hbGrpfvNrJsUmKmPbR3iY2"}
+  - {"name":"80 [206] 🇳🇱 | NL | 521ms | 2KB | 🇳🇱82496 | ⚡️Telegram = t.me/SOSkeyNET","type":"ss","server":"193.29.139.143","port":443,"cipher":"chacha20-ietf-poly1305","password":"1RWwXhwfAB5gAEozU4G2Pg"}
+  - {"name":"81 [207] 🇳🇱 | NL | 525ms | 2KB | ***✅***@AR14N24b","type":"ss","server":"82.38.31.182","port":8080,"cipher":"chacha20-ietf-poly1305","password":"k1dBOmOB4oqi7Ump37a1bQ"}
+  - {"name":"82 [9] 🇺🇸 | US | 75ms | 175KB | 🇺🇸81557 | ⚡️Telegram = t.me/SOSkeyNET","type":"trojan","server":"207.126.167.162","port":443,"password":"GTCCjtvCtuy03-aV1mwF0OkG2q6yL+Fc5K","udp":true,"tls":true}
+  - {"name":"83 [12] 🇺🇸 | US | 68ms | 169KB | ***✅***@AR14N24b","type":"trojan","server":"45.61.52.243","port":443,"password":"O4O8.Ew+ujFX6GJBQ=xQr.heGwux0GYHqk","udp":true,"tls":true}
+  - {"name":"84 [42] 🇺🇸 | US | 222ms | 85KB | @meliproxyy","type":"trojan","server":"104.16.72.70","port":443,"password":"6c862415-30d2-4813-8e49-42e99a0bd415","udp":true,"tls":true}
+  - {"name":"85 [86] 🇯🇵 | JP | 432ms | 25KB | 🇯🇵82375 | ⚡️Telegram = t.me/SOSkeyNET","type":"trojan","server":"103.125.216.11","port":443,"password":"T9qoEuuxUEa9Dk3KxnTWrs6J8ilng9sCIf","udp":true,"tls":true}
+  - {"name":"86 [8] 🇺🇸 | US | 51ms | 186KB | 🇺🇸81440 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"82.198.246.37","port":180,"uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"87 [11] 🇺🇸 | US | 43ms | 170KB | 🇺🇸81439 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"82.198.246.9","port":180,"uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"88 [24] 🇺🇸 | US | 74ms | 125KB | 🇺🇸81430 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"169.197.142.22","port":18000,"uuid":"f8c8dc3d-0d37-46b0-8b34-a7232882fcfe","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"89 [39] 🇺🇸 | US | 156ms | 88KB | 🇨🇦82788 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"104.16.0.0","port":443,"uuid":"95d2c461-61f5-4dae-bc74-4d10ce1f6236","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"90 [65] 🇺🇸 | US | 254ms | 38KB | 🇺🇸81433 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"38.91.107.49","port":18000,"uuid":"f8c8dc3d-0d37-46b0-8b34-a7232882fcfe","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"91 [68] 🇺🇸 | US | 233ms | 36KB | 🇺🇸81437 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"67.220.95.3","port":18000,"uuid":"f8c8dc3d-0d37-46b0-8b34-a7232882fcfe","alterId":0,"cipher":"aes-128-gcm","udp":true}
+  - {"name":"92 [198] 🇳🇱 | NL | 461ms | 2KB | 🇳🇱82809 | ⚡️Telegram = t.me/SOSkeyNET","type":"vmess","server":"95.179.142.241","port":433,"uuid":"79866643-2b00-401c-9424-1bff8ce9925a","alterId":0,"cipher":"auto","udp":true}
 proxy-groups:
   - name: "نوع انتخاب پروکسی 🔀"
     icon: https://www.svgrepo.com/show/412721/choose.svg
@@ -288,106 +280,98 @@ proxy-groups:
     type: select
     icon: https://www.svgrepo.com/show/372331/cursor-hand-click.svg
     proxies:
-      - "1 [2] 🇺🇸 | US | 68ms | 277KB | ZHK"
-      - "2 [4] 🇺🇸 | US | 1033ms | 264KB | ZHK"
-      - "3 [7] 🇺🇸 | US | 139ms | 236KB | 🇨🇦81740 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "4 [5] 🇺🇸 | US | 48ms | 246KB | Ettehadvpn | 34"
-      - "5 [9] 🇺🇸 | US | 54ms | 229KB | @IranProxyPlus`"
-      - "6 [20] 🇨🇦 | CA | 265ms | 88KB | ***✅***@AR14N24b"
-      - "7 [23] 🇨🇦 | CA | 529ms | 64KB | @filembad`"
-      - "8 [27] 🇺🇸 | US | 328ms | 41KB | 🇨🇦81359 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "9 [28] 🇺🇸 | US | 369ms | 40KB | 🇨🇿81361 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "10 [30] 🇫🇷 | FR | 401ms | 38KB | @filembad`"
-      - "11 [34] 🇫🇷 | FR | 406ms | 37KB | @filembad`"
-      - "12 [37] 🇫🇷 | FR | 392ms | 36KB | ***✅***@AR14N24b"
-      - "13 [48] 🇫🇷 | FR | 423ms | 35KB | @filembad`"
-      - "14 [73] 🇬🇧 | GB | 533ms | 33KB | @filembad`"
-      - "15 [75] 🇬🇧 | GB | 431ms | 33KB | 🇬🇧81027 | ⚡️Telegram = t.me/config"
-      - "16 [79] 🇬🇧 | GB | 348ms | 32KB |"
-      - "17 [81] 🇺🇸 | US | 522ms | 32KB | @filembad`"
-      - "18 [82] 🇬🇧 | GB | 670ms | 32KB | 🇬🇧 Ettehadvpn | 31"
-      - "19 [85] 🇩🇪 | DE | 312ms | 32KB | ***✅***@AR14N24b"
-      - "20 [94] 🇳🇱 | NL | 504ms | 31KB | @filembad`"
-      - "21 [109] 🇫🇷 | FR | 341ms | 29KB | @IranProxyPlus`"
-      - "22 [110] 🇳🇱 | NL | 361ms | 29KB |  `"
-      - "23 [112] 🇫🇮 | FI | 327ms | 29KB | ***✅***@AR14N24b"
-      - "24 [113] 🇫🇷 | FR | 368ms | 29KB | Ettehadvpn | 31"
-      - "25 [116] 🇬🇧 | GB | 353ms | 29KB | [80893] - Telegram : @configraygan"
-      - "26 [118] 🇳🇱 | NL | 368ms | 29KB | Ettehadvpn | 39"
-      - "27 [124] 🇳🇱 | NL | 360ms | 28KB | @filembad`"
-      - "28 [126] 🇫🇮 | FI | 295ms | 28KB | 🇨🇦81263 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "29 [127] 🇩🇪 | DE | 283ms | 28KB | 🇩🇪81285 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "30 [129] 🇫🇷 | FR | 365ms | 28KB | [80821] - Telegram : @configraygan"
-      - "31 [132] 🇳🇱 | NL | 372ms | 28KB | اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "32 [136] 🇬🇧 | GB | 347ms | 28KB | 🦀98@oneclickvpnkeys"
-      - "33 [137] 🇬🇧 | GB | 396ms | 28KB | Ettehadvpn | 6"
-      - "34 [138] 🇬🇧 | GB | 351ms | 28KB | اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "35 [147] 🇳🇱 | NL | 381ms | 27KB | $Free 190 @Outline_Vpn"
-      - "36 [149] 🇳🇱 | NL | 387ms | 27KB | ☑➜چنلمون: Express_freevpn@"
-      - "37 [152] 🇳🇱 | NL | 384ms | 27KB | 2"
-      - "38 [154] 🇺🇸 | US | 388ms | 27KB | @IranProxyPlus`"
-      - "39 [157] 🇳🇱 | NL | 359ms | 27KB |  `"
-      - "40 [159] 🇳🇱 | NL | 388ms | 27KB | [80883] - Telegram : @configraygan"
-      - "41 [169] 🇳🇱 | NL | 380ms | 26KB |  `"
-      - "42 [175] 🇩🇪 | DE | 420ms | 26KB | Ettehadvpn | 5"
-      - "43 [178] 🇩🇪 | DE | 320ms | 26KB | 🇩🇪81520 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "44 [182] 🇳🇱 | NL | 3915ms | 26KB | 🇳🇱80874 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "45 [188] 🇳🇱 | NL | 372ms | 26KB | @meliproxyy"
-      - "46 [192] 🇩🇪 | DE | 335ms | 26KB | @filembad`"
-      - "47 [193] 🇳🇱 | NL | 375ms | 26KB | [80836] - Telegram : @configraygan"
-      - "48 [194] 🇳🇱 | NL | 408ms | 26KB | @filembad`"
-      - "49 [196] 🇳🇱 | NL | 373ms | 26KB | configraygan_irancell_11"
-      - "50 [199] 🇩🇪 | DE | 389ms | 25KB | 🦀76@oneclickvpnkeys"
-      - "51 [200] 🇳🇱 | NL | 372ms | 25KB | ⛵28@oneclickvpnkeys"
-      - "52 [216] 🇺🇸 | US | 381ms | 24KB | 🇺🇸80943 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "53 [230] 🇩🇪 | DE | 559ms | 21KB |"
-      - "54 [232] 🇫🇷 | FR | 365ms | 17KB | @W570W"
-      - "55 [233] 🇺🇸 | US | 275ms | 16KB | ***✅***@AR14N24b"
-      - "56 [236] 🇺🇸 | US | 639ms | 14KB | 🇺🇸80904 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "57 [240] 🇺🇸 | US | 339ms | 12KB | 🇳🇱80947 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "58 [246] 🇬🇧 | GB | 414ms | 6KB | 🇬🇧80844 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "59 [248] 🇳🇱 | NL | 486ms | 5KB | اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "60 [250] 🇫🇮 | FI | 336ms | 5KB | 🇫🇮81469 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "61 [254] 🇮🇹 | IT | 395ms | 4KB | اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "62 [256] 🇺🇸 | US | 458ms | 3KB | 🇨🇳80944 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "63 [257] 🇺🇸 | US | 368ms | 3KB | 🇧🇷81041 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "64 [258] 🇺🇸 | US | 413ms | 2KB | 🇨🇼81240 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "65 [259] 🇳🇱 | NL | 382ms | 2KB | configraygan_7"
-      - "66 [260] 🇺🇸 | US | 686ms | 2KB | 🇬🇧80919 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "67 [263] 🇺🇸 | US | 493ms | 2KB | 🇺🇸80911 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "68 [265] 🇺🇸 | US | 242ms | 1KB | @filembad`"
-      - "69 [1] 🇺🇸 | US | 32ms | 279KB |  `"
-      - "70 [15] 🇮🇪 | IE | 219ms | 161KB | ***✅***@AR14N24b"
-      - "71 [18] 🇮🇪 | IE | 224ms | 152KB | @filembad`"
-      - "72 [32] 🇮🇪 | IE | 213ms | 37KB | [80855] - Telegram : @configraygan"
-      - "73 [74] 🇬🇧 | GB | 263ms | 33KB | 🇬🇧81006 | ⚡️Telegram = t.me/configraygan"
-      - "74 [92] 🇬🇧 | GB | 283ms | 31KB | 🇬🇧81443 | ⚡️Telegram = t.me/configraygan"
-      - "75 [96] 🇬🇧 | GB | 287ms | 30KB | 🇬🇧81447 | ⚡️Telegram = t.me/configraygan"
-      - "76 [99] 🇺🇸 | US | 39ms | 30KB | ***✅***@AR14N24b"
-      - "77 [111] 🇳🇱 | NL | 278ms | 29KB | 🇳🇱81022 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "78 [115] 🇫🇷 | FR | 292ms | 29KB | 🦀16@oneclickvpnkeys"
-      - "79 [130] 🇳🇱 | NL | 312ms | 28KB | 🇳🇱81250 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "80 [145] 🇳🇱 | NL | 360ms | 27KB | @SylphNet | 2026-06-21 22:21"
-      - "81 [146] 🇳🇱 | NL | 316ms | 27KB | 🇳🇱81251 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "82 [150] 🇳🇱 | NL | 316ms | 27KB | 🇳🇱81450 | ⚡️Telegram = t.me/configraygan"
-      - "83 [155] 🇩🇪 | DE | 436ms | 27KB |  `"
-      - "84 [158] 🇳🇱 | NL | 287ms | 27KB | 🇳🇱81246 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "85 [160] 🇳🇱 | NL | 329ms | 27KB |  `"
-      - "86 [165] 🇳🇱 | NL | 302ms | 26KB |  `"
-      - "87 [170] 🇳🇱 | NL | 1367ms | 26KB | @meliproxyy"
-      - "88 [210] 🇫🇮 | FI | 373ms | 24KB |  `"
-      - "89 [215] 🇳🇱 | NL | 304ms | 24KB |  `"
-      - "90 [221] 🇫🇮 | FI | 356ms | 23KB | 🇫🇮81477 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "91 [235] 🇳🇱 | NL | 311ms | 15KB | @filembad`"
-      - "92 [253] 🇹🇷 | TR | 395ms | 4KB | @filembad`"
-      - "93 [31] 🇺🇸 | US | 266ms | 38KB | 🇺🇸81685 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "94 [177] 🇩🇪 | DE | 321ms | 26KB | @filembad`"
-      - "95 [222] 🇺🇸 | US | 411ms | 23KB | Ettehadvpn | 32"
-      - "96 [14] 🇺🇸 | US | 19ms | 163KB | 🇺🇸81437 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "97 [26] 🇺🇸 | US | 240ms | 42KB | 🇺🇸81439 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "98 [29] 🇺🇸 | US | 209ms | 39KB | 🇺🇸81440 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "99 [49] 🇺🇸 | US | 286ms | 34KB | 🇺🇸81430 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "100 [53] 🇺🇸 | US | 117ms | 34KB | 🇺🇸81433 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "1 [38] 🇺🇸 | US | 189ms | 89KB | 🇺🇸81958 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "2 [1] 🇺🇸 | US | 144ms | 363KB | ZHK"
+      - "3 [2] 🇺🇸 | US | 153ms | 347KB | 🇨🇦81740 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "4 [3] 🇺🇸 | US | 164ms | 347KB | ZHK"
+      - "5 [7] 🇺🇸 | US | 139ms | 202KB | ***✅***@AR14N24b`"
+      - "6 [15] 🇺🇸 | US | 76ms | 148KB | ***✅***@AR14N24b"
+      - "7 [16] 🇺🇸 | US | 73ms | 147KB | 🇺🇸82640 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "8 [17] 🇺🇸 | US | 72ms | 146KB | 🇺🇸82641 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "9 [18] 🇺🇸 | US | 72ms | 143KB | @filembad`"
+      - "10 [21] 🇺🇸 | US | 71ms | 141KB | 🇺🇸82638 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "11 [27] 🇺🇸 | US | 71ms | 114KB | ***✅***@AR14N24b"
+      - "12 [30] 🇺🇸 | US | 122ms | 104KB | @IranProxyPlus`"
+      - "13 [45] 🇨🇦 | CA | 238ms | 68KB | @filembad`"
+      - "14 [46] 🇫🇮 | FI | 400ms | 64KB | ***✅***@AR14N24b"
+      - "15 [47] 🇩🇪 | DE | 397ms | 60KB | 🇺🇸81971 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "16 [53] 🇫🇮 | FI | 440ms | 46KB | ***✅***@AR14N24b`"
+      - "17 [54] 🇺🇸 | US | 56ms | 44KB | 🇺🇸81600 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "18 [55] 🇺🇸 | US | 388ms | 44KB | ***✅***@AR14N24b"
+      - "19 [58] 🇺🇸 | US | 235ms | 42KB | 🇨🇦82290 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "20 [61] 🇳🇱 | NL | 1025ms | 41KB | 🇨🇦82024 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "21 [63] 🇨🇦 | CA | 397ms | 39KB | 🇨🇦82200 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "22 [64] 🇨🇦 | CA | 381ms | 38KB | 🇬🇧81601 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "23 [66] 🇺🇸 | US | 259ms | 37KB | 🇺🇸82743 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "24 [69] 🇨🇭 | CH | 477ms | 36KB | 🇨🇦82150 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "25 [73] 🇺🇸 | US | 307ms | 34KB | ***✅***@AR14N24b"
+      - "26 [76] 🇺🇸 | US | 311ms | 33KB | ***✅***@AR14N24b"
+      - "27 [82] 🇺🇸 | US | 457ms | 31KB | 🇺🇸81548 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "28 [84] 🇨🇦 | CA | 1753ms | 30KB | ***✅***@AR14N24b"
+      - "29 [89] 🇯🇵 | JP | 439ms | 24KB | @filembad`"
+      - "30 [94] 🇯🇵 | JP | 451ms | 22KB | @filembad`"
+      - "31 [108] 🇬🇧 | GB | 454ms | 18KB | 🇬🇧81546 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "32 [113] 🇫🇷 | FR | 477ms | 17KB | ***✅***@AR14N24b"
+      - "33 [118] 🇩🇪 | DE | 460ms | 17KB | @filembad`"
+      - "34 [145] 🇩🇪 | DE | 480ms | 16KB | @meliproxyy"
+      - "35 [147] 🇩🇪 | DE | 504ms | 16KB | $Free 202 @Outline_Vpn"
+      - "36 [180] 🇩🇪 | DE | 490ms | 15KB | ***✅***@AR14N24b"
+      - "37 [184] 🇺🇸 | US | 1435ms | 12KB | ***✅***@AR14N24b"
+      - "38 [186] 🇵🇱 | PL | 1083ms | 11KB | 🇨🇦81543 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "39 [187] 🇫🇷 | FR | 549ms | 10KB | @filembad`"
+      - "40 [189] 🇩🇪 | DE | 698ms | 7KB | 🇺🇸81592 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "41 [199] 🇳🇱 | NL | 477ms | 2KB | @filembad`"
+      - "42 [204] 🇳🇱 | NL | 459ms | 2KB | @filembad`"
+      - "43 [34] 🇮🇪 | IE | 415ms | 90KB | ***✅***@AR14N24b"
+      - "44 [35] 🇮🇪 | IE | 416ms | 89KB | @mehrosaboran"
+      - "45 [67] 🇺🇸 | US | 233ms | 37KB | @filembad`"
+      - "46 [70] 🇺🇸 | US | 227ms | 35KB | ***✅***@AR14N24b"
+      - "47 [78] 🇺🇸 | US | 236ms | 33KB | ***✅***@AR14N24b`"
+      - "48 [100] 🇮🇪 | IE | 422ms | 19KB | 🇮🇪81269 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "49 [105] 🇹🇼 | TW | 425ms | 19KB | ***✅***@AR14N24b"
+      - "50 [109] 🇳🇱 | NL | 459ms | 17KB | ***✅***@AR14N24b"
+      - "51 [110] 🇳🇱 | NL | 448ms | 17KB | 🇳🇱82502 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "52 [112] 🇬🇧 | GB | 496ms | 17KB | 🇬🇧81447 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "53 [116] 🇩🇪 | DE | 472ms | 17KB | ***✅***@AR14N24b"
+      - "54 [120] 🇩🇪 | DE | 501ms | 17KB | ***✅***@AR14N24b"
+      - "55 [122] 🇬🇧 | GB | 486ms | 17KB | 🇬🇧81443 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "56 [123] 🇳🇱 | NL | 501ms | 17KB | @filembad`"
+      - "57 [135] 🇩🇪 | DE | 502ms | 16KB | 🇩🇪82765 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "58 [138] 🇳🇱 | NL | 507ms | 16KB | ***✅***@AR14N24b"
+      - "59 [139] 🇳🇱 | NL | 510ms | 16KB | ***✅***@AR14N24b"
+      - "60 [141] 🇳🇱 | NL | 510ms | 16KB |  `"
+      - "61 [142] 🇳🇱 | NL | 515ms | 16KB | 🇳🇱81446 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "62 [146] 🇳🇱 | NL | 502ms | 16KB | ***✅***@AR14N24b"
+      - "63 [149] 🇳🇱 | NL | 521ms | 16KB | 🇳🇱82499 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "64 [153] 🇳🇱 | NL | 514ms | 16KB | 🇳🇱82497 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "65 [154] 🇳🇱 | NL | 521ms | 16KB | ***✅***@AR14N24b"
+      - "66 [155] 🇳🇱 | NL | 517ms | 15KB |  `"
+      - "67 [158] 🇳🇱 | NL | 514ms | 15KB | @filembad`"
+      - "68 [159] 🇳🇱 | NL | 510ms | 15KB | 🇳🇱 Ettehadvpn | 19"
+      - "69 [160] 🇳🇱 | NL | 517ms | 15KB | ***✅***@AR14N24b"
+      - "70 [161] 🇳🇱 | NL | 510ms | 15KB |"
+      - "71 [162] 🇳🇱 | NL | 513ms | 15KB | @filembad`"
+      - "72 [163] 🇳🇱 | NL | 509ms | 15KB | @filembad`"
+      - "73 [167] 🇳🇱 | NL | 763ms | 15KB | @meliproxyy"
+      - "74 [176] 🇸🇬 | SG | 518ms | 15KB | 🇸🇬82316 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "75 [181] 🇸🇬 | SG | 518ms | 15KB | ***✅***@AR14N24b"
+      - "76 [193] 🇳🇱 | NL | 525ms | 5KB | 🇳🇱81252 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "77 [197] 🇳🇱 | NL | 508ms | 3KB | ⛵88@oneclickvpnkeys"
+      - "78 [200] 🇳🇱 | NL | 531ms | 2KB | [80839] - Telegram : @configraygan"
+      - "79 [201] 🇺🇸 | US | 233ms | 2KB | 🇺🇸81261 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "80 [206] 🇳🇱 | NL | 521ms | 2KB | 🇳🇱82496 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "81 [207] 🇳🇱 | NL | 525ms | 2KB | ***✅***@AR14N24b"
+      - "82 [9] 🇺🇸 | US | 75ms | 175KB | 🇺🇸81557 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "83 [12] 🇺🇸 | US | 68ms | 169KB | ***✅***@AR14N24b"
+      - "84 [42] 🇺🇸 | US | 222ms | 85KB | @meliproxyy"
+      - "85 [86] 🇯🇵 | JP | 432ms | 25KB | 🇯🇵82375 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "86 [8] 🇺🇸 | US | 51ms | 186KB | 🇺🇸81440 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "87 [11] 🇺🇸 | US | 43ms | 170KB | 🇺🇸81439 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "88 [24] 🇺🇸 | US | 74ms | 125KB | 🇺🇸81430 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "89 [39] 🇺🇸 | US | 156ms | 88KB | 🇨🇦82788 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "90 [65] 🇺🇸 | US | 254ms | 38KB | 🇺🇸81433 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "91 [68] 🇺🇸 | US | 233ms | 36KB | 🇺🇸81437 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "92 [198] 🇳🇱 | NL | 461ms | 2KB | 🇳🇱82809 | ⚡️Telegram = t.me/SOSkeyNET"
   - name: "خودکار (بهترین پینگ) 🤖"
     type: url-test
     icon: https://www.svgrepo.com/show/7876/speedometer.svg
@@ -396,106 +380,98 @@ proxy-groups:
     tolerance: 50
     lazy: true
     proxies:
-      - "1 [2] 🇺🇸 | US | 68ms | 277KB | ZHK"
-      - "2 [4] 🇺🇸 | US | 1033ms | 264KB | ZHK"
-      - "3 [7] 🇺🇸 | US | 139ms | 236KB | 🇨🇦81740 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "4 [5] 🇺🇸 | US | 48ms | 246KB | Ettehadvpn | 34"
-      - "5 [9] 🇺🇸 | US | 54ms | 229KB | @IranProxyPlus`"
-      - "6 [20] 🇨🇦 | CA | 265ms | 88KB | ***✅***@AR14N24b"
-      - "7 [23] 🇨🇦 | CA | 529ms | 64KB | @filembad`"
-      - "8 [27] 🇺🇸 | US | 328ms | 41KB | 🇨🇦81359 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "9 [28] 🇺🇸 | US | 369ms | 40KB | 🇨🇿81361 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "10 [30] 🇫🇷 | FR | 401ms | 38KB | @filembad`"
-      - "11 [34] 🇫🇷 | FR | 406ms | 37KB | @filembad`"
-      - "12 [37] 🇫🇷 | FR | 392ms | 36KB | ***✅***@AR14N24b"
-      - "13 [48] 🇫🇷 | FR | 423ms | 35KB | @filembad`"
-      - "14 [73] 🇬🇧 | GB | 533ms | 33KB | @filembad`"
-      - "15 [75] 🇬🇧 | GB | 431ms | 33KB | 🇬🇧81027 | ⚡️Telegram = t.me/config"
-      - "16 [79] 🇬🇧 | GB | 348ms | 32KB |"
-      - "17 [81] 🇺🇸 | US | 522ms | 32KB | @filembad`"
-      - "18 [82] 🇬🇧 | GB | 670ms | 32KB | 🇬🇧 Ettehadvpn | 31"
-      - "19 [85] 🇩🇪 | DE | 312ms | 32KB | ***✅***@AR14N24b"
-      - "20 [94] 🇳🇱 | NL | 504ms | 31KB | @filembad`"
-      - "21 [109] 🇫🇷 | FR | 341ms | 29KB | @IranProxyPlus`"
-      - "22 [110] 🇳🇱 | NL | 361ms | 29KB |  `"
-      - "23 [112] 🇫🇮 | FI | 327ms | 29KB | ***✅***@AR14N24b"
-      - "24 [113] 🇫🇷 | FR | 368ms | 29KB | Ettehadvpn | 31"
-      - "25 [116] 🇬🇧 | GB | 353ms | 29KB | [80893] - Telegram : @configraygan"
-      - "26 [118] 🇳🇱 | NL | 368ms | 29KB | Ettehadvpn | 39"
-      - "27 [124] 🇳🇱 | NL | 360ms | 28KB | @filembad`"
-      - "28 [126] 🇫🇮 | FI | 295ms | 28KB | 🇨🇦81263 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "29 [127] 🇩🇪 | DE | 283ms | 28KB | 🇩🇪81285 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "30 [129] 🇫🇷 | FR | 365ms | 28KB | [80821] - Telegram : @configraygan"
-      - "31 [132] 🇳🇱 | NL | 372ms | 28KB | اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "32 [136] 🇬🇧 | GB | 347ms | 28KB | 🦀98@oneclickvpnkeys"
-      - "33 [137] 🇬🇧 | GB | 396ms | 28KB | Ettehadvpn | 6"
-      - "34 [138] 🇬🇧 | GB | 351ms | 28KB | اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "35 [147] 🇳🇱 | NL | 381ms | 27KB | $Free 190 @Outline_Vpn"
-      - "36 [149] 🇳🇱 | NL | 387ms | 27KB | ☑➜چنلمون: Express_freevpn@"
-      - "37 [152] 🇳🇱 | NL | 384ms | 27KB | 2"
-      - "38 [154] 🇺🇸 | US | 388ms | 27KB | @IranProxyPlus`"
-      - "39 [157] 🇳🇱 | NL | 359ms | 27KB |  `"
-      - "40 [159] 🇳🇱 | NL | 388ms | 27KB | [80883] - Telegram : @configraygan"
-      - "41 [169] 🇳🇱 | NL | 380ms | 26KB |  `"
-      - "42 [175] 🇩🇪 | DE | 420ms | 26KB | Ettehadvpn | 5"
-      - "43 [178] 🇩🇪 | DE | 320ms | 26KB | 🇩🇪81520 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "44 [182] 🇳🇱 | NL | 3915ms | 26KB | 🇳🇱80874 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "45 [188] 🇳🇱 | NL | 372ms | 26KB | @meliproxyy"
-      - "46 [192] 🇩🇪 | DE | 335ms | 26KB | @filembad`"
-      - "47 [193] 🇳🇱 | NL | 375ms | 26KB | [80836] - Telegram : @configraygan"
-      - "48 [194] 🇳🇱 | NL | 408ms | 26KB | @filembad`"
-      - "49 [196] 🇳🇱 | NL | 373ms | 26KB | configraygan_irancell_11"
-      - "50 [199] 🇩🇪 | DE | 389ms | 25KB | 🦀76@oneclickvpnkeys"
-      - "51 [200] 🇳🇱 | NL | 372ms | 25KB | ⛵28@oneclickvpnkeys"
-      - "52 [216] 🇺🇸 | US | 381ms | 24KB | 🇺🇸80943 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "53 [230] 🇩🇪 | DE | 559ms | 21KB |"
-      - "54 [232] 🇫🇷 | FR | 365ms | 17KB | @W570W"
-      - "55 [233] 🇺🇸 | US | 275ms | 16KB | ***✅***@AR14N24b"
-      - "56 [236] 🇺🇸 | US | 639ms | 14KB | 🇺🇸80904 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "57 [240] 🇺🇸 | US | 339ms | 12KB | 🇳🇱80947 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "58 [246] 🇬🇧 | GB | 414ms | 6KB | 🇬🇧80844 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "59 [248] 🇳🇱 | NL | 486ms | 5KB | اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "60 [250] 🇫🇮 | FI | 336ms | 5KB | 🇫🇮81469 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "61 [254] 🇮🇹 | IT | 395ms | 4KB | اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - "62 [256] 🇺🇸 | US | 458ms | 3KB | 🇨🇳80944 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "63 [257] 🇺🇸 | US | 368ms | 3KB | 🇧🇷81041 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "64 [258] 🇺🇸 | US | 413ms | 2KB | 🇨🇼81240 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "65 [259] 🇳🇱 | NL | 382ms | 2KB | configraygan_7"
-      - "66 [260] 🇺🇸 | US | 686ms | 2KB | 🇬🇧80919 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "67 [263] 🇺🇸 | US | 493ms | 2KB | 🇺🇸80911 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "68 [265] 🇺🇸 | US | 242ms | 1KB | @filembad`"
-      - "69 [1] 🇺🇸 | US | 32ms | 279KB |  `"
-      - "70 [15] 🇮🇪 | IE | 219ms | 161KB | ***✅***@AR14N24b"
-      - "71 [18] 🇮🇪 | IE | 224ms | 152KB | @filembad`"
-      - "72 [32] 🇮🇪 | IE | 213ms | 37KB | [80855] - Telegram : @configraygan"
-      - "73 [74] 🇬🇧 | GB | 263ms | 33KB | 🇬🇧81006 | ⚡️Telegram = t.me/configraygan"
-      - "74 [92] 🇬🇧 | GB | 283ms | 31KB | 🇬🇧81443 | ⚡️Telegram = t.me/configraygan"
-      - "75 [96] 🇬🇧 | GB | 287ms | 30KB | 🇬🇧81447 | ⚡️Telegram = t.me/configraygan"
-      - "76 [99] 🇺🇸 | US | 39ms | 30KB | ***✅***@AR14N24b"
-      - "77 [111] 🇳🇱 | NL | 278ms | 29KB | 🇳🇱81022 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "78 [115] 🇫🇷 | FR | 292ms | 29KB | 🦀16@oneclickvpnkeys"
-      - "79 [130] 🇳🇱 | NL | 312ms | 28KB | 🇳🇱81250 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "80 [145] 🇳🇱 | NL | 360ms | 27KB | @SylphNet | 2026-06-21 22:21"
-      - "81 [146] 🇳🇱 | NL | 316ms | 27KB | 🇳🇱81251 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "82 [150] 🇳🇱 | NL | 316ms | 27KB | 🇳🇱81450 | ⚡️Telegram = t.me/configraygan"
-      - "83 [155] 🇩🇪 | DE | 436ms | 27KB |  `"
-      - "84 [158] 🇳🇱 | NL | 287ms | 27KB | 🇳🇱81246 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "85 [160] 🇳🇱 | NL | 329ms | 27KB |  `"
-      - "86 [165] 🇳🇱 | NL | 302ms | 26KB |  `"
-      - "87 [170] 🇳🇱 | NL | 1367ms | 26KB | @meliproxyy"
-      - "88 [210] 🇫🇮 | FI | 373ms | 24KB |  `"
-      - "89 [215] 🇳🇱 | NL | 304ms | 24KB |  `"
-      - "90 [221] 🇫🇮 | FI | 356ms | 23KB | 🇫🇮81477 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "91 [235] 🇳🇱 | NL | 311ms | 15KB | @filembad`"
-      - "92 [253] 🇹🇷 | TR | 395ms | 4KB | @filembad`"
-      - "93 [31] 🇺🇸 | US | 266ms | 38KB | 🇺🇸81685 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "94 [177] 🇩🇪 | DE | 321ms | 26KB | @filembad`"
-      - "95 [222] 🇺🇸 | US | 411ms | 23KB | Ettehadvpn | 32"
-      - "96 [14] 🇺🇸 | US | 19ms | 163KB | 🇺🇸81437 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "97 [26] 🇺🇸 | US | 240ms | 42KB | 🇺🇸81439 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "98 [29] 🇺🇸 | US | 209ms | 39KB | 🇺🇸81440 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "99 [49] 🇺🇸 | US | 286ms | 34KB | 🇺🇸81430 | ⚡️Telegram = t.me/SOSkeyNET"
-      - "100 [53] 🇺🇸 | US | 117ms | 34KB | 🇺🇸81433 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "1 [38] 🇺🇸 | US | 189ms | 89KB | 🇺🇸81958 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "2 [1] 🇺🇸 | US | 144ms | 363KB | ZHK"
+      - "3 [2] 🇺🇸 | US | 153ms | 347KB | 🇨🇦81740 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "4 [3] 🇺🇸 | US | 164ms | 347KB | ZHK"
+      - "5 [7] 🇺🇸 | US | 139ms | 202KB | ***✅***@AR14N24b`"
+      - "6 [15] 🇺🇸 | US | 76ms | 148KB | ***✅***@AR14N24b"
+      - "7 [16] 🇺🇸 | US | 73ms | 147KB | 🇺🇸82640 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "8 [17] 🇺🇸 | US | 72ms | 146KB | 🇺🇸82641 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "9 [18] 🇺🇸 | US | 72ms | 143KB | @filembad`"
+      - "10 [21] 🇺🇸 | US | 71ms | 141KB | 🇺🇸82638 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "11 [27] 🇺🇸 | US | 71ms | 114KB | ***✅***@AR14N24b"
+      - "12 [30] 🇺🇸 | US | 122ms | 104KB | @IranProxyPlus`"
+      - "13 [45] 🇨🇦 | CA | 238ms | 68KB | @filembad`"
+      - "14 [46] 🇫🇮 | FI | 400ms | 64KB | ***✅***@AR14N24b"
+      - "15 [47] 🇩🇪 | DE | 397ms | 60KB | 🇺🇸81971 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "16 [53] 🇫🇮 | FI | 440ms | 46KB | ***✅***@AR14N24b`"
+      - "17 [54] 🇺🇸 | US | 56ms | 44KB | 🇺🇸81600 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "18 [55] 🇺🇸 | US | 388ms | 44KB | ***✅***@AR14N24b"
+      - "19 [58] 🇺🇸 | US | 235ms | 42KB | 🇨🇦82290 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "20 [61] 🇳🇱 | NL | 1025ms | 41KB | 🇨🇦82024 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "21 [63] 🇨🇦 | CA | 397ms | 39KB | 🇨🇦82200 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "22 [64] 🇨🇦 | CA | 381ms | 38KB | 🇬🇧81601 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "23 [66] 🇺🇸 | US | 259ms | 37KB | 🇺🇸82743 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "24 [69] 🇨🇭 | CH | 477ms | 36KB | 🇨🇦82150 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "25 [73] 🇺🇸 | US | 307ms | 34KB | ***✅***@AR14N24b"
+      - "26 [76] 🇺🇸 | US | 311ms | 33KB | ***✅***@AR14N24b"
+      - "27 [82] 🇺🇸 | US | 457ms | 31KB | 🇺🇸81548 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "28 [84] 🇨🇦 | CA | 1753ms | 30KB | ***✅***@AR14N24b"
+      - "29 [89] 🇯🇵 | JP | 439ms | 24KB | @filembad`"
+      - "30 [94] 🇯🇵 | JP | 451ms | 22KB | @filembad`"
+      - "31 [108] 🇬🇧 | GB | 454ms | 18KB | 🇬🇧81546 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "32 [113] 🇫🇷 | FR | 477ms | 17KB | ***✅***@AR14N24b"
+      - "33 [118] 🇩🇪 | DE | 460ms | 17KB | @filembad`"
+      - "34 [145] 🇩🇪 | DE | 480ms | 16KB | @meliproxyy"
+      - "35 [147] 🇩🇪 | DE | 504ms | 16KB | $Free 202 @Outline_Vpn"
+      - "36 [180] 🇩🇪 | DE | 490ms | 15KB | ***✅***@AR14N24b"
+      - "37 [184] 🇺🇸 | US | 1435ms | 12KB | ***✅***@AR14N24b"
+      - "38 [186] 🇵🇱 | PL | 1083ms | 11KB | 🇨🇦81543 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "39 [187] 🇫🇷 | FR | 549ms | 10KB | @filembad`"
+      - "40 [189] 🇩🇪 | DE | 698ms | 7KB | 🇺🇸81592 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "41 [199] 🇳🇱 | NL | 477ms | 2KB | @filembad`"
+      - "42 [204] 🇳🇱 | NL | 459ms | 2KB | @filembad`"
+      - "43 [34] 🇮🇪 | IE | 415ms | 90KB | ***✅***@AR14N24b"
+      - "44 [35] 🇮🇪 | IE | 416ms | 89KB | @mehrosaboran"
+      - "45 [67] 🇺🇸 | US | 233ms | 37KB | @filembad`"
+      - "46 [70] 🇺🇸 | US | 227ms | 35KB | ***✅***@AR14N24b"
+      - "47 [78] 🇺🇸 | US | 236ms | 33KB | ***✅***@AR14N24b`"
+      - "48 [100] 🇮🇪 | IE | 422ms | 19KB | 🇮🇪81269 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "49 [105] 🇹🇼 | TW | 425ms | 19KB | ***✅***@AR14N24b"
+      - "50 [109] 🇳🇱 | NL | 459ms | 17KB | ***✅***@AR14N24b"
+      - "51 [110] 🇳🇱 | NL | 448ms | 17KB | 🇳🇱82502 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "52 [112] 🇬🇧 | GB | 496ms | 17KB | 🇬🇧81447 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "53 [116] 🇩🇪 | DE | 472ms | 17KB | ***✅***@AR14N24b"
+      - "54 [120] 🇩🇪 | DE | 501ms | 17KB | ***✅***@AR14N24b"
+      - "55 [122] 🇬🇧 | GB | 486ms | 17KB | 🇬🇧81443 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "56 [123] 🇳🇱 | NL | 501ms | 17KB | @filembad`"
+      - "57 [135] 🇩🇪 | DE | 502ms | 16KB | 🇩🇪82765 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "58 [138] 🇳🇱 | NL | 507ms | 16KB | ***✅***@AR14N24b"
+      - "59 [139] 🇳🇱 | NL | 510ms | 16KB | ***✅***@AR14N24b"
+      - "60 [141] 🇳🇱 | NL | 510ms | 16KB |  `"
+      - "61 [142] 🇳🇱 | NL | 515ms | 16KB | 🇳🇱81446 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "62 [146] 🇳🇱 | NL | 502ms | 16KB | ***✅***@AR14N24b"
+      - "63 [149] 🇳🇱 | NL | 521ms | 16KB | 🇳🇱82499 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "64 [153] 🇳🇱 | NL | 514ms | 16KB | 🇳🇱82497 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "65 [154] 🇳🇱 | NL | 521ms | 16KB | ***✅***@AR14N24b"
+      - "66 [155] 🇳🇱 | NL | 517ms | 15KB |  `"
+      - "67 [158] 🇳🇱 | NL | 514ms | 15KB | @filembad`"
+      - "68 [159] 🇳🇱 | NL | 510ms | 15KB | 🇳🇱 Ettehadvpn | 19"
+      - "69 [160] 🇳🇱 | NL | 517ms | 15KB | ***✅***@AR14N24b"
+      - "70 [161] 🇳🇱 | NL | 510ms | 15KB |"
+      - "71 [162] 🇳🇱 | NL | 513ms | 15KB | @filembad`"
+      - "72 [163] 🇳🇱 | NL | 509ms | 15KB | @filembad`"
+      - "73 [167] 🇳🇱 | NL | 763ms | 15KB | @meliproxyy"
+      - "74 [176] 🇸🇬 | SG | 518ms | 15KB | 🇸🇬82316 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "75 [181] 🇸🇬 | SG | 518ms | 15KB | ***✅***@AR14N24b"
+      - "76 [193] 🇳🇱 | NL | 525ms | 5KB | 🇳🇱81252 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "77 [197] 🇳🇱 | NL | 508ms | 3KB | ⛵88@oneclickvpnkeys"
+      - "78 [200] 🇳🇱 | NL | 531ms | 2KB | [80839] - Telegram : @configraygan"
+      - "79 [201] 🇺🇸 | US | 233ms | 2KB | 🇺🇸81261 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "80 [206] 🇳🇱 | NL | 521ms | 2KB | 🇳🇱82496 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "81 [207] 🇳🇱 | NL | 525ms | 2KB | ***✅***@AR14N24b"
+      - "82 [9] 🇺🇸 | US | 75ms | 175KB | 🇺🇸81557 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "83 [12] 🇺🇸 | US | 68ms | 169KB | ***✅***@AR14N24b"
+      - "84 [42] 🇺🇸 | US | 222ms | 85KB | @meliproxyy"
+      - "85 [86] 🇯🇵 | JP | 432ms | 25KB | 🇯🇵82375 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "86 [8] 🇺🇸 | US | 51ms | 186KB | 🇺🇸81440 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "87 [11] 🇺🇸 | US | 43ms | 170KB | 🇺🇸81439 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "88 [24] 🇺🇸 | US | 74ms | 125KB | 🇺🇸81430 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "89 [39] 🇺🇸 | US | 156ms | 88KB | 🇨🇦82788 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "90 [65] 🇺🇸 | US | 254ms | 38KB | 🇺🇸81433 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "91 [68] 🇺🇸 | US | 233ms | 36KB | 🇺🇸81437 | ⚡️Telegram = t.me/SOSkeyNET"
+      - "92 [198] 🇳🇱 | NL | 461ms | 2KB | 🇳🇱82809 | ⚡️Telegram = t.me/SOSkeyNET"
   - name: سایتای ایرانی 🇮🇷
     type: select
     icon: https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Iran_%28civil%29.svg
